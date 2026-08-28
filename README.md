@@ -41,3 +41,17 @@ Modern academic repositories are inundated with high-volume preprints daily. Thi
   │   ├── Markdown Briefing (DAILY_INTELLIGENCE.md)             │
   │   └── Dark-Mode Interactive Dashboard (index.html)          │
   └─────────────────────────────────────────────────────────────┘
+🚀 Key FeaturesZero-Lag ETL Ingestion: Directly consumes standard Atom feeds from arXiv API with structured XML parsing.Strategic Taxonomy Scoring: Evaluates papers dynamically using domain-weighted priority indices (e.g., VLA, World Models, Dexterous Manipulation, Sim-to-Real).Dual Deliverable Formats:Markdown Report: Formatted for GitHub digests and automated email broadcasts.Interactive Dark Dashboard: Ultra-lightweight standalone HTML5/CSS3 dashboard with client-side keyword filtering and zero external JavaScript dependencies.Clean Engineering: Follows PEP 8 specifications, modular component architecture, and standard Python typing.📊 Strategic Taxonomy & Weight ModelThe scoring engine evaluates paper titles and abstracts against high-priority breakthrough vectors:Priority TrackTarget KeywordsWeight IndexFoundation & Modelsembodied ai, world model, vision-language-action (vla)+40 ~ +50 ptsLocomotion & Hardwarehumanoid, bipedal, quadruped, actuator+35 ~ +45 ptsControl & Manipulationsim2real, diffusion policy, tactile sensing, locomotion+25 ~ +40 pts⚙️ Configuration & CustomizationThe pipeline is completely data-driven. You can customize target research areas by updating STRATEGIC_WEIGHTS inside main.py:Python# Customize your personal research focus
+STRATEGIC_WEIGHTS = {
+    "humanoid": 50,
+    "bipedal locomotion": 40,
+    "reinforcement learning": 30
+}
+🛠️ Quickstart Guide1. PrerequisitesPython 3.10+Git2. Clone & SetupBash# Clone the repository
+git clone [https://github.com/hardacrehardohgreenh06865-cell/ai-paper-daily.git](https://github.com/hardacrehardohgreenh06865-cell/ai-paper-daily.git)
+cd ai-paper-daily
+
+# Install dependencies
+pip install requests
+3. Run PipelineBashpython main.py
+4. Output DeliverablesDAILY_INTELLIGENCE.md: Clean markdown summary suitable for team distribution.index.html: Open in any web browser (Chrome, Safari, Edge) for an interactive dashboard with instant search.
