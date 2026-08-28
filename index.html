@@ -1,0 +1,531 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Embodied AI & Robotics Intelligence Digest — August 28, 2026</title>
+    <style>
+        :root {
+            --bg-base: #080c14;
+            --surface-1: #0f172a;
+            --surface-2: #1e293b;
+            --border-color: rgba(255, 255, 255, 0.08);
+            --border-hover: rgba(56, 189, 248, 0.4);
+            --cyan-glow: #38bdf8;
+            --purple-accent: #a855f7;
+            --text-heading: #f8fafc;
+            --text-muted: #94a3b8;
+            --text-body: #cbd5e1;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background-color: var(--bg-base);
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            color: var(--text-body);
+            padding: 40px 20px;
+            line-height: 1.5;
+            display: flex;
+            justify-content: center;
+        }
+
+        .wrapper {
+            max-width: 900px;
+            width: 100%;
+        }
+
+        /* Header section */
+        header {
+            margin-bottom: 32px;
+            border-bottom: 1px solid var(--border-color);
+            padding-bottom: 28px;
+        }
+
+        .pill-brand {
+            display: inline-block;
+            font-size: 11px;
+            font-weight: 700;
+            letter-spacing: 1.8px;
+            text-transform: uppercase;
+            color: var(--cyan-glow);
+            margin-bottom: 12px;
+        }
+
+        h1 {
+            font-size: 32px;
+            font-weight: 800;
+            color: var(--text-heading);
+            letter-spacing: -0.8px;
+            line-height: 1.2;
+            margin-bottom: 8px;
+        }
+
+        .subtitle {
+            font-size: 14px;
+            color: var(--text-muted);
+        }
+
+        /* Search input */
+        .controls {
+            margin-top: 20px;
+        }
+
+        .search-box {
+            width: 100%;
+            background: var(--surface-1);
+            border: 1px solid var(--border-color);
+            padding: 12px 16px;
+            border-radius: 10px;
+            color: var(--text-heading);
+            font-size: 14px;
+            outline: none;
+            transition: all 0.2s ease;
+        }
+
+        .search-box:focus {
+            border-color: var(--cyan-glow);
+            box-shadow: 0 0 0 3px rgba(56, 189, 248, 0.15);
+        }
+
+        /* Paper cards */
+        .paper-card {
+            background: var(--surface-1);
+            border: 1px solid var(--border-color);
+            border-radius: 16px;
+            padding: 24px;
+            margin-bottom: 24px;
+            box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.5);
+            transition: all 0.25s ease;
+        }
+
+        .paper-card:hover {
+            border-color: var(--border-hover);
+            transform: translateY(-2px);
+        }
+
+        .card-meta-top {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 14px;
+        }
+
+        .rank-tag {
+            font-size: 11px;
+            font-weight: 800;
+            color: var(--cyan-glow);
+            background: rgba(56, 189, 248, 0.08);
+            border: 1px solid rgba(56, 189, 248, 0.25);
+            padding: 3px 8px;
+            border-radius: 6px;
+            letter-spacing: 0.5px;
+        }
+
+        .score-badge {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            background: linear-gradient(135deg, #6366f1, #a855f7);
+            padding: 4px 12px;
+            border-radius: 20px;
+            color: #fff;
+            box-shadow: 0 4px 14px rgba(168, 85, 247, 0.25);
+        }
+
+        .score-label {
+            font-size: 10px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            opacity: 0.9;
+        }
+
+        .score-value {
+            font-size: 14px;
+            font-weight: 800;
+        }
+
+        .paper-title {
+            font-size: 20px;
+            font-weight: 700;
+            color: var(--text-heading);
+            line-height: 1.35;
+            margin-bottom: 12px;
+        }
+
+        .author-row {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 16px;
+            font-size: 13px;
+            color: var(--text-muted);
+            margin-bottom: 14px;
+        }
+
+        .badge-cluster {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-bottom: 16px;
+        }
+
+        .badge {
+            font-size: 11px;
+            font-weight: 600;
+            padding: 3px 8px;
+            border-radius: 6px;
+            background: rgba(255, 255, 255, 0.04);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            color: var(--cyan-glow);
+        }
+
+        .badge-muted {
+            color: var(--text-muted);
+        }
+
+        .paper-summary {
+            font-size: 13.5px;
+            line-height: 1.65;
+            color: var(--text-body);
+            background: rgba(0, 0, 0, 0.25);
+            padding: 14px 18px;
+            border-radius: 8px;
+            border-left: 3px solid var(--cyan-glow);
+            margin-bottom: 20px;
+        }
+
+        .card-action-bar {
+            display: flex;
+            justify-content: flex-end;
+            gap: 12px;
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            font-size: 13px;
+            font-weight: 600;
+            padding: 8px 16px;
+            border-radius: 8px;
+            text-decoration: none;
+            transition: all 0.2s;
+        }
+
+        .btn-secondary {
+            color: var(--text-heading);
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid var(--border-color);
+        }
+
+        .btn-secondary:hover {
+            background: rgba(255, 255, 255, 0.1);
+        }
+
+        .btn-primary {
+            color: #000;
+            background: var(--cyan-glow);
+            font-weight: 700;
+        }
+
+        .btn-primary:hover {
+            background: #7dd3fc;
+            box-shadow: 0 0 15px rgba(56, 189, 248, 0.4);
+        }
+    </style>
+</head>
+<body>
+    <div class="wrapper">
+        <header>
+            <span class="pill-brand">Autonomous Research Intelligence</span>
+            <h1>Embodied AI & Physical Frontier Briefing</h1>
+            <p class="subtitle">Compiled on August 28, 2026 • Ranked top 8 strategic breakthroughs out of incoming preprints.</p>
+            
+            <div class="controls">
+                <input type="text" id="filterInput" class="search-box" placeholder="Filter papers by keywords (e.g. humanoid, tactile, diffusion)...">
+            </div>
+        </header>
+
+        <main id="paperList">
+            
+        <article class="paper-card" data-title="clap: cross-embodiment video world models are zero-shot physical simulators" data-summary="state-of-the-art action-conditioned video models are typically restricted to a single robot embodiment, preventing them from leveraging the vast corpus of heterogeneous video data that contains rich signals for learning generalizable physics. to bridge this gap, we introduce clap, a framework for cross-embodiment action-conditioned video generation capable of being trained on diverse, internet-scale videos across human and robotic agents. clap is grounded in the insight that universal physical laws govern spatiotemporal dynamics regardless of the actor. however, cross-embodiment learning is non-trivial because action representations vary sharply across robot platforms and are typically absent in human videos. clap addresses this fundamental challenge through the following core contributions. first, clap reconciles disparate action spaces using end-effector poses, language instructions, and latent actions. second, to resolve their individual limitations, clap introduces a curriculum-based cross-embodiment learning recipe that first learns foundational physical priors across unlabeled video data using latent actions and subsequently grounds them in end-effector action spaces for zero-shot deployment to real-world tasks. crucially, clap approaches or surpasses state-of-the-art single-embodiment video models in challenging environments like droid. these performance advantages compound via few-shot adaptation to establish a novel paradigm for training single-embodiment video world models. ultimately, clap delivers the most comprehensive suite of action-conditioned video world models to date - spanning diverse action-conditioning spaces (end-effector, language, and latent) and robot morphologies (including cross-embodiment, droid, bridge, bimanual yam robots, and g1 humanoids). we open-source all code and models. project website at https://omni-clap.github.io .">
+            <div class="card-meta-top">
+                <span class="rank-tag">TOP #1</span>
+                <div class="score-badge">
+                    <span class="score-label">Priority Index</span>
+                    <span class="score-value">135</span>
+                </div>
+            </div>
+            
+            <h2 class="paper-title">CLAP: Cross-Embodiment Video World Models are Zero-Shot Physical Simulators</h2>
+            
+            <div class="author-row">
+                <span>🗓️ 2026-08-27</span>
+                <span>✍️ Kechen Liu, Ola Shorinwa</span>
+            </div>
+            
+            <div class="badge-cluster">
+                <span class="badge">#humanoid</span><span class="badge">#world model</span>
+            </div>
+            
+            <p class="paper-summary">State-of-the-art action-conditioned video models are typically restricted to a single robot embodiment, preventing them from leveraging the vast corpus of heterogeneous video data that contains rich signals for learning generalizable physics. To bridge this gap, we introduce CLAP, a framework for cross-embodiment action-conditioned video generation capable of being trained on diverse, internet-scale videos across human and robotic agents. CLAP is grounded in the insight that universal physical laws govern spatiotemporal dynamics regardless of the actor. However, cross-embodiment learning is non-trivial because action representations vary sharply across robot platforms and are typically absent in human videos. CLAP addresses this fundamental challenge through the following core contributions. First, CLAP reconciles disparate action spaces using end-effector poses, language instructions, and latent actions. Second, to resolve their individual limitations, CLAP introduces a curriculum-based cross-embodiment learning recipe that first learns foundational physical priors across unlabeled video data using latent actions and subsequently grounds them in end-effector action spaces for zero-shot deployment to real-world tasks. Crucially, CLAP approaches or surpasses state-of-the-art single-embodiment video models in challenging environments like DROID. These performance advantages compound via few-shot adaptation to establish a novel paradigm for training single-embodiment video world models. Ultimately, CLAP delivers the most comprehensive suite of action-conditioned video world models to date - spanning diverse action-conditioning spaces (end-effector, language, and latent) and robot morphologies (including cross-embodiment, DROID, Bridge, bimanual YAM robots, and G1 humanoids). We open-source all code and models. Project Website at https://omni-clap.github.io .</p>
+            
+            <div class="card-action-bar">
+                <a href="http://arxiv.org/pdf/2608.27406v1" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
+                    View PDF
+                </a>
+                <a href="http://arxiv.org/abs/2608.27406v1" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
+                    arXiv Page &rarr;
+                </a>
+            </div>
+        </article>
+        
+        <article class="paper-card" data-title="flashvla: streaming action decoding for fast and asynchronous vla inference" data-summary="vision-language-action (vla) models are increasingly promising for robotic manipulation, yet their real-world deployment remains bottlenecked by high inference latency and unstable asynchronous execution. this challenge is particularly pronounced in flow-matching-based vla models, where action decoding requires multiple iterative steps conditioned on the vlm context. while efficient inference methods improve control frequency and asynchronous methods reduce execution idle time, existing approaches often fail to jointly achieve low-latency inference and accurate, temporally consistent asynchronous execution. we introduce \textbf{flashvla}, a streaming action decoding framework that addresses both challenges in a unified formulation. flashvla maintains a streaming action buffer with multiple chunks at different noise levels and decodes them using chunk-wise causal attention. this design allows flashvla to produce one executable action chunk per inference step. moreover, its chunk-wise autoregressive formulation implicitly preserves action continuity, enabling smooth asynchronous execution without extra future-state conditioning. across extensive simulated and real-world experiments, flashvla substantially improves inference speed while maintaining strong task performance. it can achieve $\geq$30\,hz control frequency on a single gpu with smooth asynchronous inference in real-world deployment.">
+            <div class="card-meta-top">
+                <span class="rank-tag">TOP #2</span>
+                <div class="score-badge">
+                    <span class="score-label">Priority Index</span>
+                    <span class="score-value">135</span>
+                </div>
+            </div>
+            
+            <h2 class="paper-title">FlashVLA: Streaming Action Decoding for Fast and Asynchronous VLA Inference</h2>
+            
+            <div class="author-row">
+                <span>🗓️ 2026-08-27</span>
+                <span>✍️ Zekai Li, Jiaming Tang, Zhijian Liu</span>
+            </div>
+            
+            <div class="badge-cluster">
+                <span class="badge">#vision-language-action</span><span class="badge">#vla</span>
+            </div>
+            
+            <p class="paper-summary">Vision-Language-Action (VLA) models are increasingly promising for robotic manipulation, yet their real-world deployment remains bottlenecked by high inference latency and unstable asynchronous execution. This challenge is particularly pronounced in flow-matching-based VLA models, where action decoding requires multiple iterative steps conditioned on the VLM context. While efficient inference methods improve control frequency and asynchronous methods reduce execution idle time, existing approaches often fail to jointly achieve low-latency inference and accurate, temporally consistent asynchronous execution. We introduce \textbf{FlashVLA}, a streaming action decoding framework that addresses both challenges in a unified formulation. FlashVLA maintains a streaming action buffer with multiple chunks at different noise levels and decodes them using chunk-wise causal attention. This design allows FlashVLA to produce one executable action chunk per inference step. Moreover, its chunk-wise autoregressive formulation implicitly preserves action continuity, enabling smooth asynchronous execution without extra future-state conditioning. Across extensive simulated and real-world experiments, FlashVLA substantially improves inference speed while maintaining strong task performance. It can achieve $\geq$30\,Hz control frequency on a single GPU with smooth asynchronous inference in real-world deployment.</p>
+            
+            <div class="card-action-bar">
+                <a href="http://arxiv.org/pdf/2608.27384v1" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
+                    View PDF
+                </a>
+                <a href="http://arxiv.org/abs/2608.27384v1" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
+                    arXiv Page &rarr;
+                </a>
+            </div>
+        </article>
+        
+        <article class="paper-card" data-title="graft: grounded and efficient online reinforcement adaptation for fine-grained robot manipulation" data-summary="pretrained vision-language-action (vla) policies provide strong priors for robot manipulation, yet adapting them online to fine-grained biomedical tasks remains challenging. task success often hinges on subtle, view-dependent visual cues, while task-level rewards provide little guidance about which regions matter, making it difficult to learn task-relevant visual grounding from limited real-robot interaction. online adaptation is further constrained by the computational cost of vla inference and replay-based updates. we introduce graft (grounded reinforcement adaptation for fast task learning), a framework for efficient online vla adaptation through grounded perception. graft uses region-level supervision to learn view-specific visual anchors that focus perception on task-relevant local cues without requiring region proposals at deployment. it further combines single-step action generation with cached visual-language prefix reuse to accelerate online learning. across four biomedical manipulation tasks, graft improves success rates by 25 percentage points under matched adaptation budgets, while reducing the computational overhead of online policy updates.">
+            <div class="card-meta-top">
+                <span class="rank-tag">TOP #3</span>
+                <div class="score-badge">
+                    <span class="score-label">Priority Index</span>
+                    <span class="score-value">135</span>
+                </div>
+            </div>
+            
+            <h2 class="paper-title">GRAFT: Grounded and Efficient Online Reinforcement Adaptation for Fine-Grained Robot Manipulation</h2>
+            
+            <div class="author-row">
+                <span>🗓️ 2026-08-27</span>
+                <span>✍️ Yibo Qiu, Haoliang Ye, Shu'ang Sun et al.</span>
+            </div>
+            
+            <div class="badge-cluster">
+                <span class="badge">#vision-language-action</span><span class="badge">#vla</span>
+            </div>
+            
+            <p class="paper-summary">Pretrained vision-language-action (VLA) policies provide strong priors for robot manipulation, yet adapting them online to fine-grained biomedical tasks remains challenging. Task success often hinges on subtle, view-dependent visual cues, while task-level rewards provide little guidance about which regions matter, making it difficult to learn task-relevant visual grounding from limited real-robot interaction. Online adaptation is further constrained by the computational cost of VLA inference and replay-based updates. We introduce GRAFT (Grounded Reinforcement Adaptation for Fast Task Learning), a framework for efficient online VLA adaptation through grounded perception. GRAFT uses region-level supervision to learn view-specific visual anchors that focus perception on task-relevant local cues without requiring region proposals at deployment. It further combines single-step action generation with cached visual-language prefix reuse to accelerate online learning. Across four biomedical manipulation tasks, GRAFT improves success rates by 25 percentage points under matched adaptation budgets, while reducing the computational overhead of online policy updates.</p>
+            
+            <div class="card-action-bar">
+                <a href="http://arxiv.org/pdf/2608.27079v1" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
+                    View PDF
+                </a>
+                <a href="http://arxiv.org/abs/2608.27079v1" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
+                    arXiv Page &rarr;
+                </a>
+            </div>
+        </article>
+        
+        <article class="paper-card" data-title="spatialcrafter: single image world modeling with generative 3d proxies" data-summary="explorable image-to-scene generation is essential for applications in gaming, robotics, and virtual reality. existing methods based on video diffusion model (vdm) commonly rely on incomplete conditioning signals such as sparse point clouds or 2d panoramas, leading to stochastic hallucinations, long-term drifts and suboptimal 3d consistency. we present spatialcrafter, a novel two-stage framework that addresses these issues by introducing a global 3d proxy for high-fidelity image-to-scene generation. specifically, we decompose the generation process into global proxy generation and appearance refinement. for proxy generation, we propose a point-anchored sparse structure~(pass) flow module that predicts a spatially aligned and geometrically consistent 3d proxy. for appearance refinement, we re-frame the vdm as a generative deferred refiner which synthesizes high-frequency photorealistic details upon proxy-defined scene geometry. to better integrate the proxy with the pre-trained vdm, we introduce parallel geometry injection and proxy-aware corruption training strategies, which improve robustness to proxy artifacts without disrupting the pretrained generative manifold. furthermore, as no suitable dataset exists for this explorable scene generation task, we construct a new large-scale dataset of 115k scenes. to the best of our knowledge, it is the first hybrid dataset for image-to-scene generation. extensive experiments on both synthetic and real-world datasets show that spatialcrafter outperforms state-of-the-art methods, mitigates long-term drift, and remains robust and consistent under rapid camera motion and extreme viewpoint changes. code, models, and the newly constructed dataset will be publicly released. see more at https://fangchuan.github.io/spatialcrafter/.">
+            <div class="card-meta-top">
+                <span class="rank-tag">TOP #4</span>
+                <div class="score-badge">
+                    <span class="score-label">Priority Index</span>
+                    <span class="score-value">90</span>
+                </div>
+            </div>
+            
+            <h2 class="paper-title">SpatialCrafter: Single Image World Modeling with Generative 3D Proxies</h2>
+            
+            <div class="author-row">
+                <span>🗓️ 2026-08-27</span>
+                <span>✍️ Chuan Fang, Lingteng Qiu, Yixun Liang et al.</span>
+            </div>
+            
+            <div class="badge-cluster">
+                <span class="badge">#world model</span>
+            </div>
+            
+            <p class="paper-summary">Explorable image-to-scene generation is essential for applications in gaming, robotics, and virtual reality. Existing methods based on video diffusion model (VDM) commonly rely on incomplete conditioning signals such as sparse point clouds or 2D panoramas, leading to stochastic hallucinations, long-term drifts and suboptimal 3D consistency. We present SpatialCrafter, a novel two-stage framework that addresses these issues by introducing a global 3D proxy for high-fidelity image-to-scene generation. Specifically, we decompose the generation process into global proxy generation and appearance refinement. For proxy generation, we propose a Point-anchored Sparse Structure~(PaSS) Flow module that predicts a spatially aligned and geometrically consistent 3D proxy. For appearance refinement, we re-frame the VDM as a Generative Deferred Refiner which synthesizes high-frequency photorealistic details upon proxy-defined scene geometry. To better integrate the proxy with the pre-trained VDM, we introduce Parallel Geometry Injection and Proxy-Aware Corruption training strategies, which improve robustness to proxy artifacts without disrupting the pretrained generative manifold. Furthermore, as no suitable dataset exists for this explorable scene generation task, we construct a new large-scale dataset of 115K scenes. To the best of our knowledge, it is the first hybrid dataset for image-to-scene generation. Extensive experiments on both synthetic and real-world datasets show that SpatialCrafter outperforms state-of-the-art methods, mitigates long-term drift, and remains robust and consistent under rapid camera motion and extreme viewpoint changes. Code, models, and the newly constructed dataset will be publicly released. See more at https://fangchuan.github.io/SpatialCrafter/.</p>
+            
+            <div class="card-action-bar">
+                <a href="http://arxiv.org/pdf/2608.27073v1" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
+                    View PDF
+                </a>
+                <a href="http://arxiv.org/abs/2608.27073v1" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
+                    arXiv Page &rarr;
+                </a>
+            </div>
+        </article>
+        
+        <article class="paper-card" data-title="tensegrity continuum robots enable task-adaptive morphologies for cooperative behaviors" data-summary="robots that can change their morphologies and behaviors for different tasks and environments hold great promise for adaptable, multifunctional systems. modular reconfigurable robots (mrrs) can achieve such functionalities by docking and rearranging individual units, but most rely on rigid modules that lack structural compliance, resulting in limited capabilities. continuum robots offer compliance through flexible backbones, yet they cannot self-reconfigure into task-adaptive multi-robot configurations. here, we introduce an mrr that unifies the advantages of both architectures by combining a tensegrity-based compliant body with claw-based connection mechanisms. each robot can manipulate and locomote independently, and multiple robots can self-reconfigure into different morphologies (e.g., chains, loops, branches) for cooperative manipulation and locomotion. we demonstrate the robots' capability across diverse tasks and environments, including coordinated object manipulation and transport, multimodal locomotion, and loco-manipulation in real-world scenarios. these results lay a foundation for adaptable and multifunctional robotic collectives, with broad potential applications in manufacturing, space exploration, and search-and-rescue operations.">
+            <div class="card-meta-top">
+                <span class="rank-tag">TOP #5</span>
+                <div class="score-badge">
+                    <span class="score-label">Priority Index</span>
+                    <span class="score-value">75</span>
+                </div>
+            </div>
+            
+            <h2 class="paper-title">Tensegrity Continuum Robots Enable Task-Adaptive Morphologies for Cooperative Behaviors</h2>
+            
+            <div class="author-row">
+                <span>🗓️ 2026-08-27</span>
+                <span>✍️ Mahmud Hasan Saikot, Sydney Spiegel, Sudheera Akalanka Kariyawasam et al.</span>
+            </div>
+            
+            <div class="badge-cluster">
+                <span class="badge">#locomotion</span>
+            </div>
+            
+            <p class="paper-summary">Robots that can change their morphologies and behaviors for different tasks and environments hold great promise for adaptable, multifunctional systems. Modular reconfigurable robots (MRRs) can achieve such functionalities by docking and rearranging individual units, but most rely on rigid modules that lack structural compliance, resulting in limited capabilities. Continuum robots offer compliance through flexible backbones, yet they cannot self-reconfigure into task-adaptive multi-robot configurations. Here, we introduce an MRR that unifies the advantages of both architectures by combining a tensegrity-based compliant body with claw-based connection mechanisms. Each robot can manipulate and locomote independently, and multiple robots can self-reconfigure into different morphologies (e.g., chains, loops, branches) for cooperative manipulation and locomotion. We demonstrate the robots' capability across diverse tasks and environments, including coordinated object manipulation and transport, multimodal locomotion, and loco-manipulation in real-world scenarios. These results lay a foundation for adaptable and multifunctional robotic collectives, with broad potential applications in manufacturing, space exploration, and search-and-rescue operations.</p>
+            
+            <div class="card-action-bar">
+                <a href="http://arxiv.org/pdf/2608.27221v1" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
+                    View PDF
+                </a>
+                <a href="http://arxiv.org/abs/2608.27221v1" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
+                    arXiv Page &rarr;
+                </a>
+            </div>
+        </article>
+        
+        <article class="paper-card" data-title="task-space model-based control of pneumatic soft actuators" data-summary="soft actuators enable dexterous and compliant interaction, but closed-loop task-space control remains challenging due to strong nonlinearities, distributed deformation, and uncertainty in their dynamics. this paper presents a real-time dynamic-model-based task-space feedback and estimation framework based on a non-minimal coordinate discrete elastic rod model formulated in absolute coordinates with holonomic constraints. the resulting structure preserves distributed mechanics while maintaining computational efficiency through sparse system matrices, enabling real-time control with up to 10 discretized rods. a quasi-static feedforward inverse model is combined with a task-space pi controller and a dynamic observer that fuses measurement residuals as virtual forces, enabling full-state estimation from sparse sensing. the approach is experimentally validated on three planar pneumatic soft actuators with varying geometries. across five tasks, including drawing the digits 0-9 across the workspace (3-18 mm/s tip speed), tracking periodic motion (up to 37 cm/s), cross-platform generalization, reduced sensing conditions, and real-time user-defined references, our method achieves 1.5-2.3 mm root mean square error (rmse) for precision motions and 5.5-12.4 mm rmse at 1-2 hz. results demonstrate that structured, non-minimal dynamic models can enable real-time, high-precision, moderate-bandwidth task-space control of planar soft pneumatic actuators in free space.">
+            <div class="card-meta-top">
+                <span class="rank-tag">TOP #6</span>
+                <div class="score-badge">
+                    <span class="score-label">Priority Index</span>
+                    <span class="score-value">70</span>
+                </div>
+            </div>
+            
+            <h2 class="paper-title">Task-space model-based control of pneumatic soft actuators</h2>
+            
+            <div class="author-row">
+                <span>🗓️ 2026-08-27</span>
+                <span>✍️ Nithin S. Kumar, Joshua Gaston, D. Caleb Rucker et al.</span>
+            </div>
+            
+            <div class="badge-cluster">
+                <span class="badge">#actuator</span>
+            </div>
+            
+            <p class="paper-summary">Soft actuators enable dexterous and compliant interaction, but closed-loop task-space control remains challenging due to strong nonlinearities, distributed deformation, and uncertainty in their dynamics. This paper presents a real-time dynamic-model-based task-space feedback and estimation framework based on a non-minimal coordinate discrete elastic rod model formulated in absolute coordinates with holonomic constraints. The resulting structure preserves distributed mechanics while maintaining computational efficiency through sparse system matrices, enabling real-time control with up to 10 discretized rods. A quasi-static feedforward inverse model is combined with a task-space PI controller and a dynamic observer that fuses measurement residuals as virtual forces, enabling full-state estimation from sparse sensing. The approach is experimentally validated on three planar pneumatic soft actuators with varying geometries. Across five tasks, including drawing the digits 0-9 across the workspace (3-18 mm/s tip speed), tracking periodic motion (up to 37 cm/s), cross-platform generalization, reduced sensing conditions, and real-time user-defined references, our method achieves 1.5-2.3 mm root mean square error (RMSE) for precision motions and 5.5-12.4 mm RMSE at 1-2 Hz. Results demonstrate that structured, non-minimal dynamic models can enable real-time, high-precision, moderate-bandwidth task-space control of planar soft pneumatic actuators in free space.</p>
+            
+            <div class="card-action-bar">
+                <a href="http://arxiv.org/pdf/2608.27186v1" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
+                    View PDF
+                </a>
+                <a href="http://arxiv.org/abs/2608.27186v1" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
+                    arXiv Page &rarr;
+                </a>
+            </div>
+        </article>
+        
+        <article class="paper-card" data-title="embodied scene rearrangement planning" data-summary="this paper introduces embodied scene rearrangement planning (esrp), a novel task requiring embodied agents to rearrange furniture in 3d scenes to match a target configuration using only egocentric observations and a top-down target layout. unlike prior rearrangement tasks, esrp precludes global state access and introduces mutual object occlusions, reflecting the practical constraints of real-world robotic deployment. these factors make aligning partial egocentric observations with the global target layout particularly challenging for long-horizon planning. to facilitate research, we present esrp-bench, a comprehensive benchmark built on omnigibson featuring over 5,400 scene pairs and 8,200 objects. we define three multi-level metrics to evaluate rearrangement quality and provide four baselines: a hierarchical task-and-motion planning method, a vision-language-model-based method, and two learning-based approaches (il and rl). experimental results demonstrate that current methods struggle to complete the task efficiently, highlighting esrp as a challenging frontier for embodied agents in scene understanding and long-horizon task planning. this work serves as a stepping stone toward deploying intelligent agents in real-world scenarios. project page: https://pie-lab.cn/esrp/.">
+            <div class="card-meta-top">
+                <span class="rank-tag">TOP #7</span>
+                <div class="score-badge">
+                    <span class="score-label">Priority Index</span>
+                    <span class="score-value">50</span>
+                </div>
+            </div>
+            
+            <h2 class="paper-title">Embodied Scene Rearrangement Planning</h2>
+            
+            <div class="author-row">
+                <span>🗓️ 2026-08-27</span>
+                <span>✍️ Canzhi Chen, Zan Wang, Siqi Zhu et al.</span>
+            </div>
+            
+            <div class="badge-cluster">
+                <span class="badge badge-muted">#frontier</span>
+            </div>
+            
+            <p class="paper-summary">This paper introduces Embodied Scene Rearrangement Planning (ESRP), a novel task requiring embodied agents to rearrange furniture in 3D scenes to match a target configuration using only egocentric observations and a top-down target layout. Unlike prior rearrangement tasks, ESRP precludes global state access and introduces mutual object occlusions, reflecting the practical constraints of real-world robotic deployment. These factors make aligning partial egocentric observations with the global target layout particularly challenging for long-horizon planning. To facilitate research, we present ESRP-Bench, a comprehensive benchmark built on OmniGibson featuring over 5,400 scene pairs and 8,200 objects. We define three multi-level metrics to evaluate rearrangement quality and provide four baselines: a hierarchical task-and-motion planning method, a vision-language-model-based method, and two learning-based approaches (IL and RL). Experimental results demonstrate that current methods struggle to complete the task efficiently, highlighting ESRP as a challenging frontier for embodied agents in scene understanding and long-horizon task planning. This work serves as a stepping stone toward deploying intelligent agents in real-world scenarios. Project page: https://pie-lab.cn/ESRP/.</p>
+            
+            <div class="card-action-bar">
+                <a href="http://arxiv.org/pdf/2608.27371v1" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
+                    View PDF
+                </a>
+                <a href="http://arxiv.org/abs/2608.27371v1" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
+                    arXiv Page &rarr;
+                </a>
+            </div>
+        </article>
+        
+        <article class="paper-card" data-title="tadp: task-aware deformable prediction for single-stage 3d object detection" data-summary="most single-stage 3d object detectors complete different tasks with the same extracted features. nevertheless, it is impossible to project features into a common space that is adaptive for all the tasks. we present a novel task-aware deformable prediction (tadp) method for single-stage 3d object detection to solve this problem. firstly, a triple feature refinement aggregation module is designed to extract three-level features adaptively. additionally, we design the multi-scale feature aggregation block to fuse multi-scale features in a scale-aware manner. finally, the prediction of each task is deformed with the designed plug-and-play task-aware deformation head. it can percept the emphasis and interaction of each task. we also designed three different deformation modules. the experimental results demonstrate that the proposed deformation head shows good results on other detection methods. the experimental results on the kitti dataset demonstrate that the car map is 80.91%, surpassing many state-of-the-art methods on the kitti benchmark.">
+            <div class="card-meta-top">
+                <span class="rank-tag">TOP #8</span>
+                <div class="score-badge">
+                    <span class="score-label">Priority Index</span>
+                    <span class="score-value">50</span>
+                </div>
+            </div>
+            
+            <h2 class="paper-title">TADP: Task-Aware Deformable Prediction for Single-Stage 3D Object Detection</h2>
+            
+            <div class="author-row">
+                <span>🗓️ 2026-08-27</span>
+                <span>✍️ Su Wang, Yaochen Li, Min Yang et al.</span>
+            </div>
+            
+            <div class="badge-cluster">
+                <span class="badge badge-muted">#frontier</span>
+            </div>
+            
+            <p class="paper-summary">Most single-stage 3D object detectors complete different tasks with the same extracted features. Nevertheless, it is impossible to project features into a common space that is adaptive for all the tasks. We present a novel task-aware deformable prediction (TADP) method for single-stage 3D object detection to solve this problem. Firstly, a triple feature refinement aggregation module is designed to extract three-level features adaptively. Additionally, we design the multi-scale feature aggregation block to fuse multi-scale features in a scale-aware manner. Finally, the prediction of each task is deformed with the designed plug-and-play task-aware deformation head. It can percept the emphasis and interaction of each task. We also designed three different deformation modules. The experimental results demonstrate that the proposed deformation head shows good results on other detection methods. The experimental results on the KITTI dataset demonstrate that the car mAP is 80.91%, surpassing many state-of-the-art methods on the KITTI benchmark.</p>
+            
+            <div class="card-action-bar">
+                <a href="http://arxiv.org/pdf/2608.27282v1" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
+                    View PDF
+                </a>
+                <a href="http://arxiv.org/abs/2608.27282v1" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
+                    arXiv Page &rarr;
+                </a>
+            </div>
+        </article>
+        
+        </main>
+    </div>
+
+    <script>
+        const filterInput = document.getElementById('filterInput');
+        const cards = document.querySelectorAll('.paper-card');
+
+        filterInput.addEventListener('input', (e) => {
+            const query = e.target.value.toLowerCase().trim();
+            cards.forEach(card => {
+                const title = card.getAttribute('data-title');
+                const summary = card.getAttribute('data-summary');
+                if (title.includes(query) || summary.includes(query)) {
+                    card.style.display = 'block';
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+        });
+    </script>
+</body>
+</html>
