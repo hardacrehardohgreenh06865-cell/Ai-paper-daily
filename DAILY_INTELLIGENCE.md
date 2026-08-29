@@ -1,4 +1,4 @@
-# 🤖 Embodied AI & Robotics Frontier Briefing (2026-08-28)
+# 🤖 Embodied AI & Robotics Frontier Briefing (2026-08-29)
 
 > *Automated Intelligence Briefing generated via custom ETL scoring pipeline. Prioritizes foundation models, manipulation, locomotion, and physical AI systems.*
 
