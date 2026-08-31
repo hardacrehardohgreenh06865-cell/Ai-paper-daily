@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Embodied AI & Robotics Intelligence Digest — August 30, 2026</title>
+    <title>Embodied AI & Robotics Intelligence Digest — August 31, 2026</title>
     <style>
         :root {
             --bg-base: #080c14;
@@ -242,7 +242,7 @@
         <header>
             <span class="pill-brand">Autonomous Research Intelligence</span>
             <h1>Embodied AI & Physical Frontier Briefing</h1>
-            <p class="subtitle">Compiled on August 30, 2026 • Ranked top 8 strategic breakthroughs out of incoming preprints.</p>
+            <p class="subtitle">Compiled on August 31, 2026 • Ranked top 8 strategic breakthroughs out of incoming preprints.</p>
             
             <div class="controls">
                 <input type="text" id="filterInput" class="search-box" placeholder="Filter papers by keywords (e.g. humanoid, tactile, diffusion)...">
@@ -251,39 +251,39 @@
 
         <main id="paperList">
             
-        <article class="paper-card" data-title="clap: cross-embodiment video world models are zero-shot physical simulators" data-summary="state-of-the-art action-conditioned video models are typically restricted to a single robot embodiment, preventing them from leveraging the vast corpus of heterogeneous video data that contains rich signals for learning generalizable physics. to bridge this gap, we introduce clap, a framework for cross-embodiment action-conditioned video generation capable of being trained on diverse, internet-scale videos across human and robotic agents. clap is grounded in the insight that universal physical laws govern spatiotemporal dynamics regardless of the actor. however, cross-embodiment learning is non-trivial because action representations vary sharply across robot platforms and are typically absent in human videos. clap addresses this fundamental challenge through the following core contributions. first, clap reconciles disparate action spaces using end-effector poses, language instructions, and latent actions. second, to resolve their individual limitations, clap introduces a curriculum-based cross-embodiment learning recipe that first learns foundational physical priors across unlabeled video data using latent actions and subsequently grounds them in end-effector action spaces for zero-shot deployment to real-world tasks. crucially, clap approaches or surpasses state-of-the-art single-embodiment video models in challenging environments like droid. these performance advantages compound via few-shot adaptation to establish a novel paradigm for training single-embodiment video world models. ultimately, clap delivers the most comprehensive suite of action-conditioned video world models to date - spanning diverse action-conditioning spaces (end-effector, language, and latent) and robot morphologies (including cross-embodiment, droid, bridge, bimanual yam robots, and g1 humanoids). we open-source all code and models. project website at https://omni-clap.github.io .">
+        <article class="paper-card" data-title="stay seated: learning omnidirectional humanoid locomotion on a passive mobile chair with casters" data-summary="humanoid robots with quasi-direct-drive actuators continuously generate joint torque while standing, whereas seated humans delegate weight support to chairs during desk work. as a first step toward seated loco-manipulation, we study omnidirectional seated locomotion on a passive mobile chair, requiring unfixed pelvis-seat contact and intermittent foot-floor propulsion of the robot-chair system. we extend a standard standing velocity-tracking environment with a passive-chair model, seated-state rewards, critic-only chair observations, and task-tailored contact settings. the policy is learned without motion-imitation rewards; its actor uses only proprioception and velocity commands, without contact sensing or chair states. in random-command evaluation, the policies tracked omnidirectional commands through nearly all 20-s rollouts, and the best seated policies could outperform the standing policy in velocity tracking. across four training seeds, a $2^3$ full-factorial comparison of symmetry regularization (sy), foot-slip regularization (fs), and command curriculum (cc) showed that fs reduced cot but increased tracking error and that some fs-only policies converged to stationary local optima. combining fs with either sy or cc avoided this failure without retuning fs, while sy improved bilateral leg symmetry during longitudinal motion. direction-resolved analysis showed cot ordered backward $<$ lateral $\ll$ forward, with planted-leg extension in backward and lateral motion and knee flexion following heel contact in forward motion. the learned policy achieved zero-shot sim-to-real transfer to a unitree g1 and generated omnidirectional seated locomotion.">
             <div class="card-meta-top">
                 <span class="rank-tag">TOP #1</span>
                 <div class="score-badge">
                     <span class="score-label">Priority Index</span>
-                    <span class="score-value">135</span>
+                    <span class="score-value">140</span>
                 </div>
             </div>
             
-            <h2 class="paper-title">CLAP: Cross-Embodiment Video World Models are Zero-Shot Physical Simulators</h2>
+            <h2 class="paper-title">Stay Seated: Learning Omnidirectional Humanoid Locomotion on a Passive Mobile Chair with Casters</h2>
             
             <div class="author-row">
-                <span>🗓️ 2026-08-27</span>
-                <span>✍️ Kechen Liu, Ola Shorinwa</span>
+                <span>🗓️ 2026-08-28</span>
+                <span>✍️ Kango Yanagida, Kazuki Miyazawa, Takato Horii</span>
             </div>
             
             <div class="badge-cluster">
-                <span class="badge">#humanoid</span><span class="badge">#world model</span>
+                <span class="badge">#humanoid</span><span class="badge">#locomotion</span><span class="badge">#actuator</span>
             </div>
             
-            <p class="paper-summary">State-of-the-art action-conditioned video models are typically restricted to a single robot embodiment, preventing them from leveraging the vast corpus of heterogeneous video data that contains rich signals for learning generalizable physics. To bridge this gap, we introduce CLAP, a framework for cross-embodiment action-conditioned video generation capable of being trained on diverse, internet-scale videos across human and robotic agents. CLAP is grounded in the insight that universal physical laws govern spatiotemporal dynamics regardless of the actor. However, cross-embodiment learning is non-trivial because action representations vary sharply across robot platforms and are typically absent in human videos. CLAP addresses this fundamental challenge through the following core contributions. First, CLAP reconciles disparate action spaces using end-effector poses, language instructions, and latent actions. Second, to resolve their individual limitations, CLAP introduces a curriculum-based cross-embodiment learning recipe that first learns foundational physical priors across unlabeled video data using latent actions and subsequently grounds them in end-effector action spaces for zero-shot deployment to real-world tasks. Crucially, CLAP approaches or surpasses state-of-the-art single-embodiment video models in challenging environments like DROID. These performance advantages compound via few-shot adaptation to establish a novel paradigm for training single-embodiment video world models. Ultimately, CLAP delivers the most comprehensive suite of action-conditioned video world models to date - spanning diverse action-conditioning spaces (end-effector, language, and latent) and robot morphologies (including cross-embodiment, DROID, Bridge, bimanual YAM robots, and G1 humanoids). We open-source all code and models. Project Website at https://omni-clap.github.io .</p>
+            <p class="paper-summary">Humanoid robots with quasi-direct-drive actuators continuously generate joint torque while standing, whereas seated humans delegate weight support to chairs during desk work. As a first step toward seated loco-manipulation, we study omnidirectional seated locomotion on a passive mobile chair, requiring unfixed pelvis-seat contact and intermittent foot-floor propulsion of the robot-chair system. We extend a standard standing velocity-tracking environment with a passive-chair model, seated-state rewards, critic-only chair observations, and task-tailored contact settings. The policy is learned without motion-imitation rewards; its actor uses only proprioception and velocity commands, without contact sensing or chair states. In random-command evaluation, the policies tracked omnidirectional commands through nearly all 20-s rollouts, and the best seated policies could outperform the Standing policy in velocity tracking. Across four training seeds, a $2^3$ full-factorial comparison of symmetry regularization (SY), foot-slip regularization (FS), and command curriculum (CC) showed that FS reduced CoT but increased tracking error and that some FS-only policies converged to stationary local optima. Combining FS with either SY or CC avoided this failure without retuning FS, while SY improved bilateral leg symmetry during longitudinal motion. Direction-resolved analysis showed CoT ordered backward $<$ lateral $\ll$ forward, with planted-leg extension in backward and lateral motion and knee flexion following heel contact in forward motion. The learned policy achieved zero-shot sim-to-real transfer to a Unitree G1 and generated omnidirectional seated locomotion.</p>
             
             <div class="card-action-bar">
-                <a href="http://arxiv.org/pdf/2608.27406v1" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
+                <a href="http://arxiv.org/pdf/2608.28090v1" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
                     View PDF
                 </a>
-                <a href="http://arxiv.org/abs/2608.27406v1" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
+                <a href="http://arxiv.org/abs/2608.28090v1" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
                     arXiv Page &rarr;
                 </a>
             </div>
         </article>
         
-        <article class="paper-card" data-title="flashvla: streaming action decoding for fast and asynchronous vla inference" data-summary="vision-language-action (vla) models are increasingly promising for robotic manipulation, yet their real-world deployment remains bottlenecked by high inference latency and unstable asynchronous execution. this challenge is particularly pronounced in flow-matching-based vla models, where action decoding requires multiple iterative steps conditioned on the vlm context. while efficient inference methods improve control frequency and asynchronous methods reduce execution idle time, existing approaches often fail to jointly achieve low-latency inference and accurate, temporally consistent asynchronous execution. we introduce \textbf{flashvla}, a streaming action decoding framework that addresses both challenges in a unified formulation. flashvla maintains a streaming action buffer with multiple chunks at different noise levels and decodes them using chunk-wise causal attention. this design allows flashvla to produce one executable action chunk per inference step. moreover, its chunk-wise autoregressive formulation implicitly preserves action continuity, enabling smooth asynchronous execution without extra future-state conditioning. across extensive simulated and real-world experiments, flashvla substantially improves inference speed while maintaining strong task performance. it can achieve $\geq$30\,hz control frequency on a single gpu with smooth asynchronous inference in real-world deployment.">
+        <article class="paper-card" data-title="deicticvla: unifying instruction modes based on language and deictic gestures in a single vla" data-summary="vision-language-action models (vlas) allow users to specify manipulation tasks in natural language, but distinguishing a target or placement goal among objects of the same category or similar appearance requires detailed expressions that vlas may not use reliably. we propose deicticvla, which canonicalizes language instruction (li), vision-language instruction (vli), and visual instruction (vi) into a text prompt and deictic masks through text-prompt completion and deictic gesture grounding, enabling a single pretrained vla to handle all three instruction modes. with a shared backbone, demonstrations, and matched training steps, we compare two rgb visual prompting methods, two separate-channel mask prompting methods, and three training strategies in simulation. under two-stage training, the four prompting methods achieve high in-distribution success but differ in their ability to use deictic masks in unseen layouts. across methods, training-strategy ablations show that two-stage training improves such use, while retaining second-stage li data mitigates forgetting without reducing vli and vi performance. in three real-world tasks, one policy supports all modes. vli and vi outperform li under unseen expressions, appearance changes, and novel objects. for unseen categories, both achieve 100% success, compared with 16.7% for jointly trained li. these results demonstrate the unified three-mode interface and guide deicticvla design.">
             <div class="card-meta-top">
                 <span class="rank-tag">TOP #2</span>
                 <div class="score-badge">
@@ -292,158 +292,158 @@
                 </div>
             </div>
             
-            <h2 class="paper-title">FlashVLA: Streaming Action Decoding for Fast and Asynchronous VLA Inference</h2>
+            <h2 class="paper-title">DeicticVLA: Unifying Instruction Modes Based on Language and Deictic Gestures in a Single VLA</h2>
             
             <div class="author-row">
-                <span>🗓️ 2026-08-27</span>
-                <span>✍️ Zekai Li, Jiaming Tang, Zhijian Liu</span>
+                <span>🗓️ 2026-08-28</span>
+                <span>✍️ Kango Yanagida, Tatsuya Aoki, Yuichiro Yoshikawa et al.</span>
             </div>
             
             <div class="badge-cluster">
                 <span class="badge">#vision-language-action</span><span class="badge">#vla</span>
             </div>
             
-            <p class="paper-summary">Vision-Language-Action (VLA) models are increasingly promising for robotic manipulation, yet their real-world deployment remains bottlenecked by high inference latency and unstable asynchronous execution. This challenge is particularly pronounced in flow-matching-based VLA models, where action decoding requires multiple iterative steps conditioned on the VLM context. While efficient inference methods improve control frequency and asynchronous methods reduce execution idle time, existing approaches often fail to jointly achieve low-latency inference and accurate, temporally consistent asynchronous execution. We introduce \textbf{FlashVLA}, a streaming action decoding framework that addresses both challenges in a unified formulation. FlashVLA maintains a streaming action buffer with multiple chunks at different noise levels and decodes them using chunk-wise causal attention. This design allows FlashVLA to produce one executable action chunk per inference step. Moreover, its chunk-wise autoregressive formulation implicitly preserves action continuity, enabling smooth asynchronous execution without extra future-state conditioning. Across extensive simulated and real-world experiments, FlashVLA substantially improves inference speed while maintaining strong task performance. It can achieve $\geq$30\,Hz control frequency on a single GPU with smooth asynchronous inference in real-world deployment.</p>
+            <p class="paper-summary">Vision-Language-Action models (VLAs) allow users to specify manipulation tasks in natural language, but distinguishing a target or placement goal among objects of the same category or similar appearance requires detailed expressions that VLAs may not use reliably. We propose DeicticVLA, which canonicalizes Language Instruction (LI), Vision-Language Instruction (VLI), and Visual Instruction (VI) into a text prompt and deictic masks through text-prompt completion and deictic gesture grounding, enabling a single pretrained VLA to handle all three instruction modes. With a shared backbone, demonstrations, and matched training steps, we compare two RGB visual prompting methods, two separate-channel mask prompting methods, and three training strategies in simulation. Under two-stage training, the four prompting methods achieve high in-distribution success but differ in their ability to use deictic masks in unseen layouts. Across methods, training-strategy ablations show that two-stage training improves such use, while retaining second-stage LI data mitigates forgetting without reducing VLI and VI performance. In three real-world tasks, one policy supports all modes. VLI and VI outperform LI under unseen expressions, appearance changes, and novel objects. For unseen categories, both achieve 100% success, compared with 16.7% for jointly trained LI. These results demonstrate the unified three-mode interface and guide DeicticVLA design.</p>
             
             <div class="card-action-bar">
-                <a href="http://arxiv.org/pdf/2608.27384v1" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
+                <a href="http://arxiv.org/pdf/2608.28108v1" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
                     View PDF
                 </a>
-                <a href="http://arxiv.org/abs/2608.27384v1" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
+                <a href="http://arxiv.org/abs/2608.28108v1" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
                     arXiv Page &rarr;
                 </a>
             </div>
         </article>
         
-        <article class="paper-card" data-title="graft: grounded and efficient online reinforcement adaptation for fine-grained robot manipulation" data-summary="pretrained vision-language-action (vla) policies provide strong priors for robot manipulation, yet adapting them online to fine-grained biomedical tasks remains challenging. task success often hinges on subtle, view-dependent visual cues, while task-level rewards provide little guidance about which regions matter, making it difficult to learn task-relevant visual grounding from limited real-robot interaction. online adaptation is further constrained by the computational cost of vla inference and replay-based updates. we introduce graft (grounded reinforcement adaptation for fast task learning), a framework for efficient online vla adaptation through grounded perception. graft uses region-level supervision to learn view-specific visual anchors that focus perception on task-relevant local cues without requiring region proposals at deployment. it further combines single-step action generation with cached visual-language prefix reuse to accelerate online learning. across four biomedical manipulation tasks, graft improves success rates by 25 percentage points under matched adaptation budgets, while reducing the computational overhead of online policy updates.">
+        <article class="paper-card" data-title="contact-guided exploration for non-prehensile locomanipulation with multi-critic rl" data-summary="non-prehensile manipulation offers versatile skills for moving and rearranging heavy or bulky objects, particularly when combined with a mobile manipulation platform. however, both model-based and model-free approaches struggle with the complex hybrid dynamics and the sparsity of the contact in these tasks. to address these challenges, we propose a contact-guided exploration strategy implemented within a multi-critic reinforcement learning (rl) framework. a dedicated exploration critic is trained with a dense contact-seeking reward that guides the end-effector toward meaningful contact points; its influence is progressively decayed to recover a task-optimal policy. we obtain candidate interaction points from a general-purpose grasping algorithm, enabling the exploration mechanism to generalise across various object geometries. we evaluate the approach on multiple tasks, including box pushing, chair transportation, and a dishwasher opening task. finally, we validate the chair transportation policy through extensive experiments on a quadrupedal mobile manipulator, demonstrating deployable non-prehensile manipulation in the real world.">
             <div class="card-meta-top">
                 <span class="rank-tag">TOP #3</span>
                 <div class="score-badge">
                     <span class="score-label">Priority Index</span>
-                    <span class="score-value">135</span>
+                    <span class="score-value">115</span>
                 </div>
             </div>
             
-            <h2 class="paper-title">GRAFT: Grounded and Efficient Online Reinforcement Adaptation for Fine-Grained Robot Manipulation</h2>
+            <h2 class="paper-title">Contact-Guided Exploration for Non-Prehensile Locomanipulation with Multi-Critic RL</h2>
             
             <div class="author-row">
-                <span>🗓️ 2026-08-27</span>
-                <span>✍️ Yibo Qiu, Haoliang Ye, Shu'ang Sun et al.</span>
+                <span>🗓️ 2026-08-28</span>
+                <span>✍️ Simone Tolomei, Mayank Mittal, Franco Angelini et al.</span>
             </div>
             
             <div class="badge-cluster">
-                <span class="badge">#vision-language-action</span><span class="badge">#vla</span>
+                <span class="badge">#quadruped</span><span class="badge">#reinforcement learning</span>
             </div>
             
-            <p class="paper-summary">Pretrained vision-language-action (VLA) policies provide strong priors for robot manipulation, yet adapting them online to fine-grained biomedical tasks remains challenging. Task success often hinges on subtle, view-dependent visual cues, while task-level rewards provide little guidance about which regions matter, making it difficult to learn task-relevant visual grounding from limited real-robot interaction. Online adaptation is further constrained by the computational cost of VLA inference and replay-based updates. We introduce GRAFT (Grounded Reinforcement Adaptation for Fast Task Learning), a framework for efficient online VLA adaptation through grounded perception. GRAFT uses region-level supervision to learn view-specific visual anchors that focus perception on task-relevant local cues without requiring region proposals at deployment. It further combines single-step action generation with cached visual-language prefix reuse to accelerate online learning. Across four biomedical manipulation tasks, GRAFT improves success rates by 25 percentage points under matched adaptation budgets, while reducing the computational overhead of online policy updates.</p>
+            <p class="paper-summary">Non-prehensile manipulation offers versatile skills for moving and rearranging heavy or bulky objects, particularly when combined with a mobile manipulation platform. However, both model-based and model-free approaches struggle with the complex hybrid dynamics and the sparsity of the contact in these tasks. To address these challenges, we propose a contact-guided exploration strategy implemented within a Multi-Critic Reinforcement Learning (RL) framework. A dedicated exploration critic is trained with a dense contact-seeking reward that guides the end-effector toward meaningful contact points; its influence is progressively decayed to recover a task-optimal policy. We obtain candidate interaction points from a general-purpose grasping algorithm, enabling the exploration mechanism to generalise across various object geometries. We evaluate the approach on multiple tasks, including box pushing, chair transportation, and a dishwasher opening task. Finally, we validate the chair transportation policy through extensive experiments on a quadrupedal mobile manipulator, demonstrating deployable non-prehensile manipulation in the real world.</p>
             
             <div class="card-action-bar">
-                <a href="http://arxiv.org/pdf/2608.27079v1" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
+                <a href="http://arxiv.org/pdf/2608.28140v1" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
                     View PDF
                 </a>
-                <a href="http://arxiv.org/abs/2608.27079v1" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
+                <a href="http://arxiv.org/abs/2608.28140v1" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
                     arXiv Page &rarr;
                 </a>
             </div>
         </article>
         
-        <article class="paper-card" data-title="spatialcrafter: single image world modeling with generative 3d proxies" data-summary="explorable image-to-scene generation is essential for applications in gaming, robotics, and virtual reality. existing methods based on video diffusion model (vdm) commonly rely on incomplete conditioning signals such as sparse point clouds or 2d panoramas, leading to stochastic hallucinations, long-term drifts and suboptimal 3d consistency. we present spatialcrafter, a novel two-stage framework that addresses these issues by introducing a global 3d proxy for high-fidelity image-to-scene generation. specifically, we decompose the generation process into global proxy generation and appearance refinement. for proxy generation, we propose a point-anchored sparse structure~(pass) flow module that predicts a spatially aligned and geometrically consistent 3d proxy. for appearance refinement, we re-frame the vdm as a generative deferred refiner which synthesizes high-frequency photorealistic details upon proxy-defined scene geometry. to better integrate the proxy with the pre-trained vdm, we introduce parallel geometry injection and proxy-aware corruption training strategies, which improve robustness to proxy artifacts without disrupting the pretrained generative manifold. furthermore, as no suitable dataset exists for this explorable scene generation task, we construct a new large-scale dataset of 115k scenes. to the best of our knowledge, it is the first hybrid dataset for image-to-scene generation. extensive experiments on both synthetic and real-world datasets show that spatialcrafter outperforms state-of-the-art methods, mitigates long-term drift, and remains robust and consistent under rapid camera motion and extreme viewpoint changes. code, models, and the newly constructed dataset will be publicly released. see more at https://fangchuan.github.io/spatialcrafter/.">
+        <article class="paper-card" data-title="pamor: parameterized affective motion generation in real time for humanoid robots" data-summary="people read a humanoid robot's motion in social settings not only for the action performed but for the affect conveyed. motion carrying that affect has so far been generated for human avatars, where style is taken from a reference clip or an emotion word, neither of which can be quantitatively parameterized. we present pamor, which turns affect into a measured control parameter: a valence-arousal (v-a) coordinate computed natively on robot kinematics. it is obtained in closed form from postural expansion and movement energy, and these measurements serve directly as generation conditions, with no human annotation. an action prior and two affect priors, trained in a shared latent space, are composed at each denoising step: the action prior fixes what is performed, the affect priors modulate how. whole-body motion rolls out autoregressively on a 29-dof unitree g1 in real time, with action and affect both editable. generated motion tracks the commanded v-a over its full range while text-to-motion fidelity still matches text-only baselines. in a perceptual study, raters identify the commanded emotion on 0.38 of trials, above both baselines and approaching the 0.44 reported for acted human bodies.">
             <div class="card-meta-top">
                 <span class="rank-tag">TOP #4</span>
                 <div class="score-badge">
                     <span class="score-label">Priority Index</span>
-                    <span class="score-value">90</span>
+                    <span class="score-value">95</span>
                 </div>
             </div>
             
-            <h2 class="paper-title">SpatialCrafter: Single Image World Modeling with Generative 3D Proxies</h2>
+            <h2 class="paper-title">PAMoR: Parameterized Affective Motion Generation in Real Time for Humanoid Robots</h2>
             
             <div class="author-row">
-                <span>🗓️ 2026-08-27</span>
-                <span>✍️ Chuan Fang, Lingteng Qiu, Yixun Liang et al.</span>
+                <span>🗓️ 2026-08-28</span>
+                <span>✍️ Yan Pan, Lingfan Bao, Tianhu Peng et al.</span>
             </div>
             
             <div class="badge-cluster">
-                <span class="badge">#world model</span>
+                <span class="badge">#humanoid</span>
             </div>
             
-            <p class="paper-summary">Explorable image-to-scene generation is essential for applications in gaming, robotics, and virtual reality. Existing methods based on video diffusion model (VDM) commonly rely on incomplete conditioning signals such as sparse point clouds or 2D panoramas, leading to stochastic hallucinations, long-term drifts and suboptimal 3D consistency. We present SpatialCrafter, a novel two-stage framework that addresses these issues by introducing a global 3D proxy for high-fidelity image-to-scene generation. Specifically, we decompose the generation process into global proxy generation and appearance refinement. For proxy generation, we propose a Point-anchored Sparse Structure~(PaSS) Flow module that predicts a spatially aligned and geometrically consistent 3D proxy. For appearance refinement, we re-frame the VDM as a Generative Deferred Refiner which synthesizes high-frequency photorealistic details upon proxy-defined scene geometry. To better integrate the proxy with the pre-trained VDM, we introduce Parallel Geometry Injection and Proxy-Aware Corruption training strategies, which improve robustness to proxy artifacts without disrupting the pretrained generative manifold. Furthermore, as no suitable dataset exists for this explorable scene generation task, we construct a new large-scale dataset of 115K scenes. To the best of our knowledge, it is the first hybrid dataset for image-to-scene generation. Extensive experiments on both synthetic and real-world datasets show that SpatialCrafter outperforms state-of-the-art methods, mitigates long-term drift, and remains robust and consistent under rapid camera motion and extreme viewpoint changes. Code, models, and the newly constructed dataset will be publicly released. See more at https://fangchuan.github.io/SpatialCrafter/.</p>
+            <p class="paper-summary">People read a humanoid robot's motion in social settings not only for the action performed but for the affect conveyed. Motion carrying that affect has so far been generated for human avatars, where style is taken from a reference clip or an emotion word, neither of which can be quantitatively parameterized. We present PAMoR, which turns affect into a measured control parameter: a valence-arousal (V-A) coordinate computed natively on robot kinematics. It is obtained in closed form from postural expansion and movement energy, and these measurements serve directly as generation conditions, with no human annotation. An action prior and two affect priors, trained in a shared latent space, are composed at each denoising step: the action prior fixes what is performed, the affect priors modulate how. Whole-body motion rolls out autoregressively on a 29-DoF Unitree G1 in real time, with action and affect both editable. Generated motion tracks the commanded V-A over its full range while text-to-motion fidelity still matches text-only baselines. In a perceptual study, raters identify the commanded emotion on 0.38 of trials, above both baselines and approaching the 0.44 reported for acted human bodies.</p>
             
             <div class="card-action-bar">
-                <a href="http://arxiv.org/pdf/2608.27073v1" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
+                <a href="http://arxiv.org/pdf/2608.28213v1" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
                     View PDF
                 </a>
-                <a href="http://arxiv.org/abs/2608.27073v1" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
+                <a href="http://arxiv.org/abs/2608.28213v1" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
                     arXiv Page &rarr;
                 </a>
             </div>
         </article>
         
-        <article class="paper-card" data-title="tensegrity continuum robots enable task-adaptive morphologies for cooperative behaviors" data-summary="robots that can change their morphologies and behaviors for different tasks and environments hold great promise for adaptable, multifunctional systems. modular reconfigurable robots (mrrs) can achieve such functionalities by docking and rearranging individual units, but most rely on rigid modules that lack structural compliance, resulting in limited capabilities. continuum robots offer compliance through flexible backbones, yet they cannot self-reconfigure into task-adaptive multi-robot configurations. here, we introduce an mrr that unifies the advantages of both architectures by combining a tensegrity-based compliant body with claw-based connection mechanisms. each robot can manipulate and locomote independently, and multiple robots can self-reconfigure into different morphologies (e.g., chains, loops, branches) for cooperative manipulation and locomotion. we demonstrate the robots' capability across diverse tasks and environments, including coordinated object manipulation and transport, multimodal locomotion, and loco-manipulation in real-world scenarios. these results lay a foundation for adaptable and multifunctional robotic collectives, with broad potential applications in manufacturing, space exploration, and search-and-rescue operations.">
+        <article class="paper-card" data-title="lucid: an agentic ai framework on digital-twin in the loop for qos-guaranteeing robotic control" data-summary="cloud robotics relies on the timely uplink of high-volume sensing streams, yet dynamic environments continually shift the feasible combinations of trajectories, active-robot count, and per-robot qos. because existing approaches formulate trajectory planning (tp) and radio resource management (rrm) as a single fixed optimization problem, they cannot reconfigure these coupled decisions as conditions evolve, resulting in transient qos violations. however, evolving operator intents change which quantities-such as the active-robot count and per-robot qos-are fixed, optimized, or relaxed. furthermore, the computational cost of evaluating trajectory-dependent wireless conflicts has made it difficult to build large-scale digital-twin-in-the-loop (ditl) testbeds responsive enough for such dynamic orchestration. we present lucid, an llm-agent--orchestrated, uplink-aware cloud-robotics pipeline that moves tp--rrm from solving a fixed formulation to dynamically orchestrating optimization problem schemas within a ditl environment. driven by the operator's high-level intent, lucid treats the tp--rrm formulation as a bounded template whose variables, objectives, and constraints are dynamically configured, while simbridge enables repeated ray-tracing evaluation by converting large-scale robotics scenes into wireless-ready dts. by integrating collision-free path planning with a spectral-radius rrm validator, lucid identifies wireless bottlenecks and restructures the problem schema on the fly to efficiently find the verified feasible state. experiments confirm that lucid robustly adapts to changing intents, active-robot counts, and scenes, while a multimodal surrogate model, fastconfignet, reduces planning latency.">
             <div class="card-meta-top">
                 <span class="rank-tag">TOP #5</span>
                 <div class="score-badge">
                     <span class="score-label">Priority Index</span>
-                    <span class="score-value">75</span>
+                    <span class="score-value">50</span>
                 </div>
             </div>
             
-            <h2 class="paper-title">Tensegrity Continuum Robots Enable Task-Adaptive Morphologies for Cooperative Behaviors</h2>
+            <h2 class="paper-title">LUCID: An Agentic AI Framework on Digital-Twin in the Loop for QoS-Guaranteeing Robotic Control</h2>
             
             <div class="author-row">
-                <span>🗓️ 2026-08-27</span>
-                <span>✍️ Mahmud Hasan Saikot, Sydney Spiegel, Sudheera Akalanka Kariyawasam et al.</span>
+                <span>🗓️ 2026-08-28</span>
+                <span>✍️ Hyeonsu Lyu, Minwoo Kim, Sehyun Ryu et al.</span>
             </div>
             
             <div class="badge-cluster">
-                <span class="badge">#locomotion</span>
+                <span class="badge badge-muted">#frontier</span>
             </div>
             
-            <p class="paper-summary">Robots that can change their morphologies and behaviors for different tasks and environments hold great promise for adaptable, multifunctional systems. Modular reconfigurable robots (MRRs) can achieve such functionalities by docking and rearranging individual units, but most rely on rigid modules that lack structural compliance, resulting in limited capabilities. Continuum robots offer compliance through flexible backbones, yet they cannot self-reconfigure into task-adaptive multi-robot configurations. Here, we introduce an MRR that unifies the advantages of both architectures by combining a tensegrity-based compliant body with claw-based connection mechanisms. Each robot can manipulate and locomote independently, and multiple robots can self-reconfigure into different morphologies (e.g., chains, loops, branches) for cooperative manipulation and locomotion. We demonstrate the robots' capability across diverse tasks and environments, including coordinated object manipulation and transport, multimodal locomotion, and loco-manipulation in real-world scenarios. These results lay a foundation for adaptable and multifunctional robotic collectives, with broad potential applications in manufacturing, space exploration, and search-and-rescue operations.</p>
+            <p class="paper-summary">Cloud robotics relies on the timely uplink of high-volume sensing streams, yet dynamic environments continually shift the feasible combinations of trajectories, active-robot count, and per-robot QoS. Because existing approaches formulate trajectory planning (TP) and radio resource management (RRM) as a single fixed optimization problem, they cannot reconfigure these coupled decisions as conditions evolve, resulting in transient QoS violations. However, evolving operator intents change which quantities-such as the active-robot count and per-robot QoS-are fixed, optimized, or relaxed. Furthermore, the computational cost of evaluating trajectory-dependent wireless conflicts has made it difficult to build large-scale Digital-Twin-in-the-Loop (DITL) testbeds responsive enough for such dynamic orchestration. We present LUCID, an LLM-agent--orchestrated, uplink-aware cloud-robotics pipeline that moves TP--RRM from solving a fixed formulation to dynamically orchestrating optimization problem schemas within a DITL environment. Driven by the operator's high-level intent, LUCID treats the TP--RRM formulation as a bounded template whose variables, objectives, and constraints are dynamically configured, while SimBridge enables repeated ray-tracing evaluation by converting large-scale robotics scenes into wireless-ready DTs. By integrating collision-free path planning with a spectral-radius RRM validator, LUCID identifies wireless bottlenecks and restructures the problem schema on the fly to efficiently find the verified feasible state. Experiments confirm that LUCID robustly adapts to changing intents, active-robot counts, and scenes, while a multimodal surrogate model, FastConfigNet, reduces planning latency.</p>
             
             <div class="card-action-bar">
-                <a href="http://arxiv.org/pdf/2608.27221v1" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
+                <a href="http://arxiv.org/pdf/2608.28437v1" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
                     View PDF
                 </a>
-                <a href="http://arxiv.org/abs/2608.27221v1" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
+                <a href="http://arxiv.org/abs/2608.28437v1" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
                     arXiv Page &rarr;
                 </a>
             </div>
         </article>
         
-        <article class="paper-card" data-title="task-space model-based control of pneumatic soft actuators" data-summary="soft actuators enable dexterous and compliant interaction, but closed-loop task-space control remains challenging due to strong nonlinearities, distributed deformation, and uncertainty in their dynamics. this paper presents a real-time dynamic-model-based task-space feedback and estimation framework based on a non-minimal coordinate discrete elastic rod model formulated in absolute coordinates with holonomic constraints. the resulting structure preserves distributed mechanics while maintaining computational efficiency through sparse system matrices, enabling real-time control with up to 10 discretized rods. a quasi-static feedforward inverse model is combined with a task-space pi controller and a dynamic observer that fuses measurement residuals as virtual forces, enabling full-state estimation from sparse sensing. the approach is experimentally validated on three planar pneumatic soft actuators with varying geometries. across five tasks, including drawing the digits 0-9 across the workspace (3-18 mm/s tip speed), tracking periodic motion (up to 37 cm/s), cross-platform generalization, reduced sensing conditions, and real-time user-defined references, our method achieves 1.5-2.3 mm root mean square error (rmse) for precision motions and 5.5-12.4 mm rmse at 1-2 hz. results demonstrate that structured, non-minimal dynamic models can enable real-time, high-precision, moderate-bandwidth task-space control of planar soft pneumatic actuators in free space.">
+        <article class="paper-card" data-title="linear temporal logic translation via human-inspired self-constrained reasoning for robot task specification" data-summary="many robotic tasks are temporally extended and demand precise specifications of subgoals, constraints, and their temporal ordering. yet human operators typically communicate such tasks in natural language, which is inherently ambiguous, underspecified, and context dependent. translating human instructions into formal task specifications, such as linear temporal logic (ltl), is therefore essential for verifiable and safe robotic execution. existing llm-based translators attempt to bridge this gap through open-ended reasoning or post-hoc constraint enforcement, but the former may violate domain constraints, whereas the latter can disrupt the reasoning needed for novel instructions. this paper proposes self-constrained reasoning (scr), a framework that mitigates this trade-off by internalizing structural knowledge into the model's decision-making process rather than imposing it as an external filter. by combining a structural constraint representation with a hierarchical decision-making formulation, scr guides reasoning within a formally grounded space while preserving adaptability to unseen instructions. experiments show that scr improves both domain-constraint satisfaction and generalization, providing an effective and interpretable approach for translating human intent into verifiable specifications for robotic execution.">
             <div class="card-meta-top">
                 <span class="rank-tag">TOP #6</span>
                 <div class="score-badge">
                     <span class="score-label">Priority Index</span>
-                    <span class="score-value">70</span>
+                    <span class="score-value">50</span>
                 </div>
             </div>
             
-            <h2 class="paper-title">Task-space model-based control of pneumatic soft actuators</h2>
+            <h2 class="paper-title">Linear Temporal Logic Translation via Human-Inspired Self-Constrained Reasoning for Robot Task Specification</h2>
             
             <div class="author-row">
-                <span>🗓️ 2026-08-27</span>
-                <span>✍️ Nithin S. Kumar, Joshua Gaston, D. Caleb Rucker et al.</span>
+                <span>🗓️ 2026-08-28</span>
+                <span>✍️ Haofei Hou, Fanxu Meng, Shunyi Zhao et al.</span>
             </div>
             
             <div class="badge-cluster">
-                <span class="badge">#actuator</span>
+                <span class="badge badge-muted">#frontier</span>
             </div>
             
-            <p class="paper-summary">Soft actuators enable dexterous and compliant interaction, but closed-loop task-space control remains challenging due to strong nonlinearities, distributed deformation, and uncertainty in their dynamics. This paper presents a real-time dynamic-model-based task-space feedback and estimation framework based on a non-minimal coordinate discrete elastic rod model formulated in absolute coordinates with holonomic constraints. The resulting structure preserves distributed mechanics while maintaining computational efficiency through sparse system matrices, enabling real-time control with up to 10 discretized rods. A quasi-static feedforward inverse model is combined with a task-space PI controller and a dynamic observer that fuses measurement residuals as virtual forces, enabling full-state estimation from sparse sensing. The approach is experimentally validated on three planar pneumatic soft actuators with varying geometries. Across five tasks, including drawing the digits 0-9 across the workspace (3-18 mm/s tip speed), tracking periodic motion (up to 37 cm/s), cross-platform generalization, reduced sensing conditions, and real-time user-defined references, our method achieves 1.5-2.3 mm root mean square error (RMSE) for precision motions and 5.5-12.4 mm RMSE at 1-2 Hz. Results demonstrate that structured, non-minimal dynamic models can enable real-time, high-precision, moderate-bandwidth task-space control of planar soft pneumatic actuators in free space.</p>
+            <p class="paper-summary">Many robotic tasks are temporally extended and demand precise specifications of subgoals, constraints, and their temporal ordering. Yet human operators typically communicate such tasks in natural language, which is inherently ambiguous, underspecified, and context dependent. Translating human instructions into formal task specifications, such as Linear Temporal Logic (LTL), is therefore essential for verifiable and safe robotic execution. Existing LLM-based translators attempt to bridge this gap through open-ended reasoning or post-hoc constraint enforcement, but the former may violate domain constraints, whereas the latter can disrupt the reasoning needed for novel instructions. This paper proposes Self-Constrained Reasoning (SCR), a framework that mitigates this trade-off by internalizing structural knowledge into the model's decision-making process rather than imposing it as an external filter. By combining a structural constraint representation with a hierarchical decision-making formulation, SCR guides reasoning within a formally grounded space while preserving adaptability to unseen instructions. Experiments show that SCR improves both domain-constraint satisfaction and generalization, providing an effective and interpretable approach for translating human intent into verifiable specifications for robotic execution.</p>
             
             <div class="card-action-bar">
-                <a href="http://arxiv.org/pdf/2608.27186v1" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
+                <a href="http://arxiv.org/pdf/2608.28435v1" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
                     View PDF
                 </a>
-                <a href="http://arxiv.org/abs/2608.27186v1" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
+                <a href="http://arxiv.org/abs/2608.28435v1" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
                     arXiv Page &rarr;
                 </a>
             </div>
         </article>
         
-        <article class="paper-card" data-title="embodied scene rearrangement planning" data-summary="this paper introduces embodied scene rearrangement planning (esrp), a novel task requiring embodied agents to rearrange furniture in 3d scenes to match a target configuration using only egocentric observations and a top-down target layout. unlike prior rearrangement tasks, esrp precludes global state access and introduces mutual object occlusions, reflecting the practical constraints of real-world robotic deployment. these factors make aligning partial egocentric observations with the global target layout particularly challenging for long-horizon planning. to facilitate research, we present esrp-bench, a comprehensive benchmark built on omnigibson featuring over 5,400 scene pairs and 8,200 objects. we define three multi-level metrics to evaluate rearrangement quality and provide four baselines: a hierarchical task-and-motion planning method, a vision-language-model-based method, and two learning-based approaches (il and rl). experimental results demonstrate that current methods struggle to complete the task efficiently, highlighting esrp as a challenging frontier for embodied agents in scene understanding and long-horizon task planning. this work serves as a stepping stone toward deploying intelligent agents in real-world scenarios. project page: https://pie-lab.cn/esrp/.">
+        <article class="paper-card" data-title="cooperative risk-aware exploration in heterogeneous multi-robot systems using algorithmic altruism" data-summary="multi-robot systems are well-positioned for exploration in hazardous environments, but effective deployment requires deciding not only where robots should gather information, but also how risk should be distributed across heterogeneous team members. this paper develops a game-theoretic framework for cooperative risk-aware exploration based on ecologically inspired altruistic behavior. each robot selects a finite-horizon trajectory to maximize information gain while penalizing redundant exploration and expected hazard exposure. heterogeneity is introduced through agent-specific value parameters for encoding altruistic coupling, which is modeled through relatedness weights inspired by hamilton's rule. we introduce a game-theoretic structure for trajectory planning that defines a social nash equilibrium, which modifies the utility of agent actions according to agent relatedness. this utility shaping causes agents to internalize the effect of their trajectory choices on teammates, encouraging lower-valued robots to accept risk when doing so benefits higher-valued agents and improves team performance. we define an exploration utility for agents that rewards area coverage and uncertainty reduction, while also penalizing redundancy and risk, enabling projected gradient-based waypoint optimization in a receding-horizon planner. simulations show that altruistic planning reduces redundant exploration, improves inter-robot separation, and reallocates risk according to agent value while maintaining comparable map coverage. we further demonstrate the approach in hardware experiments, where planned waypoints are tracked by wheeled robots using single-integrator controllers and barrier certificates.">
             <div class="card-meta-top">
                 <span class="rank-tag">TOP #7</span>
                 <div class="score-badge">
@@ -452,30 +452,30 @@
                 </div>
             </div>
             
-            <h2 class="paper-title">Embodied Scene Rearrangement Planning</h2>
+            <h2 class="paper-title">Cooperative Risk-Aware Exploration in Heterogeneous Multi-Robot Systems Using Algorithmic Altruism</h2>
             
             <div class="author-row">
-                <span>🗓️ 2026-08-27</span>
-                <span>✍️ Canzhi Chen, Zan Wang, Siqi Zhu et al.</span>
+                <span>🗓️ 2026-08-28</span>
+                <span>✍️ Brooks A. Butler, Jair Certório, João P. Hespanha et al.</span>
             </div>
             
             <div class="badge-cluster">
                 <span class="badge badge-muted">#frontier</span>
             </div>
             
-            <p class="paper-summary">This paper introduces Embodied Scene Rearrangement Planning (ESRP), a novel task requiring embodied agents to rearrange furniture in 3D scenes to match a target configuration using only egocentric observations and a top-down target layout. Unlike prior rearrangement tasks, ESRP precludes global state access and introduces mutual object occlusions, reflecting the practical constraints of real-world robotic deployment. These factors make aligning partial egocentric observations with the global target layout particularly challenging for long-horizon planning. To facilitate research, we present ESRP-Bench, a comprehensive benchmark built on OmniGibson featuring over 5,400 scene pairs and 8,200 objects. We define three multi-level metrics to evaluate rearrangement quality and provide four baselines: a hierarchical task-and-motion planning method, a vision-language-model-based method, and two learning-based approaches (IL and RL). Experimental results demonstrate that current methods struggle to complete the task efficiently, highlighting ESRP as a challenging frontier for embodied agents in scene understanding and long-horizon task planning. This work serves as a stepping stone toward deploying intelligent agents in real-world scenarios. Project page: https://pie-lab.cn/ESRP/.</p>
+            <p class="paper-summary">Multi-robot systems are well-positioned for exploration in hazardous environments, but effective deployment requires deciding not only where robots should gather information, but also how risk should be distributed across heterogeneous team members. This paper develops a game-theoretic framework for cooperative risk-aware exploration based on ecologically inspired altruistic behavior. Each robot selects a finite-horizon trajectory to maximize information gain while penalizing redundant exploration and expected hazard exposure. Heterogeneity is introduced through agent-specific value parameters for encoding altruistic coupling, which is modeled through relatedness weights inspired by Hamilton's rule. We introduce a game-theoretic structure for trajectory planning that defines a Social Nash Equilibrium, which modifies the utility of agent actions according to agent relatedness. This utility shaping causes agents to internalize the effect of their trajectory choices on teammates, encouraging lower-valued robots to accept risk when doing so benefits higher-valued agents and improves team performance. We define an exploration utility for agents that rewards area coverage and uncertainty reduction, while also penalizing redundancy and risk, enabling projected gradient-based waypoint optimization in a receding-horizon planner. Simulations show that altruistic planning reduces redundant exploration, improves inter-robot separation, and reallocates risk according to agent value while maintaining comparable map coverage. We further demonstrate the approach in hardware experiments, where planned waypoints are tracked by wheeled robots using single-integrator controllers and barrier certificates.</p>
             
             <div class="card-action-bar">
-                <a href="http://arxiv.org/pdf/2608.27371v1" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
+                <a href="http://arxiv.org/pdf/2608.28409v1" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
                     View PDF
                 </a>
-                <a href="http://arxiv.org/abs/2608.27371v1" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
+                <a href="http://arxiv.org/abs/2608.28409v1" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
                     arXiv Page &rarr;
                 </a>
             </div>
         </article>
         
-        <article class="paper-card" data-title="tadp: task-aware deformable prediction for single-stage 3d object detection" data-summary="most single-stage 3d object detectors complete different tasks with the same extracted features. nevertheless, it is impossible to project features into a common space that is adaptive for all the tasks. we present a novel task-aware deformable prediction (tadp) method for single-stage 3d object detection to solve this problem. firstly, a triple feature refinement aggregation module is designed to extract three-level features adaptively. additionally, we design the multi-scale feature aggregation block to fuse multi-scale features in a scale-aware manner. finally, the prediction of each task is deformed with the designed plug-and-play task-aware deformation head. it can percept the emphasis and interaction of each task. we also designed three different deformation modules. the experimental results demonstrate that the proposed deformation head shows good results on other detection methods. the experimental results on the kitti dataset demonstrate that the car map is 80.91%, surpassing many state-of-the-art methods on the kitti benchmark.">
+        <article class="paper-card" data-title="panelshield: verifiable closed-loop safe planning for robotic industrial panel operation" data-summary="industrial panel operation is knowledge-intensive and safety-critical. beyond control recognition and action generation, execution must satisfy constraints in operation manuals and safety regulations. while foundation-model-based planners show strong semantic capability, they typically lack computable, localizable, and reproducible mechanisms for violation detection and repair. to address this, we propose panelshield, a verifiable closed-loop safety planning framework for manual-guided industrial panel operation. the framework generates parameterized action primitive sequences from task-relevant manual evidence and applies dual formal verification with ltl and a safety fsm to enforce cross-step temporal correctness and local transition legality. when violations occur, it outputs a structured counterexample with the earliest violating step and cause, enabling targeted repair and re-verification. we build a multi-level long-horizon planning benchmark covering three representative industrial device panels, and evaluate the framework in simulation and real-world robotic experiments. results show that panelshield improves complex safety-constrained task performance over foundation-model-only planning baselines while reducing the violation rate to 2.7%, with 4.1 s total latency. real-world experiments demonstrate end-toend feasibility. overall, panelshield offers a verifiable approach to robotic panel operation that balances flexibility, safety, and auditability.">
             <div class="card-meta-top">
                 <span class="rank-tag">TOP #8</span>
                 <div class="score-badge">
@@ -484,24 +484,24 @@
                 </div>
             </div>
             
-            <h2 class="paper-title">TADP: Task-Aware Deformable Prediction for Single-Stage 3D Object Detection</h2>
+            <h2 class="paper-title">PanelShield: Verifiable Closed-Loop Safe Planning for Robotic Industrial Panel Operation</h2>
             
             <div class="author-row">
-                <span>🗓️ 2026-08-27</span>
-                <span>✍️ Su Wang, Yaochen Li, Min Yang et al.</span>
+                <span>🗓️ 2026-08-28</span>
+                <span>✍️ Guipeng Xin, Jiahe Xu, Chenhui Wan et al.</span>
             </div>
             
             <div class="badge-cluster">
                 <span class="badge badge-muted">#frontier</span>
             </div>
             
-            <p class="paper-summary">Most single-stage 3D object detectors complete different tasks with the same extracted features. Nevertheless, it is impossible to project features into a common space that is adaptive for all the tasks. We present a novel task-aware deformable prediction (TADP) method for single-stage 3D object detection to solve this problem. Firstly, a triple feature refinement aggregation module is designed to extract three-level features adaptively. Additionally, we design the multi-scale feature aggregation block to fuse multi-scale features in a scale-aware manner. Finally, the prediction of each task is deformed with the designed plug-and-play task-aware deformation head. It can percept the emphasis and interaction of each task. We also designed three different deformation modules. The experimental results demonstrate that the proposed deformation head shows good results on other detection methods. The experimental results on the KITTI dataset demonstrate that the car mAP is 80.91%, surpassing many state-of-the-art methods on the KITTI benchmark.</p>
+            <p class="paper-summary">Industrial panel operation is knowledge-intensive and safety-critical. Beyond control recognition and action generation, execution must satisfy constraints in operation manuals and safety regulations. While foundation-model-based planners show strong semantic capability, they typically lack computable, localizable, and reproducible mechanisms for violation detection and repair. To address this, we propose PanelShield, a verifiable closed-loop safety planning framework for manual-guided industrial panel operation. The framework generates parameterized action primitive sequences from task-relevant manual evidence and applies dual formal verification with LTL and a Safety FSM to enforce cross-step temporal correctness and local transition legality. When violations occur, it outputs a structured counterexample with the earliest violating step and cause, enabling targeted repair and re-verification. We build a multi-level long-horizon planning benchmark covering three representative industrial device panels, and evaluate the framework in simulation and real-world robotic experiments. Results show that PanelShield improves complex safety-constrained task performance over foundation-model-only planning baselines while reducing the violation rate to 2.7%, with 4.1 s total latency. Real-world experiments demonstrate end-toend feasibility. Overall, PanelShield offers a verifiable approach to robotic panel operation that balances flexibility, safety, and auditability.</p>
             
             <div class="card-action-bar">
-                <a href="http://arxiv.org/pdf/2608.27282v1" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
+                <a href="http://arxiv.org/pdf/2608.28305v1" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
                     View PDF
                 </a>
-                <a href="http://arxiv.org/abs/2608.27282v1" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
+                <a href="http://arxiv.org/abs/2608.28305v1" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
                     arXiv Page &rarr;
                 </a>
             </div>
