@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Embodied AI & Robotics Intelligence Digest — September 01, 2026</title>
+    <title>Embodied AI & Robotics Intelligence Digest — September 02, 2026</title>
     <style>
         :root {
             --bg-base: #080c14;
@@ -242,7 +242,7 @@
         <header>
             <span class="pill-brand">Autonomous Research Intelligence</span>
             <h1>Embodied AI & Physical Frontier Briefing</h1>
-            <p class="subtitle">Compiled on September 01, 2026 • Ranked top 8 strategic breakthroughs out of incoming preprints.</p>
+            <p class="subtitle">Compiled on September 02, 2026 • Ranked top 8 strategic breakthroughs out of incoming preprints.</p>
             
             <div class="controls">
                 <input type="text" id="filterInput" class="search-box" placeholder="Filter papers by keywords (e.g. humanoid, tactile, diffusion)...">
@@ -251,39 +251,39 @@
 
         <main id="paperList">
             
-        <article class="paper-card" data-title="blind dexterity: whole-body humanoid manipulation via pure proprioception" data-summary="we present blind, whole-body manipulation skills on a unitree g1 humanoid using only onboard proprioception, without cameras, markers, force-torque, or tactile sensors. despite this minimal sensing, the trained policies exhibit surprising capability across qualitatively different tasks: push-resilient bipedal walking without imu feedback, active soccer ball trapping with a foot, seeking and lifting a suitcase by its handle, and mounting a randomly positioned skateboard. we argue that these capabilities arise from a key underappreciated signal: the way the joint encoder readouts evolve under purposeful compliant contact, effectively forming a whole-body tactile channel. by generating contact-rich motions, the trained policies actively probe the environment; as a result, task-relevant object state (e.g., pose) becomes increasingly decodable from short proprioceptive histories. we expose this information using compact task-specific state estimators trained alongside, but fully separately from, the policies; their prediction errors decrease rapidly after informative contact. our results indicate that joint encoder-based proprioception, combined with compliant actuation (now widely available on commercial robots and low-cost motors) is already a strong, practical substrate for whole-body dexterous manipulation and interactive perception, and therefore a natural foundation on which richer sensing can be layered.">
+        <article class="paper-card" data-title="temporal forcing: 4d representation alignment for vision-language-action models" data-summary="recent vision-language-action (vla) methods improve manipulation performance by aligning their representations with 3d scene geometry. however, these methods often struggle with long-horizon manipulation and observation aliasing between visually similar states due to a lack of temporal information: the 3d scene geometry captures only the current state, rather than how it has evolved over time. to resolve this, we present temporal forcing, a 4d representation alignment method for vla models. specifically, we first introduce a history pathway that enables a vanilla vla model to summarize observation history into temporally aware latent representations. then, the latent representations are aligned with the geometric features extracted by a pretrained 4d foundation model, which captures the evolving 3d world through temporally consistent geometric representations, enabling a deeper understanding of dynamic environments. temporal forcing reaches 98.8% on libero, outperforming its base model by 2.2 points. on a physical hidden-placement task, it raises full-task success from 20.0% to 43.3%. code will be publicly available.">
             <div class="card-meta-top">
                 <span class="rank-tag">TOP #1</span>
                 <div class="score-badge">
                     <span class="score-label">Priority Index</span>
-                    <span class="score-value">160</span>
+                    <span class="score-value">135</span>
                 </div>
             </div>
             
-            <h2 class="paper-title">Blind Dexterity: Whole-Body Humanoid Manipulation via Pure Proprioception</h2>
+            <h2 class="paper-title">Temporal Forcing: 4D Representation Alignment for Vision-Language-Action Models</h2>
             
             <div class="author-row">
-                <span>🗓️ 2026-08-30</span>
-                <span>✍️ Aditya Bhatt, Oleg Kaidanov, Puze Liu et al.</span>
+                <span>🗓️ 2026-08-31</span>
+                <span>✍️ Xingyu Ding, Yuzhong Zhao, Chunhai Zhao et al.</span>
             </div>
             
             <div class="badge-cluster">
-                <span class="badge">#humanoid</span><span class="badge">#bipedal</span><span class="badge">#dexterous manipulation</span>
+                <span class="badge">#vision-language-action</span><span class="badge">#vla</span>
             </div>
             
-            <p class="paper-summary">We present blind, whole-body manipulation skills on a Unitree G1 humanoid using only onboard proprioception, without cameras, markers, force-torque, or tactile sensors. Despite this minimal sensing, the trained policies exhibit surprising capability across qualitatively different tasks: push-resilient bipedal walking without IMU feedback, active soccer ball trapping with a foot, seeking and lifting a suitcase by its handle, and mounting a randomly positioned skateboard. We argue that these capabilities arise from a key underappreciated signal: the way the joint encoder readouts evolve under purposeful compliant contact, effectively forming a whole-body tactile channel. By generating contact-rich motions, the trained policies actively probe the environment; as a result, task-relevant object state (e.g., pose) becomes increasingly decodable from short proprioceptive histories. We expose this information using compact task-specific state estimators trained alongside, but fully separately from, the policies; their prediction errors decrease rapidly after informative contact. Our results indicate that joint encoder-based proprioception, combined with compliant actuation (now widely available on commercial robots and low-cost motors) is already a strong, practical substrate for whole-body dexterous manipulation and interactive perception, and therefore a natural foundation on which richer sensing can be layered.</p>
+            <p class="paper-summary">Recent vision-language-action (VLA) methods improve manipulation performance by aligning their representations with 3D scene geometry. However, these methods often struggle with long-horizon manipulation and observation aliasing between visually similar states due to a lack of temporal information: the 3D scene geometry captures only the current state, rather than how it has evolved over time. To resolve this, we present Temporal Forcing, a 4D representation alignment method for VLA models. Specifically, we first introduce a history pathway that enables a vanilla VLA model to summarize observation history into temporally aware latent representations. Then, the latent representations are aligned with the geometric features extracted by a pretrained 4D foundation model, which captures the evolving 3D world through temporally consistent geometric representations, enabling a deeper understanding of dynamic environments. Temporal Forcing reaches 98.8% on LIBERO, outperforming its base model by 2.2 points. On a physical hidden-placement task, it raises full-task success from 20.0% to 43.3%. Code will be publicly available.</p>
             
             <div class="card-action-bar">
-                <a href="http://arxiv.org/pdf/2608.29487v1" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
+                <a href="http://arxiv.org/pdf/2608.30643v1" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
                     View PDF
                 </a>
-                <a href="http://arxiv.org/abs/2608.29487v1" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
+                <a href="http://arxiv.org/abs/2608.30643v1" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
                     arXiv Page &rarr;
                 </a>
             </div>
         </article>
         
-        <article class="paper-card" data-title="agm: achievement-grounded memory for closed-loop agents with frozen vla policies" data-summary="frozen vision-language-action (vla) policies offer broad manipulation skills but execute open-loop action chunks without tracking task progress, so the agent cannot reliably decide whether to continue, retry, or terminate. external memory is a natural remedy, yet it can be harmful when attempted actions are treated as completed progress, turning local execution errors into persistent task-state errors. we propose achievement-grounded memory (agm), a lightweight closed-loop framework for frozen vla policies that represents a task as a subgoal sequence with a progress pointer and advances this memory only after the current subgoal is verified by physical evidence. proprioceptive interaction cues decide when to verify, while coherent point tracking and language-conditioned cross-view comparison, sourced from frozen foundation models through a single 2.43m-parameter verification head, decide what was achieved. agm thereby converts open-loop execution into a closed loop of execution, verification, and progress, keeping the policy frozen without test-time large-model inference. on the robomme counting benchmark, agm reaches on pickxtimes and on binfill, surpassing the strongest memory-augmented baseline by points on average, and the framework yields equally decisive gains on a physical robot. reliable embodied memory thus depends more on disciplined state updates than on memory capacity.">
+        <article class="paper-card" data-title="behavior-skill: a fine-grained benchmark for evaluating vision-language-action policies in long-horizon tasks" data-summary="reliable execution of long-horizon mobile manipulation tasks remains challenging because overall task success depends on the successful completion of multiple constituent skills. existing benchmarks, however, still rely primarily on full-task rollouts and aggregate task-level metrics, making intermediate failures difficult to observe and analyze. we present behavior-skill, a benchmark that reformulates the learning and evaluation of long-horizon tasks around executable constituent skills. it contains 235,492 skill instances from 10,000 demonstrations across 50 household tasks and 34 semantic skill categories. each instance pairs a skill instruction with an aligned observation-action segment, and is further associated with a restorable intermediate state and a skill success condition to enable independent evaluation under valid preconditions. we further introduce trajectory-level and skill-level metrics to characterize policy capability beyond aggregate task success. extensive experiments across representative vla policies including pi0.5 and gr00t on the complete 50-task benchmark show that failures are highly non-uniform across skills, with contact-rich manipulation skills forming persistent bottlenecks. these results demonstrate that behavior-skill complements full-task evaluation by exposing intermediate capability profiles for analyzing and improving long-horizon vla policies. behavior-skill is publicly available at https://github.com/nubot-nudt/behavior-skill.">
             <div class="card-meta-top">
                 <span class="rank-tag">TOP #2</span>
                 <div class="score-badge">
@@ -292,216 +292,216 @@
                 </div>
             </div>
             
-            <h2 class="paper-title">AGM: Achievement-Grounded Memory for Closed-Loop Agents with Frozen VLA Policies</h2>
+            <h2 class="paper-title">Behavior-Skill: A Fine-Grained Benchmark for Evaluating Vision-Language-Action Policies in Long-Horizon Tasks</h2>
             
             <div class="author-row">
-                <span>🗓️ 2026-08-30</span>
-                <span>✍️ Hongbo Gao, Zeyu Ni, Xin Wen et al.</span>
+                <span>🗓️ 2026-08-31</span>
+                <span>✍️ Chunyun Ma, Lun Luo, Xingjian Luo et al.</span>
             </div>
             
             <div class="badge-cluster">
                 <span class="badge">#vision-language-action</span><span class="badge">#vla</span>
             </div>
             
-            <p class="paper-summary">Frozen vision-language-action (VLA) policies offer broad manipulation skills but execute open-loop action chunks without tracking task progress, so the agent cannot reliably decide whether to continue, retry, or terminate. External memory is a natural remedy, yet it can be harmful when attempted actions are treated as completed progress, turning local execution errors into persistent task-state errors. We propose Achievement-Grounded Memory (AGM), a lightweight closed-loop framework for frozen VLA policies that represents a task as a subgoal sequence with a progress pointer and advances this memory only after the current subgoal is verified by physical evidence. Proprioceptive interaction cues decide when to verify, while coherent point tracking and language-conditioned cross-view comparison, sourced from frozen foundation models through a single 2.43M-parameter verification head, decide what was achieved. AGM thereby converts open-loop execution into a closed loop of execution, verification, and progress, keeping the policy frozen without test-time large-model inference. On the RoboMME Counting benchmark, AGM reaches on PickXTimes and on BinFill, surpassing the strongest memory-augmented baseline by points on average, and the framework yields equally decisive gains on a physical robot. Reliable embodied memory thus depends more on disciplined state updates than on memory capacity.</p>
+            <p class="paper-summary">Reliable execution of long-horizon mobile manipulation tasks remains challenging because overall task success depends on the successful completion of multiple constituent skills. Existing benchmarks, however, still rely primarily on full-task rollouts and aggregate task-level metrics, making intermediate failures difficult to observe and analyze. We present Behavior-Skill, a benchmark that reformulates the learning and evaluation of long-horizon tasks around executable constituent skills. It contains 235,492 skill instances from 10,000 demonstrations across 50 household tasks and 34 semantic skill categories. Each instance pairs a skill instruction with an aligned observation-action segment, and is further associated with a restorable intermediate state and a skill success condition to enable independent evaluation under valid preconditions. We further introduce trajectory-level and skill-level metrics to characterize policy capability beyond aggregate task success. Extensive experiments across representative VLA policies including pi0.5 and GR00T on the complete 50-task benchmark show that failures are highly non-uniform across skills, with contact-rich manipulation skills forming persistent bottlenecks. These results demonstrate that Behavior-Skill complements full-task evaluation by exposing intermediate capability profiles for analyzing and improving long-horizon VLA policies. Behavior-Skill is publicly available at https://github.com/nubot-nudt/Behavior-Skill.</p>
             
             <div class="card-action-bar">
-                <a href="http://arxiv.org/pdf/2608.29537v1" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
+                <a href="http://arxiv.org/pdf/2608.30536v1" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
                     View PDF
                 </a>
-                <a href="http://arxiv.org/abs/2608.29537v1" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
+                <a href="http://arxiv.org/abs/2608.30536v1" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
                     arXiv Page &rarr;
                 </a>
             </div>
         </article>
         
-        <article class="paper-card" data-title="smile: smooth motion for improved long-horizon vla execution" data-summary="vision-language-action (vla) models reduce inference cost by executing multiple actions per call, but longer horizons often degrade accuracy because raw chunks contain jitter and outliers. we introduce smile, an architecture-preserving interface that predicts b-spline coefficients and decodes them into smooth action sequences. smile changes only the action representation, enabling longer fixed horizons while retaining each baseline's backbone and model scale. we apply smile to smolvla, evo1, vpp, and dawn, improving accuracy and amortized inference efficiency across libero, calvin, and real-world experiments. smile-evo1 reaches 98.0% with a 1.1x speedup on libero, while smile-vpp reaches an average length of 4.42 with a 1.5x speedup on calvin. at a matched execution horizon of 10, smile-smolvla reduces non-boundary acceleration by 78.6% and velocity sign-change rate by 42.3%. real-world xarm tests show higher success, fewer drops, and fewer contacts. these results establish smooth coefficient-space generation as a route to accurate, efficient long-horizon vla execution. project page: jongwoopark7978.github.io/smilevla">
+        <article class="paper-card" data-title="a dual-cam parallel elastic actuator with shared gas-spring compensation for humanoid ankles" data-summary="to improve torque capacity and energy efficiency of humanoid ankles, this paper proposes a 2-dof parallel elastic actuator (pea). the main novelty of the proposed design lies in its dual-cam, single-gas-spring architecture, which enables torque compensation in both pitch and roll using a shared elastic element, thereby improving structural compactness compared with conventional multi-element compensation schemes. by leveraging parallel gas springs and customized cam modules, the proposed architecture provides dual-axis torque assistance tailored to specific task requirements. the second key contribution is the formulation of a coupled 2-dof mathematical model that explicitly captures the interdependence between the two compensation units through the shared spring. based on this model, an optimization-based design framework is developed to synthesize customized cam profiles from prescribed torque references, establishing a systematic link from task requirements to hardware realization. the complete lower-leg cad integration is presented in detail. static fea and kinematic simulations confirm the design's feasibility and torque-relief effectiveness. the results highlight the proposed design as a compact, customizable solution for 2-dof humanoid ankle torque compensation.">
             <div class="card-meta-top">
                 <span class="rank-tag">TOP #3</span>
                 <div class="score-badge">
                     <span class="score-label">Priority Index</span>
-                    <span class="score-value">135</span>
+                    <span class="score-value">115</span>
                 </div>
             </div>
             
-            <h2 class="paper-title">SMILE: Smooth Motion for Improved Long-Horizon VLA Execution</h2>
+            <h2 class="paper-title">A Dual-Cam Parallel Elastic Actuator with Shared Gas-Spring Compensation for Humanoid Ankles</h2>
             
             <div class="author-row">
-                <span>🗓️ 2026-08-29</span>
-                <span>✍️ Jongwoo Park, E-Ro Nguyen, Kanchana Ranasinghe et al.</span>
+                <span>🗓️ 2026-08-31</span>
+                <span>✍️ Jingcheng Jiang, Yifang Zhang, Nikos G. Tsagarakis</span>
             </div>
             
             <div class="badge-cluster">
-                <span class="badge">#vision-language-action</span><span class="badge">#vla</span>
+                <span class="badge">#humanoid</span><span class="badge">#actuator</span>
             </div>
             
-            <p class="paper-summary">Vision-Language-Action (VLA) models reduce inference cost by executing multiple actions per call, but longer horizons often degrade accuracy because raw chunks contain jitter and outliers. We introduce SMILE, an architecture-preserving interface that predicts B-spline coefficients and decodes them into smooth action sequences. SMILE changes only the action representation, enabling longer fixed horizons while retaining each baseline's backbone and model scale. We apply SMILE to SmolVLA, Evo1, VPP, and DAWN, improving accuracy and amortized inference efficiency across LIBERO, CALVIN, and real-world experiments. SMILE-Evo1 reaches 98.0% with a 1.1x speedup on LIBERO, while SMILE-VPP reaches an average length of 4.42 with a 1.5x speedup on CALVIN. At a matched execution horizon of 10, SMILE-SmolVLA reduces non-boundary acceleration by 78.6% and velocity sign-change rate by 42.3%. Real-world xArm tests show higher success, fewer drops, and fewer contacts. These results establish smooth coefficient-space generation as a route to accurate, efficient long-horizon VLA execution. Project page: jongwoopark7978.github.io/smilevla</p>
+            <p class="paper-summary">To improve torque capacity and energy efficiency of humanoid ankles, this paper proposes a 2-DoF parallel elastic actuator (PEA). The main novelty of the proposed design lies in its dual-cam, single-gas-spring architecture, which enables torque compensation in both pitch and roll using a shared elastic element, thereby improving structural compactness compared with conventional multi-element compensation schemes. By leveraging parallel gas springs and customized cam modules, the proposed architecture provides dual-axis torque assistance tailored to specific task requirements. The second key contribution is the formulation of a coupled 2-DoF mathematical model that explicitly captures the interdependence between the two compensation units through the shared spring. Based on this model, an optimization-based design framework is developed to synthesize customized cam profiles from prescribed torque references, establishing a systematic link from task requirements to hardware realization. The complete lower-leg CAD integration is presented in detail. Static FEA and kinematic simulations confirm the design's feasibility and torque-relief effectiveness. The results highlight the proposed design as a compact, customizable solution for 2-DoF humanoid ankle torque compensation.</p>
             
             <div class="card-action-bar">
-                <a href="http://arxiv.org/pdf/2608.29432v1" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
+                <a href="http://arxiv.org/pdf/2608.30832v1" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
                     View PDF
                 </a>
-                <a href="http://arxiv.org/abs/2608.29432v1" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
+                <a href="http://arxiv.org/abs/2608.30832v1" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
                     arXiv Page &rarr;
                 </a>
             </div>
         </article>
         
-        <article class="paper-card" data-title="anyworld: factorized egocentric world models for cross-embodiment generalization" data-summary="collecting contact-rich robot experiences at scale remains a major bottleneck for generalizable manipulation. beyond data quantity, robot learning also requires diverse experiences across embodiments, viewpoints, and scenes. human egocentric videos provide abundant physical interactions, but each video captures only a narrow slice of experience under a single body, camera trajectory, and environment. we propose anyworld, a cross-embodiment world modeling framework that expands a single human interaction into diverse robot-native rollouts without paired human-robot demonstrations. our model factorizes an interaction into action, camera, and embodiment: action controls capture the motion structure, camera controls specify viewpoint evolution, and the target embodiment context defines the acting body and its interaction geometry. this formulation enables independent recomposition of embodiment, viewpoint, and scene factors, allowing a single model to generate many robot-domain experiences while preserving the underlying dynamics and object interactions. we train the model with large-scale human interaction pretraining followed by mixed-embodiment fine-tuning. experiments show that our model supports controllable recomposition across embodiments, viewpoints, and scenes, and we further demonstrate that the generated data can improve manipulation performance on the robocasa gr1 tabletop benchmark and a real iron humanoid robot. beyond aggregate gains, we test whether unpaired human experience can be recomposed into robot-native video-action pairs that target a policy gap. controlled iron interventions correct a spurious completion prior and establish language-grounded spatial target selection; an action-only counterfactual intervention fails to learn the latter reliably, showing that both action calibration and visual recomposition are necessary.">
+        <article class="paper-card" data-title="zeva: in-context causal learning for generalizable embodied manipulation" data-summary="generalizable embodied manipulation remains difficult to achieve through pretraining alone, due to unseen physical conditions in the real world. we argue that robots need to learn from their own physical interactions on the fly during real-world deployment and use this knowledge to inform subsequent actions. we present zeva, the first framework that enables in-context learning from a robot's own physical interaction experience while keeping the policy model frozen. zeva employs a causal interaction extractor to encode an executed action and its induced state change into a causal interaction signal, which is stored in a dual-timescale causal memory. for subsequent actions, relevant causal interaction signals are retrieved from memory and injected into the frozen policy model as context. experiments in simulation and real-world manipulation demonstrate that zeva achieves the best performance among the compared frontier vlas and wams and, more importantly, enables self-evolution during deployment without gradient updates. its success rate continues to improve as the robot accumulates interaction experience. furthermore, the acquired interaction experience can generalize across tasks.">
             <div class="card-meta-top">
                 <span class="rank-tag">TOP #4</span>
                 <div class="score-badge">
                     <span class="score-label">Priority Index</span>
-                    <span class="score-value">135</span>
+                    <span class="score-value">90</span>
                 </div>
             </div>
             
-            <h2 class="paper-title">AnyWorld: Factorized Egocentric World Models for Cross-Embodiment Generalization</h2>
+            <h2 class="paper-title">Zeva: In-Context Causal Learning for Generalizable Embodied Manipulation</h2>
             
             <div class="author-row">
-                <span>🗓️ 2026-08-29</span>
-                <span>✍️ Cheng Chen, Jerry Bai, Jiacheng Wei et al.</span>
+                <span>🗓️ 2026-08-31</span>
+                <span>✍️ Fu Chen, Xin Ding, Bingjia Huang et al.</span>
             </div>
             
             <div class="badge-cluster">
-                <span class="badge">#humanoid</span><span class="badge">#world model</span>
+                <span class="badge">#vla</span>
             </div>
             
-            <p class="paper-summary">Collecting contact-rich robot experiences at scale remains a major bottleneck for generalizable manipulation. Beyond data quantity, robot learning also requires diverse experiences across embodiments, viewpoints, and scenes. Human egocentric videos provide abundant physical interactions, but each video captures only a narrow slice of experience under a single body, camera trajectory, and environment. We propose AnyWorld, a cross-embodiment world modeling framework that expands a single human interaction into diverse robot-native rollouts without paired human-robot demonstrations. Our model factorizes an interaction into action, camera, and embodiment: action controls capture the motion structure, camera controls specify viewpoint evolution, and the target embodiment context defines the acting body and its interaction geometry. This formulation enables independent recomposition of embodiment, viewpoint, and scene factors, allowing a single model to generate many robot-domain experiences while preserving the underlying dynamics and object interactions. We train the model with large-scale human interaction pretraining followed by mixed-embodiment fine-tuning. Experiments show that our model supports controllable recomposition across embodiments, viewpoints, and scenes, and we further demonstrate that the generated data can improve manipulation performance on the RoboCasa GR1 tabletop benchmark and a real IRON humanoid robot. Beyond aggregate gains, we test whether unpaired human experience can be recomposed into robot-native video-action pairs that target a policy gap. Controlled IRON interventions correct a spurious completion prior and establish language-grounded spatial target selection; an action-only counterfactual intervention fails to learn the latter reliably, showing that both action calibration and visual recomposition are necessary.</p>
+            <p class="paper-summary">Generalizable embodied manipulation remains difficult to achieve through pretraining alone, due to unseen physical conditions in the real world. We argue that robots need to learn from their own physical interactions on the fly during real-world deployment and use this knowledge to inform subsequent actions. We present Zeva, the first framework that enables in-context learning from a robot's own physical interaction experience while keeping the policy model frozen. Zeva employs a Causal Interaction Extractor to encode an executed action and its induced state change into a causal interaction signal, which is stored in a dual-timescale causal memory. For subsequent actions, relevant causal interaction signals are retrieved from memory and injected into the frozen policy model as context. Experiments in simulation and real-world manipulation demonstrate that Zeva achieves the best performance among the compared frontier VLAs and WAMs and, more importantly, enables self-evolution during deployment without gradient updates. Its success rate continues to improve as the robot accumulates interaction experience. Furthermore, the acquired interaction experience can generalize across tasks.</p>
             
             <div class="card-action-bar">
-                <a href="http://arxiv.org/pdf/2608.29242v1" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
+                <a href="http://arxiv.org/pdf/2608.30880v1" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
                     View PDF
                 </a>
-                <a href="http://arxiv.org/abs/2608.29242v1" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
+                <a href="http://arxiv.org/abs/2608.30880v1" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
                     arXiv Page &rarr;
                 </a>
             </div>
         </article>
         
-        <article class="paper-card" data-title="$\mathcal{n}_0$-foundation: towards the age of tactile intelligence" data-summary="we present $\mathcal{n}_0$-foundation, a paradigm for tactile-enabled embodied manipulation, which integrates tactile sensing hardware, large-scale multimodal data, tactile representation learning, and standardized evaluation. first, we engineer the infrastructure for scalable data collection, including a vision-based tactile sensor, a tactile universal manipulation interface (umi), and a synchronized visuo-tactile data collection system supporting both robot embodiments and umi-based demonstrations. leveraging this infrastructure, we construct neodata, which contains more than 30000 hours of synchronized visual and tactile demonstrations, spanning six embodiments, 450 tasks, and billions of paired rgb and tactile frames collected through a mixture of real-robot teleoperation and umi-based demonstrations. to facilitate open research, we further release openneodata, a 5000-hour open-source subset of neodata. the dataset addresses a central limitation of existing manipulation corpora, critical for deformable-object manipulation, precise assembly, delicate force control, and sustained surface interaction. capitalizing on the large-scale, heterogeneous tactile measurements, we propose neoforce, a visuo-tactile representation model that learn transferable tactile representations across different sensor designs. to enable systematic evaluation of tactile embodied models built upon our infrastructure, datasets and tactile representations, we further propose a comprehensive benchmark, which combines the real-world neoreal suite and the simulated neosim suite for standardized evaluation. experiments across both suites show that policies benefit from the physical contact state rather than from the device-specific appearance of the tactile signal. we release the dataset, the representation, and the benchmark, aiming at supporting future work on tactile-enabled embodied manipulation.">
+        <article class="paper-card" data-title="lightnav-0: eliciting vlm spatial intelligence for generalist embodied navigation" data-summary="embodied navigation requires agents to translate heterogeneous goals and visual observations into actions across tasks, environments, and robot embodiments. modern vision-language models (vlms) already encode spatial priors for visual grounding, spatial reasoning, and pointing, but these capabilities are rarely elicited directly for robot control. existing navigation systems instead rely on task- or embodiment-specific components, fragmenting perception, reasoning, and action while offering limited generalization. here we present lightnav-0, a compact generalist embodied navigation model that elicits the spatial intelligence of a pretrained vlm and aligns it with navigation, without task-specific prediction heads. lightnav-0 represents diverse navigation tasks through a unified token interface: dual-channel pointing expresses task-, scene-, and embodiment-agnostic spatial intent, while a residual vector-quantized action tokenizer maps this intent to precise, embodiment-specific trajectories. together with temporally aware visual history compression, er mid-training, supervised fine-tuning, and reinforcement learning, this formulation supports instruction following, open-vocabulary object navigation, and visual tracking within a single model. the navigation training corpus spans 2k+ scenes and 4k+ hours of embodied navigation data. lightnav-er, the embodied-reasoning checkpoint used to initialize lightnav-0, attains the highest complete-set average across 8 embodied-reasoning benchmarks, while lightnav-0 achieves state-of-the-art monocular success rates across all 10 public navigation simulation settings. real-world evaluations further demonstrate zero-shot generalization across robot embodiments, diverse scenes, and static and dynamic targets. these results establish compact vlms as a unified and transferable backbone for generalist embodied navigation.">
             <div class="card-meta-top">
                 <span class="rank-tag">TOP #5</span>
                 <div class="score-badge">
                     <span class="score-label">Priority Index</span>
-                    <span class="score-value">100</span>
+                    <span class="score-value">80</span>
                 </div>
             </div>
             
-            <h2 class="paper-title">$\mathcal{N}_0$-Foundation: Towards the Age of Tactile Intelligence</h2>
+            <h2 class="paper-title">LightNav-0: Eliciting VLM Spatial Intelligence for Generalist Embodied Navigation</h2>
             
             <div class="author-row">
-                <span>🗓️ 2026-08-30</span>
-                <span>✍️ NeoteAI Team, Fudan TEAI Team</span>
+                <span>🗓️ 2026-08-31</span>
+                <span>✍️ Shaoan Wang, Aocheng Luo, Fei Huang et al.</span>
             </div>
             
             <div class="badge-cluster">
-                <span class="badge">#tactile sensing</span><span class="badge">#teleoperation</span>
+                <span class="badge">#reinforcement learning</span>
             </div>
             
-            <p class="paper-summary">We present $\mathcal{N}_0$-Foundation, a paradigm for tactile-enabled embodied manipulation, which integrates tactile sensing hardware, large-scale multimodal data, tactile representation learning, and standardized evaluation. First, we engineer the infrastructure for scalable data collection, including a vision-based tactile sensor, a tactile Universal Manipulation Interface (UMI), and a synchronized visuo-tactile data collection system supporting both robot embodiments and UMI-based demonstrations. Leveraging this infrastructure, we construct NeoData, which contains more than 30000 hours of synchronized visual and tactile demonstrations, spanning six embodiments, 450 tasks, and billions of paired RGB and tactile frames collected through a mixture of real-robot teleoperation and UMI-based demonstrations. To facilitate open research, we further release OpenNeoData, a 5000-hour open-source subset of NeoData. The dataset addresses a central limitation of existing manipulation corpora, critical for deformable-object manipulation, precise assembly, delicate force control, and sustained surface interaction. Capitalizing on the large-scale, heterogeneous tactile measurements, we propose NeoForce, a visuo-tactile representation model that learn transferable tactile representations across different sensor designs. To enable systematic evaluation of tactile embodied models built upon our infrastructure, datasets and tactile representations, we further propose a comprehensive benchmark, which combines the real-world NeoReal suite and the simulated NeoSim suite for standardized evaluation. Experiments across both suites show that policies benefit from the physical contact state rather than from the device-specific appearance of the tactile signal. We release the dataset, the representation, and the benchmark, aiming at supporting future work on tactile-enabled embodied manipulation.</p>
+            <p class="paper-summary">Embodied navigation requires agents to translate heterogeneous goals and visual observations into actions across tasks, environments, and robot embodiments. Modern vision-language models (VLMs) already encode spatial priors for visual grounding, spatial reasoning, and pointing, but these capabilities are rarely elicited directly for robot control. Existing navigation systems instead rely on task- or embodiment-specific components, fragmenting perception, reasoning, and action while offering limited generalization. Here we present LightNav-0, a compact generalist embodied navigation model that elicits the spatial intelligence of a pretrained VLM and aligns it with navigation, without task-specific prediction heads. LightNav-0 represents diverse navigation tasks through a unified token interface: dual-channel pointing expresses task-, scene-, and embodiment-agnostic spatial intent, while a residual vector-quantized action tokenizer maps this intent to precise, embodiment-specific trajectories. Together with temporally aware visual history compression, ER mid-training, supervised fine-tuning, and reinforcement learning, this formulation supports instruction following, open-vocabulary object navigation, and visual tracking within a single model. The navigation training corpus spans 2K+ scenes and 4K+ hours of embodied navigation data. LightNav-ER, the embodied-reasoning checkpoint used to initialize LightNav-0, attains the highest complete-set average across 8 embodied-reasoning benchmarks, while LightNav-0 achieves state-of-the-art monocular success rates across all 10 public navigation simulation settings. Real-world evaluations further demonstrate zero-shot generalization across robot embodiments, diverse scenes, and static and dynamic targets. These results establish compact VLMs as a unified and transferable backbone for generalist embodied navigation.</p>
             
             <div class="card-action-bar">
-                <a href="http://arxiv.org/pdf/2608.29601v1" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
+                <a href="http://arxiv.org/pdf/2608.30935v1" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
                     View PDF
                 </a>
-                <a href="http://arxiv.org/abs/2608.29601v1" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
+                <a href="http://arxiv.org/abs/2608.30935v1" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
                     arXiv Page &rarr;
                 </a>
             </div>
         </article>
         
-        <article class="paper-card" data-title="module number adaptive visual shape control for serial modular soft robots" data-summary="image based shape control provides a simple means of controlling the whole body configuration of soft robots. however, existing data driven approaches are typically developed for fixed robot structures and require new control data when the number of modules changes. this paper presents a module number adaptive visual shape control method for serial modular soft pneumatic robots. a controller trained only on single module actuation shape data is reused for robots with one to five modules by decomposing whole body camera images into local module patches. a single common module segmenter localizes individual modules across all tested configurations, while the same local controller is applied to every extracted patch. geometric data augmentation improves transferability to downstream modules, and a lightweight mask reconstruction network reconstructs a synthetically removed actuator mask channel. experiments on physical robots demonstrate shape control across varying numbers of modules and under environmental changes and payload loading. the results show that single module control learning enables scalable whole body control without configuration specific control data collection.">
+        <article class="paper-card" data-title="cig-rl: curiosity-driven information-guided reinforcement learning for source term estimation in uncertain environments" data-summary="source term estimation (ste), which aims to estimate key properties of the gas source, is essential for identifying hazardous gas releases. information-theoretic approaches have been adopted for autonomous ste using mobile sensors due to robustness in noisy environments, yet their online action selection incurs substantial computational cost. deep reinforcement learning (drl) provides a promising alternative with its fast decision-making capability. in drl-based ste, the agent selects actions based on belief states of the source term updated from noisy measurement sequences. however, existing methods rely on random exploration or solely on belief uncertainty reduction without an effective exploration strategy in drl, which can limit policy robustness in noisy environments. to address this, we propose a curiosity-driven information-guided reinforcement learning for robust and efficient ste. the proposed method promotes active exploration of novel belief state transitions that have not been sufficiently explored during training. we further introduce an uncertainty-adaptive active perception reward to guide efficient source search under uncertainty. simulations under high-noise conditions and real-world experiments demonstrate the robustness and feasibility of the proposed framework, highlighting its potential for practical ste problems.">
             <div class="card-meta-top">
                 <span class="rank-tag">TOP #6</span>
                 <div class="score-badge">
                     <span class="score-label">Priority Index</span>
-                    <span class="score-value">70</span>
+                    <span class="score-value">80</span>
                 </div>
             </div>
             
-            <h2 class="paper-title">Module Number Adaptive Visual Shape Control for Serial Modular Soft Robots</h2>
+            <h2 class="paper-title">CIG-RL: Curiosity-Driven Information-Guided Reinforcement Learning for Source Term Estimation in Uncertain Environments</h2>
             
             <div class="author-row">
-                <span>🗓️ 2026-08-30</span>
-                <span>✍️ Kyohei Akamine, Takato Horii, Yusuke Sakaue et al.</span>
+                <span>🗓️ 2026-08-31</span>
+                <span>✍️ Junhee Lee, Seunghwan Kim, Hongro Jang et al.</span>
             </div>
             
             <div class="badge-cluster">
-                <span class="badge">#actuator</span>
+                <span class="badge">#reinforcement learning</span>
             </div>
             
-            <p class="paper-summary">Image based shape control provides a simple means of controlling the whole body configuration of soft robots. However, existing data driven approaches are typically developed for fixed robot structures and require new control data when the number of modules changes. This paper presents a module number adaptive visual shape control method for serial modular soft pneumatic robots. A controller trained only on single module actuation shape data is reused for robots with one to five modules by decomposing whole body camera images into local module patches. A single common module segmenter localizes individual modules across all tested configurations, while the same local controller is applied to every extracted patch. Geometric data augmentation improves transferability to downstream modules, and a lightweight mask reconstruction network reconstructs a synthetically removed actuator mask channel. Experiments on physical robots demonstrate shape control across varying numbers of modules and under environmental changes and payload loading. The results show that single module control learning enables scalable whole body control without configuration specific control data collection.</p>
+            <p class="paper-summary">Source term estimation (STE), which aims to estimate key properties of the gas source, is essential for identifying hazardous gas releases. Information-theoretic approaches have been adopted for autonomous STE using mobile sensors due to robustness in noisy environments, yet their online action selection incurs substantial computational cost. Deep reinforcement learning (DRL) provides a promising alternative with its fast decision-making capability. In DRL-based STE, the agent selects actions based on belief states of the source term updated from noisy measurement sequences. However, existing methods rely on random exploration or solely on belief uncertainty reduction without an effective exploration strategy in DRL, which can limit policy robustness in noisy environments. To address this, we propose a curiosity-driven information-guided reinforcement learning for robust and efficient STE. The proposed method promotes active exploration of novel belief state transitions that have not been sufficiently explored during training. We further introduce an uncertainty-adaptive active perception reward to guide efficient source search under uncertainty. Simulations under high-noise conditions and real-world experiments demonstrate the robustness and feasibility of the proposed framework, highlighting its potential for practical STE problems.</p>
             
             <div class="card-action-bar">
-                <a href="http://arxiv.org/pdf/2608.29547v1" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
+                <a href="http://arxiv.org/pdf/2608.30673v1" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
                     View PDF
                 </a>
-                <a href="http://arxiv.org/abs/2608.29547v1" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
+                <a href="http://arxiv.org/abs/2608.30673v1" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
                     arXiv Page &rarr;
                 </a>
             </div>
         </article>
         
-        <article class="paper-card" data-title="event-triggered control and online learning for networked systems under computational delays" data-summary="online learning-based control is a promising approach to control uncertain systems, where unknown components are identified during operation to improve control performance. however, resource-intensive online learning algorithms introduce non-negligible computational delays, especially when executed on systems with limited local computational resources. to mitigate this, an in-network online learning-based control structure is employed by deploying the learning-based controller on a remote computation node and connecting it via a communication channel. in this paper, control performance guarantee is first established by deriving tracking error bound for the in-network control architecture, while accounting for computational delays. the derived tracking error bound allows for diverse communication and computation strategies under a specific condition, including time-/event-triggered mechanisms. additionally, the trade-off between communication and computation performances is shown for a given desired control performance. furthermore, to enhance the efficiency in both communication and computation, an efficient control framework with an asynchronous event-triggered mechanism in both control and online learning is devised under the existence of computational delay. the proposed event-triggered strategy is proven to achieve the same control performance as time-triggered scenario while excluding zeno behavior. finally, we derive an explicit expression of the proposed event-trigger condition for exponentially stabilizable systems, and demonstrate its effectiveness through simulations.">
+        <article class="paper-card" data-title="anomaly detection on small industrial components via vision-based tactile sensing" data-summary="automated inspection of small industrial components, including sub-centimetre-scale parts where defects are geometry-driven and poorly resolved by standard optical cameras, calls for sensing modalities that can directly capture fine surface geometry. vision-based tactile sensors address this need by converting contact imprints into high-resolution image-like data compatible with existing deep-learning pipelines, yet their effective use for industrial anomaly detection (ad) remains largely unexplored. this work systematically evaluates unsupervised ad methods on a real tactile dataset covering five genuine industrial components acquired with a gelsight mini sensor mounted on a collaborative robot. four feature-embedding methods, spade, padim, fapm, and inreach, are compared under three validations explicitly motivated by the deployment constraints of contact-based sensing: a good fraction analysis establishing the minimum number of nominal contacts for stable performance, directly bounded by gel wear since every acquisition degrades the soft interface; a cross-position evaluation assessing generalization across different contact locations observing the same recurring surface pattern; and a low- versus high-resolution comparison evaluating the cost-benefit of higher-resolution tactile acquisition. overall, this systematic benchmarking study provides practical guidance for researchers and practitioners adopting vision-based tactile sensing for industrial ad and shows how this modality can serve as a viable alternative for industrial quality-control tasks.">
             <div class="card-meta-top">
                 <span class="rank-tag">TOP #7</span>
                 <div class="score-badge">
                     <span class="score-label">Priority Index</span>
-                    <span class="score-value">50</span>
+                    <span class="score-value">80</span>
                 </div>
             </div>
             
-            <h2 class="paper-title">Event-triggered Control and Online Learning for Networked Systems under Computational Delays</h2>
+            <h2 class="paper-title">Anomaly Detection on Small Industrial Components via Vision-Based Tactile Sensing</h2>
             
             <div class="author-row">
-                <span>🗓️ 2026-08-30</span>
-                <span>✍️ Xiaobing Dai, Armin Lederer, Zewen Yang et al.</span>
+                <span>🗓️ 2026-08-31</span>
+                <span>✍️ G. F. Preziosa, M. Casiglia, M. Faroni et al.</span>
             </div>
             
             <div class="badge-cluster">
-                <span class="badge badge-muted">#frontier</span>
+                <span class="badge">#tactile sensing</span>
             </div>
             
-            <p class="paper-summary">Online learning-based control is a promising approach to control uncertain systems, where unknown components are identified during operation to improve control performance. However, resource-intensive online learning algorithms introduce non-negligible computational delays, especially when executed on systems with limited local computational resources. To mitigate this, an in-network online learning-based control structure is employed by deploying the learning-based controller on a remote computation node and connecting it via a communication channel. In this paper, control performance guarantee is first established by deriving tracking error bound for the in-network control architecture, while accounting for computational delays. The derived tracking error bound allows for diverse communication and computation strategies under a specific condition, including time-/event-triggered mechanisms. Additionally, the trade-off between communication and computation performances is shown for a given desired control performance. Furthermore, to enhance the efficiency in both communication and computation, an efficient control framework with an asynchronous event-triggered mechanism in both control and online learning is devised under the existence of computational delay. The proposed event-triggered strategy is proven to achieve the same control performance as time-triggered scenario while excluding Zeno behavior. Finally, we derive an explicit expression of the proposed event-trigger condition for exponentially stabilizable systems, and demonstrate its effectiveness through simulations.</p>
+            <p class="paper-summary">Automated inspection of small industrial components, including sub-centimetre-scale parts where defects are geometry-driven and poorly resolved by standard optical cameras, calls for sensing modalities that can directly capture fine surface geometry. Vision-based tactile sensors address this need by converting contact imprints into high-resolution image-like data compatible with existing deep-learning pipelines, yet their effective use for industrial anomaly detection (AD) remains largely unexplored. This work systematically evaluates unsupervised AD methods on a real tactile dataset covering five genuine industrial components acquired with a GelSight Mini sensor mounted on a collaborative robot. Four feature-embedding methods, SPADE, PaDiM, FAPM, and InReaCh, are compared under three validations explicitly motivated by the deployment constraints of contact-based sensing: a Good Fraction analysis establishing the minimum number of nominal contacts for stable performance, directly bounded by gel wear since every acquisition degrades the soft interface; a cross-position evaluation assessing generalization across different contact locations observing the same recurring surface pattern; and a low- versus high-resolution comparison evaluating the cost-benefit of higher-resolution tactile acquisition. Overall, this systematic benchmarking study provides practical guidance for researchers and practitioners adopting vision-based tactile sensing for industrial AD and shows how this modality can serve as a viable alternative for industrial quality-control tasks.</p>
             
             <div class="card-action-bar">
-                <a href="http://arxiv.org/pdf/2608.29576v1" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
+                <a href="http://arxiv.org/pdf/2608.30506v1" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
                     View PDF
                 </a>
-                <a href="http://arxiv.org/abs/2608.29576v1" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
+                <a href="http://arxiv.org/abs/2608.30506v1" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
                     arXiv Page &rarr;
                 </a>
             </div>
         </article>
         
-        <article class="paper-card" data-title="asynchronous cooperative online learning for multi-robot control under computational delays" data-summary="ensuring the safe operation of multi-agent systems (mass) under uncertain environments is crucial for cooperative robotic, where external disturbances and inaccurate dynamic models can significantly compromise performance and reliability. to address this challenge, calibrated machine learning models, particularly gaussian process (gp) regression, are extensively employed due to their interpretable performance quantification. as the interconnected communication of mass facilitates cooperative learning, agents are able to enhance learning performance by exchanging local gp inferences with their neighbors and aggregating the received information via distributed gp strategies. however, variations in computational power and prediction tasks among agents inevitably lead to heterogeneous computational delays and differences in query points, which are often overlooked in existing aggregation methods. to overcome these limitations, this work proposes an asynchronous cooperative learning strategy that explicitly accounts for prediction accuracy, query point variations and delay effects. additionally, a distributed control law based on an adjoint mas is developed to ensure the desired control performance. simulations on unmanned surface vehicles validate the effectiveness of the proposed approach, demonstrating substantial improvements in both learning and control performance compared to the state-of-the-art approaches.">
+        <article class="paper-card" data-title="sleepwalking: privileged representation shaping for end-to-end blind locomotion in legged robots" data-summary="partially observable locomotion requires a policy to act when task-relevant properties of the robot--environment state are not fully specified by instantaneous observations. existing approaches often address this challenge by explicitly estimating missing physical variables or processing extended observation histories through structured architectures. we take a different view: partial observability is fundamentally an information-retention problem. the decisive question is not how task-relevant information enters the network, but whether the policy's internal state retains it. guided by this perspective, we propose sleepwalking for robot locomotion (swaq), a one-stage end-to-end framework that uses next-step privileged physical reconstruction to shape what a recurrent history representation retains during policy learning, while the deployed actor uses only a direct history-to-action pathway. under aligned training settings, swaq achieves a 15.0\% higher peak mean terrain level than dwaq, the strongest non-exteroceptive baseline, while using 44.4\% fewer inference macs per control step. layerwise probes further show that information associated with the reconstructed physical variables remains linearly decodable through the policy head up to the layer preceding the action output. complementary theoretical analysis relates privileged-variable recoverability to the achievable-return gap between history-based and privileged-information policy classes. these results suggest that semantic objectives can structure learning without requiring a corresponding architectural decomposition of the deployed controller.">
             <div class="card-meta-top">
                 <span class="rank-tag">TOP #8</span>
                 <div class="score-badge">
                     <span class="score-label">Priority Index</span>
-                    <span class="score-value">50</span>
+                    <span class="score-value">75</span>
                 </div>
             </div>
             
-            <h2 class="paper-title">Asynchronous Cooperative Online Learning for Multi-Robot Control under Computational Delays</h2>
+            <h2 class="paper-title">SleepWalking: Privileged Representation Shaping for End-to-End Blind Locomotion in Legged Robots</h2>
             
             <div class="author-row">
-                <span>🗓️ 2026-08-30</span>
-                <span>✍️ Xiaobing Dai, Zewen Yang, Wei Ren et al.</span>
+                <span>🗓️ 2026-08-31</span>
+                <span>✍️ Zheng Pan, Tenghui Wang, Peilin Li et al.</span>
             </div>
             
             <div class="badge-cluster">
-                <span class="badge badge-muted">#frontier</span>
+                <span class="badge">#locomotion</span>
             </div>
             
-            <p class="paper-summary">Ensuring the safe operation of multi-agent systems (MASs) under uncertain environments is crucial for cooperative robotic, where external disturbances and inaccurate dynamic models can significantly compromise performance and reliability. To address this challenge, calibrated machine learning models, particularly Gaussian process (GP) regression, are extensively employed due to their interpretable performance quantification. As the interconnected communication of MASs facilitates cooperative learning, agents are able to enhance learning performance by exchanging local GP inferences with their neighbors and aggregating the received information via distributed GP strategies. However, variations in computational power and prediction tasks among agents inevitably lead to heterogeneous computational delays and differences in query points, which are often overlooked in existing aggregation methods. To overcome these limitations, this work proposes an asynchronous cooperative learning strategy that explicitly accounts for prediction accuracy, query point variations and delay effects. Additionally, a distributed control law based on an adjoint MAS is developed to ensure the desired control performance. Simulations on unmanned surface vehicles validate the effectiveness of the proposed approach, demonstrating substantial improvements in both learning and control performance compared to the state-of-the-art approaches.</p>
+            <p class="paper-summary">Partially observable locomotion requires a policy to act when task-relevant properties of the robot--environment state are not fully specified by instantaneous observations. Existing approaches often address this challenge by explicitly estimating missing physical variables or processing extended observation histories through structured architectures. We take a different view: partial observability is fundamentally an information-retention problem. The decisive question is not how task-relevant information enters the network, but whether the policy's internal state retains it. Guided by this perspective, we propose SleepWalking for Robot Locomotion (SWAQ), a one-stage end-to-end framework that uses next-step privileged physical reconstruction to shape what a recurrent history representation retains during policy learning, while the deployed actor uses only a direct history-to-action pathway. Under aligned training settings, SWAQ achieves a 15.0\% higher peak mean terrain level than DWAQ, the strongest non-exteroceptive baseline, while using 44.4\% fewer inference MACs per control step. Layerwise probes further show that information associated with the reconstructed physical variables remains linearly decodable through the policy head up to the layer preceding the action output. Complementary theoretical analysis relates privileged-variable recoverability to the achievable-return gap between history-based and privileged-information policy classes. These results suggest that semantic objectives can structure learning without requiring a corresponding architectural decomposition of the deployed controller.</p>
             
             <div class="card-action-bar">
-                <a href="http://arxiv.org/pdf/2608.29562v1" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
+                <a href="http://arxiv.org/pdf/2608.30883v1" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
                     View PDF
                 </a>
-                <a href="http://arxiv.org/abs/2608.29562v1" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
+                <a href="http://arxiv.org/abs/2608.30883v1" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
                     arXiv Page &rarr;
                 </a>
             </div>
