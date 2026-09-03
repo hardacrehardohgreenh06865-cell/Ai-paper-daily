@@ -1,61 +1,61 @@
-# 🤖 Embodied AI & Robotics Frontier Briefing (2026-09-02)
+# 🤖 Embodied AI & Robotics Frontier Briefing (2026-09-03)
 
 > *Automated Intelligence Briefing generated via custom ETL scoring pipeline. Prioritizes foundation models, manipulation, locomotion, and physical AI systems.*
 
 ---
 
-### Top 1: Temporal Forcing: 4D Representation Alignment for Vision-Language-Action Models
-- **Priority Score**: `135 pts` | **Published**: `2026-08-31`
+### Top 1: World-Model-Augmented Visual Locomotion for Humanoids on Foothold-Constrained Terrain
+- **Priority Score**: `160 pts` | **Published**: `2026-09-02`
+- **Focus Tracks**: `#humanoid` `#world model` `#locomotion`
+- **Key Authors**: Yuxi Liu, Lijun Han, Ziming Wang et al.
+- **Direct Access**: [arXiv Abstract](http://arxiv.org/abs/2609.02542v1) | [PDF Fulltext](http://arxiv.org/pdf/2609.02542v1)
+
+**Executive Abstract**:
+> Foothold-constrained terrain is characterized by sparse, discontinuous, or geometrically restricted feasible foot contacts, as encountered on stepping stones, across gaps, and on narrow stair treads. On such terrain, a single misstep often leaves little room to recover, so policies that base foot-placement decisions primarily on the immediately visible terrain are prone to failure. We ask whether a learned predictive summary of near-future observations and rewards can provide the anticipatory information required in such settings. We present World-Model-Augmented Visual Locomotion (WM-LOCO), which jointly trains a recurrent world model and a PPO policy. Conditioned on proprioception and a single onboard depth image, the world model produces a predictive recurrent feature that guides the policy, without explicit foothold labels. In simulation, WM-LOCO succeeds on gaps and stepping stones where a matched baseline fails completely, and matches the baseline's success rate on stairs while improving stride efficiency and reducing pelvis acceleration. We deploy the same policy onboard a physical Unitree G1 humanoid using onboard proprioception and a single depth stream; it traverses all three terrain classes with an average success rate of 93.3%.
+
+---
+
+### Top 2: ZETA: A Controlled Study of Zero-Shot Cross-Embodiment VLA Transfer for Tabletop Manipulation
+- **Priority Score**: `135 pts` | **Published**: `2026-09-02`
 - **Focus Tracks**: `#vision-language-action` `#vla`
-- **Key Authors**: Xingyu Ding, Yuzhong Zhao, Chunhai Zhao et al.
-- **Direct Access**: [arXiv Abstract](http://arxiv.org/abs/2608.30643v1) | [PDF Fulltext](http://arxiv.org/pdf/2608.30643v1)
+- **Key Authors**: Mi Yan, Wenhao Zhang, Zhiqi Zhang et al.
+- **Direct Access**: [arXiv Abstract](http://arxiv.org/abs/2609.02546v1) | [PDF Fulltext](http://arxiv.org/pdf/2609.02546v1)
 
 **Executive Abstract**:
-> Recent vision-language-action (VLA) methods improve manipulation performance by aligning their representations with 3D scene geometry. However, these methods often struggle with long-horizon manipulation and observation aliasing between visually similar states due to a lack of temporal information: the 3D scene geometry captures only the current state, rather than how it has evolved over time. To resolve this, we present Temporal Forcing, a 4D representation alignment method for VLA models. Specifically, we first introduce a history pathway that enables a vanilla VLA model to summarize observation history into temporally aware latent representations. Then, the latent representations are aligned with the geometric features extracted by a pretrained 4D foundation model, which captures the evolving 3D world through temporally consistent geometric representations, enabling a deeper understanding of dynamic environments. Temporal Forcing reaches 98.8% on LIBERO, outperforming its base model by 2.2 points. On a physical hidden-placement task, it raises full-task success from 20.0% to 43.3%. Code will be publicly available.
+> Zero-shot generalization to unseen embodiments is important for generalizable vision-language-action (VLA) models as robot hardware evolves and task-specific data collection remains costly. However, a systematic understanding of this problem remains limited, in part because the literature lacks a unified zero-shot transfer definition and controlled evaluation settings that isolate embodiment changes from differences in tasks, scenes, or protocols. To address this gap, we first distinguish strict zero-shot transfer, where the target embodiment is absent from all training data, from pretrain-exposed zero-shot transfer, where it appears only during pretraining. We then introduce a controlled benchmark spanning 14 held-out target embodiments across simulation and real-world validation. Within this framework, we conduct a controlled analysis of four factors: state-action representations, pretraining embodiment diversity, auxiliary co-training objectives, and target-embodiment exposure. Experimental results show that local end-effector (EEF) state-action representations, the source embodiment diversity, and auxiliary co-training improve cross-embodiment transfer by around 15, 18, and 7 percentage points, respectively. We further find that adding only 5% target-embodiment data during pretraining improves average target-embodiment progress by 13.4 percentage points, showing that strict and pretrain-exposed zero-shot transfer are distinct and should be reported separately. Together, these findings provide practical guidance for evaluating and improving cross-embodiment VLA transfer in stationary tabletop manipulation with two-finger grippers, while motivating future investigation of broader settings including mobile-base control, dexterous hands, and long-horizon tasks.
 
 ---
 
-### Top 2: Behavior-Skill: A Fine-Grained Benchmark for Evaluating Vision-Language-Action Policies in Long-Horizon Tasks
-- **Priority Score**: `135 pts` | **Published**: `2026-08-31`
-- **Focus Tracks**: `#vision-language-action` `#vla`
-- **Key Authors**: Chunyun Ma, Lun Luo, Xingjian Luo et al.
-- **Direct Access**: [arXiv Abstract](http://arxiv.org/abs/2608.30536v1) | [PDF Fulltext](http://arxiv.org/pdf/2608.30536v1)
+### Top 3: FOCUS: Foot Observation Confidence for Robust Humanoid Proprioceptive Odometry
+- **Priority Score**: `120 pts` | **Published**: `2026-09-02`
+- **Focus Tracks**: `#humanoid` `#locomotion`
+- **Key Authors**: Kaixin Feng, Angsong Li, Shaopeng Zhang et al.
+- **Direct Access**: [arXiv Abstract](http://arxiv.org/abs/2609.02222v1) | [PDF Fulltext](http://arxiv.org/pdf/2609.02222v1)
 
 **Executive Abstract**:
-> Reliable execution of long-horizon mobile manipulation tasks remains challenging because overall task success depends on the successful completion of multiple constituent skills. Existing benchmarks, however, still rely primarily on full-task rollouts and aggregate task-level metrics, making intermediate failures difficult to observe and analyze. We present Behavior-Skill, a benchmark that reformulates the learning and evaluation of long-horizon tasks around executable constituent skills. It contains 235,492 skill instances from 10,000 demonstrations across 50 household tasks and 34 semantic skill categories. Each instance pairs a skill instruction with an aligned observation-action segment, and is further associated with a restorable intermediate state and a skill success condition to enable independent evaluation under valid preconditions. We further introduce trajectory-level and skill-level metrics to characterize policy capability beyond aggregate task success. Extensive experiments across representative VLA policies including pi0.5 and GR00T on the complete 50-task benchmark show that failures are highly non-uniform across skills, with contact-rich manipulation skills forming persistent bottlenecks. These results demonstrate that Behavior-Skill complements full-task evaluation by exposing intermediate capability profiles for analyzing and improving long-horizon VLA policies. Behavior-Skill is publicly available at https://github.com/nubot-nudt/Behavior-Skill.
+> Foot forward kinematics (FK) is widely used to improve proprioceptive legged odometry by providing reliable velocity constraints during foot support. Existing contact-aided estimators generally rely on binary contact decisions to determine whether the FK measurements of an entire foot should be trusted. However, contact does not necessarily imply FK reliability. Dynamic locomotion often involves partial support, toe dragging, and foot slip, causing binary contact decisions to accumulate significant drift over long trajectories. To address this limitation, we propose FOCUS (Foot Observation Confidence from Unannotated Simulation), which predicts a continuous FK reliability weight for each foot instead of estimating binary foot contact. Rather than replacing the model-based estimator, the predicted reliability weights are used to blend FK velocity observations with IMU-propagated body velocity and to adapt the observation covariance of an extended Kalman filter (EKF), enabling smooth reliability-aware fusion without hard contact switching. The network is trained from automatically generated simulation signals using an FK-weighted velocity consistency loss with lightweight simulator-contact regularization, without manually annotated continuous FK-reliability labels. The deployed model relies only on IMU and joint kinematic measurements, making it suitable for hardware platforms with unreliable torque sensing. Experiments demonstrate that FOCUS reduces absolute trajectory error (ATE) by 83.7% on simulated walking episodes, preserves simulated dynamic-motion fidelity in motion scale and spectral energy, reduces ATE by 70.8% across 19 real walking segments, and reduces mean ATE by 42.7% across four real dynamic-motion routines.
 
 ---
 
-### Top 3: A Dual-Cam Parallel Elastic Actuator with Shared Gas-Spring Compensation for Humanoid Ankles
-- **Priority Score**: `115 pts` | **Published**: `2026-08-31`
-- **Focus Tracks**: `#humanoid` `#actuator`
-- **Key Authors**: Jingcheng Jiang, Yifang Zhang, Nikos G. Tsagarakis
-- **Direct Access**: [arXiv Abstract](http://arxiv.org/abs/2608.30832v1) | [PDF Fulltext](http://arxiv.org/pdf/2608.30832v1)
+### Top 4: Unified Motion Retargeting for Humanoids with Learned Point Cloud Correspondence
+- **Priority Score**: `120 pts` | **Published**: `2026-09-02`
+- **Focus Tracks**: `#humanoid` `#locomotion`
+- **Key Authors**: Hanyang Cao, Yuetong Fang, Taesoo Kwon et al.
+- **Direct Access**: [arXiv Abstract](http://arxiv.org/abs/2609.02134v1) | [PDF Fulltext](http://arxiv.org/pdf/2609.02134v1)
 
 **Executive Abstract**:
-> To improve torque capacity and energy efficiency of humanoid ankles, this paper proposes a 2-DoF parallel elastic actuator (PEA). The main novelty of the proposed design lies in its dual-cam, single-gas-spring architecture, which enables torque compensation in both pitch and roll using a shared elastic element, thereby improving structural compactness compared with conventional multi-element compensation schemes. By leveraging parallel gas springs and customized cam modules, the proposed architecture provides dual-axis torque assistance tailored to specific task requirements. The second key contribution is the formulation of a coupled 2-DoF mathematical model that explicitly captures the interdependence between the two compensation units through the shared spring. Based on this model, an optimization-based design framework is developed to synthesize customized cam profiles from prescribed torque references, establishing a systematic link from task requirements to hardware realization. The complete lower-leg CAD integration is presented in detail. Static FEA and kinematic simulations confirm the design's feasibility and torque-relief effectiveness. The results highlight the proposed design as a compact, customizable solution for 2-DoF humanoid ankle torque compensation.
+> Humanoid learning increasingly relies on transforming vast and diverse human motion data into high-quality robot reference trajectories. However, retargeting human motion to humanoid robots is challenging due to substantial differences in morphology, degrees of freedom, joint ranges, and kinematic constraints between humans and robots. Existing retargeting methods typically address these differences by defining human-robot correspondence through hand-crafted sparse keypoints or body-part pairs. As a result, retargeting quality depends heavily on manual semantic design, limiting scalability across motion sources and robot morphologies and providing only sparse guidance for reproducing detailed poses and interactions. In this paper, we present Unified Motion Retargeting (UMR), a framework that learns dense point cloud correspondence without requiring manually designed human-robot mappings. By treating exterior point clouds as a unified interface between human motion and humanoid robots, UMR decouples retargeting from source-specific skeletal semantics and robot-specific topology. The learned dense correspondence provides fine-grained geometric anchors for constrained point cloud matching optimization, enabling surface-level pose alignment and direct transfer of interaction contacts. Experiments demonstrate that UMR unifies retargeting across heterogeneous motion sources, robot embodiments, and downstream scenarios ranging from locomotion to interaction, while achieving higher motion fidelity and plausibility than state-of-the-art methods. UMR therefore provides a scalable foundation for transforming large-scale human motion references into robot-ready training data.
 
 ---
 
-### Top 4: Zeva: In-Context Causal Learning for Generalizable Embodied Manipulation
-- **Priority Score**: `90 pts` | **Published**: `2026-08-31`
-- **Focus Tracks**: `#vla`
-- **Key Authors**: Fu Chen, Xin Ding, Bingjia Huang et al.
-- **Direct Access**: [arXiv Abstract](http://arxiv.org/abs/2608.30880v1) | [PDF Fulltext](http://arxiv.org/pdf/2608.30880v1)
+### Top 5: Humanoid Safe Stop via Learned Stoppability Value
+- **Priority Score**: `95 pts` | **Published**: `2026-09-02`
+- **Focus Tracks**: `#humanoid`
+- **Key Authors**: Junfeng Long, Pieter Abbeel, Koushil Sreenath et al.
+- **Direct Access**: [arXiv Abstract](http://arxiv.org/abs/2609.02358v1) | [PDF Fulltext](http://arxiv.org/pdf/2609.02358v1)
 
 **Executive Abstract**:
-> Generalizable embodied manipulation remains difficult to achieve through pretraining alone, due to unseen physical conditions in the real world. We argue that robots need to learn from their own physical interactions on the fly during real-world deployment and use this knowledge to inform subsequent actions. We present Zeva, the first framework that enables in-context learning from a robot's own physical interaction experience while keeping the policy model frozen. Zeva employs a Causal Interaction Extractor to encode an executed action and its induced state change into a causal interaction signal, which is stored in a dual-timescale causal memory. For subsequent actions, relevant causal interaction signals are retrieved from memory and injected into the frozen policy model as context. Experiments in simulation and real-world manipulation demonstrate that Zeva achieves the best performance among the compared frontier VLAs and WAMs and, more importantly, enables self-evolution during deployment without gradient updates. Its success rate continues to improve as the robot accumulates interaction experience. Furthermore, the acquired interaction experience can generalize across tasks.
-
----
-
-### Top 5: LightNav-0: Eliciting VLM Spatial Intelligence for Generalist Embodied Navigation
-- **Priority Score**: `80 pts` | **Published**: `2026-08-31`
-- **Focus Tracks**: `#reinforcement learning`
-- **Key Authors**: Shaoan Wang, Aocheng Luo, Fei Huang et al.
-- **Direct Access**: [arXiv Abstract](http://arxiv.org/abs/2608.30935v1) | [PDF Fulltext](http://arxiv.org/pdf/2608.30935v1)
-
-**Executive Abstract**:
-> Embodied navigation requires agents to translate heterogeneous goals and visual observations into actions across tasks, environments, and robot embodiments. Modern vision-language models (VLMs) already encode spatial priors for visual grounding, spatial reasoning, and pointing, but these capabilities are rarely elicited directly for robot control. Existing navigation systems instead rely on task- or embodiment-specific components, fragmenting perception, reasoning, and action while offering limited generalization. Here we present LightNav-0, a compact generalist embodied navigation model that elicits the spatial intelligence of a pretrained VLM and aligns it with navigation, without task-specific prediction heads. LightNav-0 represents diverse navigation tasks through a unified token interface: dual-channel pointing expresses task-, scene-, and embodiment-agnostic spatial intent, while a residual vector-quantized action tokenizer maps this intent to precise, embodiment-specific trajectories. Together with temporally aware visual history compression, ER mid-training, supervised fine-tuning, and reinforcement learning, this formulation supports instruction following, open-vocabulary object navigation, and visual tracking within a single model. The navigation training corpus spans 2K+ scenes and 4K+ hours of embodied navigation data. LightNav-ER, the embodied-reasoning checkpoint used to initialize LightNav-0, attains the highest complete-set average across 8 embodied-reasoning benchmarks, while LightNav-0 achieves state-of-the-art monocular success rates across all 10 public navigation simulation settings. Real-world evaluations further demonstrate zero-shot generalization across robot embodiments, diverse scenes, and static and dynamic targets. These results establish compact VLMs as a unified and transferable backbone for generalist embodied navigation.
+> Humanoid robots responding to emergency stop commands typically execute a fixed maneuver, without reasoning about whether a safe stop is actually feasible from the current state. We cast emergency stopping as a reach-avoid problem and propose Safe-Stop, a task-agnostic framework that pairs a learned stop policy with learned stoppability estimators. The estimators are complementary: a stop-probability estimator supervised by the actual outcomes of the fixed stop policy, and a reach-avoidance estimator supervised by a Hamilton-Jacobi backup over physical state. The first captures emergent stopping behavior of the learned controller; the second provides a complementary recoverability signal. Because the stop policy and estimators do not depend on the behavior policy that preceded the stop command, they transfer across diverse upstream tasks without retraining. At deployment, the two estimates are combined: Safe-Stop commits to the stop only when both estimators indicate that stopping remains feasible, otherwise it hands off to a fall policy, instantiated as a damping fallback. This agreement check yields decisions that are robust without sacrificing reactivity.
 
 ---
 
