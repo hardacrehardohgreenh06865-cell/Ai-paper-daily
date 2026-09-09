@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Embodied AI & Robotics Intelligence Digest — September 08, 2026</title>
+    <title>Embodied AI & Robotics Intelligence Digest — September 09, 2026</title>
     <style>
         :root {
             --bg-base: #080c14;
@@ -242,7 +242,7 @@
         <header>
             <span class="pill-brand">Autonomous Research Intelligence</span>
             <h1>Embodied AI & Physical Frontier Briefing</h1>
-            <p class="subtitle">Compiled on September 08, 2026 • Ranked top 8 strategic breakthroughs out of incoming preprints.</p>
+            <p class="subtitle">Compiled on September 09, 2026 • Ranked top 8 strategic breakthroughs out of incoming preprints.</p>
             
             <div class="controls">
                 <input type="text" id="filterInput" class="search-box" placeholder="Filter papers by keywords (e.g. humanoid, tactile, diffusion)...">
@@ -251,39 +251,39 @@
 
         <main id="paperList">
             
-        <article class="paper-card" data-title="towards neuro-symbolic procedural reasoning for long-horizon vision-language-action manipulation" data-summary="vision-language-action (vla) models can execute short manipulation skills, but remain brittle in long-horizon procedures requiring persistent task state, dependency-aware reasoning, conditional decisions, and reliable grounding. we investigate a neuro-symbolic framework that combines learned vla control with explicit task graphs and multimodal procedural memory. task graphs encode action dependencies, valid transitions, and branch conditions, while memory maintains the active step, completed actions, textual context, and task-relevant visual evidence. together, these structures guide object selection, destination grounding, subgoal dispatch, and verification of expected state transitions. human demonstrations provide additional spatial and temporal guidance through gaze or saliency cues. to isolate their effect on policy learning, our initial study bypasses cross-view gaze transfer and directly annotates pseudo-gaze in robot-view teleoperation videos. the resulting guidance is used during vla fine-tuning and inference. we study two long-horizon manipulation domains, workspace clearing and surgical-instrument handling, which require ordered execution, visually grounded decisions, and conditional branching. we evaluate correct-object and destination selection, subtask completion, task progress, step-order consistency, complete-task success, and procedural or execution mistakes. this work positions structured symbolic reasoning and demonstration-derived visual guidance as complementary mechanisms for reliable long-horizon vla manipulation.">
+        <article class="paper-card" data-title="mobilevla-r1 2.0: rl-enhanced reasoning for mobile robot control" data-summary="grounding natural-language instructions into reliable and executable actions remains a fundamental challenge for vision-language-action (vla) systems on mobile robots, due to the persistent gap between high-level semantic reasoning and low-level locomotion and manipulation control. existing approaches often rely on implicit reasoning or monolithic action prediction, making it difficult to maintain coherent long-horizon decision making while producing precise and adaptable robot actions. to address this challenge, we propose mobilevla-r1 2.0, an rl-enhanced vla framework that explicitly couples structured embodied reasoning with executable mobile robot control. the framework learns multi-granularity reasoning over embodied trajectories through supervised chain-of-thought (cot) alignment and reinforcement learning, improving reasoning-to-action consistency beyond purely behavioral supervision. to support both locomotion and manipulation, we further introduce a reasoning-conditioned action decoder that maps multimodal reasoning representations to task-level action targets, which are subsequently translated into embodiment-specific commands by robot controllers. this design provides a unified perception-reasoning-action interface while decoupling high-level action generation from robot-specific actuation. we conduct extensive evaluations on language-guided navigation, quadruped control, and humanoid mobile manipulation, covering vln-ce, quard, and real-world deployments on unitree go2 and g1 robots. mobilevla-r1 2.0 consistently outperforms strong vla baselines, achieving an average 1.6 point improvement in sr on vln-ce and a 10.0 point improvement in full-task success on real-world g1 mobile manipulation tasks over mobilevla-r1, while demonstrating robust long-horizon instruction following and closed-loop execution across different robotic platforms.">
             <div class="card-meta-top">
                 <span class="rank-tag">TOP #1</span>
                 <div class="score-badge">
                     <span class="score-label">Priority Index</span>
-                    <span class="score-value">155</span>
+                    <span class="score-value">270</span>
                 </div>
             </div>
             
-            <h2 class="paper-title">Towards Neuro-Symbolic Procedural Reasoning for Long-Horizon Vision-Language-Action Manipulation</h2>
+            <h2 class="paper-title">MobileVLA-R1 2.0: RL-Enhanced Reasoning for Mobile Robot Control</h2>
             
             <div class="author-row">
-                <span>🗓️ 2026-09-04</span>
-                <span>✍️ Vivek Chavan, Yahuan Shi, Oliver Heimann et al.</span>
+                <span>🗓️ 2026-09-05</span>
+                <span>✍️ Ting Huang, Yue Huang, Zeyu Zhang et al.</span>
             </div>
             
             <div class="badge-cluster">
-                <span class="badge">#vision-language-action</span><span class="badge">#vla</span><span class="badge">#teleoperation</span>
+                <span class="badge">#humanoid</span><span class="badge">#quadruped</span><span class="badge">#reinforcement learning</span><span class="badge">#locomotion</span><span class="badge">#vision-language-action</span><span class="badge">#vla</span>
             </div>
             
-            <p class="paper-summary">Vision-language-action (VLA) models can execute short manipulation skills, but remain brittle in long-horizon procedures requiring persistent task state, dependency-aware reasoning, conditional decisions, and reliable grounding. We investigate a neuro-symbolic framework that combines learned VLA control with explicit task graphs and multimodal procedural memory. Task graphs encode action dependencies, valid transitions, and branch conditions, while memory maintains the active step, completed actions, textual context, and task-relevant visual evidence. Together, these structures guide object selection, destination grounding, subgoal dispatch, and verification of expected state transitions. Human demonstrations provide additional spatial and temporal guidance through gaze or saliency cues. To isolate their effect on policy learning, our initial study bypasses cross-view gaze transfer and directly annotates pseudo-gaze in robot-view teleoperation videos. The resulting guidance is used during VLA fine-tuning and inference. We study two long-horizon manipulation domains, workspace clearing and surgical-instrument handling, which require ordered execution, visually grounded decisions, and conditional branching. We evaluate correct-object and destination selection, subtask completion, task progress, step-order consistency, complete-task success, and procedural or execution mistakes. This work positions structured symbolic reasoning and demonstration-derived visual guidance as complementary mechanisms for reliable long-horizon VLA manipulation.</p>
+            <p class="paper-summary">Grounding natural-language instructions into reliable and executable actions remains a fundamental challenge for vision-language-action (VLA) systems on mobile robots, due to the persistent gap between high-level semantic reasoning and low-level locomotion and manipulation control. Existing approaches often rely on implicit reasoning or monolithic action prediction, making it difficult to maintain coherent long-horizon decision making while producing precise and adaptable robot actions. To address this challenge, we propose MobileVLA-R1 2.0, an RL-enhanced VLA framework that explicitly couples structured embodied reasoning with executable mobile robot control. The framework learns multi-granularity reasoning over embodied trajectories through supervised Chain-of-Thought (CoT) alignment and reinforcement learning, improving reasoning-to-action consistency beyond purely behavioral supervision. To support both locomotion and manipulation, we further introduce a reasoning-conditioned action decoder that maps multimodal reasoning representations to task-level action targets, which are subsequently translated into embodiment-specific commands by robot controllers. This design provides a unified perception-reasoning-action interface while decoupling high-level action generation from robot-specific actuation. We conduct extensive evaluations on language-guided navigation, quadruped control, and humanoid mobile manipulation, covering VLN-CE, QUARD, and real-world deployments on Unitree Go2 and G1 robots. MobileVLA-R1 2.0 consistently outperforms strong VLA baselines, achieving an average 1.6 point improvement in SR on VLN-CE and a 10.0 point improvement in full-task success on real-world G1 mobile manipulation tasks over MobileVLA-R1, while demonstrating robust long-horizon instruction following and closed-loop execution across different robotic platforms.</p>
             
             <div class="card-action-bar">
-                <a href="http://arxiv.org/pdf/2609.05369v1" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
+                <a href="http://arxiv.org/pdf/2609.06251v1" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
                     View PDF
                 </a>
-                <a href="http://arxiv.org/abs/2609.05369v1" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
+                <a href="http://arxiv.org/abs/2609.06251v1" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
                     arXiv Page &rarr;
                 </a>
             </div>
         </article>
         
-        <article class="paper-card" data-title="robospa: can vla models go beyond simple scenes and short-horizon tasks?" data-summary="vision-language-action (vla) models have shown promising progress in language-conditioned robotic manipulation. however, existing datasets and benchmarks mainly evaluate task completion under predefined settings, offering limited insight into model reasoning under increasing spatial and procedural complexity. we introduce \textbf{robospa} (\textbf{robo}t \textbf{s}patial-\textbf{p}rocedural \textbf{a}ssessment), a large-scale robotic manipulation dataset and benchmark for diagnosing embodied reasoning in vla models. \texttt{robospa} focuses on two core dimensions, fine-grained spatial reasoning and long-horizon procedural planning, covering 10 task categories and 56 base tasks. each task is instantiated across five difficulty levels, yielding 280 variants with increasing spatial ambiguity and procedural complexity. we collect 527k trajectories across multiple embodiments and diverse scenes. beyond binary success rate, \texttt{robospa} introduces diagnostic metrics for more detailed evaluation. experiments on representative vla models show that current systems still struggle with complex spatial relations, precise low-level execution, and memory-intensive planning. these results establish \texttt{robospa} as a challenging diagnostic benchmark for developing more capable, reliable, and generalizable embodied agents. our data and code are available at https://github.com/fanzhenxuan/robospa.">
+        <article class="paper-card" data-title="vla-corrector: stage-aware observable state understanding for prompt-based closed-loop recovery of vision-language-action policies" data-summary="long-horizon robot manipulation with vision-language-action (vla) policies remains vulnerable to execution-time deviations, as final task success provides little information for diagnosing and correcting failures caused by action noise, object displacement, or goal misalignment. we introduce a stage-aware failure verification and prompt recovery framework that enables closed-loop correction of a fixed vla policy without parameter updates or privileged simulator states. the framework introduces an observable-history-based learned verifier that jointly estimates manipulation progress and execution risk by temporally modeling multi-view visual observations, proprioceptive states, and executed actions. to provide interpretable task understanding, we represent manipulation execution through semantic progress stages, including approach, alignment, grasp, transport, and placement, and identify stage-specific failure patterns. upon detecting abnormal execution, the framework preserves the original instruction and generates a stage-conditioned recovery prompt, allowing the same frozen vla policy to produce corrective actions. extensive multi-round evaluations on libero and libero plus demonstrate that the proposed approach substantially improves closed-loop reliability under diverse perturbations. without access to privileged object or goal coordinates, the learned verifier achieves recovery performance close to that of the privileged rule-based verifier in the evaluated settings. these results show that observable visual-proprioceptive-action history is sufficient to infer latent task states and enable practical failure recovery for existing vla policies.">
             <div class="card-meta-top">
                 <span class="rank-tag">TOP #2</span>
                 <div class="score-badge">
@@ -292,30 +292,30 @@
                 </div>
             </div>
             
-            <h2 class="paper-title">RoboSPA: Can VLA Models Go Beyond Simple Scenes and Short-Horizon Tasks?</h2>
+            <h2 class="paper-title">VLA-Corrector: Stage-Aware Observable State Understanding for Prompt-Based Closed-Loop Recovery of Vision-Language-Action Policies</h2>
             
             <div class="author-row">
-                <span>🗓️ 2026-09-04</span>
-                <span>✍️ Zhenxuan Fan, Bo Zhang, Yutong Lin et al.</span>
+                <span>🗓️ 2026-09-06</span>
+                <span>✍️ Chang Song, Bin Qian, Yan Feng et al.</span>
             </div>
             
             <div class="badge-cluster">
                 <span class="badge">#vision-language-action</span><span class="badge">#vla</span>
             </div>
             
-            <p class="paper-summary">Vision-Language-Action (VLA) models have shown promising progress in language-conditioned robotic manipulation. However, existing datasets and benchmarks mainly evaluate task completion under predefined settings, offering limited insight into model reasoning under increasing spatial and procedural complexity. We introduce \textbf{RoboSPA} (\textbf{Robo}t \textbf{S}patial-\textbf{P}rocedural \textbf{A}ssessment), a large-scale robotic manipulation dataset and benchmark for diagnosing embodied reasoning in VLA models. \texttt{RoboSPA} focuses on two core dimensions, Fine-Grained Spatial Reasoning and Long-Horizon Procedural Planning, covering 10 task categories and 56 base tasks. Each task is instantiated across five difficulty levels, yielding 280 variants with increasing spatial ambiguity and procedural complexity. We collect 527K trajectories across multiple embodiments and diverse scenes. Beyond binary success rate, \texttt{RoboSPA} introduces diagnostic metrics for more detailed evaluation. Experiments on representative VLA models show that current systems still struggle with complex spatial relations, precise low-level execution, and memory-intensive planning. These results establish \texttt{RoboSPA} as a challenging diagnostic benchmark for developing more capable, reliable, and generalizable embodied agents. Our data and code are available at https://github.com/fanzhenxuan/RoboSPA.</p>
+            <p class="paper-summary">Long-horizon robot manipulation with Vision-Language-Action (VLA) policies remains vulnerable to execution-time deviations, as final task success provides little information for diagnosing and correcting failures caused by action noise, object displacement, or goal misalignment. We introduce a stage-aware failure verification and Prompt Recovery framework that enables closed-loop correction of a fixed VLA policy without parameter updates or privileged simulator states. The framework introduces an observable-history-based Learned Verifier that jointly estimates manipulation progress and execution risk by temporally modeling multi-view visual observations, proprioceptive states, and executed actions. To provide interpretable task understanding, we represent manipulation execution through semantic progress stages, including approach, alignment, grasp, transport, and placement, and identify stage-specific failure patterns. Upon detecting abnormal execution, the framework preserves the original instruction and generates a stage-conditioned recovery prompt, allowing the same frozen VLA policy to produce corrective actions. Extensive multi-round evaluations on LIBERO and LIBERO Plus demonstrate that the proposed approach substantially improves closed-loop reliability under diverse perturbations. Without access to privileged object or goal coordinates, the Learned Verifier achieves recovery performance close to that of the privileged rule-based verifier in the evaluated settings. These results show that observable visual-proprioceptive-action history is sufficient to infer latent task states and enable practical failure recovery for existing VLA policies.</p>
             
             <div class="card-action-bar">
-                <a href="http://arxiv.org/pdf/2609.05324v1" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
+                <a href="http://arxiv.org/pdf/2609.06508v1" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
                     View PDF
                 </a>
-                <a href="http://arxiv.org/abs/2609.05324v1" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
+                <a href="http://arxiv.org/abs/2609.06508v1" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
                     arXiv Page &rarr;
                 </a>
             </div>
         </article>
         
-        <article class="paper-card" data-title="libero-recover: beyond task success towards failure recovery in robotic manipulation models" data-summary="vision-language-action (vla) or world action (wam) models have recently demonstrated remarkable performance in robotic manipulation. on libero, sota method have achieved nearly 100\% success rates, seemingly suggesting that the models are ready for deployment in real world. however, near perfect performance on existing benchmarks can be misleading: success under ideal conditions does not imply real world robustness. existing benchmarks primarily evaluate task completion from predefined initial states, while real world interactions inevitably involve failures such as failed grasps, collisions, and unintended object movements. a robot must therefore not only execute tasks successfully, but also recognize and recover from failures to continue the task. yet this capability remains largely unmeasured, revealing a critical gap between benchmark performance and real world reliability. to address this gap, we introduce libero-recover benchmark, a large scale benchmark for failure recovery in robotic manipulation. built upon libero, we collect real execution failures from sota embodied models and construct 1,000+ scenarios across four recovery levels: (1) action retry, (2) action adaptation, (3) object state recovery, and (4) environmental recovery. we evaluate four core capabilities: spatial understanding, object structure reasoning, interaction understanding, and topological reasoning. as the first large-scale benchmark for embodied failure recovery, libero-recover shifts evaluation from \emph{can the robot succeed?''} to \emph{can the robot recover after failure?''}, promoting robust and generalizable embodied agents. the project will be avaible in \textcolor{blue}{https://liulin815.github.io/libero-recovery/}.">
+        <article class="paper-card" data-title="glovla: let geometry move and local vla interact for robust object-centric manipulation in unstructured environments" data-summary="vision-language-action (vla) models have shown promising generalization for language-conditioned robot manipulation, but deploying them in unstructured environments remains challenging. a single end-to-end vla policy must simultaneously solve long-range transport of the end effector to task-relevant regions and short-horizon, contact-rich interaction upon arrival. this formulation is inefficient and brittle: small visual shifts, distractors, clutter, occlusions, or unfavorable initial gripper poses can push the policy outside the local state distribution in which it was trained, leading to task failure. we introduce glovla, a hybrid framework that explicitly separates object-centric manipulation into two complementary regimes: a geometric transport controller moves the end-effector into interaction-centric handoff regions, and local vla policies handle only the short-horizon interaction phases. glovla is model-agnostic and can be integrated with different vla backbones with no additional demonstrations and no changes to the action space or success predicate. experiments on standard libero and libero-plus object tasks together with a newly introduced libero-challenge benchmark ettings with clutter, distractors,illumination changes, visual shifts, and obstruction show that glovla improves task success and substantially lowers vla inference cost compared with full end-to-challenge, full-trajectory gr00t n1.6execution degrades to 20.9% average success while glovla retains 88.5%; on a physical ur10e, overall success improves from 35.6% to 90.0% while mean inference time is more than halved. videos and additional results are available at https://glovla-project.github.io/">
             <div class="card-meta-top">
                 <span class="rank-tag">TOP #3</span>
                 <div class="score-badge">
@@ -324,184 +324,184 @@
                 </div>
             </div>
             
-            <h2 class="paper-title">LIBERO-RECOVER: Beyond Task Success Towards Failure Recovery in Robotic Manipulation Models</h2>
+            <h2 class="paper-title">GloVLA: Let Geometry Move and Local VLA Interact for Robust Object-Centric Manipulation in Unstructured Environments</h2>
             
             <div class="author-row">
-                <span>🗓️ 2026-09-04</span>
-                <span>✍️ Lin Liu, Zhicheng Bao, Lu Zhang et al.</span>
+                <span>🗓️ 2026-09-05</span>
+                <span>✍️ Truong Thanh Nguyen, Huy Hoang Nguyen, Ha Anh Nguyen et al.</span>
             </div>
             
             <div class="badge-cluster">
                 <span class="badge">#vision-language-action</span><span class="badge">#vla</span>
             </div>
             
-            <p class="paper-summary">Vision-Language-Action (VLA) or World Action (WAM) models have recently demonstrated remarkable performance in robotic manipulation. On LIBERO, SOTA method have achieved nearly 100\% success rates, seemingly suggesting that the models are ready for deployment in real world. However, near perfect performance on existing benchmarks can be misleading: success under ideal conditions does not imply real world robustness. Existing benchmarks primarily evaluate task completion from predefined initial states, while real world interactions inevitably involve failures such as failed grasps, collisions, and unintended object movements. A robot must therefore not only execute tasks successfully, but also recognize and recover from failures to continue the task. Yet this capability remains largely unmeasured, revealing a critical gap between benchmark performance and real world reliability. To address this gap, we introduce LIBERO-Recover Benchmark, a large scale benchmark for failure recovery in robotic manipulation. Built upon LIBERO, we collect real execution failures from SOTA embodied models and construct 1,000+ scenarios across four recovery levels: (1) Action Retry, (2) Action Adaptation, (3) Object State Recovery, and (4) Environmental Recovery. We evaluate four core capabilities: spatial understanding, object structure reasoning, interaction understanding, and topological reasoning. As the first large-scale benchmark for embodied failure recovery, LIBERO-Recover shifts evaluation from \emph{Can the robot succeed?''} to \emph{Can the robot recover after failure?''}, promoting robust and generalizable embodied agents. The project will be avaible in \textcolor{blue}{https://liulin815.github.io/LIBERO-Recovery/}.</p>
+            <p class="paper-summary">Vision-language-action (VLA) models have shown promising generalization for language-conditioned robot manipulation, but deploying them in unstructured environments remains challenging. A single end-to-end VLA policy must simultaneously solve long-range transport of the end effector to task-relevant regions and short-horizon, contact-rich interaction upon arrival. This formulation is inefficient and brittle: small visual shifts, distractors, clutter, occlusions, or unfavorable initial gripper poses can push the policy outside the local state distribution in which it was trained, leading to task failure. We introduce GloVLA, a hybrid framework that explicitly separates object-centric manipulation into two complementary regimes: a geometric transport controller moves the end-effector into interaction-centric handoff regions, and local VLA policies handle only the short-horizon interaction phases. GloVLA is model-agnostic and can be integrated with different VLA backbones with no additional demonstrations and no changes to the action space or success predicate. Experiments on standard LIBERO and LIBERO-Plus Object tasks together with a newly introduced LIBERO-Challenge benchmark ettings with clutter, distractors,illumination changes, visual shifts, and obstruction show that GloVLA improves task success and substantially lowers VLA inference cost compared with full end-to-Challenge, full-trajectory GR00T N1.6execution degrades to 20.9% average success while GloVLA retains 88.5%; on a physical UR10e, overall success improves from 35.6% to 90.0% while mean inference time is more than halved. Videos and additional results are available at https://glovla-project.github.io/</p>
             
             <div class="card-action-bar">
-                <a href="http://arxiv.org/pdf/2609.05178v1" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
+                <a href="http://arxiv.org/pdf/2609.06256v1" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
                     View PDF
                 </a>
-                <a href="http://arxiv.org/abs/2609.05178v1" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
+                <a href="http://arxiv.org/abs/2609.06256v1" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
                     arXiv Page &rarr;
                 </a>
             </div>
         </article>
         
-        <article class="paper-card" data-title="morphology and actuation as inductive biases in robotic hand manipulation" data-summary="robotic hands vary widely in anatomical fidelity and mechanical complexity, and these structural choices influence the coordination of joint motions and the difficulty of controlling the system. a unified framework is presented in which the kinematic and actuation stages are analysed separately and in composition, through the conditioning of the task jacobian, the actuation matrix, and their product. it is applied to two hands representing opposing design philosophies, the shadow dexterous hand and the anatomically correct, biomechatronic hand, along four morphological aspects: joint axis geometry, actuator-to-dof ratio, coupling architecture, and authority distribution. all parameters are derived from the hands' canonical digital representations. anatomical fidelity carries no uniform advantage: oblique axes improve thumb conditioning but leave the long fingers worse conditioned than the orthogonal-axis design, while the branching tendon network improves the effective control mapping at every long finger and worsens it significantly at the thumb, where actuator authority is concentrated on thumb opposition. predictions derived from these metrics are evaluated against reinforcement learning experiments using ppo, ddpg+her, and tqc+her, across three different tasks.">
+        <article class="paper-card" data-title="refguard: identity-aware language-guided robot manipulation via joint target-anchor-frame grounding" data-summary="vision-language-action (vla) models have substantially advanced language-guided robot manipulation, yet reliable execution still hinges on identifying which physical object an instruction refers to. in cluttered scenes containing repeated objects, ambiguous anchors, or frame-dependent spatial terms, a robot can execute a geometrically valid action on a semantically compatible but unintended instance; we call this failure an identity switch. the referent is jointly determined by three coupled latent variables: the target, the anchor, and the reference frame, so committing to any one of them before execution turns residual ambiguity into a silent and irreversible error. we propose refguard, an identity-aware grounding framework that delays commitment by maintaining a joint posterior over all three variables. refguard builds a frame-conditioned object-centric scene graph from rgb-d observations, separating frame-independent geometry from directional relations, and routes the posterior through a decision policy that executes, clarifies, reobserves, or aborts. on a real uf850 arm, refguard records no identity switch on any ambiguity-stress trial and executes correctly on 90.0% of them, whereas fine-tuned vla and llm (large language model)-based baselines switch identity in 33-46% of the same trials, while retaining 93.3% success on unambiguous scenes and recovering from post-grounding scene changes in 86.7% of trials. on a 3200-episode procedural suite, it raises correct execution on solvable instructions from 56.6% to 80.5% over the ablation that commits to the anchor and frame before the target, while deferring less often (19.5% vs. 43.4%).">
             <div class="card-meta-top">
                 <span class="rank-tag">TOP #4</span>
+                <div class="score-badge">
+                    <span class="score-label">Priority Index</span>
+                    <span class="score-value">135</span>
+                </div>
+            </div>
+            
+            <h2 class="paper-title">RefGuard: Identity-Aware Language-Guided Robot Manipulation via Joint Target-Anchor-Frame Grounding</h2>
+            
+            <div class="author-row">
+                <span>🗓️ 2026-09-05</span>
+                <span>✍️ Lan Wei, Kangyi Lu, Yongchen Wang et al.</span>
+            </div>
+            
+            <div class="badge-cluster">
+                <span class="badge">#vision-language-action</span><span class="badge">#vla</span>
+            </div>
+            
+            <p class="paper-summary">Vision-language-action (VLA) models have substantially advanced language-guided robot manipulation, yet reliable execution still hinges on identifying which physical object an instruction refers to. In cluttered scenes containing repeated objects, ambiguous anchors, or frame-dependent spatial terms, a robot can execute a geometrically valid action on a semantically compatible but unintended instance; we call this failure an identity switch. The referent is jointly determined by three coupled latent variables: the target, the anchor, and the reference frame, so committing to any one of them before execution turns residual ambiguity into a silent and irreversible error. We propose RefGuard, an identity-aware grounding framework that delays commitment by maintaining a joint posterior over all three variables. RefGuard builds a frame-conditioned object-centric scene graph from RGB-D observations, separating frame-independent geometry from directional relations, and routes the posterior through a decision policy that executes, clarifies, reobserves, or aborts. On a real UF850 arm, RefGuard records no identity switch on any ambiguity-stress trial and executes correctly on 90.0% of them, whereas fine-tuned VLA and LLM (Large Language Model)-based baselines switch identity in 33-46% of the same trials, while retaining 93.3% success on unambiguous scenes and recovering from post-grounding scene changes in 86.7% of trials. On a 3200-episode procedural suite, it raises correct execution on solvable instructions from 56.6% to 80.5% over the ablation that commits to the anchor and frame before the target, while deferring less often (19.5% vs. 43.4%).</p>
+            
+            <div class="card-action-bar">
+                <a href="http://arxiv.org/pdf/2609.06221v1" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
+                    View PDF
+                </a>
+                <a href="http://arxiv.org/abs/2609.06221v1" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
+                    arXiv Page &rarr;
+                </a>
+            </div>
+        </article>
+        
+        <article class="paper-card" data-title="where success breaks: failure-boundary learning for robust vision-language-action models" data-summary="vision-language-action (vla) models adapted through supervised fine-tuning (sft) inherit a structural asymmetry: expert demonstrations teach the policy where success behavior lies, but provide no signal about where it ceases to be reliable. we argue that robust vla adaptation should therefore be viewed not as further demonstration fitting, but as **failure-boundary learning**---the problem of *discovering*, *localizing*, and *shaping* the boundary between recoverable deviations and task failure. to instantiate this view, we propose **dls**: built on a **real-grounded behavioral prior** from few real demonstrations and simulated co-training, dls *discovers* failure boundaries at scale through on-policy digital twin rollouts. rather than reducing each rollout to a binary label, **semantic progress localization** uses privileged simulator states to assign progress-aware signals that capture *where* the failure boundary is crossed, not merely *whether*. these signals drive **directional boundary shaping** in the flow dynamics---reinforcing success-producing denoising directions and suppressing failure-producing ones, without action likelihoods or auxiliary critics. across real-robot manipulation tasks, dls improves robustness over sft and online rl baselines, especially under randomized initial states and unseen visual conditions.">
+            <div class="card-meta-top">
+                <span class="rank-tag">TOP #5</span>
+                <div class="score-badge">
+                    <span class="score-label">Priority Index</span>
+                    <span class="score-value">135</span>
+                </div>
+            </div>
+            
+            <h2 class="paper-title">Where Success Breaks: Failure-Boundary Learning for Robust Vision-Language-Action Models</h2>
+            
+            <div class="author-row">
+                <span>🗓️ 2026-09-05</span>
+                <span>✍️ Yanzhe Chen, Zhijun Cao, Mike Zheng Shou</span>
+            </div>
+            
+            <div class="badge-cluster">
+                <span class="badge">#vision-language-action</span><span class="badge">#vla</span>
+            </div>
+            
+            <p class="paper-summary">Vision-language-action (VLA) models adapted through supervised fine-tuning (SFT) inherit a structural asymmetry: expert demonstrations teach the policy where success behavior lies, but provide no signal about where it ceases to be reliable. We argue that robust VLA adaptation should therefore be viewed not as further demonstration fitting, but as **Failure-Boundary Learning**---the problem of *Discovering*, *Localizing*, and *Shaping* the boundary between recoverable deviations and task failure. To instantiate this view, we propose **DLS**: built on a **real-grounded behavioral prior** from few real demonstrations and simulated co-training, DLS *discovers* failure boundaries at scale through on-policy digital twin rollouts. Rather than reducing each rollout to a binary label, **semantic progress localization** uses privileged simulator states to assign progress-aware signals that capture *where* the failure boundary is crossed, not merely *whether*. These signals drive **directional boundary shaping** in the flow dynamics---reinforcing success-producing denoising directions and suppressing failure-producing ones, without action likelihoods or auxiliary critics. Across real-robot manipulation tasks, DLS improves robustness over SFT and online RL baselines, especially under randomized initial states and unseen visual conditions.</p>
+            
+            <div class="card-action-bar">
+                <a href="http://arxiv.org/pdf/2609.06114v1" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
+                    View PDF
+                </a>
+                <a href="http://arxiv.org/abs/2609.06114v1" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
+                    arXiv Page &rarr;
+                </a>
+            </div>
+        </article>
+        
+        <article class="paper-card" data-title="can people distinguish human and ai agency in humanoid teleoperation? a preliminary study of agency perception" data-summary="can people distinguish between human and ai agency in humanoid teleoperation? to explore this question, we developed \textit{ghost-in-the-loop}, a teleoperation framework that supports both human-operated and ai-generated control of a robot's voice, facial expressions, and gestures while maintaining a consistent embodiment. we conducted a preliminary online study ($n=50$) in which participants viewed short interaction clips generated by either a human operator or an ai control and judged the perceived source of control. results suggest that participants often struggled to distinguish between the two conditions in brief interactions. qualitative responses indicate that judgments were primarily influenced by perceived naturalness, temporal coordination, and consistency across speech, facial expression, and gesture. these findings provide initial insights into agency perception in embodied human--ai communication and motivate future investigations of blended human--ai telepresence systems.">
+            <div class="card-meta-top">
+                <span class="rank-tag">TOP #6</span>
+                <div class="score-badge">
+                    <span class="score-label">Priority Index</span>
+                    <span class="score-value">115</span>
+                </div>
+            </div>
+            
+            <h2 class="paper-title">Can People Distinguish Human and AI Agency in Humanoid Teleoperation? A Preliminary Study of Agency Perception</h2>
+            
+            <div class="author-row">
+                <span>🗓️ 2026-09-06</span>
+                <span>✍️ Xiang Li, Koya Dendo, Keigo Minamida et al.</span>
+            </div>
+            
+            <div class="badge-cluster">
+                <span class="badge">#humanoid</span><span class="badge">#teleoperation</span>
+            </div>
+            
+            <p class="paper-summary">Can people distinguish between human and AI agency in humanoid teleoperation? To explore this question, we developed \textit{Ghost-in-the-Loop}, a teleoperation framework that supports both human-operated and AI-generated control of a robot's voice, facial expressions, and gestures while maintaining a consistent embodiment. We conducted a preliminary online study ($N=50$) in which participants viewed short interaction clips generated by either a Human Operator or an AI Control and judged the perceived source of control. Results suggest that participants often struggled to distinguish between the two conditions in brief interactions. Qualitative responses indicate that judgments were primarily influenced by perceived naturalness, temporal coordination, and consistency across speech, facial expression, and gesture. These findings provide initial insights into agency perception in embodied human--AI communication and motivate future investigations of blended human--AI telepresence systems.</p>
+            
+            <div class="card-action-bar">
+                <a href="http://arxiv.org/pdf/2609.06434v1" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
+                    View PDF
+                </a>
+                <a href="http://arxiv.org/abs/2609.06434v1" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
+                    arXiv Page &rarr;
+                </a>
+            </div>
+        </article>
+        
+        <article class="paper-card" data-title="rethinking safety for generalist robots" data-summary="generalist robots promise to transform our society: the same system that prepares a meal or folds laundry might also repair a car, inspect infrastructure, or care for a loved one. yet this versatility introduces risks far beyond the collision- and force-based safety notions that have long dominated robotics. notions of safety must now consider context (e.g., turning off a building's electricity is only safe during scheduled maintenance), user intent (e.g., asking the robot to ``clean the kitchen'' includes unspoken expectations that the robot should not mix dangerous but powerful cleaning agents like bleach and ammonia), hard-to-model physical consequences (e.g., burning food during meal preparation), and more. we argue the need for a new era of robot safety---embodied ai safety---that broadens the hazards considered across the robot's lifecycle while recognizing that the safety of bits cannot be separated from the safety of atoms. we present a taxonomy of emerging risks and a full-stack research agenda to guide the safe deployment of generalist robots.">
+            <div class="card-meta-top">
+                <span class="rank-tag">TOP #7</span>
                 <div class="score-badge">
                     <span class="score-label">Priority Index</span>
                     <span class="score-value">100</span>
                 </div>
             </div>
             
-            <h2 class="paper-title">Morphology and actuation as inductive biases in robotic hand manipulation</h2>
+            <h2 class="paper-title">Rethinking Safety for Generalist Robots</h2>
             
             <div class="author-row">
-                <span>🗓️ 2026-09-04</span>
-                <span>✍️ Zalán Tari, Eszter Birtalan, Péter Polcz et al.</span>
+                <span>🗓️ 2026-09-06</span>
+                <span>✍️ Rohan Sinha, Anushri Dixit, Ran Tian et al.</span>
             </div>
             
             <div class="badge-cluster">
-                <span class="badge">#reinforcement learning</span><span class="badge">#actuator</span>
+                <span class="badge">#embodied ai</span>
             </div>
             
-            <p class="paper-summary">Robotic hands vary widely in anatomical fidelity and mechanical complexity, and these structural choices influence the coordination of joint motions and the difficulty of controlling the system. A unified framework is presented in which the kinematic and actuation stages are analysed separately and in composition, through the conditioning of the task Jacobian, the actuation matrix, and their product. It is applied to two hands representing opposing design philosophies, the Shadow Dexterous Hand and the Anatomically Correct, Biomechatronic Hand, along four morphological aspects: joint axis geometry, actuator-to-DOF ratio, coupling architecture, and authority distribution. All parameters are derived from the hands' canonical digital representations. Anatomical fidelity carries no uniform advantage: oblique axes improve thumb conditioning but leave the long fingers worse conditioned than the orthogonal-axis design, while the branching tendon network improves the effective control mapping at every long finger and worsens it significantly at the thumb, where actuator authority is concentrated on thumb opposition. Predictions derived from these metrics are evaluated against reinforcement learning experiments using PPO, DDPG+HER, and TQC+HER, across three different tasks.</p>
+            <p class="paper-summary">Generalist robots promise to transform our society: the same system that prepares a meal or folds laundry might also repair a car, inspect infrastructure, or care for a loved one. Yet this versatility introduces risks far beyond the collision- and force-based safety notions that have long dominated robotics. Notions of safety must now consider context (e.g., turning off a building's electricity is only safe during scheduled maintenance), user intent (e.g., asking the robot to ``clean the kitchen'' includes unspoken expectations that the robot should not mix dangerous but powerful cleaning agents like bleach and ammonia), hard-to-model physical consequences (e.g., burning food during meal preparation), and more. We argue the need for a new era of robot safety---embodied AI safety---that broadens the hazards considered across the robot's lifecycle while recognizing that the safety of bits cannot be separated from the safety of atoms. We present a taxonomy of emerging risks and a full-stack research agenda to guide the safe deployment of generalist robots.</p>
             
             <div class="card-action-bar">
-                <a href="http://arxiv.org/pdf/2609.05206v1" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
+                <a href="http://arxiv.org/pdf/2609.06326v1" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
                     View PDF
                 </a>
-                <a href="http://arxiv.org/abs/2609.05206v1" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
+                <a href="http://arxiv.org/abs/2609.06326v1" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
                     arXiv Page &rarr;
                 </a>
             </div>
         </article>
         
-        <article class="paper-card" data-title="what matters, when? diagnosing and improving conditional visual grounding in visuomotor imitation policies" data-summary="visuomotor imitation policies can achieve high performance under in-distribution visual conditions yet fail when visually similar objects or receptacles are introduced. we study this behavior as a problem of conditional visual grounding: the visual target required for successful control changes with the manipulation phase and, in more complex tasks, with the observed task state. using action chunking with transformers (act), we systematically introduce distractor objects and receptacles with controlled color and shape similarity and localize failures to picking and placement. we find that distractor sensitivity is specific to both the type of visual similarity and the manipulation stage. guided by this diagnosis, we evaluate distractor augmentation, phase-dependent attention regularization, and appearance-based visual prompting as complementary interventions for improving target selection while preserving spatial information required for control. these interventions substantially improve robustness in simulation and on a physical ur3e. we further examine the same failure pattern in a pretrained vision-language-action policy on a state-conditioned instrument-handling task, where the observed state of a medical instrument determines the correct destination. together, the results show that visual distractors can cause incorrect object or destination selection even when the underlying manipulation skill remains intact, and that explicitly improving target selection can substantially recover performance across distinct visuomotor policy-learning regimes.">
+        <article class="paper-card" data-title="cst-wm: a causally structured world model for embodied visual tracking" data-summary="embodied visual tracking requires a robot not only to react to the current view, but to choose actions that preserve or recover future evidence of a moving target under ego-motion, occlusion, and distractors. it is therefore a predictive decision problem over future target observability and apparent scale. a central difficulty is a task-specific form of causal hallucination: in action-conditioned prediction, a model can exploit the strong correlation between robot control and target-related observations by hallucinating a direct causal effect from the current action to target evidence, rather than letting action influence that evidence only through robot motion and the resulting observation change. the shortcut yields plausible futures with the wrong semantics for tracking-oriented planning and re-acquisition. we propose cst-wm, a causally structured world model that decomposes the latent state into target-evidence, robot, and observation branches and factorizes the transition so that direct action injection into the target-evidence branch is blocked, while action remains available to robot motion and observation updates. combined with rollout-based model-predictive control, cst-wm supports both stable following and temporary target re-acquisition in one planning framework. on evt-bench and habitat 3.0, covering standard tracking, target-loss recovery, and cross-dataset transfer, it improves following quality, distance-range control, safety, and re-acquisition over reactive and world-model baselines; offline diagnostics show better multi-step rollout fidelity, stronger planning-value consistency, and substantially reduced direct action leakage. for embodied visual tracking, future prediction alone is not enough: the predictive structure itself must align with how target evidence enters planning.">
             <div class="card-meta-top">
-                <span class="rank-tag">TOP #5</span>
-                <div class="score-badge">
-                    <span class="score-label">Priority Index</span>
-                    <span class="score-value">95</span>
-                </div>
-            </div>
-            
-            <h2 class="paper-title">What Matters, When? Diagnosing and Improving Conditional Visual Grounding in Visuomotor Imitation Policies</h2>
-            
-            <div class="author-row">
-                <span>🗓️ 2026-09-04</span>
-                <span>✍️ Vivek Chavan, Pengtao Xie, Yahuan Shi et al.</span>
-            </div>
-            
-            <div class="badge-cluster">
-                <span class="badge">#vision-language-action</span>
-            </div>
-            
-            <p class="paper-summary">Visuomotor imitation policies can achieve high performance under in-distribution visual conditions yet fail when visually similar objects or receptacles are introduced. We study this behavior as a problem of conditional visual grounding: the visual target required for successful control changes with the manipulation phase and, in more complex tasks, with the observed task state. Using Action Chunking with Transformers (ACT), we systematically introduce distractor objects and receptacles with controlled color and shape similarity and localize failures to picking and placement. We find that distractor sensitivity is specific to both the type of visual similarity and the manipulation stage. Guided by this diagnosis, we evaluate distractor augmentation, phase-dependent attention regularization, and appearance-based visual prompting as complementary interventions for improving target selection while preserving spatial information required for control. These interventions substantially improve robustness in simulation and on a physical UR3e. We further examine the same failure pattern in a pretrained vision-language-action policy on a state-conditioned instrument-handling task, where the observed state of a medical instrument determines the correct destination. Together, the results show that visual distractors can cause incorrect object or destination selection even when the underlying manipulation skill remains intact, and that explicitly improving target selection can substantially recover performance across distinct visuomotor policy-learning regimes.</p>
-            
-            <div class="card-action-bar">
-                <a href="http://arxiv.org/pdf/2609.05376v1" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
-                    View PDF
-                </a>
-                <a href="http://arxiv.org/abs/2609.05376v1" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
-                    arXiv Page &rarr;
-                </a>
-            </div>
-        </article>
-        
-        <article class="paper-card" data-title="development of a humanoid robot prototype for multimodal human-robot interaction" data-summary="human-robot interaction (hri) enables intuitive and intelligent collaboration between humans and robots in real-world environments. this paper introduces a humanoid robot prototype designed as a flexible testbed for developing and integrating artificial intelligence (ai) modules in hri tasks. the system features a 12 degree-of-freedom (dofs) dual-arm mechanism and a 2 dofs head with an expressive lcd screen to express facial emotions. all hardware components are controlled by a custom-designed controller board with real-time ai processing supported by an onboard jetson module. the system incorporates three ai modules: (1) gesture recognition using mediapipe pose and an lstm classifier, (2) object detection with yolo and 3d localization, and (3) voice-command processing through speech recognition and large language model(llm)-based semantic parsing. the platform is validated through experiments on positioning accuracy, with results showing average manipulation errors of approximately 1.83 cm. to demonstrate its versatility, experimental results show over 90% task accuracy, with gesture recognition reaching 96%, speech recognition reaching 92%. the results confirm the effectiveness of the proposed system as a reproducible and accessible humanoid platform for research and prototyping in hri.">
-            <div class="card-meta-top">
-                <span class="rank-tag">TOP #6</span>
-                <div class="score-badge">
-                    <span class="score-label">Priority Index</span>
-                    <span class="score-value">95</span>
-                </div>
-            </div>
-            
-            <h2 class="paper-title">Development of a Humanoid Robot Prototype for Multimodal Human-Robot Interaction</h2>
-            
-            <div class="author-row">
-                <span>🗓️ 2026-09-04</span>
-                <span>✍️ Thang Tran Viet, Thanh Nguyen Canh, Huy Uong Gia et al.</span>
-            </div>
-            
-            <div class="badge-cluster">
-                <span class="badge">#humanoid</span>
-            </div>
-            
-            <p class="paper-summary">Human-robot interaction (HRI) enables intuitive and intelligent collaboration between humans and robots in real-world environments. This paper introduces a humanoid robot prototype designed as a flexible testbed for developing and integrating artificial intelligence (AI) modules in HRI tasks. The system features a 12 degree-of-freedom (DOFs) dual-arm mechanism and a 2 DOFs head with an expressive LCD screen to express facial emotions. All hardware components are controlled by a custom-designed controller board with real-time AI processing supported by an onboard Jetson module. The system incorporates three AI modules: (1) gesture recognition using MediaPipe Pose and an LSTM classifier, (2) object detection with YOLO and 3D localization, and (3) voice-command processing through speech recognition and large language model(LLM)-based semantic parsing. The platform is validated through experiments on positioning accuracy, with results showing average manipulation errors of approximately 1.83 cm. To demonstrate its versatility, experimental results show over 90% task accuracy, with gesture recognition reaching 96%, speech recognition reaching 92%. The results confirm the effectiveness of the proposed system as a reproducible and accessible humanoid platform for research and prototyping in HRI.</p>
-            
-            <div class="card-action-bar">
-                <a href="http://arxiv.org/pdf/2609.05361v1" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
-                    View PDF
-                </a>
-                <a href="http://arxiv.org/abs/2609.05361v1" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
-                    arXiv Page &rarr;
-                </a>
-            </div>
-        </article>
-        
-        <article class="paper-card" data-title="temporal tactile encoding and compliance for intent-aware robot-to-human bimanual handover" data-summary="reliable robot-to-human handover requires the robot to infer when the person is ready to receive the object, and release it safely, comfortably, and at the right time. this is challenging because visual observations alone may not disambiguate clear taking intent from accidental contact, weak grasping, wrong-direction forces, or transient interactions. in this work we treat human-robot handover as an intrinsically multimodal problem. our approach couples a vla model with a compliance controller that reduces interaction forces during object transfer. we finetune the vla model with human demonstrations using rgb observation, temporally encoded tactile feedback and proprioception. we evaluate the complete system in a human-subject study against two baselines: one without tactile feedback and one using tactile feedback without compliance control. we hypothesize that combining compliance and temporal tactile encoding yields the most reliable and comfortable handovers, as compliance facilitates physical interaction while tactile history captures sustained taking intent. performance is measured through objective metrics and an ad-hoc questionnaire. the results show that the two components provide complementary benefits and substantially outperform the baselines. code and data will be released upon acceptance.">
-            <div class="card-meta-top">
-                <span class="rank-tag">TOP #7</span>
+                <span class="rank-tag">TOP #8</span>
                 <div class="score-badge">
                     <span class="score-label">Priority Index</span>
                     <span class="score-value">90</span>
                 </div>
             </div>
             
-            <h2 class="paper-title">Temporal Tactile Encoding and Compliance for Intent-Aware Robot-to-Human Bimanual Handover</h2>
+            <h2 class="paper-title">CST-WM: A Causally Structured World Model for Embodied Visual Tracking</h2>
             
             <div class="author-row">
-                <span>🗓️ 2026-09-04</span>
-                <span>✍️ Pasquale Marra, Stefano Berti, Gabriele Mario Caddeo et al.</span>
+                <span>🗓️ 2026-09-05</span>
+                <span>✍️ Junyi Hu, Shuaihang Yuan, Yi Fang</span>
             </div>
             
             <div class="badge-cluster">
-                <span class="badge">#vla</span>
+                <span class="badge">#world model</span>
             </div>
             
-            <p class="paper-summary">Reliable robot-to-human handover requires the robot to infer when the person is ready to receive the object, and release it safely, comfortably, and at the right time. This is challenging because visual observations alone may not disambiguate clear taking intent from accidental contact, weak grasping, wrong-direction forces, or transient interactions. In this work we treat human-robot handover as an intrinsically multimodal problem. Our approach couples a VLA model with a compliance controller that reduces interaction forces during object transfer. We finetune the VLA model with human demonstrations using RGB observation, temporally encoded tactile feedback and proprioception. We evaluate the complete system in a human-subject study against two baselines: one without tactile feedback and one using tactile feedback without compliance control. We hypothesize that combining compliance and temporal tactile encoding yields the most reliable and comfortable handovers, as compliance facilitates physical interaction while tactile history captures sustained taking intent. Performance is measured through objective metrics and an ad-hoc questionnaire. The results show that the two components provide complementary benefits and substantially outperform the baselines. Code and data will be released upon acceptance.</p>
+            <p class="paper-summary">Embodied visual tracking requires a robot not only to react to the current view, but to choose actions that preserve or recover future evidence of a moving target under ego-motion, occlusion, and distractors. It is therefore a predictive decision problem over future target observability and apparent scale. A central difficulty is a task-specific form of causal hallucination: in action-conditioned prediction, a model can exploit the strong correlation between robot control and target-related observations by hallucinating a direct causal effect from the current action to target evidence, rather than letting action influence that evidence only through robot motion and the resulting observation change. The shortcut yields plausible futures with the wrong semantics for tracking-oriented planning and re-acquisition. We propose CST-WM, a causally structured world model that decomposes the latent state into target-evidence, robot, and observation branches and factorizes the transition so that direct action injection into the target-evidence branch is blocked, while action remains available to robot motion and observation updates. Combined with rollout-based model-predictive control, CST-WM supports both stable following and temporary target re-acquisition in one planning framework. On EVT-Bench and Habitat 3.0, covering standard tracking, target-loss recovery, and cross-dataset transfer, it improves following quality, distance-range control, safety, and re-acquisition over reactive and world-model baselines; offline diagnostics show better multi-step rollout fidelity, stronger planning-value consistency, and substantially reduced direct action leakage. For embodied visual tracking, future prediction alone is not enough: the predictive structure itself must align with how target evidence enters planning.</p>
             
             <div class="card-action-bar">
-                <a href="http://arxiv.org/pdf/2609.05282v1" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
+                <a href="http://arxiv.org/pdf/2609.06302v1" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
                     View PDF
                 </a>
-                <a href="http://arxiv.org/abs/2609.05282v1" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
-                    arXiv Page &rarr;
-                </a>
-            </div>
-        </article>
-        
-        <article class="paper-card" data-title="human-human & human-robot interaction transformer (h2int) for robot navigation in dense and uncertain crowds" data-summary="safe robot navigation in dense crowds requires reasoning about pedestrian motion and how it may change in response to a robot. however, many learning-based approaches generate pedestrian motion independently of the robot or assume uniform reciprocity, omitting an important source of interaction uncertainty. this paper presents a human-human & human-robot interaction transformer (h2int), a reinforcement learning framework that retains robot-conditioned changes in pedestrian motion during policy learning while allowing responsiveness to vary across pedestrians. responsiveness affects the crowd dynamics when the robot is visible but is not supplied as a policy input; the policy must instead infer its consequences from robot-centered relative positions. a two-stage gated transformer progressively encodes human-human and human-robot relations, while a recurrent policy captures their temporal evolution. a curriculum gradually reduces pedestrian responsiveness to increase interaction difficulty. simulation experiments demonstrate improved navigation safety and robustness over representative baselines across response conditions and crowd densities, and show transfer without retraining to structurally distinct crowd-flow layouts. ablations support the hierarchical relational encoding and gated updates. real-robot deployment further verifies that the learned policy can operate with sparse observations in a physical environment.">
-            <div class="card-meta-top">
-                <span class="rank-tag">TOP #8</span>
-                <div class="score-badge">
-                    <span class="score-label">Priority Index</span>
-                    <span class="score-value">80</span>
-                </div>
-            </div>
-            
-            <h2 class="paper-title">Human-Human & Human-Robot Interaction Transformer (H2INT) for Robot Navigation in Dense and Uncertain Crowds</h2>
-            
-            <div class="author-row">
-                <span>🗓️ 2026-09-04</span>
-                <span>✍️ Ao Shen, Kaixi Chen, Shiwei Liu et al.</span>
-            </div>
-            
-            <div class="badge-cluster">
-                <span class="badge">#reinforcement learning</span>
-            </div>
-            
-            <p class="paper-summary">Safe robot navigation in dense crowds requires reasoning about pedestrian motion and how it may change in response to a robot. However, many learning-based approaches generate pedestrian motion independently of the robot or assume uniform reciprocity, omitting an important source of interaction uncertainty. This paper presents a Human-Human & Human-Robot Interaction Transformer (H2INT), a reinforcement learning framework that retains robot-conditioned changes in pedestrian motion during policy learning while allowing responsiveness to vary across pedestrians. Responsiveness affects the crowd dynamics when the robot is visible but is not supplied as a policy input; the policy must instead infer its consequences from robot-centered relative positions. A two-stage gated Transformer progressively encodes human-human and human-robot relations, while a recurrent policy captures their temporal evolution. A curriculum gradually reduces pedestrian responsiveness to increase interaction difficulty. Simulation experiments demonstrate improved navigation safety and robustness over representative baselines across response conditions and crowd densities, and show transfer without retraining to structurally distinct crowd-flow layouts. Ablations support the hierarchical relational encoding and gated updates. Real-robot deployment further verifies that the learned policy can operate with sparse observations in a physical environment.</p>
-            
-            <div class="card-action-bar">
-                <a href="http://arxiv.org/pdf/2609.05300v1" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
-                    View PDF
-                </a>
-                <a href="http://arxiv.org/abs/2609.05300v1" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
+                <a href="http://arxiv.org/abs/2609.06302v1" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
                     arXiv Page &rarr;
                 </a>
             </div>
