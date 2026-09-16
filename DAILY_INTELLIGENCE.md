@@ -1,61 +1,61 @@
-# 🤖 Embodied AI & Robotics Frontier Briefing (2026-09-11)
+# 🤖 Embodied AI & Robotics Frontier Briefing (2026-09-16)
 
 > *Automated Intelligence Briefing generated via custom ETL scoring pipeline. Prioritizes foundation models, manipulation, locomotion, and physical AI systems.*
 
 ---
 
-### Top 1: Learning Terrain-Adaptive Humanoid Locomotion on Granular Terrain
-- **Priority Score**: `150 pts` | **Published**: `2026-09-09`
-- **Focus Tracks**: `#humanoid` `#reinforcement learning` `#locomotion`
-- **Key Authors**: Junnosuke Kamohara, Feiyang Wu, Andy Ningan Zong et al.
-- **Direct Access**: [arXiv Abstract](http://arxiv.org/abs/2609.10286v1) | [PDF Fulltext](http://arxiv.org/pdf/2609.10286v1)
-
-**Executive Abstract**:
-> Humanoid locomotion on granular terrain remains a significant challenge due to its complex foot-terrain interaction dynamics that are difficult to model. Existing approaches either ignore granular contact dynamics or incorporate simplified normal force models with heuristic tangential components. In this work, we present a physics-grounded granular contact model based on three-dimensional resistive force theory (3D RFT) and efficiently simulate granular terrain for reinforcement learning (RL) training. Unlike traditional rigid contact models and simplified granular contact models with ad-hoc heuristics, our contact solver produces physically accurate granular intrusion dynamics without resorting to heuristics. It captures realistic penetration and tangential drag during training, enabling the policy to learn behaviors that transfer reliably to real-world granular terrain where rigid contact models fail. To adapt to varying terrain conditions, we train a terrain-adaptive locomotion controller via teacher-student RL, using a variational autoencoder to encode terrain information into a compact latent representation. Simulation studies using material point method (MPM) with NVIDIA Newton demonstrate that our method generalizes to unseen granular terrains, achieves a significantly higher success rate than baselines, and demonstrates zero-shot terrain identification and adaptation. We further validate our approach through extensive hardware experiments across diverse real-world granular terrains including basalt, dry sand, and beach sand. To the best of our knowledge, this is the first demonstration of agile humanoid locomotion on real-world granular terrain. Project page: https://humanoid-gm-locomotion.github.io/HUMANOID-GM/
-
----
-
-### Top 2: FolDeX: A Physical-World Benchmark for Long-Horizon Robotic Manipulation of Deformable Objects
-- **Priority Score**: `145 pts` | **Published**: `2026-09-09`
-- **Focus Tracks**: `#embodied ai` `#vision-language-action`
-- **Key Authors**: Chenhuan Liu, Yi Xu, Feng Wu et al.
-- **Direct Access**: [arXiv Abstract](http://arxiv.org/abs/2609.10243v1) | [PDF Fulltext](http://arxiv.org/pdf/2609.10243v1)
-
-**Executive Abstract**:
-> Embodied AI, including vision-language-action and world-action models, must operate reliably in the physical world. Yet methods that perform well in simulation can degrade substantially on real robots, especially in long-horizon deformable-object manipulation, where policies must track changing states and execute reliable multi-stage bimanual interactions. Existing real-robot benchmarks mainly focus on short-horizon rigid-object tasks and offer limited coverage of long-horizon deformable manipulation. We introduce FolDeX, a physical-world benchmark built entirely from real-robot data, with garment folding as its primary task. Since real-robot data collection is costly, FolDeX studies how heterogeneous physical experience can be reused efficiently. The benchmark is organized around four research axes: leveraging human intervention and recovery data collected during deployment; transferring data across tasks, including across garment categories and from rigid to deformable-object manipulation; reusing data across scenes with changes in lighting, background, and layout; and transferring data across robotic embodiments. FolDeX provides 2,000+ hours of real-robot data spanning 20+ tasks and 10+ embodiments. We also establish a fair real-robot evaluation platform for externally submitted policies, with standardized tasks, held-out physical objects, controlled initializations, and a unified execution protocol. The platform is publicly accessible at https://ai.midea.com/#/fold-challenge. We hope FolDeX will serve as a unified testbed for heterogeneous real-robot data reuse and reliable long-horizon deformable manipulation.
-
----
-
-### Top 3: Frequency-Conditioned Flow Matching for Vision-Language-Action Models
-- **Priority Score**: `135 pts` | **Published**: `2026-09-09`
+### Top 1: Intrinsic Robot Rewarding: Reusing VLA Representations for Autonomous Evaluation and Policy Improvement
+- **Priority Score**: `135 pts` | **Published**: `2026-09-15`
 - **Focus Tracks**: `#vision-language-action` `#vla`
-- **Key Authors**: Haochen Niu, Shengye Dong, Hao Liu et al.
-- **Direct Access**: [arXiv Abstract](http://arxiv.org/abs/2609.10405v1) | [PDF Fulltext](http://arxiv.org/pdf/2609.10405v1)
+- **Key Authors**: Tobias Schaffer, Mohab Elkhayat, Daniela Nicklas et al.
+- **Direct Access**: [arXiv Abstract](http://arxiv.org/abs/2609.17115v1) | [PDF Fulltext](http://arxiv.org/pdf/2609.17115v1)
 
 **Executive Abstract**:
-> Robot actions are temporally correlated trajectories whose frequency components encode motion at different scales with highly non-uniform energy distributions. Yet Flow Matching--based vision-language-action (VLA) models typically generate actions in temporal coordinates, without explicitly modeling or systematically leveraging this frequency heterogeneity. We introduce \emph{FreqFM}, a frequency-conditioned Flow Matching framework for VLA models. It raises action frequency from an implicit trajectory property to an explicit conditioning dimension that spans the entire generation pipeline. Concretely, in DCT frequency coordinates, FreqFM constructs a spectrum-matched source distribution, adaptively balances the objective across frequencies, and constrains per-frequency guidance residuals using the corresponding reference transport scales. FreqFM integrates into existing Flow Matching action experts without changing the VLA backbone. Across LIBERO, LIBERO-Plus, and VLA-Arena, FreqFM consistently improves performance, including a 9.3-point gain on LIBERO-Plus, and further demonstrates its effectiveness on six real-robot tasks.
+> Vision-language-action (VLA) systems already bring together two valuable resources for robot learning: rich visual representations and demonstrations of successful task execution. Intrinsic Robot Rewarding (IRR) proposes to use these resources for a second, complementary purpose: evaluating the robot's own outcomes and providing feedback for policy improvement. Successful demonstration endpoints define task-specific references, and the policy's frozen visual encoder provides the feature space in which new outcomes are assessed. The core reward mechanism adds a reference bank and a scoring operation to the existing pipeline, without requiring a separate learned evaluator or an additional perception backbone. Our position is that this reuse offers a promising route to lower integration effort, efficient reward computation, and reduced recurring human outcome scoring. Building on established research in visual rewards and learning from experience, IRR brings these ideas into the robot's existing perception and demonstration pipeline. An operational COMAU Racer 3 demonstrator is available at technology readiness level 4 (TRL 4). This laboratory foundation supports the next research step: connecting internal outcome evaluation to physical policy improvement. We present the reward formulation, central research questions, and an evaluation methodology linking reward reliability to task success and supervision effort. The intended contribution is a reusable approach to learn and improve from the data and experience already available in industrial robot systems.
 
 ---
 
-### Top 4: SwingBot: Learning Whole-Body Brachiation for Humanoid Robots
-- **Priority Score**: `120 pts` | **Published**: `2026-09-09`
-- **Focus Tracks**: `#humanoid` `#locomotion`
-- **Key Authors**: Yujie Xiong, Peng Zhai, Taixian Hou et al.
-- **Direct Access**: [arXiv Abstract](http://arxiv.org/abs/2609.10283v1) | [PDF Fulltext](http://arxiv.org/pdf/2609.10283v1)
+### Top 2: SWIM: Vision-Language-Grounded Soft Whole-Body Interactive Manipulation
+- **Priority Score**: `135 pts` | **Published**: `2026-09-15`
+- **Focus Tracks**: `#vision-language-action` `#vla`
+- **Key Authors**: Tingcong Liu, Aye Phyu Phyu Aung, Junjie Xiong et al.
+- **Direct Access**: [arXiv Abstract](http://arxiv.org/abs/2609.17035v1) | [PDF Fulltext](http://arxiv.org/pdf/2609.17035v1)
 
 **Executive Abstract**:
-> Brachiation enables primates to move across overhead supports when ground paths are blocked, suggesting a complementary locomotion mode for robots operating in cluttered or hazardous environments. Bringing this capabil?ity to high-DoF humanoid robots is difficult because the controller must discover a long-horizon release-swing-capture sequence, coordinate alternating contacts with whole-body momentum, and act without reliable measurements of segment?relative displacement or hook-contact state. We present SwingBot, a learning framework for continuous humanoid brachiation with passive wrist hooks. Swing?Bot makes the task trainable by organizing learning around the structure of brachi?ation: biomimetic keyframes make rare release-swing-capture transitions reach?able during early exploration, and recurrent privileged-state estimation provides compact position and contact latents for deployment. Hardware experiments demonstrate continuous bar traversal and robustness to payload, external distur?bances and different bar spacings, showing that this formulation offers a practical route to whole-body robotic brachiation.
+> Soft and continuum robots enable manipulation through distributed body deformation and contact, yet translating language and visual context into executable whole-body actuation remains a fundamental challenge. We present SWIM, a framework that maps an initial RGB observation and a language instruction to a complete actuation-command sequence. Its vision-language-action (VLA) policy, SWIM-VLA, combines a diffusion action head with Visual Soft Proprioception (VSP) through a shared representation of RGB observations, language instructions, and tendon states. The diffusion head models conditional distributions of expert command chunks, while VSP supervises ordered body-anchor predictions using simulation ground truth, encouraging the representation to retain body geometry when learning from limited demonstrations. Embodied mechanical intelligence supports physical execution of command sequences generated through iterative virtual rollout from evolving simulated observations, with intrinsic compliance providing local contact adaptation without online policy queries. We evaluate SWIM on packing, reaching, and grasping on a planar tendon-driven soft robot, with grasping targets anchored. In simulation, SWIM-VLA achieves success rates of 100\%, 96\%, and 88\%, respectively, outperforming an adapted OpenVLA-OFT baseline and controlled ablations. On hardware, SWIM achieves success rates of 100\%, 80\%, and 75\%, compared with 75\%, 40\%, and 25\% for direct online deployment of the same policy checkpoint.
 
 ---
 
-### Top 5: Show-Harness: Just a VLM Agent Can Play Robots
-- **Priority Score**: `110 pts` | **Published**: `2026-09-09`
-- **Focus Tracks**: `#vla` `#teleoperation`
-- **Key Authors**: Yanzhe Chen, Zechen Bai, Zhijun Cao et al.
-- **Direct Access**: [arXiv Abstract](http://arxiv.org/abs/2609.10522v1) | [PDF Fulltext](http://arxiv.org/pdf/2609.10522v1)
+### Top 3: sensVLA: Spatially-Grounded Vision-Language-Action Model for Autonomous Wheel Loader
+- **Priority Score**: `135 pts` | **Published**: `2026-09-15`
+- **Focus Tracks**: `#vision-language-action` `#vla`
+- **Key Authors**: Gopi Krishna Erabati, Bjarne Johannsen, Angus Stewart et al.
+- **Direct Access**: [arXiv Abstract](http://arxiv.org/abs/2609.17021v1) | [PDF Fulltext](http://arxiv.org/pdf/2609.17021v1)
 
 **Executive Abstract**:
-> Foundation vision-language models (VLMs) exhibit broad intelligence about the world, yet translating this intelligence into robot control remains challenging. We present Show-Harness, an Embodied Harness that enables VLMs to "play" robots through a compact semantic interface linking intent to action. Show-Harness exposes discrete semantic action units that VLMs can naturally reason over, while embodiment-specific interpreters deterministically ground them into local robot actions, keeping the VLM directly responsible for fine-grained physical decisions. Through the same interface, Show-Harness demonstrates the feasibility of (1) directly unlocking closed-source frontier VLMs for zero-shot robot control, and (2) adapting small-scale open-source VLMs for low-cost deployment with just a few GPU-hours of fine-tuning. We further develop GUMI (GUI Manipulation Interface), which extends the same semantic action space to GUI-based demonstration collection, allowing humans and agents to "play" robots across embodiments without specialized teleoperation hardware. Extensive experiments show that Show-Harness-equipped VLM agents generalize robustly across tasks, embodiments, and environments, outperforming representative agentic and VLA paradigms. These results suggest that the right interface can unlock substantial embodied capability from foundation VLMs, without requiring additional model capacity or costly embodiment-specific pretraining.
+> Autonomous wheel-loader control requires joint reasoning over task semantics, egocentric vision, proprioception, and 3D scene geometry. We present sensVLA, a Vision-Language-Action (VLA) architecture that combines a Qwen3-2B Vision-Language Model (VLM) with a fully trainable transformer action expert trained by flow-matching velocity regression. sensVLA routes Bird's-Eye-View (BEV) features, extracted from fused front and rear lidar, directly to the action expert through a dedicated cross-attention pathway, while the VLM consumes front and rear RGB views to provide task-conditioned semantic context. This design decouples spatial grounding from linguistic reasoning while preserving interaction between both streams at decision time. The expert predicts six action dimensions: longitudinal velocity, steering, body-frame displacement, arm rate, and bucket rate. On a real-world dataset from a wheel loader, sensVLA reaches aggregate per-step parity with a strong camera-only baseline and reduces longitudinal velocity RMSE by 28% and displacement error by 9% on loading centric scenarios. It also degrades 29% less when the camera stream is corrupted or removed, evidencing that explicit spatial grounding improves accuracy and fault-tolerance for heavy equipment autonomy.
+
+---
+
+### Top 4: TEMPO: Learning Temporal Context for Dynamic Robot Manipulation
+- **Priority Score**: `135 pts` | **Published**: `2026-09-15`
+- **Focus Tracks**: `#vision-language-action` `#vla`
+- **Key Authors**: Zhenyang Feng, Jimin Heo, Erik B. Sudderth et al.
+- **Direct Access**: [arXiv Abstract](http://arxiv.org/abs/2609.16864v1) | [PDF Fulltext](http://arxiv.org/pdf/2609.16864v1)
+
+**Executive Abstract**:
+> Vision-language-action (VLA) models have achieved impressive performance in quasi-static manipulation, but struggle in dynamic manipulation tasks because they operate on a single observation at inference time. We identify two representational failures that underlie this limitation. The first is motion ambiguity, where a single observation does not include scene dynamics and therefore cannot anticipate the future state of moving objects. The second is state aliasing, where visually similar observations from different points in a task require different actions. We argue that these failures persist regardless of model scale and inference latency, showing that the bottleneck is missing temporal context rather than model capacity. Based on this insight, we propose TEMPO, which augments a pretrained VLA with two temporal inputs: a motion summary extracted from a frozen video foundation model to resolve motion ambiguity and a compact proprioceptive history to resolve state aliasing. TEMPO requires no modification to the backbone and adds minimal compute overhead at training or deployment. Across four dynamic manipulation tasks, it improves Bottle Handover success from 44% to 74% and is the only method that solves state aliasing. Probing and ablation studies confirm that each temporal signal independently addresses its corresponding failure. We further release TEMPO-Bench, a benchmark of over 50k annotated frames for evaluating motion-aware robot perception in both regression and multiple-choice formats. Project Website: https://tempo-robot.github.io/
+
+---
+
+### Top 5: The Robot Data Factory
+- **Priority Score**: `135 pts` | **Published**: `2026-09-15`
+- **Focus Tracks**: `#world model` `#vision-language-action`
+- **Key Authors**: Sami Haddadin, Ivan Laptev, Ian Reid et al.
+- **Direct Access**: [arXiv Abstract](http://arxiv.org/abs/2609.16705v1) | [PDF Fulltext](http://arxiv.org/pdf/2609.16705v1)
+
+**Executive Abstract**:
+> Physical AI requires more than increasingly large robot datasets: intelligent robots acquire knowledge through continuous interaction with the physical world. We argue that the defining scientific resource of Physical AI is therefore not raw robot data alone, but robot experience - physically grounded interaction whose observations, actions, embodiment, context, and outcomes preserve the perception-action-consequence loop. We introduce the Robot Data Factory (RDF), a mission-driven infrastructure and methodology for continuously generating, validating, benchmarking, and reusing such experience. RDF organizes heterogeneous robots and environment-specific training grounds through reproducible missions, skill curricula, synchronized multimodal sensing, external ground truth, an agentic robot network, data pipelines, and living benchmarks. Rather than treating datasets as static end products, RDF implements a closed Deploy-Measure-Learn-Repeat cycle in which validated physical experience supports world models, vision-language-action models, embodied policies, digital twins, and subsequent robot deployment. We further formalize robot experience and its quality, introduce a mission-task-skill-episode-dataset-benchmark-capability hierarchy, and derive quantitative scaling laws and an algorithmic synthesis procedure connecting robot fleet size, sensor rates, storage, learning representations, tokenization, training compute, inference, and latency to Embodied-AI cluster requirements. The framework is instantiated in three complementary physical training grounds for domestic, environmental, and energy applications. RDF thus reframes robot data generation as a continuous scientific production process and provides a pathway toward reproducible, scalable, and eventually federated infrastructure for Physical AI.
 
 ---
 
