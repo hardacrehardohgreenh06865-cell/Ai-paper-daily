@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Embodied AI & Robotics Intelligence Digest — September 16, 2026</title>
+    <title>Embodied AI & Robotics Intelligence Digest — September 17, 2026</title>
     <style>
         :root {
             --bg-base: #080c14;
@@ -242,7 +242,7 @@
         <header>
             <span class="pill-brand">Autonomous Research Intelligence</span>
             <h1>Embodied AI & Physical Frontier Briefing</h1>
-            <p class="subtitle">Compiled on September 16, 2026 • Ranked top 8 strategic breakthroughs out of incoming preprints.</p>
+            <p class="subtitle">Compiled on September 17, 2026 • Ranked top 8 strategic breakthroughs out of incoming preprints.</p>
             
             <div class="controls">
                 <input type="text" id="filterInput" class="search-box" placeholder="Filter papers by keywords (e.g. humanoid, tactile, diffusion)...">
@@ -251,257 +251,257 @@
 
         <main id="paperList">
             
-        <article class="paper-card" data-title="intrinsic robot rewarding: reusing vla representations for autonomous evaluation and policy improvement" data-summary="vision-language-action (vla) systems already bring together two valuable resources for robot learning: rich visual representations and demonstrations of successful task execution. intrinsic robot rewarding (irr) proposes to use these resources for a second, complementary purpose: evaluating the robot's own outcomes and providing feedback for policy improvement. successful demonstration endpoints define task-specific references, and the policy's frozen visual encoder provides the feature space in which new outcomes are assessed. the core reward mechanism adds a reference bank and a scoring operation to the existing pipeline, without requiring a separate learned evaluator or an additional perception backbone. our position is that this reuse offers a promising route to lower integration effort, efficient reward computation, and reduced recurring human outcome scoring. building on established research in visual rewards and learning from experience, irr brings these ideas into the robot's existing perception and demonstration pipeline. an operational comau racer 3 demonstrator is available at technology readiness level 4 (trl 4). this laboratory foundation supports the next research step: connecting internal outcome evaluation to physical policy improvement. we present the reward formulation, central research questions, and an evaluation methodology linking reward reliability to task success and supervision effort. the intended contribution is a reusable approach to learn and improve from the data and experience already available in industrial robot systems.">
+        <article class="paper-card" data-title="learning holistic whole-body loco-manipulation with a bipedal mobile manipulator" data-summary="bipedal loco-manipulation enables robots to interact with objects beyond the nominal workspace of their arms by coordinating locomotion and manipulation. realizing this capability requires a low-level whole-body controller that translates task-level manipulation goals into coordinated arm and leg motions while maintaining balance. we present a unified whole-body controller trained with reinforcement learning that directly maps 6-dof end-effector targets to coordinated actions for the bipedal base and robotic arm. given only an end-effector target, the learned controller autonomously coordinates reaching, postural adaptation, and stepping without explicit base-velocity or footstep commands. a reward-gating strategy regulates the trade-offs among end-effector tracking, locomotion, and balance during training, while a temporal context estimator combines windowed transformer encoding, recurrent gru memory, and auxiliary dynamics prediction to extract dynamics-relevant information from observation history. real-robot experiments demonstrate that the same controller supports reaching, postural adaptation, and stepping under commands from vr teleoperation, a learned diffusion policy, and scripted trajectories, providing a common end-effector interface for diverse manipulation tasks.">
             <div class="card-meta-top">
                 <span class="rank-tag">TOP #1</span>
                 <div class="score-badge">
                     <span class="score-label">Priority Index</span>
-                    <span class="score-value">135</span>
+                    <span class="score-value">195</span>
                 </div>
             </div>
             
-            <h2 class="paper-title">Intrinsic Robot Rewarding: Reusing VLA Representations for Autonomous Evaluation and Policy Improvement</h2>
+            <h2 class="paper-title">Learning Holistic Whole-Body Loco-Manipulation with a Bipedal Mobile Manipulator</h2>
             
             <div class="author-row">
-                <span>🗓️ 2026-09-15</span>
-                <span>✍️ Tobias Schaffer, Mohab Elkhayat, Daniela Nicklas et al.</span>
+                <span>🗓️ 2026-09-16</span>
+                <span>✍️ Zhongyu Chen, Yuxuan Nai, Qian Chen et al.</span>
             </div>
             
             <div class="badge-cluster">
-                <span class="badge">#vision-language-action</span><span class="badge">#vla</span>
+                <span class="badge">#bipedal</span><span class="badge">#reinforcement learning</span><span class="badge">#locomotion</span><span class="badge">#diffusion policy</span><span class="badge">#teleoperation</span>
             </div>
             
-            <p class="paper-summary">Vision-language-action (VLA) systems already bring together two valuable resources for robot learning: rich visual representations and demonstrations of successful task execution. Intrinsic Robot Rewarding (IRR) proposes to use these resources for a second, complementary purpose: evaluating the robot's own outcomes and providing feedback for policy improvement. Successful demonstration endpoints define task-specific references, and the policy's frozen visual encoder provides the feature space in which new outcomes are assessed. The core reward mechanism adds a reference bank and a scoring operation to the existing pipeline, without requiring a separate learned evaluator or an additional perception backbone. Our position is that this reuse offers a promising route to lower integration effort, efficient reward computation, and reduced recurring human outcome scoring. Building on established research in visual rewards and learning from experience, IRR brings these ideas into the robot's existing perception and demonstration pipeline. An operational COMAU Racer 3 demonstrator is available at technology readiness level 4 (TRL 4). This laboratory foundation supports the next research step: connecting internal outcome evaluation to physical policy improvement. We present the reward formulation, central research questions, and an evaluation methodology linking reward reliability to task success and supervision effort. The intended contribution is a reusable approach to learn and improve from the data and experience already available in industrial robot systems.</p>
+            <p class="paper-summary">Bipedal loco-manipulation enables robots to interact with objects beyond the nominal workspace of their arms by coordinating locomotion and manipulation. Realizing this capability requires a low-level whole-body controller that translates task-level manipulation goals into coordinated arm and leg motions while maintaining balance. We present a unified whole-body controller trained with reinforcement learning that directly maps 6-DoF end-effector targets to coordinated actions for the bipedal base and robotic arm. Given only an end-effector target, the learned controller autonomously coordinates reaching, postural adaptation, and stepping without explicit base-velocity or footstep commands. A reward-gating strategy regulates the trade-offs among end-effector tracking, locomotion, and balance during training, while a temporal context estimator combines windowed Transformer encoding, recurrent GRU memory, and auxiliary dynamics prediction to extract dynamics-relevant information from observation history. Real-robot experiments demonstrate that the same controller supports reaching, postural adaptation, and stepping under commands from VR teleoperation, a learned diffusion policy, and scripted trajectories, providing a common end-effector interface for diverse manipulation tasks.</p>
             
             <div class="card-action-bar">
-                <a href="http://arxiv.org/pdf/2609.17115v1" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
+                <a href="http://arxiv.org/pdf/2609.18930v1" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
                     View PDF
                 </a>
-                <a href="http://arxiv.org/abs/2609.17115v1" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
+                <a href="http://arxiv.org/abs/2609.18930v1" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
                     arXiv Page &rarr;
                 </a>
             </div>
         </article>
         
-        <article class="paper-card" data-title="swim: vision-language-grounded soft whole-body interactive manipulation" data-summary="soft and continuum robots enable manipulation through distributed body deformation and contact, yet translating language and visual context into executable whole-body actuation remains a fundamental challenge. we present swim, a framework that maps an initial rgb observation and a language instruction to a complete actuation-command sequence. its vision-language-action (vla) policy, swim-vla, combines a diffusion action head with visual soft proprioception (vsp) through a shared representation of rgb observations, language instructions, and tendon states. the diffusion head models conditional distributions of expert command chunks, while vsp supervises ordered body-anchor predictions using simulation ground truth, encouraging the representation to retain body geometry when learning from limited demonstrations. embodied mechanical intelligence supports physical execution of command sequences generated through iterative virtual rollout from evolving simulated observations, with intrinsic compliance providing local contact adaptation without online policy queries. we evaluate swim on packing, reaching, and grasping on a planar tendon-driven soft robot, with grasping targets anchored. in simulation, swim-vla achieves success rates of 100\%, 96\%, and 88\%, respectively, outperforming an adapted openvla-oft baseline and controlled ablations. on hardware, swim achieves success rates of 100\%, 80\%, and 75\%, compared with 75\%, 40\%, and 25\% for direct online deployment of the same policy checkpoint.">
+        <article class="paper-card" data-title="rmuscle: robotic muscle memory for efficient vision-language-action model inference" data-summary="factory work is a promising early scenario for embodied ai: assigning repetitive manual jobs to robots has clear economic payoff, and a structured station keeps the jobs tractable for current policies. vision-language-action (vla) models now dominate as the policy paradigm for these robots. the inference latency of vla models directly affects robot responsiveness and motion smoothness. however, existing vla inference frameworks do not fully exploit the characteristics of embodied workloads or account for the distinct bottlenecks across different stages of vla inference. in this paper, we first characterize embodied workloads and identify substantial task similarity across repeated robot executions. we further find that such similarity extends beyond observations and action trajectories to internal model states. drawing on these observations, we present rmuscle, a real-time vla inference framework inspired by human muscle memory. it exploits cross-execution similarity through a dual-phase muscle-memory cache. the context cache reuses visual-token outputs to reduce computation, while the action cache reuses neuron activation patterns to reduce weight accesses. we keep both the cache memory footprint and access overhead low through online cache recomputation, sliding-window cache retrieval, and mask sharing across consecutive denoising steps. rmuscle achieves 1.29-1.42x speedup on rtx 4090 and jetson thor across libero, robotwin, and physical manipulation tasks, while maintaining the original success rates on real-world robots.">
             <div class="card-meta-top">
                 <span class="rank-tag">TOP #2</span>
                 <div class="score-badge">
                     <span class="score-label">Priority Index</span>
-                    <span class="score-value">135</span>
+                    <span class="score-value">185</span>
                 </div>
             </div>
             
-            <h2 class="paper-title">SWIM: Vision-Language-Grounded Soft Whole-Body Interactive Manipulation</h2>
+            <h2 class="paper-title">rMuscle: Robotic Muscle Memory for Efficient Vision-Language-Action Model Inference</h2>
             
             <div class="author-row">
-                <span>🗓️ 2026-09-15</span>
-                <span>✍️ Tingcong Liu, Aye Phyu Phyu Aung, Junjie Xiong et al.</span>
+                <span>🗓️ 2026-09-16</span>
+                <span>✍️ Kaijun Zhou, Zhiyang Li, Le Chen et al.</span>
             </div>
             
             <div class="badge-cluster">
-                <span class="badge">#vision-language-action</span><span class="badge">#vla</span>
+                <span class="badge">#embodied ai</span><span class="badge">#vision-language-action</span><span class="badge">#vla</span>
             </div>
             
-            <p class="paper-summary">Soft and continuum robots enable manipulation through distributed body deformation and contact, yet translating language and visual context into executable whole-body actuation remains a fundamental challenge. We present SWIM, a framework that maps an initial RGB observation and a language instruction to a complete actuation-command sequence. Its vision-language-action (VLA) policy, SWIM-VLA, combines a diffusion action head with Visual Soft Proprioception (VSP) through a shared representation of RGB observations, language instructions, and tendon states. The diffusion head models conditional distributions of expert command chunks, while VSP supervises ordered body-anchor predictions using simulation ground truth, encouraging the representation to retain body geometry when learning from limited demonstrations. Embodied mechanical intelligence supports physical execution of command sequences generated through iterative virtual rollout from evolving simulated observations, with intrinsic compliance providing local contact adaptation without online policy queries. We evaluate SWIM on packing, reaching, and grasping on a planar tendon-driven soft robot, with grasping targets anchored. In simulation, SWIM-VLA achieves success rates of 100\%, 96\%, and 88\%, respectively, outperforming an adapted OpenVLA-OFT baseline and controlled ablations. On hardware, SWIM achieves success rates of 100\%, 80\%, and 75\%, compared with 75\%, 40\%, and 25\% for direct online deployment of the same policy checkpoint.</p>
+            <p class="paper-summary">Factory work is a promising early scenario for embodied AI: assigning repetitive manual jobs to robots has clear economic payoff, and a structured station keeps the jobs tractable for current policies. Vision-Language-Action (VLA) models now dominate as the policy paradigm for these robots. The inference latency of VLA models directly affects robot responsiveness and motion smoothness. However, existing VLA inference frameworks do not fully exploit the characteristics of embodied workloads or account for the distinct bottlenecks across different stages of VLA inference. In this paper, we first characterize embodied workloads and identify substantial task similarity across repeated robot executions. We further find that such similarity extends beyond observations and action trajectories to internal model states. Drawing on these observations, we present rMuscle, a real-time VLA inference framework inspired by human muscle memory. It exploits cross-execution similarity through a dual-phase muscle-memory cache. The Context Cache reuses visual-token outputs to reduce computation, while the Action Cache reuses neuron activation patterns to reduce weight accesses. We keep both the cache memory footprint and access overhead low through online cache recomputation, sliding-window cache retrieval, and mask sharing across consecutive denoising steps. rMuscle achieves 1.29-1.42X speedup on RTX 4090 and Jetson Thor across LIBERO, RoboTwin, and physical manipulation tasks, while maintaining the original success rates on real-world robots.</p>
             
             <div class="card-action-bar">
-                <a href="http://arxiv.org/pdf/2609.17035v1" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
+                <a href="http://arxiv.org/pdf/2609.19104v1" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
                     View PDF
                 </a>
-                <a href="http://arxiv.org/abs/2609.17035v1" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
+                <a href="http://arxiv.org/abs/2609.19104v1" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
                     arXiv Page &rarr;
                 </a>
             </div>
         </article>
         
-        <article class="paper-card" data-title="sensvla: spatially-grounded vision-language-action model for autonomous wheel loader" data-summary="autonomous wheel-loader control requires joint reasoning over task semantics, egocentric vision, proprioception, and 3d scene geometry. we present sensvla, a vision-language-action (vla) architecture that combines a qwen3-2b vision-language model (vlm) with a fully trainable transformer action expert trained by flow-matching velocity regression. sensvla routes bird's-eye-view (bev) features, extracted from fused front and rear lidar, directly to the action expert through a dedicated cross-attention pathway, while the vlm consumes front and rear rgb views to provide task-conditioned semantic context. this design decouples spatial grounding from linguistic reasoning while preserving interaction between both streams at decision time. the expert predicts six action dimensions: longitudinal velocity, steering, body-frame displacement, arm rate, and bucket rate. on a real-world dataset from a wheel loader, sensvla reaches aggregate per-step parity with a strong camera-only baseline and reduces longitudinal velocity rmse by 28% and displacement error by 9% on loading centric scenarios. it also degrades 29% less when the camera stream is corrupted or removed, evidencing that explicit spatial grounding improves accuracy and fault-tolerance for heavy equipment autonomy.">
+        <article class="paper-card" data-title="kino: a keyframe interface for vlm planning and whole-body control in humanoid loco-manipulation" data-summary="humanoid loco-manipulation requires robots to interpret task instructions and scene semantics while executing coordinated whole-body motions. we propose a hierarchical framework that uses motion keyframes as an intermediate representation between vision-language model (vlm) planning and reinforcement learning (rl) control. each keyframe specifies a target whole-body robot pose and, when applicable, an object pose. given a language instruction, scene observations, and execution feedback, the vlm selects successive task-relevant keyframes from a predefined library. the selected keyframes are retargeted to the current scene to account for object poses and dimensions. a keyframe-conditioned whole-body policy then generates joint-level actions to reach these goals. we introduce a saliency-based keyframe sampling strategy for low-level policy training that improves end-to-end task success rate from 44% to 92% when using sparse vlm keyframes. we evaluate our framework on object pickup, transport, and placement tasks in simulation and on a unitree g1 humanoid. the system successfully performs both one- and two-handed manipulation and generalises to placement locations beyond the training reference data.">
             <div class="card-meta-top">
                 <span class="rank-tag">TOP #3</span>
                 <div class="score-badge">
                     <span class="score-label">Priority Index</span>
-                    <span class="score-value">135</span>
+                    <span class="score-value">125</span>
                 </div>
             </div>
             
-            <h2 class="paper-title">sensVLA: Spatially-Grounded Vision-Language-Action Model for Autonomous Wheel Loader</h2>
+            <h2 class="paper-title">KINO: A Keyframe Interface for VLM Planning and Whole-Body Control in Humanoid Loco-Manipulation</h2>
             
             <div class="author-row">
-                <span>🗓️ 2026-09-15</span>
-                <span>✍️ Gopi Krishna Erabati, Bjarne Johannsen, Angus Stewart et al.</span>
+                <span>🗓️ 2026-09-16</span>
+                <span>✍️ Sitong Chen, Fatemeh Zargarbashi, Jin Cheng et al.</span>
             </div>
             
             <div class="badge-cluster">
-                <span class="badge">#vision-language-action</span><span class="badge">#vla</span>
+                <span class="badge">#humanoid</span><span class="badge">#reinforcement learning</span>
             </div>
             
-            <p class="paper-summary">Autonomous wheel-loader control requires joint reasoning over task semantics, egocentric vision, proprioception, and 3D scene geometry. We present sensVLA, a Vision-Language-Action (VLA) architecture that combines a Qwen3-2B Vision-Language Model (VLM) with a fully trainable transformer action expert trained by flow-matching velocity regression. sensVLA routes Bird's-Eye-View (BEV) features, extracted from fused front and rear lidar, directly to the action expert through a dedicated cross-attention pathway, while the VLM consumes front and rear RGB views to provide task-conditioned semantic context. This design decouples spatial grounding from linguistic reasoning while preserving interaction between both streams at decision time. The expert predicts six action dimensions: longitudinal velocity, steering, body-frame displacement, arm rate, and bucket rate. On a real-world dataset from a wheel loader, sensVLA reaches aggregate per-step parity with a strong camera-only baseline and reduces longitudinal velocity RMSE by 28% and displacement error by 9% on loading centric scenarios. It also degrades 29% less when the camera stream is corrupted or removed, evidencing that explicit spatial grounding improves accuracy and fault-tolerance for heavy equipment autonomy.</p>
+            <p class="paper-summary">Humanoid loco-manipulation requires robots to interpret task instructions and scene semantics while executing coordinated whole-body motions. We propose a hierarchical framework that uses motion keyframes as an intermediate representation between Vision-Language Model (VLM) planning and Reinforcement Learning (RL) control. Each keyframe specifies a target whole-body robot pose and, when applicable, an object pose. Given a language instruction, scene observations, and execution feedback, the VLM selects successive task-relevant keyframes from a predefined library. The selected keyframes are retargeted to the current scene to account for object poses and dimensions. A keyframe-conditioned whole-body policy then generates joint-level actions to reach these goals. We introduce a saliency-based keyframe sampling strategy for low-level policy training that improves end-to-end task success rate from 44% to 92% when using sparse VLM keyframes. We evaluate our framework on object pickup, transport, and placement tasks in simulation and on a Unitree G1 humanoid. The system successfully performs both one- and two-handed manipulation and generalises to placement locations beyond the training reference data.</p>
             
             <div class="card-action-bar">
-                <a href="http://arxiv.org/pdf/2609.17021v1" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
+                <a href="http://arxiv.org/pdf/2609.18869v1" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
                     View PDF
                 </a>
-                <a href="http://arxiv.org/abs/2609.17021v1" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
+                <a href="http://arxiv.org/abs/2609.18869v1" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
                     arXiv Page &rarr;
                 </a>
             </div>
         </article>
         
-        <article class="paper-card" data-title="tempo: learning temporal context for dynamic robot manipulation" data-summary="vision-language-action (vla) models have achieved impressive performance in quasi-static manipulation, but struggle in dynamic manipulation tasks because they operate on a single observation at inference time. we identify two representational failures that underlie this limitation. the first is motion ambiguity, where a single observation does not include scene dynamics and therefore cannot anticipate the future state of moving objects. the second is state aliasing, where visually similar observations from different points in a task require different actions. we argue that these failures persist regardless of model scale and inference latency, showing that the bottleneck is missing temporal context rather than model capacity. based on this insight, we propose tempo, which augments a pretrained vla with two temporal inputs: a motion summary extracted from a frozen video foundation model to resolve motion ambiguity and a compact proprioceptive history to resolve state aliasing. tempo requires no modification to the backbone and adds minimal compute overhead at training or deployment. across four dynamic manipulation tasks, it improves bottle handover success from 44% to 74% and is the only method that solves state aliasing. probing and ablation studies confirm that each temporal signal independently addresses its corresponding failure. we further release tempo-bench, a benchmark of over 50k annotated frames for evaluating motion-aware robot perception in both regression and multiple-choice formats. project website: https://tempo-robot.github.io/">
+        <article class="paper-card" data-title="gated residual body-hand coordination for whole-body humanoid teleoperation" data-summary="whole-body humanoid teleoperation commonly combines a motion-tracking policy with a separate dexterous-hand retargeter. however, independently generated commands do not explicitly preserve body-hand geometric relations, leading to mismatches in relative wrist poses and fingertip positions during bimanual interaction. we present a gated residual coordination framework that keeps both modules frozen and applies bounded corrections to their outputs. a motion-conditioned action gate allocates correction authority across joint groups, while reference-geometry-dependent reward gates emphasize relevant interaction objectives during training. to establish the nominal body controller on agile one, we introduce multi-pose morphology calibration that jointly estimates triaxial scales and effector-local offsets, together with staged motion dataset curation for training a sonic-based tracker. the residual policy uses human motion references, initial commands, and robot proprioception without explicit object or contact observations. in simulation, it reduces wrist and fingertip geometry errors by 39.2-56.3% over direct composition on held-out grab motions, while preserving whole-body tracking on amass, with success rates of 89.03% without residual coordination and 89.29% with it. ablations characterize the contributions of reward gating, adaptive correction authority, and separate body and hand correction heads.">
             <div class="card-meta-top">
                 <span class="rank-tag">TOP #4</span>
                 <div class="score-badge">
                     <span class="score-label">Priority Index</span>
-                    <span class="score-value">135</span>
+                    <span class="score-value">115</span>
                 </div>
             </div>
             
-            <h2 class="paper-title">TEMPO: Learning Temporal Context for Dynamic Robot Manipulation</h2>
+            <h2 class="paper-title">Gated Residual Body-Hand Coordination for Whole-Body Humanoid Teleoperation</h2>
             
             <div class="author-row">
-                <span>🗓️ 2026-09-15</span>
-                <span>✍️ Zhenyang Feng, Jimin Heo, Erik B. Sudderth et al.</span>
+                <span>🗓️ 2026-09-16</span>
+                <span>✍️ Ruiming Wu, Shuang Li, Liding Zhang et al.</span>
             </div>
             
             <div class="badge-cluster">
-                <span class="badge">#vision-language-action</span><span class="badge">#vla</span>
+                <span class="badge">#humanoid</span><span class="badge">#teleoperation</span>
             </div>
             
-            <p class="paper-summary">Vision-language-action (VLA) models have achieved impressive performance in quasi-static manipulation, but struggle in dynamic manipulation tasks because they operate on a single observation at inference time. We identify two representational failures that underlie this limitation. The first is motion ambiguity, where a single observation does not include scene dynamics and therefore cannot anticipate the future state of moving objects. The second is state aliasing, where visually similar observations from different points in a task require different actions. We argue that these failures persist regardless of model scale and inference latency, showing that the bottleneck is missing temporal context rather than model capacity. Based on this insight, we propose TEMPO, which augments a pretrained VLA with two temporal inputs: a motion summary extracted from a frozen video foundation model to resolve motion ambiguity and a compact proprioceptive history to resolve state aliasing. TEMPO requires no modification to the backbone and adds minimal compute overhead at training or deployment. Across four dynamic manipulation tasks, it improves Bottle Handover success from 44% to 74% and is the only method that solves state aliasing. Probing and ablation studies confirm that each temporal signal independently addresses its corresponding failure. We further release TEMPO-Bench, a benchmark of over 50k annotated frames for evaluating motion-aware robot perception in both regression and multiple-choice formats. Project Website: https://tempo-robot.github.io/</p>
+            <p class="paper-summary">Whole-body humanoid teleoperation commonly combines a motion-tracking policy with a separate dexterous-hand retargeter. However, independently generated commands do not explicitly preserve body-hand geometric relations, leading to mismatches in relative wrist poses and fingertip positions during bimanual interaction. We present a gated residual coordination framework that keeps both modules frozen and applies bounded corrections to their outputs. A motion-conditioned action gate allocates correction authority across joint groups, while reference-geometry-dependent reward gates emphasize relevant interaction objectives during training. To establish the nominal body controller on Agile One, we introduce multi-pose morphology calibration that jointly estimates triaxial scales and effector-local offsets, together with staged motion dataset curation for training a SONIC-based tracker. The residual policy uses human motion references, initial commands, and robot proprioception without explicit object or contact observations. In simulation, it reduces wrist and fingertip geometry errors by 39.2-56.3% over direct composition on held-out GRAB motions, while preserving whole-body tracking on AMASS, with success rates of 89.03% without residual coordination and 89.29% with it. Ablations characterize the contributions of reward gating, adaptive correction authority, and separate body and hand correction heads.</p>
             
             <div class="card-action-bar">
-                <a href="http://arxiv.org/pdf/2609.16864v1" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
+                <a href="http://arxiv.org/pdf/2609.18763v1" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
                     View PDF
                 </a>
-                <a href="http://arxiv.org/abs/2609.16864v1" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
+                <a href="http://arxiv.org/abs/2609.18763v1" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
                     arXiv Page &rarr;
                 </a>
             </div>
         </article>
         
-        <article class="paper-card" data-title="the robot data factory" data-summary="physical ai requires more than increasingly large robot datasets: intelligent robots acquire knowledge through continuous interaction with the physical world. we argue that the defining scientific resource of physical ai is therefore not raw robot data alone, but robot experience - physically grounded interaction whose observations, actions, embodiment, context, and outcomes preserve the perception-action-consequence loop. we introduce the robot data factory (rdf), a mission-driven infrastructure and methodology for continuously generating, validating, benchmarking, and reusing such experience. rdf organizes heterogeneous robots and environment-specific training grounds through reproducible missions, skill curricula, synchronized multimodal sensing, external ground truth, an agentic robot network, data pipelines, and living benchmarks. rather than treating datasets as static end products, rdf implements a closed deploy-measure-learn-repeat cycle in which validated physical experience supports world models, vision-language-action models, embodied policies, digital twins, and subsequent robot deployment. we further formalize robot experience and its quality, introduce a mission-task-skill-episode-dataset-benchmark-capability hierarchy, and derive quantitative scaling laws and an algorithmic synthesis procedure connecting robot fleet size, sensor rates, storage, learning representations, tokenization, training compute, inference, and latency to embodied-ai cluster requirements. the framework is instantiated in three complementary physical training grounds for domestic, environmental, and energy applications. rdf thus reframes robot data generation as a continuous scientific production process and provides a pathway toward reproducible, scalable, and eventually federated infrastructure for physical ai.">
+        <article class="paper-card" data-title="in-context robot learning with vlm agents" data-summary="enabling robots to adapt to unfamiliar environments as readily as humans remains a moonshot goal of embodied ai. no finite collection of demonstrations can cover every task and situation a robot will encounter, making the ability to learn from context at deployment essential for generalization. such in-context learning (icl), however, remains largely beyond the reach of existing robotic policies. the broad agentic capabilities of commercial vision-language models (vlms), such as gpt-6 astra, raise a compelling question: can these models learn from demonstrations, examples, and interaction feedback, then translate that information into executable and verifiable robot behavior from a new initial state without gradient updates or persistent changes to task-specific parameters? we introduce gpt-policy, a general-agent framework for in-context robot learning. gpt-policy integrates a context compiler that preserves task-relevant visual transitions, a vlm that proposes robot-tool actions, and a constrained controller that verifies and executes each action and reports its outcome. we evaluate its reliability and limitations through task success and efficiency metrics, matched comparisons across models, and controlled context ablations. in real-robot trials, human video demonstrations improve task completion even without robot action labels, while aligned action references yield further gains on contact-sensitive tasks. these findings position gpt-policy as a step toward robot adaptation through in-context learning, providing an empirical foundation for translating the general-purpose capabilities of vlms into physical behavior and clarifying the challenges that must be overcome for reliable deployment.">
             <div class="card-meta-top">
                 <span class="rank-tag">TOP #5</span>
                 <div class="score-badge">
                     <span class="score-label">Priority Index</span>
-                    <span class="score-value">135</span>
+                    <span class="score-value">100</span>
                 </div>
             </div>
             
-            <h2 class="paper-title">The Robot Data Factory</h2>
+            <h2 class="paper-title">In-Context Robot Learning with VLM Agents</h2>
             
             <div class="author-row">
-                <span>🗓️ 2026-09-15</span>
-                <span>✍️ Sami Haddadin, Ivan Laptev, Ian Reid et al.</span>
+                <span>🗓️ 2026-09-16</span>
+                <span>✍️ Dongzhou Cheng, Taoran Yi, Ye Fang et al.</span>
             </div>
             
             <div class="badge-cluster">
-                <span class="badge">#world model</span><span class="badge">#vision-language-action</span>
+                <span class="badge">#embodied ai</span>
             </div>
             
-            <p class="paper-summary">Physical AI requires more than increasingly large robot datasets: intelligent robots acquire knowledge through continuous interaction with the physical world. We argue that the defining scientific resource of Physical AI is therefore not raw robot data alone, but robot experience - physically grounded interaction whose observations, actions, embodiment, context, and outcomes preserve the perception-action-consequence loop. We introduce the Robot Data Factory (RDF), a mission-driven infrastructure and methodology for continuously generating, validating, benchmarking, and reusing such experience. RDF organizes heterogeneous robots and environment-specific training grounds through reproducible missions, skill curricula, synchronized multimodal sensing, external ground truth, an agentic robot network, data pipelines, and living benchmarks. Rather than treating datasets as static end products, RDF implements a closed Deploy-Measure-Learn-Repeat cycle in which validated physical experience supports world models, vision-language-action models, embodied policies, digital twins, and subsequent robot deployment. We further formalize robot experience and its quality, introduce a mission-task-skill-episode-dataset-benchmark-capability hierarchy, and derive quantitative scaling laws and an algorithmic synthesis procedure connecting robot fleet size, sensor rates, storage, learning representations, tokenization, training compute, inference, and latency to Embodied-AI cluster requirements. The framework is instantiated in three complementary physical training grounds for domestic, environmental, and energy applications. RDF thus reframes robot data generation as a continuous scientific production process and provides a pathway toward reproducible, scalable, and eventually federated infrastructure for Physical AI.</p>
+            <p class="paper-summary">Enabling robots to adapt to unfamiliar environments as readily as humans remains a moonshot goal of embodied AI. No finite collection of demonstrations can cover every task and situation a robot will encounter, making the ability to learn from context at deployment essential for generalization. Such in-context learning (ICL), however, remains largely beyond the reach of existing robotic policies. The broad agentic capabilities of commercial vision-language models (VLMs), such as GPT-6 Astra, raise a compelling question: can these models learn from demonstrations, examples, and interaction feedback, then translate that information into executable and verifiable robot behavior from a new initial state without gradient updates or persistent changes to task-specific parameters? We introduce GPT-Policy, a general-agent framework for in-context robot learning. GPT-Policy integrates a context compiler that preserves task-relevant visual transitions, a VLM that proposes robot-tool actions, and a constrained controller that verifies and executes each action and reports its outcome. We evaluate its reliability and limitations through task success and efficiency metrics, matched comparisons across models, and controlled context ablations. In real-robot trials, human video demonstrations improve task completion even without robot action labels, while aligned action references yield further gains on contact-sensitive tasks. These findings position GPT-Policy as a step toward robot adaptation through in-context learning, providing an empirical foundation for translating the general-purpose capabilities of VLMs into physical behavior and clarifying the challenges that must be overcome for reliable deployment.</p>
             
             <div class="card-action-bar">
-                <a href="http://arxiv.org/pdf/2609.16705v1" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
+                <a href="http://arxiv.org/pdf/2609.19138v1" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
                     View PDF
                 </a>
-                <a href="http://arxiv.org/abs/2609.16705v1" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
+                <a href="http://arxiv.org/abs/2609.19138v1" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
                     arXiv Page &rarr;
                 </a>
             </div>
         </article>
         
-        <article class="paper-card" data-title="corrrisk-wm: corridor-conditioned risk world modeling for safety-critical trajectory planning" data-summary="safe local planning requires forecasting surrounding-agent motion and evaluating candidate-specific risks, since identical agent motion can pose different risks to different ego trajectories. we present corrrisk-wm, a planning-oriented partial world model coupling environment evolution with supervised intrusion and near-miss prediction over bounded candidate-trajectory corridors. a latent environment model recursively predicts agent states and updates agent-agent and agent-map interactions. each candidate queries the evolving environment through footprint- aware geometry and learned agent-corridor representations. a lightweight recurrent risk module uses temporal context to estimate per-slice hazards; survival aggregation yields first-entry and horizon-level event probabilities. on 29,176 scenarios from 100 waymo validation shards, corrrisk-wm achieves intrusion average precision (ap) of 0.8567 and 1-m near-miss first-entry ap of 0.8671. in baseline comparisons, it attains the highest near-miss ap at all three distance thresholds and the lowest observed open-loop collision rate (4.88%), with route progress of 15.35 m. across three seeds, removing dynamic environment modeling or candidate-conditioned geometric interaction reduces mean intrusion ap from 0.8590 to 0.7624 and 0.7252, respectively. these results support coupling environment evolution with candidate-conditioned geometric reasoning for risk prediction and safety-oriented candidate selection.">
+        <article class="paper-card" data-title="adageovln: selective geometry across representation depth and navigation time for vision-language navigation" data-summary="vision-language navigation requires aligning language with visual observations while maintaining spatial understanding over time. geometry foundation models (gfms) expose intermediate representations throughout their hierarchy, but how navigation policies should use these features and retain historical geometric evidence remains unresolved. we introduce \method{}, a streaming vln framework that addresses these questions across \textbf{representation depth} and \textbf{navigation time}. hierarchical gfm--vlm fusion couples earlier, intermediate, and later gfm representations to successive policy stages instead of repeatedly injecting a terminal feature. navigation-aware gfm memory retains historical vggt global-attention kv states according to instruction relevance, geometric confidence, and transition novelty under a bounded per-layer budget. retained states provide geometric context for subsequent observations before fusion with the policy. across r2r-ce and rxr-ce, \method{} achieves strong performance using a single rgb stream without additional navigation-specific external data. controlled ablations show that multi-depth coupling substantially outperforms repeated terminal-feature injection at matched fusion locations. bounded navigation-aware retention preserves navigation performance while considerably reducing gfm-kv memory relative to larger-memory temporal retention. these findings support jointly examining the geometric representations exposed to the policy and the historical evidence retained for future inference. code will be released upon acceptance at https://humanoid-research.github.io/adageovln/.">
             <div class="card-meta-top">
                 <span class="rank-tag">TOP #6</span>
+                <div class="score-badge">
+                    <span class="score-label">Priority Index</span>
+                    <span class="score-value">95</span>
+                </div>
+            </div>
+            
+            <h2 class="paper-title">AdaGeoVLN: Selective Geometry Across Representation Depth and Navigation Time for Vision-Language Navigation</h2>
+            
+            <div class="author-row">
+                <span>🗓️ 2026-09-16</span>
+                <span>✍️ Quan-Dung Pham, Anh Dao, Danh Vinh Le et al.</span>
+            </div>
+            
+            <div class="badge-cluster">
+                <span class="badge">#humanoid</span>
+            </div>
+            
+            <p class="paper-summary">Vision-language navigation requires aligning language with visual observations while maintaining spatial understanding over time. Geometry foundation models (GFMs) expose intermediate representations throughout their hierarchy, but how navigation policies should use these features and retain historical geometric evidence remains unresolved. We introduce \method{}, a streaming VLN framework that addresses these questions across \textbf{representation depth} and \textbf{navigation time}. Hierarchical GFM--VLM fusion couples earlier, intermediate, and later GFM representations to successive policy stages instead of repeatedly injecting a terminal feature. Navigation-aware GFM memory retains historical VGGT global-attention KV states according to instruction relevance, geometric confidence, and transition novelty under a bounded per-layer budget. Retained states provide geometric context for subsequent observations before fusion with the policy. Across R2R-CE and RxR-CE, \method{} achieves strong performance using a single RGB stream without additional navigation-specific external data. Controlled ablations show that multi-depth coupling substantially outperforms repeated terminal-feature injection at matched fusion locations. Bounded navigation-aware retention preserves navigation performance while considerably reducing GFM-KV memory relative to larger-memory temporal retention. These findings support jointly examining the geometric representations exposed to the policy and the historical evidence retained for future inference. Code will be released upon acceptance at https://humanoid-research.github.io/adageovln/.</p>
+            
+            <div class="card-action-bar">
+                <a href="http://arxiv.org/pdf/2609.18789v1" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
+                    View PDF
+                </a>
+                <a href="http://arxiv.org/abs/2609.18789v1" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
+                    arXiv Page &rarr;
+                </a>
+            </div>
+        </article>
+        
+        <article class="paper-card" data-title="pointzero: 3d point track completion for learning transferable 3d dynamics" data-summary="world models endow perceptual systems with the ability to predict how scenes evolve under interaction. they are most beneficial when trained on diverse volumes of data, to instill a rich prior into downstream applications. existing methods typically require robot action labels to learn action-conditioned 3d dynamics, which excludes web video data from the training pool. we study 3d point track completion as a pre-training objective for learning transferable 3d dynamics without robot data. given a single rgb-d observation and sparse partial 3d trajectories (tracks), we predict future 3d tracks of all observed points. we show this objective produces a rich 3d dynamics prior, without requiring robot action labels. we contribute a diverse dataset of 2.9 million synthetic frames spanning deformable, articulated, and rigid objects, and use it to train pointzero. we show that a flexible and expressive transformer, pointzero, outperforms prior methods on the same data. we demonstrate the utility of our pre-training objective by post-training pointzero for two downstream applications: (1) action-conditioned 3d dynamics prediction and (2) imitation learning. when fine-tuned to condition on end-effector pose, pointzero outperforms the baselines on the recent pgnd 3d dynamics benchmark. when fine-tuned to predict robot actions and 3d tracks, pointzero outperforms or matches the baselines on 6/7 simulated and real-world robot manipulation tasks. we furthermore evaluate training pointzero from scratch to isolate the benefits of our proposed architecture from those of our proposed pre-training objective and dataset. we release the dataset, checkpoints, and full training recipe.">
+            <div class="card-meta-top">
+                <span class="rank-tag">TOP #7</span>
                 <div class="score-badge">
                     <span class="score-label">Priority Index</span>
                     <span class="score-value">90</span>
                 </div>
             </div>
             
-            <h2 class="paper-title">CorrRisk-WM: Corridor-Conditioned Risk World Modeling for Safety-Critical Trajectory Planning</h2>
+            <h2 class="paper-title">PointZero: 3D Point Track Completion for Learning Transferable 3D Dynamics</h2>
             
             <div class="author-row">
-                <span>🗓️ 2026-09-15</span>
-                <span>✍️ Tingyu Guo, Reza Langari</span>
+                <span>🗓️ 2026-09-16</span>
+                <span>✍️ Bardienus P. Duisterhof, Kaifeng Zhang, Adam Hung et al.</span>
             </div>
             
             <div class="badge-cluster">
                 <span class="badge">#world model</span>
             </div>
             
-            <p class="paper-summary">Safe local planning requires forecasting surrounding-agent motion and evaluating candidate-specific risks, since identical agent motion can pose different risks to different ego trajectories. We present CorrRisk-WM, a planning-oriented partial world model coupling environment evolution with supervised intrusion and near-miss prediction over bounded candidate-trajectory corridors. A latent environment model recursively predicts agent states and updates agent-agent and agent-map interactions. Each candidate queries the evolving environment through footprint- aware geometry and learned agent-corridor representations. A lightweight recurrent risk module uses temporal context to estimate per-slice hazards; survival aggregation yields first-entry and horizon-level event probabilities. On 29,176 scenarios from 100 Waymo validation shards, CorrRisk-WM achieves intrusion average precision (AP) of 0.8567 and 1-m near-miss first-entry AP of 0.8671. In baseline comparisons, it attains the highest near-miss AP at all three distance thresholds and the lowest observed open-loop collision rate (4.88%), with route progress of 15.35 m. Across three seeds, removing dynamic environment modeling or candidate-conditioned geometric interaction reduces mean intrusion AP from 0.8590 to 0.7624 and 0.7252, respectively. These results support coupling environment evolution with candidate-conditioned geometric reasoning for risk prediction and safety-oriented candidate selection.</p>
+            <p class="paper-summary">World models endow perceptual systems with the ability to predict how scenes evolve under interaction. They are most beneficial when trained on diverse volumes of data, to instill a rich prior into downstream applications. Existing methods typically require robot action labels to learn action-conditioned 3D dynamics, which excludes web video data from the training pool. We study 3D point track completion as a pre-training objective for learning transferable 3D dynamics without robot data. Given a single RGB-D observation and sparse partial 3D trajectories (tracks), we predict future 3D tracks of all observed points. We show this objective produces a rich 3D dynamics prior, without requiring robot action labels. We contribute a diverse dataset of 2.9 million synthetic frames spanning deformable, articulated, and rigid objects, and use it to train PointZero. We show that a flexible and expressive transformer, PointZero, outperforms prior methods on the same data. We demonstrate the utility of our pre-training objective by post-training PointZero for two downstream applications: (1) action-conditioned 3D dynamics prediction and (2) imitation learning. When fine-tuned to condition on end-effector pose, PointZero outperforms the baselines on the recent PGND 3D dynamics benchmark. When fine-tuned to predict robot actions and 3D tracks, PointZero outperforms or matches the baselines on 6/7 simulated and real-world robot manipulation tasks. We furthermore evaluate training PointZero from scratch to isolate the benefits of our proposed architecture from those of our proposed pre-training objective and dataset. We release the dataset, checkpoints, and full training recipe.</p>
             
             <div class="card-action-bar">
-                <a href="http://arxiv.org/pdf/2609.16724v1" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
+                <a href="http://arxiv.org/pdf/2609.19142v1" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
                     View PDF
                 </a>
-                <a href="http://arxiv.org/abs/2609.16724v1" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
+                <a href="http://arxiv.org/abs/2609.19142v1" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
                     arXiv Page &rarr;
                 </a>
             </div>
         </article>
         
-        <article class="paper-card" data-title="lotusim-energy: a maritime simulator for human-drone interaction in autonomous offshore operation \&amp; maintenance" data-summary="offshore maintenance requires operations in the air, the surface, and the subsea domain and include human supervision. this paper presents lotusim-energy, a real-time maritime simulator designed for multi-domain human--drone interaction for offshore operation and maintenance. the plat- form unifies heterogeneous unmanned vehicles (unmanned aerial vehicles: uavs, unmanned surface vehicles: usvs, autonomous underwater vehicles: auvs, remotely operated vehicles: rovs) within a distributed architecture coupling environment forcing (wind, waves, currents) and provides immersive user interfaces for supervision (desktop and virtual reality). a structured offshore task library enables repeatable evaluation of autonomy stacks under realistic metocean disturbances. the simulator supports realistic physics, energy-aware battery modeling, and fault-detection pipelines as modular validation tools. system-level performance is demonstrated on a multi-domain inspection scenario for monopile and transition piece structure, where we evaluate the reliability of integrated waypoint-follower plugin and automatic identification system (ais)-referenced trajectory tracking under real-time energy monitoring. by combining unified environmental physics, heterogeneous vehicle simulation, and immersive supervision, lotusim-energy provides an integration testbed for prototyping and rehearsing offshore human--robot collaboration workflows, as a step toward de-risking sea deployment.">
-            <div class="card-meta-top">
-                <span class="rank-tag">TOP #7</span>
-                <div class="score-badge">
-                    <span class="score-label">Priority Index</span>
-                    <span class="score-value">50</span>
-                </div>
-            </div>
-            
-            <h2 class="paper-title">LOTUSim-Energy: A Maritime Simulator for Human-Drone Interaction in Autonomous Offshore Operation \&amp; Maintenance</h2>
-            
-            <div class="author-row">
-                <span>🗓️ 2026-09-15</span>
-                <span>✍️ Juliette Grosset, Marie Dubromel, Hélène Lechêne et al.</span>
-            </div>
-            
-            <div class="badge-cluster">
-                <span class="badge badge-muted">#frontier</span>
-            </div>
-            
-            <p class="paper-summary">Offshore maintenance requires operations in the air, the surface, and the subsea domain and include human supervision. This paper presents LOTUSim-Energy, a real-time maritime simulator designed for multi-domain human--drone interaction for offshore operation and maintenance. The plat- form unifies heterogeneous unmanned vehicles (Unmanned Aerial Vehicles: UAVs, Unmanned Surface Vehicles: USVs, Autonomous Underwater Vehicles: AUVs, Remotely Operated Vehicles: ROVs) within a distributed architecture coupling environment forcing (wind, waves, currents) and provides immersive user interfaces for supervision (desktop and virtual reality). A structured offshore task library enables repeatable evaluation of autonomy stacks under realistic metocean disturbances. The simulator supports realistic physics, energy-aware battery modeling, and fault-detection pipelines as modular validation tools. System-level performance is demonstrated on a multi-domain inspection scenario for monopile and transition piece structure, where we evaluate the reliability of integrated waypoint-follower plugin and Automatic Identification System (AIS)-referenced trajectory tracking under real-time energy monitoring. By combining unified environmental physics, heterogeneous vehicle simulation, and immersive supervision, LOTUSim-Energy provides an integration testbed for prototyping and rehearsing offshore human--robot collaboration workflows, as a step toward de-risking sea deployment.</p>
-            
-            <div class="card-action-bar">
-                <a href="http://arxiv.org/pdf/2609.17124v1" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
-                    View PDF
-                </a>
-                <a href="http://arxiv.org/abs/2609.17124v1" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
-                    arXiv Page &rarr;
-                </a>
-            </div>
-        </article>
-        
-        <article class="paper-card" data-title="brave-6d: benchmark for robotic active vision in 6dof pose estimation" data-summary="detecting and grasping small objects remains a significant challenge in robotics. active vision, where the robot moves closer to the object, is an intuitive solution, yet comparing approaches on common ground is difficult since identical physical scene setups are required. hence, we introduce brave-6d, a benchmark designed to evaluate robotic active vision systems for object pose estimation, a crucial first step in grasping objects. brave-6d leverages view synthesis based on gaussian splats (3dgs) to provide scenes and tools for benchmarking active vision systems. we show baseline solutions performing visual servoing within the scene and accurately estimating the poses of small objects.">
+        <article class="paper-card" data-title="body-motion control of a simulated aerial swarm from a first-person view" data-summary="first-person-view (fpv) teleoperation of aerial swarms requires an operator to coordinate collective translation, viewing direction, and formation spacing. we present an upper-body interface that maps torso inclination, hand position, and head rotation to five continuous command dimensions. neutral postures and motion ranges are calibrated for each participant. in a within-subject study, 14 participants navigated a simulated 15-agent swarm through three-dimensional obstacle courses using this interface and a conventional transmitter. body-motion control reduced completion time by 19.4% and centroid path length by 7.0%, and increased path directness. delivered-command variation was 88.8% lower, and concurrent command changes were more frequent. these command measures characterize the complete interfaces, which differed in calibration and filtering. no differences were detected in gate-centering error, collection yield, crash or disconnection counts, overall workload, or usability. all participants reported higher physical demand with body-motion control. the implemented interface therefore improved fpv navigation efficiency at the cost of greater physical demand.">
             <div class="card-meta-top">
                 <span class="rank-tag">TOP #8</span>
                 <div class="score-badge">
                     <span class="score-label">Priority Index</span>
-                    <span class="score-value">50</span>
+                    <span class="score-value">70</span>
                 </div>
             </div>
             
-            <h2 class="paper-title">BRAVE-6D: Benchmark for Robotic Active Vision in 6DOF Pose Estimation</h2>
+            <h2 class="paper-title">Body-Motion Control of a Simulated Aerial Swarm from a First-Person View</h2>
             
             <div class="author-row">
-                <span>🗓️ 2026-09-15</span>
-                <span>✍️ Philipp Ausserlechner, Bernhard Neuberger, Alessandro Scherl et al.</span>
+                <span>🗓️ 2026-09-16</span>
+                <span>✍️ Yang Chen, Darius Giannoli, Dario Floreano</span>
             </div>
             
             <div class="badge-cluster">
-                <span class="badge badge-muted">#frontier</span>
+                <span class="badge">#teleoperation</span>
             </div>
             
-            <p class="paper-summary">Detecting and grasping small objects remains a significant challenge in robotics. Active vision, where the robot moves closer to the object, is an intuitive solution, yet comparing approaches on common ground is difficult since identical physical scene setups are required. Hence, we introduce BRAVE-6D, a benchmark designed to evaluate robotic active vision systems for object pose estimation, a crucial first step in grasping objects. BRAVE-6D leverages view synthesis based on Gaussian Splats (3DGS) to provide scenes and tools for benchmarking active vision systems. We show baseline solutions performing visual servoing within the scene and accurately estimating the poses of small objects.</p>
+            <p class="paper-summary">First-person-view (FPV) teleoperation of aerial swarms requires an operator to coordinate collective translation, viewing direction, and formation spacing. We present an upper-body interface that maps torso inclination, hand position, and head rotation to five continuous command dimensions. Neutral postures and motion ranges are calibrated for each participant. In a within-subject study, 14 participants navigated a simulated 15-agent swarm through three-dimensional obstacle courses using this interface and a conventional transmitter. Body-motion control reduced completion time by 19.4% and centroid path length by 7.0%, and increased path directness. Delivered-command variation was 88.8% lower, and concurrent command changes were more frequent. These command measures characterize the complete interfaces, which differed in calibration and filtering. No differences were detected in gate-centering error, collection yield, crash or disconnection counts, overall workload, or usability. All participants reported higher physical demand with body-motion control. The implemented interface therefore improved FPV navigation efficiency at the cost of greater physical demand.</p>
             
             <div class="card-action-bar">
-                <a href="http://arxiv.org/pdf/2609.17106v1" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
+                <a href="http://arxiv.org/pdf/2609.18881v1" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
                     View PDF
                 </a>
-                <a href="http://arxiv.org/abs/2609.17106v1" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
+                <a href="http://arxiv.org/abs/2609.18881v1" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
                     arXiv Page &rarr;
                 </a>
             </div>
