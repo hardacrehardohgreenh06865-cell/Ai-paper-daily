@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Embodied AI & Robotics Intelligence Digest — September 17, 2026</title>
+    <title>Embodied AI & Robotics Intelligence Digest — September 18, 2026</title>
     <style>
         :root {
             --bg-base: #080c14;
@@ -242,7 +242,7 @@
         <header>
             <span class="pill-brand">Autonomous Research Intelligence</span>
             <h1>Embodied AI & Physical Frontier Briefing</h1>
-            <p class="subtitle">Compiled on September 17, 2026 • Ranked top 8 strategic breakthroughs out of incoming preprints.</p>
+            <p class="subtitle">Compiled on September 18, 2026 • Ranked top 8 strategic breakthroughs out of incoming preprints.</p>
             
             <div class="controls">
                 <input type="text" id="filterInput" class="search-box" placeholder="Filter papers by keywords (e.g. humanoid, tactile, diffusion)...">
@@ -251,257 +251,257 @@
 
         <main id="paperList">
             
-        <article class="paper-card" data-title="learning holistic whole-body loco-manipulation with a bipedal mobile manipulator" data-summary="bipedal loco-manipulation enables robots to interact with objects beyond the nominal workspace of their arms by coordinating locomotion and manipulation. realizing this capability requires a low-level whole-body controller that translates task-level manipulation goals into coordinated arm and leg motions while maintaining balance. we present a unified whole-body controller trained with reinforcement learning that directly maps 6-dof end-effector targets to coordinated actions for the bipedal base and robotic arm. given only an end-effector target, the learned controller autonomously coordinates reaching, postural adaptation, and stepping without explicit base-velocity or footstep commands. a reward-gating strategy regulates the trade-offs among end-effector tracking, locomotion, and balance during training, while a temporal context estimator combines windowed transformer encoding, recurrent gru memory, and auxiliary dynamics prediction to extract dynamics-relevant information from observation history. real-robot experiments demonstrate that the same controller supports reaching, postural adaptation, and stepping under commands from vr teleoperation, a learned diffusion policy, and scripted trajectories, providing a common end-effector interface for diverse manipulation tasks.">
+        <article class="paper-card" data-title="compliance for free: learning identifiable impedance via bilateral teleoperation" data-summary="vision-language-action models tell a robot where to move, but not how hard to push. contact-rich tasks depend on that second quantity, compliance, yet no widely used demonstration interface records it. the obstacle is identifiability as realized pose and measured force cannot separate the operator's intended equilibrium from their stiffness, so vr controllers, spacemouse and handheld grippers cannot supply compliance supervision even in principle. prior compliance-output policies work around this with hand-specified task structure, privileged simulation contact state, or dedicated force and tactile hardware. four-channel bilateral teleoperation removes the ambiguity directly by using the leader arm as a separate measurement of the intended equilibrium, making per-axis stiffness identifiable by regression using only the joint-torque sensing already on the manipulator. this yields per-timestep, direction-dependent compliance labels at zero annotation cost, which we use to fine-tune a vla to emit stiffness alongside pose. on a franka research 3 wiping task, ours is the only policy of five whose contact force changes when the instruction asks for a firm wipe rather than a normal one (6.4n (normal) to 9.1n (firm) rms, cohen's d = 0.89, p = 0.023">
             <div class="card-meta-top">
                 <span class="rank-tag">TOP #1</span>
                 <div class="score-badge">
                     <span class="score-label">Priority Index</span>
-                    <span class="score-value">195</span>
+                    <span class="score-value">155</span>
                 </div>
             </div>
             
-            <h2 class="paper-title">Learning Holistic Whole-Body Loco-Manipulation with a Bipedal Mobile Manipulator</h2>
+            <h2 class="paper-title">Compliance for Free: Learning Identifiable Impedance via Bilateral Teleoperation</h2>
             
             <div class="author-row">
-                <span>🗓️ 2026-09-16</span>
-                <span>✍️ Zhongyu Chen, Yuxuan Nai, Qian Chen et al.</span>
+                <span>🗓️ 2026-09-17</span>
+                <span>✍️ Harsha Guda, Adrià Colomé, Carme Torras</span>
             </div>
             
             <div class="badge-cluster">
-                <span class="badge">#bipedal</span><span class="badge">#reinforcement learning</span><span class="badge">#locomotion</span><span class="badge">#diffusion policy</span><span class="badge">#teleoperation</span>
+                <span class="badge">#vision-language-action</span><span class="badge">#vla</span><span class="badge">#teleoperation</span>
             </div>
             
-            <p class="paper-summary">Bipedal loco-manipulation enables robots to interact with objects beyond the nominal workspace of their arms by coordinating locomotion and manipulation. Realizing this capability requires a low-level whole-body controller that translates task-level manipulation goals into coordinated arm and leg motions while maintaining balance. We present a unified whole-body controller trained with reinforcement learning that directly maps 6-DoF end-effector targets to coordinated actions for the bipedal base and robotic arm. Given only an end-effector target, the learned controller autonomously coordinates reaching, postural adaptation, and stepping without explicit base-velocity or footstep commands. A reward-gating strategy regulates the trade-offs among end-effector tracking, locomotion, and balance during training, while a temporal context estimator combines windowed Transformer encoding, recurrent GRU memory, and auxiliary dynamics prediction to extract dynamics-relevant information from observation history. Real-robot experiments demonstrate that the same controller supports reaching, postural adaptation, and stepping under commands from VR teleoperation, a learned diffusion policy, and scripted trajectories, providing a common end-effector interface for diverse manipulation tasks.</p>
+            <p class="paper-summary">Vision-language-action models tell a robot where to move, but not how hard to push. Contact-rich tasks depend on that second quantity, compliance, yet no widely used demonstration interface records it. The obstacle is identifiability as realized pose and measured force cannot separate the operator's intended equilibrium from their stiffness, so VR controllers, SpaceMouse and handheld grippers cannot supply compliance supervision even in principle. Prior compliance-output policies work around this with hand-specified task structure, privileged simulation contact state, or dedicated force and tactile hardware. Four-channel bilateral teleoperation removes the ambiguity directly by using the leader arm as a separate measurement of the intended equilibrium, making per-axis stiffness identifiable by regression using only the joint-torque sensing already on the manipulator. This yields per-timestep, direction-dependent compliance labels at zero annotation cost, which we use to fine-tune a VLA to emit stiffness alongside pose. On a Franka Research 3 wiping task, ours is the only policy of five whose contact force changes when the instruction asks for a firm wipe rather than a normal one (6.4N (normal) to 9.1N (firm) RMS, Cohen's d = 0.89, p = 0.023</p>
             
             <div class="card-action-bar">
-                <a href="http://arxiv.org/pdf/2609.18930v1" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
+                <a href="http://arxiv.org/pdf/2609.19976v1" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
                     View PDF
                 </a>
-                <a href="http://arxiv.org/abs/2609.18930v1" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
+                <a href="http://arxiv.org/abs/2609.19976v1" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
                     arXiv Page &rarr;
                 </a>
             </div>
         </article>
         
-        <article class="paper-card" data-title="rmuscle: robotic muscle memory for efficient vision-language-action model inference" data-summary="factory work is a promising early scenario for embodied ai: assigning repetitive manual jobs to robots has clear economic payoff, and a structured station keeps the jobs tractable for current policies. vision-language-action (vla) models now dominate as the policy paradigm for these robots. the inference latency of vla models directly affects robot responsiveness and motion smoothness. however, existing vla inference frameworks do not fully exploit the characteristics of embodied workloads or account for the distinct bottlenecks across different stages of vla inference. in this paper, we first characterize embodied workloads and identify substantial task similarity across repeated robot executions. we further find that such similarity extends beyond observations and action trajectories to internal model states. drawing on these observations, we present rmuscle, a real-time vla inference framework inspired by human muscle memory. it exploits cross-execution similarity through a dual-phase muscle-memory cache. the context cache reuses visual-token outputs to reduce computation, while the action cache reuses neuron activation patterns to reduce weight accesses. we keep both the cache memory footprint and access overhead low through online cache recomputation, sliding-window cache retrieval, and mask sharing across consecutive denoising steps. rmuscle achieves 1.29-1.42x speedup on rtx 4090 and jetson thor across libero, robotwin, and physical manipulation tasks, while maintaining the original success rates on real-world robots.">
+        <article class="paper-card" data-title="co-vla: consensus-based federated training for vision-language-action models" data-summary="vision-language-action models (vlas) have emerged as a promising paradigm for general-purpose robot learning, with performance improving as models and datasets scale. scaling robot data collection, however, remains challenging because data are naturally distributed across robots, tasks, and locations, making centralization costly or impractical. federated learning offers a way to train on decentralized robot data, but applying it to vlas requires accounting for heterogeneous robot client data distributions. we present co-vla, which applies consensus optimization using the alternating direction method of multipliers~(admm) to federated vla training. we show that the same algorithm supports both full-model training and parameter-efficient fine-tuning with both fixed-rank and rank-adaptive adapters. the name co-vla reflects both consensus and collaboration: clients with different local robot datasets collaboratively train a shared model without sharing their data. our experiments demonstrate that co-vla achieves performance comparable to centralized training in both full-model training and parameter-efficient fine-tuning settings.">
             <div class="card-meta-top">
                 <span class="rank-tag">TOP #2</span>
                 <div class="score-badge">
                     <span class="score-label">Priority Index</span>
-                    <span class="score-value">185</span>
+                    <span class="score-value">135</span>
                 </div>
             </div>
             
-            <h2 class="paper-title">rMuscle: Robotic Muscle Memory for Efficient Vision-Language-Action Model Inference</h2>
+            <h2 class="paper-title">Co-VLA: Consensus-based Federated Training for Vision-Language-Action Models</h2>
             
             <div class="author-row">
-                <span>🗓️ 2026-09-16</span>
-                <span>✍️ Kaijun Zhou, Zhiyang Li, Le Chen et al.</span>
+                <span>🗓️ 2026-09-17</span>
+                <span>✍️ Haolong Li, Guner Dilsad Er, Michael Muehlebach et al.</span>
             </div>
             
             <div class="badge-cluster">
-                <span class="badge">#embodied ai</span><span class="badge">#vision-language-action</span><span class="badge">#vla</span>
+                <span class="badge">#vision-language-action</span><span class="badge">#vla</span>
             </div>
             
-            <p class="paper-summary">Factory work is a promising early scenario for embodied AI: assigning repetitive manual jobs to robots has clear economic payoff, and a structured station keeps the jobs tractable for current policies. Vision-Language-Action (VLA) models now dominate as the policy paradigm for these robots. The inference latency of VLA models directly affects robot responsiveness and motion smoothness. However, existing VLA inference frameworks do not fully exploit the characteristics of embodied workloads or account for the distinct bottlenecks across different stages of VLA inference. In this paper, we first characterize embodied workloads and identify substantial task similarity across repeated robot executions. We further find that such similarity extends beyond observations and action trajectories to internal model states. Drawing on these observations, we present rMuscle, a real-time VLA inference framework inspired by human muscle memory. It exploits cross-execution similarity through a dual-phase muscle-memory cache. The Context Cache reuses visual-token outputs to reduce computation, while the Action Cache reuses neuron activation patterns to reduce weight accesses. We keep both the cache memory footprint and access overhead low through online cache recomputation, sliding-window cache retrieval, and mask sharing across consecutive denoising steps. rMuscle achieves 1.29-1.42X speedup on RTX 4090 and Jetson Thor across LIBERO, RoboTwin, and physical manipulation tasks, while maintaining the original success rates on real-world robots.</p>
+            <p class="paper-summary">Vision-language-action models (VLAs) have emerged as a promising paradigm for general-purpose robot learning, with performance improving as models and datasets scale. Scaling robot data collection, however, remains challenging because data are naturally distributed across robots, tasks, and locations, making centralization costly or impractical. Federated learning offers a way to train on decentralized robot data, but applying it to VLAs requires accounting for heterogeneous robot client data distributions. We present Co-VLA, which applies consensus optimization using the Alternating Direction Method of Multipliers~(ADMM) to federated VLA training. We show that the same algorithm supports both full-model training and parameter-efficient fine-tuning with both fixed-rank and rank-adaptive adapters. The name Co-VLA reflects both consensus and collaboration: clients with different local robot datasets collaboratively train a shared model without sharing their data. Our experiments demonstrate that Co-VLA achieves performance comparable to centralized training in both full-model training and parameter-efficient fine-tuning settings.</p>
             
             <div class="card-action-bar">
-                <a href="http://arxiv.org/pdf/2609.19104v1" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
+                <a href="http://arxiv.org/pdf/2609.19923v1" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
                     View PDF
                 </a>
-                <a href="http://arxiv.org/abs/2609.19104v1" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
+                <a href="http://arxiv.org/abs/2609.19923v1" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
                     arXiv Page &rarr;
                 </a>
             </div>
         </article>
         
-        <article class="paper-card" data-title="kino: a keyframe interface for vlm planning and whole-body control in humanoid loco-manipulation" data-summary="humanoid loco-manipulation requires robots to interpret task instructions and scene semantics while executing coordinated whole-body motions. we propose a hierarchical framework that uses motion keyframes as an intermediate representation between vision-language model (vlm) planning and reinforcement learning (rl) control. each keyframe specifies a target whole-body robot pose and, when applicable, an object pose. given a language instruction, scene observations, and execution feedback, the vlm selects successive task-relevant keyframes from a predefined library. the selected keyframes are retargeted to the current scene to account for object poses and dimensions. a keyframe-conditioned whole-body policy then generates joint-level actions to reach these goals. we introduce a saliency-based keyframe sampling strategy for low-level policy training that improves end-to-end task success rate from 44% to 92% when using sparse vlm keyframes. we evaluate our framework on object pickup, transport, and placement tasks in simulation and on a unitree g1 humanoid. the system successfully performs both one- and two-handed manipulation and generalises to placement locations beyond the training reference data.">
+        <article class="paper-card" data-title="anyviewdex: view-invariant dexterous manipulation from rgb observations" data-summary="visuomotor policies for multi-fingered dexterous manipulation are highly sensitive to camera viewpoint shifts. to achieve view invariance, recent methods increasingly rely on explicit 3d modalities like rgb-d or point clouds, which can introduce hardware dependencies, calibration requirements, and vulnerability to sensor noise during real-world deployment. in this work, we show that view-invariant control can be achieved without explicit test-time 3d sensing by encoding geometric knowledge into the visual representation during simulation. we present anyviewdex, an asymmetric training pipeline that combines multi-view contrastive alignment with privileged 3d geometric supervision. by regressing absolute 3d object coordinates during simulated training, this auxiliary objective provides a geometric grounding signal that mitigates the spatial collapse of the globally pooled contrastive embedding. at deployment, the policy operates zero-shot using only uncalibrated monocular rgb and proprioception. we validate this approach across both reinforcement learning and student-teacher distillation. in hardware evaluation on an xarm7 with a 16-dof leap hand, anyviewdex reaches 76.7% grasping success across eight unseen objects and six uncalibrated viewpoints (480 trials; 2,400 across all ablation conditions), indicating that geometrically grounded monocular policies transfer zero-shot without test-time depth. project page: https://anyviewdex.github.io/">
             <div class="card-meta-top">
                 <span class="rank-tag">TOP #3</span>
                 <div class="score-badge">
                     <span class="score-label">Priority Index</span>
-                    <span class="score-value">125</span>
+                    <span class="score-value">110</span>
                 </div>
             </div>
             
-            <h2 class="paper-title">KINO: A Keyframe Interface for VLM Planning and Whole-Body Control in Humanoid Loco-Manipulation</h2>
+            <h2 class="paper-title">AnyViewDex: View-Invariant Dexterous Manipulation from RGB Observations</h2>
             
             <div class="author-row">
-                <span>🗓️ 2026-09-16</span>
-                <span>✍️ Sitong Chen, Fatemeh Zargarbashi, Jin Cheng et al.</span>
+                <span>🗓️ 2026-09-17</span>
+                <span>✍️ Soham Patil, Om Sanjay Gunjal, Sourabh Bhosale et al.</span>
             </div>
             
             <div class="badge-cluster">
-                <span class="badge">#humanoid</span><span class="badge">#reinforcement learning</span>
+                <span class="badge">#reinforcement learning</span><span class="badge">#dexterous manipulation</span>
             </div>
             
-            <p class="paper-summary">Humanoid loco-manipulation requires robots to interpret task instructions and scene semantics while executing coordinated whole-body motions. We propose a hierarchical framework that uses motion keyframes as an intermediate representation between Vision-Language Model (VLM) planning and Reinforcement Learning (RL) control. Each keyframe specifies a target whole-body robot pose and, when applicable, an object pose. Given a language instruction, scene observations, and execution feedback, the VLM selects successive task-relevant keyframes from a predefined library. The selected keyframes are retargeted to the current scene to account for object poses and dimensions. A keyframe-conditioned whole-body policy then generates joint-level actions to reach these goals. We introduce a saliency-based keyframe sampling strategy for low-level policy training that improves end-to-end task success rate from 44% to 92% when using sparse VLM keyframes. We evaluate our framework on object pickup, transport, and placement tasks in simulation and on a Unitree G1 humanoid. The system successfully performs both one- and two-handed manipulation and generalises to placement locations beyond the training reference data.</p>
+            <p class="paper-summary">Visuomotor policies for multi-fingered dexterous manipulation are highly sensitive to camera viewpoint shifts. To achieve view invariance, recent methods increasingly rely on explicit 3D modalities like RGB-D or point clouds, which can introduce hardware dependencies, calibration requirements, and vulnerability to sensor noise during real-world deployment. In this work, we show that view-invariant control can be achieved without explicit test-time 3D sensing by encoding geometric knowledge into the visual representation during simulation. We present AnyViewDex, an asymmetric training pipeline that combines multi-view contrastive alignment with privileged 3D geometric supervision. By regressing absolute 3D object coordinates during simulated training, this auxiliary objective provides a geometric grounding signal that mitigates the spatial collapse of the globally pooled contrastive embedding. At deployment, the policy operates zero-shot using only uncalibrated monocular RGB and proprioception. We validate this approach across both reinforcement learning and student-teacher distillation. In hardware evaluation on an xArm7 with a 16-DoF LEAP Hand, AnyViewDex reaches 76.7% grasping success across eight unseen objects and six uncalibrated viewpoints (480 trials; 2,400 across all ablation conditions), indicating that geometrically grounded monocular policies transfer zero-shot without test-time depth. Project Page: https://anyviewdex.github.io/</p>
             
             <div class="card-action-bar">
-                <a href="http://arxiv.org/pdf/2609.18869v1" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
+                <a href="http://arxiv.org/pdf/2609.20107v1" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
                     View PDF
                 </a>
-                <a href="http://arxiv.org/abs/2609.18869v1" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
+                <a href="http://arxiv.org/abs/2609.20107v1" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
                     arXiv Page &rarr;
                 </a>
             </div>
         </article>
         
-        <article class="paper-card" data-title="gated residual body-hand coordination for whole-body humanoid teleoperation" data-summary="whole-body humanoid teleoperation commonly combines a motion-tracking policy with a separate dexterous-hand retargeter. however, independently generated commands do not explicitly preserve body-hand geometric relations, leading to mismatches in relative wrist poses and fingertip positions during bimanual interaction. we present a gated residual coordination framework that keeps both modules frozen and applies bounded corrections to their outputs. a motion-conditioned action gate allocates correction authority across joint groups, while reference-geometry-dependent reward gates emphasize relevant interaction objectives during training. to establish the nominal body controller on agile one, we introduce multi-pose morphology calibration that jointly estimates triaxial scales and effector-local offsets, together with staged motion dataset curation for training a sonic-based tracker. the residual policy uses human motion references, initial commands, and robot proprioception without explicit object or contact observations. in simulation, it reduces wrist and fingertip geometry errors by 39.2-56.3% over direct composition on held-out grab motions, while preserving whole-body tracking on amass, with success rates of 89.03% without residual coordination and 89.29% with it. ablations characterize the contributions of reward gating, adaptive correction authority, and separate body and hand correction heads.">
+        <article class="paper-card" data-title="dr-mpc: fast and feasible dynamics-relaxed model-predictive control for legged locomotion" data-summary="this paper presents dynamics-relaxed model predictive control (dr-mpc), a novel mpc formulation for legged locomotion, and a tailored interior-point method (ipm) solver. the formulation combines online optimization feasibility by construction with a contact-aware input parameterization. dr-mpc moves the dynamics equality and affine input constraints into quadratic penalties and retains only nonempty box constraints. the resulting box-constrained quadratic program (qp) has a block-arrow hessian that enables the state and affine-output directions to be eliminated through a schur complement. the solver factors only the reduced control system after swing-force elimination and contact-aligned move blocking. for the evaluated implementations using the same dr-mpc formulation, our method achieves median end-to-end mpc speedups of $16.0\times$ over hpipm and $4.4\times$ over osqp, with comparable locomotion performance in simulation. dr-mpc achieves a median onboard mpc end-to-end time of $4.4$ ms and is validated on a unitree go1 quadruped. open-source code will be made available after publication.">
             <div class="card-meta-top">
                 <span class="rank-tag">TOP #4</span>
                 <div class="score-badge">
                     <span class="score-label">Priority Index</span>
-                    <span class="score-value">115</span>
+                    <span class="score-value">110</span>
                 </div>
             </div>
             
-            <h2 class="paper-title">Gated Residual Body-Hand Coordination for Whole-Body Humanoid Teleoperation</h2>
+            <h2 class="paper-title">DR-MPC: Fast and Feasible Dynamics-Relaxed Model-Predictive Control for Legged Locomotion</h2>
             
             <div class="author-row">
-                <span>🗓️ 2026-09-16</span>
-                <span>✍️ Ruiming Wu, Shuang Li, Liding Zhang et al.</span>
+                <span>🗓️ 2026-09-17</span>
+                <span>✍️ Run Wang, Alapati Tuerxun, Shuo Liu et al.</span>
             </div>
             
             <div class="badge-cluster">
-                <span class="badge">#humanoid</span><span class="badge">#teleoperation</span>
+                <span class="badge">#quadruped</span><span class="badge">#locomotion</span>
             </div>
             
-            <p class="paper-summary">Whole-body humanoid teleoperation commonly combines a motion-tracking policy with a separate dexterous-hand retargeter. However, independently generated commands do not explicitly preserve body-hand geometric relations, leading to mismatches in relative wrist poses and fingertip positions during bimanual interaction. We present a gated residual coordination framework that keeps both modules frozen and applies bounded corrections to their outputs. A motion-conditioned action gate allocates correction authority across joint groups, while reference-geometry-dependent reward gates emphasize relevant interaction objectives during training. To establish the nominal body controller on Agile One, we introduce multi-pose morphology calibration that jointly estimates triaxial scales and effector-local offsets, together with staged motion dataset curation for training a SONIC-based tracker. The residual policy uses human motion references, initial commands, and robot proprioception without explicit object or contact observations. In simulation, it reduces wrist and fingertip geometry errors by 39.2-56.3% over direct composition on held-out GRAB motions, while preserving whole-body tracking on AMASS, with success rates of 89.03% without residual coordination and 89.29% with it. Ablations characterize the contributions of reward gating, adaptive correction authority, and separate body and hand correction heads.</p>
+            <p class="paper-summary">This paper presents dynamics-relaxed model predictive control (DR-MPC), a novel MPC formulation for legged locomotion, and a tailored interior-point method (IPM) solver. The formulation combines online optimization feasibility by construction with a contact-aware input parameterization. DR-MPC moves the dynamics equality and affine input constraints into quadratic penalties and retains only nonempty box constraints. The resulting box-constrained quadratic program (QP) has a block-arrow Hessian that enables the state and affine-output directions to be eliminated through a Schur complement. The solver factors only the reduced control system after swing-force elimination and contact-aligned move blocking. For the evaluated implementations using the same DR-MPC formulation, our method achieves median end-to-end MPC speedups of $16.0\times$ over HPIPM and $4.4\times$ over OSQP, with comparable locomotion performance in simulation. DR-MPC achieves a median onboard MPC end-to-end time of $4.4$ ms and is validated on a Unitree Go1 quadruped. Open-source code will be made available after publication.</p>
             
             <div class="card-action-bar">
-                <a href="http://arxiv.org/pdf/2609.18763v1" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
+                <a href="http://arxiv.org/pdf/2609.20035v1" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
                     View PDF
                 </a>
-                <a href="http://arxiv.org/abs/2609.18763v1" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
+                <a href="http://arxiv.org/abs/2609.20035v1" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
                     arXiv Page &rarr;
                 </a>
             </div>
         </article>
         
-        <article class="paper-card" data-title="in-context robot learning with vlm agents" data-summary="enabling robots to adapt to unfamiliar environments as readily as humans remains a moonshot goal of embodied ai. no finite collection of demonstrations can cover every task and situation a robot will encounter, making the ability to learn from context at deployment essential for generalization. such in-context learning (icl), however, remains largely beyond the reach of existing robotic policies. the broad agentic capabilities of commercial vision-language models (vlms), such as gpt-6 astra, raise a compelling question: can these models learn from demonstrations, examples, and interaction feedback, then translate that information into executable and verifiable robot behavior from a new initial state without gradient updates or persistent changes to task-specific parameters? we introduce gpt-policy, a general-agent framework for in-context robot learning. gpt-policy integrates a context compiler that preserves task-relevant visual transitions, a vlm that proposes robot-tool actions, and a constrained controller that verifies and executes each action and reports its outcome. we evaluate its reliability and limitations through task success and efficiency metrics, matched comparisons across models, and controlled context ablations. in real-robot trials, human video demonstrations improve task completion even without robot action labels, while aligned action references yield further gains on contact-sensitive tasks. these findings position gpt-policy as a step toward robot adaptation through in-context learning, providing an empirical foundation for translating the general-purpose capabilities of vlms into physical behavior and clarifying the challenges that must be overcome for reliable deployment.">
+        <article class="paper-card" data-title="astronex-world 1.0: real-time interactive world model foundation" data-summary="we present astronex-world 1.0, an open controllable video world-model foundation. given a text prompt (text-to-video) or an initial observation (image-to-video), the model predicts future visual states under frame-aligned camera trajectories, continuous actions, and an embodiment identifier, and accepts text events inserted at a specified position of a rollout. the family provides a bidirectional model for full-context generation and a causal model with block-causal attention and cross-block kv caching for persistent generation, both built on the wan2.2-ti2v-5b prior. prope injects camera intrinsics and extrinsics, while a 64-dimensional action stream modulates every transformer layer. a five-stage training path develops bidirectional camera and action control, converts the backbone to block-causal generation, distills a few-step student, restores mixed-domain dynamics, and applies asymmetric dmd/dmd2 distribution matching. the causal model generates 832x480 video at 24 fps. all five training stages run on two nvidia l20 48 gb gpus, and the causal model streams in real time on one. it scores 73.5 on wbench navi and 70.0 on wbench full. on full, this 5b model is above the 13.6b longcat-video and the 14b helios, within one point of the 22b ltx-2.3, and above yume 1.5, which is post-trained from the same 5b prior on nvidia a100 gpus. the reserved action input and output interfaces allow post-training for embodied intelligence and autonomous driving.">
             <div class="card-meta-top">
                 <span class="rank-tag">TOP #5</span>
-                <div class="score-badge">
-                    <span class="score-label">Priority Index</span>
-                    <span class="score-value">100</span>
-                </div>
-            </div>
-            
-            <h2 class="paper-title">In-Context Robot Learning with VLM Agents</h2>
-            
-            <div class="author-row">
-                <span>🗓️ 2026-09-16</span>
-                <span>✍️ Dongzhou Cheng, Taoran Yi, Ye Fang et al.</span>
-            </div>
-            
-            <div class="badge-cluster">
-                <span class="badge">#embodied ai</span>
-            </div>
-            
-            <p class="paper-summary">Enabling robots to adapt to unfamiliar environments as readily as humans remains a moonshot goal of embodied AI. No finite collection of demonstrations can cover every task and situation a robot will encounter, making the ability to learn from context at deployment essential for generalization. Such in-context learning (ICL), however, remains largely beyond the reach of existing robotic policies. The broad agentic capabilities of commercial vision-language models (VLMs), such as GPT-6 Astra, raise a compelling question: can these models learn from demonstrations, examples, and interaction feedback, then translate that information into executable and verifiable robot behavior from a new initial state without gradient updates or persistent changes to task-specific parameters? We introduce GPT-Policy, a general-agent framework for in-context robot learning. GPT-Policy integrates a context compiler that preserves task-relevant visual transitions, a VLM that proposes robot-tool actions, and a constrained controller that verifies and executes each action and reports its outcome. We evaluate its reliability and limitations through task success and efficiency metrics, matched comparisons across models, and controlled context ablations. In real-robot trials, human video demonstrations improve task completion even without robot action labels, while aligned action references yield further gains on contact-sensitive tasks. These findings position GPT-Policy as a step toward robot adaptation through in-context learning, providing an empirical foundation for translating the general-purpose capabilities of VLMs into physical behavior and clarifying the challenges that must be overcome for reliable deployment.</p>
-            
-            <div class="card-action-bar">
-                <a href="http://arxiv.org/pdf/2609.19138v1" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
-                    View PDF
-                </a>
-                <a href="http://arxiv.org/abs/2609.19138v1" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
-                    arXiv Page &rarr;
-                </a>
-            </div>
-        </article>
-        
-        <article class="paper-card" data-title="adageovln: selective geometry across representation depth and navigation time for vision-language navigation" data-summary="vision-language navigation requires aligning language with visual observations while maintaining spatial understanding over time. geometry foundation models (gfms) expose intermediate representations throughout their hierarchy, but how navigation policies should use these features and retain historical geometric evidence remains unresolved. we introduce \method{}, a streaming vln framework that addresses these questions across \textbf{representation depth} and \textbf{navigation time}. hierarchical gfm--vlm fusion couples earlier, intermediate, and later gfm representations to successive policy stages instead of repeatedly injecting a terminal feature. navigation-aware gfm memory retains historical vggt global-attention kv states according to instruction relevance, geometric confidence, and transition novelty under a bounded per-layer budget. retained states provide geometric context for subsequent observations before fusion with the policy. across r2r-ce and rxr-ce, \method{} achieves strong performance using a single rgb stream without additional navigation-specific external data. controlled ablations show that multi-depth coupling substantially outperforms repeated terminal-feature injection at matched fusion locations. bounded navigation-aware retention preserves navigation performance while considerably reducing gfm-kv memory relative to larger-memory temporal retention. these findings support jointly examining the geometric representations exposed to the policy and the historical evidence retained for future inference. code will be released upon acceptance at https://humanoid-research.github.io/adageovln/.">
-            <div class="card-meta-top">
-                <span class="rank-tag">TOP #6</span>
-                <div class="score-badge">
-                    <span class="score-label">Priority Index</span>
-                    <span class="score-value">95</span>
-                </div>
-            </div>
-            
-            <h2 class="paper-title">AdaGeoVLN: Selective Geometry Across Representation Depth and Navigation Time for Vision-Language Navigation</h2>
-            
-            <div class="author-row">
-                <span>🗓️ 2026-09-16</span>
-                <span>✍️ Quan-Dung Pham, Anh Dao, Danh Vinh Le et al.</span>
-            </div>
-            
-            <div class="badge-cluster">
-                <span class="badge">#humanoid</span>
-            </div>
-            
-            <p class="paper-summary">Vision-language navigation requires aligning language with visual observations while maintaining spatial understanding over time. Geometry foundation models (GFMs) expose intermediate representations throughout their hierarchy, but how navigation policies should use these features and retain historical geometric evidence remains unresolved. We introduce \method{}, a streaming VLN framework that addresses these questions across \textbf{representation depth} and \textbf{navigation time}. Hierarchical GFM--VLM fusion couples earlier, intermediate, and later GFM representations to successive policy stages instead of repeatedly injecting a terminal feature. Navigation-aware GFM memory retains historical VGGT global-attention KV states according to instruction relevance, geometric confidence, and transition novelty under a bounded per-layer budget. Retained states provide geometric context for subsequent observations before fusion with the policy. Across R2R-CE and RxR-CE, \method{} achieves strong performance using a single RGB stream without additional navigation-specific external data. Controlled ablations show that multi-depth coupling substantially outperforms repeated terminal-feature injection at matched fusion locations. Bounded navigation-aware retention preserves navigation performance while considerably reducing GFM-KV memory relative to larger-memory temporal retention. These findings support jointly examining the geometric representations exposed to the policy and the historical evidence retained for future inference. Code will be released upon acceptance at https://humanoid-research.github.io/adageovln/.</p>
-            
-            <div class="card-action-bar">
-                <a href="http://arxiv.org/pdf/2609.18789v1" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
-                    View PDF
-                </a>
-                <a href="http://arxiv.org/abs/2609.18789v1" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
-                    arXiv Page &rarr;
-                </a>
-            </div>
-        </article>
-        
-        <article class="paper-card" data-title="pointzero: 3d point track completion for learning transferable 3d dynamics" data-summary="world models endow perceptual systems with the ability to predict how scenes evolve under interaction. they are most beneficial when trained on diverse volumes of data, to instill a rich prior into downstream applications. existing methods typically require robot action labels to learn action-conditioned 3d dynamics, which excludes web video data from the training pool. we study 3d point track completion as a pre-training objective for learning transferable 3d dynamics without robot data. given a single rgb-d observation and sparse partial 3d trajectories (tracks), we predict future 3d tracks of all observed points. we show this objective produces a rich 3d dynamics prior, without requiring robot action labels. we contribute a diverse dataset of 2.9 million synthetic frames spanning deformable, articulated, and rigid objects, and use it to train pointzero. we show that a flexible and expressive transformer, pointzero, outperforms prior methods on the same data. we demonstrate the utility of our pre-training objective by post-training pointzero for two downstream applications: (1) action-conditioned 3d dynamics prediction and (2) imitation learning. when fine-tuned to condition on end-effector pose, pointzero outperforms the baselines on the recent pgnd 3d dynamics benchmark. when fine-tuned to predict robot actions and 3d tracks, pointzero outperforms or matches the baselines on 6/7 simulated and real-world robot manipulation tasks. we furthermore evaluate training pointzero from scratch to isolate the benefits of our proposed architecture from those of our proposed pre-training objective and dataset. we release the dataset, checkpoints, and full training recipe.">
-            <div class="card-meta-top">
-                <span class="rank-tag">TOP #7</span>
                 <div class="score-badge">
                     <span class="score-label">Priority Index</span>
                     <span class="score-value">90</span>
                 </div>
             </div>
             
-            <h2 class="paper-title">PointZero: 3D Point Track Completion for Learning Transferable 3D Dynamics</h2>
+            <h2 class="paper-title">Astronex-World 1.0: Real-Time Interactive World Model Foundation</h2>
             
             <div class="author-row">
-                <span>🗓️ 2026-09-16</span>
-                <span>✍️ Bardienus P. Duisterhof, Kaifeng Zhang, Adam Hung et al.</span>
+                <span>🗓️ 2026-09-17</span>
+                <span>✍️ Xin Zhou, Cong Miao</span>
             </div>
             
             <div class="badge-cluster">
                 <span class="badge">#world model</span>
             </div>
             
-            <p class="paper-summary">World models endow perceptual systems with the ability to predict how scenes evolve under interaction. They are most beneficial when trained on diverse volumes of data, to instill a rich prior into downstream applications. Existing methods typically require robot action labels to learn action-conditioned 3D dynamics, which excludes web video data from the training pool. We study 3D point track completion as a pre-training objective for learning transferable 3D dynamics without robot data. Given a single RGB-D observation and sparse partial 3D trajectories (tracks), we predict future 3D tracks of all observed points. We show this objective produces a rich 3D dynamics prior, without requiring robot action labels. We contribute a diverse dataset of 2.9 million synthetic frames spanning deformable, articulated, and rigid objects, and use it to train PointZero. We show that a flexible and expressive transformer, PointZero, outperforms prior methods on the same data. We demonstrate the utility of our pre-training objective by post-training PointZero for two downstream applications: (1) action-conditioned 3D dynamics prediction and (2) imitation learning. When fine-tuned to condition on end-effector pose, PointZero outperforms the baselines on the recent PGND 3D dynamics benchmark. When fine-tuned to predict robot actions and 3D tracks, PointZero outperforms or matches the baselines on 6/7 simulated and real-world robot manipulation tasks. We furthermore evaluate training PointZero from scratch to isolate the benefits of our proposed architecture from those of our proposed pre-training objective and dataset. We release the dataset, checkpoints, and full training recipe.</p>
+            <p class="paper-summary">We present Astronex-World 1.0, an open controllable video world-model foundation. Given a text prompt (text-to-video) or an initial observation (image-to-video), the model predicts future visual states under frame-aligned camera trajectories, continuous actions, and an embodiment identifier, and accepts text events inserted at a specified position of a rollout. The family provides a bidirectional model for full-context generation and a causal model with block-causal attention and cross-block KV caching for persistent generation, both built on the Wan2.2-TI2V-5B prior. PRoPE injects camera intrinsics and extrinsics, while a 64-dimensional action stream modulates every Transformer layer. A five-stage training path develops bidirectional camera and action control, converts the backbone to block-causal generation, distills a few-step student, restores mixed-domain dynamics, and applies asymmetric DMD/DMD2 distribution matching. The causal model generates 832x480 video at 24 fps. All five training stages run on two NVIDIA L20 48 GB GPUs, and the causal model streams in real time on one. It scores 73.5 on WBench Navi and 70.0 on WBench Full. On Full, this 5B model is above the 13.6B LongCat-Video and the 14B Helios, within one point of the 22B LTX-2.3, and above YUME 1.5, which is post-trained from the same 5B prior on NVIDIA A100 GPUs. The reserved action input and output interfaces allow post-training for embodied intelligence and autonomous driving.</p>
             
             <div class="card-action-bar">
-                <a href="http://arxiv.org/pdf/2609.19142v1" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
+                <a href="http://arxiv.org/pdf/2609.20034v1" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
                     View PDF
                 </a>
-                <a href="http://arxiv.org/abs/2609.19142v1" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
+                <a href="http://arxiv.org/abs/2609.20034v1" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
                     arXiv Page &rarr;
                 </a>
             </div>
         </article>
         
-        <article class="paper-card" data-title="body-motion control of a simulated aerial swarm from a first-person view" data-summary="first-person-view (fpv) teleoperation of aerial swarms requires an operator to coordinate collective translation, viewing direction, and formation spacing. we present an upper-body interface that maps torso inclination, hand position, and head rotation to five continuous command dimensions. neutral postures and motion ranges are calibrated for each participant. in a within-subject study, 14 participants navigated a simulated 15-agent swarm through three-dimensional obstacle courses using this interface and a conventional transmitter. body-motion control reduced completion time by 19.4% and centroid path length by 7.0%, and increased path directness. delivered-command variation was 88.8% lower, and concurrent command changes were more frequent. these command measures characterize the complete interfaces, which differed in calibration and filtering. no differences were detected in gate-centering error, collection yield, crash or disconnection counts, overall workload, or usability. all participants reported higher physical demand with body-motion control. the implemented interface therefore improved fpv navigation efficiency at the cost of greater physical demand.">
+        <article class="paper-card" data-title="robofind: multi-agent personalized object search for people who are blind or have low vision" data-summary="blind and low-vision users often need to locate a specific personal object rather than an arbitrary instance of the same category. the task calls for a robot that can move through the space and reach viewpoints the user cannot, and for an accessible interface where the user says which object is meant and learns whether the right one was found. we present robofind, a multi-agent framework in which a smartphone teaches the target and a quadruped robot carries out the search. a target teaching agent converts guided smartphone recordings into a semantic target profile and a reusable multi-view reference bank through an accessible capture flow with ar guidance, speech and haptic feedback, and screen-reader support, so later missions refer to a stored object without repeating the teaching process. at runtime, a navigation agent explores the environment and proposes candidate targets, a verification agent checks each candidate against the stored references, and a coordination and recovery agent completes the mission or triggers recovery and continued search. across 32 real-robot missions, robofind reaches 85.0% success against 25.0% for a reconstructed sequential first-stop baseline over 20 trials with ten targets, and reduces false success from 75.0% to 5.0%. on six shared targets it succeeds in 10/12 trials, against 5/12 for 12 independently executed gpt-6 astra-only trials. these results show that the multi-agent design fits the demands of personalized object search, where verifying object identity before declaring completion is what makes the outcome something a user can rely on.">
+            <div class="card-meta-top">
+                <span class="rank-tag">TOP #6</span>
+                <div class="score-badge">
+                    <span class="score-label">Priority Index</span>
+                    <span class="score-value">85</span>
+                </div>
+            </div>
+            
+            <h2 class="paper-title">RoboFind: Multi-Agent Personalized Object Search for People Who Are Blind or Have Low Vision</h2>
+            
+            <div class="author-row">
+                <span>🗓️ 2026-09-17</span>
+                <span>✍️ Ruiping Liu, Shaofang Quan, Qian Yin et al.</span>
+            </div>
+            
+            <div class="badge-cluster">
+                <span class="badge">#quadruped</span>
+            </div>
+            
+            <p class="paper-summary">Blind and low-vision users often need to locate a specific personal object rather than an arbitrary instance of the same category. The task calls for a robot that can move through the space and reach viewpoints the user cannot, and for an accessible interface where the user says which object is meant and learns whether the right one was found. We present RoboFind, a multi-agent framework in which a smartphone teaches the target and a quadruped robot carries out the search. A Target Teaching Agent converts guided smartphone recordings into a semantic target profile and a reusable multi-view reference bank through an accessible capture flow with AR guidance, speech and haptic feedback, and screen-reader support, so later missions refer to a stored object without repeating the teaching process. At runtime, a Navigation Agent explores the environment and proposes candidate targets, a Verification Agent checks each candidate against the stored references, and a Coordination and Recovery Agent completes the mission or triggers recovery and continued search. Across 32 real-robot missions, RoboFind reaches 85.0% success against 25.0% for a reconstructed sequential first-stop baseline over 20 trials with ten targets, and reduces false success from 75.0% to 5.0%. On six shared targets it succeeds in 10/12 trials, against 5/12 for 12 independently executed GPT-6 Astra-only trials. These results show that the multi-agent design fits the demands of personalized object search, where verifying object identity before declaring completion is what makes the outcome something a user can rely on.</p>
+            
+            <div class="card-action-bar">
+                <a href="http://arxiv.org/pdf/2609.20330v1" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
+                    View PDF
+                </a>
+                <a href="http://arxiv.org/abs/2609.20330v1" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
+                    arXiv Page &rarr;
+                </a>
+            </div>
+        </article>
+        
+        <article class="paper-card" data-title="mechanical precision weeding with a quadruped robot" data-summary="herbicide-based weed control is increasingly unsustainable due to rising weed resistance and the adverse environmental impacts of chemical use. while mechanical weed control avoids these drawbacks, it is typically implemented using large machines that cause soil compaction. we propose a novel alternative based on small mobile robots for mechanical weeding. compared with existing automated mechanical weeding approaches, the proposed method offers reduced soil compaction, simpler automation, and improved scalability. our solution involves a boston dynamics spot quadruped robot equipped with a custom weed removal tool featuring a milling bit at its end. the tool is rigidly attached to the robot and uses the degrees of freedom of the robot base by actuating the legs, while keeping the feet stationary. we develop a software architecture that enables autonomous weed removal and integrate this system with all other required components. we analyze the accuracy and efficiency of the current proof of concept both in an indoor and outdoor environment and provide recommendations for future work to make the system more accurate and efficient.">
+            <div class="card-meta-top">
+                <span class="rank-tag">TOP #7</span>
+                <div class="score-badge">
+                    <span class="score-label">Priority Index</span>
+                    <span class="score-value">85</span>
+                </div>
+            </div>
+            
+            <h2 class="paper-title">Mechanical Precision Weeding with a Quadruped Robot</h2>
+            
+            <div class="author-row">
+                <span>🗓️ 2026-09-17</span>
+                <span>✍️ Ruben Beumer, Tom Janssen, René van de Molengraft et al.</span>
+            </div>
+            
+            <div class="badge-cluster">
+                <span class="badge">#quadruped</span>
+            </div>
+            
+            <p class="paper-summary">Herbicide-based weed control is increasingly unsustainable due to rising weed resistance and the adverse environmental impacts of chemical use. While mechanical weed control avoids these drawbacks, it is typically implemented using large machines that cause soil compaction. We propose a novel alternative based on small mobile robots for mechanical weeding. Compared with existing automated mechanical weeding approaches, the proposed method offers reduced soil compaction, simpler automation, and improved scalability. Our solution involves a Boston Dynamics Spot quadruped robot equipped with a custom weed removal tool featuring a milling bit at its end. The tool is rigidly attached to the robot and uses the degrees of freedom of the robot base by actuating the legs, while keeping the feet stationary. We develop a software architecture that enables autonomous weed removal and integrate this system with all other required components. We analyze the accuracy and efficiency of the current proof of concept both in an indoor and outdoor environment and provide recommendations for future work to make the system more accurate and efficient.</p>
+            
+            <div class="card-action-bar">
+                <a href="http://arxiv.org/pdf/2609.20048v1" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
+                    View PDF
+                </a>
+                <a href="http://arxiv.org/abs/2609.20048v1" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
+                    arXiv Page &rarr;
+                </a>
+            </div>
+        </article>
+        
+        <article class="paper-card" data-title="safety-critical scenanrio emerges from initial scene" data-summary="safety-critical driving scenario generation has largely focused on manipulating the behavior of surrounding agents while starting from an initial scene from driving data. this assumption can limit the space of discoverable failures, since driving data can provide little opportunity for meaningful interaction. for example, in the waymo open motion dataset, 20.44% of recorded slices feature a stationary ego vehicle that never moves, and 30.39% of initial frames contain no nearby traffic participants within 10 meters. we instead study safety-critical scenario generation as an initialization problem: given agnostic black-box driving policies, we learn to generate realistic initial scenes that are more likely to evolve into critical interactions. we propose advscene, a conditional latent diffusion model that is trained in two stages. starting from pretraining on naturalistic driving data, we post-train the adversarial-agent generation branch using reinforcement learning with feedback from closed-loop simulator rollouts. conditioning on ego driving displacement prevents the ego from remaining static, and rl finetuning induces criticality directly with non-differentiable safety-critical metrics. experiments on the waymo dataset across 12 combinations of ego and traffic policies show that our advscene substantially increases the rate of ego-fault collision events and ttc<3s events.">
             <div class="card-meta-top">
                 <span class="rank-tag">TOP #8</span>
                 <div class="score-badge">
                     <span class="score-label">Priority Index</span>
-                    <span class="score-value">70</span>
+                    <span class="score-value">80</span>
                 </div>
             </div>
             
-            <h2 class="paper-title">Body-Motion Control of a Simulated Aerial Swarm from a First-Person View</h2>
+            <h2 class="paper-title">Safety-Critical Scenanrio Emerges from Initial Scene</h2>
             
             <div class="author-row">
-                <span>🗓️ 2026-09-16</span>
-                <span>✍️ Yang Chen, Darius Giannoli, Dario Floreano</span>
+                <span>🗓️ 2026-09-17</span>
+                <span>✍️ Yin Wu, Jiarong Wei, Carl Esselborn et al.</span>
             </div>
             
             <div class="badge-cluster">
-                <span class="badge">#teleoperation</span>
+                <span class="badge">#reinforcement learning</span>
             </div>
             
-            <p class="paper-summary">First-person-view (FPV) teleoperation of aerial swarms requires an operator to coordinate collective translation, viewing direction, and formation spacing. We present an upper-body interface that maps torso inclination, hand position, and head rotation to five continuous command dimensions. Neutral postures and motion ranges are calibrated for each participant. In a within-subject study, 14 participants navigated a simulated 15-agent swarm through three-dimensional obstacle courses using this interface and a conventional transmitter. Body-motion control reduced completion time by 19.4% and centroid path length by 7.0%, and increased path directness. Delivered-command variation was 88.8% lower, and concurrent command changes were more frequent. These command measures characterize the complete interfaces, which differed in calibration and filtering. No differences were detected in gate-centering error, collection yield, crash or disconnection counts, overall workload, or usability. All participants reported higher physical demand with body-motion control. The implemented interface therefore improved FPV navigation efficiency at the cost of greater physical demand.</p>
+            <p class="paper-summary">Safety-critical driving scenario generation has largely focused on manipulating the behavior of surrounding agents while starting from an initial scene from driving data. This assumption can limit the space of discoverable failures, since driving data can provide little opportunity for meaningful interaction. For example, in the Waymo Open Motion Dataset, 20.44% of recorded slices feature a stationary ego vehicle that never moves, and 30.39% of initial frames contain no nearby traffic participants within 10 meters. We instead study safety-critical scenario generation as an initialization problem: given agnostic black-box driving policies, we learn to generate realistic initial scenes that are more likely to evolve into critical interactions. We propose AdvScene, a conditional latent diffusion model that is trained in two stages. Starting from pretraining on naturalistic driving data, we post-train the adversarial-agent generation branch using reinforcement learning with feedback from closed-loop simulator rollouts. Conditioning on ego driving displacement prevents the ego from remaining static, and RL finetuning induces criticality directly with non-differentiable safety-critical metrics. Experiments on the Waymo dataset across 12 combinations of ego and traffic policies show that our AdvScene substantially increases the rate of ego-fault collision events and TTC<3s events.</p>
             
             <div class="card-action-bar">
-                <a href="http://arxiv.org/pdf/2609.18881v1" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
+                <a href="http://arxiv.org/pdf/2609.20103v1" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
                     View PDF
                 </a>
-                <a href="http://arxiv.org/abs/2609.18881v1" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
+                <a href="http://arxiv.org/abs/2609.20103v1" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
                     arXiv Page &rarr;
                 </a>
             </div>

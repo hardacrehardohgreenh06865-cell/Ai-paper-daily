@@ -1,61 +1,61 @@
-# 🤖 Embodied AI & Robotics Frontier Briefing (2026-09-17)
+# 🤖 Embodied AI & Robotics Frontier Briefing (2026-09-18)
 
 > *Automated Intelligence Briefing generated via custom ETL scoring pipeline. Prioritizes foundation models, manipulation, locomotion, and physical AI systems.*
 
 ---
 
-### Top 1: Learning Holistic Whole-Body Loco-Manipulation with a Bipedal Mobile Manipulator
-- **Priority Score**: `195 pts` | **Published**: `2026-09-16`
-- **Focus Tracks**: `#bipedal` `#reinforcement learning` `#locomotion` `#diffusion policy` `#teleoperation`
-- **Key Authors**: Zhongyu Chen, Yuxuan Nai, Qian Chen et al.
-- **Direct Access**: [arXiv Abstract](http://arxiv.org/abs/2609.18930v1) | [PDF Fulltext](http://arxiv.org/pdf/2609.18930v1)
+### Top 1: Compliance for Free: Learning Identifiable Impedance via Bilateral Teleoperation
+- **Priority Score**: `155 pts` | **Published**: `2026-09-17`
+- **Focus Tracks**: `#vision-language-action` `#vla` `#teleoperation`
+- **Key Authors**: Harsha Guda, Adrià Colomé, Carme Torras
+- **Direct Access**: [arXiv Abstract](http://arxiv.org/abs/2609.19976v1) | [PDF Fulltext](http://arxiv.org/pdf/2609.19976v1)
 
 **Executive Abstract**:
-> Bipedal loco-manipulation enables robots to interact with objects beyond the nominal workspace of their arms by coordinating locomotion and manipulation. Realizing this capability requires a low-level whole-body controller that translates task-level manipulation goals into coordinated arm and leg motions while maintaining balance. We present a unified whole-body controller trained with reinforcement learning that directly maps 6-DoF end-effector targets to coordinated actions for the bipedal base and robotic arm. Given only an end-effector target, the learned controller autonomously coordinates reaching, postural adaptation, and stepping without explicit base-velocity or footstep commands. A reward-gating strategy regulates the trade-offs among end-effector tracking, locomotion, and balance during training, while a temporal context estimator combines windowed Transformer encoding, recurrent GRU memory, and auxiliary dynamics prediction to extract dynamics-relevant information from observation history. Real-robot experiments demonstrate that the same controller supports reaching, postural adaptation, and stepping under commands from VR teleoperation, a learned diffusion policy, and scripted trajectories, providing a common end-effector interface for diverse manipulation tasks.
+> Vision-language-action models tell a robot where to move, but not how hard to push. Contact-rich tasks depend on that second quantity, compliance, yet no widely used demonstration interface records it. The obstacle is identifiability as realized pose and measured force cannot separate the operator's intended equilibrium from their stiffness, so VR controllers, SpaceMouse and handheld grippers cannot supply compliance supervision even in principle. Prior compliance-output policies work around this with hand-specified task structure, privileged simulation contact state, or dedicated force and tactile hardware. Four-channel bilateral teleoperation removes the ambiguity directly by using the leader arm as a separate measurement of the intended equilibrium, making per-axis stiffness identifiable by regression using only the joint-torque sensing already on the manipulator. This yields per-timestep, direction-dependent compliance labels at zero annotation cost, which we use to fine-tune a VLA to emit stiffness alongside pose. On a Franka Research 3 wiping task, ours is the only policy of five whose contact force changes when the instruction asks for a firm wipe rather than a normal one (6.4N (normal) to 9.1N (firm) RMS, Cohen's d = 0.89, p = 0.023
 
 ---
 
-### Top 2: rMuscle: Robotic Muscle Memory for Efficient Vision-Language-Action Model Inference
-- **Priority Score**: `185 pts` | **Published**: `2026-09-16`
-- **Focus Tracks**: `#embodied ai` `#vision-language-action` `#vla`
-- **Key Authors**: Kaijun Zhou, Zhiyang Li, Le Chen et al.
-- **Direct Access**: [arXiv Abstract](http://arxiv.org/abs/2609.19104v1) | [PDF Fulltext](http://arxiv.org/pdf/2609.19104v1)
+### Top 2: Co-VLA: Consensus-based Federated Training for Vision-Language-Action Models
+- **Priority Score**: `135 pts` | **Published**: `2026-09-17`
+- **Focus Tracks**: `#vision-language-action` `#vla`
+- **Key Authors**: Haolong Li, Guner Dilsad Er, Michael Muehlebach et al.
+- **Direct Access**: [arXiv Abstract](http://arxiv.org/abs/2609.19923v1) | [PDF Fulltext](http://arxiv.org/pdf/2609.19923v1)
 
 **Executive Abstract**:
-> Factory work is a promising early scenario for embodied AI: assigning repetitive manual jobs to robots has clear economic payoff, and a structured station keeps the jobs tractable for current policies. Vision-Language-Action (VLA) models now dominate as the policy paradigm for these robots. The inference latency of VLA models directly affects robot responsiveness and motion smoothness. However, existing VLA inference frameworks do not fully exploit the characteristics of embodied workloads or account for the distinct bottlenecks across different stages of VLA inference. In this paper, we first characterize embodied workloads and identify substantial task similarity across repeated robot executions. We further find that such similarity extends beyond observations and action trajectories to internal model states. Drawing on these observations, we present rMuscle, a real-time VLA inference framework inspired by human muscle memory. It exploits cross-execution similarity through a dual-phase muscle-memory cache. The Context Cache reuses visual-token outputs to reduce computation, while the Action Cache reuses neuron activation patterns to reduce weight accesses. We keep both the cache memory footprint and access overhead low through online cache recomputation, sliding-window cache retrieval, and mask sharing across consecutive denoising steps. rMuscle achieves 1.29-1.42X speedup on RTX 4090 and Jetson Thor across LIBERO, RoboTwin, and physical manipulation tasks, while maintaining the original success rates on real-world robots.
+> Vision-language-action models (VLAs) have emerged as a promising paradigm for general-purpose robot learning, with performance improving as models and datasets scale. Scaling robot data collection, however, remains challenging because data are naturally distributed across robots, tasks, and locations, making centralization costly or impractical. Federated learning offers a way to train on decentralized robot data, but applying it to VLAs requires accounting for heterogeneous robot client data distributions. We present Co-VLA, which applies consensus optimization using the Alternating Direction Method of Multipliers~(ADMM) to federated VLA training. We show that the same algorithm supports both full-model training and parameter-efficient fine-tuning with both fixed-rank and rank-adaptive adapters. The name Co-VLA reflects both consensus and collaboration: clients with different local robot datasets collaboratively train a shared model without sharing their data. Our experiments demonstrate that Co-VLA achieves performance comparable to centralized training in both full-model training and parameter-efficient fine-tuning settings.
 
 ---
 
-### Top 3: KINO: A Keyframe Interface for VLM Planning and Whole-Body Control in Humanoid Loco-Manipulation
-- **Priority Score**: `125 pts` | **Published**: `2026-09-16`
-- **Focus Tracks**: `#humanoid` `#reinforcement learning`
-- **Key Authors**: Sitong Chen, Fatemeh Zargarbashi, Jin Cheng et al.
-- **Direct Access**: [arXiv Abstract](http://arxiv.org/abs/2609.18869v1) | [PDF Fulltext](http://arxiv.org/pdf/2609.18869v1)
+### Top 3: AnyViewDex: View-Invariant Dexterous Manipulation from RGB Observations
+- **Priority Score**: `110 pts` | **Published**: `2026-09-17`
+- **Focus Tracks**: `#reinforcement learning` `#dexterous manipulation`
+- **Key Authors**: Soham Patil, Om Sanjay Gunjal, Sourabh Bhosale et al.
+- **Direct Access**: [arXiv Abstract](http://arxiv.org/abs/2609.20107v1) | [PDF Fulltext](http://arxiv.org/pdf/2609.20107v1)
 
 **Executive Abstract**:
-> Humanoid loco-manipulation requires robots to interpret task instructions and scene semantics while executing coordinated whole-body motions. We propose a hierarchical framework that uses motion keyframes as an intermediate representation between Vision-Language Model (VLM) planning and Reinforcement Learning (RL) control. Each keyframe specifies a target whole-body robot pose and, when applicable, an object pose. Given a language instruction, scene observations, and execution feedback, the VLM selects successive task-relevant keyframes from a predefined library. The selected keyframes are retargeted to the current scene to account for object poses and dimensions. A keyframe-conditioned whole-body policy then generates joint-level actions to reach these goals. We introduce a saliency-based keyframe sampling strategy for low-level policy training that improves end-to-end task success rate from 44% to 92% when using sparse VLM keyframes. We evaluate our framework on object pickup, transport, and placement tasks in simulation and on a Unitree G1 humanoid. The system successfully performs both one- and two-handed manipulation and generalises to placement locations beyond the training reference data.
+> Visuomotor policies for multi-fingered dexterous manipulation are highly sensitive to camera viewpoint shifts. To achieve view invariance, recent methods increasingly rely on explicit 3D modalities like RGB-D or point clouds, which can introduce hardware dependencies, calibration requirements, and vulnerability to sensor noise during real-world deployment. In this work, we show that view-invariant control can be achieved without explicit test-time 3D sensing by encoding geometric knowledge into the visual representation during simulation. We present AnyViewDex, an asymmetric training pipeline that combines multi-view contrastive alignment with privileged 3D geometric supervision. By regressing absolute 3D object coordinates during simulated training, this auxiliary objective provides a geometric grounding signal that mitigates the spatial collapse of the globally pooled contrastive embedding. At deployment, the policy operates zero-shot using only uncalibrated monocular RGB and proprioception. We validate this approach across both reinforcement learning and student-teacher distillation. In hardware evaluation on an xArm7 with a 16-DoF LEAP Hand, AnyViewDex reaches 76.7% grasping success across eight unseen objects and six uncalibrated viewpoints (480 trials; 2,400 across all ablation conditions), indicating that geometrically grounded monocular policies transfer zero-shot without test-time depth. Project Page: https://anyviewdex.github.io/
 
 ---
 
-### Top 4: Gated Residual Body-Hand Coordination for Whole-Body Humanoid Teleoperation
-- **Priority Score**: `115 pts` | **Published**: `2026-09-16`
-- **Focus Tracks**: `#humanoid` `#teleoperation`
-- **Key Authors**: Ruiming Wu, Shuang Li, Liding Zhang et al.
-- **Direct Access**: [arXiv Abstract](http://arxiv.org/abs/2609.18763v1) | [PDF Fulltext](http://arxiv.org/pdf/2609.18763v1)
+### Top 4: DR-MPC: Fast and Feasible Dynamics-Relaxed Model-Predictive Control for Legged Locomotion
+- **Priority Score**: `110 pts` | **Published**: `2026-09-17`
+- **Focus Tracks**: `#quadruped` `#locomotion`
+- **Key Authors**: Run Wang, Alapati Tuerxun, Shuo Liu et al.
+- **Direct Access**: [arXiv Abstract](http://arxiv.org/abs/2609.20035v1) | [PDF Fulltext](http://arxiv.org/pdf/2609.20035v1)
 
 **Executive Abstract**:
-> Whole-body humanoid teleoperation commonly combines a motion-tracking policy with a separate dexterous-hand retargeter. However, independently generated commands do not explicitly preserve body-hand geometric relations, leading to mismatches in relative wrist poses and fingertip positions during bimanual interaction. We present a gated residual coordination framework that keeps both modules frozen and applies bounded corrections to their outputs. A motion-conditioned action gate allocates correction authority across joint groups, while reference-geometry-dependent reward gates emphasize relevant interaction objectives during training. To establish the nominal body controller on Agile One, we introduce multi-pose morphology calibration that jointly estimates triaxial scales and effector-local offsets, together with staged motion dataset curation for training a SONIC-based tracker. The residual policy uses human motion references, initial commands, and robot proprioception without explicit object or contact observations. In simulation, it reduces wrist and fingertip geometry errors by 39.2-56.3% over direct composition on held-out GRAB motions, while preserving whole-body tracking on AMASS, with success rates of 89.03% without residual coordination and 89.29% with it. Ablations characterize the contributions of reward gating, adaptive correction authority, and separate body and hand correction heads.
+> This paper presents dynamics-relaxed model predictive control (DR-MPC), a novel MPC formulation for legged locomotion, and a tailored interior-point method (IPM) solver. The formulation combines online optimization feasibility by construction with a contact-aware input parameterization. DR-MPC moves the dynamics equality and affine input constraints into quadratic penalties and retains only nonempty box constraints. The resulting box-constrained quadratic program (QP) has a block-arrow Hessian that enables the state and affine-output directions to be eliminated through a Schur complement. The solver factors only the reduced control system after swing-force elimination and contact-aligned move blocking. For the evaluated implementations using the same DR-MPC formulation, our method achieves median end-to-end MPC speedups of $16.0\times$ over HPIPM and $4.4\times$ over OSQP, with comparable locomotion performance in simulation. DR-MPC achieves a median onboard MPC end-to-end time of $4.4$ ms and is validated on a Unitree Go1 quadruped. Open-source code will be made available after publication.
 
 ---
 
-### Top 5: In-Context Robot Learning with VLM Agents
-- **Priority Score**: `100 pts` | **Published**: `2026-09-16`
-- **Focus Tracks**: `#embodied ai`
-- **Key Authors**: Dongzhou Cheng, Taoran Yi, Ye Fang et al.
-- **Direct Access**: [arXiv Abstract](http://arxiv.org/abs/2609.19138v1) | [PDF Fulltext](http://arxiv.org/pdf/2609.19138v1)
+### Top 5: Astronex-World 1.0: Real-Time Interactive World Model Foundation
+- **Priority Score**: `90 pts` | **Published**: `2026-09-17`
+- **Focus Tracks**: `#world model`
+- **Key Authors**: Xin Zhou, Cong Miao
+- **Direct Access**: [arXiv Abstract](http://arxiv.org/abs/2609.20034v1) | [PDF Fulltext](http://arxiv.org/pdf/2609.20034v1)
 
 **Executive Abstract**:
-> Enabling robots to adapt to unfamiliar environments as readily as humans remains a moonshot goal of embodied AI. No finite collection of demonstrations can cover every task and situation a robot will encounter, making the ability to learn from context at deployment essential for generalization. Such in-context learning (ICL), however, remains largely beyond the reach of existing robotic policies. The broad agentic capabilities of commercial vision-language models (VLMs), such as GPT-6 Astra, raise a compelling question: can these models learn from demonstrations, examples, and interaction feedback, then translate that information into executable and verifiable robot behavior from a new initial state without gradient updates or persistent changes to task-specific parameters? We introduce GPT-Policy, a general-agent framework for in-context robot learning. GPT-Policy integrates a context compiler that preserves task-relevant visual transitions, a VLM that proposes robot-tool actions, and a constrained controller that verifies and executes each action and reports its outcome. We evaluate its reliability and limitations through task success and efficiency metrics, matched comparisons across models, and controlled context ablations. In real-robot trials, human video demonstrations improve task completion even without robot action labels, while aligned action references yield further gains on contact-sensitive tasks. These findings position GPT-Policy as a step toward robot adaptation through in-context learning, providing an empirical foundation for translating the general-purpose capabilities of VLMs into physical behavior and clarifying the challenges that must be overcome for reliable deployment.
+> We present Astronex-World 1.0, an open controllable video world-model foundation. Given a text prompt (text-to-video) or an initial observation (image-to-video), the model predicts future visual states under frame-aligned camera trajectories, continuous actions, and an embodiment identifier, and accepts text events inserted at a specified position of a rollout. The family provides a bidirectional model for full-context generation and a causal model with block-causal attention and cross-block KV caching for persistent generation, both built on the Wan2.2-TI2V-5B prior. PRoPE injects camera intrinsics and extrinsics, while a 64-dimensional action stream modulates every Transformer layer. A five-stage training path develops bidirectional camera and action control, converts the backbone to block-causal generation, distills a few-step student, restores mixed-domain dynamics, and applies asymmetric DMD/DMD2 distribution matching. The causal model generates 832x480 video at 24 fps. All five training stages run on two NVIDIA L20 48 GB GPUs, and the causal model streams in real time on one. It scores 73.5 on WBench Navi and 70.0 on WBench Full. On Full, this 5B model is above the 13.6B LongCat-Video and the 14B Helios, within one point of the 22B LTX-2.3, and above YUME 1.5, which is post-trained from the same 5B prior on NVIDIA A100 GPUs. The reserved action input and output interfaces allow post-training for embodied intelligence and autonomous driving.
 
 ---
 
