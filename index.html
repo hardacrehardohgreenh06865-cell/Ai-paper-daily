@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Embodied AI & Robotics Intelligence Digest — September 18, 2026</title>
+    <title>Embodied AI & Robotics Intelligence Digest — September 19, 2026</title>
     <style>
         :root {
             --bg-base: #080c14;
@@ -242,7 +242,7 @@
         <header>
             <span class="pill-brand">Autonomous Research Intelligence</span>
             <h1>Embodied AI & Physical Frontier Briefing</h1>
-            <p class="subtitle">Compiled on September 18, 2026 • Ranked top 8 strategic breakthroughs out of incoming preprints.</p>
+            <p class="subtitle">Compiled on September 19, 2026 • Ranked top 8 strategic breakthroughs out of incoming preprints.</p>
             
             <div class="controls">
                 <input type="text" id="filterInput" class="search-box" placeholder="Filter papers by keywords (e.g. humanoid, tactile, diffusion)...">
@@ -251,39 +251,39 @@
 
         <main id="paperList">
             
-        <article class="paper-card" data-title="compliance for free: learning identifiable impedance via bilateral teleoperation" data-summary="vision-language-action models tell a robot where to move, but not how hard to push. contact-rich tasks depend on that second quantity, compliance, yet no widely used demonstration interface records it. the obstacle is identifiability as realized pose and measured force cannot separate the operator's intended equilibrium from their stiffness, so vr controllers, spacemouse and handheld grippers cannot supply compliance supervision even in principle. prior compliance-output policies work around this with hand-specified task structure, privileged simulation contact state, or dedicated force and tactile hardware. four-channel bilateral teleoperation removes the ambiguity directly by using the leader arm as a separate measurement of the intended equilibrium, making per-axis stiffness identifiable by regression using only the joint-torque sensing already on the manipulator. this yields per-timestep, direction-dependent compliance labels at zero annotation cost, which we use to fine-tune a vla to emit stiffness alongside pose. on a franka research 3 wiping task, ours is the only policy of five whose contact force changes when the instruction asks for a firm wipe rather than a normal one (6.4n (normal) to 9.1n (firm) rms, cohen's d = 0.89, p = 0.023">
+        <article class="paper-card" data-title="geoaac: geometry-based adaptive action chunking from denoising trajectories in vla policies" data-summary="action chunking is widely used for action generation and execution in vision-language-action (vla) policies, yet existing approaches commonly use a fixed action horizon. during a rollout, different task stages may require different levels of action continuity, control precision, and closed-loop feedback, making a fixed horizon unable to accommodate changing control requirements. we propose \textbf{geoaac}, a geometry-based adaptive action chunking method for flow-based vla policies that adjusts the action horizon according to the reliability of the current action prediction. we show that the geometry of flow matching denoising trajectories provides process-level information for characterizing prediction reliability, with geometric variation across action prefixes remaining positively correlated with predictive uncertainty. geoaac uses this prefix-wise geometry to construct a horizon-wise geometric profile and adaptively determine the action horizon from a single generation without additional training. experiments with gr00t n1.5 and π0.5 on libero, libero-pro, robocasa365, and real-world manipulation tasks show consistent improvements over fixed-action-horizon baselines and existing adaptive methods, including up to 8.7 percentage points in simulation and an increase in average real-world success rate from 53.3\% to 74.4\%.">
             <div class="card-meta-top">
                 <span class="rank-tag">TOP #1</span>
                 <div class="score-badge">
                     <span class="score-label">Priority Index</span>
-                    <span class="score-value">155</span>
+                    <span class="score-value">135</span>
                 </div>
             </div>
             
-            <h2 class="paper-title">Compliance for Free: Learning Identifiable Impedance via Bilateral Teleoperation</h2>
+            <h2 class="paper-title">GeoAAC: Geometry-Based Adaptive Action Chunking from Denoising Trajectories in VLA Policies</h2>
             
             <div class="author-row">
                 <span>🗓️ 2026-09-17</span>
-                <span>✍️ Harsha Guda, Adrià Colomé, Carme Torras</span>
+                <span>✍️ Xin Chen, Sen Chen, Yujuan Ding et al.</span>
             </div>
             
             <div class="badge-cluster">
-                <span class="badge">#vision-language-action</span><span class="badge">#vla</span><span class="badge">#teleoperation</span>
+                <span class="badge">#vision-language-action</span><span class="badge">#vla</span>
             </div>
             
-            <p class="paper-summary">Vision-language-action models tell a robot where to move, but not how hard to push. Contact-rich tasks depend on that second quantity, compliance, yet no widely used demonstration interface records it. The obstacle is identifiability as realized pose and measured force cannot separate the operator's intended equilibrium from their stiffness, so VR controllers, SpaceMouse and handheld grippers cannot supply compliance supervision even in principle. Prior compliance-output policies work around this with hand-specified task structure, privileged simulation contact state, or dedicated force and tactile hardware. Four-channel bilateral teleoperation removes the ambiguity directly by using the leader arm as a separate measurement of the intended equilibrium, making per-axis stiffness identifiable by regression using only the joint-torque sensing already on the manipulator. This yields per-timestep, direction-dependent compliance labels at zero annotation cost, which we use to fine-tune a VLA to emit stiffness alongside pose. On a Franka Research 3 wiping task, ours is the only policy of five whose contact force changes when the instruction asks for a firm wipe rather than a normal one (6.4N (normal) to 9.1N (firm) RMS, Cohen's d = 0.89, p = 0.023</p>
+            <p class="paper-summary">Action chunking is widely used for action generation and execution in Vision-Language-Action (VLA) policies, yet existing approaches commonly use a fixed action horizon. During a rollout, different task stages may require different levels of action continuity, control precision, and closed-loop feedback, making a fixed horizon unable to accommodate changing control requirements. We propose \textbf{GeoAAC}, a geometry-based adaptive action chunking method for flow-based VLA policies that adjusts the action horizon according to the reliability of the current action prediction. We show that the geometry of Flow Matching denoising trajectories provides process-level information for characterizing prediction reliability, with geometric variation across action prefixes remaining positively correlated with predictive uncertainty. GeoAAC uses this prefix-wise geometry to construct a horizon-wise geometric profile and adaptively determine the action horizon from a single generation without additional training. Experiments with GR00T N1.5 and π0.5 on LIBERO, LIBERO-Pro, RoboCasa365, and real-world manipulation tasks show consistent improvements over fixed-action-horizon baselines and existing adaptive methods, including up to 8.7 percentage points in simulation and an increase in average real-world success rate from 53.3\% to 74.4\%.</p>
             
             <div class="card-action-bar">
-                <a href="http://arxiv.org/pdf/2609.19976v1" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
+                <a href="http://arxiv.org/pdf/2609.20776v1" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
                     View PDF
                 </a>
-                <a href="http://arxiv.org/abs/2609.19976v1" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
+                <a href="http://arxiv.org/abs/2609.20776v1" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
                     arXiv Page &rarr;
                 </a>
             </div>
         </article>
         
-        <article class="paper-card" data-title="co-vla: consensus-based federated training for vision-language-action models" data-summary="vision-language-action models (vlas) have emerged as a promising paradigm for general-purpose robot learning, with performance improving as models and datasets scale. scaling robot data collection, however, remains challenging because data are naturally distributed across robots, tasks, and locations, making centralization costly or impractical. federated learning offers a way to train on decentralized robot data, but applying it to vlas requires accounting for heterogeneous robot client data distributions. we present co-vla, which applies consensus optimization using the alternating direction method of multipliers~(admm) to federated vla training. we show that the same algorithm supports both full-model training and parameter-efficient fine-tuning with both fixed-rank and rank-adaptive adapters. the name co-vla reflects both consensus and collaboration: clients with different local robot datasets collaboratively train a shared model without sharing their data. our experiments demonstrate that co-vla achieves performance comparable to centralized training in both full-model training and parameter-efficient fine-tuning settings.">
+        <article class="paper-card" data-title="hil-umi: bringing human-in-the-loop post-training of vision-language-action models to universal manipulation interface" data-summary="large-scale vision-language-action (vla) models provide powerful priors for robot manipulation, yet adapting them to a specific deployment remains challenging. supervised fine-tuning (sft) on task-specific demonstrations provides a step toward deployment, but faces two persistent limitations: static data provide limited coverage of out-of-distribution states, and standard imitation objectives do not distinguish progressing behavior from less useful data. interactive post-training can address these limitations, but typically requires repeated policy execution and human intervention on a physical robot. we introduce hil-umi, a policy-guided universal manipulation interface (umi) framework for robot-free human-in-the-loop vla post-training. during handheld umi demonstrations, hil-umi queries the current policy on the same observation stream without executing its predictions. the energy score compares the human action trajectory with policy inference and triggers collection when their discrepancy indicates an out-of-distribution region. in a separate feedback loop, low online advantage predictions identify essential segments for refining a progress-based advantage estimator. the updated estimator then guides advantage-conditioned behavioral cloning using a balanced mixture of base demonstrations and new policy data. this design preserves the iterative and policy-aware nature of human-in-the-loop learning while decoupling data collection from robot deployment. experiments on four real-world tasks spanning long-horizon and precise manipulation show that hil-umi achieves consistent improvement over sft and benefits from both targeted collection and advantage refinement. moreover, hil-umi outperforms hg-dagger on clean up table with lower per-frame collection time, suggesting a scalable path for vla post-training across operators and locations.">
             <div class="card-meta-top">
                 <span class="rank-tag">TOP #2</span>
                 <div class="score-badge">
@@ -292,126 +292,126 @@
                 </div>
             </div>
             
-            <h2 class="paper-title">Co-VLA: Consensus-based Federated Training for Vision-Language-Action Models</h2>
+            <h2 class="paper-title">HIL-UMI: Bringing Human-in-the-Loop Post-Training of Vision-Language-Action Models to Universal Manipulation Interface</h2>
             
             <div class="author-row">
                 <span>🗓️ 2026-09-17</span>
-                <span>✍️ Haolong Li, Guner Dilsad Er, Michael Muehlebach et al.</span>
+                <span>✍️ Zimu Han, Yiming Zeng, Jiyao Zhang et al.</span>
             </div>
             
             <div class="badge-cluster">
                 <span class="badge">#vision-language-action</span><span class="badge">#vla</span>
             </div>
             
-            <p class="paper-summary">Vision-language-action models (VLAs) have emerged as a promising paradigm for general-purpose robot learning, with performance improving as models and datasets scale. Scaling robot data collection, however, remains challenging because data are naturally distributed across robots, tasks, and locations, making centralization costly or impractical. Federated learning offers a way to train on decentralized robot data, but applying it to VLAs requires accounting for heterogeneous robot client data distributions. We present Co-VLA, which applies consensus optimization using the Alternating Direction Method of Multipliers~(ADMM) to federated VLA training. We show that the same algorithm supports both full-model training and parameter-efficient fine-tuning with both fixed-rank and rank-adaptive adapters. The name Co-VLA reflects both consensus and collaboration: clients with different local robot datasets collaboratively train a shared model without sharing their data. Our experiments demonstrate that Co-VLA achieves performance comparable to centralized training in both full-model training and parameter-efficient fine-tuning settings.</p>
+            <p class="paper-summary">Large-scale vision-language-action (VLA) models provide powerful priors for robot manipulation, yet adapting them to a specific deployment remains challenging. Supervised fine-tuning (SFT) on task-specific demonstrations provides a step toward deployment, but faces two persistent limitations: static data provide limited coverage of out-of-distribution states, and standard imitation objectives do not distinguish progressing behavior from less useful data. Interactive post-training can address these limitations, but typically requires repeated policy execution and human intervention on a physical robot. We introduce HIL-UMI, a policy-guided Universal Manipulation Interface (UMI) framework for robot-free human-in-the-loop VLA post-training. During handheld UMI demonstrations, HIL-UMI queries the current policy on the same observation stream without executing its predictions. The Energy Score compares the human action trajectory with policy inference and triggers collection when their discrepancy indicates an out-of-distribution region. In a separate feedback loop, low online advantage predictions identify essential segments for refining a progress-based advantage estimator. The updated estimator then guides advantage-conditioned behavioral cloning using a balanced mixture of base demonstrations and new policy data. This design preserves the iterative and policy-aware nature of human-in-the-loop learning while decoupling data collection from robot deployment. Experiments on four real-world tasks spanning long-horizon and precise manipulation show that HIL-UMI achieves consistent improvement over SFT and benefits from both targeted collection and advantage refinement. Moreover, HIL-UMI outperforms HG-DAgger on Clean Up Table with lower per-frame collection time, suggesting a scalable path for VLA post-training across operators and locations.</p>
             
             <div class="card-action-bar">
-                <a href="http://arxiv.org/pdf/2609.19923v1" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
+                <a href="http://arxiv.org/pdf/2609.20659v1" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
                     View PDF
                 </a>
-                <a href="http://arxiv.org/abs/2609.19923v1" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
+                <a href="http://arxiv.org/abs/2609.20659v1" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
                     arXiv Page &rarr;
                 </a>
             </div>
         </article>
         
-        <article class="paper-card" data-title="anyviewdex: view-invariant dexterous manipulation from rgb observations" data-summary="visuomotor policies for multi-fingered dexterous manipulation are highly sensitive to camera viewpoint shifts. to achieve view invariance, recent methods increasingly rely on explicit 3d modalities like rgb-d or point clouds, which can introduce hardware dependencies, calibration requirements, and vulnerability to sensor noise during real-world deployment. in this work, we show that view-invariant control can be achieved without explicit test-time 3d sensing by encoding geometric knowledge into the visual representation during simulation. we present anyviewdex, an asymmetric training pipeline that combines multi-view contrastive alignment with privileged 3d geometric supervision. by regressing absolute 3d object coordinates during simulated training, this auxiliary objective provides a geometric grounding signal that mitigates the spatial collapse of the globally pooled contrastive embedding. at deployment, the policy operates zero-shot using only uncalibrated monocular rgb and proprioception. we validate this approach across both reinforcement learning and student-teacher distillation. in hardware evaluation on an xarm7 with a 16-dof leap hand, anyviewdex reaches 76.7% grasping success across eight unseen objects and six uncalibrated viewpoints (480 trials; 2,400 across all ablation conditions), indicating that geometrically grounded monocular policies transfer zero-shot without test-time depth. project page: https://anyviewdex.github.io/">
+        <article class="paper-card" data-title="skipvla: skipping vla steps with classical planning for fast robot manipulation" data-summary="vision-language-action (vla) models are a class of generalist robot policies that map camera images and language instructions directly to robot actions. while promising, these models remain slow at test time, particularly for long-horizon tasks that require many queries to the policy. recent efforts reduce vla latency by distilling smaller models, overlapping asynchronous action chunks, or pairing the vla with a fast low-level policy, but still run a learned policy for the entire task. in contrast to vla, classical motion planners quickly find collision-free motions, but require an explicit goal and have no semantic understanding of the task. in this work, we present skipvla, a hybrid policy that combines a pretrained vla with a classical motion planner, using the planner for free-space motion and querying the vla only for contact-rich skills such as grasping and placing. skipvla reuses the frozen vision-language backbone of the vla to predict a target pose for each planned motion, and learns this predictor without additional demonstrations introduced into the system by using what was already learnt by the large vla. we evaluate skipvla with three vlas on 13 libero tasks in simulation and three pick-and-place tasks on a physical 6-dof yam arm, demonstrating up to 2.5x faster task completion and significantly lower energy consumption while achieving the same task success rate.">
             <div class="card-meta-top">
                 <span class="rank-tag">TOP #3</span>
                 <div class="score-badge">
                     <span class="score-label">Priority Index</span>
-                    <span class="score-value">110</span>
+                    <span class="score-value">135</span>
                 </div>
             </div>
             
-            <h2 class="paper-title">AnyViewDex: View-Invariant Dexterous Manipulation from RGB Observations</h2>
+            <h2 class="paper-title">SkipVLA: Skipping VLA Steps with Classical Planning for Fast Robot Manipulation</h2>
             
             <div class="author-row">
                 <span>🗓️ 2026-09-17</span>
-                <span>✍️ Soham Patil, Om Sanjay Gunjal, Sourabh Bhosale et al.</span>
+                <span>✍️ Kaivalya Agrawal, Md Ashiqur Rahman, Raymond A. Yeh et al.</span>
             </div>
             
             <div class="badge-cluster">
-                <span class="badge">#reinforcement learning</span><span class="badge">#dexterous manipulation</span>
+                <span class="badge">#vision-language-action</span><span class="badge">#vla</span>
             </div>
             
-            <p class="paper-summary">Visuomotor policies for multi-fingered dexterous manipulation are highly sensitive to camera viewpoint shifts. To achieve view invariance, recent methods increasingly rely on explicit 3D modalities like RGB-D or point clouds, which can introduce hardware dependencies, calibration requirements, and vulnerability to sensor noise during real-world deployment. In this work, we show that view-invariant control can be achieved without explicit test-time 3D sensing by encoding geometric knowledge into the visual representation during simulation. We present AnyViewDex, an asymmetric training pipeline that combines multi-view contrastive alignment with privileged 3D geometric supervision. By regressing absolute 3D object coordinates during simulated training, this auxiliary objective provides a geometric grounding signal that mitigates the spatial collapse of the globally pooled contrastive embedding. At deployment, the policy operates zero-shot using only uncalibrated monocular RGB and proprioception. We validate this approach across both reinforcement learning and student-teacher distillation. In hardware evaluation on an xArm7 with a 16-DoF LEAP Hand, AnyViewDex reaches 76.7% grasping success across eight unseen objects and six uncalibrated viewpoints (480 trials; 2,400 across all ablation conditions), indicating that geometrically grounded monocular policies transfer zero-shot without test-time depth. Project Page: https://anyviewdex.github.io/</p>
+            <p class="paper-summary">Vision-Language-Action (VLA) models are a class of generalist robot policies that map camera images and language instructions directly to robot actions. While promising, these models remain slow at test time, particularly for long-horizon tasks that require many queries to the policy. Recent efforts reduce VLA latency by distilling smaller models, overlapping asynchronous action chunks, or pairing the VLA with a fast low-level policy, but still run a learned policy for the entire task. In contrast to VLA, classical motion planners quickly find collision-free motions, but require an explicit goal and have no semantic understanding of the task. In this work, we present SkipVLA, a hybrid policy that combines a pretrained VLA with a classical motion planner, using the planner for free-space motion and querying the VLA only for contact-rich skills such as grasping and placing. SkipVLA reuses the frozen vision-language backbone of the VLA to predict a target pose for each planned motion, and learns this predictor without additional demonstrations introduced into the system by using what was already learnt by the large VLA. We evaluate SkipVLA with three VLAs on 13 LIBERO tasks in simulation and three pick-and-place tasks on a physical 6-DoF YAM arm, demonstrating up to 2.5x faster task completion and significantly lower energy consumption while achieving the same task success rate.</p>
             
             <div class="card-action-bar">
-                <a href="http://arxiv.org/pdf/2609.20107v1" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
+                <a href="http://arxiv.org/pdf/2609.20648v1" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
                     View PDF
                 </a>
-                <a href="http://arxiv.org/abs/2609.20107v1" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
+                <a href="http://arxiv.org/abs/2609.20648v1" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
                     arXiv Page &rarr;
                 </a>
             </div>
         </article>
         
-        <article class="paper-card" data-title="dr-mpc: fast and feasible dynamics-relaxed model-predictive control for legged locomotion" data-summary="this paper presents dynamics-relaxed model predictive control (dr-mpc), a novel mpc formulation for legged locomotion, and a tailored interior-point method (ipm) solver. the formulation combines online optimization feasibility by construction with a contact-aware input parameterization. dr-mpc moves the dynamics equality and affine input constraints into quadratic penalties and retains only nonempty box constraints. the resulting box-constrained quadratic program (qp) has a block-arrow hessian that enables the state and affine-output directions to be eliminated through a schur complement. the solver factors only the reduced control system after swing-force elimination and contact-aligned move blocking. for the evaluated implementations using the same dr-mpc formulation, our method achieves median end-to-end mpc speedups of $16.0\times$ over hpipm and $4.4\times$ over osqp, with comparable locomotion performance in simulation. dr-mpc achieves a median onboard mpc end-to-end time of $4.4$ ms and is validated on a unitree go1 quadruped. open-source code will be made available after publication.">
+        <article class="paper-card" data-title="traceflow: guiding frozen flow-matching robot policies with success and failure traces" data-summary="a vision-language-action (vla) policy with a flow-matching action expert generates each action chunk (a short command sequence) by integrating a learned velocity field; once its weights are fixed, the success or failure of an earlier rollout cannot change the chunk generated now. concurrent test-time methods give a frozen policy such an input from retrieved successes, a learned critic, a verifier, or a dynamics model, but none uses the robot's own failed rollouts as negative evidence with nothing but a terminal outcome bit. we introduce traceflow, a progress-aligned guidance field that turns the action densities of retrieved successful and failed rollouts into a bounded correction to a frozen flow-matching action expert, using one terminal outcome bit per rollout and no other label. its tracebank stores traces, time-ordered state-action records with a terminal label, starts from the target-task training traces, and later admits the deployed robot's own rollouts. on an ordered real-robot packing task the base completes 21 of 50 trials in order, traceflow 39, and one stacking round without any weight update 47, with wrong-sequence episodes falling from 20 to 0. in simulation the gain is selective: with per-suite selected settings, traceflow raises robomemarena sequence from 78.92\% to 91.50\% task success and transferring from 54.41\% to 62.00\% at stacking round 2, leaves the 26-task aggregate unchanged, lowers counting and occlusion by 1.12 and 1.42 points, and changes libero-plus (long) by +1.27 points (p = 0.0733). stacking gains are finite, every branch peaking before round ten, and the bank's success-to-failure ratio predicts no retrieval allocation.">
             <div class="card-meta-top">
                 <span class="rank-tag">TOP #4</span>
                 <div class="score-badge">
                     <span class="score-label">Priority Index</span>
-                    <span class="score-value">110</span>
+                    <span class="score-value">135</span>
                 </div>
             </div>
             
-            <h2 class="paper-title">DR-MPC: Fast and Feasible Dynamics-Relaxed Model-Predictive Control for Legged Locomotion</h2>
+            <h2 class="paper-title">TraceFlow: Guiding Frozen Flow-Matching Robot Policies with Success and Failure Traces</h2>
             
             <div class="author-row">
                 <span>🗓️ 2026-09-17</span>
-                <span>✍️ Run Wang, Alapati Tuerxun, Shuo Liu et al.</span>
+                <span>✍️ Jiaxuan Zhang, Ruizhe Liu, Yu Zhang et al.</span>
             </div>
             
             <div class="badge-cluster">
-                <span class="badge">#quadruped</span><span class="badge">#locomotion</span>
+                <span class="badge">#vision-language-action</span><span class="badge">#vla</span>
             </div>
             
-            <p class="paper-summary">This paper presents dynamics-relaxed model predictive control (DR-MPC), a novel MPC formulation for legged locomotion, and a tailored interior-point method (IPM) solver. The formulation combines online optimization feasibility by construction with a contact-aware input parameterization. DR-MPC moves the dynamics equality and affine input constraints into quadratic penalties and retains only nonempty box constraints. The resulting box-constrained quadratic program (QP) has a block-arrow Hessian that enables the state and affine-output directions to be eliminated through a Schur complement. The solver factors only the reduced control system after swing-force elimination and contact-aligned move blocking. For the evaluated implementations using the same DR-MPC formulation, our method achieves median end-to-end MPC speedups of $16.0\times$ over HPIPM and $4.4\times$ over OSQP, with comparable locomotion performance in simulation. DR-MPC achieves a median onboard MPC end-to-end time of $4.4$ ms and is validated on a Unitree Go1 quadruped. Open-source code will be made available after publication.</p>
+            <p class="paper-summary">A vision-language-action (VLA) policy with a flow-matching action expert generates each action chunk (a short command sequence) by integrating a learned velocity field; once its weights are fixed, the success or failure of an earlier rollout cannot change the chunk generated now. Concurrent test-time methods give a frozen policy such an input from retrieved successes, a learned critic, a verifier, or a dynamics model, but none uses the robot's own failed rollouts as negative evidence with nothing but a terminal outcome bit. We introduce TraceFlow, a progress-aligned guidance field that turns the action densities of retrieved successful and failed rollouts into a bounded correction to a frozen flow-matching action expert, using one terminal outcome bit per rollout and no other label. Its TraceBank stores traces, time-ordered state-action records with a terminal label, starts from the target-task training traces, and later admits the deployed robot's own rollouts. On an ordered real-robot packing task the base completes 21 of 50 trials in order, TraceFlow 39, and one stacking round without any weight update 47, with wrong-sequence episodes falling from 20 to 0. In simulation the gain is selective: with per-suite selected settings, TraceFlow raises RoboMemArena Sequence from 78.92\% to 91.50\% task success and Transferring from 54.41\% to 62.00\% at stacking round 2, leaves the 26-task aggregate unchanged, lowers Counting and Occlusion by 1.12 and 1.42 points, and changes LIBERO-Plus (Long) by +1.27 points (p = 0.0733). Stacking gains are finite, every branch peaking before round ten, and the bank's success-to-failure ratio predicts no retrieval allocation.</p>
             
             <div class="card-action-bar">
-                <a href="http://arxiv.org/pdf/2609.20035v1" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
+                <a href="http://arxiv.org/pdf/2609.20646v1" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
                     View PDF
                 </a>
-                <a href="http://arxiv.org/abs/2609.20035v1" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
+                <a href="http://arxiv.org/abs/2609.20646v1" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
                     arXiv Page &rarr;
                 </a>
             </div>
         </article>
         
-        <article class="paper-card" data-title="astronex-world 1.0: real-time interactive world model foundation" data-summary="we present astronex-world 1.0, an open controllable video world-model foundation. given a text prompt (text-to-video) or an initial observation (image-to-video), the model predicts future visual states under frame-aligned camera trajectories, continuous actions, and an embodiment identifier, and accepts text events inserted at a specified position of a rollout. the family provides a bidirectional model for full-context generation and a causal model with block-causal attention and cross-block kv caching for persistent generation, both built on the wan2.2-ti2v-5b prior. prope injects camera intrinsics and extrinsics, while a 64-dimensional action stream modulates every transformer layer. a five-stage training path develops bidirectional camera and action control, converts the backbone to block-causal generation, distills a few-step student, restores mixed-domain dynamics, and applies asymmetric dmd/dmd2 distribution matching. the causal model generates 832x480 video at 24 fps. all five training stages run on two nvidia l20 48 gb gpus, and the causal model streams in real time on one. it scores 73.5 on wbench navi and 70.0 on wbench full. on full, this 5b model is above the 13.6b longcat-video and the 14b helios, within one point of the 22b ltx-2.3, and above yume 1.5, which is post-trained from the same 5b prior on nvidia a100 gpus. the reserved action input and output interfaces allow post-training for embodied intelligence and autonomous driving.">
+        <article class="paper-card" data-title="dextouch-wm: learning action-conditioned tactile world models from human touch for dexterous robot manipulation" data-summary="learning predictive models of contact-rich dexterous manipulation requires dense tactile interaction, but such data are costly to scale on real robots and remain tied to embodiment-specific sensors. we introduce dextouch-wm, an action-conditioned world model that learns from scalable human touch to jointly predict future rgb observations and bilateral tactile dynamics. our insight is that human and robot manipulation share transferable contact dynamics when their tactile observations and action spaces are made compatible. we deploy flexible piezoresistive arrays with a shared sensing layout on both human and dexterous robot hands, and retarget human motion into the robot action space so that human interaction can supervise the same dynamics model used for real-robot prediction. dextouch-wm couples a pretrained video expert with a lightweight tactile expert using anatomy-aware tactile tokens and aligned action conditioning. in human-to-robot scaling experiments, we keep five hours of real-robot supervision fixed while increasing human interaction from 0 to 100 hours, and observe substantial improvements in held-out robot-domain visual, geometric, and contact prediction despite disjoint human and robot task sets. beyond prediction, we evaluate the world models as surrogate environments for policy evaluation and as generators of synthetic trajectories for real-robot policy learning, showing that scalable human interaction provides a complementary data axis for learning dexterous robot world models.">
             <div class="card-meta-top">
                 <span class="rank-tag">TOP #5</span>
                 <div class="score-badge">
                     <span class="score-label">Priority Index</span>
-                    <span class="score-value">90</span>
+                    <span class="score-value">120</span>
                 </div>
             </div>
             
-            <h2 class="paper-title">Astronex-World 1.0: Real-Time Interactive World Model Foundation</h2>
+            <h2 class="paper-title">DexTouch-WM: Learning Action-Conditioned Tactile World Models from Human Touch for Dexterous Robot Manipulation</h2>
             
             <div class="author-row">
                 <span>🗓️ 2026-09-17</span>
-                <span>✍️ Xin Zhou, Cong Miao</span>
+                <span>✍️ Yan Qin, Yue Chen, Wenwei Lin et al.</span>
             </div>
             
             <div class="badge-cluster">
-                <span class="badge">#world model</span>
+                <span class="badge">#world model</span><span class="badge">#dexterous manipulation</span>
             </div>
             
-            <p class="paper-summary">We present Astronex-World 1.0, an open controllable video world-model foundation. Given a text prompt (text-to-video) or an initial observation (image-to-video), the model predicts future visual states under frame-aligned camera trajectories, continuous actions, and an embodiment identifier, and accepts text events inserted at a specified position of a rollout. The family provides a bidirectional model for full-context generation and a causal model with block-causal attention and cross-block KV caching for persistent generation, both built on the Wan2.2-TI2V-5B prior. PRoPE injects camera intrinsics and extrinsics, while a 64-dimensional action stream modulates every Transformer layer. A five-stage training path develops bidirectional camera and action control, converts the backbone to block-causal generation, distills a few-step student, restores mixed-domain dynamics, and applies asymmetric DMD/DMD2 distribution matching. The causal model generates 832x480 video at 24 fps. All five training stages run on two NVIDIA L20 48 GB GPUs, and the causal model streams in real time on one. It scores 73.5 on WBench Navi and 70.0 on WBench Full. On Full, this 5B model is above the 13.6B LongCat-Video and the 14B Helios, within one point of the 22B LTX-2.3, and above YUME 1.5, which is post-trained from the same 5B prior on NVIDIA A100 GPUs. The reserved action input and output interfaces allow post-training for embodied intelligence and autonomous driving.</p>
+            <p class="paper-summary">Learning predictive models of contact-rich dexterous manipulation requires dense tactile interaction, but such data are costly to scale on real robots and remain tied to embodiment-specific sensors. We introduce DexTouch-WM, an action-conditioned world model that learns from scalable human touch to jointly predict future RGB observations and bilateral tactile dynamics. Our insight is that human and robot manipulation share transferable contact dynamics when their tactile observations and action spaces are made compatible. We deploy flexible piezoresistive arrays with a shared sensing layout on both human and dexterous robot hands, and retarget human motion into the robot action space so that human interaction can supervise the same dynamics model used for real-robot prediction. DexTouch-WM couples a pretrained video expert with a lightweight tactile expert using anatomy-aware tactile tokens and aligned action conditioning. In human-to-robot scaling experiments, we keep five hours of real-robot supervision fixed while increasing human interaction from 0 to 100 hours, and observe substantial improvements in held-out robot-domain visual, geometric, and contact prediction despite disjoint human and robot task sets. Beyond prediction, we evaluate the world models as surrogate environments for policy evaluation and as generators of synthetic trajectories for real-robot policy learning, showing that scalable human interaction provides a complementary data axis for learning dexterous robot world models.</p>
             
             <div class="card-action-bar">
-                <a href="http://arxiv.org/pdf/2609.20034v1" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
+                <a href="http://arxiv.org/pdf/2609.20649v1" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
                     View PDF
                 </a>
-                <a href="http://arxiv.org/abs/2609.20034v1" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
+                <a href="http://arxiv.org/abs/2609.20649v1" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
                     arXiv Page &rarr;
                 </a>
             </div>
         </article>
         
-        <article class="paper-card" data-title="robofind: multi-agent personalized object search for people who are blind or have low vision" data-summary="blind and low-vision users often need to locate a specific personal object rather than an arbitrary instance of the same category. the task calls for a robot that can move through the space and reach viewpoints the user cannot, and for an accessible interface where the user says which object is meant and learns whether the right one was found. we present robofind, a multi-agent framework in which a smartphone teaches the target and a quadruped robot carries out the search. a target teaching agent converts guided smartphone recordings into a semantic target profile and a reusable multi-view reference bank through an accessible capture flow with ar guidance, speech and haptic feedback, and screen-reader support, so later missions refer to a stored object without repeating the teaching process. at runtime, a navigation agent explores the environment and proposes candidate targets, a verification agent checks each candidate against the stored references, and a coordination and recovery agent completes the mission or triggers recovery and continued search. across 32 real-robot missions, robofind reaches 85.0% success against 25.0% for a reconstructed sequential first-stop baseline over 20 trials with ten targets, and reduces false success from 75.0% to 5.0%. on six shared targets it succeeds in 10/12 trials, against 5/12 for 12 independently executed gpt-6 astra-only trials. these results show that the multi-agent design fits the demands of personalized object search, where verifying object identity before declaring completion is what makes the outcome something a user can rely on.">
+        <article class="paper-card" data-title="learning foresight without explicit trajectories for 3d diffusion policies" data-summary="3d diffusion policies are strong at generating geometrically grounded actions from current observations, but successful manipulation requires not only knowing what motion is feasible now, but also anticipating where the interaction is heading. existing policies largely leave such foresight to emerge implicitly from action learning. we introduce movement trend guidance, a simple but effective way to provide this foresight without introducing an explicit plan. from a short observation history, the policy learns a compact latent representation of interaction evolution. during training, sparse future gripper states supervise this representation; at inference, only the latent is retained as future-oriented conditioning alongside the current observation. the latent provides global conditioning for action generation, while an additional gated film branch is used only at the unet bottleneck. despite adding only 3.52% more parameters to dp3, our method preserves the original dense-action and receding-horizon formulation and consistently improves upon dp3 across robotwin2.0, libero-40, and dexart. it reaches 62.8% vs. 56.1% in 50-task robotwin2.0 mixed training, 71.93% vs. 37.08% on libero-40, and 72.0% vs. 49.0% on five real-robot tasks. these results show that a diffusion policy can benefit substantially from knowing where an interaction is heading, without being told exactly where to move.">
             <div class="card-meta-top">
                 <span class="rank-tag">TOP #6</span>
                 <div class="score-badge">
@@ -420,62 +420,62 @@
                 </div>
             </div>
             
-            <h2 class="paper-title">RoboFind: Multi-Agent Personalized Object Search for People Who Are Blind or Have Low Vision</h2>
+            <h2 class="paper-title">Learning Foresight without Explicit Trajectories for 3D Diffusion Policies</h2>
             
             <div class="author-row">
                 <span>🗓️ 2026-09-17</span>
-                <span>✍️ Ruiping Liu, Shaofang Quan, Qian Yin et al.</span>
+                <span>✍️ Zhongbo Zhang, Zaibin Zhang, Yifan Wang et al.</span>
             </div>
             
             <div class="badge-cluster">
-                <span class="badge">#quadruped</span>
+                <span class="badge">#diffusion policy</span>
             </div>
             
-            <p class="paper-summary">Blind and low-vision users often need to locate a specific personal object rather than an arbitrary instance of the same category. The task calls for a robot that can move through the space and reach viewpoints the user cannot, and for an accessible interface where the user says which object is meant and learns whether the right one was found. We present RoboFind, a multi-agent framework in which a smartphone teaches the target and a quadruped robot carries out the search. A Target Teaching Agent converts guided smartphone recordings into a semantic target profile and a reusable multi-view reference bank through an accessible capture flow with AR guidance, speech and haptic feedback, and screen-reader support, so later missions refer to a stored object without repeating the teaching process. At runtime, a Navigation Agent explores the environment and proposes candidate targets, a Verification Agent checks each candidate against the stored references, and a Coordination and Recovery Agent completes the mission or triggers recovery and continued search. Across 32 real-robot missions, RoboFind reaches 85.0% success against 25.0% for a reconstructed sequential first-stop baseline over 20 trials with ten targets, and reduces false success from 75.0% to 5.0%. On six shared targets it succeeds in 10/12 trials, against 5/12 for 12 independently executed GPT-6 Astra-only trials. These results show that the multi-agent design fits the demands of personalized object search, where verifying object identity before declaring completion is what makes the outcome something a user can rely on.</p>
+            <p class="paper-summary">3D diffusion policies are strong at generating geometrically grounded actions from current observations, but successful manipulation requires not only knowing what motion is feasible now, but also anticipating where the interaction is heading. Existing policies largely leave such foresight to emerge implicitly from action learning. We introduce Movement Trend Guidance, a simple but effective way to provide this foresight without introducing an explicit plan. From a short observation history, the policy learns a compact latent representation of interaction evolution. During training, sparse future gripper states supervise this representation; at inference, only the latent is retained as future-oriented conditioning alongside the current observation. The latent provides global conditioning for action generation, while an additional gated FiLM branch is used only at the UNet bottleneck. Despite adding only 3.52% more parameters to DP3, our method preserves the original dense-action and receding-horizon formulation and consistently improves upon DP3 across RoboTwin2.0, LIBERO-40, and DexArt. It reaches 62.8% vs. 56.1% in 50-task RoboTwin2.0 mixed training, 71.93% vs. 37.08% on LIBERO-40, and 72.0% vs. 49.0% on five real-robot tasks. These results show that a diffusion policy can benefit substantially from knowing where an interaction is heading, without being told exactly where to move.</p>
             
             <div class="card-action-bar">
-                <a href="http://arxiv.org/pdf/2609.20330v1" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
+                <a href="http://arxiv.org/pdf/2609.20669v1" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
                     View PDF
                 </a>
-                <a href="http://arxiv.org/abs/2609.20330v1" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
+                <a href="http://arxiv.org/abs/2609.20669v1" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
                     arXiv Page &rarr;
                 </a>
             </div>
         </article>
         
-        <article class="paper-card" data-title="mechanical precision weeding with a quadruped robot" data-summary="herbicide-based weed control is increasingly unsustainable due to rising weed resistance and the adverse environmental impacts of chemical use. while mechanical weed control avoids these drawbacks, it is typically implemented using large machines that cause soil compaction. we propose a novel alternative based on small mobile robots for mechanical weeding. compared with existing automated mechanical weeding approaches, the proposed method offers reduced soil compaction, simpler automation, and improved scalability. our solution involves a boston dynamics spot quadruped robot equipped with a custom weed removal tool featuring a milling bit at its end. the tool is rigidly attached to the robot and uses the degrees of freedom of the robot base by actuating the legs, while keeping the feet stationary. we develop a software architecture that enables autonomous weed removal and integrate this system with all other required components. we analyze the accuracy and efficiency of the current proof of concept both in an indoor and outdoor environment and provide recommendations for future work to make the system more accurate and efficient.">
+        <article class="paper-card" data-title="opted: on-policy fine-tuning for end-to-end driving using a render-free teacher" data-summary="as scaling pre-training data alone yields diminishing returns, post-training is becoming increasingly important across physical ai domains such as autonomous driving. end-to-end driving policies are pre-trained in open loop with behavior cloning on human demonstrations. however, compounding errors during closed-loop deployment can take the vehicle outside the training data distribution, increasing the risk of safety-critical incidents. closed-loop post-training can mitigate this risk but requires costly simulation for sensor-based policies. we propose opted (on-policy fine-tuning for end-to-end driving) which decouples reinforcement learning from the post-training of the end-to-end policy: a privileged teacher is trained using rl on vectorized inputs (hd-map and bounding boxes). this teacher then provides supervision to the pre-trained student during closed-loop post-training. we apply opted to two camera-based models, transfuser and vavam, and fine-tune them in alpasim, using neural reconstructions (3dgs) of real driving logs. driving scores increase by factors of 1.6$\times$ and 9.5$\times$, respectively. in controlled experiments opted matches closed-loop performance with approximately three orders of magnitude fewer simulator interactions than direct rl post-training, while staying closer to the human prior. project page: https://01dami23.github.io/opted/">
             <div class="card-meta-top">
                 <span class="rank-tag">TOP #7</span>
                 <div class="score-badge">
                     <span class="score-label">Priority Index</span>
-                    <span class="score-value">85</span>
+                    <span class="score-value">80</span>
                 </div>
             </div>
             
-            <h2 class="paper-title">Mechanical Precision Weeding with a Quadruped Robot</h2>
+            <h2 class="paper-title">OPTED: On-Policy Fine-Tuning for End-to-End Driving using a Render-Free Teacher</h2>
             
             <div class="author-row">
                 <span>🗓️ 2026-09-17</span>
-                <span>✍️ Ruben Beumer, Tom Janssen, René van de Molengraft et al.</span>
+                <span>✍️ Damiano Da Col, Maximilian Igl, Peter Karkus et al.</span>
             </div>
             
             <div class="badge-cluster">
-                <span class="badge">#quadruped</span>
+                <span class="badge">#reinforcement learning</span>
             </div>
             
-            <p class="paper-summary">Herbicide-based weed control is increasingly unsustainable due to rising weed resistance and the adverse environmental impacts of chemical use. While mechanical weed control avoids these drawbacks, it is typically implemented using large machines that cause soil compaction. We propose a novel alternative based on small mobile robots for mechanical weeding. Compared with existing automated mechanical weeding approaches, the proposed method offers reduced soil compaction, simpler automation, and improved scalability. Our solution involves a Boston Dynamics Spot quadruped robot equipped with a custom weed removal tool featuring a milling bit at its end. The tool is rigidly attached to the robot and uses the degrees of freedom of the robot base by actuating the legs, while keeping the feet stationary. We develop a software architecture that enables autonomous weed removal and integrate this system with all other required components. We analyze the accuracy and efficiency of the current proof of concept both in an indoor and outdoor environment and provide recommendations for future work to make the system more accurate and efficient.</p>
+            <p class="paper-summary">As scaling pre-training data alone yields diminishing returns, post-training is becoming increasingly important across physical AI domains such as autonomous driving. End-to-end driving policies are pre-trained in open loop with behavior cloning on human demonstrations. However, compounding errors during closed-loop deployment can take the vehicle outside the training data distribution, increasing the risk of safety-critical incidents. Closed-loop post-training can mitigate this risk but requires costly simulation for sensor-based policies. We propose OPTED (on-policy fine-tuning for end-to-end driving) which decouples reinforcement learning from the post-training of the end-to-end policy: a privileged teacher is trained using RL on vectorized inputs (HD-map and bounding boxes). This teacher then provides supervision to the pre-trained student during closed-loop post-training. We apply OPTED to two camera-based models, TransFuser and VaVAM, and fine-tune them in AlpaSim, using neural reconstructions (3DGS) of real driving logs. Driving scores increase by factors of 1.6$\times$ and 9.5$\times$, respectively. In controlled experiments OPTED matches closed-loop performance with approximately three orders of magnitude fewer simulator interactions than direct RL post-training, while staying closer to the human prior. Project page: https://01dami23.github.io/opted/</p>
             
             <div class="card-action-bar">
-                <a href="http://arxiv.org/pdf/2609.20048v1" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
+                <a href="http://arxiv.org/pdf/2609.20756v1" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
                     View PDF
                 </a>
-                <a href="http://arxiv.org/abs/2609.20048v1" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
+                <a href="http://arxiv.org/abs/2609.20756v1" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
                     arXiv Page &rarr;
                 </a>
             </div>
         </article>
         
-        <article class="paper-card" data-title="safety-critical scenanrio emerges from initial scene" data-summary="safety-critical driving scenario generation has largely focused on manipulating the behavior of surrounding agents while starting from an initial scene from driving data. this assumption can limit the space of discoverable failures, since driving data can provide little opportunity for meaningful interaction. for example, in the waymo open motion dataset, 20.44% of recorded slices feature a stationary ego vehicle that never moves, and 30.39% of initial frames contain no nearby traffic participants within 10 meters. we instead study safety-critical scenario generation as an initialization problem: given agnostic black-box driving policies, we learn to generate realistic initial scenes that are more likely to evolve into critical interactions. we propose advscene, a conditional latent diffusion model that is trained in two stages. starting from pretraining on naturalistic driving data, we post-train the adversarial-agent generation branch using reinforcement learning with feedback from closed-loop simulator rollouts. conditioning on ego driving displacement prevents the ego from remaining static, and rl finetuning induces criticality directly with non-differentiable safety-critical metrics. experiments on the waymo dataset across 12 combinations of ego and traffic policies show that our advscene substantially increases the rate of ego-fault collision events and ttc<3s events.">
+        <article class="paper-card" data-title="miler: semantic mid-level representation for sim-to-real reinforcement learning in unstructured autonomous driving" data-summary="reinforcement learning constitutes a promising approach owing to its potential for superhuman performance and self-learned policies. however, its application to real-world autonomous driving remains scarce, particularly in unstructured environments, because of the challenges associated with sim-to-real transfer for unstructured environments. in this work, we present miler, an end-to-end policy framework with zero-shot sim-to-real transfer. during offline training, we employ a custom semantic mid-level representation (mlr) simulator and train the policy network using reinforcement learning, with its control outputs applied directly to a bicycle model. during deployment on the real vehicle, camera and lidar data are processed by bevfusion to generate a semantic bird's-eye-view representation consistent with that of the mlr simulator. the actions generated by the policy network are not applied directly to the real vehicle. instead, we employ a trajectory-alignment strategy that enables zero-shot sim-to-real transfer of both perception and control. we extensively evaluate the proposed framework on a diverse test track comprising numerous challenges, including various obstacles, hairpin curves, velocities of up to 33.6 km/h, and off-road sections. in total, we drove 17.3 km with two different vehicles on a 3.0 km test track without human intervention, thereby demonstrating the effectiveness of our approach. furthermore, the entire software stack runs on a jetson agx orin.">
             <div class="card-meta-top">
                 <span class="rank-tag">TOP #8</span>
                 <div class="score-badge">
@@ -484,24 +484,24 @@
                 </div>
             </div>
             
-            <h2 class="paper-title">Safety-Critical Scenanrio Emerges from Initial Scene</h2>
+            <h2 class="paper-title">MILER: Semantic Mid-Level Representation for Sim-to-Real Reinforcement Learning in Unstructured Autonomous Driving</h2>
             
             <div class="author-row">
                 <span>🗓️ 2026-09-17</span>
-                <span>✍️ Yin Wu, Jiarong Wei, Carl Esselborn et al.</span>
+                <span>✍️ Thomas Steinecker, Denis Trescher, Alexander Bienemann et al.</span>
             </div>
             
             <div class="badge-cluster">
                 <span class="badge">#reinforcement learning</span>
             </div>
             
-            <p class="paper-summary">Safety-critical driving scenario generation has largely focused on manipulating the behavior of surrounding agents while starting from an initial scene from driving data. This assumption can limit the space of discoverable failures, since driving data can provide little opportunity for meaningful interaction. For example, in the Waymo Open Motion Dataset, 20.44% of recorded slices feature a stationary ego vehicle that never moves, and 30.39% of initial frames contain no nearby traffic participants within 10 meters. We instead study safety-critical scenario generation as an initialization problem: given agnostic black-box driving policies, we learn to generate realistic initial scenes that are more likely to evolve into critical interactions. We propose AdvScene, a conditional latent diffusion model that is trained in two stages. Starting from pretraining on naturalistic driving data, we post-train the adversarial-agent generation branch using reinforcement learning with feedback from closed-loop simulator rollouts. Conditioning on ego driving displacement prevents the ego from remaining static, and RL finetuning induces criticality directly with non-differentiable safety-critical metrics. Experiments on the Waymo dataset across 12 combinations of ego and traffic policies show that our AdvScene substantially increases the rate of ego-fault collision events and TTC<3s events.</p>
+            <p class="paper-summary">Reinforcement learning constitutes a promising approach owing to its potential for superhuman performance and self-learned policies. However, its application to real-world autonomous driving remains scarce, particularly in unstructured environments, because of the challenges associated with sim-to-real transfer for unstructured environments. In this work, we present MILER, an end-to-end policy framework with zero-shot sim-to-real transfer. During offline training, we employ a custom semantic mid-level representation (MLR) simulator and train the policy network using reinforcement learning, with its control outputs applied directly to a bicycle model. During deployment on the real vehicle, camera and LiDAR data are processed by BEVFusion to generate a semantic bird's-eye-view representation consistent with that of the MLR simulator. The actions generated by the policy network are not applied directly to the real vehicle. Instead, we employ a trajectory-alignment strategy that enables zero-shot sim-to-real transfer of both perception and control. We extensively evaluate the proposed framework on a diverse test track comprising numerous challenges, including various obstacles, hairpin curves, velocities of up to 33.6 km/h, and off-road sections. In total, we drove 17.3 km with two different vehicles on a 3.0 km test track without human intervention, thereby demonstrating the effectiveness of our approach. Furthermore, the entire software stack runs on a Jetson AGX Orin.</p>
             
             <div class="card-action-bar">
-                <a href="http://arxiv.org/pdf/2609.20103v1" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
+                <a href="http://arxiv.org/pdf/2609.20747v1" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
                     View PDF
                 </a>
-                <a href="http://arxiv.org/abs/2609.20103v1" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
+                <a href="http://arxiv.org/abs/2609.20747v1" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
                     arXiv Page &rarr;
                 </a>
             </div>
