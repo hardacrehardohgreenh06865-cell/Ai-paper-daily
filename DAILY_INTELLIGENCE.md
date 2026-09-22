@@ -1,61 +1,61 @@
-# 🤖 Embodied AI & Robotics Frontier Briefing (2026-09-21)
+# 🤖 Embodied AI & Robotics Frontier Briefing (2026-09-22)
 
 > *Automated Intelligence Briefing generated via custom ETL scoring pipeline. Prioritizes foundation models, manipulation, locomotion, and physical AI systems.*
 
 ---
 
-### Top 1: A Sim-to-Real Integration Pipeline for Training and Deployment of Chunk-Based VLA Manipulation Policies
-- **Priority Score**: `195 pts` | **Published**: `2026-09-18`
-- **Focus Tracks**: `#sim2real` `#vision-language-action` `#vla` `#teleoperation`
-- **Key Authors**: Mathilde Kappel, Clémence Grislain, Mohamed Chetouani et al.
-- **Direct Access**: [arXiv Abstract](http://arxiv.org/abs/2609.21817v1) | [PDF Fulltext](http://arxiv.org/pdf/2609.21817v1)
-
-**Executive Abstract**:
-> Vision-Language-Action (VLA) models have become a prominent paradigm for mapping multimodal inputs, including semantic instructions, visual observations of the scene, and proprioceptive observations, to robot actions. Most state-of-the-art models predict actions in the end-effector pose space as sequences of action chunks. Training and evaluating these models requires large-scale collections of real-world demonstrations, pairing robot actions with the corresponding visual and proprioceptive observations. Collecting such data on real hardware typically relies on human teleoperation, making the process costly, time-consuming, and difficult to scale. We present an open-source sim-to-real experimental protocol that addresses this bottleneck: expert trajectories generated in simulation are replayed open-loop on a real Franka FR3 setup, where the corresponding real visual and proprioceptive observations are recorded and converted into a format compatible with VLA training. The same deployment stack is then reused, in closed-loop, to evaluate a trained policy on that setup, so that data collection and evaluation share an identical hardware configuration. Because each real recording is paired with the simulated trajectory that produced it, the protocol also yields a direct measurement of the sim-to-real gap. We release the collected datasets on Hugging Face together with the pipeline source code https://gitlab.isir.upmc.fr/kappel/sim2real_public_chunk_control.
-
----
-
-### Top 2: PSR: Predictive Sensorimotor Representation Learning for Contact-Rich Manipulation
-- **Priority Score**: `135 pts` | **Published**: `2026-09-18`
+### Top 1: SCULPT-VLA: Learning Structured Control through Staged Action Grounding
+- **Priority Score**: `135 pts` | **Published**: `2026-09-20`
 - **Focus Tracks**: `#vision-language-action` `#vla`
-- **Key Authors**: Shengbao Li, Peng Xu, Chao Tang et al.
-- **Direct Access**: [arXiv Abstract](http://arxiv.org/abs/2609.21753v1) | [PDF Fulltext](http://arxiv.org/pdf/2609.21753v1)
+- **Key Authors**: Wenbo Li, Yiteng Chen, Wei Zhang et al.
+- **Direct Access**: [arXiv Abstract](http://arxiv.org/abs/2609.23275v1) | [PDF Fulltext](http://arxiv.org/pdf/2609.23275v1)
 
 **Executive Abstract**:
-> Contact-rich manipulation requires policies to generate precise actions by reasoning over contact forces, robot configurations, and interaction histories beyond visual observations. Existing methods passively condition on force feedback rather than actively predicting future contact dynamics, limiting their ability to generate high-precision actions. To address this problem, we introduce Predictive Sensorimotor Representation (PSR) learning, a framework that learns a hierarchy of predictive representations from multimodal sensorimotor signals and integrates them into the action stream of a visuomotor policy. Specifically, during a pretraining stage, a multimodal Transformer is trained to learn a hierarchy of predictive representations by jointly forecasting future interaction dynamics. The learned hierarchy subsequently augments the action stream, enabling the resulting policy to exploit contact-relevant cues at multiple depths. We further instantiate PSR within a Vision-Language-Action (VLA) model, resulting in PSR-VLA, and evaluate it on six real-world contact-rich manipulation tasks. Experimental results show that PSR-VLA achieves 91.7% overall success, improving over $π_{0.5}$, ForceVLA-$π_{0.5}$, and ForceVLA2-$π_{0.5}$ by 30.0, 22.5, and 19.2 percentage points, respectively. These results demonstrate the effectiveness of the proposed PSR for force-aware, contact-rich manipulation. Videos of the tasks and stability tests are available at https://psr-vla.pages.dev/.
+> Vision-language-action (VLA) policies increasingly incorporate structured intermediate supervision beyond action labels. Yet specifying what an intermediate representation should encode leaves open how action prediction learns to depend on it. We introduce \textbf{SCULPT-VLA}, a policy that learns structured control through staged action grounding. Its action-conditioning state comprises complementary factors for task progression, scene dynamics, and spatial grounding. Training first forms these factors with teacher scaffolds, then grounds coarse action prediction through their composition as scaffold inputs are withdrawn. Direct perceptual access is subsequently restored for continuous refinement, combining the learned state with perceptual detail. The curriculum separates learning to condition actions on structure from refining continuous control. Deployment requires neither teachers nor discrete-action autoregression. SCULPT-VLA achieves higher average success than shared-backbone baselines on LIBERO, SimplerEnv-WidowX, and RoboTwin 2.0 Full. On SimplerEnv-WidowX, final success is 83.5\%, versus 71.3\% when Stage-II action learning directly accesses vision and language. Across four physical robot tasks, average success under the tested distribution shifts reaches 58.1\%, compared with 45.6\% for $π_{0.5}$. Training ablations and factor-wise interventions support the staged design and show that the learned state continues to contribute to control after direct perceptual access is restored.
 
 ---
 
-### Top 3: AcousticDiffusion: Semantically Conditioned Audio-Guided Diffusion Policy for Search-and-Rescue Assistance
-- **Priority Score**: `120 pts` | **Published**: `2026-09-18`
-- **Focus Tracks**: `#quadruped` `#diffusion policy`
-- **Key Authors**: Iana Zhura, Didar Seyidov, Dmitrii Plotnikov et al.
-- **Direct Access**: [arXiv Abstract](http://arxiv.org/abs/2609.21792v1) | [PDF Fulltext](http://arxiv.org/pdf/2609.21792v1)
+### Top 2: Verti-WM: A Physics-Aided Exteroceptive World Model for Off-Road Reinforcement Learning
+- **Priority Score**: `120 pts` | **Published**: `2026-09-19`
+- **Focus Tracks**: `#world model` `#reinforcement learning`
+- **Key Authors**: Chenhui Pan, Tong Xu, Xuesu Xiao
+- **Direct Access**: [arXiv Abstract](http://arxiv.org/abs/2609.23118v1) | [PDF Fulltext](http://arxiv.org/pdf/2609.23118v1)
 
 **Executive Abstract**:
-> Navigating toward human callers is an important capability for rescue robots operating where visual contact is degraded or occluded. We present AcousticDiffusion, a semantically conditioned, audio-guided diffusion policy for human-directed navigation. A frozen pretrained audio recognizer processes 10.24 s windows, with speech gating and distress-aware prioritization converting recognition outputs into source-level navigation roles. Microphone-array direction-of-arrival measurements are recursively integrated into a robot-centric Bayesian bird's-eye-view belief field. Ego-motion compensation aligns successive observations, progressively constraining source position while preserving bearing-induced range uncertainty. The semantic belief, recent acoustic observations, audio features, and robot state condition a diffusion model that generates waypoint trajectories. On a synthetic-navigation validation set using recorded audio, AcousticDiffusion achieves a mean end-point bearing error of 11.20 degrees, with 91.78% of trajectories aligned within 30 degrees of the caller. Distractor rejection ranges from 89.20% to 98.99%, and the policy favors a HELP-designated caller over a competing speaker in 91.07% of windows. Deployed online on a ZSL-1 quadruped without additional retraining, it achieves a mean bearing error of 64.9 degrees, compared with 98.2 degrees for A* and 90.4 degrees for RRT, with a mean planner compute time of 6.07 ms. Despite imperfect acoustic localization, the reported mean final source distance is reduced from 3.96 m for the classical planners using ODAS-derived (Open embedded Audition System) guidance to 2.48 m, a 37.4% improvement. These results demonstrate the framework's ability to translate uncertain acoustic observations into closer approaches to human callers.
+> Reinforcement learning for off-road navigation requires extensive vehicle-terrain interaction data, which are costly to collect in high-fidelity simulation. World models offer a promising alternative by replacing simulator roll-outs during policy optimization. However, an off-road world model must condition state transitions on exteroceptive terrain information, which proprioception alone does not provide. This challenge is further amplified by the need to model both rigid and deformable terrain, where data-driven and physics-based approaches offer complementary strengths. We propose Verti-WM, a physics-aided exteroceptive world model that recurrently fuses a frozen Transformer for rigid terrain and a neuro-symbolic terramechanics model for deformable terrain. Elevation and semantic observations queried from a supplied map at each predicted pose condition fusion, enabling six-degree-of-freedom rollouts for policy optimization without further simulator access. Verti-WM reduces prediction error by 34.6% and 21.7% over data-driven and physics-based baselines, respectively. Policies trained entirely within Verti-WM achieve comparable task success rates while reducing computation time by 23.6X relative to direct training in the high-fidelity simulator. We further validate Verti-WM using real-world data, enabling policy optimization within learned real-world kinodynamics and achieving a 80% success rate on the Verti-4-Wheeler platform, compared with 40% for direct sim-to-real transfer.
 
 ---
 
-### Top 4: Compact but Moving: Intervention-Relevant Geometry in Recurrent World Models
-- **Priority Score**: `90 pts` | **Published**: `2026-09-18`
+### Top 3: Identity Continuity in Long-Term Embodied AI Relationships: From Agent-Specific Identity Representation to Identity-Continuity Appraisal
+- **Priority Score**: `100 pts` | **Published**: `2026-09-20`
+- **Focus Tracks**: `#embodied ai`
+- **Key Authors**: Zijian Ru
+- **Direct Access**: [arXiv Abstract](http://arxiv.org/abs/2609.23356v1) | [PDF Fulltext](http://arxiv.org/pdf/2609.23356v1)
+
+**Executive Abstract**:
+> Long-term embodied AI will undergo learning, model updates, memory compression, hardware repair, and migration across embodiments. For users who have formed sustained relationships with such systems, these changes raise not only a problem of product consistency but also one of identity continuity: whether the changed system is still experienced as the same particular agent. Existing research suggests that human-AI relationships may develop relational particularity, that robotics and artificial-identity research has identified identity and migration signals across embodiments, and that major updates or platform disruptions can be accompanied by relational loss and restoration desire. This article proposes a user-side framework in which long-term embodied AI is represented through an agent-specific identity representation organized by at least three open identity-content domains: embodied-perceptual, psychological-behavioral, and relational-autobiographical. Information from these domains is not equally weighted; shared history, relational roles, and contingent responsiveness may make some information more identity-diagnostic than others. After system change, users may integrate continuity and discontinuity evidence in a weighted manner, yielding judgments along a continuum from relatively strong identity continuity through ambiguity or partial continuity to clear identity discontinuity. Causal-historical provenance and user participation are treated as contextual evidence rather than a fourth identity-content domain. The framework also proposes identity continuity as a psychological objective for lifecycle design, including memory selection, model updating, and migration across embodiments, under constraints of privacy and user control.
+
+---
+
+### Top 4: AquaCap: A Training-Free Underwater Embodied Agent with Code-as-Policy
+- **Priority Score**: `95 pts` | **Published**: `2026-09-19`
+- **Focus Tracks**: `#vision-language-action`
+- **Key Authors**: Xiaoshi Li, Yule Xu, Chunghiu Kong et al.
+- **Direct Access**: [arXiv Abstract](http://arxiv.org/abs/2609.23133v1) | [PDF Fulltext](http://arxiv.org/pdf/2609.23133v1)
+
+**Executive Abstract**:
+> Recent advances in vision-language-action models have stimulated growing interest in underwater embodied intelligence. However, their reliance on large-scale interaction data limits their applicability underwater, where data collection is costly and scarce. To address this challenge, we present AquaCap, a training-free Code-as-Policy framework for autonomous underwater navigation and manipulation. AquaCap employs a dual-layer agent that translates task instructions and environmental observations into condition-aware plans and executable control programs. Structured perception then provides the agent with semantic, geometric, and reliability-aware observations under degraded underwater conditions. A failure-aware memory diagnoses unsuccessful actions and supports closed-loop replanning and code revision. This design enables online adaptation without task-specific training or parameter updates. AquaCap achieves a 66.43% success rate in simulation. Real-world experiments further demonstrate autonomous grasping and object transport with an ROV, including the manipulation of targets displaced by hydrodynamic disturbances.
+
+---
+
+### Top 5: Robot World Models Are Not Invariant to How the Actions Are Written
+- **Priority Score**: `90 pts` | **Published**: `2026-09-19`
 - **Focus Tracks**: `#world model`
-- **Key Authors**: Yuming Chen, Yang Liu
-- **Direct Access**: [arXiv Abstract](http://arxiv.org/abs/2609.21787v1) | [PDF Fulltext](http://arxiv.org/pdf/2609.21787v1)
+- **Key Authors**: Ahmed Karim, Leon Chlon
+- **Direct Access**: [arXiv Abstract](http://arxiv.org/abs/2609.23252v1) | [PDF Fulltext](http://arxiv.org/pdf/2609.23252v1)
 
 **Executive Abstract**:
-> Learned world models may have compact interventions even when their recurrent state is high-dimensional, but it is unclear what happens to such a correction after it enters the model. We study this question in a controlled recurrent world model where prior work identified a checkpoint-specific rank-4 interface for one-shot counterfactual velocity interventions. The correction rapidly leaves this fixed entry subspace during autonomous rollout. Nevertheless, a low-rank image obtained by transporting the entry directions through the factual recurrent Jacobian chain continues to capture most of the nonlinear correction. Restarts using the tangent-predicted correction preserve substantial counterfactual future function. This transport/function pattern recurs across independently trained structured-GRU models and a parameter-matched LSTM initialized with a privileged compact correction. We further characterize a finite-horizon future-response operator over the full recurrent carrier. Patching shifts its leading future-sensitive directions toward the matched native-counterfactual organization, and the local operator accurately ranks finite perturbation effects over the registered direction panels at the patched and native-counterfactual basepoints. A separate full-amplitude assay finds substantial factual-endpoint tangent residuals and supports response reconfiguration in two of three checkpoints. Together, these results show that compact intervention structure can persist as a moving, state-dependent local geometry embedded in high-dimensional recurrent dynamics, without implying a fixed or dynamically closed low-dimensional state.
-
----
-
-### Top 5: Sandwich-Residuals: Parameter-Efficient Test-time Adaptation of World Models
-- **Priority Score**: `90 pts` | **Published**: `2026-09-18`
-- **Focus Tracks**: `#world model`
-- **Key Authors**: Krishnam Soni, Aditya Sehgal, Vedant Dave et al.
-- **Direct Access**: [arXiv Abstract](http://arxiv.org/abs/2609.21740v1) | [PDF Fulltext](http://arxiv.org/pdf/2609.21740v1)
-
-**Executive Abstract**:
-> Latent world models enable planning by predicting the effects of actions in a learned representation space, but their predictions can become unreliable when test-time conditions differ from training. Existing test-time adaptation methods address this by updating parts of the pretrained model, often modifying millions of parameters and requiring a choice of which internal components to adapt. We introduce Sandwich-Residuals, a lightweight alternative that keeps the pretrained world model frozen and learns only small residual corrections around the predictor. The residuals are optimized online using the model's self-supervised prediction error and require no rewards, labels, or source-domain data. Across 21 conditions on the AdaJEPA benchmark, our method achieves $1.3\times$ the success rate of the frozen model while retaining 95% of the performance of the strongest AdaJEPA variant and adapting 97-99% fewer parameters. Under compound shifts, this advantage increases to $1.9\times$ the success rate of the frozen model, while remaining comparable to internal block adaptation. We further demonstrate the same adaptation principle on a DINO-WM model for 3-D manipulation. These results suggest that effective test-time adaptation of world models does not necessarily require modifying their pretrained internal weights.
+> A robot policy is trained with one of two action parameterizations: absolute joint targets, or deltas relative to the current state. The choice is a live engineering decision in robot learning, and a world model conditioned on actions inherits it silently. We show the inheritance is catastrophic. A latent dynamics model trained on one parameterization and handed the identical commanded trajectory written in the other collapses: retrieval degrades by 2.6-13.4x across three robot datasets and two morphologies, goal-conditioned action selection falls from 53% to 15%, and on PushT the two beliefs about the same future are near-orthogonal (cos = 0.067, worst case -0.377), so the predictor does not degrade gracefully, it answers a different question. This is not a distribution-shift artifact in the usual sense: the two encodings are mutually reconstructible at R^2 = 0.996 given the joint input, so no information is lost, and we give the test that separates a valid re-parameterization from a lossy summary or a sensor swap. The test rejected three of the four axes we proposed. The defect lives in the action channel, which the invariance literature for visual models does not examine: work there concerns crops, jitter and camera pose, while the parameterization of the commands goes unaudited. The repair is averaging over the two encodings, and where it goes matters. Averaging the objective restores task performance by itself; averaging the outputs, safe for probabilities by concavity, is not available for direction-valued prediction, where the normalized mean can score below every member of the orbit. What objective-averaging leaves behind is the tail: worst-case agreement stays at 0.78, a disagreement penalty closes it to 0.995, and over a latent rollout it is the difference between a worst case that erodes and one that holds. On PushT, averaging alone does not repair the axis.
 
 ---
 

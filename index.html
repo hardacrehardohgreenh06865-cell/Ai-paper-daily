@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Embodied AI & Robotics Intelligence Digest — September 21, 2026</title>
+    <title>Embodied AI & Robotics Intelligence Digest — September 22, 2026</title>
     <style>
         :root {
             --bg-base: #080c14;
@@ -242,7 +242,7 @@
         <header>
             <span class="pill-brand">Autonomous Research Intelligence</span>
             <h1>Embodied AI & Physical Frontier Briefing</h1>
-            <p class="subtitle">Compiled on September 21, 2026 • Ranked top 8 strategic breakthroughs out of incoming preprints.</p>
+            <p class="subtitle">Compiled on September 22, 2026 • Ranked top 8 strategic breakthroughs out of incoming preprints.</p>
             
             <div class="controls">
                 <input type="text" id="filterInput" class="search-box" placeholder="Filter papers by keywords (e.g. humanoid, tactile, diffusion)...">
@@ -251,135 +251,135 @@
 
         <main id="paperList">
             
-        <article class="paper-card" data-title="a sim-to-real integration pipeline for training and deployment of chunk-based vla manipulation policies" data-summary="vision-language-action (vla) models have become a prominent paradigm for mapping multimodal inputs, including semantic instructions, visual observations of the scene, and proprioceptive observations, to robot actions. most state-of-the-art models predict actions in the end-effector pose space as sequences of action chunks. training and evaluating these models requires large-scale collections of real-world demonstrations, pairing robot actions with the corresponding visual and proprioceptive observations. collecting such data on real hardware typically relies on human teleoperation, making the process costly, time-consuming, and difficult to scale. we present an open-source sim-to-real experimental protocol that addresses this bottleneck: expert trajectories generated in simulation are replayed open-loop on a real franka fr3 setup, where the corresponding real visual and proprioceptive observations are recorded and converted into a format compatible with vla training. the same deployment stack is then reused, in closed-loop, to evaluate a trained policy on that setup, so that data collection and evaluation share an identical hardware configuration. because each real recording is paired with the simulated trajectory that produced it, the protocol also yields a direct measurement of the sim-to-real gap. we release the collected datasets on hugging face together with the pipeline source code https://gitlab.isir.upmc.fr/kappel/sim2real_public_chunk_control.">
+        <article class="paper-card" data-title="sculpt-vla: learning structured control through staged action grounding" data-summary="vision-language-action (vla) policies increasingly incorporate structured intermediate supervision beyond action labels. yet specifying what an intermediate representation should encode leaves open how action prediction learns to depend on it. we introduce \textbf{sculpt-vla}, a policy that learns structured control through staged action grounding. its action-conditioning state comprises complementary factors for task progression, scene dynamics, and spatial grounding. training first forms these factors with teacher scaffolds, then grounds coarse action prediction through their composition as scaffold inputs are withdrawn. direct perceptual access is subsequently restored for continuous refinement, combining the learned state with perceptual detail. the curriculum separates learning to condition actions on structure from refining continuous control. deployment requires neither teachers nor discrete-action autoregression. sculpt-vla achieves higher average success than shared-backbone baselines on libero, simplerenv-widowx, and robotwin 2.0 full. on simplerenv-widowx, final success is 83.5\%, versus 71.3\% when stage-ii action learning directly accesses vision and language. across four physical robot tasks, average success under the tested distribution shifts reaches 58.1\%, compared with 45.6\% for $π_{0.5}$. training ablations and factor-wise interventions support the staged design and show that the learned state continues to contribute to control after direct perceptual access is restored.">
             <div class="card-meta-top">
                 <span class="rank-tag">TOP #1</span>
-                <div class="score-badge">
-                    <span class="score-label">Priority Index</span>
-                    <span class="score-value">195</span>
-                </div>
-            </div>
-            
-            <h2 class="paper-title">A Sim-to-Real Integration Pipeline for Training and Deployment of Chunk-Based VLA Manipulation Policies</h2>
-            
-            <div class="author-row">
-                <span>🗓️ 2026-09-18</span>
-                <span>✍️ Mathilde Kappel, Clémence Grislain, Mohamed Chetouani et al.</span>
-            </div>
-            
-            <div class="badge-cluster">
-                <span class="badge">#sim2real</span><span class="badge">#vision-language-action</span><span class="badge">#vla</span><span class="badge">#teleoperation</span>
-            </div>
-            
-            <p class="paper-summary">Vision-Language-Action (VLA) models have become a prominent paradigm for mapping multimodal inputs, including semantic instructions, visual observations of the scene, and proprioceptive observations, to robot actions. Most state-of-the-art models predict actions in the end-effector pose space as sequences of action chunks. Training and evaluating these models requires large-scale collections of real-world demonstrations, pairing robot actions with the corresponding visual and proprioceptive observations. Collecting such data on real hardware typically relies on human teleoperation, making the process costly, time-consuming, and difficult to scale. We present an open-source sim-to-real experimental protocol that addresses this bottleneck: expert trajectories generated in simulation are replayed open-loop on a real Franka FR3 setup, where the corresponding real visual and proprioceptive observations are recorded and converted into a format compatible with VLA training. The same deployment stack is then reused, in closed-loop, to evaluate a trained policy on that setup, so that data collection and evaluation share an identical hardware configuration. Because each real recording is paired with the simulated trajectory that produced it, the protocol also yields a direct measurement of the sim-to-real gap. We release the collected datasets on Hugging Face together with the pipeline source code https://gitlab.isir.upmc.fr/kappel/sim2real_public_chunk_control.</p>
-            
-            <div class="card-action-bar">
-                <a href="http://arxiv.org/pdf/2609.21817v1" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
-                    View PDF
-                </a>
-                <a href="http://arxiv.org/abs/2609.21817v1" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
-                    arXiv Page &rarr;
-                </a>
-            </div>
-        </article>
-        
-        <article class="paper-card" data-title="psr: predictive sensorimotor representation learning for contact-rich manipulation" data-summary="contact-rich manipulation requires policies to generate precise actions by reasoning over contact forces, robot configurations, and interaction histories beyond visual observations. existing methods passively condition on force feedback rather than actively predicting future contact dynamics, limiting their ability to generate high-precision actions. to address this problem, we introduce predictive sensorimotor representation (psr) learning, a framework that learns a hierarchy of predictive representations from multimodal sensorimotor signals and integrates them into the action stream of a visuomotor policy. specifically, during a pretraining stage, a multimodal transformer is trained to learn a hierarchy of predictive representations by jointly forecasting future interaction dynamics. the learned hierarchy subsequently augments the action stream, enabling the resulting policy to exploit contact-relevant cues at multiple depths. we further instantiate psr within a vision-language-action (vla) model, resulting in psr-vla, and evaluate it on six real-world contact-rich manipulation tasks. experimental results show that psr-vla achieves 91.7% overall success, improving over $π_{0.5}$, forcevla-$π_{0.5}$, and forcevla2-$π_{0.5}$ by 30.0, 22.5, and 19.2 percentage points, respectively. these results demonstrate the effectiveness of the proposed psr for force-aware, contact-rich manipulation. videos of the tasks and stability tests are available at https://psr-vla.pages.dev/.">
-            <div class="card-meta-top">
-                <span class="rank-tag">TOP #2</span>
                 <div class="score-badge">
                     <span class="score-label">Priority Index</span>
                     <span class="score-value">135</span>
                 </div>
             </div>
             
-            <h2 class="paper-title">PSR: Predictive Sensorimotor Representation Learning for Contact-Rich Manipulation</h2>
+            <h2 class="paper-title">SCULPT-VLA: Learning Structured Control through Staged Action Grounding</h2>
             
             <div class="author-row">
-                <span>🗓️ 2026-09-18</span>
-                <span>✍️ Shengbao Li, Peng Xu, Chao Tang et al.</span>
+                <span>🗓️ 2026-09-20</span>
+                <span>✍️ Wenbo Li, Yiteng Chen, Wei Zhang et al.</span>
             </div>
             
             <div class="badge-cluster">
                 <span class="badge">#vision-language-action</span><span class="badge">#vla</span>
             </div>
             
-            <p class="paper-summary">Contact-rich manipulation requires policies to generate precise actions by reasoning over contact forces, robot configurations, and interaction histories beyond visual observations. Existing methods passively condition on force feedback rather than actively predicting future contact dynamics, limiting their ability to generate high-precision actions. To address this problem, we introduce Predictive Sensorimotor Representation (PSR) learning, a framework that learns a hierarchy of predictive representations from multimodal sensorimotor signals and integrates them into the action stream of a visuomotor policy. Specifically, during a pretraining stage, a multimodal Transformer is trained to learn a hierarchy of predictive representations by jointly forecasting future interaction dynamics. The learned hierarchy subsequently augments the action stream, enabling the resulting policy to exploit contact-relevant cues at multiple depths. We further instantiate PSR within a Vision-Language-Action (VLA) model, resulting in PSR-VLA, and evaluate it on six real-world contact-rich manipulation tasks. Experimental results show that PSR-VLA achieves 91.7% overall success, improving over $π_{0.5}$, ForceVLA-$π_{0.5}$, and ForceVLA2-$π_{0.5}$ by 30.0, 22.5, and 19.2 percentage points, respectively. These results demonstrate the effectiveness of the proposed PSR for force-aware, contact-rich manipulation. Videos of the tasks and stability tests are available at https://psr-vla.pages.dev/.</p>
+            <p class="paper-summary">Vision-language-action (VLA) policies increasingly incorporate structured intermediate supervision beyond action labels. Yet specifying what an intermediate representation should encode leaves open how action prediction learns to depend on it. We introduce \textbf{SCULPT-VLA}, a policy that learns structured control through staged action grounding. Its action-conditioning state comprises complementary factors for task progression, scene dynamics, and spatial grounding. Training first forms these factors with teacher scaffolds, then grounds coarse action prediction through their composition as scaffold inputs are withdrawn. Direct perceptual access is subsequently restored for continuous refinement, combining the learned state with perceptual detail. The curriculum separates learning to condition actions on structure from refining continuous control. Deployment requires neither teachers nor discrete-action autoregression. SCULPT-VLA achieves higher average success than shared-backbone baselines on LIBERO, SimplerEnv-WidowX, and RoboTwin 2.0 Full. On SimplerEnv-WidowX, final success is 83.5\%, versus 71.3\% when Stage-II action learning directly accesses vision and language. Across four physical robot tasks, average success under the tested distribution shifts reaches 58.1\%, compared with 45.6\% for $π_{0.5}$. Training ablations and factor-wise interventions support the staged design and show that the learned state continues to contribute to control after direct perceptual access is restored.</p>
             
             <div class="card-action-bar">
-                <a href="http://arxiv.org/pdf/2609.21753v1" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
+                <a href="http://arxiv.org/pdf/2609.23275v1" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
                     View PDF
                 </a>
-                <a href="http://arxiv.org/abs/2609.21753v1" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
+                <a href="http://arxiv.org/abs/2609.23275v1" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
                     arXiv Page &rarr;
                 </a>
             </div>
         </article>
         
-        <article class="paper-card" data-title="acousticdiffusion: semantically conditioned audio-guided diffusion policy for search-and-rescue assistance" data-summary="navigating toward human callers is an important capability for rescue robots operating where visual contact is degraded or occluded. we present acousticdiffusion, a semantically conditioned, audio-guided diffusion policy for human-directed navigation. a frozen pretrained audio recognizer processes 10.24 s windows, with speech gating and distress-aware prioritization converting recognition outputs into source-level navigation roles. microphone-array direction-of-arrival measurements are recursively integrated into a robot-centric bayesian bird's-eye-view belief field. ego-motion compensation aligns successive observations, progressively constraining source position while preserving bearing-induced range uncertainty. the semantic belief, recent acoustic observations, audio features, and robot state condition a diffusion model that generates waypoint trajectories. on a synthetic-navigation validation set using recorded audio, acousticdiffusion achieves a mean end-point bearing error of 11.20 degrees, with 91.78% of trajectories aligned within 30 degrees of the caller. distractor rejection ranges from 89.20% to 98.99%, and the policy favors a help-designated caller over a competing speaker in 91.07% of windows. deployed online on a zsl-1 quadruped without additional retraining, it achieves a mean bearing error of 64.9 degrees, compared with 98.2 degrees for a* and 90.4 degrees for rrt, with a mean planner compute time of 6.07 ms. despite imperfect acoustic localization, the reported mean final source distance is reduced from 3.96 m for the classical planners using odas-derived (open embedded audition system) guidance to 2.48 m, a 37.4% improvement. these results demonstrate the framework's ability to translate uncertain acoustic observations into closer approaches to human callers.">
+        <article class="paper-card" data-title="verti-wm: a physics-aided exteroceptive world model for off-road reinforcement learning" data-summary="reinforcement learning for off-road navigation requires extensive vehicle-terrain interaction data, which are costly to collect in high-fidelity simulation. world models offer a promising alternative by replacing simulator roll-outs during policy optimization. however, an off-road world model must condition state transitions on exteroceptive terrain information, which proprioception alone does not provide. this challenge is further amplified by the need to model both rigid and deformable terrain, where data-driven and physics-based approaches offer complementary strengths. we propose verti-wm, a physics-aided exteroceptive world model that recurrently fuses a frozen transformer for rigid terrain and a neuro-symbolic terramechanics model for deformable terrain. elevation and semantic observations queried from a supplied map at each predicted pose condition fusion, enabling six-degree-of-freedom rollouts for policy optimization without further simulator access. verti-wm reduces prediction error by 34.6% and 21.7% over data-driven and physics-based baselines, respectively. policies trained entirely within verti-wm achieve comparable task success rates while reducing computation time by 23.6x relative to direct training in the high-fidelity simulator. we further validate verti-wm using real-world data, enabling policy optimization within learned real-world kinodynamics and achieving a 80% success rate on the verti-4-wheeler platform, compared with 40% for direct sim-to-real transfer.">
             <div class="card-meta-top">
-                <span class="rank-tag">TOP #3</span>
+                <span class="rank-tag">TOP #2</span>
                 <div class="score-badge">
                     <span class="score-label">Priority Index</span>
                     <span class="score-value">120</span>
                 </div>
             </div>
             
-            <h2 class="paper-title">AcousticDiffusion: Semantically Conditioned Audio-Guided Diffusion Policy for Search-and-Rescue Assistance</h2>
+            <h2 class="paper-title">Verti-WM: A Physics-Aided Exteroceptive World Model for Off-Road Reinforcement Learning</h2>
             
             <div class="author-row">
-                <span>🗓️ 2026-09-18</span>
-                <span>✍️ Iana Zhura, Didar Seyidov, Dmitrii Plotnikov et al.</span>
+                <span>🗓️ 2026-09-19</span>
+                <span>✍️ Chenhui Pan, Tong Xu, Xuesu Xiao</span>
             </div>
             
             <div class="badge-cluster">
-                <span class="badge">#quadruped</span><span class="badge">#diffusion policy</span>
+                <span class="badge">#world model</span><span class="badge">#reinforcement learning</span>
             </div>
             
-            <p class="paper-summary">Navigating toward human callers is an important capability for rescue robots operating where visual contact is degraded or occluded. We present AcousticDiffusion, a semantically conditioned, audio-guided diffusion policy for human-directed navigation. A frozen pretrained audio recognizer processes 10.24 s windows, with speech gating and distress-aware prioritization converting recognition outputs into source-level navigation roles. Microphone-array direction-of-arrival measurements are recursively integrated into a robot-centric Bayesian bird's-eye-view belief field. Ego-motion compensation aligns successive observations, progressively constraining source position while preserving bearing-induced range uncertainty. The semantic belief, recent acoustic observations, audio features, and robot state condition a diffusion model that generates waypoint trajectories. On a synthetic-navigation validation set using recorded audio, AcousticDiffusion achieves a mean end-point bearing error of 11.20 degrees, with 91.78% of trajectories aligned within 30 degrees of the caller. Distractor rejection ranges from 89.20% to 98.99%, and the policy favors a HELP-designated caller over a competing speaker in 91.07% of windows. Deployed online on a ZSL-1 quadruped without additional retraining, it achieves a mean bearing error of 64.9 degrees, compared with 98.2 degrees for A* and 90.4 degrees for RRT, with a mean planner compute time of 6.07 ms. Despite imperfect acoustic localization, the reported mean final source distance is reduced from 3.96 m for the classical planners using ODAS-derived (Open embedded Audition System) guidance to 2.48 m, a 37.4% improvement. These results demonstrate the framework's ability to translate uncertain acoustic observations into closer approaches to human callers.</p>
+            <p class="paper-summary">Reinforcement learning for off-road navigation requires extensive vehicle-terrain interaction data, which are costly to collect in high-fidelity simulation. World models offer a promising alternative by replacing simulator roll-outs during policy optimization. However, an off-road world model must condition state transitions on exteroceptive terrain information, which proprioception alone does not provide. This challenge is further amplified by the need to model both rigid and deformable terrain, where data-driven and physics-based approaches offer complementary strengths. We propose Verti-WM, a physics-aided exteroceptive world model that recurrently fuses a frozen Transformer for rigid terrain and a neuro-symbolic terramechanics model for deformable terrain. Elevation and semantic observations queried from a supplied map at each predicted pose condition fusion, enabling six-degree-of-freedom rollouts for policy optimization without further simulator access. Verti-WM reduces prediction error by 34.6% and 21.7% over data-driven and physics-based baselines, respectively. Policies trained entirely within Verti-WM achieve comparable task success rates while reducing computation time by 23.6X relative to direct training in the high-fidelity simulator. We further validate Verti-WM using real-world data, enabling policy optimization within learned real-world kinodynamics and achieving a 80% success rate on the Verti-4-Wheeler platform, compared with 40% for direct sim-to-real transfer.</p>
             
             <div class="card-action-bar">
-                <a href="http://arxiv.org/pdf/2609.21792v1" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
+                <a href="http://arxiv.org/pdf/2609.23118v1" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
                     View PDF
                 </a>
-                <a href="http://arxiv.org/abs/2609.21792v1" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
+                <a href="http://arxiv.org/abs/2609.23118v1" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
                     arXiv Page &rarr;
                 </a>
             </div>
         </article>
         
-        <article class="paper-card" data-title="compact but moving: intervention-relevant geometry in recurrent world models" data-summary="learned world models may have compact interventions even when their recurrent state is high-dimensional, but it is unclear what happens to such a correction after it enters the model. we study this question in a controlled recurrent world model where prior work identified a checkpoint-specific rank-4 interface for one-shot counterfactual velocity interventions. the correction rapidly leaves this fixed entry subspace during autonomous rollout. nevertheless, a low-rank image obtained by transporting the entry directions through the factual recurrent jacobian chain continues to capture most of the nonlinear correction. restarts using the tangent-predicted correction preserve substantial counterfactual future function. this transport/function pattern recurs across independently trained structured-gru models and a parameter-matched lstm initialized with a privileged compact correction. we further characterize a finite-horizon future-response operator over the full recurrent carrier. patching shifts its leading future-sensitive directions toward the matched native-counterfactual organization, and the local operator accurately ranks finite perturbation effects over the registered direction panels at the patched and native-counterfactual basepoints. a separate full-amplitude assay finds substantial factual-endpoint tangent residuals and supports response reconfiguration in two of three checkpoints. together, these results show that compact intervention structure can persist as a moving, state-dependent local geometry embedded in high-dimensional recurrent dynamics, without implying a fixed or dynamically closed low-dimensional state.">
+        <article class="paper-card" data-title="identity continuity in long-term embodied ai relationships: from agent-specific identity representation to identity-continuity appraisal" data-summary="long-term embodied ai will undergo learning, model updates, memory compression, hardware repair, and migration across embodiments. for users who have formed sustained relationships with such systems, these changes raise not only a problem of product consistency but also one of identity continuity: whether the changed system is still experienced as the same particular agent. existing research suggests that human-ai relationships may develop relational particularity, that robotics and artificial-identity research has identified identity and migration signals across embodiments, and that major updates or platform disruptions can be accompanied by relational loss and restoration desire. this article proposes a user-side framework in which long-term embodied ai is represented through an agent-specific identity representation organized by at least three open identity-content domains: embodied-perceptual, psychological-behavioral, and relational-autobiographical. information from these domains is not equally weighted; shared history, relational roles, and contingent responsiveness may make some information more identity-diagnostic than others. after system change, users may integrate continuity and discontinuity evidence in a weighted manner, yielding judgments along a continuum from relatively strong identity continuity through ambiguity or partial continuity to clear identity discontinuity. causal-historical provenance and user participation are treated as contextual evidence rather than a fourth identity-content domain. the framework also proposes identity continuity as a psychological objective for lifecycle design, including memory selection, model updating, and migration across embodiments, under constraints of privacy and user control.">
+            <div class="card-meta-top">
+                <span class="rank-tag">TOP #3</span>
+                <div class="score-badge">
+                    <span class="score-label">Priority Index</span>
+                    <span class="score-value">100</span>
+                </div>
+            </div>
+            
+            <h2 class="paper-title">Identity Continuity in Long-Term Embodied AI Relationships: From Agent-Specific Identity Representation to Identity-Continuity Appraisal</h2>
+            
+            <div class="author-row">
+                <span>🗓️ 2026-09-20</span>
+                <span>✍️ Zijian Ru</span>
+            </div>
+            
+            <div class="badge-cluster">
+                <span class="badge">#embodied ai</span>
+            </div>
+            
+            <p class="paper-summary">Long-term embodied AI will undergo learning, model updates, memory compression, hardware repair, and migration across embodiments. For users who have formed sustained relationships with such systems, these changes raise not only a problem of product consistency but also one of identity continuity: whether the changed system is still experienced as the same particular agent. Existing research suggests that human-AI relationships may develop relational particularity, that robotics and artificial-identity research has identified identity and migration signals across embodiments, and that major updates or platform disruptions can be accompanied by relational loss and restoration desire. This article proposes a user-side framework in which long-term embodied AI is represented through an agent-specific identity representation organized by at least three open identity-content domains: embodied-perceptual, psychological-behavioral, and relational-autobiographical. Information from these domains is not equally weighted; shared history, relational roles, and contingent responsiveness may make some information more identity-diagnostic than others. After system change, users may integrate continuity and discontinuity evidence in a weighted manner, yielding judgments along a continuum from relatively strong identity continuity through ambiguity or partial continuity to clear identity discontinuity. Causal-historical provenance and user participation are treated as contextual evidence rather than a fourth identity-content domain. The framework also proposes identity continuity as a psychological objective for lifecycle design, including memory selection, model updating, and migration across embodiments, under constraints of privacy and user control.</p>
+            
+            <div class="card-action-bar">
+                <a href="http://arxiv.org/pdf/2609.23356v1" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
+                    View PDF
+                </a>
+                <a href="http://arxiv.org/abs/2609.23356v1" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
+                    arXiv Page &rarr;
+                </a>
+            </div>
+        </article>
+        
+        <article class="paper-card" data-title="aquacap: a training-free underwater embodied agent with code-as-policy" data-summary="recent advances in vision-language-action models have stimulated growing interest in underwater embodied intelligence. however, their reliance on large-scale interaction data limits their applicability underwater, where data collection is costly and scarce. to address this challenge, we present aquacap, a training-free code-as-policy framework for autonomous underwater navigation and manipulation. aquacap employs a dual-layer agent that translates task instructions and environmental observations into condition-aware plans and executable control programs. structured perception then provides the agent with semantic, geometric, and reliability-aware observations under degraded underwater conditions. a failure-aware memory diagnoses unsuccessful actions and supports closed-loop replanning and code revision. this design enables online adaptation without task-specific training or parameter updates. aquacap achieves a 66.43% success rate in simulation. real-world experiments further demonstrate autonomous grasping and object transport with an rov, including the manipulation of targets displaced by hydrodynamic disturbances.">
             <div class="card-meta-top">
                 <span class="rank-tag">TOP #4</span>
                 <div class="score-badge">
                     <span class="score-label">Priority Index</span>
-                    <span class="score-value">90</span>
+                    <span class="score-value">95</span>
                 </div>
             </div>
             
-            <h2 class="paper-title">Compact but Moving: Intervention-Relevant Geometry in Recurrent World Models</h2>
+            <h2 class="paper-title">AquaCap: A Training-Free Underwater Embodied Agent with Code-as-Policy</h2>
             
             <div class="author-row">
-                <span>🗓️ 2026-09-18</span>
-                <span>✍️ Yuming Chen, Yang Liu</span>
+                <span>🗓️ 2026-09-19</span>
+                <span>✍️ Xiaoshi Li, Yule Xu, Chunghiu Kong et al.</span>
             </div>
             
             <div class="badge-cluster">
-                <span class="badge">#world model</span>
+                <span class="badge">#vision-language-action</span>
             </div>
             
-            <p class="paper-summary">Learned world models may have compact interventions even when their recurrent state is high-dimensional, but it is unclear what happens to such a correction after it enters the model. We study this question in a controlled recurrent world model where prior work identified a checkpoint-specific rank-4 interface for one-shot counterfactual velocity interventions. The correction rapidly leaves this fixed entry subspace during autonomous rollout. Nevertheless, a low-rank image obtained by transporting the entry directions through the factual recurrent Jacobian chain continues to capture most of the nonlinear correction. Restarts using the tangent-predicted correction preserve substantial counterfactual future function. This transport/function pattern recurs across independently trained structured-GRU models and a parameter-matched LSTM initialized with a privileged compact correction. We further characterize a finite-horizon future-response operator over the full recurrent carrier. Patching shifts its leading future-sensitive directions toward the matched native-counterfactual organization, and the local operator accurately ranks finite perturbation effects over the registered direction panels at the patched and native-counterfactual basepoints. A separate full-amplitude assay finds substantial factual-endpoint tangent residuals and supports response reconfiguration in two of three checkpoints. Together, these results show that compact intervention structure can persist as a moving, state-dependent local geometry embedded in high-dimensional recurrent dynamics, without implying a fixed or dynamically closed low-dimensional state.</p>
+            <p class="paper-summary">Recent advances in vision-language-action models have stimulated growing interest in underwater embodied intelligence. However, their reliance on large-scale interaction data limits their applicability underwater, where data collection is costly and scarce. To address this challenge, we present AquaCap, a training-free Code-as-Policy framework for autonomous underwater navigation and manipulation. AquaCap employs a dual-layer agent that translates task instructions and environmental observations into condition-aware plans and executable control programs. Structured perception then provides the agent with semantic, geometric, and reliability-aware observations under degraded underwater conditions. A failure-aware memory diagnoses unsuccessful actions and supports closed-loop replanning and code revision. This design enables online adaptation without task-specific training or parameter updates. AquaCap achieves a 66.43% success rate in simulation. Real-world experiments further demonstrate autonomous grasping and object transport with an ROV, including the manipulation of targets displaced by hydrodynamic disturbances.</p>
             
             <div class="card-action-bar">
-                <a href="http://arxiv.org/pdf/2609.21787v1" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
+                <a href="http://arxiv.org/pdf/2609.23133v1" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
                     View PDF
                 </a>
-                <a href="http://arxiv.org/abs/2609.21787v1" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
+                <a href="http://arxiv.org/abs/2609.23133v1" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
                     arXiv Page &rarr;
                 </a>
             </div>
         </article>
         
-        <article class="paper-card" data-title="sandwich-residuals: parameter-efficient test-time adaptation of world models" data-summary="latent world models enable planning by predicting the effects of actions in a learned representation space, but their predictions can become unreliable when test-time conditions differ from training. existing test-time adaptation methods address this by updating parts of the pretrained model, often modifying millions of parameters and requiring a choice of which internal components to adapt. we introduce sandwich-residuals, a lightweight alternative that keeps the pretrained world model frozen and learns only small residual corrections around the predictor. the residuals are optimized online using the model's self-supervised prediction error and require no rewards, labels, or source-domain data. across 21 conditions on the adajepa benchmark, our method achieves $1.3\times$ the success rate of the frozen model while retaining 95% of the performance of the strongest adajepa variant and adapting 97-99% fewer parameters. under compound shifts, this advantage increases to $1.9\times$ the success rate of the frozen model, while remaining comparable to internal block adaptation. we further demonstrate the same adaptation principle on a dino-wm model for 3-d manipulation. these results suggest that effective test-time adaptation of world models does not necessarily require modifying their pretrained internal weights.">
+        <article class="paper-card" data-title="robot world models are not invariant to how the actions are written" data-summary="a robot policy is trained with one of two action parameterizations: absolute joint targets, or deltas relative to the current state. the choice is a live engineering decision in robot learning, and a world model conditioned on actions inherits it silently. we show the inheritance is catastrophic. a latent dynamics model trained on one parameterization and handed the identical commanded trajectory written in the other collapses: retrieval degrades by 2.6-13.4x across three robot datasets and two morphologies, goal-conditioned action selection falls from 53% to 15%, and on pusht the two beliefs about the same future are near-orthogonal (cos = 0.067, worst case -0.377), so the predictor does not degrade gracefully, it answers a different question. this is not a distribution-shift artifact in the usual sense: the two encodings are mutually reconstructible at r^2 = 0.996 given the joint input, so no information is lost, and we give the test that separates a valid re-parameterization from a lossy summary or a sensor swap. the test rejected three of the four axes we proposed. the defect lives in the action channel, which the invariance literature for visual models does not examine: work there concerns crops, jitter and camera pose, while the parameterization of the commands goes unaudited. the repair is averaging over the two encodings, and where it goes matters. averaging the objective restores task performance by itself; averaging the outputs, safe for probabilities by concavity, is not available for direction-valued prediction, where the normalized mean can score below every member of the orbit. what objective-averaging leaves behind is the tail: worst-case agreement stays at 0.78, a disagreement penalty closes it to 0.995, and over a latent rollout it is the difference between a worst case that erodes and one that holds. on pusht, averaging alone does not repair the axis.">
             <div class="card-meta-top">
                 <span class="rank-tag">TOP #5</span>
                 <div class="score-badge">
@@ -388,120 +388,120 @@
                 </div>
             </div>
             
-            <h2 class="paper-title">Sandwich-Residuals: Parameter-Efficient Test-time Adaptation of World Models</h2>
+            <h2 class="paper-title">Robot World Models Are Not Invariant to How the Actions Are Written</h2>
             
             <div class="author-row">
-                <span>🗓️ 2026-09-18</span>
-                <span>✍️ Krishnam Soni, Aditya Sehgal, Vedant Dave et al.</span>
+                <span>🗓️ 2026-09-19</span>
+                <span>✍️ Ahmed Karim, Leon Chlon</span>
             </div>
             
             <div class="badge-cluster">
                 <span class="badge">#world model</span>
             </div>
             
-            <p class="paper-summary">Latent world models enable planning by predicting the effects of actions in a learned representation space, but their predictions can become unreliable when test-time conditions differ from training. Existing test-time adaptation methods address this by updating parts of the pretrained model, often modifying millions of parameters and requiring a choice of which internal components to adapt. We introduce Sandwich-Residuals, a lightweight alternative that keeps the pretrained world model frozen and learns only small residual corrections around the predictor. The residuals are optimized online using the model's self-supervised prediction error and require no rewards, labels, or source-domain data. Across 21 conditions on the AdaJEPA benchmark, our method achieves $1.3\times$ the success rate of the frozen model while retaining 95% of the performance of the strongest AdaJEPA variant and adapting 97-99% fewer parameters. Under compound shifts, this advantage increases to $1.9\times$ the success rate of the frozen model, while remaining comparable to internal block adaptation. We further demonstrate the same adaptation principle on a DINO-WM model for 3-D manipulation. These results suggest that effective test-time adaptation of world models does not necessarily require modifying their pretrained internal weights.</p>
+            <p class="paper-summary">A robot policy is trained with one of two action parameterizations: absolute joint targets, or deltas relative to the current state. The choice is a live engineering decision in robot learning, and a world model conditioned on actions inherits it silently. We show the inheritance is catastrophic. A latent dynamics model trained on one parameterization and handed the identical commanded trajectory written in the other collapses: retrieval degrades by 2.6-13.4x across three robot datasets and two morphologies, goal-conditioned action selection falls from 53% to 15%, and on PushT the two beliefs about the same future are near-orthogonal (cos = 0.067, worst case -0.377), so the predictor does not degrade gracefully, it answers a different question. This is not a distribution-shift artifact in the usual sense: the two encodings are mutually reconstructible at R^2 = 0.996 given the joint input, so no information is lost, and we give the test that separates a valid re-parameterization from a lossy summary or a sensor swap. The test rejected three of the four axes we proposed. The defect lives in the action channel, which the invariance literature for visual models does not examine: work there concerns crops, jitter and camera pose, while the parameterization of the commands goes unaudited. The repair is averaging over the two encodings, and where it goes matters. Averaging the objective restores task performance by itself; averaging the outputs, safe for probabilities by concavity, is not available for direction-valued prediction, where the normalized mean can score below every member of the orbit. What objective-averaging leaves behind is the tail: worst-case agreement stays at 0.78, a disagreement penalty closes it to 0.995, and over a latent rollout it is the difference between a worst case that erodes and one that holds. On PushT, averaging alone does not repair the axis.</p>
             
             <div class="card-action-bar">
-                <a href="http://arxiv.org/pdf/2609.21740v1" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
+                <a href="http://arxiv.org/pdf/2609.23252v1" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
                     View PDF
                 </a>
-                <a href="http://arxiv.org/abs/2609.21740v1" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
+                <a href="http://arxiv.org/abs/2609.23252v1" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
                     arXiv Page &rarr;
                 </a>
             </div>
         </article>
         
-        <article class="paper-card" data-title="zerotouch: tactile-supervised visual contact estimation for contact-rich manipulation" data-summary="reliable robotic grasping benefits from estimating the evolving physical interaction and selecting a grasp-dependent compression target. tactile sensors provide direct interaction measurements but require dedicated hardware at deployment. we introduce zerotouch, a tactile-supervised framework that predicts dense contact deformation, the instantaneous six-axis wrench, and a grasp-dependent desired compression target from wrist rgb observations, gripper state, and local gravity direction. tactile measurements are used only as privileged supervision during training and are not required at deployment. on the full validation set, the complete architecture reduces normal-force mae from 2.017 n for a state-only baseline to 0.531 n. in physical evaluation with 20 trials per condition, zerotouch achieves 95% success on an unseen object, 80% in a seen-object/unseen-grasp condition, and 90% under a content/load shift. under the same evaluation protocol, openvla achieves 25%, 40%, and 55%, while smolvla achieves 10%, 25%, and 35%, respectively.">
+        <article class="paper-card" data-title="latent telepathy: multi-robot communication with self-supervised perceptual latents" data-summary="in a decentralized multi-robot team under partial observability, the fact that decides a robot's next action is often visible only to a teammate. existing decentralized methods communicate kinematic information, such as position or planned trajectory, which cannot convey what the teammate perceives. learned communication in multi-agent reinforcement learning (marl) can carry perceptual content, but the resulting messages are task-coupled and opaque. we propose latent telepathy. each robot broadcasts the perceptual latent vector it already computes for its own use, the output of an encoder trained with a self-supervised joint-embedding predictive objective, frozen, and shared across the team. a teammate learns to act on it from task reward alone. because the encoder already runs for perception, the message costs no additional computation and a single compact vector of bandwidth. because the encoder is frozen before any policy is trained, the message means the same thing to every robot, and the receiving robot is never told what it means. we evaluate latent telepathy with a content-controlled protocol in which bandwidth, latency, topology and receiver are held fixed and only the message content varies. broadcasting the latent lets a navigator avoid an occluded hazard in 99.7% of episodes, matching a noiseless hand-designed message. position and trajectory messages remain at chance, and the raw camera image, 186 times wider, is less reliable than the compressed latent. the result holds from a discrete gridworld to rendered pixels under continuous velocity control, and the encoder decodes the hazard from a physical robot's camera in 102 of 102 live decisions. we also identify a requirement for porting marl communication results to continuous control, that the decision a message informs must remain reachable by exploration, and show how to restore it.">
             <div class="card-meta-top">
                 <span class="rank-tag">TOP #6</span>
-                <div class="score-badge">
-                    <span class="score-label">Priority Index</span>
-                    <span class="score-value">90</span>
-                </div>
-            </div>
-            
-            <h2 class="paper-title">ZeroTouch: Tactile-Supervised Visual Contact Estimation for Contact-Rich Manipulation</h2>
-            
-            <div class="author-row">
-                <span>🗓️ 2026-09-18</span>
-                <span>✍️ Dmitriy Kosenkov, Daniia Zinniatullina, Miguel Altamirano Cabrera et al.</span>
-            </div>
-            
-            <div class="badge-cluster">
-                <span class="badge">#vla</span>
-            </div>
-            
-            <p class="paper-summary">Reliable robotic grasping benefits from estimating the evolving physical interaction and selecting a grasp-dependent compression target. Tactile sensors provide direct interaction measurements but require dedicated hardware at deployment. We introduce ZeroTouch, a tactile-supervised framework that predicts dense contact deformation, the instantaneous six-axis wrench, and a grasp-dependent desired compression target from wrist RGB observations, gripper state, and local gravity direction. Tactile measurements are used only as privileged supervision during training and are not required at deployment. On the full validation set, the complete architecture reduces normal-force MAE from 2.017 N for a state-only baseline to 0.531 N. In physical evaluation with 20 trials per condition, ZeroTouch achieves 95% success on an unseen object, 80% in a seen-object/unseen-grasp condition, and 90% under a content/load shift. Under the same evaluation protocol, OpenVLA achieves 25%, 40%, and 55%, while SmolVLA achieves 10%, 25%, and 35%, respectively.</p>
-            
-            <div class="card-action-bar">
-                <a href="http://arxiv.org/pdf/2609.21726v1" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
-                    View PDF
-                </a>
-                <a href="http://arxiv.org/abs/2609.21726v1" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
-                    arXiv Page &rarr;
-                </a>
-            </div>
-        </article>
-        
-        <article class="paper-card" data-title="from pretraining to proficiency: real-world subtask rl for long-horizon manipulation with minimal human intervention" data-summary="a pretrained robot foundation policy may execute most of a long-horizon task yet repeatedly fail at a few critical subtasks. collecting additional full-task demonstrations for supervised fine-tuning (sft) requires operators to repeat behaviors the policy already performs well. reinforcement learning (rl) fine-tuning offers a promising path to bridge this gap, but existing approaches struggle to solve long-horizon tasks using only sparse rewards. we present parts (policy adaptation with rl on targeted subtasks), a real-world subtask rl framework that concentrates practice at these bottlenecks while allowing training rollouts to proceed with minimal human intervention. the frozen pretrained policy supplies nominal actions throughout execution, while agent-generated selectors and success verifiers activate residual corrections and provide local outcome rewards. these rewards support learning from successful subtasks even when complete-task successes are scarce. training combines online rl with success-reweighted retraining, and each retrained residual policy is redeployed to collect further experience. humans identify bottlenecks during setup and perform physical resets when needed. on bimanual yam and single-arm franka tasks, parts improves complete-task success from 32% to 61% and from 50% to 95%, respectively, using tens of minutes of real-world rl rollouts per task on average. compared with existing real-world rl fine-tuning methods, parts raises full-task success by more than 25% under the same robot-rollout budget while requiring less human involvement.">
-            <div class="card-meta-top">
-                <span class="rank-tag">TOP #7</span>
                 <div class="score-badge">
                     <span class="score-label">Priority Index</span>
                     <span class="score-value">80</span>
                 </div>
             </div>
             
-            <h2 class="paper-title">From Pretraining to Proficiency: Real-World Subtask RL for Long-Horizon Manipulation with Minimal Human Intervention</h2>
+            <h2 class="paper-title">Latent Telepathy: Multi-Robot Communication with Self-Supervised Perceptual Latents</h2>
             
             <div class="author-row">
-                <span>🗓️ 2026-09-18</span>
-                <span>✍️ Sichang Su, Benjamin Yang, Zhiyun Deng et al.</span>
+                <span>🗓️ 2026-09-20</span>
+                <span>✍️ Howard Wang, Han Zheng, Cathy Wu</span>
             </div>
             
             <div class="badge-cluster">
                 <span class="badge">#reinforcement learning</span>
             </div>
             
-            <p class="paper-summary">A pretrained robot foundation policy may execute most of a long-horizon task yet repeatedly fail at a few critical subtasks. Collecting additional full-task demonstrations for supervised fine-tuning (SFT) requires operators to repeat behaviors the policy already performs well. Reinforcement learning (RL) fine-tuning offers a promising path to bridge this gap, but existing approaches struggle to solve long-horizon tasks using only sparse rewards. We present PARTS (Policy Adaptation with RL on Targeted Subtasks), a real-world subtask RL framework that concentrates practice at these bottlenecks while allowing training rollouts to proceed with minimal human intervention. The frozen pretrained policy supplies nominal actions throughout execution, while agent-generated selectors and success verifiers activate residual corrections and provide local outcome rewards. These rewards support learning from successful subtasks even when complete-task successes are scarce. Training combines online RL with success-reweighted retraining, and each retrained residual policy is redeployed to collect further experience. Humans identify bottlenecks during setup and perform physical resets when needed. On bimanual YAM and single-arm Franka tasks, PARTS improves complete-task success from 32% to 61% and from 50% to 95%, respectively, using tens of minutes of real-world RL rollouts per task on average. Compared with existing real-world RL fine-tuning methods, PARTS raises full-task success by more than 25% under the same robot-rollout budget while requiring less human involvement.</p>
+            <p class="paper-summary">In a decentralized multi-robot team under partial observability, the fact that decides a robot's next action is often visible only to a teammate. Existing decentralized methods communicate kinematic information, such as position or planned trajectory, which cannot convey what the teammate perceives. Learned communication in multi-agent reinforcement learning (MARL) can carry perceptual content, but the resulting messages are task-coupled and opaque. We propose Latent Telepathy. Each robot broadcasts the perceptual latent vector it already computes for its own use, the output of an encoder trained with a self-supervised joint-embedding predictive objective, frozen, and shared across the team. A teammate learns to act on it from task reward alone. Because the encoder already runs for perception, the message costs no additional computation and a single compact vector of bandwidth. Because the encoder is frozen before any policy is trained, the message means the same thing to every robot, and the receiving robot is never told what it means. We evaluate Latent Telepathy with a content-controlled protocol in which bandwidth, latency, topology and receiver are held fixed and only the message content varies. Broadcasting the latent lets a navigator avoid an occluded hazard in 99.7% of episodes, matching a noiseless hand-designed message. Position and trajectory messages remain at chance, and the raw camera image, 186 times wider, is less reliable than the compressed latent. The result holds from a discrete gridworld to rendered pixels under continuous velocity control, and the encoder decodes the hazard from a physical robot's camera in 102 of 102 live decisions. We also identify a requirement for porting MARL communication results to continuous control, that the decision a message informs must remain reachable by exploration, and show how to restore it.</p>
             
             <div class="card-action-bar">
-                <a href="http://arxiv.org/pdf/2609.21788v1" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
+                <a href="http://arxiv.org/pdf/2609.23269v1" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
                     View PDF
                 </a>
-                <a href="http://arxiv.org/abs/2609.21788v1" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
+                <a href="http://arxiv.org/abs/2609.23269v1" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
                     arXiv Page &rarr;
                 </a>
             </div>
         </article>
         
-        <article class="paper-card" data-title="contact-rich motion planning via gpu-parallel mode evaluation" data-summary="contact-rich motion planning (crmp) is essential for robotic manipulation and locomotion, yet remains computationally challenging due to combinatorial contact decisions. existing methods typically avoid broad evaluation of contact-mode sequences through search heuristics or optimization reformulations. we revisit broad evaluation in light of modern gpu hardware and introduce contact-mode expansion with parallel trajectory optimization (comet), which combines gpu-parallel trajectory evaluation with greedy contact-mode expansion. on planar pushing benchmarks, comet is competitive with optimization-based, sampling, and tree-search baselines in solution quality and planning time, matching the full-enumeration reference on nearly all instances with fewer evaluations and shorter planning times. ablations suggest that much of the performance gain comes from the high-throughput trajectory evaluator. in bimanual nonprehensile manipulation, gpu-friendly local mode expansion achieves higher planning success than the tested adaptive tree search as the mode space grows. these results demonstrate that broad explicit mode evaluation provides a simple yet effective alternative for crmp.">
+        <article class="paper-card" data-title="biview-touch: learning bimanual tactile representations by cross-hand completion" data-summary="bimanual interaction produces complementary tactile views of the same physical process, yet existing tactile representation learning largely models the two hands independently or combines them only for downstream prediction, leaving their cross-hand relationship unexplored. to exploit this overlooked structure, we introduce biview-touch, a tactile-only framework that completes masked target-hand latents from the remaining visible target-hand regions and the synchronized full contralateral hand. a student encoder with a geometry-conditioned directional decoder predicts full-view ema latent targets, while temporal and layout counterfactuals encourage sensitivity to synchronized and anatomically organized source information. controlled ablations and source-context interventions show that biview-touch learns structured cross-hand dependence on temporally aligned and anatomically organized contralateral tactile context, rather than benefiting from bilateral input alone. on the public humantouch dataset, its frozen representations consistently outperform representative self-supervised baselines across low-label settings. with only 5\% downstream labels, biview-touch achieves relative balanced-accuracy gains of 7.1\% on bilateral wrist-motion recognition and 14.1\% on force-derived interaction-phase recognition. we further introduce bvt-20, a 20-task bilateral tactile dataset, and demonstrate transfer across recording sessions and pretraining corpora, including transfer to a held-out bimanual task. our code and dataset details are available on the anonymous project page: https://anonymous.4open.science/w/biview-touch-review-site-050c/.">
+            <div class="card-meta-top">
+                <span class="rank-tag">TOP #7</span>
+                <div class="score-badge">
+                    <span class="score-label">Priority Index</span>
+                    <span class="score-value">50</span>
+                </div>
+            </div>
+            
+            <h2 class="paper-title">BiView-Touch: Learning Bimanual Tactile Representations by Cross-Hand Completion</h2>
+            
+            <div class="author-row">
+                <span>🗓️ 2026-09-20</span>
+                <span>✍️ Chenxin Liang, Youchen Lai, Chuqiao Lyu et al.</span>
+            </div>
+            
+            <div class="badge-cluster">
+                <span class="badge badge-muted">#frontier</span>
+            </div>
+            
+            <p class="paper-summary">Bimanual interaction produces complementary tactile views of the same physical process, yet existing tactile representation learning largely models the two hands independently or combines them only for downstream prediction, leaving their cross-hand relationship unexplored. To exploit this overlooked structure, we introduce BiView-Touch, a tactile-only framework that completes masked target-hand latents from the remaining visible target-hand regions and the synchronized full contralateral hand. A student encoder with a geometry-conditioned directional decoder predicts full-view EMA latent targets, while temporal and layout counterfactuals encourage sensitivity to synchronized and anatomically organized source information. Controlled ablations and source-context interventions show that BiView-Touch learns structured cross-hand dependence on temporally aligned and anatomically organized contralateral tactile context, rather than benefiting from bilateral input alone. On the public HumanTouch dataset, its frozen representations consistently outperform representative self-supervised baselines across low-label settings. With only 5\% downstream labels, BiView-Touch achieves relative balanced-accuracy gains of 7.1\% on bilateral wrist-motion recognition and 14.1\% on force-derived interaction-phase recognition. We further introduce BVT-20, a 20-task bilateral tactile dataset, and demonstrate transfer across recording sessions and pretraining corpora, including transfer to a held-out bimanual task. Our code and dataset details are available on the anonymous project page: https://anonymous.4open.science/w/biview-touch-review-site-050C/.</p>
+            
+            <div class="card-action-bar">
+                <a href="http://arxiv.org/pdf/2609.23352v1" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
+                    View PDF
+                </a>
+                <a href="http://arxiv.org/abs/2609.23352v1" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
+                    arXiv Page &rarr;
+                </a>
+            </div>
+        </article>
+        
+        <article class="paper-card" data-title="manipulation feasible navigation among movable obstacles with discrete contact pushing" data-summary="in environments with large movable obstacles, detour-only navigation can be inefficient or even infeasible, while obstacle interaction requires reasoning about navigation benefit, feasible placement, and executable manipulation. we present a hierarchical navigation among movable obstacles (namo) framework for mobile manipulators. at the high level, the planner identifies key blocking obstacles from reference paths and searches for relocation plans that jointly satisfy geometric, manipulation, and downstream navigation constraints. when direct relocation is hindered by other movable objects, a large language model (llm) is selectively invoked to infer auxiliary manipulation dependencies, which are then verified by deterministic geometric planning. to execute the resulting relocation goals, we define discrete contact modes on the surfaces of box-shaped obstacles and select contact faces and regions online based on position and orientation errors, enabling straight, side, and corner pushing through contact switching. a recurrent reinforcement-learning policy coordinates the mobile base and manipulator to track tool center point (tcp) targets while preserving end-effector reachability during sustained pushing. simulation and real-robot experiments demonstrate feasible navigation-manipulation in detour, single- and multi-obstacle relocation, and dependency-constrained scenarios, validating the framework for interactive navigation with large non-graspable obstacles. the open-source project is available at https://cloudytosunny.github.io/namo_dcpushing/.">
             <div class="card-meta-top">
                 <span class="rank-tag">TOP #8</span>
                 <div class="score-badge">
                     <span class="score-label">Priority Index</span>
-                    <span class="score-value">75</span>
+                    <span class="score-value">50</span>
                 </div>
             </div>
             
-            <h2 class="paper-title">Contact-Rich Motion Planning via GPU-Parallel Mode Evaluation</h2>
+            <h2 class="paper-title">Manipulation Feasible Navigation Among Movable Obstacles with Discrete Contact Pushing</h2>
             
             <div class="author-row">
-                <span>🗓️ 2026-09-18</span>
-                <span>✍️ Jiayun Li, Georgia Chalvatzaki</span>
+                <span>🗓️ 2026-09-20</span>
+                <span>✍️ Shaohu Wang, Aiguo Song, Yulong Yuan et al.</span>
             </div>
             
             <div class="badge-cluster">
-                <span class="badge">#locomotion</span>
+                <span class="badge badge-muted">#frontier</span>
             </div>
             
-            <p class="paper-summary">Contact-rich motion planning (CRMP) is essential for robotic manipulation and locomotion, yet remains computationally challenging due to combinatorial contact decisions. Existing methods typically avoid broad evaluation of contact-mode sequences through search heuristics or optimization reformulations. We revisit broad evaluation in light of modern GPU hardware and introduce Contact-Mode Expansion with parallel Trajectory optimization (CoMET), which combines GPU-parallel trajectory evaluation with greedy contact-mode expansion. On planar pushing benchmarks, CoMET is competitive with optimization-based, sampling, and tree-search baselines in solution quality and planning time, matching the full-enumeration reference on nearly all instances with fewer evaluations and shorter planning times. Ablations suggest that much of the performance gain comes from the high-throughput trajectory evaluator. In bimanual nonprehensile manipulation, GPU-friendly local mode expansion achieves higher planning success than the tested adaptive tree search as the mode space grows. These results demonstrate that broad explicit mode evaluation provides a simple yet effective alternative for CRMP.</p>
+            <p class="paper-summary">In environments with large movable obstacles, detour-only navigation can be inefficient or even infeasible, while obstacle interaction requires reasoning about navigation benefit, feasible placement, and executable manipulation. We present a hierarchical navigation among movable obstacles (NAMO) framework for mobile manipulators. At the high level, the planner identifies key blocking obstacles from reference paths and searches for relocation plans that jointly satisfy geometric, manipulation, and downstream navigation constraints. When direct relocation is hindered by other movable objects, a large language model (LLM) is selectively invoked to infer auxiliary manipulation dependencies, which are then verified by deterministic geometric planning. To execute the resulting relocation goals, we define discrete contact modes on the surfaces of box-shaped obstacles and select contact faces and regions online based on position and orientation errors, enabling straight, side, and corner pushing through contact switching. A recurrent reinforcement-learning policy coordinates the mobile base and manipulator to track tool center point (TCP) targets while preserving end-effector reachability during sustained pushing. Simulation and real-robot experiments demonstrate feasible navigation-manipulation in detour, single- and multi-obstacle relocation, and dependency-constrained scenarios, validating the framework for interactive navigation with large non-graspable obstacles. The open-source project is available at https://cloudytosunny.github.io/NAMO_DCPushing/.</p>
             
             <div class="card-action-bar">
-                <a href="http://arxiv.org/pdf/2609.21803v1" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
+                <a href="http://arxiv.org/pdf/2609.23312v1" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
                     View PDF
                 </a>
-                <a href="http://arxiv.org/abs/2609.21803v1" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
+                <a href="http://arxiv.org/abs/2609.23312v1" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
                     arXiv Page &rarr;
                 </a>
             </div>
