@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Embodied AI & Robotics Intelligence Digest — September 22, 2026</title>
+    <title>Embodied AI & Robotics Intelligence Digest — September 23, 2026</title>
     <style>
         :root {
             --bg-base: #080c14;
@@ -242,7 +242,7 @@
         <header>
             <span class="pill-brand">Autonomous Research Intelligence</span>
             <h1>Embodied AI & Physical Frontier Briefing</h1>
-            <p class="subtitle">Compiled on September 22, 2026 • Ranked top 8 strategic breakthroughs out of incoming preprints.</p>
+            <p class="subtitle">Compiled on September 23, 2026 • Ranked top 8 strategic breakthroughs out of incoming preprints.</p>
             
             <div class="controls">
                 <input type="text" id="filterInput" class="search-box" placeholder="Filter papers by keywords (e.g. humanoid, tactile, diffusion)...">
@@ -251,231 +251,231 @@
 
         <main id="paperList">
             
-        <article class="paper-card" data-title="sculpt-vla: learning structured control through staged action grounding" data-summary="vision-language-action (vla) policies increasingly incorporate structured intermediate supervision beyond action labels. yet specifying what an intermediate representation should encode leaves open how action prediction learns to depend on it. we introduce \textbf{sculpt-vla}, a policy that learns structured control through staged action grounding. its action-conditioning state comprises complementary factors for task progression, scene dynamics, and spatial grounding. training first forms these factors with teacher scaffolds, then grounds coarse action prediction through their composition as scaffold inputs are withdrawn. direct perceptual access is subsequently restored for continuous refinement, combining the learned state with perceptual detail. the curriculum separates learning to condition actions on structure from refining continuous control. deployment requires neither teachers nor discrete-action autoregression. sculpt-vla achieves higher average success than shared-backbone baselines on libero, simplerenv-widowx, and robotwin 2.0 full. on simplerenv-widowx, final success is 83.5\%, versus 71.3\% when stage-ii action learning directly accesses vision and language. across four physical robot tasks, average success under the tested distribution shifts reaches 58.1\%, compared with 45.6\% for $π_{0.5}$. training ablations and factor-wise interventions support the staged design and show that the learned state continues to contribute to control after direct perceptual access is restored.">
+        <article class="paper-card" data-title="routerlt: learning when and which rl specialist should control a vision-language-action policy" data-summary="vision-language-action (vla) models provide broad manipulation competence, but often struggle during the precision-critical stages that dominate contact-rich industrial tasks such as connector insertion and cable management. a common remedy is to refine a pretrained vla with reinforcement learning (rl), enabling task-specific improvement beyond behavior cloning. however, how to preserve its generalist behavior while deciding when rl refinement is needed and which specialized policy should act remains an open question. in this work, we present routerlt, a routing framework that learns when and which rl specialist, an rl policy trained for a single precision-critical phase, should take control from a generalist vla. a phase selector identifies the active controller, a stabilizer suppresses transient switches, and an action-boundary manager handles transitions between chunked policy outputs. we evaluate routerlt on multi-object pick-and-place tasks in libero, as well as on a real-world cable pickup and port-insertion task with multiple precision-critical stages. in simulation, the learned routing improves over the base vla and matches routing with privileged phase boundaries, without accessing those boundaries at deployment. the real-robot evaluation validates automatic routing to both the pickup and insertion specialists under an operator-aligned handoff protocol. altogether, these results show that learned routing applies rl specialist control where precise adaptation is most valuable while preserving generalist vla behavior, including recovery from failed execution attempts.">
             <div class="card-meta-top">
                 <span class="rank-tag">TOP #1</span>
                 <div class="score-badge">
                     <span class="score-label">Priority Index</span>
-                    <span class="score-value">135</span>
+                    <span class="score-value">165</span>
                 </div>
             </div>
             
-            <h2 class="paper-title">SCULPT-VLA: Learning Structured Control through Staged Action Grounding</h2>
+            <h2 class="paper-title">RouteRLT: Learning When and Which RL Specialist Should Control a Vision-Language-Action Policy</h2>
             
             <div class="author-row">
-                <span>🗓️ 2026-09-20</span>
-                <span>✍️ Wenbo Li, Yiteng Chen, Wei Zhang et al.</span>
+                <span>🗓️ 2026-09-22</span>
+                <span>✍️ Chongyu Zhu, Jaden Hinds, Hyegang Kim et al.</span>
             </div>
             
             <div class="badge-cluster">
-                <span class="badge">#vision-language-action</span><span class="badge">#vla</span>
+                <span class="badge">#reinforcement learning</span><span class="badge">#vision-language-action</span><span class="badge">#vla</span>
             </div>
             
-            <p class="paper-summary">Vision-language-action (VLA) policies increasingly incorporate structured intermediate supervision beyond action labels. Yet specifying what an intermediate representation should encode leaves open how action prediction learns to depend on it. We introduce \textbf{SCULPT-VLA}, a policy that learns structured control through staged action grounding. Its action-conditioning state comprises complementary factors for task progression, scene dynamics, and spatial grounding. Training first forms these factors with teacher scaffolds, then grounds coarse action prediction through their composition as scaffold inputs are withdrawn. Direct perceptual access is subsequently restored for continuous refinement, combining the learned state with perceptual detail. The curriculum separates learning to condition actions on structure from refining continuous control. Deployment requires neither teachers nor discrete-action autoregression. SCULPT-VLA achieves higher average success than shared-backbone baselines on LIBERO, SimplerEnv-WidowX, and RoboTwin 2.0 Full. On SimplerEnv-WidowX, final success is 83.5\%, versus 71.3\% when Stage-II action learning directly accesses vision and language. Across four physical robot tasks, average success under the tested distribution shifts reaches 58.1\%, compared with 45.6\% for $π_{0.5}$. Training ablations and factor-wise interventions support the staged design and show that the learned state continues to contribute to control after direct perceptual access is restored.</p>
+            <p class="paper-summary">Vision-language-action (VLA) models provide broad manipulation competence, but often struggle during the precision-critical stages that dominate contact-rich industrial tasks such as connector insertion and cable management. A common remedy is to refine a pretrained VLA with reinforcement learning (RL), enabling task-specific improvement beyond behavior cloning. However, how to preserve its generalist behavior while deciding when RL refinement is needed and which specialized policy should act remains an open question. In this work, we present RouteRLT, a routing framework that learns when and which RL specialist, an RL policy trained for a single precision-critical phase, should take control from a generalist VLA. A phase selector identifies the active controller, a stabilizer suppresses transient switches, and an action-boundary manager handles transitions between chunked policy outputs. We evaluate RouteRLT on multi-object pick-and-place tasks in LIBERO, as well as on a real-world cable pickup and port-insertion task with multiple precision-critical stages. In simulation, the learned routing improves over the base VLA and matches routing with privileged phase boundaries, without accessing those boundaries at deployment. The real-robot evaluation validates automatic routing to both the pickup and insertion specialists under an operator-aligned handoff protocol. Altogether, these results show that learned routing applies RL specialist control where precise adaptation is most valuable while preserving generalist VLA behavior, including recovery from failed execution attempts.</p>
             
             <div class="card-action-bar">
-                <a href="http://arxiv.org/pdf/2609.23275v1" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
+                <a href="http://arxiv.org/pdf/2609.26467v1" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
                     View PDF
                 </a>
-                <a href="http://arxiv.org/abs/2609.23275v1" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
+                <a href="http://arxiv.org/abs/2609.26467v1" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
                     arXiv Page &rarr;
                 </a>
             </div>
         </article>
         
-        <article class="paper-card" data-title="verti-wm: a physics-aided exteroceptive world model for off-road reinforcement learning" data-summary="reinforcement learning for off-road navigation requires extensive vehicle-terrain interaction data, which are costly to collect in high-fidelity simulation. world models offer a promising alternative by replacing simulator roll-outs during policy optimization. however, an off-road world model must condition state transitions on exteroceptive terrain information, which proprioception alone does not provide. this challenge is further amplified by the need to model both rigid and deformable terrain, where data-driven and physics-based approaches offer complementary strengths. we propose verti-wm, a physics-aided exteroceptive world model that recurrently fuses a frozen transformer for rigid terrain and a neuro-symbolic terramechanics model for deformable terrain. elevation and semantic observations queried from a supplied map at each predicted pose condition fusion, enabling six-degree-of-freedom rollouts for policy optimization without further simulator access. verti-wm reduces prediction error by 34.6% and 21.7% over data-driven and physics-based baselines, respectively. policies trained entirely within verti-wm achieve comparable task success rates while reducing computation time by 23.6x relative to direct training in the high-fidelity simulator. we further validate verti-wm using real-world data, enabling policy optimization within learned real-world kinodynamics and achieving a 80% success rate on the verti-4-wheeler platform, compared with 40% for direct sim-to-real transfer.">
+        <article class="paper-card" data-title="mate: multi-agent virtual teleoperation platform for humanoid collaboration data collection" data-summary="humanoid robots require diverse embodied experiences to acquire complex loco-manipulation and collaborative skills. however, existing humanoid data pipelines primarily focus on individual agents, while physical multi-robot collaboration remains difficult to scale due to costly hardware, dedicated spaces, and repeated resets. in this work, we introduce mate, a multi-agent virtual teleoperation platform for humanoid collaboration data collection that enables multiple geographically distributed operators to simultaneously control whole-body humanoids in a shared physics-based environment. mate removes the need for multiple physical robots and co-located operation while preserving physically coupled interactions among humanoids, objects, and environments. using mate, we construct a multi-humanoid collaboration dataset comprising 24.1 hours of coordinated behavior across 2,500 joint episodes and five long-horizon tasks, including object handover, relay delivery, environment interaction, and cooperative transport. to improve learning from these interaction-rich demonstrations, we introduce eais, an execution-aligned interaction sampling strategy that computes sampling signals within an execution-aligned prefix and prioritizes task-progressing and interaction-critical behaviors. we evaluate mate with representative imitation learning and vision-language-action policies across diverse collaboration tasks. experiments demonstrate efficient data collection, effective policy learning, and zero-shot transfer from virtual demonstrations to a physical humanoid without real-world fine-tuning. project page: https://yerik-yu.github.io/mate/">
             <div class="card-meta-top">
                 <span class="rank-tag">TOP #2</span>
                 <div class="score-badge">
                     <span class="score-label">Priority Index</span>
-                    <span class="score-value">120</span>
+                    <span class="score-value">160</span>
                 </div>
             </div>
             
-            <h2 class="paper-title">Verti-WM: A Physics-Aided Exteroceptive World Model for Off-Road Reinforcement Learning</h2>
+            <h2 class="paper-title">MATE: Multi-Agent Virtual Teleoperation Platform for Humanoid Collaboration Data Collection</h2>
             
             <div class="author-row">
-                <span>🗓️ 2026-09-19</span>
-                <span>✍️ Chenhui Pan, Tong Xu, Xuesu Xiao</span>
+                <span>🗓️ 2026-09-22</span>
+                <span>✍️ Yichuan Yu, Youzhuo Wang, Yiming Ren et al.</span>
             </div>
             
             <div class="badge-cluster">
-                <span class="badge">#world model</span><span class="badge">#reinforcement learning</span>
+                <span class="badge">#humanoid</span><span class="badge">#vision-language-action</span><span class="badge">#teleoperation</span>
             </div>
             
-            <p class="paper-summary">Reinforcement learning for off-road navigation requires extensive vehicle-terrain interaction data, which are costly to collect in high-fidelity simulation. World models offer a promising alternative by replacing simulator roll-outs during policy optimization. However, an off-road world model must condition state transitions on exteroceptive terrain information, which proprioception alone does not provide. This challenge is further amplified by the need to model both rigid and deformable terrain, where data-driven and physics-based approaches offer complementary strengths. We propose Verti-WM, a physics-aided exteroceptive world model that recurrently fuses a frozen Transformer for rigid terrain and a neuro-symbolic terramechanics model for deformable terrain. Elevation and semantic observations queried from a supplied map at each predicted pose condition fusion, enabling six-degree-of-freedom rollouts for policy optimization without further simulator access. Verti-WM reduces prediction error by 34.6% and 21.7% over data-driven and physics-based baselines, respectively. Policies trained entirely within Verti-WM achieve comparable task success rates while reducing computation time by 23.6X relative to direct training in the high-fidelity simulator. We further validate Verti-WM using real-world data, enabling policy optimization within learned real-world kinodynamics and achieving a 80% success rate on the Verti-4-Wheeler platform, compared with 40% for direct sim-to-real transfer.</p>
+            <p class="paper-summary">Humanoid robots require diverse embodied experiences to acquire complex loco-manipulation and collaborative skills. However, existing humanoid data pipelines primarily focus on individual agents, while physical multi-robot collaboration remains difficult to scale due to costly hardware, dedicated spaces, and repeated resets. In this work, we introduce MATE, a Multi-Agent virtual TEleoperation platform for humanoid collaboration data collection that enables multiple geographically distributed operators to simultaneously control whole-body humanoids in a shared physics-based environment. MATE removes the need for multiple physical robots and co-located operation while preserving physically coupled interactions among humanoids, objects, and environments. Using MATE, we construct a multi-humanoid collaboration dataset comprising 24.1 hours of coordinated behavior across 2,500 joint episodes and five long-horizon tasks, including object handover, relay delivery, environment interaction, and cooperative transport. To improve learning from these interaction-rich demonstrations, we introduce EAIS, an Execution-Aligned Interaction Sampling strategy that computes sampling signals within an execution-aligned prefix and prioritizes task-progressing and interaction-critical behaviors. We evaluate MATE with representative imitation learning and vision-language-action policies across diverse collaboration tasks. Experiments demonstrate efficient data collection, effective policy learning, and zero-shot transfer from virtual demonstrations to a physical humanoid without real-world fine-tuning. Project page: https://yerik-yu.github.io/MATE/</p>
             
             <div class="card-action-bar">
-                <a href="http://arxiv.org/pdf/2609.23118v1" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
+                <a href="http://arxiv.org/pdf/2609.26520v1" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
                     View PDF
                 </a>
-                <a href="http://arxiv.org/abs/2609.23118v1" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
+                <a href="http://arxiv.org/abs/2609.26520v1" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
                     arXiv Page &rarr;
                 </a>
             </div>
         </article>
         
-        <article class="paper-card" data-title="identity continuity in long-term embodied ai relationships: from agent-specific identity representation to identity-continuity appraisal" data-summary="long-term embodied ai will undergo learning, model updates, memory compression, hardware repair, and migration across embodiments. for users who have formed sustained relationships with such systems, these changes raise not only a problem of product consistency but also one of identity continuity: whether the changed system is still experienced as the same particular agent. existing research suggests that human-ai relationships may develop relational particularity, that robotics and artificial-identity research has identified identity and migration signals across embodiments, and that major updates or platform disruptions can be accompanied by relational loss and restoration desire. this article proposes a user-side framework in which long-term embodied ai is represented through an agent-specific identity representation organized by at least three open identity-content domains: embodied-perceptual, psychological-behavioral, and relational-autobiographical. information from these domains is not equally weighted; shared history, relational roles, and contingent responsiveness may make some information more identity-diagnostic than others. after system change, users may integrate continuity and discontinuity evidence in a weighted manner, yielding judgments along a continuum from relatively strong identity continuity through ambiguity or partial continuity to clear identity discontinuity. causal-historical provenance and user participation are treated as contextual evidence rather than a fourth identity-content domain. the framework also proposes identity continuity as a psychological objective for lifecycle design, including memory selection, model updating, and migration across embodiments, under constraints of privacy and user control.">
+        <article class="paper-card" data-title="imperfection for precision: upcycling imperfect data for high-precision robotic manipulation" data-summary="training vision-language-action (vla) models for high-precision manipulation typically requires task-specific, high-quality data (e.g., teleoperation), which is slow and expensive to collect. to reduce this burden without compromising manipulation precision, we propose $\varepsilon$4p (imperfection for precision), a simple yet effective method that "upcycles" two otherwise discarded data sources: (1) low-precision data from the target task and (2) high-precision data from mismatched tasks. rather than naively mixing these imperfect data sources throughout co-training, $\varepsilon$4p controls where each source contributes along the flow-matching trajectory. specifically, low-precision, target-task data is used at high noise to preserve high-level task context and high-precision, task-mismatched data is used at low noise to transfer low-level action precision. through real-robot experiments on both sub-millimeter, high-precision tasks and coarse-grained tasks, we demonstrate that the proposed method (1) effectively leverages additional imperfect data to improve policy performance by up to 31.7 percentage points, and (2) can replace an equal amount of task-specific, high-quality data with an average performance drop of only 4.2 percentage points. overall, $\varepsilon$4p points toward a scalable paradigm for high-precision manipulation, in which heterogeneous, imperfect data can be systematically repurposed to reduce reliance on costly task-specific, high-quality data. more details are available at https://varepsilon4p.github.io/.">
             <div class="card-meta-top">
                 <span class="rank-tag">TOP #3</span>
                 <div class="score-badge">
                     <span class="score-label">Priority Index</span>
-                    <span class="score-value">100</span>
+                    <span class="score-value">155</span>
                 </div>
             </div>
             
-            <h2 class="paper-title">Identity Continuity in Long-Term Embodied AI Relationships: From Agent-Specific Identity Representation to Identity-Continuity Appraisal</h2>
+            <h2 class="paper-title">Imperfection for Precision: Upcycling Imperfect Data for High-Precision Robotic Manipulation</h2>
             
             <div class="author-row">
-                <span>🗓️ 2026-09-20</span>
-                <span>✍️ Zijian Ru</span>
+                <span>🗓️ 2026-09-22</span>
+                <span>✍️ Hao Wei, Yang Liu, Chao Tang et al.</span>
             </div>
             
             <div class="badge-cluster">
-                <span class="badge">#embodied ai</span>
+                <span class="badge">#vision-language-action</span><span class="badge">#vla</span><span class="badge">#teleoperation</span>
             </div>
             
-            <p class="paper-summary">Long-term embodied AI will undergo learning, model updates, memory compression, hardware repair, and migration across embodiments. For users who have formed sustained relationships with such systems, these changes raise not only a problem of product consistency but also one of identity continuity: whether the changed system is still experienced as the same particular agent. Existing research suggests that human-AI relationships may develop relational particularity, that robotics and artificial-identity research has identified identity and migration signals across embodiments, and that major updates or platform disruptions can be accompanied by relational loss and restoration desire. This article proposes a user-side framework in which long-term embodied AI is represented through an agent-specific identity representation organized by at least three open identity-content domains: embodied-perceptual, psychological-behavioral, and relational-autobiographical. Information from these domains is not equally weighted; shared history, relational roles, and contingent responsiveness may make some information more identity-diagnostic than others. After system change, users may integrate continuity and discontinuity evidence in a weighted manner, yielding judgments along a continuum from relatively strong identity continuity through ambiguity or partial continuity to clear identity discontinuity. Causal-historical provenance and user participation are treated as contextual evidence rather than a fourth identity-content domain. The framework also proposes identity continuity as a psychological objective for lifecycle design, including memory selection, model updating, and migration across embodiments, under constraints of privacy and user control.</p>
+            <p class="paper-summary">Training vision-language-action (VLA) models for high-precision manipulation typically requires task-specific, high-quality data (e.g., teleoperation), which is slow and expensive to collect. To reduce this burden without compromising manipulation precision, we propose $\varepsilon$4P (Imperfection for Precision), a simple yet effective method that "upcycles" two otherwise discarded data sources: (1) low-precision data from the target task and (2) high-precision data from mismatched tasks. Rather than naively mixing these imperfect data sources throughout co-training, $\varepsilon$4P controls where each source contributes along the flow-matching trajectory. Specifically, low-precision, target-task data is used at high noise to preserve high-level task context and high-precision, task-mismatched data is used at low noise to transfer low-level action precision. Through real-robot experiments on both sub-millimeter, high-precision tasks and coarse-grained tasks, we demonstrate that the proposed method (1) effectively leverages additional imperfect data to improve policy performance by up to 31.7 percentage points, and (2) can replace an equal amount of task-specific, high-quality data with an average performance drop of only 4.2 percentage points. Overall, $\varepsilon$4P points toward a scalable paradigm for high-precision manipulation, in which heterogeneous, imperfect data can be systematically repurposed to reduce reliance on costly task-specific, high-quality data. More details are available at https://varepsilon4p.github.io/.</p>
             
             <div class="card-action-bar">
-                <a href="http://arxiv.org/pdf/2609.23356v1" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
+                <a href="http://arxiv.org/pdf/2609.26672v1" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
                     View PDF
                 </a>
-                <a href="http://arxiv.org/abs/2609.23356v1" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
+                <a href="http://arxiv.org/abs/2609.26672v1" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
                     arXiv Page &rarr;
                 </a>
             </div>
         </article>
         
-        <article class="paper-card" data-title="aquacap: a training-free underwater embodied agent with code-as-policy" data-summary="recent advances in vision-language-action models have stimulated growing interest in underwater embodied intelligence. however, their reliance on large-scale interaction data limits their applicability underwater, where data collection is costly and scarce. to address this challenge, we present aquacap, a training-free code-as-policy framework for autonomous underwater navigation and manipulation. aquacap employs a dual-layer agent that translates task instructions and environmental observations into condition-aware plans and executable control programs. structured perception then provides the agent with semantic, geometric, and reliability-aware observations under degraded underwater conditions. a failure-aware memory diagnoses unsuccessful actions and supports closed-loop replanning and code revision. this design enables online adaptation without task-specific training or parameter updates. aquacap achieves a 66.43% success rate in simulation. real-world experiments further demonstrate autonomous grasping and object transport with an rov, including the manipulation of targets displaced by hydrodynamic disturbances.">
+        <article class="paper-card" data-title="learning air-ground motion control with temporal mode switching and cross-terrain tracking" data-summary="passive-wheeled terrestrial-aerial bimodal vehicles (tabvs) combine aerial mobility with energy-efficient ground locomotion. however, reliable air-ground mode switching under limited onboard perception and robust ground trajectory tracking across diverse terrains remain challenging when targeting real-world applications. in this work, we propose a learning-based air-ground motion control framework for passive-wheeled tabvs: 1) a learned mode selector for autonomous air-ground motion mode switching. the selector uses historical single-point time-of-flight (tof) measurements and robot states together with future reference information to determine the active locomotion mode. 2) a reinforcement learning control policy for trajectory tracking. the policy combines proprioceptive observations with future reference information to anticipate trajectory changes. for ground locomotion, multi-terrain training and dynamics randomization enable robust tracking across different terrains. simulation and real-world experiments demonstrate reliable air-ground switching under limited perception and accurate ground tracking across diverse terrain conditions. the learned selector outperforms a rule-based mode selector in challenging transitions, while the ground controller achieves lower position rmse than pid across all tested conditions and maintains decent tracking where nmpc fails. with these capabilities integrated, the system tracks a 101m air-ground trajectory through multiple autonomous mode transitions with a position rmse of 0.08m.">
             <div class="card-meta-top">
                 <span class="rank-tag">TOP #4</span>
+                <div class="score-badge">
+                    <span class="score-label">Priority Index</span>
+                    <span class="score-value">105</span>
+                </div>
+            </div>
+            
+            <h2 class="paper-title">Learning Air-Ground Motion Control with Temporal Mode Switching and Cross-Terrain Tracking</h2>
+            
+            <div class="author-row">
+                <span>🗓️ 2026-09-22</span>
+                <span>✍️ Ruitian Pang, Mingrui Li, Xuanting Liu et al.</span>
+            </div>
+            
+            <div class="badge-cluster">
+                <span class="badge">#reinforcement learning</span><span class="badge">#locomotion</span>
+            </div>
+            
+            <p class="paper-summary">Passive-wheeled terrestrial-aerial bimodal vehicles (TABVs) combine aerial mobility with energy-efficient ground locomotion. However, reliable air-ground mode switching under limited onboard perception and robust ground trajectory tracking across diverse terrains remain challenging when targeting real-world applications. In this work, we propose a learning-based air-ground motion control framework for passive-wheeled TABVs: 1) a learned mode selector for autonomous air-ground motion mode switching. The selector uses historical single-point time-of-flight (ToF) measurements and robot states together with future reference information to determine the active locomotion mode. 2) a reinforcement learning control policy for trajectory tracking. The policy combines proprioceptive observations with future reference information to anticipate trajectory changes. For ground locomotion, multi-terrain training and dynamics randomization enable robust tracking across different terrains. Simulation and real-world experiments demonstrate reliable air-ground switching under limited perception and accurate ground tracking across diverse terrain conditions. The learned selector outperforms a rule-based mode selector in challenging transitions, while the ground controller achieves lower position RMSE than PID across all tested conditions and maintains decent tracking where NMPC fails. With these capabilities integrated, the system tracks a 101m air-ground trajectory through multiple autonomous mode transitions with a position RMSE of 0.08m.</p>
+            
+            <div class="card-action-bar">
+                <a href="http://arxiv.org/pdf/2609.26564v1" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
+                    View PDF
+                </a>
+                <a href="http://arxiv.org/abs/2609.26564v1" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
+                    arXiv Page &rarr;
+                </a>
+            </div>
+        </article>
+        
+        <article class="paper-card" data-title="sample, simulate, select: physics-in-the-loop text-to-motion for humanoids without training" data-summary="text-to-motion models generate plausible human motion but do not model a robot's dynamics; whole-body tracking controllers execute robot references reliably but cannot replan an infeasible one. recent language-to-humanoid systems bridge this gap by training. we measure how much of the gap closes with no training at all, by putting the deployment controller itself in the loop. sample-simulate-select (s$^3$) draws $n$ motions per prompt from a frozen text-to-motion model, retargets each to a unitree g1 by direction-matching inverse kinematics, rolls all of them out under full rigid-body dynamics with the pretrained sonic tracking policy, and keeps the candidate the policy executed best. because the verifier is the deterministic simulator itself, s$^3$ attains the any-of-$n$ ceiling by construction; what we measure is where that ceiling lies and what falls short of it. on 200 stratified humanml3d test prompts with $n=8$, upright execution rises from 83.5% to 89.5% and hardware-gate passes from 33 to 85; on the complete test split (4,184 prompts) it rises from 80.5% to 89.5%. a kinematic verifier that predicts falls well (auroc 0.90) recovers only a quarter of this gain: ranking a prompt's own candidates is harder than classifying the population. what selection cannot fix is one class, prompts that lower the pelvis, which a generator trained on retargeted robot data does execute. we further score the semantic fidelity of the executed motion with the standard text-motion evaluator, with a real-mocap control that attributes the loss to the robot projection, ablate the retargeter against gmr (complementary failures: the any-of-8 ceiling rises to 95.0% over both), and execute all 177 gate-selected clips on the real g1: every one completes standing, with hardware tracking error matching simulation ($r=0.94$).">
+            <div class="card-meta-top">
+                <span class="rank-tag">TOP #5</span>
                 <div class="score-badge">
                     <span class="score-label">Priority Index</span>
                     <span class="score-value">95</span>
                 </div>
             </div>
             
-            <h2 class="paper-title">AquaCap: A Training-Free Underwater Embodied Agent with Code-as-Policy</h2>
+            <h2 class="paper-title">Sample, Simulate, Select: Physics-in-the-Loop Text-to-Motion for Humanoids Without Training</h2>
             
             <div class="author-row">
-                <span>🗓️ 2026-09-19</span>
-                <span>✍️ Xiaoshi Li, Yule Xu, Chunghiu Kong et al.</span>
+                <span>🗓️ 2026-09-22</span>
+                <span>✍️ Raphael Memmesheimer, Sven Behnke</span>
             </div>
             
             <div class="badge-cluster">
-                <span class="badge">#vision-language-action</span>
+                <span class="badge">#humanoid</span>
             </div>
             
-            <p class="paper-summary">Recent advances in vision-language-action models have stimulated growing interest in underwater embodied intelligence. However, their reliance on large-scale interaction data limits their applicability underwater, where data collection is costly and scarce. To address this challenge, we present AquaCap, a training-free Code-as-Policy framework for autonomous underwater navigation and manipulation. AquaCap employs a dual-layer agent that translates task instructions and environmental observations into condition-aware plans and executable control programs. Structured perception then provides the agent with semantic, geometric, and reliability-aware observations under degraded underwater conditions. A failure-aware memory diagnoses unsuccessful actions and supports closed-loop replanning and code revision. This design enables online adaptation without task-specific training or parameter updates. AquaCap achieves a 66.43% success rate in simulation. Real-world experiments further demonstrate autonomous grasping and object transport with an ROV, including the manipulation of targets displaced by hydrodynamic disturbances.</p>
+            <p class="paper-summary">Text-to-motion models generate plausible human motion but do not model a robot's dynamics; whole-body tracking controllers execute robot references reliably but cannot replan an infeasible one. Recent language-to-humanoid systems bridge this gap by training. We measure how much of the gap closes with no training at all, by putting the deployment controller itself in the loop. Sample-simulate-select (S$^3$) draws $N$ motions per prompt from a frozen text-to-motion model, retargets each to a Unitree G1 by direction-matching inverse kinematics, rolls all of them out under full rigid-body dynamics with the pretrained SONIC tracking policy, and keeps the candidate the policy executed best. Because the verifier is the deterministic simulator itself, S$^3$ attains the any-of-$N$ ceiling by construction; what we measure is where that ceiling lies and what falls short of it. On 200 stratified HumanML3D test prompts with $N=8$, upright execution rises from 83.5% to 89.5% and hardware-gate passes from 33 to 85; on the complete test split (4,184 prompts) it rises from 80.5% to 89.5%. A kinematic verifier that predicts falls well (AUROC 0.90) recovers only a quarter of this gain: ranking a prompt's own candidates is harder than classifying the population. What selection cannot fix is one class, prompts that lower the pelvis, which a generator trained on retargeted robot data does execute. We further score the semantic fidelity of the executed motion with the standard text-motion evaluator, with a real-mocap control that attributes the loss to the robot projection, ablate the retargeter against GMR (complementary failures: the any-of-8 ceiling rises to 95.0% over both), and execute all 177 gate-selected clips on the real G1: every one completes standing, with hardware tracking error matching simulation ($r=0.94$).</p>
             
             <div class="card-action-bar">
-                <a href="http://arxiv.org/pdf/2609.23133v1" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
+                <a href="http://arxiv.org/pdf/2609.26420v1" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
                     View PDF
                 </a>
-                <a href="http://arxiv.org/abs/2609.23133v1" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
+                <a href="http://arxiv.org/abs/2609.26420v1" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
                     arXiv Page &rarr;
                 </a>
             </div>
         </article>
         
-        <article class="paper-card" data-title="robot world models are not invariant to how the actions are written" data-summary="a robot policy is trained with one of two action parameterizations: absolute joint targets, or deltas relative to the current state. the choice is a live engineering decision in robot learning, and a world model conditioned on actions inherits it silently. we show the inheritance is catastrophic. a latent dynamics model trained on one parameterization and handed the identical commanded trajectory written in the other collapses: retrieval degrades by 2.6-13.4x across three robot datasets and two morphologies, goal-conditioned action selection falls from 53% to 15%, and on pusht the two beliefs about the same future are near-orthogonal (cos = 0.067, worst case -0.377), so the predictor does not degrade gracefully, it answers a different question. this is not a distribution-shift artifact in the usual sense: the two encodings are mutually reconstructible at r^2 = 0.996 given the joint input, so no information is lost, and we give the test that separates a valid re-parameterization from a lossy summary or a sensor swap. the test rejected three of the four axes we proposed. the defect lives in the action channel, which the invariance literature for visual models does not examine: work there concerns crops, jitter and camera pose, while the parameterization of the commands goes unaudited. the repair is averaging over the two encodings, and where it goes matters. averaging the objective restores task performance by itself; averaging the outputs, safe for probabilities by concavity, is not available for direction-valued prediction, where the normalized mean can score below every member of the orbit. what objective-averaging leaves behind is the tail: worst-case agreement stays at 0.78, a disagreement penalty closes it to 0.995, and over a latent rollout it is the difference between a worst case that erodes and one that holds. on pusht, averaging alone does not repair the axis.">
-            <div class="card-meta-top">
-                <span class="rank-tag">TOP #5</span>
-                <div class="score-badge">
-                    <span class="score-label">Priority Index</span>
-                    <span class="score-value">90</span>
-                </div>
-            </div>
-            
-            <h2 class="paper-title">Robot World Models Are Not Invariant to How the Actions Are Written</h2>
-            
-            <div class="author-row">
-                <span>🗓️ 2026-09-19</span>
-                <span>✍️ Ahmed Karim, Leon Chlon</span>
-            </div>
-            
-            <div class="badge-cluster">
-                <span class="badge">#world model</span>
-            </div>
-            
-            <p class="paper-summary">A robot policy is trained with one of two action parameterizations: absolute joint targets, or deltas relative to the current state. The choice is a live engineering decision in robot learning, and a world model conditioned on actions inherits it silently. We show the inheritance is catastrophic. A latent dynamics model trained on one parameterization and handed the identical commanded trajectory written in the other collapses: retrieval degrades by 2.6-13.4x across three robot datasets and two morphologies, goal-conditioned action selection falls from 53% to 15%, and on PushT the two beliefs about the same future are near-orthogonal (cos = 0.067, worst case -0.377), so the predictor does not degrade gracefully, it answers a different question. This is not a distribution-shift artifact in the usual sense: the two encodings are mutually reconstructible at R^2 = 0.996 given the joint input, so no information is lost, and we give the test that separates a valid re-parameterization from a lossy summary or a sensor swap. The test rejected three of the four axes we proposed. The defect lives in the action channel, which the invariance literature for visual models does not examine: work there concerns crops, jitter and camera pose, while the parameterization of the commands goes unaudited. The repair is averaging over the two encodings, and where it goes matters. Averaging the objective restores task performance by itself; averaging the outputs, safe for probabilities by concavity, is not available for direction-valued prediction, where the normalized mean can score below every member of the orbit. What objective-averaging leaves behind is the tail: worst-case agreement stays at 0.78, a disagreement penalty closes it to 0.995, and over a latent rollout it is the difference between a worst case that erodes and one that holds. On PushT, averaging alone does not repair the axis.</p>
-            
-            <div class="card-action-bar">
-                <a href="http://arxiv.org/pdf/2609.23252v1" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
-                    View PDF
-                </a>
-                <a href="http://arxiv.org/abs/2609.23252v1" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
-                    arXiv Page &rarr;
-                </a>
-            </div>
-        </article>
-        
-        <article class="paper-card" data-title="latent telepathy: multi-robot communication with self-supervised perceptual latents" data-summary="in a decentralized multi-robot team under partial observability, the fact that decides a robot's next action is often visible only to a teammate. existing decentralized methods communicate kinematic information, such as position or planned trajectory, which cannot convey what the teammate perceives. learned communication in multi-agent reinforcement learning (marl) can carry perceptual content, but the resulting messages are task-coupled and opaque. we propose latent telepathy. each robot broadcasts the perceptual latent vector it already computes for its own use, the output of an encoder trained with a self-supervised joint-embedding predictive objective, frozen, and shared across the team. a teammate learns to act on it from task reward alone. because the encoder already runs for perception, the message costs no additional computation and a single compact vector of bandwidth. because the encoder is frozen before any policy is trained, the message means the same thing to every robot, and the receiving robot is never told what it means. we evaluate latent telepathy with a content-controlled protocol in which bandwidth, latency, topology and receiver are held fixed and only the message content varies. broadcasting the latent lets a navigator avoid an occluded hazard in 99.7% of episodes, matching a noiseless hand-designed message. position and trajectory messages remain at chance, and the raw camera image, 186 times wider, is less reliable than the compressed latent. the result holds from a discrete gridworld to rendered pixels under continuous velocity control, and the encoder decodes the hazard from a physical robot's camera in 102 of 102 live decisions. we also identify a requirement for porting marl communication results to continuous control, that the decision a message informs must remain reachable by exploration, and show how to restore it.">
+        <article class="paper-card" data-title="sparsenav: instruction-conditioned sparse semantic perception for training-free vision-language navigation" data-summary="map-based vision-language navigation (vln) relies on persistent spatial representations to connect language understanding with geometric planning. however, acquiring semantics beyond the needs of the current instruction can introduce unnecessary perception cost and irrelevant annotations. continuously accumulating unrelated objects may not only waste computation, but also clutter the visual-spatial representation consumed by the vision-language model (vlm) planner. to address this problem, we present sparsenav, a training-free framework that follows a less-is-more principle for semantic navigation. sparsenav persistently maintains a lightweight geometric bird's-eye-view (bev) map and sparse landmark memory, acquiring new semantics on demand using the active sub-instruction to decide what is worth grounding. an instruction manager first tracks navigation progress and identifies the active landmark query. an instruction-conditioned perception mechanism then invokes open-vocabulary segmentation when the queried landmark is visible and its metric location can inform the next decision. the resulting landmark memory supports vlm selection among hybrid frontier and local directional waypoint candidates. without any additional training, sparsenav achieves success rates of 42.8% on r2r-ce and 40.7% on rxr-ce, both on the val-unseen splits. controlled ablations examine semantic perception strategies and the contributions of individual framework components. furthermore, we successfully deployed sparsenav on a unitree go2 quadruped equipped with an intel realsense d455 rgb-d camera for geometric mapping and landmark grounding and a livox mid-360 lidar for localization, without a prebuilt map. we validated its effectiveness across multiple indoor environments using instruction-conditioned waypoint navigation.">
             <div class="card-meta-top">
                 <span class="rank-tag">TOP #6</span>
                 <div class="score-badge">
                     <span class="score-label">Priority Index</span>
-                    <span class="score-value">80</span>
+                    <span class="score-value">85</span>
                 </div>
             </div>
             
-            <h2 class="paper-title">Latent Telepathy: Multi-Robot Communication with Self-Supervised Perceptual Latents</h2>
+            <h2 class="paper-title">SparseNav: Instruction-conditioned Sparse Semantic Perception for Training-Free Vision-Language Navigation</h2>
             
             <div class="author-row">
-                <span>🗓️ 2026-09-20</span>
-                <span>✍️ Howard Wang, Han Zheng, Cathy Wu</span>
+                <span>🗓️ 2026-09-22</span>
+                <span>✍️ Quanhua Chen, Juhan Kang, Runfeng Lin et al.</span>
             </div>
             
             <div class="badge-cluster">
-                <span class="badge">#reinforcement learning</span>
+                <span class="badge">#quadruped</span>
             </div>
             
-            <p class="paper-summary">In a decentralized multi-robot team under partial observability, the fact that decides a robot's next action is often visible only to a teammate. Existing decentralized methods communicate kinematic information, such as position or planned trajectory, which cannot convey what the teammate perceives. Learned communication in multi-agent reinforcement learning (MARL) can carry perceptual content, but the resulting messages are task-coupled and opaque. We propose Latent Telepathy. Each robot broadcasts the perceptual latent vector it already computes for its own use, the output of an encoder trained with a self-supervised joint-embedding predictive objective, frozen, and shared across the team. A teammate learns to act on it from task reward alone. Because the encoder already runs for perception, the message costs no additional computation and a single compact vector of bandwidth. Because the encoder is frozen before any policy is trained, the message means the same thing to every robot, and the receiving robot is never told what it means. We evaluate Latent Telepathy with a content-controlled protocol in which bandwidth, latency, topology and receiver are held fixed and only the message content varies. Broadcasting the latent lets a navigator avoid an occluded hazard in 99.7% of episodes, matching a noiseless hand-designed message. Position and trajectory messages remain at chance, and the raw camera image, 186 times wider, is less reliable than the compressed latent. The result holds from a discrete gridworld to rendered pixels under continuous velocity control, and the encoder decodes the hazard from a physical robot's camera in 102 of 102 live decisions. We also identify a requirement for porting MARL communication results to continuous control, that the decision a message informs must remain reachable by exploration, and show how to restore it.</p>
+            <p class="paper-summary">Map-based vision-language navigation (VLN) relies on persistent spatial representations to connect language understanding with geometric planning. However, acquiring semantics beyond the needs of the current instruction can introduce unnecessary perception cost and irrelevant annotations. Continuously accumulating unrelated objects may not only waste computation, but also clutter the visual-spatial representation consumed by the vision-language model (VLM) planner. To address this problem, we present SparseNav, a training-free framework that follows a less-is-more principle for semantic navigation. SparseNav persistently maintains a lightweight geometric bird's-eye-view (BEV) map and sparse landmark memory, acquiring new semantics on demand using the active sub-instruction to decide what is worth grounding. An instruction manager first tracks navigation progress and identifies the active landmark query. An instruction-conditioned perception mechanism then invokes open-vocabulary segmentation when the queried landmark is visible and its metric location can inform the next decision. The resulting landmark memory supports VLM selection among hybrid frontier and local directional waypoint candidates. Without any additional training, SparseNav achieves success rates of 42.8% on R2R-CE and 40.7% on RxR-CE, both on the Val-Unseen splits. Controlled ablations examine semantic perception strategies and the contributions of individual framework components. Furthermore, we successfully deployed SparseNav on a Unitree Go2 quadruped equipped with an Intel RealSense D455 RGB-D camera for geometric mapping and landmark grounding and a Livox MID-360 LiDAR for localization, without a prebuilt map. We validated its effectiveness across multiple indoor environments using instruction-conditioned waypoint navigation.</p>
             
             <div class="card-action-bar">
-                <a href="http://arxiv.org/pdf/2609.23269v1" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
+                <a href="http://arxiv.org/pdf/2609.26408v1" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
                     View PDF
                 </a>
-                <a href="http://arxiv.org/abs/2609.23269v1" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
+                <a href="http://arxiv.org/abs/2609.26408v1" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
                     arXiv Page &rarr;
                 </a>
             </div>
         </article>
         
-        <article class="paper-card" data-title="biview-touch: learning bimanual tactile representations by cross-hand completion" data-summary="bimanual interaction produces complementary tactile views of the same physical process, yet existing tactile representation learning largely models the two hands independently or combines them only for downstream prediction, leaving their cross-hand relationship unexplored. to exploit this overlooked structure, we introduce biview-touch, a tactile-only framework that completes masked target-hand latents from the remaining visible target-hand regions and the synchronized full contralateral hand. a student encoder with a geometry-conditioned directional decoder predicts full-view ema latent targets, while temporal and layout counterfactuals encourage sensitivity to synchronized and anatomically organized source information. controlled ablations and source-context interventions show that biview-touch learns structured cross-hand dependence on temporally aligned and anatomically organized contralateral tactile context, rather than benefiting from bilateral input alone. on the public humantouch dataset, its frozen representations consistently outperform representative self-supervised baselines across low-label settings. with only 5\% downstream labels, biview-touch achieves relative balanced-accuracy gains of 7.1\% on bilateral wrist-motion recognition and 14.1\% on force-derived interaction-phase recognition. we further introduce bvt-20, a 20-task bilateral tactile dataset, and demonstrate transfer across recording sessions and pretraining corpora, including transfer to a held-out bimanual task. our code and dataset details are available on the anonymous project page: https://anonymous.4open.science/w/biview-touch-review-site-050c/.">
+        <article class="paper-card" data-title="hierarchical floorplan-guided vision-language exploration for embodied question answering" data-summary="embodied question answering (eqa) requires an agent to explore a previously unseen environment, gather relevant information, and answer questions about the scene. recent approaches leverage vision-language models (vlms) together with semantic maps or scene graphs to guide exploration. however, exploration is typically driven only by local observations, while structural priors about the environment remain largely unused. we propose hflex-eqa, a hierarchical eqa framework that combines online scene graph construction, vlm- based planning, semantic frontier exploration, and floorplan priors. the system incrementally builds a hierarchical scene graph and an open-vocabulary occupancy map from rgb-d observations, enabling a vlm to jointly reason over the scene graph, task-relevant visual observations, exploration history, and an estimated topological floorplan. furthermore, we introduce a room-discovery strategy that leverages the floorplan and open-vocabulary frontier semantics to guide exploration toward semantically relevant yet currently unobserved room types. we evaluate hflex-eqa on the openeqa and exploreeqa benchmarks and demonstrate deployment on a quadruped robot in real indoor environments. our results demonstrate the benefit of combining vlm-based hierarchical planning with structural floorplan priors for the eqa task.">
             <div class="card-meta-top">
                 <span class="rank-tag">TOP #7</span>
                 <div class="score-badge">
                     <span class="score-label">Priority Index</span>
-                    <span class="score-value">50</span>
+                    <span class="score-value">85</span>
                 </div>
             </div>
             
-            <h2 class="paper-title">BiView-Touch: Learning Bimanual Tactile Representations by Cross-Hand Completion</h2>
+            <h2 class="paper-title">Hierarchical Floorplan-Guided Vision-Language Exploration for Embodied Question Answering</h2>
             
             <div class="author-row">
-                <span>🗓️ 2026-09-20</span>
-                <span>✍️ Chenxin Liang, Youchen Lai, Chuqiao Lyu et al.</span>
+                <span>🗓️ 2026-09-22</span>
+                <span>✍️ Albert Gassol Puigjaner, Kostas Alexis</span>
             </div>
             
             <div class="badge-cluster">
-                <span class="badge badge-muted">#frontier</span>
+                <span class="badge">#quadruped</span>
             </div>
             
-            <p class="paper-summary">Bimanual interaction produces complementary tactile views of the same physical process, yet existing tactile representation learning largely models the two hands independently or combines them only for downstream prediction, leaving their cross-hand relationship unexplored. To exploit this overlooked structure, we introduce BiView-Touch, a tactile-only framework that completes masked target-hand latents from the remaining visible target-hand regions and the synchronized full contralateral hand. A student encoder with a geometry-conditioned directional decoder predicts full-view EMA latent targets, while temporal and layout counterfactuals encourage sensitivity to synchronized and anatomically organized source information. Controlled ablations and source-context interventions show that BiView-Touch learns structured cross-hand dependence on temporally aligned and anatomically organized contralateral tactile context, rather than benefiting from bilateral input alone. On the public HumanTouch dataset, its frozen representations consistently outperform representative self-supervised baselines across low-label settings. With only 5\% downstream labels, BiView-Touch achieves relative balanced-accuracy gains of 7.1\% on bilateral wrist-motion recognition and 14.1\% on force-derived interaction-phase recognition. We further introduce BVT-20, a 20-task bilateral tactile dataset, and demonstrate transfer across recording sessions and pretraining corpora, including transfer to a held-out bimanual task. Our code and dataset details are available on the anonymous project page: https://anonymous.4open.science/w/biview-touch-review-site-050C/.</p>
+            <p class="paper-summary">Embodied Question Answering (EQA) requires an agent to explore a previously unseen environment, gather relevant information, and answer questions about the scene. Recent approaches leverage Vision-Language Models (VLMs) together with semantic maps or scene graphs to guide exploration. However, exploration is typically driven only by local observations, while structural priors about the environment remain largely unused. We propose HFLEX-EQA, a hierarchical EQA framework that combines online scene graph construction, VLM- based planning, semantic frontier exploration, and floorplan priors. The system incrementally builds a hierarchical scene graph and an open-vocabulary occupancy map from RGB-D observations, enabling a VLM to jointly reason over the scene graph, task-relevant visual observations, exploration history, and an estimated topological floorplan. Furthermore, we introduce a room-discovery strategy that leverages the floorplan and open-vocabulary frontier semantics to guide exploration toward semantically relevant yet currently unobserved room types. We evaluate HFLEX-EQA on the OpenEQA and ExploreEQA benchmarks and demonstrate deployment on a quadruped robot in real indoor environments. Our results demonstrate the benefit of combining VLM-based hierarchical planning with structural floorplan priors for the EQA task.</p>
             
             <div class="card-action-bar">
-                <a href="http://arxiv.org/pdf/2609.23352v1" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
+                <a href="http://arxiv.org/pdf/2609.26360v1" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
                     View PDF
                 </a>
-                <a href="http://arxiv.org/abs/2609.23352v1" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
+                <a href="http://arxiv.org/abs/2609.26360v1" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
                     arXiv Page &rarr;
                 </a>
             </div>
         </article>
         
-        <article class="paper-card" data-title="manipulation feasible navigation among movable obstacles with discrete contact pushing" data-summary="in environments with large movable obstacles, detour-only navigation can be inefficient or even infeasible, while obstacle interaction requires reasoning about navigation benefit, feasible placement, and executable manipulation. we present a hierarchical navigation among movable obstacles (namo) framework for mobile manipulators. at the high level, the planner identifies key blocking obstacles from reference paths and searches for relocation plans that jointly satisfy geometric, manipulation, and downstream navigation constraints. when direct relocation is hindered by other movable objects, a large language model (llm) is selectively invoked to infer auxiliary manipulation dependencies, which are then verified by deterministic geometric planning. to execute the resulting relocation goals, we define discrete contact modes on the surfaces of box-shaped obstacles and select contact faces and regions online based on position and orientation errors, enabling straight, side, and corner pushing through contact switching. a recurrent reinforcement-learning policy coordinates the mobile base and manipulator to track tool center point (tcp) targets while preserving end-effector reachability during sustained pushing. simulation and real-robot experiments demonstrate feasible navigation-manipulation in detour, single- and multi-obstacle relocation, and dependency-constrained scenarios, validating the framework for interactive navigation with large non-graspable obstacles. the open-source project is available at https://cloudytosunny.github.io/namo_dcpushing/.">
+        <article class="paper-card" data-title="φ-rie: from photorealistic reconstruction to interactive environments" data-summary="3d gaussian splatting (3dgs) can reconstruct a captured scene photorealistically, but the resulting representation does not by itself support physical interaction. robot simulation instead requires object-level change, \textit{i.e.}, objects must move independently, make contact, and reveal previously occluded surroundings. this gap arises because object appearance may remain entangled with the background, while hidden object geometry and occluded background content may be unobserved. to address this challenge, we present φ-rie, a gaussian-native pipeline that converts selected objects into movable simulator assets while preserving the remaining reconstruction. our key observation is that asset construction and source removal should be coupled, \textit{i.e.}, one object identity should define the movable asset and the scene content to remove and complete. accordingly, scene observation supplies shared evidence to coupled scene construction, which creates registered assets and completed background gaussians for simulator-driven rendering in an interactive environment. this coupling preserves unedited gaussians while aligning visual and physical state. on 50 scannet++ scenes, evidence-based selection and registration retry increase matched f1 at 20\,mm from 0.336 to 0.383 at fixed retention. further tests demonstrate asset executability, manipulation gains over a single-generator baseline, and the visual cost of conversion. together, these results demonstrate that \name\ enables interactive scene conversion.">
             <div class="card-meta-top">
                 <span class="rank-tag">TOP #8</span>
                 <div class="score-badge">
@@ -484,24 +484,24 @@
                 </div>
             </div>
             
-            <h2 class="paper-title">Manipulation Feasible Navigation Among Movable Obstacles with Discrete Contact Pushing</h2>
+            <h2 class="paper-title">φ-RIE: From Photorealistic Reconstruction to Interactive Environments</h2>
             
             <div class="author-row">
-                <span>🗓️ 2026-09-20</span>
-                <span>✍️ Shaohu Wang, Aiguo Song, Yulong Yuan et al.</span>
+                <span>🗓️ 2026-09-22</span>
+                <span>✍️ Runyi Yang, Deheng Zhang, Xiaoye Wang et al.</span>
             </div>
             
             <div class="badge-cluster">
                 <span class="badge badge-muted">#frontier</span>
             </div>
             
-            <p class="paper-summary">In environments with large movable obstacles, detour-only navigation can be inefficient or even infeasible, while obstacle interaction requires reasoning about navigation benefit, feasible placement, and executable manipulation. We present a hierarchical navigation among movable obstacles (NAMO) framework for mobile manipulators. At the high level, the planner identifies key blocking obstacles from reference paths and searches for relocation plans that jointly satisfy geometric, manipulation, and downstream navigation constraints. When direct relocation is hindered by other movable objects, a large language model (LLM) is selectively invoked to infer auxiliary manipulation dependencies, which are then verified by deterministic geometric planning. To execute the resulting relocation goals, we define discrete contact modes on the surfaces of box-shaped obstacles and select contact faces and regions online based on position and orientation errors, enabling straight, side, and corner pushing through contact switching. A recurrent reinforcement-learning policy coordinates the mobile base and manipulator to track tool center point (TCP) targets while preserving end-effector reachability during sustained pushing. Simulation and real-robot experiments demonstrate feasible navigation-manipulation in detour, single- and multi-obstacle relocation, and dependency-constrained scenarios, validating the framework for interactive navigation with large non-graspable obstacles. The open-source project is available at https://cloudytosunny.github.io/NAMO_DCPushing/.</p>
+            <p class="paper-summary">3D Gaussian Splatting (3DGS) can reconstruct a captured scene photorealistically, but the resulting representation does not by itself support physical interaction. Robot simulation instead requires object-level change, \textit{i.e.}, objects must move independently, make contact, and reveal previously occluded surroundings. This gap arises because object appearance may remain entangled with the background, while hidden object geometry and occluded background content may be unobserved. To address this challenge, we present φ-RIE, a Gaussian-native pipeline that converts selected objects into movable simulator assets while preserving the remaining reconstruction. Our key observation is that asset construction and source removal should be coupled, \textit{i.e.}, one object identity should define the movable asset and the scene content to remove and complete. Accordingly, Scene Observation supplies shared evidence to Coupled Scene Construction, which creates registered assets and completed background Gaussians for simulator-driven rendering in an Interactive Environment. This coupling preserves unedited Gaussians while aligning visual and physical state. On 50 ScanNet++ scenes, evidence-based selection and registration retry increase matched F1 at 20\,mm from 0.336 to 0.383 at fixed retention. Further tests demonstrate asset executability, manipulation gains over a single-generator baseline, and the visual cost of conversion. Together, these results demonstrate that \name\ enables interactive scene conversion.</p>
             
             <div class="card-action-bar">
-                <a href="http://arxiv.org/pdf/2609.23312v1" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
+                <a href="http://arxiv.org/pdf/2609.26795v1" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
                     View PDF
                 </a>
-                <a href="http://arxiv.org/abs/2609.23312v1" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
+                <a href="http://arxiv.org/abs/2609.26795v1" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
                     arXiv Page &rarr;
                 </a>
             </div>
