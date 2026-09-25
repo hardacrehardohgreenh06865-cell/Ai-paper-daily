@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Embodied AI & Robotics Intelligence Digest — September 24, 2026</title>
+    <title>Embodied AI & Robotics Intelligence Digest — September 25, 2026</title>
     <style>
         :root {
             --bg-base: #080c14;
@@ -242,7 +242,7 @@
         <header>
             <span class="pill-brand">Autonomous Research Intelligence</span>
             <h1>Embodied AI & Physical Frontier Briefing</h1>
-            <p class="subtitle">Compiled on September 24, 2026 • Ranked top 8 strategic breakthroughs out of incoming preprints.</p>
+            <p class="subtitle">Compiled on September 25, 2026 • Ranked top 8 strategic breakthroughs out of incoming preprints.</p>
             
             <div class="controls">
                 <input type="text" id="filterInput" class="search-box" placeholder="Filter papers by keywords (e.g. humanoid, tactile, diffusion)...">
@@ -251,257 +251,257 @@
 
         <main id="paperList">
             
-        <article class="paper-card" data-title="less language, more latents: annotation-efficient vlas for driving" data-summary="vision-language-action models (vla) promise human-steerable autonomous driving, but their training is bottlenecked by the scarcity of frames paired with natural-language instructions: while camera streams and expert trajectories are logged at scale, language annotations (e.g., turn left at the intersection) remain scarce and expensive to acquire. to address this challenge, we introduce latent action driving annotations (lada), a three-stage pipeline that transforms abundant unlabelled observation-trajectory pairs into a substrate for language-conditioned control. first, we train a latent action model with a vector-quantised bottleneck, producing a compact codebook of high-level vehicle intents. second, a small language-annotated subset is used to train a vision-language translator to map observations and language instructions into this codebook. third, we train a driving vla on observation-latent-action pairs over the full unlabelled corpus. using fewer than 5% of language annotations and without leveraging any auxiliary chain-of-thought reasoning or visual question answering streams, lada achieves a driving score of 87.98 and a success rate of 70.46% on the closed-loop bench2drive benchmark, matching or surpassing fully supervised baselines.">
+        <article class="paper-card" data-title="self-adaptive vla for robust robot deployment" data-summary="while vision-language-action (vla) models demonstrate impressive capabilities in robotic manipulation, their memoryless nature renders them brittle to test-time environment shifts, particularly hardware shifts caused by wear or imperfect calibration. enabling these models to self-adapt during deployment without requiring continuous on-site recalibration remains a critical bottleneck for real-world scalability. in this work, we introduce self-adaptive vla, a novel post-training recipe that enables the policy to iteratively adapt to deployment-time hardware shifts leveraging its own rollouts as context. to do so, we first collect policy rollouts under deliberately injected hardware shifts. we then transform the base policy's training data into shift-conditioned expert demonstrations by pre-compensating the expert actions for these known shifts. next, we introduce a lightweight, plug-in context encoder that compresses the context, including visual observation, proprioception, and actions in the shifted environment, into a latent context token. this token modulates the policy through adaptive layer normalization (adaln). furthermore, we find that context tokens can be ensembled, allowing the policy to iteratively self-correct and mitigate failures step by step. extensive experiments across four precision-critical bi-manual and dexterous manipulation tasks show that self-adaptive vla recovers over 80% of the base policy's performance under hardware shifts, such as actuation bias and joint encoder offsets. moreover, self-adaptive vla enables more robust deployment to new workstations compared to the base policy. our approach provides a pathway for robust large-scale real-world robot deployments and easier maintenance. see videos at https://icefoxzhx.github.io/self-adaptive-vla.">
             <div class="card-meta-top">
                 <span class="rank-tag">TOP #1</span>
                 <div class="score-badge">
                     <span class="score-label">Priority Index</span>
-                    <span class="score-value">135</span>
+                    <span class="score-value">165</span>
                 </div>
             </div>
             
-            <h2 class="paper-title">Less Language, More Latents: Annotation-Efficient VLAs for Driving</h2>
+            <h2 class="paper-title">Self-Adaptive VLA for Robust Robot Deployment</h2>
             
             <div class="author-row">
-                <span>🗓️ 2026-09-23</span>
-                <span>✍️ Alexey Zakharov, Kemal Oksuz, Puneet K. Dokania</span>
+                <span>🗓️ 2026-09-24</span>
+                <span>✍️ Hongxin Zhang, Chunru Lin, Tsun-Hsuan Wang et al.</span>
             </div>
             
             <div class="badge-cluster">
-                <span class="badge">#vision-language-action</span><span class="badge">#vla</span>
+                <span class="badge">#dexterous manipulation</span><span class="badge">#vision-language-action</span><span class="badge">#vla</span>
             </div>
             
-            <p class="paper-summary">Vision-language-action models (VLA) promise human-steerable autonomous driving, but their training is bottlenecked by the scarcity of frames paired with natural-language instructions: while camera streams and expert trajectories are logged at scale, language annotations (e.g., turn left at the intersection) remain scarce and expensive to acquire. To address this challenge, we introduce Latent Action Driving Annotations (LADA), a three-stage pipeline that transforms abundant unlabelled observation-trajectory pairs into a substrate for language-conditioned control. First, we train a latent action model with a vector-quantised bottleneck, producing a compact codebook of high-level vehicle intents. Second, a small language-annotated subset is used to train a vision-language translator to map observations and language instructions into this codebook. Third, we train a driving VLA on observation-latent-action pairs over the full unlabelled corpus. Using fewer than 5% of language annotations and without leveraging any auxiliary chain-of-thought reasoning or visual question answering streams, LADA achieves a Driving Score of 87.98 and a Success Rate of 70.46% on the closed-loop Bench2Drive benchmark, matching or surpassing fully supervised baselines.</p>
+            <p class="paper-summary">While Vision-Language-Action (VLA) models demonstrate impressive capabilities in robotic manipulation, their memoryless nature renders them brittle to test-time environment shifts, particularly hardware shifts caused by wear or imperfect calibration. Enabling these models to self-adapt during deployment without requiring continuous on-site recalibration remains a critical bottleneck for real-world scalability. In this work, we introduce Self-Adaptive VLA, a novel post-training recipe that enables the policy to iteratively adapt to deployment-time hardware shifts leveraging its own rollouts as context. To do so, we first collect policy rollouts under deliberately injected hardware shifts. We then transform the base policy's training data into shift-conditioned expert demonstrations by pre-compensating the expert actions for these known shifts. Next, we introduce a lightweight, plug-in context encoder that compresses the context, including visual observation, proprioception, and actions in the shifted environment, into a latent context token. This token modulates the policy through adaptive layer normalization (AdaLN). Furthermore, we find that context tokens can be ensembled, allowing the policy to iteratively self-correct and mitigate failures step by step. Extensive experiments across four precision-critical bi-manual and dexterous manipulation tasks show that Self-Adaptive VLA recovers over 80% of the base policy's performance under hardware shifts, such as actuation bias and joint encoder offsets. Moreover, Self-Adaptive VLA enables more robust deployment to new workstations compared to the base policy. Our approach provides a pathway for robust large-scale real-world robot deployments and easier maintenance. See videos at https://icefoxzhx.github.io/self-adaptive-vla.</p>
             
             <div class="card-action-bar">
-                <a href="http://arxiv.org/pdf/2609.27747v1" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
+                <a href="http://arxiv.org/pdf/2609.30092v1" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
                     View PDF
                 </a>
-                <a href="http://arxiv.org/abs/2609.27747v1" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
+                <a href="http://arxiv.org/abs/2609.30092v1" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
                     arXiv Page &rarr;
                 </a>
             </div>
         </article>
         
-        <article class="paper-card" data-title="infinova: infinite novel view augmentation for viewpoint invariant robot policies" data-summary="vision-language-action (vla) policies often rely strongly on the camera viewpoints seen during training, causing substantial performance degradation when deployed from unseen perspectives. collecting demonstrations from sufficiently diverse physical viewpoints is expensive and still provides only sparse coverage of the viewpoint space. we introduce infinova, a data-augmentation framework that converts synchronized multi-camera demonstrations into a dense distribution of geometrically consistent training views. infinova reconstructs each manipulation trajectory as a time-varying 3d gaussian representation and renders novel observations from sampled camera poses while preserving the original state-action correspondence. this explicit scene representation improves frame-level fidelity and temporal consistency while reducing task-critical hallucinations observed in generative novel-view synthesis. across four real-world manipulation tasks, policies trained with infinova achieve 5.4x higher average success under unseen randomized viewpoints than both vista-based augmentation and the unaugmented policy. infinova further achieves 1.7x higher success than training directly on all five physical camera views. these results show that dense, geometrically grounded viewpoint augmentation provides a practical route toward camera-robust robot policies without modifying the underlying policy architecture.">
+        <article class="paper-card" data-title="res-hil: human-guided residual reinforcement learning for sample-efficient dexterous manipulation" data-summary="imitation learning enables robots to acquire manipulation skills from demonstrations, but the resulting policies can fail outside the training data, while collecting more demonstrations requires substantial human effort. human-in-the-loop reinforcement learning uses corrective feedback during online training, but typically learns the complete task policy rather than refining a pretrained imitation policy. we introduce res-hil, a human-in-the-loop residual reinforcement learning framework that learns corrective actions on top of a frozen imitation policy. each human intervention provides two complementary learning signals: direct supervision of the residual policy and reward shaping of preceding autonomous behavior. res-hil combines these signals with zero initialization of the residual policy to stabilize and accelerate online learning. we evaluate res-hil on five contact-rich manipulation tasks spanning high-precision and long-horizon behaviors. with only 20 initial demonstrations, res-hil outperforms state-of-the-art full-policy human-in-the-loop reinforcement learning and residual fine-tuning without human guidance on every task after ten minutes of online training. res-hil improves its pretrained base policies and outperforms imitation policies trained with five times more demonstrations. an ablation study shows that direct residual supervision is critical to performance, while intervention-aware reward shaping substantially improves training efficiency.">
             <div class="card-meta-top">
                 <span class="rank-tag">TOP #2</span>
                 <div class="score-badge">
                     <span class="score-label">Priority Index</span>
-                    <span class="score-value">135</span>
+                    <span class="score-value">110</span>
                 </div>
             </div>
             
-            <h2 class="paper-title">InfiNoVA: Infinite Novel View Augmentation for Viewpoint Invariant Robot Policies</h2>
+            <h2 class="paper-title">Res-HIL: Human-Guided Residual Reinforcement Learning for Sample-Efficient Dexterous Manipulation</h2>
             
             <div class="author-row">
-                <span>🗓️ 2026-09-23</span>
-                <span>✍️ Sai Puneeth Reddy Gottam, Elmar Rueckert, Vedant Dave</span>
+                <span>🗓️ 2026-09-24</span>
+                <span>✍️ Mariia Iavorskaia, Christian Dietz, Sebastian Albrecht et al.</span>
             </div>
             
             <div class="badge-cluster">
-                <span class="badge">#vision-language-action</span><span class="badge">#vla</span>
+                <span class="badge">#reinforcement learning</span><span class="badge">#dexterous manipulation</span>
             </div>
             
-            <p class="paper-summary">Vision-Language-Action (VLA) policies often rely strongly on the camera viewpoints seen during training, causing substantial performance degradation when deployed from unseen perspectives. Collecting demonstrations from sufficiently diverse physical viewpoints is expensive and still provides only sparse coverage of the viewpoint space. We introduce InfiNoVA, a data-augmentation framework that converts synchronized multi-camera demonstrations into a dense distribution of geometrically consistent training views. InfiNoVA reconstructs each manipulation trajectory as a time-varying 3D Gaussian representation and renders novel observations from sampled camera poses while preserving the original state-action correspondence. This explicit scene representation improves frame-level fidelity and temporal consistency while reducing task-critical hallucinations observed in generative novel-view synthesis. Across four real-world manipulation tasks, policies trained with InfiNoVA achieve 5.4x higher average success under unseen randomized viewpoints than both VISTA-based augmentation and the unaugmented policy. InfiNoVA further achieves 1.7x higher success than training directly on all five physical camera views. These results show that dense, geometrically grounded viewpoint augmentation provides a practical route toward camera-robust robot policies without modifying the underlying policy architecture.</p>
+            <p class="paper-summary">Imitation learning enables robots to acquire manipulation skills from demonstrations, but the resulting policies can fail outside the training data, while collecting more demonstrations requires substantial human effort. Human-in-the-loop reinforcement learning uses corrective feedback during online training, but typically learns the complete task policy rather than refining a pretrained imitation policy. We introduce Res-HIL, a human-in-the-loop residual reinforcement learning framework that learns corrective actions on top of a frozen imitation policy. Each human intervention provides two complementary learning signals: direct supervision of the residual policy and reward shaping of preceding autonomous behavior. Res-HIL combines these signals with zero initialization of the residual policy to stabilize and accelerate online learning. We evaluate Res-HIL on five contact-rich manipulation tasks spanning high-precision and long-horizon behaviors. With only 20 initial demonstrations, Res-HIL outperforms state-of-the-art full-policy human-in-the-loop reinforcement learning and residual fine-tuning without human guidance on every task after ten minutes of online training. Res-HIL improves its pretrained base policies and outperforms imitation policies trained with five times more demonstrations. An ablation study shows that direct residual supervision is critical to performance, while intervention-aware reward shaping substantially improves training efficiency.</p>
             
             <div class="card-action-bar">
-                <a href="http://arxiv.org/pdf/2609.27734v1" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
+                <a href="http://arxiv.org/pdf/2609.30023v1" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
                     View PDF
                 </a>
-                <a href="http://arxiv.org/abs/2609.27734v1" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
+                <a href="http://arxiv.org/abs/2609.30023v1" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
                     arXiv Page &rarr;
                 </a>
             </div>
         </article>
         
-        <article class="paper-card" data-title="internw0: a foundational physical world model for efficient real-world interactions" data-summary="physical intelligence requires more than predicting how the world may evolve: predictions must remain actionable as the world continues to change. we introduce internw0, the first instantiation of the internw physical world model series from shanghai ai laboratory, built around omnimodal interfaces, asynchronous multi-frequency processing, and local physical modeling under partial observations and external influences. internw0 jointly learns future visual dynamics and continuous robot control through an asymmetric video--action architecture with flow matching. a high-capacity video expert provides longer-horizon predictive context, while a lightweight action expert operates at a faster timescale. instead of regenerating the future for every action update, internw0 reuses layerwise k/v and adapts it to newly observed states through observation-conditioned context routing. domain-specific interfaces and soft prompts support heterogeneous embodiments, while contact-aware post-training incorporates force and tactile signals for contact-rich manipulation. we train internw0 on approximately 7,200 hours of heterogeneous robot and egocentric data, including egolab, a 275-hour real-laboratory egocentric dataset. evaluation spans simulation benchmarks and real-world scientific tasks, including a 15-stage metal--organic framework synthesis workflow and 5-stage contact- and force-aware dexterous manipulation for general-purpose quantitative pipetting. these results advance scalable, asynchronous, and science-native physical world models for universal and efficient real-world interactions.">
+        <article class="paper-card" data-title="ego-exo4d human meshes dataset: 4d human motion reconstruction for ego-exo captures" data-summary="ego-exo4d is a large-scale dataset providing synchronized egocentric and multi-view exocentric video, a rich resource for skill learning and assessment, procedural activity understanding, and embodied ai. however, the dataset ships with only sparse 3d human pose annotations, and reconstructing dense human motion from its multi-view captures is nontrivial. to this end, we present ego-exo4d-hm, a large-scale dataset of 4d human motion reconstructions for ego-exo4d's captures, and release the accompanying reconstruction pipeline. the code, dataset, and documentation can be found at https://abhiram824.github.io/egoexo4d_human_meshes.">
             <div class="card-meta-top">
                 <span class="rank-tag">TOP #3</span>
                 <div class="score-badge">
                     <span class="score-label">Priority Index</span>
-                    <span class="score-value">120</span>
+                    <span class="score-value">100</span>
                 </div>
             </div>
             
-            <h2 class="paper-title">InternW0: A Foundational Physical World Model for Efficient Real-World Interactions</h2>
+            <h2 class="paper-title">Ego-Exo4D Human Meshes Dataset: 4D Human Motion Reconstruction for Ego-Exo Captures</h2>
             
             <div class="author-row">
-                <span>🗓️ 2026-09-23</span>
-                <span>✍️ Jisong Cai, Yao Mu, Ganlin Yang et al.</span>
+                <span>🗓️ 2026-09-24</span>
+                <span>✍️ Abhiram Maddukuri, Georgios Pavlakos</span>
             </div>
             
             <div class="badge-cluster">
-                <span class="badge">#world model</span><span class="badge">#dexterous manipulation</span>
+                <span class="badge">#embodied ai</span>
             </div>
             
-            <p class="paper-summary">Physical intelligence requires more than predicting how the world may evolve: predictions must remain actionable as the world continues to change. We introduce InternW0, the first instantiation of the InternW physical world model series from Shanghai AI Laboratory, built around omnimodal interfaces, asynchronous multi-frequency processing, and local physical modeling under partial observations and external influences. InternW0 jointly learns future visual dynamics and continuous robot control through an asymmetric video--action architecture with flow matching. A high-capacity video expert provides longer-horizon predictive context, while a lightweight action expert operates at a faster timescale. Instead of regenerating the future for every action update, InternW0 reuses layerwise K/V and adapts it to newly observed states through observation-conditioned context routing. Domain-specific interfaces and soft prompts support heterogeneous embodiments, while contact-aware post-training incorporates force and tactile signals for contact-rich manipulation. We train InternW0 on approximately 7,200 hours of heterogeneous robot and egocentric data, including EgoLab, a 275-hour real-laboratory egocentric dataset. Evaluation spans simulation benchmarks and real-world scientific tasks, including a 15-stage metal--organic framework synthesis workflow and 5-stage contact- and force-aware dexterous manipulation for general-purpose quantitative pipetting. These results advance scalable, asynchronous, and science-native physical world models for universal and efficient real-world interactions.</p>
+            <p class="paper-summary">Ego-Exo4D is a large-scale dataset providing synchronized egocentric and multi-view exocentric video, a rich resource for skill learning and assessment, procedural activity understanding, and embodied AI. However, the dataset ships with only sparse 3D human pose annotations, and reconstructing dense human motion from its multi-view captures is nontrivial. To this end, we present Ego-Exo4D-HM, a large-scale dataset of 4D human motion reconstructions for Ego-Exo4D's captures, and release the accompanying reconstruction pipeline. The code, dataset, and documentation can be found at https://abhiram824.github.io/egoexo4d_human_meshes.</p>
             
             <div class="card-action-bar">
-                <a href="http://arxiv.org/pdf/2609.27656v1" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
+                <a href="http://arxiv.org/pdf/2609.30187v1" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
                     View PDF
                 </a>
-                <a href="http://arxiv.org/abs/2609.27656v1" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
+                <a href="http://arxiv.org/abs/2609.30187v1" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
                     arXiv Page &rarr;
                 </a>
             </div>
         </article>
         
-        <article class="paper-card" data-title="latent evolving world action model" data-summary="world action models (wams) jointly model action generation and environment dynamics and are mostly built on pretrained video diffusion models (vdms). in vdm-based wams, observations are first encoded by a vae, and the resulting compressed latents are then processed by large video diffusion backbones to extract effective features for action generation. however, this paradigm ties wam performance and training cost to large-scale video generation pretraining, limiting wam efficiency and scalability. in this paper, we theoretically and empirically investigate how visual representations affect action generation in wams. our results show that predictive embeddings from joint-embedding predictive architecture (jepa) encoders better support action generation than compressed vae latents, with i-jepa performing best in our encoder comparison. based on these findings, we propose lewam, which conditions action generation on jepa embeddings and models environment evolution by predicting future embeddings in the same space, without relying on a video diffusion backbone. we further find that imitation learning matches demonstrated actions but does not distinguish better actions from worse ones, even though small action deviations can greatly affect task success. to address this limitation without additional environment interaction or the human oversight required for resets and safety, we introduce demonstration-guided dpo (demodpo), an offline preference refinement stage that derives preference supervision directly from demonstrations.with only 0.4b trainable parameters, lewam achieves an average success rate of 92.28\% on robotwin 2.0, comparable to that of state-of-the-art vlas and wams, and maintains practical effectiveness on real-world manipulation tasks.">
+        <article class="paper-card" data-title="real-time force regulation for whole-hand dexterous grasping" data-summary="robust dexterous grasping requires maintaining physical stability despite contacts interactively evolving across the entire hand. a precomputed force distribution can easily fail under object motion, modeling errors, or external disturbances. in this paper, we present a framework for real-time force regulation over dynamically changing whole-hand contacts. our method geometrically estimates contacts across all hand links using a tracked object model and proprioception, without requiring tactile sensing at those contacts. it repeatedly recomputes the desired contact-force distribution subject to friction constraints, actuator limits, and an actuation-consistency constraint motivated by classical whole-limb force analysis. we integrate this force-regulation controller with reactive reaching, enabling the hand to acquire a grasp, maintain it under disturbances, and regrasp after losing the object. simulation experiments without gravity demonstrate improved grasp retention over fixed-allocation and fingertip-only execution under controlled perturbations, while real-world experiments on a 27-dof arm-hand system demonstrate grasp maintenance and recovery under human-applied disturbances as contacts evolve across the whole hand. project page: https://sangminkim-99.github.io/reactive-grasp-whole-hand/">
             <div class="card-meta-top">
                 <span class="rank-tag">TOP #4</span>
+                <div class="score-badge">
+                    <span class="score-label">Priority Index</span>
+                    <span class="score-value">100</span>
+                </div>
+            </div>
+            
+            <h2 class="paper-title">Real-Time Force Regulation for Whole-Hand Dexterous Grasping</h2>
+            
+            <div class="author-row">
+                <span>🗓️ 2026-09-24</span>
+                <span>✍️ Sang Min Kim, Alexander Alexiev, Tzu-Yuan Lin et al.</span>
+            </div>
+            
+            <div class="badge-cluster">
+                <span class="badge">#tactile sensing</span><span class="badge">#actuator</span>
+            </div>
+            
+            <p class="paper-summary">Robust dexterous grasping requires maintaining physical stability despite contacts interactively evolving across the entire hand. A precomputed force distribution can easily fail under object motion, modeling errors, or external disturbances. In this paper, we present a framework for real-time force regulation over dynamically changing whole-hand contacts. Our method geometrically estimates contacts across all hand links using a tracked object model and proprioception, without requiring tactile sensing at those contacts. It repeatedly recomputes the desired contact-force distribution subject to friction constraints, actuator limits, and an actuation-consistency constraint motivated by classical whole-limb force analysis. We integrate this force-regulation controller with reactive reaching, enabling the hand to acquire a grasp, maintain it under disturbances, and regrasp after losing the object. Simulation experiments without gravity demonstrate improved grasp retention over fixed-allocation and fingertip-only execution under controlled perturbations, while real-world experiments on a 27-DoF arm-hand system demonstrate grasp maintenance and recovery under human-applied disturbances as contacts evolve across the whole hand. Project page: https://sangminkim-99.github.io/reactive-grasp-whole-hand/</p>
+            
+            <div class="card-action-bar">
+                <a href="http://arxiv.org/pdf/2609.30082v1" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
+                    View PDF
+                </a>
+                <a href="http://arxiv.org/abs/2609.30082v1" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
+                    arXiv Page &rarr;
+                </a>
+            </div>
+        </article>
+        
+        <article class="paper-card" data-title="rolling-wam: world action models with rolling imagination" data-summary="world action models (wams) couple action generation with future visual prediction for robotic manipulation. however, completing the joint video-action denoising process at each replanning cycle incurs substantial latency, delaying action updates and limiting closed-loop responsiveness. we present rolling-wam, a formulation that distributes joint denoising across successive replanning cycles. our method maintains a sliding window of video-action chunks at staggered noise levels. at each step, a rolling noise schedule fully denoises the imminent action chunk for execution, while partially refining farther-future chunks. as the window advances with new camera observations, the retained future chunks continue their denoising process. this distributes the computational cost over time while carrying an evolving visual-action context across chunk boundaries. evaluations on libero, robotwin, and a real-world unitree g1 humanoid show that rolling-wam achieves competitive manipulation performance. by removing the need to denoise the entire prediction horizon from scratch, it delivers a 4.5x steady-state replanning speedup over standard joint wams.">
+            <div class="card-meta-top">
+                <span class="rank-tag">TOP #5</span>
+                <div class="score-badge">
+                    <span class="score-label">Priority Index</span>
+                    <span class="score-value">95</span>
+                </div>
+            </div>
+            
+            <h2 class="paper-title">Rolling-WAM: World Action Models with Rolling Imagination</h2>
+            
+            <div class="author-row">
+                <span>🗓️ 2026-09-24</span>
+                <span>✍️ Yinghua Zhou, Junjie Ye, Yiqi Zhao et al.</span>
+            </div>
+            
+            <div class="badge-cluster">
+                <span class="badge">#humanoid</span>
+            </div>
+            
+            <p class="paper-summary">World Action Models (WAMs) couple action generation with future visual prediction for robotic manipulation. However, completing the joint video-action denoising process at each replanning cycle incurs substantial latency, delaying action updates and limiting closed-loop responsiveness. We present Rolling-WAM, a formulation that distributes joint denoising across successive replanning cycles. Our method maintains a sliding window of video-action chunks at staggered noise levels. At each step, a rolling noise schedule fully denoises the imminent action chunk for execution, while partially refining farther-future chunks. As the window advances with new camera observations, the retained future chunks continue their denoising process. This distributes the computational cost over time while carrying an evolving visual-action context across chunk boundaries. Evaluations on LIBERO, RoboTwin, and a real-world Unitree G1 humanoid show that Rolling-WAM achieves competitive manipulation performance. By removing the need to denoise the entire prediction horizon from scratch, it delivers a 4.5x steady-state replanning speedup over standard joint WAMs.</p>
+            
+            <div class="card-action-bar">
+                <a href="http://arxiv.org/pdf/2609.30247v1" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
+                    View PDF
+                </a>
+                <a href="http://arxiv.org/abs/2609.30247v1" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
+                    arXiv Page &rarr;
+                </a>
+            </div>
+        </article>
+        
+        <article class="paper-card" data-title="ad-wm: action-discriminative world models for counterfactual model predictive control" data-summary="latent world models are typically trained to predict factual transitions, whereas model predictive control (mpc) must compare alternative actions from the same state. a model can therefore achieve low factual prediction error yet poorly distinguish candidate actions. we introduce ad-wm, an action-discriminative joint-embedding world model for counterfactual mpc. ad-wm combines residual latent dynamics with predictor-level action-recovery regularization, using inverse dynamics and a normalized recovery objective motivated by conditional mutual information. both objectives encourage planning transitions to preserve action information; their auxiliary heads are discarded at test time, leaving mpc unchanged. on ogbench-cube, ad-wm improves hard-start success from 3.7% to 52.0% over a matched lewm baseline and improves mean success over the reproduced baseline in four of five simulation environments. planning diagnostics show that factual prediction error and whole-bank action ranking do not follow the closed-loop success ordering, whereas cem-aligned elite regret tracks success more closely. with a frozen v-jepa 2 encoder and matched droid post-training, ad-wm also improves zero-shot transfer to our franka setup, increasing basic pick-and-place success from 42.2% to 71.1% without lab-specific adaptation. these results suggest that world models for planning should preserve action-dependent differences needed for counterfactual selection, rather than optimize factual prediction accuracy alone. more videos and code are available at https://ad-wm.github.io/.">
+            <div class="card-meta-top">
+                <span class="rank-tag">TOP #6</span>
                 <div class="score-badge">
                     <span class="score-label">Priority Index</span>
                     <span class="score-value">90</span>
                 </div>
             </div>
             
-            <h2 class="paper-title">Latent evolving World Action Model</h2>
+            <h2 class="paper-title">AD-WM: Action-Discriminative World Models for Counterfactual Model Predictive Control</h2>
             
             <div class="author-row">
-                <span>🗓️ 2026-09-23</span>
-                <span>✍️ Xueji Fang, Boqiang Duan, Hua Wu et al.</span>
+                <span>🗓️ 2026-09-24</span>
+                <span>✍️ Jiabin Qiu, Zixuan Chen, Hongye Cao et al.</span>
             </div>
             
             <div class="badge-cluster">
-                <span class="badge">#vla</span>
+                <span class="badge">#world model</span>
             </div>
             
-            <p class="paper-summary">World Action Models (WAMs) jointly model action generation and environment dynamics and are mostly built on pretrained Video Diffusion Models (VDMs). In VDM-based WAMs, observations are first encoded by a VAE, and the resulting compressed latents are then processed by large video diffusion backbones to extract effective features for action generation. However, this paradigm ties WAM performance and training cost to large-scale video generation pretraining, limiting WAM efficiency and scalability. In this paper, we theoretically and empirically investigate how visual representations affect action generation in WAMs. Our results show that predictive embeddings from Joint-Embedding Predictive Architecture (JEPA) encoders better support action generation than compressed VAE latents, with I-JEPA performing best in our encoder comparison. Based on these findings, we propose LeWAM, which conditions action generation on JEPA embeddings and models environment evolution by predicting future embeddings in the same space, without relying on a video diffusion backbone. We further find that imitation learning matches demonstrated actions but does not distinguish better actions from worse ones, even though small action deviations can greatly affect task success. To address this limitation without additional environment interaction or the human oversight required for resets and safety, we introduce Demonstration-Guided DPO (DemoDPO), an offline preference refinement stage that derives preference supervision directly from demonstrations.With only 0.4B trainable parameters, LeWAM achieves an average success rate of 92.28\% on RoboTwin 2.0, comparable to that of state-of-the-art VLAs and WAMs, and maintains practical effectiveness on real-world manipulation tasks.</p>
+            <p class="paper-summary">Latent world models are typically trained to predict factual transitions, whereas model predictive control (MPC) must compare alternative actions from the same state. A model can therefore achieve low factual prediction error yet poorly distinguish candidate actions. We introduce AD-WM, an action-discriminative joint-embedding world model for counterfactual MPC. AD-WM combines residual latent dynamics with predictor-level action-recovery regularization, using inverse dynamics and a normalized recovery objective motivated by conditional mutual information. Both objectives encourage planning transitions to preserve action information; their auxiliary heads are discarded at test time, leaving MPC unchanged. On OGBench-Cube, AD-WM improves hard-start success from 3.7% to 52.0% over a matched LeWM baseline and improves mean success over the reproduced baseline in four of five simulation environments. Planning diagnostics show that factual prediction error and whole-bank action ranking do not follow the closed-loop success ordering, whereas CEM-aligned elite regret tracks success more closely. With a frozen V-JEPA 2 encoder and matched DROID post-training, AD-WM also improves zero-shot transfer to our Franka setup, increasing basic pick-and-place success from 42.2% to 71.1% without lab-specific adaptation. These results suggest that world models for planning should preserve action-dependent differences needed for counterfactual selection, rather than optimize factual prediction accuracy alone. More videos and code are available at https://ad-wm.github.io/.</p>
             
             <div class="card-action-bar">
-                <a href="http://arxiv.org/pdf/2609.27455v1" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
+                <a href="http://arxiv.org/pdf/2609.30264v1" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
                     View PDF
                 </a>
-                <a href="http://arxiv.org/abs/2609.27455v1" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
+                <a href="http://arxiv.org/abs/2609.30264v1" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
                     arXiv Page &rarr;
                 </a>
             </div>
         </article>
         
-        <article class="paper-card" data-title="regenharness: a robot agent harness with evidence-gated recursive self-improvement" data-summary="long-horizon robot execution requires a clear distinction between a model's proposal, a controller's termination, and verified task completion. we present regenharness, an evidence-gated robot-agent harness connecting task planning to heterogeneous robot skills. its execution architecture couples a model loop for context-conditioned proposals with an agent loop for dispatch, observation, verification, commitment, and bounded recovery. four role-isolated contexts separate planning, supervision, verification, and recovery inputs. versioned memory distinguishes observed facts from accepted task progress, while an identity- and version-bound commit gate controls updates to trusted task state. the runtime combines duplicate-dispatch control, resource leases, and recovery budgets under explicit backend contracts, and checks the original user goal before reporting completion. to our knowledge, we are the first to introduce an evidence-gated recursive self-improvement (rsi) protocol for embodied robotic agents. across missions, execution records motivate candidate changes to context rules, task templates, routing, and recovery policies; fixed regression checks and release authorization govern their acceptance; versioned rollout and rollback preserve configuration traceability. this rsi protocol revises the harness configuration without online model-weight updates or permission to weaken the commit gate. a real quadruped deployment documents voice-triggered warehouse navigation, panoramic inspection, visual analysis, message delivery, return, and spoken reporting through linked audio, images, trajectories, and receipts. a separate circuit demonstrates why completion depends on execution history rather than endpoint proximity alone. together, the cases demonstrate integrated perception, physical execution, communication, and history-dependent completion in real-world robot tasks.">
-            <div class="card-meta-top">
-                <span class="rank-tag">TOP #5</span>
-                <div class="score-badge">
-                    <span class="score-label">Priority Index</span>
-                    <span class="score-value">85</span>
-                </div>
-            </div>
-            
-            <h2 class="paper-title">RegenHarness: A Robot Agent Harness with Evidence-Gated Recursive Self-Improvement</h2>
-            
-            <div class="author-row">
-                <span>🗓️ 2026-09-23</span>
-                <span>✍️ Kailin Wang, Haoxiang Jie, Yaoyuan Yan et al.</span>
-            </div>
-            
-            <div class="badge-cluster">
-                <span class="badge">#quadruped</span>
-            </div>
-            
-            <p class="paper-summary">Long-horizon robot execution requires a clear distinction between a model's proposal, a controller's termination, and verified task completion. We present RegenHarness, an evidence-gated robot-agent harness connecting task planning to heterogeneous robot skills. Its execution architecture couples a model loop for context-conditioned proposals with an agent loop for dispatch, observation, verification, commitment, and bounded recovery. Four role-isolated contexts separate planning, supervision, verification, and recovery inputs. Versioned memory distinguishes observed facts from accepted task progress, while an identity- and version-bound commit gate controls updates to trusted task state. The runtime combines duplicate-dispatch control, resource leases, and recovery budgets under explicit backend contracts, and checks the original user goal before reporting completion. To our knowledge, we are the first to introduce an evidence-gated recursive self-improvement (RSI) protocol for embodied robotic agents. Across missions, execution records motivate candidate changes to context rules, task templates, routing, and recovery policies; fixed regression checks and release authorization govern their acceptance; versioned rollout and rollback preserve configuration traceability. This RSI protocol revises the harness configuration without online model-weight updates or permission to weaken the commit gate. A real quadruped deployment documents voice-triggered warehouse navigation, panoramic inspection, visual analysis, message delivery, return, and spoken reporting through linked audio, images, trajectories, and receipts. A separate circuit demonstrates why completion depends on execution history rather than endpoint proximity alone. Together, the cases demonstrate integrated perception, physical execution, communication, and history-dependent completion in real-world robot tasks.</p>
-            
-            <div class="card-action-bar">
-                <a href="http://arxiv.org/pdf/2609.27612v1" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
-                    View PDF
-                </a>
-                <a href="http://arxiv.org/abs/2609.27612v1" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
-                    arXiv Page &rarr;
-                </a>
-            </div>
-        </article>
-        
-        <article class="paper-card" data-title="a modular dual-arm robotic cell for disassembly and repair of industrial control electronics" data-summary="industrial control electronics such as programmable logic controllers, servo drives and operator panels are routinely repaired in plant maintenance, but were never designed for automated disassembly. this paper presents a modular dual-arm robotic cell for repair-oriented disassembly, using two collaborative manipulators, interchangeable tools, red-green-blue-depth (rgb-d) and wristlevel perception, force/torque sensing and a robot operating system (ros) 2- based control with behavior tree (bt) execution, teleoperation, digital-twin support and bounded learning-based contact skills. the process is decomposed into sequence planning, symbolic execution with fallbacks, force-limited tool skills, visual condition assessment and demonstration-based adaptation. a cadderived device graph encodes the disassembly order, access constraints, tools, feasible removal directions and verification states and converts them into operation objects for the bt and motion layers. grounded in three representative devices, the cell covers screw removal, damaged-fastener fallback, snap-fit opening, connector release, cooperative printed circuit board (pcb) extraction and condition-based repair decisions. the main contribution is an architecture linking sequence knowledge, perception, verification and force-aware skills through one ros 2 interface across simulation, teleoperation and real hardware.">
-            <div class="card-meta-top">
-                <span class="rank-tag">TOP #6</span>
-                <div class="score-badge">
-                    <span class="score-label">Priority Index</span>
-                    <span class="score-value">70</span>
-                </div>
-            </div>
-            
-            <h2 class="paper-title">A Modular Dual-Arm Robotic Cell for Disassembly and Repair of Industrial Control Electronics</h2>
-            
-            <div class="author-row">
-                <span>🗓️ 2026-09-23</span>
-                <span>✍️ Maximilian Ruhe, Fabian Harlacher, Christian Friedrich et al.</span>
-            </div>
-            
-            <div class="badge-cluster">
-                <span class="badge">#teleoperation</span>
-            </div>
-            
-            <p class="paper-summary">Industrial control electronics such as programmable logic controllers, servo drives and operator panels are routinely repaired in plant maintenance, but were never designed for automated disassembly. This paper presents a modular dual-arm robotic cell for repair-oriented disassembly, using two collaborative manipulators, interchangeable tools, red-green-blue-depth (RGB-D) and wristlevel perception, force/torque sensing and a Robot Operating System (ROS) 2- based control with Behavior Tree (BT) execution, teleoperation, digital-twin support and bounded learning-based contact skills. The process is decomposed into sequence planning, symbolic execution with fallbacks, force-limited tool skills, visual condition assessment and demonstration-based adaptation. A CADderived device graph encodes the disassembly order, access constraints, tools, feasible removal directions and verification states and converts them into operation objects for the BT and motion layers. Grounded in three representative devices, the cell covers screw removal, damaged-fastener fallback, snap-fit opening, connector release, cooperative printed circuit board (PCB) extraction and condition-based repair decisions. The main contribution is an architecture linking sequence knowledge, perception, verification and force-aware skills through one ROS 2 interface across simulation, teleoperation and real hardware.</p>
-            
-            <div class="card-action-bar">
-                <a href="http://arxiv.org/pdf/2609.27466v1" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
-                    View PDF
-                </a>
-                <a href="http://arxiv.org/abs/2609.27466v1" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
-                    arXiv Page &rarr;
-                </a>
-            </div>
-        </article>
-        
-        <article class="paper-card" data-title="corelnav: collaborative relational navigation for multi-robot spatially constrained semantic navigation" data-summary="spatially constrained semantic navigation requires robots to identify targets specified not only by semantic categories but also by relations to surrounding objects. in unknown environments, resolving such goals requires efficient exploration together with sufficient target and contextual evidence for reliable relation verification. existing methods leave relation-aware verification and multi-robot collaboration largely disconnected: relational navigation is predominantly single-agent, while multi-robot systems seldom coordinate distributed observations for instance-specific relation verification. we propose corelnav, whose core is coupling task-conditioned multi-robot exploration with candidate-driven collaborative verification. a spatial-semantic field converts task constraints, scene nodes, and object features into exploration utility; as candidate information accumulates, robots are reallocated toward complementary evidence under team navigation costs, while instance-consistent observations are aggregated across topology nodes. this coupling reduces redundant search and enables relation hypotheses to be resolved from distributed partial evidence that independent exploration or isolated-view verification can leave ambiguous. experiments in photorealistic simulation demonstrate consistent improvements over representative baselines, with ablations validating the proposed exploration and verification mechanisms. we further deploy the complete system on two physical mobile robots, demonstrating its applicability to real-world collaborative navigation.">
+        <article class="paper-card" data-title="underwater c3-jepa: an object-centric cross-view world model for rov salvage" data-summary="we present underwater c$^{3}$-jepa (cross-view, control-conditioned, context-extended), an object-centric multi-view predictive world model for near-field heavy-load underwater rov salvage. without contact sensors, it predicts in latent space how the task-object state evolves through contact interaction and under the hydrodynamic lag of the vehicle, from synchronized multi-view rgb observations and vehicle control signals. c$^{3}$-jepa encodes multi-camera observations into task-object and context tokens, fuses cross-camera evidence through held-out-view attention, and directly predicts future states conditioned on control. weak binding anchors the target and gripper at low annotation cost, while sigreg sharpens the geometric representation. experiments show that the learned representation transfers substantially more task-relevant information to downstream probes than a reconstruction-free latent baseline, while keeping the predictor lightweight. the resulting predictive interface supports model-predictive-control (mpc) candidate evaluation and imagined-rollout behavior-agent training. validation on real underwater video shows the same architecture recovering a withheld camera's object state and staying ahead of persistence, so the recipe transfers beyond simulation.">
             <div class="card-meta-top">
                 <span class="rank-tag">TOP #7</span>
                 <div class="score-badge">
                     <span class="score-label">Priority Index</span>
-                    <span class="score-value">50</span>
+                    <span class="score-value">90</span>
                 </div>
             </div>
             
-            <h2 class="paper-title">CoRelNav: Collaborative Relational Navigation for Multi-Robot Spatially Constrained Semantic Navigation</h2>
+            <h2 class="paper-title">Underwater C3-JEPA: An Object-Centric Cross-View World Model for ROV Salvage</h2>
             
             <div class="author-row">
-                <span>🗓️ 2026-09-23</span>
-                <span>✍️ Jinyu He, Zihao Mao, Haonan Jin et al.</span>
+                <span>🗓️ 2026-09-24</span>
+                <span>✍️ Yuncong Yang, Jinlong Li, Yulong Xue et al.</span>
             </div>
             
             <div class="badge-cluster">
-                <span class="badge badge-muted">#frontier</span>
+                <span class="badge">#world model</span>
             </div>
             
-            <p class="paper-summary">Spatially constrained semantic navigation requires robots to identify targets specified not only by semantic categories but also by relations to surrounding objects. In unknown environments, resolving such goals requires efficient exploration together with sufficient target and contextual evidence for reliable relation verification. Existing methods leave relation-aware verification and multi-robot collaboration largely disconnected: relational navigation is predominantly single-agent, while multi-robot systems seldom coordinate distributed observations for instance-specific relation verification. We propose CoRelNav, whose core is coupling task-conditioned multi-robot exploration with candidate-driven collaborative verification. A spatial-semantic field converts task constraints, scene nodes, and object features into exploration utility; as candidate information accumulates, robots are reallocated toward complementary evidence under team navigation costs, while instance-consistent observations are aggregated across topology nodes. This coupling reduces redundant search and enables relation hypotheses to be resolved from distributed partial evidence that independent exploration or isolated-view verification can leave ambiguous. Experiments in photorealistic simulation demonstrate consistent improvements over representative baselines, with ablations validating the proposed exploration and verification mechanisms. We further deploy the complete system on two physical mobile robots, demonstrating its applicability to real-world collaborative navigation.</p>
+            <p class="paper-summary">We present Underwater C$^{3}$-JEPA (cross-view, control-conditioned, context-extended), an object-centric multi-view predictive world model for near-field heavy-load underwater ROV salvage. Without contact sensors, it predicts in latent space how the task-object state evolves through contact interaction and under the hydrodynamic lag of the vehicle, from synchronized multi-view RGB observations and vehicle control signals. C$^{3}$-JEPA encodes multi-camera observations into task-object and context tokens, fuses cross-camera evidence through held-out-view attention, and directly predicts future states conditioned on control. Weak binding anchors the target and gripper at low annotation cost, while SIGReg sharpens the geometric representation. Experiments show that the learned representation transfers substantially more task-relevant information to downstream probes than a reconstruction-free latent baseline, while keeping the predictor lightweight. The resulting predictive interface supports model-predictive-control (MPC) candidate evaluation and imagined-rollout behavior-agent training. Validation on real underwater video shows the same architecture recovering a withheld camera's object state and staying ahead of persistence, so the recipe transfers beyond simulation.</p>
             
             <div class="card-action-bar">
-                <a href="http://arxiv.org/pdf/2609.27720v1" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
+                <a href="http://arxiv.org/pdf/2609.30214v1" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
                     View PDF
                 </a>
-                <a href="http://arxiv.org/abs/2609.27720v1" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
+                <a href="http://arxiv.org/abs/2609.30214v1" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
                     arXiv Page &rarr;
                 </a>
             </div>
         </article>
         
-        <article class="paper-card" data-title="wave-robust passive auv localization using fp-music" data-summary="localizing an autonomous underwater vehicle without pre-deployed seabed transponders, or direct access to onboard vehicle sensors remains a core challenge. we present a receiver-passive 3-d localization and spatial mapping system utilizing a single floating surface buoy equipped with a hydrophone array and an inertial measurement unit (imu). the central difficulty is that surface wave motion induces six-degree-of-freedom (6-dof) perturbations that rotate the array between snapshots, degrading conventional subspace processing. we resolve this by introducing a fixed-point iterative multiple signal classification algorithm (fp-music) that uses imu measurements to de-warp snapshot covariances prior to direction-of-arrival estimation. furthermore, we employ a subspace-projected wideband matched filter to resolve beacon ranges and use power asymmetry for independent front-back identification. evaluations across simulated sea states demonstrate that fp-music substantially reduces localization error relative to uncompensated methods and sustains robust 3-d tracking and vehicle orientation estimation under wave-induced motion. at moderate sea state, fp-music increases the 2-m beacon-separation accuracy from approximately 45% to 75%.">
+        <article class="paper-card" data-title="aim short to reach far: your frozen world model can plan better than you think" data-summary="planners built on visual world models commonly score each predicted outcome by its distance to the encoded goal image. we show that this target can limit control even with exact dynamics and globally optimal short-horizon search: reaching a goal may require actions that initially move away from it. with frozen lewm models, intermediate targets substantially improve action synthesis and recorded-action ranking on cube, pusht, reacher, and tworoom. learned targets and targets drawn from observed experience both produce these gains. we introduce anchored planning, which retrieves a recorded segment whose start and end resemble the current and goal observations, then aims at an observation shortly after its start. the frozen model scores actions toward this target from the current state. without additional training, planning toward observed targets outperforms the released lewm planner on every task in our long-range evaluation. additional final-goal search falls short of the same gains. lower successor-prediction error need not translate into better control. success also depends on how far ahead the target is placed and on shrinking the retrieval span as execution advances. changing only the target lets the same frozen model and planner reach goals that final-goal scoring misses.">
             <div class="card-meta-top">
                 <span class="rank-tag">TOP #8</span>
                 <div class="score-badge">
                     <span class="score-label">Priority Index</span>
-                    <span class="score-value">50</span>
+                    <span class="score-value">90</span>
                 </div>
             </div>
             
-            <h2 class="paper-title">Wave-Robust Passive AUV Localization Using FP-MUSIC</h2>
+            <h2 class="paper-title">Aim Short to Reach Far: Your Frozen World Model Can Plan Better Than You Think</h2>
             
             <div class="author-row">
-                <span>🗓️ 2026-09-23</span>
-                <span>✍️ Usama Saqib, Ola Rønning, Andrzej Wąsowski</span>
+                <span>🗓️ 2026-09-24</span>
+                <span>✍️ Xvyuan Liu, Jianjie Fang, Chen Gao et al.</span>
             </div>
             
             <div class="badge-cluster">
-                <span class="badge badge-muted">#frontier</span>
+                <span class="badge">#world model</span>
             </div>
             
-            <p class="paper-summary">Localizing an autonomous underwater vehicle without pre-deployed seabed transponders, or direct access to onboard vehicle sensors remains a core challenge. We present a receiver-passive 3-D localization and spatial mapping system utilizing a single floating surface buoy equipped with a hydrophone array and an inertial measurement unit (IMU). The central difficulty is that surface wave motion induces six-degree-of-freedom (6-DOF) perturbations that rotate the array between snapshots, degrading conventional subspace processing. We resolve this by introducing a fixed-point iterative MUltiple SIgnal Classification algorithm (FP-MUSIC) that uses IMU measurements to de-warp snapshot covariances prior to direction-of-arrival estimation. Furthermore, we employ a subspace-projected wideband matched filter to resolve beacon ranges and use power asymmetry for independent front-back identification. Evaluations across simulated sea states demonstrate that FP-MUSIC substantially reduces localization error relative to uncompensated methods and sustains robust 3-D tracking and vehicle orientation estimation under wave-induced motion. At moderate sea state, FP-MUSIC increases the 2-m beacon-separation accuracy from approximately 45% to 75%.</p>
+            <p class="paper-summary">Planners built on visual world models commonly score each predicted outcome by its distance to the encoded goal image. We show that this target can limit control even with exact dynamics and globally optimal short-horizon search: reaching a goal may require actions that initially move away from it. With frozen LeWM models, intermediate targets substantially improve action synthesis and recorded-action ranking on Cube, PushT, Reacher, and TwoRoom. Learned targets and targets drawn from observed experience both produce these gains. We introduce Anchored Planning, which retrieves a recorded segment whose start and end resemble the current and goal observations, then aims at an observation shortly after its start. The frozen model scores actions toward this target from the current state. Without additional training, planning toward observed targets outperforms the released LeWM planner on every task in our long-range evaluation. Additional final-goal search falls short of the same gains. Lower successor-prediction error need not translate into better control. Success also depends on how far ahead the target is placed and on shrinking the retrieval span as execution advances. Changing only the target lets the same frozen model and planner reach goals that final-goal scoring misses.</p>
             
             <div class="card-action-bar">
-                <a href="http://arxiv.org/pdf/2609.27712v1" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
+                <a href="http://arxiv.org/pdf/2609.30036v1" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
                     View PDF
                 </a>
-                <a href="http://arxiv.org/abs/2609.27712v1" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
+                <a href="http://arxiv.org/abs/2609.30036v1" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
                     arXiv Page &rarr;
                 </a>
             </div>
