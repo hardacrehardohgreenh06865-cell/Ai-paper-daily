@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Embodied AI & Robotics Intelligence Digest — September 27, 2026</title>
+    <title>Embodied AI & Robotics Intelligence Digest — September 28, 2026</title>
     <style>
         :root {
             --bg-base: #080c14;
@@ -242,7 +242,7 @@
         <header>
             <span class="pill-brand">Autonomous Research Intelligence</span>
             <h1>Embodied AI & Physical Frontier Briefing</h1>
-            <p class="subtitle">Compiled on September 27, 2026 • Ranked top 8 strategic breakthroughs out of incoming preprints.</p>
+            <p class="subtitle">Compiled on September 28, 2026 • Ranked top 8 strategic breakthroughs out of incoming preprints.</p>
             
             <div class="controls">
                 <input type="text" id="filterInput" class="search-box" placeholder="Filter papers by keywords (e.g. humanoid, tactile, diffusion)...">
@@ -251,257 +251,257 @@
 
         <main id="paperList">
             
-        <article class="paper-card" data-title="self-adaptive vla for robust robot deployment" data-summary="while vision-language-action (vla) models demonstrate impressive capabilities in robotic manipulation, their memoryless nature renders them brittle to test-time environment shifts, particularly hardware shifts caused by wear or imperfect calibration. enabling these models to self-adapt during deployment without requiring continuous on-site recalibration remains a critical bottleneck for real-world scalability. in this work, we introduce self-adaptive vla, a novel post-training recipe that enables the policy to iteratively adapt to deployment-time hardware shifts leveraging its own rollouts as context. to do so, we first collect policy rollouts under deliberately injected hardware shifts. we then transform the base policy's training data into shift-conditioned expert demonstrations by pre-compensating the expert actions for these known shifts. next, we introduce a lightweight, plug-in context encoder that compresses the context, including visual observation, proprioception, and actions in the shifted environment, into a latent context token. this token modulates the policy through adaptive layer normalization (adaln). furthermore, we find that context tokens can be ensembled, allowing the policy to iteratively self-correct and mitigate failures step by step. extensive experiments across four precision-critical bi-manual and dexterous manipulation tasks show that self-adaptive vla recovers over 80% of the base policy's performance under hardware shifts, such as actuation bias and joint encoder offsets. moreover, self-adaptive vla enables more robust deployment to new workstations compared to the base policy. our approach provides a pathway for robust large-scale real-world robot deployments and easier maintenance. see videos at https://icefoxzhx.github.io/self-adaptive-vla.">
+        <article class="paper-card" data-title="towards vla-dreamer: refining vla behavior using world models" data-summary="vision-language-action models (vlas), while showing strong potential for robot control, require massive amounts of high-quality imitation learning data. moreover, the absence of an explicit world model casts further doubt on their control capabilities. in this concept paper, we propose a novel architecture that addresses sample efficiency in vlas by training a predictive world model on the embedding space of the vla's vision encoder. we hypothesize that these embeddings are action-relevant and usable for future prediction. to this end, we propose using the suggested architecture to investigate how well these embeddings predict the future based on actions, as the inability to do so would mark a key limitation of vla architectures: the lack of a non-lossy implicit world model to simulate real-world dynamics. the proposed architecture differs from the standard world model dynamics as the loss comes from the embedding space rather than the pixel space, similar to joint embedding predictive architectures. furthermore, the trained world model can be utilized for short-term planning tasks by sampling vla actions given goal images. we intend to examine the richness of vision embeddings in vlas and reduce their high data requirements through a world model that can also generate plans during inference.">
             <div class="card-meta-top">
                 <span class="rank-tag">TOP #1</span>
                 <div class="score-badge">
                     <span class="score-label">Priority Index</span>
-                    <span class="score-value">165</span>
+                    <span class="score-value">175</span>
                 </div>
             </div>
             
-            <h2 class="paper-title">Self-Adaptive VLA for Robust Robot Deployment</h2>
+            <h2 class="paper-title">Towards VLA-Dreamer: Refining VLA Behavior Using World Models</h2>
             
             <div class="author-row">
-                <span>🗓️ 2026-09-24</span>
-                <span>✍️ Hongxin Zhang, Chunru Lin, Tsun-Hsuan Wang et al.</span>
+                <span>🗓️ 2026-09-25</span>
+                <span>✍️ Parsa Mastouri Kashani, Jan-Gerrit Habekost, Stefan Wermter</span>
             </div>
             
             <div class="badge-cluster">
-                <span class="badge">#dexterous manipulation</span><span class="badge">#vision-language-action</span><span class="badge">#vla</span>
+                <span class="badge">#world model</span><span class="badge">#vision-language-action</span><span class="badge">#vla</span>
             </div>
             
-            <p class="paper-summary">While Vision-Language-Action (VLA) models demonstrate impressive capabilities in robotic manipulation, their memoryless nature renders them brittle to test-time environment shifts, particularly hardware shifts caused by wear or imperfect calibration. Enabling these models to self-adapt during deployment without requiring continuous on-site recalibration remains a critical bottleneck for real-world scalability. In this work, we introduce Self-Adaptive VLA, a novel post-training recipe that enables the policy to iteratively adapt to deployment-time hardware shifts leveraging its own rollouts as context. To do so, we first collect policy rollouts under deliberately injected hardware shifts. We then transform the base policy's training data into shift-conditioned expert demonstrations by pre-compensating the expert actions for these known shifts. Next, we introduce a lightweight, plug-in context encoder that compresses the context, including visual observation, proprioception, and actions in the shifted environment, into a latent context token. This token modulates the policy through adaptive layer normalization (AdaLN). Furthermore, we find that context tokens can be ensembled, allowing the policy to iteratively self-correct and mitigate failures step by step. Extensive experiments across four precision-critical bi-manual and dexterous manipulation tasks show that Self-Adaptive VLA recovers over 80% of the base policy's performance under hardware shifts, such as actuation bias and joint encoder offsets. Moreover, Self-Adaptive VLA enables more robust deployment to new workstations compared to the base policy. Our approach provides a pathway for robust large-scale real-world robot deployments and easier maintenance. See videos at https://icefoxzhx.github.io/self-adaptive-vla.</p>
+            <p class="paper-summary">Vision-Language-Action models (VLAs), while showing strong potential for robot control, require massive amounts of high-quality imitation learning data. Moreover, the absence of an explicit world model casts further doubt on their control capabilities. In this concept paper, we propose a novel architecture that addresses sample efficiency in VLAs by training a predictive world model on the embedding space of the VLA's vision encoder. We hypothesize that these embeddings are action-relevant and usable for future prediction. To this end, we propose using the suggested architecture to investigate how well these embeddings predict the future based on actions, as the inability to do so would mark a key limitation of VLA architectures: the lack of a non-lossy implicit world model to simulate real-world dynamics. The proposed architecture differs from the standard world model dynamics as the loss comes from the embedding space rather than the pixel space, similar to joint embedding predictive architectures. Furthermore, the trained world model can be utilized for short-term planning tasks by sampling VLA actions given goal images. We intend to examine the richness of vision embeddings in VLAs and reduce their high data requirements through a world model that can also generate plans during inference.</p>
             
             <div class="card-action-bar">
-                <a href="http://arxiv.org/pdf/2609.30092v1" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
+                <a href="http://arxiv.org/pdf/2609.31313v1" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
                     View PDF
                 </a>
-                <a href="http://arxiv.org/abs/2609.30092v1" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
+                <a href="http://arxiv.org/abs/2609.31313v1" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
                     arXiv Page &rarr;
                 </a>
             </div>
         </article>
         
-        <article class="paper-card" data-title="res-hil: human-guided residual reinforcement learning for sample-efficient dexterous manipulation" data-summary="imitation learning enables robots to acquire manipulation skills from demonstrations, but the resulting policies can fail outside the training data, while collecting more demonstrations requires substantial human effort. human-in-the-loop reinforcement learning uses corrective feedback during online training, but typically learns the complete task policy rather than refining a pretrained imitation policy. we introduce res-hil, a human-in-the-loop residual reinforcement learning framework that learns corrective actions on top of a frozen imitation policy. each human intervention provides two complementary learning signals: direct supervision of the residual policy and reward shaping of preceding autonomous behavior. res-hil combines these signals with zero initialization of the residual policy to stabilize and accelerate online learning. we evaluate res-hil on five contact-rich manipulation tasks spanning high-precision and long-horizon behaviors. with only 20 initial demonstrations, res-hil outperforms state-of-the-art full-policy human-in-the-loop reinforcement learning and residual fine-tuning without human guidance on every task after ten minutes of online training. res-hil improves its pretrained base policies and outperforms imitation policies trained with five times more demonstrations. an ablation study shows that direct residual supervision is critical to performance, while intervention-aware reward shaping substantially improves training efficiency.">
+        <article class="paper-card" data-title="generate, track, improve: perceptive multi-skill humanoid locomotion with rl-fine-tuned motion generators" data-summary="general purpose humanoids require locomotion controllers that are multi-skill, perceptive, dynamic, and robust enough to go anywhere humans can. in this work, we present a two layer locomotion architecture: (1) a perceptive flow matching motion generator plans whole body trajectories from raw depth images while a (2) perceptive tracking policy trained with control-guided rl follows these motions. both policies are trained on a library of terrain consistent motion clips created with dynamically optimized human data which yields both accurate velocity tracking and terrain consistent references. our central contribution is a simple yet effective off-policy rl fine tuning loop that improves the motion generator. a structured search method is used with the generator to gather data for advantage weighted regression. this off-policy loop is much more sample efficient than on-policy residual fine tuning and improves terrain consistency on unseen geometries and skill compositions. we find that successful terrain traversals increased by up to 25 percentage points and skill selection improved by up to 80 percentage points. by using raw depth images to perceive the environment no odometry or height maps are needed, and outdoor deployment is easy. with two cameras, the policy can see terrain coming from further away and adjust its velocity regardless of the commanded speed so it can traverse the terrain. a single policy pair enables a unitree g1 humanoid to walk, run, stand, jump on and off of boxes, and traverse stairs in outdoor environments. project page: https://zolkin1.github.io/generate-track-improve/">
             <div class="card-meta-top">
                 <span class="rank-tag">TOP #2</span>
                 <div class="score-badge">
                     <span class="score-label">Priority Index</span>
-                    <span class="score-value">110</span>
+                    <span class="score-value">120</span>
                 </div>
             </div>
             
-            <h2 class="paper-title">Res-HIL: Human-Guided Residual Reinforcement Learning for Sample-Efficient Dexterous Manipulation</h2>
+            <h2 class="paper-title">Generate, Track, Improve: Perceptive Multi-Skill Humanoid Locomotion with RL-Fine-Tuned Motion Generators</h2>
             
             <div class="author-row">
-                <span>🗓️ 2026-09-24</span>
-                <span>✍️ Mariia Iavorskaia, Christian Dietz, Sebastian Albrecht et al.</span>
+                <span>🗓️ 2026-09-25</span>
+                <span>✍️ Zachary Olkin, William D. Compton, Aaron D. Ames</span>
             </div>
             
             <div class="badge-cluster">
-                <span class="badge">#reinforcement learning</span><span class="badge">#dexterous manipulation</span>
+                <span class="badge">#humanoid</span><span class="badge">#locomotion</span>
             </div>
             
-            <p class="paper-summary">Imitation learning enables robots to acquire manipulation skills from demonstrations, but the resulting policies can fail outside the training data, while collecting more demonstrations requires substantial human effort. Human-in-the-loop reinforcement learning uses corrective feedback during online training, but typically learns the complete task policy rather than refining a pretrained imitation policy. We introduce Res-HIL, a human-in-the-loop residual reinforcement learning framework that learns corrective actions on top of a frozen imitation policy. Each human intervention provides two complementary learning signals: direct supervision of the residual policy and reward shaping of preceding autonomous behavior. Res-HIL combines these signals with zero initialization of the residual policy to stabilize and accelerate online learning. We evaluate Res-HIL on five contact-rich manipulation tasks spanning high-precision and long-horizon behaviors. With only 20 initial demonstrations, Res-HIL outperforms state-of-the-art full-policy human-in-the-loop reinforcement learning and residual fine-tuning without human guidance on every task after ten minutes of online training. Res-HIL improves its pretrained base policies and outperforms imitation policies trained with five times more demonstrations. An ablation study shows that direct residual supervision is critical to performance, while intervention-aware reward shaping substantially improves training efficiency.</p>
+            <p class="paper-summary">General purpose humanoids require locomotion controllers that are multi-skill, perceptive, dynamic, and robust enough to go anywhere humans can. In this work, we present a two layer locomotion architecture: (1) a perceptive flow matching motion generator plans whole body trajectories from raw depth images while a (2) perceptive tracking policy trained with control-guided RL follows these motions. Both policies are trained on a library of terrain consistent motion clips created with dynamically optimized human data which yields both accurate velocity tracking and terrain consistent references. Our central contribution is a simple yet effective off-policy RL fine tuning loop that improves the motion generator. A structured search method is used with the generator to gather data for advantage weighted regression. This off-policy loop is much more sample efficient than on-policy residual fine tuning and improves terrain consistency on unseen geometries and skill compositions. We find that successful terrain traversals increased by up to 25 percentage points and skill selection improved by up to 80 percentage points. By using raw depth images to perceive the environment no odometry or height maps are needed, and outdoor deployment is easy. With two cameras, the policy can see terrain coming from further away and adjust its velocity regardless of the commanded speed so it can traverse the terrain. A single policy pair enables a Unitree G1 humanoid to walk, run, stand, jump on and off of boxes, and traverse stairs in outdoor environments. Project page: https://zolkin1.github.io/generate-track-improve/</p>
             
             <div class="card-action-bar">
-                <a href="http://arxiv.org/pdf/2609.30023v1" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
+                <a href="http://arxiv.org/pdf/2609.31577v1" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
                     View PDF
                 </a>
-                <a href="http://arxiv.org/abs/2609.30023v1" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
+                <a href="http://arxiv.org/abs/2609.31577v1" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
                     arXiv Page &rarr;
                 </a>
             </div>
         </article>
         
-        <article class="paper-card" data-title="ego-exo4d human meshes dataset: 4d human motion reconstruction for ego-exo captures" data-summary="ego-exo4d is a large-scale dataset providing synchronized egocentric and multi-view exocentric video, a rich resource for skill learning and assessment, procedural activity understanding, and embodied ai. however, the dataset ships with only sparse 3d human pose annotations, and reconstructing dense human motion from its multi-view captures is nontrivial. to this end, we present ego-exo4d-hm, a large-scale dataset of 4d human motion reconstructions for ego-exo4d's captures, and release the accompanying reconstruction pipeline. the code, dataset, and documentation can be found at https://abhiram824.github.io/egoexo4d_human_meshes.">
+        <article class="paper-card" data-title="cognitivereality: robot-agnostic semantic gaussian mapping with an llm agent for immersive collaborative vr teleoperation" data-summary="a photorealistic 3d view tells a teleoperator where a robot is, but not what the scene contains, how well each object has been observed, or how to turn pointing and speech into robot action. cognitivereality turns a robot's rgb-d stream into a live, semantically indexed gaussian-tsdf map shared by an operator in virtual reality and a tool-using language agent. one mapper binary serves any platform through configuration alone: it ingests poses from robot slam, joint kinematics, motion capture or an inline visual tracker, bridges localization outages with a shadow tracker and keyframe-anchored pnp, and maintains open-vocabulary instance identities with per-object quality at 2 hz. speech and controller rays are grounded against persistent scene objects through validated typed tools and operator-confirmed robot actions. in the controlled agent evaluation, the deployed local qwen3-vl-8b router reaches 81.24\% tool exact match, while merge-aware replay correctly redirects 101 absorbed object identifiers. on robot data cognitivereality exceeds a gaussian-plus-sdf baseline by 2-8 db; pose error through 5-40 s slam outages stays within 1-8 cm. deployed live on two quadrupeds, the agent executed 26 of 30 navigation requests and 20 of 20 re-observation requests, raising object quality by 2-5 db.">
             <div class="card-meta-top">
                 <span class="rank-tag">TOP #3</span>
                 <div class="score-badge">
                     <span class="score-label">Priority Index</span>
-                    <span class="score-value">100</span>
+                    <span class="score-value">105</span>
                 </div>
             </div>
             
-            <h2 class="paper-title">Ego-Exo4D Human Meshes Dataset: 4D Human Motion Reconstruction for Ego-Exo Captures</h2>
+            <h2 class="paper-title">CognitiveReality: Robot-Agnostic Semantic Gaussian Mapping with an LLM Agent for Immersive Collaborative VR Teleoperation</h2>
             
             <div class="author-row">
-                <span>🗓️ 2026-09-24</span>
-                <span>✍️ Abhiram Maddukuri, Georgios Pavlakos</span>
+                <span>🗓️ 2026-09-25</span>
+                <span>✍️ Timofei Kozlov, Dmitrii Maliukov, Andrey Marchenko et al.</span>
             </div>
             
             <div class="badge-cluster">
-                <span class="badge">#embodied ai</span>
+                <span class="badge">#quadruped</span><span class="badge">#teleoperation</span>
             </div>
             
-            <p class="paper-summary">Ego-Exo4D is a large-scale dataset providing synchronized egocentric and multi-view exocentric video, a rich resource for skill learning and assessment, procedural activity understanding, and embodied AI. However, the dataset ships with only sparse 3D human pose annotations, and reconstructing dense human motion from its multi-view captures is nontrivial. To this end, we present Ego-Exo4D-HM, a large-scale dataset of 4D human motion reconstructions for Ego-Exo4D's captures, and release the accompanying reconstruction pipeline. The code, dataset, and documentation can be found at https://abhiram824.github.io/egoexo4d_human_meshes.</p>
+            <p class="paper-summary">A photorealistic 3D view tells a teleoperator where a robot is, but not what the scene contains, how well each object has been observed, or how to turn pointing and speech into robot action. CognitiveReality turns a robot's RGB-D stream into a live, semantically indexed Gaussian-TSDF map shared by an operator in virtual reality and a tool-using language agent. One mapper binary serves any platform through configuration alone: it ingests poses from robot SLAM, joint kinematics, motion capture or an inline visual tracker, bridges localization outages with a shadow tracker and keyframe-anchored PnP, and maintains open-vocabulary instance identities with per-object quality at 2 Hz. Speech and controller rays are grounded against persistent scene objects through validated typed tools and operator-confirmed robot actions. In the controlled agent evaluation, the deployed local Qwen3-VL-8B router reaches 81.24\% tool exact match, while merge-aware replay correctly redirects 101 absorbed object identifiers. On robot data CognitiveReality exceeds a Gaussian-plus-SDF baseline by 2-8 dB; pose error through 5-40 s SLAM outages stays within 1-8 cm. Deployed live on two quadrupeds, the agent executed 26 of 30 navigation requests and 20 of 20 re-observation requests, raising object quality by 2-5 dB.</p>
             
             <div class="card-action-bar">
-                <a href="http://arxiv.org/pdf/2609.30187v1" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
+                <a href="http://arxiv.org/pdf/2609.31418v1" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
                     View PDF
                 </a>
-                <a href="http://arxiv.org/abs/2609.30187v1" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
+                <a href="http://arxiv.org/abs/2609.31418v1" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
                     arXiv Page &rarr;
                 </a>
             </div>
         </article>
         
-        <article class="paper-card" data-title="real-time force regulation for whole-hand dexterous grasping" data-summary="robust dexterous grasping requires maintaining physical stability despite contacts interactively evolving across the entire hand. a precomputed force distribution can easily fail under object motion, modeling errors, or external disturbances. in this paper, we present a framework for real-time force regulation over dynamically changing whole-hand contacts. our method geometrically estimates contacts across all hand links using a tracked object model and proprioception, without requiring tactile sensing at those contacts. it repeatedly recomputes the desired contact-force distribution subject to friction constraints, actuator limits, and an actuation-consistency constraint motivated by classical whole-limb force analysis. we integrate this force-regulation controller with reactive reaching, enabling the hand to acquire a grasp, maintain it under disturbances, and regrasp after losing the object. simulation experiments without gravity demonstrate improved grasp retention over fixed-allocation and fingertip-only execution under controlled perturbations, while real-world experiments on a 27-dof arm-hand system demonstrate grasp maintenance and recovery under human-applied disturbances as contacts evolve across the whole hand. project page: https://sangminkim-99.github.io/reactive-grasp-whole-hand/">
+        <article class="paper-card" data-title="see to reach, feel to grasp: learning a blind grasp reflex for anthropomorphic robotic hands" data-summary="in this work we study if a robotic hand using proprioception alone can grasp diverse objects with no visual observation. we present a modular dexterous grasping architecture that separates global arm motion from local contact control. an independently controlled arm guides the hand toward the object, while a reinforcement learning policy grasps and stabilizes it using only hand proprioceptive feedback. we call this \textit{a blind grasp reflex}: grasping without images, object poses, or geometric observations. a learned stable-grasp score determines when the object is securely held, allowing the arm to begin post-grasp manipulation. this separation makes grasping a reusable hand-level skill that can be combined with independently designed arm controllers for various manipulation tasks. experiments in simulation and on hardware demonstrate robust blind grasping across diverse objects and seamless composition with a range of arm controllers. moreover, despite never observing contact geometry, the learned grasp score closely aligns with an independent physics-based measure of grasp stability. the resulting approach follows a simple principle: see to reach, feel to grasp. project page: https://blindgraspreflex.github.io.">
             <div class="card-meta-top">
                 <span class="rank-tag">TOP #4</span>
                 <div class="score-badge">
                     <span class="score-label">Priority Index</span>
-                    <span class="score-value">100</span>
+                    <span class="score-value">80</span>
                 </div>
             </div>
             
-            <h2 class="paper-title">Real-Time Force Regulation for Whole-Hand Dexterous Grasping</h2>
+            <h2 class="paper-title">See to Reach, Feel to Grasp: Learning A Blind Grasp Reflex for Anthropomorphic Robotic Hands</h2>
             
             <div class="author-row">
-                <span>🗓️ 2026-09-24</span>
-                <span>✍️ Sang Min Kim, Alexander Alexiev, Tzu-Yuan Lin et al.</span>
+                <span>🗓️ 2026-09-25</span>
+                <span>✍️ Alexander Alexiev, Tzu-Yuan Lin, Sang Min Kim et al.</span>
             </div>
             
             <div class="badge-cluster">
-                <span class="badge">#tactile sensing</span><span class="badge">#actuator</span>
+                <span class="badge">#reinforcement learning</span>
             </div>
             
-            <p class="paper-summary">Robust dexterous grasping requires maintaining physical stability despite contacts interactively evolving across the entire hand. A precomputed force distribution can easily fail under object motion, modeling errors, or external disturbances. In this paper, we present a framework for real-time force regulation over dynamically changing whole-hand contacts. Our method geometrically estimates contacts across all hand links using a tracked object model and proprioception, without requiring tactile sensing at those contacts. It repeatedly recomputes the desired contact-force distribution subject to friction constraints, actuator limits, and an actuation-consistency constraint motivated by classical whole-limb force analysis. We integrate this force-regulation controller with reactive reaching, enabling the hand to acquire a grasp, maintain it under disturbances, and regrasp after losing the object. Simulation experiments without gravity demonstrate improved grasp retention over fixed-allocation and fingertip-only execution under controlled perturbations, while real-world experiments on a 27-DoF arm-hand system demonstrate grasp maintenance and recovery under human-applied disturbances as contacts evolve across the whole hand. Project page: https://sangminkim-99.github.io/reactive-grasp-whole-hand/</p>
+            <p class="paper-summary">In this work we study if a robotic hand using proprioception alone can grasp diverse objects with no visual observation. We present a modular dexterous grasping architecture that separates global arm motion from local contact control. An independently controlled arm guides the hand toward the object, while a reinforcement learning policy grasps and stabilizes it using only hand proprioceptive feedback. We call this \textit{a blind grasp reflex}: grasping without images, object poses, or geometric observations. A learned stable-grasp score determines when the object is securely held, allowing the arm to begin post-grasp manipulation. This separation makes grasping a reusable hand-level skill that can be combined with independently designed arm controllers for various manipulation tasks. Experiments in simulation and on hardware demonstrate robust blind grasping across diverse objects and seamless composition with a range of arm controllers. Moreover, despite never observing contact geometry, the learned grasp score closely aligns with an independent physics-based measure of grasp stability. The resulting approach follows a simple principle: see to reach, feel to grasp. Project page: https://blindgraspreflex.github.io.</p>
             
             <div class="card-action-bar">
-                <a href="http://arxiv.org/pdf/2609.30082v1" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
+                <a href="http://arxiv.org/pdf/2609.31323v1" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
                     View PDF
                 </a>
-                <a href="http://arxiv.org/abs/2609.30082v1" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
+                <a href="http://arxiv.org/abs/2609.31323v1" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
                     arXiv Page &rarr;
                 </a>
             </div>
         </article>
         
-        <article class="paper-card" data-title="rolling-wam: world action models with rolling imagination" data-summary="world action models (wams) couple action generation with future visual prediction for robotic manipulation. however, completing the joint video-action denoising process at each replanning cycle incurs substantial latency, delaying action updates and limiting closed-loop responsiveness. we present rolling-wam, a formulation that distributes joint denoising across successive replanning cycles. our method maintains a sliding window of video-action chunks at staggered noise levels. at each step, a rolling noise schedule fully denoises the imminent action chunk for execution, while partially refining farther-future chunks. as the window advances with new camera observations, the retained future chunks continue their denoising process. this distributes the computational cost over time while carrying an evolving visual-action context across chunk boundaries. evaluations on libero, robotwin, and a real-world unitree g1 humanoid show that rolling-wam achieves competitive manipulation performance. by removing the need to denoise the entire prediction horizon from scratch, it delivers a 4.5x steady-state replanning speedup over standard joint wams.">
+        <article class="paper-card" data-title="exolan: physics-consistent context-aware dynamics learning for exoskeletons" data-summary="task-agnostic assistive exoskeleton control based on human intention offers greater flexibility than conventional approaches that rely on predefined tasks or motion patterns. human joint torque estimation enables task-agnostic assistance by characterizing user actions. physics-consistent methods such as deep lagrangian networks (delan) have been applied to estimate the human torques in multi-user settings, but existing approaches cannot adapt to a specific user without retraining, and do not account for intermittent contacts during locomotion. we propose exolan, a context-aware delan for human-exoskeleton interaction that learns the full coupled system dynamics while adapting to changes in interaction context. exolan combines temporal context with partial contact-force measurements from force-sensitive insoles to infer latent dynamics embeddings and estimate generalized contact torques. on seven unseen users performing 21 unseen tasks, exolan reduces torque estimation mse by 7% compared to a black-box baseline. beyond inverse dynamics, exolan serves as a unified model that also enables accurate forward prediction: training with a multi-step prediction loss reduces acceleration mse by 59% and long-horizon position and velocity errors by 60% and 93%, respectively, compared with a single-step loss. moreover, the learned latent context captures task information without explicit task labels, making it a promising signal for task-aware assistive control.">
             <div class="card-meta-top">
                 <span class="rank-tag">TOP #5</span>
                 <div class="score-badge">
                     <span class="score-label">Priority Index</span>
-                    <span class="score-value">95</span>
+                    <span class="score-value">75</span>
                 </div>
             </div>
             
-            <h2 class="paper-title">Rolling-WAM: World Action Models with Rolling Imagination</h2>
+            <h2 class="paper-title">ExoLaN: Physics-Consistent Context-Aware Dynamics Learning for Exoskeletons</h2>
             
             <div class="author-row">
-                <span>🗓️ 2026-09-24</span>
-                <span>✍️ Yinghua Zhou, Junjie Ye, Yiqi Zhao et al.</span>
+                <span>🗓️ 2026-09-25</span>
+                <span>✍️ Lucas Schulze, Maximilian Schwarz, Jona Hoppe et al.</span>
             </div>
             
             <div class="badge-cluster">
-                <span class="badge">#humanoid</span>
+                <span class="badge">#locomotion</span>
             </div>
             
-            <p class="paper-summary">World Action Models (WAMs) couple action generation with future visual prediction for robotic manipulation. However, completing the joint video-action denoising process at each replanning cycle incurs substantial latency, delaying action updates and limiting closed-loop responsiveness. We present Rolling-WAM, a formulation that distributes joint denoising across successive replanning cycles. Our method maintains a sliding window of video-action chunks at staggered noise levels. At each step, a rolling noise schedule fully denoises the imminent action chunk for execution, while partially refining farther-future chunks. As the window advances with new camera observations, the retained future chunks continue their denoising process. This distributes the computational cost over time while carrying an evolving visual-action context across chunk boundaries. Evaluations on LIBERO, RoboTwin, and a real-world Unitree G1 humanoid show that Rolling-WAM achieves competitive manipulation performance. By removing the need to denoise the entire prediction horizon from scratch, it delivers a 4.5x steady-state replanning speedup over standard joint WAMs.</p>
+            <p class="paper-summary">Task-agnostic assistive exoskeleton control based on human intention offers greater flexibility than conventional approaches that rely on predefined tasks or motion patterns. Human joint torque estimation enables task-agnostic assistance by characterizing user actions. Physics-consistent methods such as Deep Lagrangian Networks (DeLaN) have been applied to estimate the human torques in multi-user settings, but existing approaches cannot adapt to a specific user without retraining, and do not account for intermittent contacts during locomotion. We propose ExoLaN, a Context-Aware DeLaN for human-exoskeleton interaction that learns the full coupled system dynamics while adapting to changes in interaction context. ExoLaN combines temporal context with partial contact-force measurements from force-sensitive insoles to infer latent dynamics embeddings and estimate generalized contact torques. On seven unseen users performing 21 unseen tasks, ExoLaN reduces torque estimation MSE by 7% compared to a black-box baseline. Beyond inverse dynamics, ExoLaN serves as a unified model that also enables accurate forward prediction: training with a multi-step prediction loss reduces acceleration MSE by 59% and long-horizon position and velocity errors by 60% and 93%, respectively, compared with a single-step loss. Moreover, the learned latent context captures task information without explicit task labels, making it a promising signal for task-aware assistive control.</p>
             
             <div class="card-action-bar">
-                <a href="http://arxiv.org/pdf/2609.30247v1" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
+                <a href="http://arxiv.org/pdf/2609.31434v1" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
                     View PDF
                 </a>
-                <a href="http://arxiv.org/abs/2609.30247v1" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
+                <a href="http://arxiv.org/abs/2609.31434v1" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
                     arXiv Page &rarr;
                 </a>
             </div>
         </article>
         
-        <article class="paper-card" data-title="ad-wm: action-discriminative world models for counterfactual model predictive control" data-summary="latent world models are typically trained to predict factual transitions, whereas model predictive control (mpc) must compare alternative actions from the same state. a model can therefore achieve low factual prediction error yet poorly distinguish candidate actions. we introduce ad-wm, an action-discriminative joint-embedding world model for counterfactual mpc. ad-wm combines residual latent dynamics with predictor-level action-recovery regularization, using inverse dynamics and a normalized recovery objective motivated by conditional mutual information. both objectives encourage planning transitions to preserve action information; their auxiliary heads are discarded at test time, leaving mpc unchanged. on ogbench-cube, ad-wm improves hard-start success from 3.7% to 52.0% over a matched lewm baseline and improves mean success over the reproduced baseline in four of five simulation environments. planning diagnostics show that factual prediction error and whole-bank action ranking do not follow the closed-loop success ordering, whereas cem-aligned elite regret tracks success more closely. with a frozen v-jepa 2 encoder and matched droid post-training, ad-wm also improves zero-shot transfer to our franka setup, increasing basic pick-and-place success from 42.2% to 71.1% without lab-specific adaptation. these results suggest that world models for planning should preserve action-dependent differences needed for counterfactual selection, rather than optimize factual prediction accuracy alone. more videos and code are available at https://ad-wm.github.io/.">
+        <article class="paper-card" data-title="imp-act: adaptive impedance control and action chunking with transformers to learn contact-rich manipulation from demonstrations" data-summary="contact-rich manipulation requires robots to balance accurate motion tracking with compliant interaction, yet most visual-action policies leave compliance fixed at the controller level. we present imp-act, a methodologically grounded and practical approach to incorporating direction-dependent cartesian stiffness modulation directly into demonstration collection, without manual stiffness selection or offline target reconstruction. during teleoperation, a self-tuning impedance controller adapts stiffness along the instantaneous direction of motion while maintaining compliance in orthogonal directions. the adapted stiffness is applied and recorded alongside visual observations and motion commands, capturing motion and compliance under the same dynamics. we implement this pipeline using action chunking with transformer (act) to predict end-effector pose, gripper action, and motion-direction stiffness from visual, proprioceptive, and wrench observations. the performance of imp-act is evaluated on wiping and plug insertion using both success rate and quantitative measures of contact behavior. compared with fixed low- and high-stiffness baselines, imp-act achieves comparable or higher success while maintaining low interaction forces. in wiping, it reduces contact-force vibration by approximately $29\times$ relative to the compliant baseline and $180\times$ relative to the stiff baseline. in plug insertion, it reduces forces orthogonal to the insertion direction by $43\%$ relative to the better fixed-stiffness baseline. these results highlight the benefit of maintaining sufficient stiffness along the direction needed for task execution while preserving compliance in other directions to limit contact forces and accommodate environmental constraints.">
             <div class="card-meta-top">
                 <span class="rank-tag">TOP #6</span>
                 <div class="score-badge">
                     <span class="score-label">Priority Index</span>
-                    <span class="score-value">90</span>
+                    <span class="score-value">70</span>
                 </div>
             </div>
             
-            <h2 class="paper-title">AD-WM: Action-Discriminative World Models for Counterfactual Model Predictive Control</h2>
+            <h2 class="paper-title">Imp-ACT: Adaptive Impedance Control and Action Chunking with Transformers to Learn Contact-Rich Manipulation from Demonstrations</h2>
             
             <div class="author-row">
-                <span>🗓️ 2026-09-24</span>
-                <span>✍️ Jiabin Qiu, Zixuan Chen, Hongye Cao et al.</span>
+                <span>🗓️ 2026-09-25</span>
+                <span>✍️ Luca Zanetti, Doganay Sirintuna, Idil Ozdamar et al.</span>
             </div>
             
             <div class="badge-cluster">
-                <span class="badge">#world model</span>
+                <span class="badge">#teleoperation</span>
             </div>
             
-            <p class="paper-summary">Latent world models are typically trained to predict factual transitions, whereas model predictive control (MPC) must compare alternative actions from the same state. A model can therefore achieve low factual prediction error yet poorly distinguish candidate actions. We introduce AD-WM, an action-discriminative joint-embedding world model for counterfactual MPC. AD-WM combines residual latent dynamics with predictor-level action-recovery regularization, using inverse dynamics and a normalized recovery objective motivated by conditional mutual information. Both objectives encourage planning transitions to preserve action information; their auxiliary heads are discarded at test time, leaving MPC unchanged. On OGBench-Cube, AD-WM improves hard-start success from 3.7% to 52.0% over a matched LeWM baseline and improves mean success over the reproduced baseline in four of five simulation environments. Planning diagnostics show that factual prediction error and whole-bank action ranking do not follow the closed-loop success ordering, whereas CEM-aligned elite regret tracks success more closely. With a frozen V-JEPA 2 encoder and matched DROID post-training, AD-WM also improves zero-shot transfer to our Franka setup, increasing basic pick-and-place success from 42.2% to 71.1% without lab-specific adaptation. These results suggest that world models for planning should preserve action-dependent differences needed for counterfactual selection, rather than optimize factual prediction accuracy alone. More videos and code are available at https://ad-wm.github.io/.</p>
+            <p class="paper-summary">Contact-rich manipulation requires robots to balance accurate motion tracking with compliant interaction, yet most visual-action policies leave compliance fixed at the controller level. We present Imp-ACT, a methodologically grounded and practical approach to incorporating direction-dependent Cartesian stiffness modulation directly into demonstration collection, without manual stiffness selection or offline target reconstruction. During teleoperation, a self-tuning impedance controller adapts stiffness along the instantaneous direction of motion while maintaining compliance in orthogonal directions. The adapted stiffness is applied and recorded alongside visual observations and motion commands, capturing motion and compliance under the same dynamics. We implement this pipeline using Action Chunking with Transformer (ACT) to predict end-effector pose, gripper action, and motion-direction stiffness from visual, proprioceptive, and wrench observations. The performance of Imp-ACT is evaluated on wiping and plug insertion using both success rate and quantitative measures of contact behavior. Compared with fixed low- and high-stiffness baselines, Imp-ACT achieves comparable or higher success while maintaining low interaction forces. In wiping, it reduces contact-force vibration by approximately $29\times$ relative to the compliant baseline and $180\times$ relative to the stiff baseline. In plug insertion, it reduces forces orthogonal to the insertion direction by $43\%$ relative to the better fixed-stiffness baseline. These results highlight the benefit of maintaining sufficient stiffness along the direction needed for task execution while preserving compliance in other directions to limit contact forces and accommodate environmental constraints.</p>
             
             <div class="card-action-bar">
-                <a href="http://arxiv.org/pdf/2609.30264v1" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
+                <a href="http://arxiv.org/pdf/2609.31225v1" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
                     View PDF
                 </a>
-                <a href="http://arxiv.org/abs/2609.30264v1" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
+                <a href="http://arxiv.org/abs/2609.31225v1" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
                     arXiv Page &rarr;
                 </a>
             </div>
         </article>
         
-        <article class="paper-card" data-title="underwater c3-jepa: an object-centric cross-view world model for rov salvage" data-summary="we present underwater c$^{3}$-jepa (cross-view, control-conditioned, context-extended), an object-centric multi-view predictive world model for near-field heavy-load underwater rov salvage. without contact sensors, it predicts in latent space how the task-object state evolves through contact interaction and under the hydrodynamic lag of the vehicle, from synchronized multi-view rgb observations and vehicle control signals. c$^{3}$-jepa encodes multi-camera observations into task-object and context tokens, fuses cross-camera evidence through held-out-view attention, and directly predicts future states conditioned on control. weak binding anchors the target and gripper at low annotation cost, while sigreg sharpens the geometric representation. experiments show that the learned representation transfers substantially more task-relevant information to downstream probes than a reconstruction-free latent baseline, while keeping the predictor lightweight. the resulting predictive interface supports model-predictive-control (mpc) candidate evaluation and imagined-rollout behavior-agent training. validation on real underwater video shows the same architecture recovering a withheld camera's object state and staying ahead of persistence, so the recipe transfers beyond simulation.">
+        <article class="paper-card" data-title="learning robot policies from sparse success signals via stl-guided stein variational policy gradient" data-summary="learning robot policies for tasks with sparse success signals is challenging when completion depends on coordinated actions, precise contact outcomes, or satisfying several conditions together. intricate physical interactions with the world further complicate these requirements. prior work using conventional reward shaping mechanisms provides dense feedback but local progress might not translate into eventual task completion. we present signal temporal logic-guided stein variational policy gradient (stl-svpg), a population-based method that uses smooth stl robustness as a trajectory-level training objective. differentiating this objective through the dynamics assigns credit to policy actions according to their effect on the complete task specification, rather than local progress alone. we evaluate the approach on six quadcopter and manipulator tasks that involves event-triggered responses, strictly ordered behavior, responses within specified deadlines, and physical interaction with the world. stl-svpg achieves the highest mean success rate among the compared methods on five of six benchmarks. simulation-trained policies trained in simulation transfer temporal and contact task behavior to the real world.">
             <div class="card-meta-top">
                 <span class="rank-tag">TOP #7</span>
                 <div class="score-badge">
                     <span class="score-label">Priority Index</span>
-                    <span class="score-value">90</span>
+                    <span class="score-value">50</span>
                 </div>
             </div>
             
-            <h2 class="paper-title">Underwater C3-JEPA: An Object-Centric Cross-View World Model for ROV Salvage</h2>
+            <h2 class="paper-title">Learning Robot Policies from Sparse Success Signals via STL-Guided Stein Variational Policy Gradient</h2>
             
             <div class="author-row">
-                <span>🗓️ 2026-09-24</span>
-                <span>✍️ Yuncong Yang, Jinlong Li, Yulong Xue et al.</span>
+                <span>🗓️ 2026-09-25</span>
+                <span>✍️ Hongrui Zheng, Cristian Ioan Vasile, Antonio Loquercio et al.</span>
             </div>
             
             <div class="badge-cluster">
-                <span class="badge">#world model</span>
+                <span class="badge badge-muted">#frontier</span>
             </div>
             
-            <p class="paper-summary">We present Underwater C$^{3}$-JEPA (cross-view, control-conditioned, context-extended), an object-centric multi-view predictive world model for near-field heavy-load underwater ROV salvage. Without contact sensors, it predicts in latent space how the task-object state evolves through contact interaction and under the hydrodynamic lag of the vehicle, from synchronized multi-view RGB observations and vehicle control signals. C$^{3}$-JEPA encodes multi-camera observations into task-object and context tokens, fuses cross-camera evidence through held-out-view attention, and directly predicts future states conditioned on control. Weak binding anchors the target and gripper at low annotation cost, while SIGReg sharpens the geometric representation. Experiments show that the learned representation transfers substantially more task-relevant information to downstream probes than a reconstruction-free latent baseline, while keeping the predictor lightweight. The resulting predictive interface supports model-predictive-control (MPC) candidate evaluation and imagined-rollout behavior-agent training. Validation on real underwater video shows the same architecture recovering a withheld camera's object state and staying ahead of persistence, so the recipe transfers beyond simulation.</p>
+            <p class="paper-summary">Learning robot policies for tasks with sparse success signals is challenging when completion depends on coordinated actions, precise contact outcomes, or satisfying several conditions together. Intricate physical interactions with the world further complicate these requirements. Prior work using conventional reward shaping mechanisms provides dense feedback but local progress might not translate into eventual task completion. We present Signal Temporal Logic-guided Stein Variational Policy Gradient (STL-SVPG), a population-based method that uses smooth STL robustness as a trajectory-level training objective. Differentiating this objective through the dynamics assigns credit to policy actions according to their effect on the complete task specification, rather than local progress alone. We evaluate the approach on six quadcopter and manipulator tasks that involves event-triggered responses, strictly ordered behavior, responses within specified deadlines, and physical interaction with the world. STL-SVPG achieves the highest mean success rate among the compared methods on five of six benchmarks. Simulation-trained policies trained in simulation transfer temporal and contact task behavior to the real world.</p>
             
             <div class="card-action-bar">
-                <a href="http://arxiv.org/pdf/2609.30214v1" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
+                <a href="http://arxiv.org/pdf/2609.31606v1" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
                     View PDF
                 </a>
-                <a href="http://arxiv.org/abs/2609.30214v1" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
+                <a href="http://arxiv.org/abs/2609.31606v1" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
                     arXiv Page &rarr;
                 </a>
             </div>
         </article>
         
-        <article class="paper-card" data-title="aim short to reach far: your frozen world model can plan better than you think" data-summary="planners built on visual world models commonly score each predicted outcome by its distance to the encoded goal image. we show that this target can limit control even with exact dynamics and globally optimal short-horizon search: reaching a goal may require actions that initially move away from it. with frozen lewm models, intermediate targets substantially improve action synthesis and recorded-action ranking on cube, pusht, reacher, and tworoom. learned targets and targets drawn from observed experience both produce these gains. we introduce anchored planning, which retrieves a recorded segment whose start and end resemble the current and goal observations, then aims at an observation shortly after its start. the frozen model scores actions toward this target from the current state. without additional training, planning toward observed targets outperforms the released lewm planner on every task in our long-range evaluation. additional final-goal search falls short of the same gains. lower successor-prediction error need not translate into better control. success also depends on how far ahead the target is placed and on shrinking the retrieval span as execution advances. changing only the target lets the same frozen model and planner reach goals that final-goal scoring misses.">
+        <article class="paper-card" data-title="satnav: a scalable benchmark for long-horizon uav vision-language navigation from satellite imagery" data-summary="urban uncrewed aerial vehicle (uav) vision-language navigation (vln) requires agents to follow instructions across extended urban spaces, inherently demanding long-term memory and geospatial grounding. however, scaling existing benchmarks remains difficult because of their reliance on costly reconstructed 3d assets, limiting geographic diversity and episode scale. to address this, we introduce satnav, a scalable, long-horizon uav vln benchmark built from high-resolution satellite imagery. satnav targets city-level navigation missions and uses satellite crops as approximations of uav nadir views for visual observations. through an automated cue-to-episode pipeline, satnav constructs 118k episodes from 59 scenes across 18 cities, with an average trajectory length of 379 m. to stress-test long-horizon memory and geospatial reasoning, satnav defines three task families: boundary, landmark, and route, targeting loop progress tracking, landmark-based spatial grounding, and route following with counting cues. benchmarking classical vln agents and recent agents based on large vision-language models (lvlms) on satnav shows that city-scale navigation remains challenging. we further introduce swiftvln, a modular framework with switchable memory components, and conduct systematic memory-design ablations. finally, satellite-to-uav transfer experiments show that satellite-trained navigation models can operate on real-flight uav observations, showing the practical relevance of satnav. our project page: https://eku127.github.io/satnav/">
             <div class="card-meta-top">
                 <span class="rank-tag">TOP #8</span>
                 <div class="score-badge">
                     <span class="score-label">Priority Index</span>
-                    <span class="score-value">90</span>
+                    <span class="score-value">50</span>
                 </div>
             </div>
             
-            <h2 class="paper-title">Aim Short to Reach Far: Your Frozen World Model Can Plan Better Than You Think</h2>
+            <h2 class="paper-title">SatNav: A Scalable Benchmark for Long-Horizon UAV Vision-Language Navigation from Satellite Imagery</h2>
             
             <div class="author-row">
-                <span>🗓️ 2026-09-24</span>
-                <span>✍️ Xvyuan Liu, Jianjie Fang, Chen Gao et al.</span>
+                <span>🗓️ 2026-09-25</span>
+                <span>✍️ Jiajun Jiang, Chunliang Hua, Zichun Chen et al.</span>
             </div>
             
             <div class="badge-cluster">
-                <span class="badge">#world model</span>
+                <span class="badge badge-muted">#frontier</span>
             </div>
             
-            <p class="paper-summary">Planners built on visual world models commonly score each predicted outcome by its distance to the encoded goal image. We show that this target can limit control even with exact dynamics and globally optimal short-horizon search: reaching a goal may require actions that initially move away from it. With frozen LeWM models, intermediate targets substantially improve action synthesis and recorded-action ranking on Cube, PushT, Reacher, and TwoRoom. Learned targets and targets drawn from observed experience both produce these gains. We introduce Anchored Planning, which retrieves a recorded segment whose start and end resemble the current and goal observations, then aims at an observation shortly after its start. The frozen model scores actions toward this target from the current state. Without additional training, planning toward observed targets outperforms the released LeWM planner on every task in our long-range evaluation. Additional final-goal search falls short of the same gains. Lower successor-prediction error need not translate into better control. Success also depends on how far ahead the target is placed and on shrinking the retrieval span as execution advances. Changing only the target lets the same frozen model and planner reach goals that final-goal scoring misses.</p>
+            <p class="paper-summary">Urban uncrewed aerial vehicle (UAV) vision-language navigation (VLN) requires agents to follow instructions across extended urban spaces, inherently demanding long-term memory and geospatial grounding. However, scaling existing benchmarks remains difficult because of their reliance on costly reconstructed 3D assets, limiting geographic diversity and episode scale. To address this, we introduce SatNav, a scalable, long-horizon UAV VLN benchmark built from high-resolution satellite imagery. SatNav targets city-level navigation missions and uses satellite crops as approximations of UAV nadir views for visual observations. Through an automated cue-to-episode pipeline, SatNav constructs 118K episodes from 59 scenes across 18 cities, with an average trajectory length of 379 m. To stress-test long-horizon memory and geospatial reasoning, SatNav defines three task families: Boundary, Landmark, and Route, targeting loop progress tracking, landmark-based spatial grounding, and route following with counting cues. Benchmarking classical VLN agents and recent agents based on large vision-language models (LVLMs) on SatNav shows that city-scale navigation remains challenging. We further introduce SwiftVLN, a modular framework with switchable memory components, and conduct systematic memory-design ablations. Finally, satellite-to-UAV transfer experiments show that satellite-trained navigation models can operate on real-flight UAV observations, showing the practical relevance of SatNav. Our project page: https://eku127.github.io/SatNav/</p>
             
             <div class="card-action-bar">
-                <a href="http://arxiv.org/pdf/2609.30036v1" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
+                <a href="http://arxiv.org/pdf/2609.31507v1" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
                     View PDF
                 </a>
-                <a href="http://arxiv.org/abs/2609.30036v1" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
+                <a href="http://arxiv.org/abs/2609.31507v1" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
                     arXiv Page &rarr;
                 </a>
             </div>
