@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Embodied AI & Robotics Intelligence Digest — October 01, 2026</title>
+    <title>Embodied AI & Robotics Intelligence Digest — October 02, 2026</title>
     <style>
         :root {
             --bg-base: #080c14;
@@ -242,7 +242,7 @@
         <header>
             <span class="pill-brand">Autonomous Research Intelligence</span>
             <h1>Embodied AI & Physical Frontier Briefing</h1>
-            <p class="subtitle">Compiled on October 01, 2026 • Ranked top 8 strategic breakthroughs out of incoming preprints.</p>
+            <p class="subtitle">Compiled on October 02, 2026 • Ranked top 8 strategic breakthroughs out of incoming preprints.</p>
             
             <div class="controls">
                 <input type="text" id="filterInput" class="search-box" placeholder="Filter papers by keywords (e.g. humanoid, tactile, diffusion)...">
@@ -251,39 +251,39 @@
 
         <main id="paperList">
             
-        <article class="paper-card" data-title="occludex: hierarchical 3d visuo-tactile representation learning for egocentric dexterous manipulation under self-occlusion" data-summary="reliable dexterous manipulation requires continuous estimation of object geometry and hand-object contact throughout interaction. with egocentric sensing, however, the manipulating hand frequently occludes task-relevant object surfaces and contact regions, reducing the visual evidence available for state estimation and thereby making robust closed-loop control and generalization to unseen object geometries particularly challenging. to address this, we present occludex, a hierarchical 3d visuo-tactile representation learning framework that integrates global geometric structure with local contact information for robust manipulation under dynamic self-occlusion during hand-object interaction. occludex adopts multi-scale masked autoencoding to progressively encode partial 3d geometry and fuses tactile contact tokens with high-level geometric features through cross-modal attention. the encoder is pretrained from synchronized human visuo-tactile demonstrations and transferred as a frozen perceptual backbone for downstream reinforcement learning. we evaluate occludex on a faucet rotation task, requiring one full clockwise handle revolution, and a tabletop object reorientation task, requiring a 180-degree tabletop object reorientation without toppling. in simulation experiments, occludex demonstrated 12.6% higher accuracy for unseen objects and 8.3% higher accuracy for previously seen objects than the strongest state-of-the-art baseline models. physical experiments were further performed with a shadow hand to demonstrate successful zero-shot sim-to-real generalization on unseen physical objects. this results could enable humanoid egocentric object manipulation for seen and unseen objects even when the manipulating robotic hand occludes vision.">
+        <article class="paper-card" data-title="promo: preference-conditioned multi-objective reinforcement learning for quadrupedal robots" data-summary="quadrupedal locomotion requires balancing conflicting objectives such as command tracking, stability, and energy efficiency, yet conventional reinforcement learning (rl) hardcodes these priorities into a fixed scalar reward at training time. we present promo (preference-conditioned multi-objective reinforcement learning), a semantic multi-objective approach that makes this trade-off an explicit runtime input to a single locomotion policy. promo conditions the policy on deployment facing preferences while keeping embodiment-specific locomotion priors fixed, thereby separating operator intent from reward shaping terms required for viable gait generation. compared with fixed-objective controllers, multi-objective baselines, and independently trained specialists, promo achieves objective specialization and robustness from a single deployable policy. across 100 sampled preferences in simulation, 67 behaviors are non-dominated under exact pareto dominance, with a mean preference-objective correlation of 0.843, demonstrating broad pareto coverage and predictable preference response. the same policy transfers zero-shot to a unitree go2, where preference changes alone reduce specific energy by up to 30.4%, position error by 38.7%, and peak body-attitude deviation by 59.0% relative to the balanced preference. these results establish preference-conditioned multi-objective rl as a practical runtime interface for adaptive legged locomotion, extending its role beyond offline pareto-set construction. open-source code and videos are available at https://amrmousa.com/promo/.">
             <div class="card-meta-top">
                 <span class="rank-tag">TOP #1</span>
                 <div class="score-badge">
                     <span class="score-label">Priority Index</span>
-                    <span class="score-value">155</span>
+                    <span class="score-value">140</span>
                 </div>
             </div>
             
-            <h2 class="paper-title">OccluDex: Hierarchical 3D Visuo-Tactile Representation Learning for Egocentric Dexterous Manipulation under Self-Occlusion</h2>
+            <h2 class="paper-title">PROMO: Preference-conditioned Multi-Objective Reinforcement Learning for Quadrupedal Robots</h2>
             
             <div class="author-row">
-                <span>🗓️ 2026-09-30</span>
-                <span>✍️ Ziheng Xu, Yueyuan Chen, Xinyuan He et al.</span>
+                <span>🗓️ 2026-10-01</span>
+                <span>✍️ Amr Mousa, Rifny Rachman, Neil Karavis et al.</span>
             </div>
             
             <div class="badge-cluster">
-                <span class="badge">#humanoid</span><span class="badge">#reinforcement learning</span><span class="badge">#dexterous manipulation</span>
+                <span class="badge">#quadruped</span><span class="badge">#reinforcement learning</span><span class="badge">#locomotion</span>
             </div>
             
-            <p class="paper-summary">Reliable dexterous manipulation requires continuous estimation of object geometry and hand-object contact throughout interaction. With egocentric sensing, however, the manipulating hand frequently occludes task-relevant object surfaces and contact regions, reducing the visual evidence available for state estimation and thereby making robust closed-loop control and generalization to unseen object geometries particularly challenging. To address this, we present OccluDex, a hierarchical 3D visuo-tactile representation learning framework that integrates global geometric structure with local contact information for robust manipulation under dynamic self-occlusion during hand-object interaction. OccluDex adopts multi-scale masked autoencoding to progressively encode partial 3D geometry and fuses tactile contact tokens with high-level geometric features through cross-modal attention. The encoder is pretrained from synchronized human visuo-tactile demonstrations and transferred as a frozen perceptual backbone for downstream reinforcement learning. We evaluate OccluDex on a faucet rotation task, requiring one full clockwise handle revolution, and a tabletop object reorientation task, requiring a 180-degree tabletop object reorientation without toppling. In simulation experiments, OccluDex demonstrated 12.6% higher accuracy for unseen objects and 8.3% higher accuracy for previously seen objects than the strongest state-of-the-art baseline models. Physical experiments were further performed with a Shadow Hand to demonstrate successful zero-shot sim-to-real generalization on unseen physical objects. This results could enable humanoid egocentric object manipulation for seen and unseen objects even when the manipulating robotic hand occludes vision.</p>
+            <p class="paper-summary">Quadrupedal locomotion requires balancing conflicting objectives such as command tracking, stability, and energy efficiency, yet conventional reinforcement learning (RL) hardcodes these priorities into a fixed scalar reward at training time. We present PROMO (Preference-Conditioned Multi-Objective Reinforcement Learning), a semantic multi-objective approach that makes this trade-off an explicit runtime input to a single locomotion policy. PROMO conditions the policy on deployment facing preferences while keeping embodiment-specific locomotion priors fixed, thereby separating operator intent from reward shaping terms required for viable gait generation. Compared with fixed-objective controllers, multi-objective baselines, and independently trained specialists, PROMO achieves objective specialization and robustness from a single deployable policy. Across 100 sampled preferences in simulation, 67 behaviors are non-dominated under exact Pareto dominance, with a mean preference-objective correlation of 0.843, demonstrating broad Pareto coverage and predictable preference response. The same policy transfers zero-shot to a Unitree Go2, where preference changes alone reduce specific energy by up to 30.4%, position error by 38.7%, and peak body-attitude deviation by 59.0% relative to the balanced preference. These results establish preference-conditioned multi-objective RL as a practical runtime interface for adaptive legged locomotion, extending its role beyond offline Pareto-set construction. Open-source code and videos are available at https://amrmousa.com/promo/.</p>
             
             <div class="card-action-bar">
-                <a href="http://arxiv.org/pdf/2609.39017v1" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
+                <a href="http://arxiv.org/pdf/2610.01260v1" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
                     View PDF
                 </a>
-                <a href="http://arxiv.org/abs/2609.39017v1" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
+                <a href="http://arxiv.org/abs/2610.01260v1" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
                     arXiv Page &rarr;
                 </a>
             </div>
         </article>
         
-        <article class="paper-card" data-title="dsdyn-vla: a dual-stream dynamic manipulation framework with motion perception, future awareness, and realtime correction" data-summary="while vision-language-action (vla) models excel in static tasks, they struggle in dynamic environments where objects are in motion (e.g., conveyor belt manipulation). we identify three fundamental limitations hindering current vlas in these scenarios: the \textbf{perception gap}, where static visual inputs lack temporal motion cues; the \textbf{latency gap}, where inference delays render actions obsolete; and the \textbf{control gap}, caused by the open-loop action chunk execution without real-time adjustment. in this work, we propose \textbf{dsdyn-vla}, a slow-fast \textbf{d}ual-\textbf{s}tream \textbf{dyn}amic manipulation framework that integrates motion-aware foresighted planning with real-time residual correction. the slow \textbf{flow-planner} serves as a macro-planner. by enhancing the vla with optical flow for temporal perception and a future state awareness mechanism to preemptively offset inference latency, it produces globally consistent, motion-aware action chunks. complementing this, the fast \textbf{res-refiner} employs a lightweight rl policy to inject high-frequency, closed-loop corrections into the planned action chunks based on real-time observations. in addition, we introduce \textbf{dynbench}, a mujoco-based benchmark for dynamic object manipulation that comprises nine tasks. extensive experiments demonstrate that dsdyn-vla reduces the failure rate by over 76\% compared to current sota method in high-latency setting on the kinetix dynamic benchmark, while achieving about 6$\times$ the success rate of pi0.5 in real-world dynamic settings and about 5$\times$ on dynbench. we will open-source all the code and weights.">
+        <article class="paper-card" data-title="is success all you need? investigating the impact of input perturbations on vla behaviour in tabletop manipulation tasks" data-summary="vision-language-action (vla) models have achieved high task success rates on robot manipulation task benchmarks. more recently, there has been an emphasis on evaluating the robustness of vla models to perturbations. however, this robustness is still predominantly measured through task success rate (tsr). in this work, we propose a benchmark-agnostic evaluation framework to measure the behavioural robustness of models by characterising how successful trajectories are executed under perturbation. we implement this methodology by extending the widely-used libero and libero-plus benchmarks. across three state-of-the-art vla models, four libero task suites and seven perturbation conditions, we evaluate changes in both typical successful behaviour and its variability, including metrics of motion smoothness, efficiency and gripper behaviour. we find that perturbations can alter the behaviour of successful trajectories, a phenomenon which cannot necessarily be inferred from tsr alone. across libero suites, we identify cases where state-of-the-art vla models achieve comparable tsr under the same perturbation condition, yet behaviour on successful trajectories diverges substantially. therefore, to have a more robust assessment of task performance, we argue that suitable measures of robustness should capture not only whether a task is completed, but also how the robot behaves while completing it. when evaluating the robustness of vla models, tsr may be complemented by behavioural evaluation metrics that characterise the nature and variability of successful task execution by robots.">
             <div class="card-meta-top">
                 <span class="rank-tag">TOP #2</span>
                 <div class="score-badge">
@@ -292,30 +292,30 @@
                 </div>
             </div>
             
-            <h2 class="paper-title">DSDyn-VLA: A Dual-Stream Dynamic Manipulation Framework with Motion Perception, Future Awareness, and Realtime Correction</h2>
+            <h2 class="paper-title">Is Success All You Need? Investigating the Impact of Input Perturbations on VLA Behaviour in Tabletop Manipulation Tasks</h2>
             
             <div class="author-row">
-                <span>🗓️ 2026-09-30</span>
-                <span>✍️ Wenhao Li, Xiu Su, Yu Han et al.</span>
+                <span>🗓️ 2026-10-01</span>
+                <span>✍️ Sophie Higham, Riccardo Andrea Izzo, Matteo Matteucci et al.</span>
             </div>
             
             <div class="badge-cluster">
                 <span class="badge">#vision-language-action</span><span class="badge">#vla</span>
             </div>
             
-            <p class="paper-summary">While Vision-Language-Action (VLA) models excel in static tasks, they struggle in dynamic environments where objects are in motion (e.g., conveyor belt manipulation). We identify three fundamental limitations hindering current VLAs in these scenarios: the \textbf{perception gap}, where static visual inputs lack temporal motion cues; the \textbf{latency gap}, where inference delays render actions obsolete; and the \textbf{control gap}, caused by the open-loop action chunk execution without real-time adjustment. In this work, we propose \textbf{DSDyn-VLA}, a Slow-Fast \textbf{D}ual-\textbf{S}tream \textbf{Dyn}amic manipulation framework that integrates motion-aware foresighted planning with real-time residual correction. The slow \textbf{Flow-Planner} serves as a macro-planner. By enhancing the VLA with optical flow for temporal perception and a future state awareness mechanism to preemptively offset inference latency, it produces globally consistent, motion-aware action chunks. Complementing this, the fast \textbf{Res-Refiner} employs a lightweight RL policy to inject high-frequency, closed-loop corrections into the planned action chunks based on real-time observations. In addition, we introduce \textbf{DynBench}, a MuJoCo-based benchmark for dynamic object manipulation that comprises nine tasks. Extensive experiments demonstrate that DSDyn-VLA reduces the failure rate by over 76\% compared to current SOTA method in high-latency setting on the Kinetix dynamic benchmark, while achieving about 6$\times$ the success rate of PI0.5 in real-world dynamic settings and about 5$\times$ on DynBench. We will open-source all the code and weights.</p>
+            <p class="paper-summary">Vision-Language-Action (VLA) models have achieved high task success rates on robot manipulation task benchmarks. More recently, there has been an emphasis on evaluating the robustness of VLA models to perturbations. However, this robustness is still predominantly measured through Task Success Rate (TSR). In this work, we propose a benchmark-agnostic evaluation framework to measure the behavioural robustness of models by characterising how successful trajectories are executed under perturbation. We implement this methodology by extending the widely-used LIBERO and LIBERO-Plus benchmarks. Across three state-of-the-art VLA models, four LIBERO task suites and seven perturbation conditions, we evaluate changes in both typical successful behaviour and its variability, including metrics of motion smoothness, efficiency and gripper behaviour. We find that perturbations can alter the behaviour of successful trajectories, a phenomenon which cannot necessarily be inferred from TSR alone. Across LIBERO suites, we identify cases where state-of-the-art VLA models achieve comparable TSR under the same perturbation condition, yet behaviour on successful trajectories diverges substantially. Therefore, to have a more robust assessment of task performance, we argue that suitable measures of robustness should capture not only whether a task is completed, but also how the robot behaves while completing it. When evaluating the robustness of VLA models, TSR may be complemented by behavioural evaluation metrics that characterise the nature and variability of successful task execution by robots.</p>
             
             <div class="card-action-bar">
-                <a href="http://arxiv.org/pdf/2609.39198v1" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
+                <a href="http://arxiv.org/pdf/2610.01351v1" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
                     View PDF
                 </a>
-                <a href="http://arxiv.org/abs/2609.39198v1" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
+                <a href="http://arxiv.org/abs/2610.01351v1" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
                     arXiv Page &rarr;
                 </a>
             </div>
         </article>
         
-        <article class="paper-card" data-title="exploiting vulnerabilities: universal adversarial attacks on vision-language-action models in robotics" data-summary="recently, vision-language-action (vla) models have revolutionized robotic manipulation by seamlessly integrating visual perception, language understanding, and action generation in an end-to-end learning framework. however, since these models are designed to interact directly with the physical world and humans, their security is critical, and even small vulnerabilities can lead to catastrophic failures. in this work, we propose the universal adversarial object, a sphere with optimized surface texture that significantly degrades task success rates when placed within the robot's field of view. specifically, our approach introduces a multi-level attack framework that jointly disrupts trajectory planning, task execution, and action control. we validate our method in both simulated and real-world robotic settings. experimental results demonstrate that the adversarial object reduces the average task success rates by 31.2%-39.9% for two representative vla models (pi0 and rdt), with success rates dropping to near zero in complex scenarios. index terms--vision-language-action models, adversarial attack, robotic security, universal adversarial object">
+        <article class="paper-card" data-title="wbag: a whole-body and attached-geometry safety framework for vision-language-action manipulation" data-summary="vision-language-action (vla) policies have demonstrated impressive capabilities in generalizable robotic manipulation, but their deployment in the real world remains challenging due to potential collisions involving different parts of the robot, manipulated objects, and the surrounding environment. existing inference-time vla safety frameworks typically rely on simplified end-effector-centered representations that do not explicitly model the full articulated robot and attached-object geometry. in this paper, we present wbag, a safety framework that models the robot's whole-body and grasp-dependent attached geometry. wbag constructs a grasp-conditioned safe set that adapts the protected geometry as objects are grasped, then converts this evolving geometry into differentiable cbf constraints that minimally modify the vla's native six-dimensional operational-space action for collision avoidance across robot, scene, and attached geometry. on the safelibero benchmark, a variant of libero augmented with obstacles for safety evaluation, wbag achieves the best overall safety and safe task success among the evaluated methods under a scene-level safety evaluator that monitors all eligible non-task objects, reaching 97.38\% aggregate scene safety and 59.38\% safe success.">
             <div class="card-meta-top">
                 <span class="rank-tag">TOP #3</span>
                 <div class="score-badge">
@@ -324,158 +324,158 @@
                 </div>
             </div>
             
-            <h2 class="paper-title">Exploiting Vulnerabilities: Universal Adversarial Attacks on Vision-Language-Action Models in Robotics</h2>
+            <h2 class="paper-title">WBAG: A Whole-Body and Attached-Geometry Safety Framework for Vision-Language-Action Manipulation</h2>
             
             <div class="author-row">
-                <span>🗓️ 2026-09-30</span>
-                <span>✍️ Songhua Yang, Ziyu Liu, Yuanwei Liu et al.</span>
+                <span>🗓️ 2026-10-01</span>
+                <span>✍️ Samuel Zhen, Siwon Jo, Yanze Zhang et al.</span>
             </div>
             
             <div class="badge-cluster">
                 <span class="badge">#vision-language-action</span><span class="badge">#vla</span>
             </div>
             
-            <p class="paper-summary">Recently, Vision-Language-Action (VLA) models have revolutionized robotic manipulation by seamlessly integrating visual perception, language understanding, and action generation in an end-to-end learning framework. However, since these models are designed to interact directly with the physical world and humans, their security is critical, and even small vulnerabilities can lead to catastrophic failures. In this work, we propose the Universal Adversarial Object, a sphere with optimized surface texture that significantly degrades task success rates when placed within the robot's field of view. Specifically, our approach introduces a multi-level attack framework that jointly disrupts trajectory planning, task execution, and action control. We validate our method in both simulated and real-world robotic settings. Experimental results demonstrate that the adversarial object reduces the average task success rates by 31.2%-39.9% for two representative VLA models (Pi0 and RDT), with success rates dropping to near zero in complex scenarios. Index Terms--Vision-Language-Action models, adversarial attack, robotic security, universal adversarial object</p>
+            <p class="paper-summary">Vision-language-action (VLA) policies have demonstrated impressive capabilities in generalizable robotic manipulation, but their deployment in the real world remains challenging due to potential collisions involving different parts of the robot, manipulated objects, and the surrounding environment. Existing inference-time VLA safety frameworks typically rely on simplified end-effector-centered representations that do not explicitly model the full articulated robot and attached-object geometry. In this paper, we present WBAG, a safety framework that models the robot's whole-body and grasp-dependent attached geometry. WBAG constructs a grasp-conditioned safe set that adapts the protected geometry as objects are grasped, then converts this evolving geometry into differentiable CBF constraints that minimally modify the VLA's native six-dimensional operational-space action for collision avoidance across robot, scene, and attached geometry. On the SafeLIBERO benchmark, a variant of LIBERO augmented with obstacles for safety evaluation, WBAG achieves the best overall safety and safe task success among the evaluated methods under a scene-level safety evaluator that monitors all eligible non-task objects, reaching 97.38\% aggregate Scene Safety and 59.38\% Safe Success.</p>
             
             <div class="card-action-bar">
-                <a href="http://arxiv.org/pdf/2609.39178v1" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
+                <a href="http://arxiv.org/pdf/2610.01083v1" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
                     View PDF
                 </a>
-                <a href="http://arxiv.org/abs/2609.39178v1" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
+                <a href="http://arxiv.org/abs/2610.01083v1" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
                     arXiv Page &rarr;
                 </a>
             </div>
         </article>
         
-        <article class="paper-card" data-title="blackout vs. freeze: analyzing physical failure modes of vlas under camera faults" data-summary="unreliable visual inputs can harm task performance and cause potential physical safety risks for vision-language-action (vla) models. we analyze how $π0.5$ and gr00t models act under input faults such as image blackouts and freezing. we find that blackout and freezing produce distinct physical failure modes even when task-success rates are similarly low: freezing causes more extreme joint behavior, whereas blackout after gripper closure can cause more object drops, most markedly without proprioception. selective intervention studies reveal that proprioception (current robot state) partly compensates for the removed robot depictions and reduces non-target contact. however, it cannot sufficiently restore task success when wrist-view object information is removed, even when aided by the remaining scene view. we then evaluate two mitigation approaches: camera-blackout training and training-free replacement of faulty visual embeddings. both improve task success in selected conditions, but can increase unintended contact or disturbance to surrounding objects. real-robot trials further show that successful execution under camera faults can still involve unintended physical interactions. these findings motivate designing vla policies that use the robot and object information still available under camera faults to limit hazardous motion.">
+        <article class="paper-card" data-title="maskillblender: decentralized whole-body coordination for multi-humanoid loco-manipulation via skill blending" data-summary="coordinated multi-humanoid loco-manipulation is promising yet challenging due to high-dimensional whole-body control, decentralized decision making, and scalability. while recent reinforcement learning methods have improved single-humanoid whole-body control, extending them to the multi-humanoid setting remains nontrivial and often requires substantial reward engineering or task-specific design. we propose maskillblender, a general multi-agent reinforcement learning framework to achieve decentralized multi-humanoid whole-body coordination. by learning a shared decentralized high-level policy over reusable pre-trained single-humanoid skills, maskillblender enables coordinated behaviors using only task-level rewards, without requiring task-specific motion references. to improve learning efficiency, we further introduce a permutation-based data augmentation strategy for homogeneous multi-humanoid systems, and theoretically show that the permuted samples preserve the policy-gradient direction of the original samples under the homogeneous markov game formulation. we evaluate maskillblender on multiple multi-humanoid coordination tasks across two humanoid embodiments. simulation results demonstrate that the proposed framework consistently achieves strong task performance and enables coordinated behaviors across different tasks and humanoid embodiments.">
             <div class="card-meta-top">
                 <span class="rank-tag">TOP #4</span>
                 <div class="score-badge">
                     <span class="score-label">Priority Index</span>
-                    <span class="score-value">135</span>
+                    <span class="score-value">125</span>
                 </div>
             </div>
             
-            <h2 class="paper-title">Blackout vs. Freeze: Analyzing Physical Failure Modes of VLAs under Camera Faults</h2>
+            <h2 class="paper-title">MASkillBlender: Decentralized Whole-Body Coordination for Multi-Humanoid Loco-Manipulation via Skill Blending</h2>
             
             <div class="author-row">
-                <span>🗓️ 2026-09-30</span>
-                <span>✍️ Heejae Suh, Jongwook Han, Zahra Gholami et al.</span>
+                <span>🗓️ 2026-10-01</span>
+                <span>✍️ Yifan Hu, Luhang Hong, Mingkang Long et al.</span>
             </div>
             
             <div class="badge-cluster">
-                <span class="badge">#vision-language-action</span><span class="badge">#vla</span>
+                <span class="badge">#humanoid</span><span class="badge">#reinforcement learning</span>
             </div>
             
-            <p class="paper-summary">Unreliable visual inputs can harm task performance and cause potential physical safety risks for vision-language-action (VLA) models. We analyze how $π0.5$ and GR00T models act under input faults such as image blackouts and freezing. We find that blackout and freezing produce distinct physical failure modes even when task-success rates are similarly low: freezing causes more extreme joint behavior, whereas blackout after gripper closure can cause more object drops, most markedly without proprioception. Selective intervention studies reveal that proprioception (current robot state) partly compensates for the removed robot depictions and reduces non-target contact. However, it cannot sufficiently restore task success when wrist-view object information is removed, even when aided by the remaining scene view. We then evaluate two mitigation approaches: camera-blackout training and training-free replacement of faulty visual embeddings. Both improve task success in selected conditions, but can increase unintended contact or disturbance to surrounding objects. Real-robot trials further show that successful execution under camera faults can still involve unintended physical interactions. These findings motivate designing VLA policies that use the robot and object information still available under camera faults to limit hazardous motion.</p>
+            <p class="paper-summary">Coordinated multi-humanoid loco-manipulation is promising yet challenging due to high-dimensional whole-body control, decentralized decision making, and scalability. While recent reinforcement learning methods have improved single-humanoid whole-body control, extending them to the multi-humanoid setting remains nontrivial and often requires substantial reward engineering or task-specific design. We propose MASkillBlender, a general multi-agent reinforcement learning framework to achieve decentralized multi-humanoid whole-body coordination. By learning a shared decentralized high-level policy over reusable pre-trained single-humanoid skills, MASkillBlender enables coordinated behaviors using only task-level rewards, without requiring task-specific motion references. To improve learning efficiency, we further introduce a permutation-based data augmentation strategy for homogeneous multi-humanoid systems, and theoretically show that the permuted samples preserve the policy-gradient direction of the original samples under the homogeneous Markov game formulation. We evaluate MASkillBlender on multiple multi-humanoid coordination tasks across two humanoid embodiments. Simulation results demonstrate that the proposed framework consistently achieves strong task performance and enables coordinated behaviors across different tasks and humanoid embodiments.</p>
             
             <div class="card-action-bar">
-                <a href="http://arxiv.org/pdf/2609.39145v1" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
+                <a href="http://arxiv.org/pdf/2610.01102v1" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
                     View PDF
                 </a>
-                <a href="http://arxiv.org/abs/2609.39145v1" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
+                <a href="http://arxiv.org/abs/2610.01102v1" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
                     arXiv Page &rarr;
                 </a>
             </div>
         </article>
         
-        <article class="paper-card" data-title="cue the flow: steering flow-matching policies for open-world delivery manipulation" data-summary="open-world goods delivery requires mobile manipulators to follow free-form user instructions and manipulate potentially novel objects. existing dual-system approaches use high-level grounding models to convert language into grounded visual prompts, but their low-level controllers can remain brittle under noisy perception, dynamic scenes, and contact-rich interactions. we instead use a pretrained flow-matching vision-language-action model as the low-level control interface, leveraging its reactivity and robustness to environmental changes while treating the grounding output as a spatial cue for policy steering. our key insight is that the pretrained vla already provides a strong manipulation prior, while the spatial cue supplies the missing target information needed to guide actions under novel language--object mappings. concretely, we introduce a lightweight cue-conditioned adapter. the adapter is first trained with contrastive objectives to produce salient and spatially discriminative cue representations, and is then supervised to predict a diagonal affine transformation over the generated action chunk, aligning policy steering with the cued target. across tabletop and mobile-base settings, our method improves instruction following and manipulation success on both in-domain and out-of-domain objects, achieving up to near $2\times$ improvement in average task success rate with negligible inference overhead.">
+        <article class="paper-card" data-title="futureworlds: learning robotic world models from alternative futures" data-summary="robotic world models predict action-conditioned future scenes, providing a foundation for understanding action outcomes. however, turning alternative predictions into useful learning signals remains challenging: similar candidates limit informative quality comparisons, while diverging trajectories require persistent maintenance of their individual histories. we introduce futureworlds, a framework that unifies candidate construction, history maintenance, and learning from relative quality. built on a multimodal discrete autoregressive model, futureworlds uses diverse beam search during reinforcement learning to construct candidate futures that balance confidence and diversity. candidate-specific bounded memory preserves scene states and ensures that generation and policy scoring use matching histories. we further propose memspo (memory-conditioned search-guided policy optimization), which converts video trajectory rewards into group-relative advantages to optimize the world model. on rt-1, bridgev2, and robocasa, futureworlds reduces lpips for 32-frame predictions by 14.78%, 20.84%, and 9.12%, respectively, relative to the strongest baseline on each dataset. under fixed evaluation configurations, only 200 memspo updates further improve generation quality and support continued prediction beyond the training horizon. memory ablations, decoding sensitivity analysis, and optical-flow evaluation show that these gains extend beyond visual quality to more accurate motion prediction and more consistent object states. project page and code: https://github.com/alexander-wu/futureworlds.">
             <div class="card-meta-top">
                 <span class="rank-tag">TOP #5</span>
                 <div class="score-badge">
                     <span class="score-label">Priority Index</span>
-                    <span class="score-value">135</span>
+                    <span class="score-value">120</span>
                 </div>
             </div>
             
-            <h2 class="paper-title">Cue the Flow: Steering Flow-Matching Policies for Open-World Delivery Manipulation</h2>
+            <h2 class="paper-title">FutureWorlds: Learning Robotic World Models from Alternative Futures</h2>
             
             <div class="author-row">
-                <span>🗓️ 2026-09-30</span>
-                <span>✍️ Haoxuan Wang, Griffin Galimi, Junhua Huang et al.</span>
+                <span>🗓️ 2026-10-01</span>
+                <span>✍️ Hao Wu, Shengju Qian, Weiyan Wang et al.</span>
             </div>
             
             <div class="badge-cluster">
-                <span class="badge">#vision-language-action</span><span class="badge">#vla</span>
+                <span class="badge">#world model</span><span class="badge">#reinforcement learning</span>
             </div>
             
-            <p class="paper-summary">Open-world goods delivery requires mobile manipulators to follow free-form user instructions and manipulate potentially novel objects. Existing dual-system approaches use high-level grounding models to convert language into grounded visual prompts, but their low-level controllers can remain brittle under noisy perception, dynamic scenes, and contact-rich interactions. We instead use a pretrained flow-matching vision-language-action model as the low-level control interface, leveraging its reactivity and robustness to environmental changes while treating the grounding output as a spatial cue for policy steering. Our key insight is that the pretrained VLA already provides a strong manipulation prior, while the spatial cue supplies the missing target information needed to guide actions under novel language--object mappings. Concretely, we introduce a lightweight cue-conditioned adapter. The adapter is first trained with contrastive objectives to produce salient and spatially discriminative cue representations, and is then supervised to predict a diagonal affine transformation over the generated action chunk, aligning policy steering with the cued target. Across tabletop and mobile-base settings, our method improves instruction following and manipulation success on both in-domain and out-of-domain objects, achieving up to near $2\times$ improvement in average task success rate with negligible inference overhead.</p>
+            <p class="paper-summary">Robotic world models predict action-conditioned future scenes, providing a foundation for understanding action outcomes. However, turning alternative predictions into useful learning signals remains challenging: similar candidates limit informative quality comparisons, while diverging trajectories require persistent maintenance of their individual histories. We introduce FutureWorlds, a framework that unifies candidate construction, history maintenance, and learning from relative quality. Built on a multimodal discrete autoregressive model, FutureWorlds uses diverse beam search during reinforcement learning to construct candidate futures that balance confidence and diversity. Candidate-specific bounded memory preserves scene states and ensures that generation and policy scoring use matching histories. We further propose MemSPO (Memory-Conditioned Search-Guided Policy Optimization), which converts video trajectory rewards into group-relative advantages to optimize the world model. On RT-1, BridgeV2, and RoboCasa, FutureWorlds reduces LPIPS for 32-frame predictions by 14.78%, 20.84%, and 9.12%, respectively, relative to the strongest baseline on each dataset. Under fixed evaluation configurations, only 200 MemSPO updates further improve generation quality and support continued prediction beyond the training horizon. Memory ablations, decoding sensitivity analysis, and optical-flow evaluation show that these gains extend beyond visual quality to more accurate motion prediction and more consistent object states. Project page and code: https://github.com/Alexander-wu/FutureWorlds.</p>
             
             <div class="card-action-bar">
-                <a href="http://arxiv.org/pdf/2609.38989v1" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
+                <a href="http://arxiv.org/pdf/2610.01019v1" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
                     View PDF
                 </a>
-                <a href="http://arxiv.org/abs/2609.38989v1" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
+                <a href="http://arxiv.org/abs/2610.01019v1" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
                     arXiv Page &rarr;
                 </a>
             </div>
         </article>
         
-        <article class="paper-card" data-title="locowm: high-precision locomotion through world-model-guided residual adaptation" data-summary="high-precision locomotion combines motion-command tracking with precise regulation of task-relevant physical states, enabling robots to interact reliably with their surroundings during motion. joint end-to-end optimization can leave precision objectives insufficiently optimized, while reactive residual control adjusts actions only after deviations become observable. we present \textbf{locowm}, a world-model-guided preactive residual adaptation framework for high-precision locomotion. a base policy provides command-following locomotion, while an action-conditioned world model predicts a sequence of future physical states from proprioceptive history and the proposed base action. a residual adapter conditions on this predicted sequence to generate additive action corrections that compensate for anticipated deviations. two-stage training first learns locomotion and action-conditioned dynamics, then freezes both modules while training the adapter, separating locomotion acquisition from precision adaptation. experiments spanning terrain leveling, acceleration compensation, and push recovery demonstrate improved control precision and disturbance robustness over end-to-end and reactive residual baselines. demos and code are available at: https://zhaozijie2022.github.io/locowm">
+        <article class="paper-card" data-title="experience-based feasibility-aware generative adversarial imitation from observation under embodiment mismatch" data-summary="with the increasing use of robot-free demonstration interfaces that provide state trajectories without action labels, imitation from observation has become a promising approach for learning robot behaviors from human demonstrations. however, due to differences in embodiment and dynamics between humans and robots, demonstrated human motions may not be feasible for the robot, potentially degrading policy performance. in this study, we propose experience-based feasibility-aware generative adversarial imitation from observation (ef-gaifo), which estimates the feasibility of state-only demonstrations from the robot's own experience rather than relying on explicit dynamics models or large prior exploration datasets. a key feature of ef-gaifo is that the notion of feasibility evolves with policy learning: as the policy improves and the robot experiences a broader range of state transitions, the feasible region is progressively expanded, allowing additional demonstrations to be incorporated into learning. this enables feasibility-aware imitation that adapts to the current stage of policy learning, rather than relying on a pre-designed feasibility criterion. we validate the effectiveness of ef-gaifo on a locomotion task in simulation and on a real quadruped robot performing a object-reaching-and-grasping task.">
             <div class="card-meta-top">
                 <span class="rank-tag">TOP #6</span>
                 <div class="score-badge">
                     <span class="score-label">Priority Index</span>
-                    <span class="score-value">115</span>
+                    <span class="score-value">110</span>
                 </div>
             </div>
             
-            <h2 class="paper-title">LocoWM: High-Precision Locomotion through World-Model-Guided Residual Adaptation</h2>
+            <h2 class="paper-title">Experience-Based Feasibility-Aware Generative Adversarial Imitation from Observation under Embodiment Mismatch</h2>
             
             <div class="author-row">
-                <span>🗓️ 2026-09-30</span>
-                <span>✍️ Zijie Zhao, Shengqian Chen, Xiaoxu Wang et al.</span>
+                <span>🗓️ 2026-10-01</span>
+                <span>✍️ Yoshiki Takebayashi, Giovanni Perantoni, Hikaru Sasaki et al.</span>
             </div>
             
             <div class="badge-cluster">
-                <span class="badge">#world model</span><span class="badge">#locomotion</span>
+                <span class="badge">#quadruped</span><span class="badge">#locomotion</span>
             </div>
             
-            <p class="paper-summary">High-precision locomotion combines motion-command tracking with precise regulation of task-relevant physical states, enabling robots to interact reliably with their surroundings during motion. Joint end-to-end optimization can leave precision objectives insufficiently optimized, while reactive residual control adjusts actions only after deviations become observable. We present \textbf{LocoWM}, a world-model-guided preactive residual adaptation framework for high-precision locomotion. A base policy provides command-following locomotion, while an action-conditioned world model predicts a sequence of future physical states from proprioceptive history and the proposed base action. A residual adapter conditions on this predicted sequence to generate additive action corrections that compensate for anticipated deviations. Two-stage training first learns locomotion and action-conditioned dynamics, then freezes both modules while training the adapter, separating locomotion acquisition from precision adaptation. Experiments spanning terrain leveling, acceleration compensation, and push recovery demonstrate improved control precision and disturbance robustness over end-to-end and reactive residual baselines. Demos and code are available at: https://zhaozijie2022.github.io/LocoWM</p>
+            <p class="paper-summary">With the increasing use of robot-free demonstration interfaces that provide state trajectories without action labels, imitation from observation has become a promising approach for learning robot behaviors from human demonstrations. However, due to differences in embodiment and dynamics between humans and robots, demonstrated human motions may not be feasible for the robot, potentially degrading policy performance. In this study, we propose Experience-Based Feasibility-Aware Generative Adversarial Imitation from Observation (EF-GAIfO), which estimates the feasibility of state-only demonstrations from the robot's own experience rather than relying on explicit dynamics models or large prior exploration datasets. A key feature of EF-GAIfO is that the notion of feasibility evolves with policy learning: as the policy improves and the robot experiences a broader range of state transitions, the feasible region is progressively expanded, allowing additional demonstrations to be incorporated into learning. This enables feasibility-aware imitation that adapts to the current stage of policy learning, rather than relying on a pre-designed feasibility criterion. We validate the effectiveness of EF-GAIfO on a locomotion task in simulation and on a real quadruped robot performing a object-reaching-and-grasping task.</p>
             
             <div class="card-action-bar">
-                <a href="http://arxiv.org/pdf/2609.39179v1" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
+                <a href="http://arxiv.org/pdf/2610.01171v1" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
                     View PDF
                 </a>
-                <a href="http://arxiv.org/abs/2609.39179v1" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
+                <a href="http://arxiv.org/abs/2610.01171v1" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
                     arXiv Page &rarr;
                 </a>
             </div>
         </article>
         
-        <article class="paper-card" data-title="nexus: perceptive whole-body control for terrain-adaptive teleoperation" data-summary="whole-body teleoperation requires a humanoid robot to reproduce a human operator's behavior even when their terrains differ. this demands that the robot perceive local terrain and adapt its posture and contacts accordingly, rather than copy the operator's motion frame by frame. however, paired motion data linking the same behaviors across flat ground and different terrains remain scarce, limiting supervision for learning terrain-adaptive control. to enable whole-body teleoperation across mismatched terrains, we introduce nexus, a perceptive whole-body control framework that combines human motion commands with onboard sensory feedback. we first develop a scalable terrain-aware adaptation algorithm that efficiently generates high-quality motion pairs across motions and terrains without per-motion or per-terrain tuning. using a paired motion corpus totaling nearly 1,000 hours, we train a perceptive whole-body controller through teacher-student learning to reproduce commanded behaviors across terrains. experiments demonstrate efficient, scalable generation of high-quality motion data and show that nexus combines broad behavioral coverage with terrain adaptability and tracking fidelity, outperforming existing whole-body controllers on the evaluated benchmarks. zero-shot real-world deployment enables real-time whole-body teleoperation on diverse unseen terrains, further validating the generalization of our method. project website: https://nexus-humanoid.github.io/">
+        <article class="paper-card" data-title="supervise what decides success: criterion-aligned auxiliary losses for latent world-model planning" data-summary="latent world models plan by scoring candidate action sequences with distances in latent space. however, task success is judged by physical quantities, which we call the success-criterion quantities. in all four latent world models we examine, the end-effector position is encoded in the latent state with an error larger than the success criterion allows. such a latent state cannot separate successful candidates from failing ones. we propose an auxiliary loss that uses success-criterion quantities as training targets, whereas existing latent world models take them only as inputs. during training, a linear head on the encoder and predictor outputs regresses the success-criterion quantities, and the regression error is added to the training loss. the head is discarded after training, so the model, its cost, and its inputs at test time are unchanged. this loss alone improves the success rate on pusht and cube by 3.5% and 3.4% (absolute), respectively, and both improvements are statistically significant. a success criterion thus specifies what a world model must retain in its latent state, and we show that it can serve directly as a training target.">
             <div class="card-meta-top">
                 <span class="rank-tag">TOP #7</span>
                 <div class="score-badge">
                     <span class="score-label">Priority Index</span>
-                    <span class="score-value">115</span>
+                    <span class="score-value">90</span>
                 </div>
             </div>
             
-            <h2 class="paper-title">NEXUS: Perceptive Whole-Body Control for Terrain-Adaptive Teleoperation</h2>
+            <h2 class="paper-title">Supervise What Decides Success: Criterion-Aligned Auxiliary Losses for Latent World-Model Planning</h2>
             
             <div class="author-row">
-                <span>🗓️ 2026-09-30</span>
-                <span>✍️ Xiangyu Miao, Junsong Wu, Jiyuan Shi et al.</span>
+                <span>🗓️ 2026-10-01</span>
+                <span>✍️ Takumi Hara, Kanata Suzuki</span>
             </div>
             
             <div class="badge-cluster">
-                <span class="badge">#humanoid</span><span class="badge">#teleoperation</span>
+                <span class="badge">#world model</span>
             </div>
             
-            <p class="paper-summary">Whole-body teleoperation requires a humanoid robot to reproduce a human operator's behavior even when their terrains differ. This demands that the robot perceive local terrain and adapt its posture and contacts accordingly, rather than copy the operator's motion frame by frame. However, paired motion data linking the same behaviors across flat ground and different terrains remain scarce, limiting supervision for learning terrain-adaptive control. To enable whole-body teleoperation across mismatched terrains, we introduce NEXUS, a perceptive whole-body control framework that combines human motion commands with onboard sensory feedback. We first develop a scalable terrain-aware adaptation algorithm that efficiently generates high-quality motion pairs across motions and terrains without per-motion or per-terrain tuning. Using a paired motion corpus totaling nearly 1,000 hours, we train a perceptive whole-body controller through teacher-student learning to reproduce commanded behaviors across terrains. Experiments demonstrate efficient, scalable generation of high-quality motion data and show that NEXUS combines broad behavioral coverage with terrain adaptability and tracking fidelity, outperforming existing whole-body controllers on the evaluated benchmarks. Zero-shot real-world deployment enables real-time whole-body teleoperation on diverse unseen terrains, further validating the generalization of our method. Project website: https://nexus-humanoid.github.io/</p>
+            <p class="paper-summary">Latent world models plan by scoring candidate action sequences with distances in latent space. However, task success is judged by physical quantities, which we call the success-criterion quantities. In all four latent world models we examine, the end-effector position is encoded in the latent state with an error larger than the success criterion allows. Such a latent state cannot separate successful candidates from failing ones. We propose an auxiliary loss that uses success-criterion quantities as training targets, whereas existing latent world models take them only as inputs. During training, a linear head on the encoder and predictor outputs regresses the success-criterion quantities, and the regression error is added to the training loss. The head is discarded after training, so the model, its cost, and its inputs at test time are unchanged. This loss alone improves the success rate on PushT and cube by 3.5% and 3.4% (absolute), respectively, and both improvements are statistically significant. A success criterion thus specifies what a world model must retain in its latent state, and we show that it can serve directly as a training target.</p>
             
             <div class="card-action-bar">
-                <a href="http://arxiv.org/pdf/2609.39000v1" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
+                <a href="http://arxiv.org/pdf/2610.01224v1" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
                     View PDF
                 </a>
-                <a href="http://arxiv.org/abs/2609.39000v1" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
+                <a href="http://arxiv.org/abs/2610.01224v1" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
                     arXiv Page &rarr;
                 </a>
             </div>
         </article>
         
-        <article class="paper-card" data-title="looking back to move forward: temporal verification for generative robot policies" data-summary="generative policies have emerged as a promising paradigm for robot learning, combining expressive generative action modeling with scalable imitation learning from large demonstration corpora. however, heterogeneous demonstrations can induce suboptimal action chunks whose errors compound over time, eventually driving the robot into out-of-distribution states from which recovery is difficult. action verification offers a test-time scaling strategy for mitigating this failure mode by sampling multiple candidate actions and using a verifier to select one for execution. existing approaches, however, remain temporally myopic and costly to train, evaluating candidates from the current observation alone without accounting for trajectory continuity and often relying on large verifiers and additional expert demonstrations. in this paper, we introduce temporal verification (tev), an efficient temporally aware action verification framework for flow-matching vlas. tev first learns a temporal token that summarizes recent observation--action history, enabling candidate chunks to be evaluated as continuations of the execution trajectory rather than as isolated predictions. conditioned on this token, tev constructs positive--negative pairs without additional expert demonstrations or preference annotations and trains an energy-based verifier contrastively to assign lower energy to higher-quality, trajectory-consistent action chunks. beyond post-hoc ranking, tev further uses the learned energy landscape to guide intermediate flow samples toward lower-energy regions, improving candidates before final selection. extensive experiments in simulation and real-world settings demonstrate that tev provides reliably ranks action candidates, improves task success rates, and produces smoother execution trajectories.">
+        <article class="paper-card" data-title="physicslens: diagnosing physical property blindness in video generation models" data-summary="reliable video world models could provide scalable predictive environments for robot learning, planning, and evaluation. however, generated robot videos can violate physical principles and complete tasks through physically implausible behavior, limiting their reliability for robot learning and planning. current video-generation benchmarks exclude physics that are inherently hidden by visuals (e.g., weight, viscosity, friction). due to this, video models are evaluated on the fidelity of physics, not the underlying accuracy of physics. we introduce physicslens, a dataset and benchmark for evaluating plausibility of physical properties grounded in robotics. physicslens uses matched scenario pairs that hold the same conditioning frame and task, while varying underlying physics in the scene description. scenarios are curated from public robot video sources and annotated across seven physical domains: collision, gravity, momentum, friction, deformation, fluid, and causality. we evaluate across four video generation models, producing over 400 human-annotated labels. results show that plausible-looking videos often ignore the stated property (34 of 47), and that stating the property lowers plausibility only slightly and not significantly.">
             <div class="card-meta-top">
                 <span class="rank-tag">TOP #8</span>
                 <div class="score-badge">
@@ -484,24 +484,24 @@
                 </div>
             </div>
             
-            <h2 class="paper-title">Looking Back to Move Forward: Temporal Verification for Generative Robot Policies</h2>
+            <h2 class="paper-title">PhysicsLENS: Diagnosing Physical Property Blindness in Video Generation Models</h2>
             
             <div class="author-row">
-                <span>🗓️ 2026-09-30</span>
-                <span>✍️ Haoxuan Wang, Wayne Wu, Yan Yan et al.</span>
+                <span>🗓️ 2026-10-01</span>
+                <span>✍️ Isaiah Milkey, Som Sagar, Aditya Taparia et al.</span>
             </div>
             
             <div class="badge-cluster">
-                <span class="badge">#vla</span>
+                <span class="badge">#world model</span>
             </div>
             
-            <p class="paper-summary">Generative policies have emerged as a promising paradigm for robot learning, combining expressive generative action modeling with scalable imitation learning from large demonstration corpora. However, heterogeneous demonstrations can induce suboptimal action chunks whose errors compound over time, eventually driving the robot into out-of-distribution states from which recovery is difficult. Action verification offers a test-time scaling strategy for mitigating this failure mode by sampling multiple candidate actions and using a verifier to select one for execution. Existing approaches, however, remain temporally myopic and costly to train, evaluating candidates from the current observation alone without accounting for trajectory continuity and often relying on large verifiers and additional expert demonstrations. In this paper, we introduce Temporal Verification (TeV), an efficient temporally aware action verification framework for flow-matching VLAs. TeV first learns a temporal token that summarizes recent observation--action history, enabling candidate chunks to be evaluated as continuations of the execution trajectory rather than as isolated predictions. Conditioned on this token, TeV constructs positive--negative pairs without additional expert demonstrations or preference annotations and trains an energy-based verifier contrastively to assign lower energy to higher-quality, trajectory-consistent action chunks. Beyond post-hoc ranking, TeV further uses the learned energy landscape to guide intermediate flow samples toward lower-energy regions, improving candidates before final selection. Extensive experiments in simulation and real-world settings demonstrate that TeV provides reliably ranks action candidates, improves task success rates, and produces smoother execution trajectories.</p>
+            <p class="paper-summary">Reliable video world models could provide scalable predictive environments for robot learning, planning, and evaluation. However, generated robot videos can violate physical principles and complete tasks through physically implausible behavior, limiting their reliability for robot learning and planning. Current video-generation benchmarks exclude physics that are inherently hidden by visuals (e.g., weight, viscosity, friction). Due to this, video models are evaluated on the fidelity of physics, not the underlying accuracy of physics. We introduce PhysicsLENS, a dataset and benchmark for evaluating plausibility of physical properties grounded in robotics. PhysicsLENS uses matched scenario pairs that hold the same conditioning frame and task, while varying underlying physics in the scene description. Scenarios are curated from public robot video sources and annotated across seven physical domains: collision, gravity, momentum, friction, deformation, fluid, and causality. We evaluate across four video generation models, producing over 400 human-annotated labels. Results show that plausible-looking videos often ignore the stated property (34 of 47), and that stating the property lowers plausibility only slightly and not significantly.</p>
             
             <div class="card-action-bar">
-                <a href="http://arxiv.org/pdf/2609.39038v1" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
+                <a href="http://arxiv.org/pdf/2610.01162v1" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
                     View PDF
                 </a>
-                <a href="http://arxiv.org/abs/2609.39038v1" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
+                <a href="http://arxiv.org/abs/2610.01162v1" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
                     arXiv Page &rarr;
                 </a>
             </div>
