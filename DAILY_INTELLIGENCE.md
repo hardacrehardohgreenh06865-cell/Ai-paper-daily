@@ -1,61 +1,61 @@
-# 🤖 Embodied AI & Robotics Frontier Briefing (2026-10-02)
+# 🤖 Embodied AI & Robotics Frontier Briefing (2026-10-03)
 
 > *Automated Intelligence Briefing generated via custom ETL scoring pipeline. Prioritizes foundation models, manipulation, locomotion, and physical AI systems.*
 
 ---
 
-### Top 1: PROMO: Preference-conditioned Multi-Objective Reinforcement Learning for Quadrupedal Robots
-- **Priority Score**: `140 pts` | **Published**: `2026-10-01`
-- **Focus Tracks**: `#quadruped` `#reinforcement learning` `#locomotion`
-- **Key Authors**: Amr Mousa, Rifny Rachman, Neil Karavis et al.
-- **Direct Access**: [arXiv Abstract](http://arxiv.org/abs/2610.01260v1) | [PDF Fulltext](http://arxiv.org/pdf/2610.01260v1)
-
-**Executive Abstract**:
-> Quadrupedal locomotion requires balancing conflicting objectives such as command tracking, stability, and energy efficiency, yet conventional reinforcement learning (RL) hardcodes these priorities into a fixed scalar reward at training time. We present PROMO (Preference-Conditioned Multi-Objective Reinforcement Learning), a semantic multi-objective approach that makes this trade-off an explicit runtime input to a single locomotion policy. PROMO conditions the policy on deployment facing preferences while keeping embodiment-specific locomotion priors fixed, thereby separating operator intent from reward shaping terms required for viable gait generation. Compared with fixed-objective controllers, multi-objective baselines, and independently trained specialists, PROMO achieves objective specialization and robustness from a single deployable policy. Across 100 sampled preferences in simulation, 67 behaviors are non-dominated under exact Pareto dominance, with a mean preference-objective correlation of 0.843, demonstrating broad Pareto coverage and predictable preference response. The same policy transfers zero-shot to a Unitree Go2, where preference changes alone reduce specific energy by up to 30.4%, position error by 38.7%, and peak body-attitude deviation by 59.0% relative to the balanced preference. These results establish preference-conditioned multi-objective RL as a practical runtime interface for adaptive legged locomotion, extending its role beyond offline Pareto-set construction. Open-source code and videos are available at https://amrmousa.com/promo/.
-
----
-
-### Top 2: Is Success All You Need? Investigating the Impact of Input Perturbations on VLA Behaviour in Tabletop Manipulation Tasks
+### Top 1: DuoMind: Enabling Distributed Multi-Robot Coordination with Semantic Communication
 - **Priority Score**: `135 pts` | **Published**: `2026-10-01`
 - **Focus Tracks**: `#vision-language-action` `#vla`
-- **Key Authors**: Sophie Higham, Riccardo Andrea Izzo, Matteo Matteucci et al.
-- **Direct Access**: [arXiv Abstract](http://arxiv.org/abs/2610.01351v1) | [PDF Fulltext](http://arxiv.org/pdf/2610.01351v1)
+- **Key Authors**: Hanchu Zhou, Dechen Gao, Hang Wang et al.
+- **Direct Access**: [arXiv Abstract](http://arxiv.org/abs/2610.02161v1) | [PDF Fulltext](http://arxiv.org/pdf/2610.02161v1)
 
 **Executive Abstract**:
-> Vision-Language-Action (VLA) models have achieved high task success rates on robot manipulation task benchmarks. More recently, there has been an emphasis on evaluating the robustness of VLA models to perturbations. However, this robustness is still predominantly measured through Task Success Rate (TSR). In this work, we propose a benchmark-agnostic evaluation framework to measure the behavioural robustness of models by characterising how successful trajectories are executed under perturbation. We implement this methodology by extending the widely-used LIBERO and LIBERO-Plus benchmarks. Across three state-of-the-art VLA models, four LIBERO task suites and seven perturbation conditions, we evaluate changes in both typical successful behaviour and its variability, including metrics of motion smoothness, efficiency and gripper behaviour. We find that perturbations can alter the behaviour of successful trajectories, a phenomenon which cannot necessarily be inferred from TSR alone. Across LIBERO suites, we identify cases where state-of-the-art VLA models achieve comparable TSR under the same perturbation condition, yet behaviour on successful trajectories diverges substantially. Therefore, to have a more robust assessment of task performance, we argue that suitable measures of robustness should capture not only whether a task is completed, but also how the robot behaves while completing it. When evaluating the robustness of VLA models, TSR may be complemented by behavioural evaluation metrics that characterise the nature and variability of successful task execution by robots.
+> Vision-language models (VLMs) and vision-language-action models (VLAs) have recently driven rapid progress in general-purpose robots, yet most progress has focused on single-robot settings. Extending these capabilities to multi-robot systems remains challenging because robots must coordinate long-horizon behaviors while maintaining reliable, fine-grained execution. We introduce DuoMind, a distributed hierarchical framework for multi-robot coordination through semantic communication. Each robot uses a VLA-based action model for low-level execution and a VLM-based orchestrator for high-level reasoning and inter-agent coordination. At each planning step, the orchestrator at each robot reasons over the task instruction, local observations, and messages received from other robots. It then generates low-level instructions for the action model and semantic messages for peer robots. This architecture exploits the complementary strengths of pretrained models by combining the semantic reasoning capabilities of VLMs with the precise action-generation capabilities of VLAs. To address the scarcity of benchmarks for multi-robot coordination, we further develop RoboPoly, a benchmark comprising long-horizon manipulation tasks that require coordinated, closed-loop execution under distributed control. Experiments on RoboPoly and RoboTwin demonstrate that DuoMind improves multi-robot task performance, while ablation studies confirm the contributions of hierarchical orchestration and semantic communication. More details are available on our project page.
 
 ---
 
-### Top 3: WBAG: A Whole-Body and Attached-Geometry Safety Framework for Vision-Language-Action Manipulation
+### Top 2: ChunkVLA-AM: Parallel Action Chunking for Vision-Language-Action Robot Control in Additive Manufacturing
 - **Priority Score**: `135 pts` | **Published**: `2026-10-01`
 - **Focus Tracks**: `#vision-language-action` `#vla`
-- **Key Authors**: Samuel Zhen, Siwon Jo, Yanze Zhang et al.
-- **Direct Access**: [arXiv Abstract](http://arxiv.org/abs/2610.01083v1) | [PDF Fulltext](http://arxiv.org/pdf/2610.01083v1)
+- **Key Authors**: Zhugang Liu, Kaichuang Zhang, Jinman Zhang et al.
+- **Direct Access**: [arXiv Abstract](http://arxiv.org/abs/2610.01856v1) | [PDF Fulltext](http://arxiv.org/pdf/2610.01856v1)
 
 **Executive Abstract**:
-> Vision-language-action (VLA) policies have demonstrated impressive capabilities in generalizable robotic manipulation, but their deployment in the real world remains challenging due to potential collisions involving different parts of the robot, manipulated objects, and the surrounding environment. Existing inference-time VLA safety frameworks typically rely on simplified end-effector-centered representations that do not explicitly model the full articulated robot and attached-object geometry. In this paper, we present WBAG, a safety framework that models the robot's whole-body and grasp-dependent attached geometry. WBAG constructs a grasp-conditioned safe set that adapts the protected geometry as objects are grasped, then converts this evolving geometry into differentiable CBF constraints that minimally modify the VLA's native six-dimensional operational-space action for collision avoidance across robot, scene, and attached geometry. On the SafeLIBERO benchmark, a variant of LIBERO augmented with obstacles for safety evaluation, WBAG achieves the best overall safety and safe task success among the evaluated methods under a scene-level safety evaluator that monitors all eligible non-task objects, reaching 97.38\% aggregate Scene Safety and 59.38\% Safe Success.
+> Vision-language-action (VLA) models unify visual perception, language understanding, and action generation, offering new opportunities for automation in additive manufacturing (AM). However, deployment in AM remains challenging because adapting these models to unseen robot embodiments is costly, and performance can degrade under environment changes. In this work, we present a framework for deploying OpenVLA-OFT on a FAIRINO FR3 robot in a fixed AM workcell. A data pipeline converts monocular real-world demonstrations into OpenVLA-compatible TFDS/RLDS datasets to support adaptation to the FR3 embodiment. At runtime, each inference request predicts an eight-step chunk of 7-D actions. The FR3 executes each chunk open loop before capturing a new observation, providing closed-loop feedback between chunks. The system uses a cloud-edge architecture in which the FR3 client streams observations to a remote inference server through a FastAPI interface. In 42 physical A-to-B object-transfer trials, evenly split between red and blue targets, the system succeeded in 39 (92.9%). All three failures occurred during final placement, when insufficient release-height control caused the object to topple. An illumination sweep identified a low-error luminance range of 85-125 on a 0-255 scale, with the lowest mean spatial error at 95.
 
 ---
 
-### Top 4: MASkillBlender: Decentralized Whole-Body Coordination for Multi-Humanoid Loco-Manipulation via Skill Blending
-- **Priority Score**: `125 pts` | **Published**: `2026-10-01`
-- **Focus Tracks**: `#humanoid` `#reinforcement learning`
-- **Key Authors**: Yifan Hu, Luhang Hong, Mingkang Long et al.
-- **Direct Access**: [arXiv Abstract](http://arxiv.org/abs/2610.01102v1) | [PDF Fulltext](http://arxiv.org/pdf/2610.01102v1)
-
-**Executive Abstract**:
-> Coordinated multi-humanoid loco-manipulation is promising yet challenging due to high-dimensional whole-body control, decentralized decision making, and scalability. While recent reinforcement learning methods have improved single-humanoid whole-body control, extending them to the multi-humanoid setting remains nontrivial and often requires substantial reward engineering or task-specific design. We propose MASkillBlender, a general multi-agent reinforcement learning framework to achieve decentralized multi-humanoid whole-body coordination. By learning a shared decentralized high-level policy over reusable pre-trained single-humanoid skills, MASkillBlender enables coordinated behaviors using only task-level rewards, without requiring task-specific motion references. To improve learning efficiency, we further introduce a permutation-based data augmentation strategy for homogeneous multi-humanoid systems, and theoretically show that the permuted samples preserve the policy-gradient direction of the original samples under the homogeneous Markov game formulation. We evaluate MASkillBlender on multiple multi-humanoid coordination tasks across two humanoid embodiments. Simulation results demonstrate that the proposed framework consistently achieves strong task performance and enables coordinated behaviors across different tasks and humanoid embodiments.
-
----
-
-### Top 5: FutureWorlds: Learning Robotic World Models from Alternative Futures
+### Top 3: HumanoidToolBench: Benchmarking Humanoid Tool Use from Selection to Mobile Execution
 - **Priority Score**: `120 pts` | **Published**: `2026-10-01`
-- **Focus Tracks**: `#world model` `#reinforcement learning`
-- **Key Authors**: Hao Wu, Shengju Qian, Weiyan Wang et al.
-- **Direct Access**: [arXiv Abstract](http://arxiv.org/abs/2610.01019v1) | [PDF Fulltext](http://arxiv.org/pdf/2610.01019v1)
+- **Focus Tracks**: `#humanoid` `#locomotion`
+- **Key Authors**: Kyochul Jang, Seohyeon Park, Ohchul Kwon et al.
+- **Direct Access**: [arXiv Abstract](http://arxiv.org/abs/2610.02089v1) | [PDF Fulltext](http://arxiv.org/pdf/2610.02089v1)
 
 **Executive Abstract**:
-> Robotic world models predict action-conditioned future scenes, providing a foundation for understanding action outcomes. However, turning alternative predictions into useful learning signals remains challenging: similar candidates limit informative quality comparisons, while diverging trajectories require persistent maintenance of their individual histories. We introduce FutureWorlds, a framework that unifies candidate construction, history maintenance, and learning from relative quality. Built on a multimodal discrete autoregressive model, FutureWorlds uses diverse beam search during reinforcement learning to construct candidate futures that balance confidence and diversity. Candidate-specific bounded memory preserves scene states and ensures that generation and policy scoring use matching histories. We further propose MemSPO (Memory-Conditioned Search-Guided Policy Optimization), which converts video trajectory rewards into group-relative advantages to optimize the world model. On RT-1, BridgeV2, and RoboCasa, FutureWorlds reduces LPIPS for 32-frame predictions by 14.78%, 20.84%, and 9.12%, respectively, relative to the strongest baseline on each dataset. Under fixed evaluation configurations, only 200 MemSPO updates further improve generation quality and support continued prediction beyond the training horizon. Memory ablations, decoding sensitivity analysis, and optical-flow evaluation show that these gains extend beyond visual quality to more accurate motion prediction and more consistent object states. Project page and code: https://github.com/Alexander-wu/FutureWorlds.
+> As robotic hardware and learning methods advance, humanoids need tools to perform tasks beyond their inherent physical limits. Successful tool use requires selecting a suitable tool and coordinating manipulation and, when needed, locomotion to complete the task. Existing benchmarks do not jointly evaluate these capabilities on a humanoid. We introduce HumanoidToolBench, an 18-task benchmark spanning three scenarios, three execution levels, and two tool-set modes, together with ToolBook, a dataset of 3.1k demonstrations collected in simulation and on a real Unitree G1. Evaluation of seven policies in simulation and three on the real robot reveals substantial gaps between selecting a suitable tool and completing the task. Focused GR00T N1.7 probes show reduced selection accuracy on unseen tools and continued task execution under unrelated instructions. Code and data are available at https://snu-pi.github.io/HumanoidToolBench/.
+
+---
+
+### Top 4: LiteReality-Agent: An Agentic System for Interactable 3D Indoor Scene Reconstruction
+- **Priority Score**: `100 pts` | **Published**: `2026-10-01`
+- **Focus Tracks**: `#embodied ai`
+- **Key Authors**: Zhening Huang, Yueyan Li, Johnathan Chiu et al.
+- **Direct Access**: [arXiv Abstract](http://arxiv.org/abs/2610.01863v1) | [PDF Fulltext](http://arxiv.org/pdf/2610.01863v1)
+
+**Executive Abstract**:
+> We present LiteReality-Agent, an agentic system for reconstructing real indoor environments as realistic, articulated, and simulation-ready 3D scenes from RGB-D scans. At its core, LiteReality-Agent formulates 3D reconstruction as a coding problem, in which a coding agent gathers evidence using specialised tools and iteratively edits a Python script, Room.py, which can be executed to produce a 3D digital twin of the room. With this formulation, we develop a robust observe-edit-verify harness that supports evidence gathering, measurement, verification, layout optimisation, simulation readiness, and quality control throughout the reconstruction process. LiteReality-Agent produces high-quality reconstructions suitable for simulation and downstream embodied AI tasks. Furthermore, as agent capabilities continue to improve rapidly, the system introduced by LiteReality-Agent remains a strong orchestration framework for future agents: it equips them with specialised tools, structured workflows, and robust verification mechanisms that substantially improve reconstruction quality and reliability. We demonstrate that LiteReality-Agent produces reconstructions that are more geometrically accurate, visually realistic, and simulation-compatible than those generated by recent frontier models, such as Astra and Fable. We therefore view LiteReality-Agent as a practical and important building block for robust real-to-sim systems. Both the source code and the data-capture application are publicly available. Code:https://github.com/LiteReality/LiteReality-Agent/
+
+---
+
+### Top 5: InterEvolve: Test-Time Evolution of Reward Programs for Humanoid Loco-Manipulation
+- **Priority Score**: `95 pts` | **Published**: `2026-10-01`
+- **Focus Tracks**: `#humanoid`
+- **Key Authors**: Zhuo Lin, Sirui Xu, Liuyu Bian et al.
+- **Direct Access**: [arXiv Abstract](http://arxiv.org/abs/2610.02196v1) | [PDF Fulltext](http://arxiv.org/pdf/2610.02196v1)
+
+**Executive Abstract**:
+> We study test-time evolution for humanoid loco-manipulation: solving tasks that a controller was never trained for by repurposing its existing skills, improving from its own attempts, and retaining what it learns, without retraining. Our key insight is that a broad controller already holds much of the competence a new task needs, and that this competence becomes accessible through an interface between planning and control that is expressive enough to specify contact-rich, multi-stage interactions, yet executable and measurable enough that execution feedback can guide planning from experience. InterEvolve realizes this interface with two components. First, we develop an object-aware forward-backward (FB) behavioral foundation model, whose object residuals on a frozen body prior turn a new reward about the body or objects into loco-manipulation behavior at test time. Second, we specify tasks as reward programs: staged rewards with completion conditions and tunable constants. A large language model (LLM) agent revises the program structure in context, drawing on execution feedback and a skill library of verified programs, while a numerical optimizer tunes its constants. With every candidate verified across parallel simulation scenarios, the program explores new ways to induce, repurpose, and compose the controller's existing motor competence for the task at hand, and thus improves over iterations. Experiments show that human-designed rewards leave much of the FB model's loco-manipulation competence untapped, whereas the programs InterEvolve evolves release it, sometimes through novel strategies. It further produces behaviors for diverse tasks, complex scenes, and long-horizon compositions in simulation, and evolved skills run autonomously on a physical Unitree G1 from egocentric onboard perception.
 
 ---
 
