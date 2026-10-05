@@ -1,61 +1,61 @@
-# 🤖 Embodied AI & Robotics Frontier Briefing (2026-10-04)
+# 🤖 Embodied AI & Robotics Frontier Briefing (2026-10-05)
 
 > *Automated Intelligence Briefing generated via custom ETL scoring pipeline. Prioritizes foundation models, manipulation, locomotion, and physical AI systems.*
 
 ---
 
-### Top 1: DuoMind: Enabling Distributed Multi-Robot Coordination with Semantic Communication
-- **Priority Score**: `135 pts` | **Published**: `2026-10-01`
+### Top 1: MixVLA: Adaptive Mixing of Non-Invariant Information for Generalizable Vision-Language-Action Models
+- **Priority Score**: `135 pts` | **Published**: `2026-10-02`
 - **Focus Tracks**: `#vision-language-action` `#vla`
-- **Key Authors**: Hanchu Zhou, Dechen Gao, Hang Wang et al.
-- **Direct Access**: [arXiv Abstract](http://arxiv.org/abs/2610.02161v1) | [PDF Fulltext](http://arxiv.org/pdf/2610.02161v1)
+- **Key Authors**: Pingrui Zhang, Yu Zhang, Pengyuan Wu et al.
+- **Direct Access**: [arXiv Abstract](http://arxiv.org/abs/2610.02898v1) | [PDF Fulltext](http://arxiv.org/pdf/2610.02898v1)
 
 **Executive Abstract**:
-> Vision-language models (VLMs) and vision-language-action models (VLAs) have recently driven rapid progress in general-purpose robots, yet most progress has focused on single-robot settings. Extending these capabilities to multi-robot systems remains challenging because robots must coordinate long-horizon behaviors while maintaining reliable, fine-grained execution. We introduce DuoMind, a distributed hierarchical framework for multi-robot coordination through semantic communication. Each robot uses a VLA-based action model for low-level execution and a VLM-based orchestrator for high-level reasoning and inter-agent coordination. At each planning step, the orchestrator at each robot reasons over the task instruction, local observations, and messages received from other robots. It then generates low-level instructions for the action model and semantic messages for peer robots. This architecture exploits the complementary strengths of pretrained models by combining the semantic reasoning capabilities of VLMs with the precise action-generation capabilities of VLAs. To address the scarcity of benchmarks for multi-robot coordination, we further develop RoboPoly, a benchmark comprising long-horizon manipulation tasks that require coordinated, closed-loop execution under distributed control. Experiments on RoboPoly and RoboTwin demonstrate that DuoMind improves multi-robot task performance, while ablation studies confirm the contributions of hierarchical orchestration and semantic communication. More details are available on our project page.
+> Vision-Language-Action (VLA) models have achieved remarkable advances in robotic manipulation, yet their zero-shot generalization under out-of-distribution (OOD) conditions remains limited. These models often entangle task-relevant invariant structure with environment-specific non-invariant factors, causing policies to rely on spurious appearance cues during action prediction. In this work, we propose \textbf{MixVLA}, a model-agnostic training framework that improves the generalization of VLA models without requiring additional OOD data or architectural modifications. The key component of MixVLA is \textbf{Adaptive Mixing of Non-Invariant Information (AMI)}. AMI stochastically mixes non-invariant representations to regularize distribution-specific variability while preserving complementary predictive cues. The mixed non-invariant features are then fused with invariant representations for final action prediction, resulting in improved robustness without sacrificing policy expressiveness. Extensive experiments across challenging manipulation settings, including LIBERO, LIBERO-Plus, the RoboTwin perturbation suite, and real-world tasks, demonstrate that MixVLA improves overall zero-shot robustness while retaining strong in-domain performance.
 
 ---
 
-### Top 2: ChunkVLA-AM: Parallel Action Chunking for Vision-Language-Action Robot Control in Additive Manufacturing
-- **Priority Score**: `135 pts` | **Published**: `2026-10-01`
+### Top 2: FastOPD: On-Policy Distillation for Lightweight VLA Deployment
+- **Priority Score**: `135 pts` | **Published**: `2026-10-02`
 - **Focus Tracks**: `#vision-language-action` `#vla`
-- **Key Authors**: Zhugang Liu, Kaichuang Zhang, Jinman Zhang et al.
-- **Direct Access**: [arXiv Abstract](http://arxiv.org/abs/2610.01856v1) | [PDF Fulltext](http://arxiv.org/pdf/2610.01856v1)
+- **Key Authors**: Yoojin Oh, Jeongsol Kim, Yeonwoo Seo et al.
+- **Direct Access**: [arXiv Abstract](http://arxiv.org/abs/2610.02832v1) | [PDF Fulltext](http://arxiv.org/pdf/2610.02832v1)
 
 **Executive Abstract**:
-> Vision-language-action (VLA) models unify visual perception, language understanding, and action generation, offering new opportunities for automation in additive manufacturing (AM). However, deployment in AM remains challenging because adapting these models to unseen robot embodiments is costly, and performance can degrade under environment changes. In this work, we present a framework for deploying OpenVLA-OFT on a FAIRINO FR3 robot in a fixed AM workcell. A data pipeline converts monocular real-world demonstrations into OpenVLA-compatible TFDS/RLDS datasets to support adaptation to the FR3 embodiment. At runtime, each inference request predicts an eight-step chunk of 7-D actions. The FR3 executes each chunk open loop before capturing a new observation, providing closed-loop feedback between chunks. The system uses a cloud-edge architecture in which the FR3 client streams observations to a remote inference server through a FastAPI interface. In 42 physical A-to-B object-transfer trials, evenly split between red and blue targets, the system succeeded in 39 (92.9%). All three failures occurred during final placement, when insufficient release-height control caused the object to topple. An illumination sweep identified a low-error luminance range of 85-125 on a 0-255 scale, with the lowest mean spatial error at 95.
+> Vision-Language-Action (VLA) foundation models have scaled rapidly to enhance manipulation performance and generalizability, but this scaling incurs high computational costs that render real-world deployment increasingly challenging. Existing approaches typically mitigate this issue by designing smaller architectures or reducing the iterative denoising steps in flow-based policies. In this work, we propose FastOPD, a foundation-to-lightweight VLA framework that enables the practical deployment of large-scale VLAs through efficient on-policy distillation. Specifically, FastOPD adapts a flow map for single-state teacher supervision and combines it with a self-consistency objective to construct a compact student that learns the teacher dynamics. Furthermore, we theoretically demonstrate that minimizing this objective allows the distilled student to recover a distribution on par with that induced by an ideal few-step teacher model. We evaluate FastOPD across diverse foundation policies in simulation and real-world experiments. On LIBERO, FastOPD retains 84% of the performance of $π_{0.5}$ with only two inference steps, reducing inference latency by 78.1% while outperforming existing few-step distillation baselines in average success rate. With LingBot-VLA as the teacher, FastOPD improves the single-step success rate over the base student by 15.9 percentage points on RoboTwin 2.0. We further demonstrate its applicability to a World Action Model (WAM) and deploy a compact student distilled from MolmoAct2 on a real robot.
 
 ---
 
-### Top 3: HumanoidToolBench: Benchmarking Humanoid Tool Use from Selection to Mobile Execution
-- **Priority Score**: `120 pts` | **Published**: `2026-10-01`
-- **Focus Tracks**: `#humanoid` `#locomotion`
-- **Key Authors**: Kyochul Jang, Seohyeon Park, Ohchul Kwon et al.
-- **Direct Access**: [arXiv Abstract](http://arxiv.org/abs/2610.02089v1) | [PDF Fulltext](http://arxiv.org/pdf/2610.02089v1)
+### Top 3: PointWAM: 3D World Action Modeling for Dexterous Robotic Manipulation
+- **Priority Score**: `120 pts` | **Published**: `2026-10-02`
+- **Focus Tracks**: `#dexterous manipulation` `#vla`
+- **Key Authors**: Chunghyun Park, Beomjun Kim, Seungcheol Park et al.
+- **Direct Access**: [arXiv Abstract](http://arxiv.org/abs/2610.02840v1) | [PDF Fulltext](http://arxiv.org/pdf/2610.02840v1)
 
 **Executive Abstract**:
-> As robotic hardware and learning methods advance, humanoids need tools to perform tasks beyond their inherent physical limits. Successful tool use requires selecting a suitable tool and coordinating manipulation and, when needed, locomotion to complete the task. Existing benchmarks do not jointly evaluate these capabilities on a humanoid. We introduce HumanoidToolBench, an 18-task benchmark spanning three scenarios, three execution levels, and two tool-set modes, together with ToolBook, a dataset of 3.1k demonstrations collected in simulation and on a real Unitree G1. Evaluation of seven policies in simulation and three on the real robot reveals substantial gaps between selecting a suitable tool and completing the task. Focused GR00T N1.7 probes show reduced selection accuracy on unseen tools and continued task execution under unrelated instructions. Code and data are available at https://snu-pi.github.io/HumanoidToolBench/.
+> World action models jointly learn to forecast world dynamics and predict robot actions, such that the learned internal world dynamics guide accurate actions. Existing approaches typically represent the world as RGB frames or latent counterparts while predicting actions as end-effector poses or joint angles, but they often struggle to capture the 3D spatial structure and contact geometry central to dexterous manipulation. We introduce Point World Action Model (PointWAM), a 3D world action model that decomposes the world into a scene (i.e., environment) and hands (i.e., actor), and jointly forecasts both as 3D point trajectories within a shared space-time coordinate frame. This explicit, disentangled representation enables effective pre-training on large-scale human demonstration videos without requiring any task-specific object or keypoint selection. Given a colored point cloud and a language instruction, PointWAM predicts how the scene and hands co-evolve in 3D space over time, then retargets the forecast hand motion to robot actions. Pre-training on human videos improves average DexJoCo success by 56.9 percentage points, and scene-trajectory supervision adds 10.9 points over forecasting the hands alone. With both, PointWAM surpasses the prior state of the art on ten DexJoCo tasks by 11.7 points and outperforms strong VLAs on a real robot.
 
 ---
 
-### Top 4: LiteReality-Agent: An Agentic System for Interactable 3D Indoor Scene Reconstruction
-- **Priority Score**: `100 pts` | **Published**: `2026-10-01`
-- **Focus Tracks**: `#embodied ai`
-- **Key Authors**: Zhening Huang, Yueyan Li, Johnathan Chiu et al.
-- **Direct Access**: [arXiv Abstract](http://arxiv.org/abs/2610.01863v1) | [PDF Fulltext](http://arxiv.org/pdf/2610.01863v1)
-
-**Executive Abstract**:
-> We present LiteReality-Agent, an agentic system for reconstructing real indoor environments as realistic, articulated, and simulation-ready 3D scenes from RGB-D scans. At its core, LiteReality-Agent formulates 3D reconstruction as a coding problem, in which a coding agent gathers evidence using specialised tools and iteratively edits a Python script, Room.py, which can be executed to produce a 3D digital twin of the room. With this formulation, we develop a robust observe-edit-verify harness that supports evidence gathering, measurement, verification, layout optimisation, simulation readiness, and quality control throughout the reconstruction process. LiteReality-Agent produces high-quality reconstructions suitable for simulation and downstream embodied AI tasks. Furthermore, as agent capabilities continue to improve rapidly, the system introduced by LiteReality-Agent remains a strong orchestration framework for future agents: it equips them with specialised tools, structured workflows, and robust verification mechanisms that substantially improve reconstruction quality and reliability. We demonstrate that LiteReality-Agent produces reconstructions that are more geometrically accurate, visually realistic, and simulation-compatible than those generated by recent frontier models, such as Astra and Fable. We therefore view LiteReality-Agent as a practical and important building block for robust real-to-sim systems. Both the source code and the data-capture application are publicly available. Code:https://github.com/LiteReality/LiteReality-Agent/
-
----
-
-### Top 5: InterEvolve: Test-Time Evolution of Reward Programs for Humanoid Loco-Manipulation
-- **Priority Score**: `95 pts` | **Published**: `2026-10-01`
+### Top 4: Beyond Reward Hacking: Proxy Divergence Across Four Layers of a Staged Humanoid Learning Pipeline
+- **Priority Score**: `95 pts` | **Published**: `2026-10-02`
 - **Focus Tracks**: `#humanoid`
-- **Key Authors**: Zhuo Lin, Sirui Xu, Liuyu Bian et al.
-- **Direct Access**: [arXiv Abstract](http://arxiv.org/abs/2610.02196v1) | [PDF Fulltext](http://arxiv.org/pdf/2610.02196v1)
+- **Key Authors**: Arunabh Bora
+- **Direct Access**: [arXiv Abstract](http://arxiv.org/abs/2610.03196v1) | [PDF Fulltext](http://arxiv.org/pdf/2610.03196v1)
 
 **Executive Abstract**:
-> We study test-time evolution for humanoid loco-manipulation: solving tasks that a controller was never trained for by repurposing its existing skills, improving from its own attempts, and retaining what it learns, without retraining. Our key insight is that a broad controller already holds much of the competence a new task needs, and that this competence becomes accessible through an interface between planning and control that is expressive enough to specify contact-rich, multi-stage interactions, yet executable and measurable enough that execution feedback can guide planning from experience. InterEvolve realizes this interface with two components. First, we develop an object-aware forward-backward (FB) behavioral foundation model, whose object residuals on a frozen body prior turn a new reward about the body or objects into loco-manipulation behavior at test time. Second, we specify tasks as reward programs: staged rewards with completion conditions and tunable constants. A large language model (LLM) agent revises the program structure in context, drawing on execution feedback and a skill library of verified programs, while a numerical optimizer tunes its constants. With every candidate verified across parallel simulation scenarios, the program explores new ways to induce, repurpose, and compose the controller's existing motor competence for the task at hand, and thus improves over iterations. Experiments show that human-designed rewards leave much of the FB model's loco-manipulation competence untapped, whereas the programs InterEvolve evolves release it, sometimes through novel strategies. It further produces behaviors for diverse tasks, complex scenes, and long-horizon compositions in simulation, and evolved skills run autonomously on a physical Unitree G1 from egocentric onboard perception.
+> A reinforcement-learning (RL) pipeline for a legged robot is assembled from proxies. A reward stands in for intended behaviour, a curriculum gate stands in for competence, an evaluation statistic stands in for robustness, and a reference motion stands in for an achievable skill. The traditional view treats only the first of these as optimised against, and so locates specification failure (reward hacking) in the reward alone. I argue that all four are proxies in the same formal sense, that each has a characteristic divergence mechanism, and that each admits a reformulation that closes it. For every layer I state the traditional formulation, derive the condition under which it diverges from its target, and give the alternative: first-order (L1) costs where quadratic kernels are flat, peak and outcome statistics where curriculum gates average, gate reachability and information checks, deterministic and phase-desynchronised evaluation, curriculum state treated as part of the model, feasibility-first reference design with residual feed-forward, and function-preserving input widening that lets one policy grow instead of being retrained. The arguments are illustrated by measurements from one continuous lineage of a PPO policy for a simulated 1.91 m humanoid, grown over four stages and 13,500 iterations on a single laptop GPU. Among them, a curriculum gate built on averaged error advanced at its rate limit on every check while the skill it gated was absent, and a batched push test whose synchronised resets aliased the gait phase ranked a 0.5 m/s push as more dangerous than a 2.0 m/s one.
+
+---
+
+### Top 5: EmbPASS: Towards Cross-Embodiment Open Panoramic Segmentation
+- **Priority Score**: `85 pts` | **Published**: `2026-10-02`
+- **Focus Tracks**: `#quadruped`
+- **Key Authors**: Pujun Guo, Yuanfan Zheng, Fei Teng et al.
+- **Direct Access**: [arXiv Abstract](http://arxiv.org/abs/2610.03248v1) | [PDF Fulltext](http://arxiv.org/pdf/2610.03248v1)
+
+**Executive Abstract**:
+> Panoramic images provide a complete 360-degree field of view, enabling comprehensive scene understanding for embodied perception. However, heterogeneous embodied platforms exhibit substantial differences in observation viewpoints and spatial layouts, giving rise to cross-embodiment observation shifts that pose additional challenges to consistent and reliable panoramic perception, while systematic studies of this problem remain limited. To bridge this gap, we introduce a new task, termed Cross-Embodiment Open Panoramic Segmentation. Meanwhile, we establish EmbPASS, a multi-platform panoramic semantic segmentation benchmark spanning Vehicle, Drone, Wearable, and Quadruped platforms under a unified semantic taxonomy, providing a testbed for systematically studying cross-embodiment panoramic perception. We further propose EPONet, an open-vocabulary panoramic semantic segmentation network that integrates Relation-Aware Metric Adapter (RAMA) and Content-Adaptive Semantic Transfer (CAST) to enhance spatial modeling and semantic transfer under heterogeneous embodied observations. Extensive experiments show that EPONet achieves the best platform-balanced performance on EmbPASS with 35.82% mIoU, outperforming the strongest baseline by 1.10%, while remaining competitive on existing panoramic segmentation benchmarks. The source code and EmbPASS benchmark will be made publicly available at https://github.com/guopj1/EmbPASS.
 
 ---
 
