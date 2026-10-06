@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Embodied AI & Robotics Intelligence Digest — October 05, 2026</title>
+    <title>Embodied AI & Robotics Intelligence Digest — October 06, 2026</title>
     <style>
         :root {
             --bg-base: #080c14;
@@ -242,7 +242,7 @@
         <header>
             <span class="pill-brand">Autonomous Research Intelligence</span>
             <h1>Embodied AI & Physical Frontier Briefing</h1>
-            <p class="subtitle">Compiled on October 05, 2026 • Ranked top 8 strategic breakthroughs out of incoming preprints.</p>
+            <p class="subtitle">Compiled on October 06, 2026 • Ranked top 8 strategic breakthroughs out of incoming preprints.</p>
             
             <div class="controls">
                 <input type="text" id="filterInput" class="search-box" placeholder="Filter papers by keywords (e.g. humanoid, tactile, diffusion)...">
@@ -251,257 +251,257 @@
 
         <main id="paperList">
             
-        <article class="paper-card" data-title="mixvla: adaptive mixing of non-invariant information for generalizable vision-language-action models" data-summary="vision-language-action (vla) models have achieved remarkable advances in robotic manipulation, yet their zero-shot generalization under out-of-distribution (ood) conditions remains limited. these models often entangle task-relevant invariant structure with environment-specific non-invariant factors, causing policies to rely on spurious appearance cues during action prediction. in this work, we propose \textbf{mixvla}, a model-agnostic training framework that improves the generalization of vla models without requiring additional ood data or architectural modifications. the key component of mixvla is \textbf{adaptive mixing of non-invariant information (ami)}. ami stochastically mixes non-invariant representations to regularize distribution-specific variability while preserving complementary predictive cues. the mixed non-invariant features are then fused with invariant representations for final action prediction, resulting in improved robustness without sacrificing policy expressiveness. extensive experiments across challenging manipulation settings, including libero, libero-plus, the robotwin perturbation suite, and real-world tasks, demonstrate that mixvla improves overall zero-shot robustness while retaining strong in-domain performance.">
+        <article class="paper-card" data-title="hierarchical reinforcement learning for collision-free locomotion of an underactuated biped" data-summary="a bipedal robot cannot deviate from its path to avoid an obstacle without disturbing its balance, and this coupling is most severe on underactuated platforms such as the biped considered here, which has four actuated joints per leg and no hip or ankle roll. this paper presents a hierarchical reinforcement learning (hrl) framework in which a high-level (hl) policy observes the robot pose, 36 raycast proximity measurements, moving-obstacle states, and a receding-horizon local goal, and outputs a body-velocity command $(v_x, v_y, ω_{yaw})$ every ten control steps, while a velocity-conditioned low-level (ll) policy tracks each command through pd-controlled joint targets. both policies are trained jointly with soft actor-critic (sac). because the converged gait is task-agnostic, it is frozen and driven by classical planners over the same command interface, yielding three controlled baselines: sac+a*, sac+rrt*, and sac+apf. across 100 evaluation trials per method in randomized pybullet environments, the proposed method reaches the goal in 98.0% of static and 88.0% of dynamic trials, against at most 78.0% and 68.0% for the planner hybrids, with path lengths within 4% of the a* reference, and ablations confirm that each observation channel and reward term contributes materially to this performance.">
             <div class="card-meta-top">
                 <span class="rank-tag">TOP #1</span>
                 <div class="score-badge">
                     <span class="score-label">Priority Index</span>
-                    <span class="score-value">135</span>
+                    <span class="score-value">140</span>
                 </div>
             </div>
             
-            <h2 class="paper-title">MixVLA: Adaptive Mixing of Non-Invariant Information for Generalizable Vision-Language-Action Models</h2>
+            <h2 class="paper-title">Hierarchical Reinforcement Learning for Collision-Free Locomotion of an Underactuated Biped</h2>
             
             <div class="author-row">
-                <span>🗓️ 2026-10-02</span>
-                <span>✍️ Pingrui Zhang, Yu Zhang, Pengyuan Wu et al.</span>
+                <span>🗓️ 2026-10-05</span>
+                <span>✍️ Jagannath Prasad Sahoo, Saurabh Kumar, Surya Prakash S. K. et al.</span>
             </div>
             
             <div class="badge-cluster">
-                <span class="badge">#vision-language-action</span><span class="badge">#vla</span>
+                <span class="badge">#bipedal</span><span class="badge">#reinforcement learning</span><span class="badge">#locomotion</span>
             </div>
             
-            <p class="paper-summary">Vision-Language-Action (VLA) models have achieved remarkable advances in robotic manipulation, yet their zero-shot generalization under out-of-distribution (OOD) conditions remains limited. These models often entangle task-relevant invariant structure with environment-specific non-invariant factors, causing policies to rely on spurious appearance cues during action prediction. In this work, we propose \textbf{MixVLA}, a model-agnostic training framework that improves the generalization of VLA models without requiring additional OOD data or architectural modifications. The key component of MixVLA is \textbf{Adaptive Mixing of Non-Invariant Information (AMI)}. AMI stochastically mixes non-invariant representations to regularize distribution-specific variability while preserving complementary predictive cues. The mixed non-invariant features are then fused with invariant representations for final action prediction, resulting in improved robustness without sacrificing policy expressiveness. Extensive experiments across challenging manipulation settings, including LIBERO, LIBERO-Plus, the RoboTwin perturbation suite, and real-world tasks, demonstrate that MixVLA improves overall zero-shot robustness while retaining strong in-domain performance.</p>
+            <p class="paper-summary">A bipedal robot cannot deviate from its path to avoid an obstacle without disturbing its balance, and this coupling is most severe on underactuated platforms such as the biped considered here, which has four actuated joints per leg and no hip or ankle roll. This paper presents a Hierarchical Reinforcement Learning (HRL) framework in which a High-Level (HL) policy observes the robot pose, 36 raycast proximity measurements, moving-obstacle states, and a receding-horizon local goal, and outputs a body-velocity command $(v_x, v_y, ω_{yaw})$ every ten control steps, while a velocity-conditioned Low-Level (LL) policy tracks each command through PD-controlled joint targets. Both policies are trained jointly with Soft Actor-Critic (SAC). Because the converged gait is task-agnostic, it is frozen and driven by classical planners over the same command interface, yielding three controlled baselines: SAC+A*, SAC+RRT*, and SAC+APF. Across 100 evaluation trials per method in randomized PyBullet environments, the proposed method reaches the goal in 98.0% of static and 88.0% of dynamic trials, against at most 78.0% and 68.0% for the planner hybrids, with path lengths within 4% of the A* reference, and ablations confirm that each observation channel and reward term contributes materially to this performance.</p>
             
             <div class="card-action-bar">
-                <a href="http://arxiv.org/pdf/2610.02898v1" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
+                <a href="http://arxiv.org/pdf/2610.05855v1" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
                     View PDF
                 </a>
-                <a href="http://arxiv.org/abs/2610.02898v1" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
+                <a href="http://arxiv.org/abs/2610.05855v1" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
                     arXiv Page &rarr;
                 </a>
             </div>
         </article>
         
-        <article class="paper-card" data-title="fastopd: on-policy distillation for lightweight vla deployment" data-summary="vision-language-action (vla) foundation models have scaled rapidly to enhance manipulation performance and generalizability, but this scaling incurs high computational costs that render real-world deployment increasingly challenging. existing approaches typically mitigate this issue by designing smaller architectures or reducing the iterative denoising steps in flow-based policies. in this work, we propose fastopd, a foundation-to-lightweight vla framework that enables the practical deployment of large-scale vlas through efficient on-policy distillation. specifically, fastopd adapts a flow map for single-state teacher supervision and combines it with a self-consistency objective to construct a compact student that learns the teacher dynamics. furthermore, we theoretically demonstrate that minimizing this objective allows the distilled student to recover a distribution on par with that induced by an ideal few-step teacher model. we evaluate fastopd across diverse foundation policies in simulation and real-world experiments. on libero, fastopd retains 84% of the performance of $π_{0.5}$ with only two inference steps, reducing inference latency by 78.1% while outperforming existing few-step distillation baselines in average success rate. with lingbot-vla as the teacher, fastopd improves the single-step success rate over the base student by 15.9 percentage points on robotwin 2.0. we further demonstrate its applicability to a world action model (wam) and deploy a compact student distilled from molmoact2 on a real robot.">
+        <article class="paper-card" data-title="transporting unsecured stacked payloads with a quadrupedal robot via multi-objective reinforcement learning" data-summary="transporting unsecured payloads with legged robots over uneven terrain requires balancing locomotion performance and payload stability, since aggressive motion can destabilize the payload even when the robot remains stable. we study quadrupedal transportation of unsecured stacked boxes on an edgeless torso-mounted board without dedicated payload sensors or active carrier mechanisms. to address this trade-off, we propose payload-adaptive multi-objective reinforcement learning for transportation (pamort). pamort trains a multi-objective base policy conditioned on a preference vector that weights locomotion and payload-stability reward groups, then trains a weight adjuster on the frozen policy to adapt this preference online from proprioception. in simulation, pamort achieves comparable or better overall transportation success than a corresponding single-objective baseline across different payload configurations, including an unseen three-box stack, despite training only with two boxes. real-world experiments on a unitree go2 demonstrate zero-shot transfer to slopes and steps at or beyond the training difficulty, with mean success rates of 0.850 for pamort and 0.675 for the baseline across eight tasks. these results demonstrate robust unsecured-payload transportation with online adaptation of the locomotion--payload trade-off from proprioceptive information.">
             <div class="card-meta-top">
                 <span class="rank-tag">TOP #2</span>
                 <div class="score-badge">
                     <span class="score-label">Priority Index</span>
+                    <span class="score-value">140</span>
+                </div>
+            </div>
+            
+            <h2 class="paper-title">Transporting Unsecured Stacked Payloads with a Quadrupedal Robot via Multi-Objective Reinforcement Learning</h2>
+            
+            <div class="author-row">
+                <span>🗓️ 2026-10-05</span>
+                <span>✍️ Nobuo Namura, Masayuki Hiromoto, Kento Uemura et al.</span>
+            </div>
+            
+            <div class="badge-cluster">
+                <span class="badge">#quadruped</span><span class="badge">#reinforcement learning</span><span class="badge">#locomotion</span>
+            </div>
+            
+            <p class="paper-summary">Transporting unsecured payloads with legged robots over uneven terrain requires balancing locomotion performance and payload stability, since aggressive motion can destabilize the payload even when the robot remains stable. We study quadrupedal transportation of unsecured stacked boxes on an edgeless torso-mounted board without dedicated payload sensors or active carrier mechanisms. To address this trade-off, we propose Payload-Adaptive Multi-Objective Reinforcement learning for Transportation (PAMORT). PAMORT trains a multi-objective base policy conditioned on a preference vector that weights locomotion and payload-stability reward groups, then trains a weight adjuster on the frozen policy to adapt this preference online from proprioception. In simulation, PAMORT achieves comparable or better overall transportation success than a corresponding single-objective baseline across different payload configurations, including an unseen three-box stack, despite training only with two boxes. Real-world experiments on a Unitree Go2 demonstrate zero-shot transfer to slopes and steps at or beyond the training difficulty, with mean success rates of 0.850 for PAMORT and 0.675 for the baseline across eight tasks. These results demonstrate robust unsecured-payload transportation with online adaptation of the locomotion--payload trade-off from proprioceptive information.</p>
+            
+            <div class="card-action-bar">
+                <a href="http://arxiv.org/pdf/2610.05819v1" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
+                    View PDF
+                </a>
+                <a href="http://arxiv.org/abs/2610.05819v1" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
+                    arXiv Page &rarr;
+                </a>
+            </div>
+        </article>
+        
+        <article class="paper-card" data-title="recursive video in-context learning for agentic robot" data-summary="llm agents that orchestrate frozen vision-language-action (vla) policies improve across episodes through text memory, which records what the agent did but not how the task is done. a demonstration video shows it, but fits poorly into an agent's context. the full video slows every turn, fixed keyframes lose the contact detail that decides whether a grasp holds, and what the agent needs shifts from the task's structure while planning to the frames around each contact. we introduce recursive video in-context learning (rv-icl), a training-free method that turns a demonstration into a hierarchy the agent navigates rather than a prompt it receives. the hierarchy is built from the sub-events of the demonstration, such as grasps and releases. its levels grow finer, from keyframes of the whole task to phases, moments and short clips, and are exposed through read-only tools. the agent reads the coarse levels before planning. during execution it re-enters the hierarchy whenever a step needs more detail and loads only the clip of its current sub-goal. one demonstration per task is enough. built on rpent, rv-icl raises success from 92.6% to 96.5% on libero-pro and from 86.7% to 95.8% on libero-plus.">
+            <div class="card-meta-top">
+                <span class="rank-tag">TOP #3</span>
+                <div class="score-badge">
+                    <span class="score-label">Priority Index</span>
                     <span class="score-value">135</span>
                 </div>
             </div>
             
-            <h2 class="paper-title">FastOPD: On-Policy Distillation for Lightweight VLA Deployment</h2>
+            <h2 class="paper-title">Recursive Video In-Context Learning for Agentic Robot</h2>
             
             <div class="author-row">
-                <span>🗓️ 2026-10-02</span>
-                <span>✍️ Yoojin Oh, Jeongsol Kim, Yeonwoo Seo et al.</span>
+                <span>🗓️ 2026-10-05</span>
+                <span>✍️ Wenrui Bao, Xinxin Liu, Bingxin Xu et al.</span>
             </div>
             
             <div class="badge-cluster">
                 <span class="badge">#vision-language-action</span><span class="badge">#vla</span>
             </div>
             
-            <p class="paper-summary">Vision-Language-Action (VLA) foundation models have scaled rapidly to enhance manipulation performance and generalizability, but this scaling incurs high computational costs that render real-world deployment increasingly challenging. Existing approaches typically mitigate this issue by designing smaller architectures or reducing the iterative denoising steps in flow-based policies. In this work, we propose FastOPD, a foundation-to-lightweight VLA framework that enables the practical deployment of large-scale VLAs through efficient on-policy distillation. Specifically, FastOPD adapts a flow map for single-state teacher supervision and combines it with a self-consistency objective to construct a compact student that learns the teacher dynamics. Furthermore, we theoretically demonstrate that minimizing this objective allows the distilled student to recover a distribution on par with that induced by an ideal few-step teacher model. We evaluate FastOPD across diverse foundation policies in simulation and real-world experiments. On LIBERO, FastOPD retains 84% of the performance of $π_{0.5}$ with only two inference steps, reducing inference latency by 78.1% while outperforming existing few-step distillation baselines in average success rate. With LingBot-VLA as the teacher, FastOPD improves the single-step success rate over the base student by 15.9 percentage points on RoboTwin 2.0. We further demonstrate its applicability to a World Action Model (WAM) and deploy a compact student distilled from MolmoAct2 on a real robot.</p>
+            <p class="paper-summary">LLM agents that orchestrate frozen vision-language-action (VLA) policies improve across episodes through text memory, which records what the agent did but not how the task is done. A demonstration video shows it, but fits poorly into an agent's context. The full video slows every turn, fixed keyframes lose the contact detail that decides whether a grasp holds, and what the agent needs shifts from the task's structure while planning to the frames around each contact. We introduce Recursive Video In-Context Learning (RV-ICL), a training-free method that turns a demonstration into a hierarchy the agent navigates rather than a prompt it receives. The hierarchy is built from the sub-events of the demonstration, such as grasps and releases. Its levels grow finer, from keyframes of the whole task to phases, moments and short clips, and are exposed through read-only tools. The agent reads the coarse levels before planning. During execution it re-enters the hierarchy whenever a step needs more detail and loads only the clip of its current sub-goal. One demonstration per task is enough. Built on RPent, RV-ICL raises success from 92.6% to 96.5% on LIBERO-PRO and from 86.7% to 95.8% on LIBERO-Plus.</p>
             
             <div class="card-action-bar">
-                <a href="http://arxiv.org/pdf/2610.02832v1" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
+                <a href="http://arxiv.org/pdf/2610.06843v1" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
                     View PDF
                 </a>
-                <a href="http://arxiv.org/abs/2610.02832v1" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
+                <a href="http://arxiv.org/abs/2610.06843v1" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
                     arXiv Page &rarr;
                 </a>
             </div>
         </article>
         
-        <article class="paper-card" data-title="pointwam: 3d world action modeling for dexterous robotic manipulation" data-summary="world action models jointly learn to forecast world dynamics and predict robot actions, such that the learned internal world dynamics guide accurate actions. existing approaches typically represent the world as rgb frames or latent counterparts while predicting actions as end-effector poses or joint angles, but they often struggle to capture the 3d spatial structure and contact geometry central to dexterous manipulation. we introduce point world action model (pointwam), a 3d world action model that decomposes the world into a scene (i.e., environment) and hands (i.e., actor), and jointly forecasts both as 3d point trajectories within a shared space-time coordinate frame. this explicit, disentangled representation enables effective pre-training on large-scale human demonstration videos without requiring any task-specific object or keypoint selection. given a colored point cloud and a language instruction, pointwam predicts how the scene and hands co-evolve in 3d space over time, then retargets the forecast hand motion to robot actions. pre-training on human videos improves average dexjoco success by 56.9 percentage points, and scene-trajectory supervision adds 10.9 points over forecasting the hands alone. with both, pointwam surpasses the prior state of the art on ten dexjoco tasks by 11.7 points and outperforms strong vlas on a real robot.">
+        <article class="paper-card" data-title="simforcing: distilling simulation motion priors into real-domain robot world models" data-summary="action-conditioned robot world models must respond precisely to robot trajectories while preserving realistic visual dynamics, yet learning both from heterogeneous robot videos remains challenging. simulation offers structured motion supervision, but appearance differences hinder direct transfer, and inaccurate simulation predictions can misguide real-video generation. we present simforcing, a simulation-guided framework that uses simulation both as a source of transferable motion knowledge and as a controllable reference for prediction. first, we transfer motion knowledge from a simulation teacher through latent-motion distillation, aligning temporal changes in latent space to internalize motion priors while mitigating the influence of appearance differences. second, we introduce multi-block simulation conditioning with condition dropout to exploit predicted simulation trajectories without relying excessively on their accuracy. our simulation-conditioning classifier-free guidance scheme unifies these two ideas by balancing predictions based on internalized motion knowledge with those additionally guided by simulation latents. the jointly trained student generates both simulation conditions and real-domain videos, requiring no additional world model at inference. on bridge, simforcing achieves the best psnr, ssim, lpips, and fvd among the compared methods without external embodied pretraining. evaluation on interndata-a1 further supports its applicability across robot datasets. moreover, using our trained world model to initialize a vision-language-action model improves libero success, suggesting its utility for downstream policy learning. \url{https://github.com/wang-xiaodong1899/simforcing}">
             <div class="card-meta-top">
-                <span class="rank-tag">TOP #3</span>
+                <span class="rank-tag">TOP #4</span>
                 <div class="score-badge">
                     <span class="score-label">Priority Index</span>
-                    <span class="score-value">120</span>
+                    <span class="score-value">135</span>
                 </div>
             </div>
             
-            <h2 class="paper-title">PointWAM: 3D World Action Modeling for Dexterous Robotic Manipulation</h2>
+            <h2 class="paper-title">SimForcing: Distilling Simulation Motion Priors into Real-Domain Robot World Models</h2>
             
             <div class="author-row">
-                <span>🗓️ 2026-10-02</span>
-                <span>✍️ Chunghyun Park, Beomjun Kim, Seungcheol Park et al.</span>
+                <span>🗓️ 2026-10-05</span>
+                <span>✍️ Xiaodong Wang, Tianle Li, Chuanxin Song et al.</span>
             </div>
             
             <div class="badge-cluster">
-                <span class="badge">#dexterous manipulation</span><span class="badge">#vla</span>
+                <span class="badge">#world model</span><span class="badge">#vision-language-action</span>
             </div>
             
-            <p class="paper-summary">World action models jointly learn to forecast world dynamics and predict robot actions, such that the learned internal world dynamics guide accurate actions. Existing approaches typically represent the world as RGB frames or latent counterparts while predicting actions as end-effector poses or joint angles, but they often struggle to capture the 3D spatial structure and contact geometry central to dexterous manipulation. We introduce Point World Action Model (PointWAM), a 3D world action model that decomposes the world into a scene (i.e., environment) and hands (i.e., actor), and jointly forecasts both as 3D point trajectories within a shared space-time coordinate frame. This explicit, disentangled representation enables effective pre-training on large-scale human demonstration videos without requiring any task-specific object or keypoint selection. Given a colored point cloud and a language instruction, PointWAM predicts how the scene and hands co-evolve in 3D space over time, then retargets the forecast hand motion to robot actions. Pre-training on human videos improves average DexJoCo success by 56.9 percentage points, and scene-trajectory supervision adds 10.9 points over forecasting the hands alone. With both, PointWAM surpasses the prior state of the art on ten DexJoCo tasks by 11.7 points and outperforms strong VLAs on a real robot.</p>
+            <p class="paper-summary">Action-conditioned robot world models must respond precisely to robot trajectories while preserving realistic visual dynamics, yet learning both from heterogeneous robot videos remains challenging. Simulation offers structured motion supervision, but appearance differences hinder direct transfer, and inaccurate simulation predictions can misguide real-video generation. We present SimForcing, a simulation-guided framework that uses simulation both as a source of transferable motion knowledge and as a controllable reference for prediction. First, we transfer motion knowledge from a simulation teacher through latent-motion distillation, aligning temporal changes in latent space to internalize motion priors while mitigating the influence of appearance differences. Second, we introduce multi-block simulation conditioning with condition dropout to exploit predicted simulation trajectories without relying excessively on their accuracy. Our simulation-conditioning classifier-free guidance scheme unifies these two ideas by balancing predictions based on internalized motion knowledge with those additionally guided by simulation latents. The jointly trained student generates both simulation conditions and real-domain videos, requiring no additional world model at inference. On Bridge, SimForcing achieves the best PSNR, SSIM, LPIPS, and FVD among the compared methods without external embodied pretraining. Evaluation on InternData-A1 further supports its applicability across robot datasets. Moreover, using our trained world model to initialize a vision-language-action model improves LIBERO success, suggesting its utility for downstream policy learning. \url{https://github.com/Wang-Xiaodong1899/SimForcing}</p>
             
             <div class="card-action-bar">
-                <a href="http://arxiv.org/pdf/2610.02840v1" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
+                <a href="http://arxiv.org/pdf/2610.06598v1" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
                     View PDF
                 </a>
-                <a href="http://arxiv.org/abs/2610.02840v1" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
+                <a href="http://arxiv.org/abs/2610.06598v1" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
                     arXiv Page &rarr;
                 </a>
             </div>
         </article>
         
-        <article class="paper-card" data-title="beyond reward hacking: proxy divergence across four layers of a staged humanoid learning pipeline" data-summary="a reinforcement-learning (rl) pipeline for a legged robot is assembled from proxies. a reward stands in for intended behaviour, a curriculum gate stands in for competence, an evaluation statistic stands in for robustness, and a reference motion stands in for an achievable skill. the traditional view treats only the first of these as optimised against, and so locates specification failure (reward hacking) in the reward alone. i argue that all four are proxies in the same formal sense, that each has a characteristic divergence mechanism, and that each admits a reformulation that closes it. for every layer i state the traditional formulation, derive the condition under which it diverges from its target, and give the alternative: first-order (l1) costs where quadratic kernels are flat, peak and outcome statistics where curriculum gates average, gate reachability and information checks, deterministic and phase-desynchronised evaluation, curriculum state treated as part of the model, feasibility-first reference design with residual feed-forward, and function-preserving input widening that lets one policy grow instead of being retrained. the arguments are illustrated by measurements from one continuous lineage of a ppo policy for a simulated 1.91 m humanoid, grown over four stages and 13,500 iterations on a single laptop gpu. among them, a curriculum gate built on averaged error advanced at its rate limit on every check while the skill it gated was absent, and a batched push test whose synchronised resets aliased the gait phase ranked a 0.5 m/s push as more dangerous than a 2.0 m/s one.">
+        <article class="paper-card" data-title="odyssey: a closed-loop benchmark for long-horizon real-world driving with explicit navigation routes" data-summary="closed-loop evaluation of end-to-end driving requires continuous rollouts that reveal how earlier decisions affect subsequent driving. however, existing benchmarks evaluate only short segments and fail to capture later consequences. ambiguous directional commands also obscure the intended navigation objective. we introduce odyssey, a closed-loop benchmark for long-horizon driving comprising 100 scenarios, each reconstructed from a 100-second nuplan driving log to preserve the context of navigation maneuvers and traffic interactions. to provide a consistent navigation objective, odyssey replaces directional commands with explicit standard-definition (sd) map routes that specify which roads to follow, while sensor-based planning determines local driving actions. throughout these rollouts, diffusion-based refinement of 3dgs-rendered images reduces rendering artifacts along the ego trajectory. to assess how effectively planners follow these routes and prepare for upcoming maneuvers, we introduce sd route compliance and pre-lane change score. these assessments are complemented by routeds, which extends the driving score with penalties for sd-route deviations and failed lane preparation. we adapt state-of-the-art planners, including vision-language-action (vla) models, and evaluate their navigation performance using these metrics. odyssey highlights open questions in route representation and integration for e2e driving. benchmark code and adapted baselines will be released publicly.">
             <div class="card-meta-top">
-                <span class="rank-tag">TOP #4</span>
+                <span class="rank-tag">TOP #5</span>
+                <div class="score-badge">
+                    <span class="score-label">Priority Index</span>
+                    <span class="score-value">135</span>
+                </div>
+            </div>
+            
+            <h2 class="paper-title">Odyssey: A Closed-Loop Benchmark for Long-Horizon Real-World Driving with Explicit Navigation Routes</h2>
+            
+            <div class="author-row">
+                <span>🗓️ 2026-10-05</span>
+                <span>✍️ Jungho Kim, Hongjae Shin, Seunghoon Yu et al.</span>
+            </div>
+            
+            <div class="badge-cluster">
+                <span class="badge">#vision-language-action</span><span class="badge">#vla</span>
+            </div>
+            
+            <p class="paper-summary">Closed-loop evaluation of end-to-end driving requires continuous rollouts that reveal how earlier decisions affect subsequent driving. However, existing benchmarks evaluate only short segments and fail to capture later consequences. Ambiguous directional commands also obscure the intended navigation objective. We introduce Odyssey, a closed-loop benchmark for long-horizon driving comprising 100 scenarios, each reconstructed from a 100-second nuPlan driving log to preserve the context of navigation maneuvers and traffic interactions. To provide a consistent navigation objective, Odyssey replaces directional commands with explicit standard-definition (SD) map routes that specify which roads to follow, while sensor-based planning determines local driving actions. Throughout these rollouts, diffusion-based refinement of 3DGS-rendered images reduces rendering artifacts along the ego trajectory. To assess how effectively planners follow these routes and prepare for upcoming maneuvers, we introduce SD Route Compliance and Pre-Lane Change Score. These assessments are complemented by RouteDS, which extends the Driving Score with penalties for SD-route deviations and failed lane preparation. We adapt state-of-the-art planners, including vision-language-action (VLA) models, and evaluate their navigation performance using these metrics. Odyssey highlights open questions in route representation and integration for E2E driving. Benchmark code and adapted baselines will be released publicly.</p>
+            
+            <div class="card-action-bar">
+                <a href="http://arxiv.org/pdf/2610.06469v1" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
+                    View PDF
+                </a>
+                <a href="http://arxiv.org/abs/2610.06469v1" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
+                    arXiv Page &rarr;
+                </a>
+            </div>
+        </article>
+        
+        <article class="paper-card" data-title="what the guard misses, the robot executes: implied harm in vla instructions" data-summary="vision-language-action models (vlas) act on instructions without being able to refuse, so screening harmful requests falls to monitors. we test whether these monitors catch ordinary robot tasks requested for harmful reasons, holding the task fixed while varying only how explicitly the intent is stated. $π_{0.5}$ completes the task at every level of explicitness, as often as for harmless controls. text guards flag nearly every blunt request but few implied ones: up to 95% of implied-harm runs end with the task done and no flag raised, and up to 90% even after recalibrating on robot instructions. monitoring the model's activations does not close this gap. linear probes separate harmful from harmless instructions almost perfectly in the base language and vision-language models, but this separation weakens after robot training in two model families, most for implied harm.">
+            <div class="card-meta-top">
+                <span class="rank-tag">TOP #6</span>
+                <div class="score-badge">
+                    <span class="score-label">Priority Index</span>
+                    <span class="score-value">135</span>
+                </div>
+            </div>
+            
+            <h2 class="paper-title">What the Guard Misses, the Robot Executes: Implied Harm in VLA Instructions</h2>
+            
+            <div class="author-row">
+                <span>🗓️ 2026-10-05</span>
+                <span>✍️ Sripad Karne, Arjun Balaji</span>
+            </div>
+            
+            <div class="badge-cluster">
+                <span class="badge">#vision-language-action</span><span class="badge">#vla</span>
+            </div>
+            
+            <p class="paper-summary">Vision-language-action models (VLAs) act on instructions without being able to refuse, so screening harmful requests falls to monitors. We test whether these monitors catch ordinary robot tasks requested for harmful reasons, holding the task fixed while varying only how explicitly the intent is stated. $π_{0.5}$ completes the task at every level of explicitness, as often as for harmless controls. Text guards flag nearly every blunt request but few implied ones: up to 95% of implied-harm runs end with the task done and no flag raised, and up to 90% even after recalibrating on robot instructions. Monitoring the model's activations does not close this gap. Linear probes separate harmful from harmless instructions almost perfectly in the base language and vision-language models, but this separation weakens after robot training in two model families, most for implied harm.</p>
+            
+            <div class="card-action-bar">
+                <a href="http://arxiv.org/pdf/2610.05818v1" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
+                    View PDF
+                </a>
+                <a href="http://arxiv.org/abs/2610.05818v1" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
+                    arXiv Page &rarr;
+                </a>
+            </div>
+        </article>
+        
+        <article class="paper-card" data-title="intermimicgen: scaling humanoid loco-manipulation through self-evolving motion imitation" data-summary="captured human-object interactions provide rich supervision for humanoid loco-manipulation, but they are sparse, heterogeneous, and not directly executable by robots. we introduce intermimicgen, a self-evolving motion-imitation framework in which robot motion data and a tracking policy improve each other. first, we consolidate motion-captured human-object interaction datasets and retarget them into humanoid robot references while preserving whole-body coordination and dexterous hand-object relationships. this produces a large and diverse humanoid robot reference collection for dexterous whole-body loco-manipulation. second, we train a physics-based generalist tracker that executes these references in simulation on a humanoid with dexterous hands, covering a scale and diversity beyond prior humanoid tracking systems for loco-manipulation. third, we close a data flywheel: each round makes small, task-preserving changes to where an interaction takes place and how the body performs it, fine-tunes the tracker on them, and keeps only the variants whose simulated execution completes the task, which seed the next round. with more iterations, these small edits compound into broader coverage around the sparse original demonstrations while preserving task semantics and motion quality. experiments show contact-preserving retargeting across robot configurations, broad tracking with a single generalist policy, executable motions that keep growing over augmentation rounds, and transfer to real robots. intermimicgen provides a unified path from heterogeneous human demonstrations to a continually expanding motion resource for humanoid robot learning.">
+            <div class="card-meta-top">
+                <span class="rank-tag">TOP #7</span>
                 <div class="score-badge">
                     <span class="score-label">Priority Index</span>
                     <span class="score-value">95</span>
                 </div>
             </div>
             
-            <h2 class="paper-title">Beyond Reward Hacking: Proxy Divergence Across Four Layers of a Staged Humanoid Learning Pipeline</h2>
+            <h2 class="paper-title">InterMimicGen: Scaling Humanoid Loco-Manipulation through Self-Evolving Motion Imitation</h2>
             
             <div class="author-row">
-                <span>🗓️ 2026-10-02</span>
-                <span>✍️ Arunabh Bora</span>
+                <span>🗓️ 2026-10-05</span>
+                <span>✍️ Yucheng Zhang, Sirui Xu, Jinhong Li et al.</span>
             </div>
             
             <div class="badge-cluster">
                 <span class="badge">#humanoid</span>
             </div>
             
-            <p class="paper-summary">A reinforcement-learning (RL) pipeline for a legged robot is assembled from proxies. A reward stands in for intended behaviour, a curriculum gate stands in for competence, an evaluation statistic stands in for robustness, and a reference motion stands in for an achievable skill. The traditional view treats only the first of these as optimised against, and so locates specification failure (reward hacking) in the reward alone. I argue that all four are proxies in the same formal sense, that each has a characteristic divergence mechanism, and that each admits a reformulation that closes it. For every layer I state the traditional formulation, derive the condition under which it diverges from its target, and give the alternative: first-order (L1) costs where quadratic kernels are flat, peak and outcome statistics where curriculum gates average, gate reachability and information checks, deterministic and phase-desynchronised evaluation, curriculum state treated as part of the model, feasibility-first reference design with residual feed-forward, and function-preserving input widening that lets one policy grow instead of being retrained. The arguments are illustrated by measurements from one continuous lineage of a PPO policy for a simulated 1.91 m humanoid, grown over four stages and 13,500 iterations on a single laptop GPU. Among them, a curriculum gate built on averaged error advanced at its rate limit on every check while the skill it gated was absent, and a batched push test whose synchronised resets aliased the gait phase ranked a 0.5 m/s push as more dangerous than a 2.0 m/s one.</p>
+            <p class="paper-summary">Captured human-object interactions provide rich supervision for humanoid loco-manipulation, but they are sparse, heterogeneous, and not directly executable by robots. We introduce InterMimicGen, a self-evolving motion-imitation framework in which robot motion data and a tracking policy improve each other. First, we consolidate motion-captured human-object interaction datasets and retarget them into humanoid robot references while preserving whole-body coordination and dexterous hand-object relationships. This produces a large and diverse humanoid robot reference collection for dexterous whole-body loco-manipulation. Second, we train a physics-based generalist tracker that executes these references in simulation on a humanoid with dexterous hands, covering a scale and diversity beyond prior humanoid tracking systems for loco-manipulation. Third, we close a data flywheel: each round makes small, task-preserving changes to where an interaction takes place and how the body performs it, fine-tunes the tracker on them, and keeps only the variants whose simulated execution completes the task, which seed the next round. With more iterations, these small edits compound into broader coverage around the sparse original demonstrations while preserving task semantics and motion quality. Experiments show contact-preserving retargeting across robot configurations, broad tracking with a single generalist policy, executable motions that keep growing over augmentation rounds, and transfer to real robots. InterMimicGen provides a unified path from heterogeneous human demonstrations to a continually expanding motion resource for humanoid robot learning.</p>
             
             <div class="card-action-bar">
-                <a href="http://arxiv.org/pdf/2610.03196v1" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
+                <a href="http://arxiv.org/pdf/2610.06850v1" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
                     View PDF
                 </a>
-                <a href="http://arxiv.org/abs/2610.03196v1" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
+                <a href="http://arxiv.org/abs/2610.06850v1" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
                     arXiv Page &rarr;
                 </a>
             </div>
         </article>
         
-        <article class="paper-card" data-title="embpass: towards cross-embodiment open panoramic segmentation" data-summary="panoramic images provide a complete 360-degree field of view, enabling comprehensive scene understanding for embodied perception. however, heterogeneous embodied platforms exhibit substantial differences in observation viewpoints and spatial layouts, giving rise to cross-embodiment observation shifts that pose additional challenges to consistent and reliable panoramic perception, while systematic studies of this problem remain limited. to bridge this gap, we introduce a new task, termed cross-embodiment open panoramic segmentation. meanwhile, we establish embpass, a multi-platform panoramic semantic segmentation benchmark spanning vehicle, drone, wearable, and quadruped platforms under a unified semantic taxonomy, providing a testbed for systematically studying cross-embodiment panoramic perception. we further propose eponet, an open-vocabulary panoramic semantic segmentation network that integrates relation-aware metric adapter (rama) and content-adaptive semantic transfer (cast) to enhance spatial modeling and semantic transfer under heterogeneous embodied observations. extensive experiments show that eponet achieves the best platform-balanced performance on embpass with 35.82% miou, outperforming the strongest baseline by 1.10%, while remaining competitive on existing panoramic segmentation benchmarks. the source code and embpass benchmark will be made publicly available at https://github.com/guopj1/embpass.">
-            <div class="card-meta-top">
-                <span class="rank-tag">TOP #5</span>
-                <div class="score-badge">
-                    <span class="score-label">Priority Index</span>
-                    <span class="score-value">85</span>
-                </div>
-            </div>
-            
-            <h2 class="paper-title">EmbPASS: Towards Cross-Embodiment Open Panoramic Segmentation</h2>
-            
-            <div class="author-row">
-                <span>🗓️ 2026-10-02</span>
-                <span>✍️ Pujun Guo, Yuanfan Zheng, Fei Teng et al.</span>
-            </div>
-            
-            <div class="badge-cluster">
-                <span class="badge">#quadruped</span>
-            </div>
-            
-            <p class="paper-summary">Panoramic images provide a complete 360-degree field of view, enabling comprehensive scene understanding for embodied perception. However, heterogeneous embodied platforms exhibit substantial differences in observation viewpoints and spatial layouts, giving rise to cross-embodiment observation shifts that pose additional challenges to consistent and reliable panoramic perception, while systematic studies of this problem remain limited. To bridge this gap, we introduce a new task, termed Cross-Embodiment Open Panoramic Segmentation. Meanwhile, we establish EmbPASS, a multi-platform panoramic semantic segmentation benchmark spanning Vehicle, Drone, Wearable, and Quadruped platforms under a unified semantic taxonomy, providing a testbed for systematically studying cross-embodiment panoramic perception. We further propose EPONet, an open-vocabulary panoramic semantic segmentation network that integrates Relation-Aware Metric Adapter (RAMA) and Content-Adaptive Semantic Transfer (CAST) to enhance spatial modeling and semantic transfer under heterogeneous embodied observations. Extensive experiments show that EPONet achieves the best platform-balanced performance on EmbPASS with 35.82% mIoU, outperforming the strongest baseline by 1.10%, while remaining competitive on existing panoramic segmentation benchmarks. The source code and EmbPASS benchmark will be made publicly available at https://github.com/guopj1/EmbPASS.</p>
-            
-            <div class="card-action-bar">
-                <a href="http://arxiv.org/pdf/2610.03248v1" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
-                    View PDF
-                </a>
-                <a href="http://arxiv.org/abs/2610.03248v1" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
-                    arXiv Page &rarr;
-                </a>
-            </div>
-        </article>
-        
-        <article class="paper-card" data-title="crowdocc: monocular semantic scene completion for quadruped robots in crowded indoor environments" data-summary="monocular semantic scene completion (ssc) for quadruped robots remains underexplored in real crowded indoor environments, where human-scene occlusion disrupts static geometry and human occupancy predictions are often incomplete or spatially misplaced. we present crowdocc, an rgb-d dataset and monocular ssc framework for this setting. crowdocc contains 25.1k frames from 11 indoor scenes, with semantic occupancy annotations constructed through static dynamic decoupling. our framework combines: (i) normal guided scene geometry fusion (ngsgf) to complement depth-aware lifting with surface-normal cues for occlusion robust geometry; and (ii) human-centric sparse interaction (hcsi) to selectively model human-human and local human scene relations in 3d. our method achieves state-of-the-art ssc performance on crowdocc's scene-disjoint test set, reaching 15.80 iou, 11.40 miou, and 46.23 human iou, demonstrating generalization to unseen indoor scenes.">
-            <div class="card-meta-top">
-                <span class="rank-tag">TOP #6</span>
-                <div class="score-badge">
-                    <span class="score-label">Priority Index</span>
-                    <span class="score-value">85</span>
-                </div>
-            </div>
-            
-            <h2 class="paper-title">CrowdOcc: Monocular Semantic Scene Completion for Quadruped Robots in Crowded Indoor Environments</h2>
-            
-            <div class="author-row">
-                <span>🗓️ 2026-10-02</span>
-                <span>✍️ Feiyang Chen, Jincheng Hu, Yiduo Chen et al.</span>
-            </div>
-            
-            <div class="badge-cluster">
-                <span class="badge">#quadruped</span>
-            </div>
-            
-            <p class="paper-summary">Monocular semantic scene completion (SSC) for quadruped robots remains underexplored in real crowded indoor environments, where human-scene occlusion disrupts static geometry and human occupancy predictions are often incomplete or spatially misplaced. We present CrowdOcc, an RGB-D dataset and monocular SSC framework for this setting. CrowdOcc contains 25.1K frames from 11 indoor scenes, with semantic occupancy annotations constructed through static dynamic decoupling. Our framework combines: (i) Normal Guided Scene Geometry Fusion (NGSGF) to complement depth-aware lifting with surface-normal cues for occlusion robust geometry; and (ii) Human-Centric Sparse Interaction (HCSI) to selectively model human-human and local human scene relations in 3D. Our method achieves state-of-the-art SSC performance on CrowdOcc's scene-disjoint test set, reaching 15.80 IoU, 11.40 mIoU, and 46.23 Human IoU, demonstrating generalization to unseen indoor scenes.</p>
-            
-            <div class="card-action-bar">
-                <a href="http://arxiv.org/pdf/2610.03031v1" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
-                    View PDF
-                </a>
-                <a href="http://arxiv.org/abs/2610.03031v1" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
-                    arXiv Page &rarr;
-                </a>
-            </div>
-        </article>
-        
-        <article class="paper-card" data-title="dexjoco-x: benchmarking action representations for multi-hand dexterous manipulation" data-summary="as dexterous hands proliferate, collecting data and training policies separately for every morphology becomes increasingly impractical. scalable cross-embodiment learning therefore requires a unified representation that captures shared manipulation structure while preserving morphology-specific control. differences in hands, tasks, datasets, and control interfaces prevent existing studies from isolating the effects of representation, pretraining, and architecture. we introduce dexjoco-x, a benchmark and toolkit for controlled comparison across seven representative dexterous hands, six single-arm and bimanual tasks, and 2,100 balanced demonstrations. dexjoco-x provides a matched multi-hand, multi-task protocol with common scenes, success criteria, and execution interfaces, redesigned glove-to-hand mappings, and an automated pipeline that expands reviewed demonstrations across randomized scenes. using $π_{0.5}$, ego-pi, and being-h0.5, we examine whether a shared action interface is sufficient for multi-hand learning. expanding $π_{0.5}$ to an 80-dimensional bimanual output yields near-zero success. ego-pi preserves the pretrained action head through interleaved prediction and supports per-hand multi-task learning, but remains ineffective for seven-hand joint training. by contrast, being-h0.5 combines cross-embodiment pretraining, a unified action space, and embodiment-aware experts, enabling one policy to control all seven hands. within this architecture, function-aligned action slots achieve 47.7% mean success, compared with 47.0% for native coordinates and 33.1% for dexlatent. these results show that cross-embodiment representation depends on the entire learning system: action coordinates, pretraining, and architecture must jointly separate shared manipulation structure from embodiment-specific control.">
-            <div class="card-meta-top">
-                <span class="rank-tag">TOP #7</span>
-                <div class="score-badge">
-                    <span class="score-label">Priority Index</span>
-                    <span class="score-value">80</span>
-                </div>
-            </div>
-            
-            <h2 class="paper-title">DexJoCo-X: Benchmarking Action Representations for Multi-Hand Dexterous Manipulation</h2>
-            
-            <div class="author-row">
-                <span>🗓️ 2026-10-02</span>
-                <span>✍️ Xiangwei Jiang, Yao Mu, Lixin Duan et al.</span>
-            </div>
-            
-            <div class="badge-cluster">
-                <span class="badge">#dexterous manipulation</span>
-            </div>
-            
-            <p class="paper-summary">As dexterous hands proliferate, collecting data and training policies separately for every morphology becomes increasingly impractical. Scalable cross-embodiment learning therefore requires a unified representation that captures shared manipulation structure while preserving morphology-specific control. Differences in hands, tasks, datasets, and control interfaces prevent existing studies from isolating the effects of representation, pretraining, and architecture. We introduce DexJoCo-X, a benchmark and toolkit for controlled comparison across seven representative dexterous hands, six single-arm and bimanual tasks, and 2,100 balanced demonstrations. DexJoCo-X provides a matched multi-hand, multi-task protocol with common scenes, success criteria, and execution interfaces, redesigned glove-to-hand mappings, and an automated pipeline that expands reviewed demonstrations across randomized scenes. Using $π_{0.5}$, Ego-Pi, and Being-H0.5, we examine whether a shared action interface is sufficient for multi-hand learning. Expanding $π_{0.5}$ to an 80-dimensional bimanual output yields near-zero success. Ego-Pi preserves the pretrained action head through interleaved prediction and supports per-hand multi-task learning, but remains ineffective for seven-hand joint training. By contrast, Being-H0.5 combines cross-embodiment pretraining, a unified action space, and embodiment-aware experts, enabling one policy to control all seven hands. Within this architecture, function-aligned action slots achieve 47.7% mean success, compared with 47.0% for native coordinates and 33.1% for DexLatent. These results show that cross-embodiment representation depends on the entire learning system: action coordinates, pretraining, and architecture must jointly separate shared manipulation structure from embodiment-specific control.</p>
-            
-            <div class="card-action-bar">
-                <a href="http://arxiv.org/pdf/2610.03278v1" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
-                    View PDF
-                </a>
-                <a href="http://arxiv.org/abs/2610.03278v1" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
-                    arXiv Page &rarr;
-                </a>
-            </div>
-        </article>
-        
-        <article class="paper-card" data-title="how to find and reuse policies for continuous adaptation in lifelong reinforcement learning" data-summary="in lifelong reinforcement learning, retaining previously learned policies is not sufficient for effective transfer to a new task. useful knowledge may be distributed across several prior policies, and its relevance may change as the learner acquires experience. one hypothesis is that task similarity can be effectively used in a continual learning setting to find and combine previously learned policies. to test it, adaptive mask selection and composition (amsc) is designed to estimate similarity from online experience via non-parametric wasserstein task embeddings from state-action-reward samples. the z-score-normalized sparsemax of the similarity scores are used to derive a variable-size support to periodically choose and weight policies to form a prior when learning a new task. on ct-graph and minigrid, amsc achieves higher mean performance and forward transfer than the evaluated modular composition baselines while exhibiting no forgetting. results on continual world suggest that identifying relevant prior knowledge and determining its layer-specific composition may require additional layer-specific tuning. ablations show that selecting relevant sources and determining how strongly to reuse them are central to these gains. independently measured pairwise transfer is also positively associated with task-embedding similarity. these results indicate that task similarity can be an effective criterion to select and weight specific knowledge for reuse in lifelong reinforcement learning.">
+        <article class="paper-card" data-title="tapdreamer: transferable adversarial patches for world action models" data-summary="world models learn to predict how their environment will evolve, making them an important foundation for general-purpose robotic control. yet world action models depend on camera inputs whose manipulation can corrupt the visual representations used across tasks and action policies. existing attacks on these models optimize against the victim's actions or predicted futures and therefore require access to target-model outputs. in this paper, we propose an attack, tapdreamer, against world action models that instead uses a public encoder alone to construct a fixed local perturbation that transfers across tasks and action architectures. tapdreamer requires no target-policy queries. our key insight is that interactions between patch-induced changes in attention weights and value vectors broadcast a nearly identical representation shift far beyond the patch footprint, and this shift remains stable across task observations. guided by this insight, tapdreamer uses six frames from one source task to maximize the global l1 distance between clean and patched encoder representations. in closed-loop evaluation, one frozen patch per benchmark, covering about 6.5% of the input, reduces fastwam's success rate from 97.7% to 0.0% across 40 libero tasks and from 90.8% to 0.0% across 50 robotwin tasks; matched random patches retain 81.5% and 79.2% success. the same patches reduce success to 2.1% and 0.8% on two dreamwam configurations and to 10.0% on motus. these results show that protecting downstream action generation alone is insufficient: defenses for world action models must also secure shared visual encoders against persistent local perturbations.">
             <div class="card-meta-top">
                 <span class="rank-tag">TOP #8</span>
                 <div class="score-badge">
                     <span class="score-label">Priority Index</span>
-                    <span class="score-value">80</span>
+                    <span class="score-value">90</span>
                 </div>
             </div>
             
-            <h2 class="paper-title">How to Find and Reuse Policies for Continuous Adaptation in Lifelong Reinforcement Learning</h2>
+            <h2 class="paper-title">TAPDreamer: Transferable Adversarial Patches for World Action Models</h2>
             
             <div class="author-row">
-                <span>🗓️ 2026-10-02</span>
-                <span>✍️ Saptarshi Nath, Inish M. D'Souza, Antonio Carta et al.</span>
+                <span>🗓️ 2026-10-05</span>
+                <span>✍️ Xuanyu Lu, Fengqing Jiang, Kaiyuan Zheng et al.</span>
             </div>
             
             <div class="badge-cluster">
-                <span class="badge">#reinforcement learning</span>
+                <span class="badge">#world model</span>
             </div>
             
-            <p class="paper-summary">In lifelong reinforcement learning, retaining previously learned policies is not sufficient for effective transfer to a new task. Useful knowledge may be distributed across several prior policies, and its relevance may change as the learner acquires experience. One hypothesis is that task similarity can be effectively used in a continual learning setting to find and combine previously learned policies. To test it, Adaptive Mask Selection and Composition (AMSC) is designed to estimate similarity from online experience via non-parametric Wasserstein task embeddings from state-action-reward samples. The z-score-normalized sparsemax of the similarity scores are used to derive a variable-size support to periodically choose and weight policies to form a prior when learning a new task. On CT-graph and MiniGrid, AMSC achieves higher mean performance and forward transfer than the evaluated modular composition baselines while exhibiting no forgetting. Results on Continual World suggest that identifying relevant prior knowledge and determining its layer-specific composition may require additional layer-specific tuning. Ablations show that selecting relevant sources and determining how strongly to reuse them are central to these gains. Independently measured pairwise transfer is also positively associated with task-embedding similarity. These results indicate that task similarity can be an effective criterion to select and weight specific knowledge for reuse in lifelong reinforcement learning.</p>
+            <p class="paper-summary">World models learn to predict how their environment will evolve, making them an important foundation for general-purpose robotic control. Yet world action models depend on camera inputs whose manipulation can corrupt the visual representations used across tasks and action policies. Existing attacks on these models optimize against the victim's actions or predicted futures and therefore require access to target-model outputs. In this paper, we propose an attack, TAPDreamer, against world action models that instead uses a public encoder alone to construct a fixed local perturbation that transfers across tasks and action architectures. TAPDreamer requires no target-policy queries. Our key insight is that interactions between patch-induced changes in attention weights and value vectors broadcast a nearly identical representation shift far beyond the patch footprint, and this shift remains stable across task observations. Guided by this insight, TAPDreamer uses six frames from one source task to maximize the global L1 distance between clean and patched encoder representations. In closed-loop evaluation, one frozen patch per benchmark, covering about 6.5% of the input, reduces FastWAM's success rate from 97.7% to 0.0% across 40 LIBERO tasks and from 90.8% to 0.0% across 50 RoboTwin tasks; matched random patches retain 81.5% and 79.2% success. The same patches reduce success to 2.1% and 0.8% on two DreamWAM configurations and to 10.0% on Motus. These results show that protecting downstream action generation alone is insufficient: defenses for world action models must also secure shared visual encoders against persistent local perturbations.</p>
             
             <div class="card-action-bar">
-                <a href="http://arxiv.org/pdf/2610.03119v1" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
+                <a href="http://arxiv.org/pdf/2610.06814v1" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
                     View PDF
                 </a>
-                <a href="http://arxiv.org/abs/2610.03119v1" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
+                <a href="http://arxiv.org/abs/2610.06814v1" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
                     arXiv Page &rarr;
                 </a>
             </div>
