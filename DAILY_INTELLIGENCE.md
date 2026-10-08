@@ -1,61 +1,61 @@
-# 🤖 Embodied AI & Robotics Frontier Briefing (2026-10-07)
+# 🤖 Embodied AI & Robotics Frontier Briefing (2026-10-08)
 
 > *Automated Intelligence Briefing generated via custom ETL scoring pipeline. Prioritizes foundation models, manipulation, locomotion, and physical AI systems.*
 
 ---
 
-### Top 1: QF3: Fast Flow RL with Filtered Q-Gradients
-- **Priority Score**: `150 pts` | **Published**: `2026-10-06`
-- **Focus Tracks**: `#humanoid` `#reinforcement learning` `#locomotion`
-- **Key Authors**: Chung Min Kim, Brent Yi, David McAllister et al.
-- **Direct Access**: [arXiv Abstract](http://arxiv.org/abs/2610.08789v1) | [PDF Fulltext](http://arxiv.org/pdf/2610.08789v1)
+### Top 1: Juno: Taming Predictive Latents for Vision-Language-Action Models
+- **Priority Score**: `175 pts` | **Published**: `2026-10-07`
+- **Focus Tracks**: `#world model` `#vision-language-action` `#vla`
+- **Key Authors**: Yuchen Zhu, Chenyi Xu, Yulin Zhang et al.
+- **Direct Access**: [arXiv Abstract](http://arxiv.org/abs/2610.09940v1) | [PDF Fulltext](http://arxiv.org/pdf/2610.09940v1)
 
 **Executive Abstract**:
-> Flow policies have become a standard policy class for learning robot behaviors from demonstrations, but reinforcement learning is still critical for improving pre-trained flow policies or learning them from scratch through interaction. We introduce QF3 (Fast Flow RL with Filtered Q-Gradients), an online off-policy RL algorithm that trains a flow policy with flow matching plus the critic's action gradient, backpropagated through a one-step prediction of the flow's output. To keep updates where the critic and this prediction are reliable, QF3 applies the critic gradient only to action dimensions that stay near the replay action. To our knowledge, QF3 is the first off-policy flow RL method to train humanoid locomotion policies from scratch and transfer them zero-shot to hardware. Paired with a high-throughput off-policy training recipe, it trains humanoid locomotion and motion-tracking policies with a 10x wall-clock speedup over FPO++, a recent on-policy flow RL method. We further apply QF3 to fine-tune pretrained flow-based manipulation policies on both ABC-Sim and Robomimic tasks. These results suggest that QF3 can both learn robot policies from scratch and refine those acquired from demonstrations. Website: https://qf3-rl.github.io/
+> Joint-embedding predictive architectures (JEPAs) predict masked or future observations in representation space, offering a natural source of predictive latents for vision-language-action (VLA) models. Yet making these latents useful across pretraining, policy learning, and deployment requires addressing three failures: mismatch with embodiment-specific control, interference with action learning, and teacher miscalibration under distribution shifts. We introduce Juno, a unified framework built around one action-conditioned JEPA that serves as a control-aligned representation backbone, a predictive teacher, and an adaptable dynamics model. During pretraining, we train it on embodiment-matched trajectories and use a dynamic CLS loss to transfer motion-weighted patch dynamics to a compact global state. During policy learning, we fuse current-frame JEPA patches into VLA perception and use a decoupled reasoning branch with separate transformation parameters to distill future latent states for action generation. During deployment, we adapt the world model on all observed transitions, including failed rollouts, freeze the adapted teacher, and re-align the policy on verified executions using LoRA adapters and a trainable action head, without expert corrections or task rewards. On SimplerEnv, Juno raises average success from $60.9\%$ to $68.5\%$ over Qwen3GR00T, the strongest baseline, and test-time adaptation further reaches $72.7\%$; on a real robot, it retains $70\%$--$75\%$ success under background, height, and object shifts where the base policy collapses to $0\%$.
 
 ---
 
-### Top 2: PhoneBot: A Low-Cost Open Humanoid Robot Platform Reusing Smartphones
-- **Priority Score**: `140 pts` | **Published**: `2026-10-06`
-- **Focus Tracks**: `#humanoid` `#locomotion` `#actuator`
-- **Key Authors**: Ruochen Hou, Quanyou Wang, Daniel Koh et al.
-- **Direct Access**: [arXiv Abstract](http://arxiv.org/abs/2610.08737v1) | [PDF Fulltext](http://arxiv.org/pdf/2610.08737v1)
+### Top 2: RoboPace: Contact-Aware Time-Optimal Retiming for Action-Chunk Policies
+- **Priority Score**: `175 pts` | **Published**: `2026-10-07`
+- **Focus Tracks**: `#vision-language-action` `#vla` `#actuator` `#teleoperation`
+- **Key Authors**: Mimo Shirasaka, Takehiko Ohkawa, Takuya Okubo et al.
+- **Direct Access**: [arXiv Abstract](http://arxiv.org/abs/2610.09696v1) | [PDF Fulltext](http://arxiv.org/pdf/2610.09696v1)
 
 **Executive Abstract**:
-> The adoption of humanoid robots in education and research remains limited by high hardware costs, complex sensing systems, and substantial computational requirements. This paper presents PhoneBot, a low-cost, open-source humanoid robot platform that repurposes commodity smartphones as its primary sensing and computing unit. By using a smartphone's integrated inertial measurement unit (IMU), camera, wireless connectivity, and onboard processing capabilities, PhoneBot reduces hardware costs and simplifies the system architecture. The robot combines a modular lower-body structure driven by 13 low-cost actuators with a torso-mounted smartphone that supports perception, control computation, and user interaction. We describe the mechanical design, software architecture, and real-time communication framework that support stable locomotion and capabilities including vision-based human following, conversational interaction, filming, and mobile telepresence. Experimental evaluations demonstrate reliable walking, perception-driven interaction, and straightforward deployment using off-the-shelf consumer smartphones. With fully open-source hardware and software designs, PhoneBot provides an affordable, reproducible platform for education, research, and rapid prototyping. More details are available at https://phonebot.dev.
+> Robot manipulation data collection has been shifting from teleoperation toward robot-free demonstrations, through interfaces such as the Universal Manipulation Interface (UMI) or directly from human hands. Vision-Language-Action (VLA) policies trained on such data inherit the demonstrator's timing. Yet human timing does not directly transfer to robots: compliant hands tolerate fast contact, whereas robots may overshoot due to actuator and tracking limitations; conversely, robots can move faster in free space. This motivates a unified approach that reconciles execution speed with contact safety. We present RoboPace, an online retiming layer that preserves the policy's geometric path while adapting its timing, respecting the target robot's kinematic and dynamic constraints. It adapts execution speed based on predicted contact, jointly accounting for contact-dependent speed limits and the robot's motion constraints. The method requires no policy retraining and operates in real time. Across three contact-rich tasks on a dual-arm robot, faster uniform execution and physical-limit-only retiming largely fail. RoboPace instead achieves higher overall success than slow uniform execution while completing four of five commands in approximately half the time, retaining the reliability of slow execution without its time cost.
 
 ---
 
-### Top 3: RIWANav: Recursive World-Action Models with Self-Improvement for Urban Navigation
-- **Priority Score**: `120 pts` | **Published**: `2026-10-06`
+### Top 3: Many Ways to Succeed: Diversity-Driven RL Fine-Tuning for VLA Generalization
+- **Priority Score**: `165 pts` | **Published**: `2026-10-07`
+- **Focus Tracks**: `#reinforcement learning` `#vision-language-action` `#vla`
+- **Key Authors**: Haoru Li, Jinmei Liu, Zhiyong Wang et al.
+- **Direct Access**: [arXiv Abstract](http://arxiv.org/abs/2610.09943v1) | [PDF Fulltext](http://arxiv.org/pdf/2610.09943v1)
+
+**Executive Abstract**:
+> Reinforcement learning (RL) fine-tuning improves vision-language-action (VLA) policies through closed-loop experience, yet generalization beyond the fine-tuning distribution remains limited. Our analysis reveals a selective reshaping of exploration: RL contracts behavior globally, yet diversifies successful trajectories, elicits success with fewer rollouts, and covers more of the latent task-valid solution space than supervised fine-tuning. Broader successful-mode coverage may provide alternative strategies under distribution shifts. Inspired by this, we introduce DRIVE (Diversity-driven RL fIne-tuning for VLA gEneralization), which turns successful-behavior diversity into an explicit RL objective. DRIVE groups rollouts under matched task conditions, compares their trajectories with temporal alignment, and derives a success-conditioned intrinsic reward from relative behavioral diversity. This design encourages broader coverage of feasible solutions without rewarding diverse failures or superficial timing differences. Across LIBERO-Plus, ManiSkill3, and RoboTwin 2.0, DRIVE improves the average out-of-domain (OOD) performance over vanilla RL fine-tuning by 5.3 points on $π_0$ and 2.0 points on $π_{0.5}$. On a dual-arm AgileX PiPER-X platform, DRIVE further increases average OOD success from 64.1% to 73.3% (+9.2 points), demonstrating gains that persist under physical deployment.
+
+---
+
+### Top 4: YUBI-STAG: Contact and Semantic-Rich Alignment for VLAs via Automated Video-Language Grounding
+- **Priority Score**: `135 pts` | **Published**: `2026-10-07`
+- **Focus Tracks**: `#vision-language-action` `#vla`
+- **Key Authors**: Masatoshi Tateno, Takehiko Ohkawa, Yueh-Hua Wu et al.
+- **Direct Access**: [arXiv Abstract](http://arxiv.org/abs/2610.09718v1) | [PDF Fulltext](http://arxiv.org/pdf/2610.09718v1)
+
+**Executive Abstract**:
+> Vision-Language-Action (VLA) models acquire broad manipulation capabilities via large-scale pretraining, yet eliciting them through language requires fine-grained alignment between instructions and physical interactions. Existing robot demonstrations typically provide only coarse task descriptions, omitting how actions are executed, including which gripper acts, which object is contacted, and how it is grasped and moved. We introduce YUBI-STAG, a framework for Spatio-Temporal Annotation and Grounding that automatically enriches manipulation demonstrations with interaction-rich semantics to align pretrained VLAs with fine-grained manipulation language. Combining contact-object segmentation with vision-language models, YUBI-STAG annotates object identities, attributes and states, per-gripper actions, bimanual coordination, and spatially grounded interactions. To address YUBI-STAG's reliance on localized sequences and multi-stage VLM inference, we distill it into YUBI-VLM. YUBI-VLM directly recovers action structure and annotations from raw, unsegmented video in few inference calls and operates from wrist views alone. We evaluate both frameworks on YUBI-STAG-Bench across temporal, semantic, and spatial grounding tasks. YUBI-VLM retains much of YUBI-STAG's annotation accuracy with fewer inference calls and shorter runtime while generalizing to unseen manipulations. Finally, post-training VLA policies on these annotations aligns them with fine-grained language and contact-aware structure. Bimanual experiments demonstrate improved performance and instruction following, including control over object identity, acting gripper, target location, and spatial relations absent from original labels.
+
+---
+
+### Top 5: Beyond Policy Support: Interaction Constrained Offline Reinforcement Learning for Autonomous Driving
+- **Priority Score**: `120 pts` | **Published**: `2026-10-07`
 - **Focus Tracks**: `#world model` `#reinforcement learning`
-- **Key Authors**: Jing Xie, Shouwei Ruan, Yubin Wang et al.
-- **Direct Access**: [arXiv Abstract](http://arxiv.org/abs/2610.08640v1) | [PDF Fulltext](http://arxiv.org/pdf/2610.08640v1)
+- **Key Authors**: Mahmoud Selim, Cristina Cipriani, Karl Henrik Johansson
+- **Direct Access**: [arXiv Abstract](http://arxiv.org/abs/2610.09763v1) | [PDF Fulltext](http://arxiv.org/pdf/2610.09763v1)
 
 **Executive Abstract**:
-> Long-horizon urban navigation requires sequential local decisions whose errors can compound over time. Imitation learning (IL) rarely learns from failures, while physical trial-and-error reinforcement learning (RL) is costly. Action-conditioned world models can provide imagined feedback by predicting visual consequences for candidate actions. However, a frozen world model may become less reliable as the policy evolves. In this paper, we introduce RIWANAV, a post-training framework that casts the coupled adaptation of a world model and an action model (policy) as task-specific recursive self-improvement (RSI). Each cycle alternates two updates. The world model evaluates policy actions through imagined outcomes, providing comparative feedback for group-relative policy optimization (GRPO). The improved policy then constructs a grounded self-curriculum, selecting expert-consistent action-video pairs by behavioral novelty and prediction error. The refined world model supplies feedback for the next policy update, closing the recursive self-improvement loop. Experiments show that RIWANAV outperforms training baselines and prior methods, validating the proposed recursive self-improvement loop between the policy and world model. Real-world trials further demonstrate its practical applicability.
-
----
-
-### Top 4: Magnet-Aware Control of Legged Robots
-- **Priority Score**: `110 pts` | **Published**: `2026-10-06`
-- **Focus Tracks**: `#quadruped` `#locomotion`
-- **Key Authors**: J. Playan Garai, S. B. Djuve, C. McGreavy et al.
-- **Direct Access**: [arXiv Abstract](http://arxiv.org/abs/2610.08653v1) | [PDF Fulltext](http://arxiv.org/pdf/2610.08653v1)
-
-**Executive Abstract**:
-> Autonomous robots can increase uptime and reduce human exposure in Big Science facilities, but strong magnetic fields needed for their operation corrupt sensors and induce pose-dependent mechanical wrenches that destabilize robots and challenge conventional reactive controllers. This paper presents a control framework for modeling, estimating, and dynamically compensating for spatially varying magnetic wrenches acting on legged robots to improve robustness in these fields. We introduce a custom physics plugin for the MuJoCo simulator to model magnetic forces on rigid-body elements, alongside an inverse field-estimation framework to infer the latent magnetic field directly from quadruped dynamic responses and any number of sensor readings. Furthermore, we develop a Magnet-Aware Model Predictive Control (MPC) and Whole-Body Control (WBC) architecture that predicts and counteracts magnetic perturbations during locomotion to increase the range of magnetic fields in which the robot can operate. The effectiveness of the framework is validated through both simulation and physical hardware experiments. We show our method increases the the maximum rejectable disturbances from magnetic field in the force space by a factor of 2.5 and and between 1.6-2 times in torque space compared to a non-compensated system. Within the proposed magnetic field, this constitutes an increase in the area in which the robot can operate by 29,34% of which 10,84% would have previously caused an immediate collapse to non-compensated controllers.
-
----
-
-### Top 5: Feeling Through the Load: Compliant Quadruped Locomotion under Payload Interactions
-- **Priority Score**: `110 pts` | **Published**: `2026-10-06`
-- **Focus Tracks**: `#quadruped` `#locomotion`
-- **Key Authors**: Shaunak A. Mehta, Mayank Mishra, Prajit KrisshnaKumar et al.
-- **Direct Access**: [arXiv Abstract](http://arxiv.org/abs/2610.08637v1) | [PDF Fulltext](http://arxiv.org/pdf/2610.08637v1)
-
-**Executive Abstract**:
-> Quadruped robots are increasingly expected to carry objects while moving through human environments. But what happens when a person interacts directly with the payload rather than with the robot? If the payload is unrestrained, the robot must distinguish intentional external interactions from ordinary payload motion, while still keeping the load balanced and maintaining stable locomotion. How can a quadruped infer and compliantly respond to such interactions using only onboard measurements? In this work, we develop a force-aware locomotion framework that treats payload interactions as commands that shape the motion of the combined robot-payload system. Our approach separates the learning of force-aware locomotion and force estimation on an unrestrained payload. We combine a compliant load-carrying policy with a causal force estimator, trained through estimator-in-the-loop data aggregation and finetuning, to predict interactions from onboard robot measurements. Our simulations and real-world experiments show that the resulting controller can maintain stable payload-carrying locomotion, yield compliantly to external interactions, and use the inferred force to support human-guided changes in the robot's trajectory.
+> Offline reinforcement learning enables reward-driven policy improvement from fixed datasets without requiring online exploration, making it particularly attractive in safety-critical domains. A central challenge, however, is distribution shift: policy optimization may favor actions that are weakly supported by the offline data, rendering value estimates unreliable. Existing approaches primarily control this shift in the policy's own action space. In interactive environments such as autonomous driving, this can be insufficient: a candidate ego trajectory may remain well supported under the marginal behavior distribution while being poorly supported jointly with the surrounding-agent behavior observed in the logged interaction. We refer to this degradation in interaction support as \emph{interaction distribution shift} (IDS), and introduce \emph{Interaction-Constrained Drive Policy} (ICDP), an offline reinforcement learning framework that explicitly controls interaction-level distribution shift. Starting from the joint data distribution over ego and surrounding-agent futures, we show that joint-support degradation decomposes exactly into an ego-support component and a residual interaction-support component. We recover the latter through contrastive density-ratio estimation, isolating interaction compatibility without explicit joint-density modeling, surrounding-agent prediction, or rollouts in reactive simulators or learned world models during policy optimization. Closed-loop evaluations on nuPlan, Interplan and real-world truck experiments show that ICDP suppresses high-value yet interaction-unsupported trajectory selections and improves performance in interaction-critical driving scenarios. Project webpage: https://mahmoud-selim.github.io/ICDP/
 
 ---
 
