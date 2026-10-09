@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Embodied AI & Robotics Intelligence Digest — October 08, 2026</title>
+    <title>Embodied AI & Robotics Intelligence Digest — October 09, 2026</title>
     <style>
         :root {
             --bg-base: #080c14;
@@ -242,7 +242,7 @@
         <header>
             <span class="pill-brand">Autonomous Research Intelligence</span>
             <h1>Embodied AI & Physical Frontier Briefing</h1>
-            <p class="subtitle">Compiled on October 08, 2026 • Ranked top 8 strategic breakthroughs out of incoming preprints.</p>
+            <p class="subtitle">Compiled on October 09, 2026 • Ranked top 8 strategic breakthroughs out of incoming preprints.</p>
             
             <div class="controls">
                 <input type="text" id="filterInput" class="search-box" placeholder="Filter papers by keywords (e.g. humanoid, tactile, diffusion)...">
@@ -251,7 +251,7 @@
 
         <main id="paperList">
             
-        <article class="paper-card" data-title="juno: taming predictive latents for vision-language-action models" data-summary="joint-embedding predictive architectures (jepas) predict masked or future observations in representation space, offering a natural source of predictive latents for vision-language-action (vla) models. yet making these latents useful across pretraining, policy learning, and deployment requires addressing three failures: mismatch with embodiment-specific control, interference with action learning, and teacher miscalibration under distribution shifts. we introduce juno, a unified framework built around one action-conditioned jepa that serves as a control-aligned representation backbone, a predictive teacher, and an adaptable dynamics model. during pretraining, we train it on embodiment-matched trajectories and use a dynamic cls loss to transfer motion-weighted patch dynamics to a compact global state. during policy learning, we fuse current-frame jepa patches into vla perception and use a decoupled reasoning branch with separate transformation parameters to distill future latent states for action generation. during deployment, we adapt the world model on all observed transitions, including failed rollouts, freeze the adapted teacher, and re-align the policy on verified executions using lora adapters and a trainable action head, without expert corrections or task rewards. on simplerenv, juno raises average success from $60.9\%$ to $68.5\%$ over qwen3gr00t, the strongest baseline, and test-time adaptation further reaches $72.7\%$; on a real robot, it retains $70\%$--$75\%$ success under background, height, and object shifts where the base policy collapses to $0\%$.">
+        <article class="paper-card" data-title="plaw-vla: predictive latent world modeling for vision-language-action policies" data-summary="learning to predict how the world evolves can provide vision-language-action (vla) policies with predictive context for long-horizon control, but its effectiveness depends on what future representation is modeled and how it conditions action generation. we introduce plaw-vla, which models task-relevant future states in a pretrained prediction-oriented representation space, reducing the need to predict control-irrelevant visual details. built on a mixture-of-transformers architecture, plaw-vla conditions action generation on observation history, current task semantics, and predicted future states through structured causal attention. experiments show a +11.8 percentage-point (pp) gain over reactive policies on robotwin hard horizon iii and a +1.77 pp gain over reconstruction-oriented latent prediction on zero-shot libero-plus, supporting improved long-horizon control and generalization under distribution shift, respectively. by avoiding low-level visual reconstruction, plaw-vla lowers the burden of future prediction, enabling a lightweight latent world model with parallel future prediction and about 1/19 the inference latency of generative world-action modeling at comparable policy performance.">
             <div class="card-meta-top">
                 <span class="rank-tag">TOP #1</span>
                 <div class="score-badge">
@@ -260,248 +260,248 @@
                 </div>
             </div>
             
-            <h2 class="paper-title">Juno: Taming Predictive Latents for Vision-Language-Action Models</h2>
+            <h2 class="paper-title">PLaW-VLA: Predictive Latent World Modeling for Vision-Language-Action Policies</h2>
             
             <div class="author-row">
-                <span>🗓️ 2026-10-07</span>
-                <span>✍️ Yuchen Zhu, Chenyi Xu, Yulin Zhang et al.</span>
+                <span>🗓️ 2026-10-08</span>
+                <span>✍️ Yu Liu, Hetian Guo, Tianlv Huang et al.</span>
             </div>
             
             <div class="badge-cluster">
                 <span class="badge">#world model</span><span class="badge">#vision-language-action</span><span class="badge">#vla</span>
             </div>
             
-            <p class="paper-summary">Joint-embedding predictive architectures (JEPAs) predict masked or future observations in representation space, offering a natural source of predictive latents for vision-language-action (VLA) models. Yet making these latents useful across pretraining, policy learning, and deployment requires addressing three failures: mismatch with embodiment-specific control, interference with action learning, and teacher miscalibration under distribution shifts. We introduce Juno, a unified framework built around one action-conditioned JEPA that serves as a control-aligned representation backbone, a predictive teacher, and an adaptable dynamics model. During pretraining, we train it on embodiment-matched trajectories and use a dynamic CLS loss to transfer motion-weighted patch dynamics to a compact global state. During policy learning, we fuse current-frame JEPA patches into VLA perception and use a decoupled reasoning branch with separate transformation parameters to distill future latent states for action generation. During deployment, we adapt the world model on all observed transitions, including failed rollouts, freeze the adapted teacher, and re-align the policy on verified executions using LoRA adapters and a trainable action head, without expert corrections or task rewards. On SimplerEnv, Juno raises average success from $60.9\%$ to $68.5\%$ over Qwen3GR00T, the strongest baseline, and test-time adaptation further reaches $72.7\%$; on a real robot, it retains $70\%$--$75\%$ success under background, height, and object shifts where the base policy collapses to $0\%$.</p>
+            <p class="paper-summary">Learning to predict how the world evolves can provide vision-language-action (VLA) policies with predictive context for long-horizon control, but its effectiveness depends on what future representation is modeled and how it conditions action generation. We introduce PLaW-VLA, which models task-relevant future states in a pretrained prediction-oriented representation space, reducing the need to predict control-irrelevant visual details. Built on a Mixture-of-Transformers architecture, PLaW-VLA conditions action generation on observation history, current task semantics, and predicted future states through structured causal attention. Experiments show a +11.8 percentage-point (pp) gain over reactive policies on RoboTwin Hard Horizon III and a +1.77 pp gain over reconstruction-oriented latent prediction on zero-shot LIBERO-Plus, supporting improved long-horizon control and generalization under distribution shift, respectively. By avoiding low-level visual reconstruction, PLaW-VLA lowers the burden of future prediction, enabling a lightweight latent world model with parallel future prediction and about 1/19 the inference latency of generative world-action modeling at comparable policy performance.</p>
             
             <div class="card-action-bar">
-                <a href="http://arxiv.org/pdf/2610.09940v1" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
+                <a href="http://arxiv.org/pdf/2610.12285v1" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
                     View PDF
                 </a>
-                <a href="http://arxiv.org/abs/2610.09940v1" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
+                <a href="http://arxiv.org/abs/2610.12285v1" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
                     arXiv Page &rarr;
                 </a>
             </div>
         </article>
         
-        <article class="paper-card" data-title="robopace: contact-aware time-optimal retiming for action-chunk policies" data-summary="robot manipulation data collection has been shifting from teleoperation toward robot-free demonstrations, through interfaces such as the universal manipulation interface (umi) or directly from human hands. vision-language-action (vla) policies trained on such data inherit the demonstrator's timing. yet human timing does not directly transfer to robots: compliant hands tolerate fast contact, whereas robots may overshoot due to actuator and tracking limitations; conversely, robots can move faster in free space. this motivates a unified approach that reconciles execution speed with contact safety. we present robopace, an online retiming layer that preserves the policy's geometric path while adapting its timing, respecting the target robot's kinematic and dynamic constraints. it adapts execution speed based on predicted contact, jointly accounting for contact-dependent speed limits and the robot's motion constraints. the method requires no policy retraining and operates in real time. across three contact-rich tasks on a dual-arm robot, faster uniform execution and physical-limit-only retiming largely fail. robopace instead achieves higher overall success than slow uniform execution while completing four of five commands in approximately half the time, retaining the reliability of slow execution without its time cost.">
+        <article class="paper-card" data-title="a balanced data diet: addressing the exploration bottleneck in mega-scale rl for robot control" data-summary="general-purpose robots must perform a wide range of tasks from agile locomotion to dexterous manipulation. while sim-to-real reinforcement learning (rl) has proven to be a useful tool for this goal, current rl pipelines depend on engineering-heavy, per-task structural priors such as shaped rewards and demonstrations. recent work has shown that diverse simulator resets, combined with massively parallel simulation, can alleviate much of this engineering burden on several manipulation problems. however, we find that naively scaling this paradigm to more precise or dynamic problems remains non-trivial. while simulator resets can help with exploration, uniformly sampling over this distribution wastes a growing fraction of learning experience on task configurations the policy has already mastered or cannot yet attempt. this makes it challenging to see the expected benefits of scaling parallel environments for rl, since much of the learning signal in a batch is wasted during learning. to mitigate this, we introduce success guided sampling (sgs), a simple adaptive sampler that concentrates rl training on task configurations around the frontier of the policy's capabilities. doing so allows large-scale simulated rl to make the most out of the experience in a batch, enabling much more effective scaling to large-scale parallel simulation. across experiments using up to $2^{20}$ (over one million) parallel environments, sgs enables rl to solve challenging multi-terrain quadruped locomotion and contact-rich assembly tasks that prior methods fail to solve. finally, we distill the learned manipulation policies into rgb-based policies and demonstrate zero-shot transfer to several challenging assembly tasks on real hardware. project website: https://sgs-rl.github.io/.">
             <div class="card-meta-top">
                 <span class="rank-tag">TOP #2</span>
                 <div class="score-badge">
                     <span class="score-label">Priority Index</span>
-                    <span class="score-value">175</span>
+                    <span class="score-value">170</span>
                 </div>
             </div>
             
-            <h2 class="paper-title">RoboPace: Contact-Aware Time-Optimal Retiming for Action-Chunk Policies</h2>
+            <h2 class="paper-title">A Balanced Data Diet: Addressing the Exploration Bottleneck in Mega-Scale RL for Robot Control</h2>
             
             <div class="author-row">
-                <span>🗓️ 2026-10-07</span>
-                <span>✍️ Mimo Shirasaka, Takehiko Ohkawa, Takuya Okubo et al.</span>
+                <span>🗓️ 2026-10-08</span>
+                <span>✍️ Octi Zhang, Mateo Guaman Castro, Patrick Yin et al.</span>
             </div>
             
             <div class="badge-cluster">
-                <span class="badge">#vision-language-action</span><span class="badge">#vla</span><span class="badge">#actuator</span><span class="badge">#teleoperation</span>
+                <span class="badge">#quadruped</span><span class="badge">#reinforcement learning</span><span class="badge">#dexterous manipulation</span><span class="badge">#locomotion</span>
             </div>
             
-            <p class="paper-summary">Robot manipulation data collection has been shifting from teleoperation toward robot-free demonstrations, through interfaces such as the Universal Manipulation Interface (UMI) or directly from human hands. Vision-Language-Action (VLA) policies trained on such data inherit the demonstrator's timing. Yet human timing does not directly transfer to robots: compliant hands tolerate fast contact, whereas robots may overshoot due to actuator and tracking limitations; conversely, robots can move faster in free space. This motivates a unified approach that reconciles execution speed with contact safety. We present RoboPace, an online retiming layer that preserves the policy's geometric path while adapting its timing, respecting the target robot's kinematic and dynamic constraints. It adapts execution speed based on predicted contact, jointly accounting for contact-dependent speed limits and the robot's motion constraints. The method requires no policy retraining and operates in real time. Across three contact-rich tasks on a dual-arm robot, faster uniform execution and physical-limit-only retiming largely fail. RoboPace instead achieves higher overall success than slow uniform execution while completing four of five commands in approximately half the time, retaining the reliability of slow execution without its time cost.</p>
+            <p class="paper-summary">General-purpose robots must perform a wide range of tasks from agile locomotion to dexterous manipulation. While sim-to-real reinforcement learning (RL) has proven to be a useful tool for this goal, current RL pipelines depend on engineering-heavy, per-task structural priors such as shaped rewards and demonstrations. Recent work has shown that diverse simulator resets, combined with massively parallel simulation, can alleviate much of this engineering burden on several manipulation problems. However, we find that naively scaling this paradigm to more precise or dynamic problems remains non-trivial. While simulator resets can help with exploration, uniformly sampling over this distribution wastes a growing fraction of learning experience on task configurations the policy has already mastered or cannot yet attempt. This makes it challenging to see the expected benefits of scaling parallel environments for RL, since much of the learning signal in a batch is wasted during learning. To mitigate this, we introduce Success Guided Sampling (SGS), a simple adaptive sampler that concentrates RL training on task configurations around the frontier of the policy's capabilities. Doing so allows large-scale simulated RL to make the most out of the experience in a batch, enabling much more effective scaling to large-scale parallel simulation. Across experiments using up to $2^{20}$ (over one million) parallel environments, SGS enables RL to solve challenging multi-terrain quadruped locomotion and contact-rich assembly tasks that prior methods fail to solve. Finally, we distill the learned manipulation policies into RGB-based policies and demonstrate zero-shot transfer to several challenging assembly tasks on real hardware. Project website: https://sgs-rl.github.io/.</p>
             
             <div class="card-action-bar">
-                <a href="http://arxiv.org/pdf/2610.09696v1" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
+                <a href="http://arxiv.org/pdf/2610.12465v1" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
                     View PDF
                 </a>
-                <a href="http://arxiv.org/abs/2610.09696v1" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
+                <a href="http://arxiv.org/abs/2610.12465v1" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
                     arXiv Page &rarr;
                 </a>
             </div>
         </article>
         
-        <article class="paper-card" data-title="many ways to succeed: diversity-driven rl fine-tuning for vla generalization" data-summary="reinforcement learning (rl) fine-tuning improves vision-language-action (vla) policies through closed-loop experience, yet generalization beyond the fine-tuning distribution remains limited. our analysis reveals a selective reshaping of exploration: rl contracts behavior globally, yet diversifies successful trajectories, elicits success with fewer rollouts, and covers more of the latent task-valid solution space than supervised fine-tuning. broader successful-mode coverage may provide alternative strategies under distribution shifts. inspired by this, we introduce drive (diversity-driven rl fine-tuning for vla generalization), which turns successful-behavior diversity into an explicit rl objective. drive groups rollouts under matched task conditions, compares their trajectories with temporal alignment, and derives a success-conditioned intrinsic reward from relative behavioral diversity. this design encourages broader coverage of feasible solutions without rewarding diverse failures or superficial timing differences. across libero-plus, maniskill3, and robotwin 2.0, drive improves the average out-of-domain (ood) performance over vanilla rl fine-tuning by 5.3 points on $π_0$ and 2.0 points on $π_{0.5}$. on a dual-arm agilex piper-x platform, drive further increases average ood success from 64.1% to 73.3% (+9.2 points), demonstrating gains that persist under physical deployment.">
+        <article class="paper-card" data-title="viola: learning generalist humanoid control policies from human data" data-summary="teaching a humanoid to follow instructions with its whole body runs into two obstacles. its action space is large and tightly coupled: legs, arms, and fingers must move together while the robot keeps its balance, which makes joint-level actions hard to learn. and humanoid demonstrations are scarce, so current humanoid generalist policies do not follow new instructions out of the box and are fine-tuned on teleoperated demonstrations of each task before deployment. human demonstrations exist in far larger numbers, but a person's motion is not a robot command. we remove both obstacles by changing what the generalist policy predicts. we introduce viola, a generalist humanoid policy that predicts body and hand motion latents instead of joint commands. a pretrained body- and hand-controller execute these latents on the robot. their corresponding motion encoders map human and robot motion into the same latent spaces. a human recording is therefore labeled in the policy's action space, and the training demonstration pool contains 140.6 million frames, 93.2% of them human. as a result, viola follows locomotion instructions on the real robot zero-shot, without task-specific fine-tuning, reaching 100% success where gr00t n1.7 and $ψ_0$ reach 16.7% and 0%, respectively. it also reaches 88.6% manipulation success without task-specific fine-tuning. the same approach works across two vla and one world-action model backbones. a generalist policy trained on human demonstrations alone performs locomotion tasks on the real robot zero-shot. code and checkpoints will be released.">
             <div class="card-meta-top">
                 <span class="rank-tag">TOP #3</span>
                 <div class="score-badge">
                     <span class="score-label">Priority Index</span>
-                    <span class="score-value">165</span>
+                    <span class="score-value">160</span>
                 </div>
             </div>
             
-            <h2 class="paper-title">Many Ways to Succeed: Diversity-Driven RL Fine-Tuning for VLA Generalization</h2>
+            <h2 class="paper-title">VioLA: Learning Generalist Humanoid Control Policies from Human Data</h2>
             
             <div class="author-row">
-                <span>🗓️ 2026-10-07</span>
-                <span>✍️ Haoru Li, Jinmei Liu, Zhiyong Wang et al.</span>
+                <span>🗓️ 2026-10-08</span>
+                <span>✍️ Mert Albaba, Jens Beißwenger, Anna Manasyan et al.</span>
             </div>
             
             <div class="badge-cluster">
-                <span class="badge">#reinforcement learning</span><span class="badge">#vision-language-action</span><span class="badge">#vla</span>
+                <span class="badge">#humanoid</span><span class="badge">#locomotion</span><span class="badge">#vla</span>
             </div>
             
-            <p class="paper-summary">Reinforcement learning (RL) fine-tuning improves vision-language-action (VLA) policies through closed-loop experience, yet generalization beyond the fine-tuning distribution remains limited. Our analysis reveals a selective reshaping of exploration: RL contracts behavior globally, yet diversifies successful trajectories, elicits success with fewer rollouts, and covers more of the latent task-valid solution space than supervised fine-tuning. Broader successful-mode coverage may provide alternative strategies under distribution shifts. Inspired by this, we introduce DRIVE (Diversity-driven RL fIne-tuning for VLA gEneralization), which turns successful-behavior diversity into an explicit RL objective. DRIVE groups rollouts under matched task conditions, compares their trajectories with temporal alignment, and derives a success-conditioned intrinsic reward from relative behavioral diversity. This design encourages broader coverage of feasible solutions without rewarding diverse failures or superficial timing differences. Across LIBERO-Plus, ManiSkill3, and RoboTwin 2.0, DRIVE improves the average out-of-domain (OOD) performance over vanilla RL fine-tuning by 5.3 points on $π_0$ and 2.0 points on $π_{0.5}$. On a dual-arm AgileX PiPER-X platform, DRIVE further increases average OOD success from 64.1% to 73.3% (+9.2 points), demonstrating gains that persist under physical deployment.</p>
+            <p class="paper-summary">Teaching a humanoid to follow instructions with its whole body runs into two obstacles. Its action space is large and tightly coupled: legs, arms, and fingers must move together while the robot keeps its balance, which makes joint-level actions hard to learn. And humanoid demonstrations are scarce, so current humanoid generalist policies do not follow new instructions out of the box and are fine-tuned on teleoperated demonstrations of each task before deployment. Human demonstrations exist in far larger numbers, but a person's motion is not a robot command. We remove both obstacles by changing what the generalist policy predicts. We introduce VioLA, a generalist humanoid policy that predicts body and hand motion latents instead of joint commands. A pretrained body- and hand-controller execute these latents on the robot. Their corresponding motion encoders map human and robot motion into the same latent spaces. A human recording is therefore labeled in the policy's action space, and the training demonstration pool contains 140.6 million frames, 93.2% of them human. As a result, VioLA follows locomotion instructions on the real robot zero-shot, without task-specific fine-tuning, reaching 100% success where GR00T N1.7 and $Ψ_0$ reach 16.7% and 0%, respectively. It also reaches 88.6% manipulation success without task-specific fine-tuning. The same approach works across two VLA and one world-action model backbones. A generalist policy trained on human demonstrations alone performs locomotion tasks on the real robot zero-shot. Code and checkpoints will be released.</p>
             
             <div class="card-action-bar">
-                <a href="http://arxiv.org/pdf/2610.09943v1" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
+                <a href="http://arxiv.org/pdf/2610.12435v1" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
                     View PDF
                 </a>
-                <a href="http://arxiv.org/abs/2610.09943v1" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
+                <a href="http://arxiv.org/abs/2610.12435v1" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
                     arXiv Page &rarr;
                 </a>
             </div>
         </article>
         
-        <article class="paper-card" data-title="yubi-stag: contact and semantic-rich alignment for vlas via automated video-language grounding" data-summary="vision-language-action (vla) models acquire broad manipulation capabilities via large-scale pretraining, yet eliciting them through language requires fine-grained alignment between instructions and physical interactions. existing robot demonstrations typically provide only coarse task descriptions, omitting how actions are executed, including which gripper acts, which object is contacted, and how it is grasped and moved. we introduce yubi-stag, a framework for spatio-temporal annotation and grounding that automatically enriches manipulation demonstrations with interaction-rich semantics to align pretrained vlas with fine-grained manipulation language. combining contact-object segmentation with vision-language models, yubi-stag annotates object identities, attributes and states, per-gripper actions, bimanual coordination, and spatially grounded interactions. to address yubi-stag's reliance on localized sequences and multi-stage vlm inference, we distill it into yubi-vlm. yubi-vlm directly recovers action structure and annotations from raw, unsegmented video in few inference calls and operates from wrist views alone. we evaluate both frameworks on yubi-stag-bench across temporal, semantic, and spatial grounding tasks. yubi-vlm retains much of yubi-stag's annotation accuracy with fewer inference calls and shorter runtime while generalizing to unseen manipulations. finally, post-training vla policies on these annotations aligns them with fine-grained language and contact-aware structure. bimanual experiments demonstrate improved performance and instruction following, including control over object identity, acting gripper, target location, and spatial relations absent from original labels.">
+        <article class="paper-card" data-title="walking on roofs: exploring the potential of walking robots for construction work on roofs" data-summary="this paper investigates the feasibility of deploying quadruped walking robots for the automation of work in roof environments. while quadrupeds have demonstrated versatility across various domains, their large-scale deployment remains limited, partly due to lack of application-specific designs. roof environments represent a novel and unexplored use case, combining high safety risks for human workers with repetitive, strenuous tasks that could benefit from robotic assistance. a dedicated test rig of a roof's surface was designed to evaluate the baseline performance of a commercial quadruped, the \emph{unitree go2}, in this new environment. experiments revealed that standard ball feet are inherently inadequate for locomotion on sloped roofs: slippage increased quadratically with incline angle, get-up and lie-down sequences were only possible on small inclines, and critical failures already occurred regularly on moderate inclines of 25°. this work provides the first systematic assessment of quadruped locomotion in roof environments, highlighting both the potential and the current limitations of this application and establishes a baseline for future research. effective solutions will require a combination of task-oriented foot designs, advanced contact mechanics and environment-specific control strategies, such as reinforcement learning for roof-adapted gaits.">
             <div class="card-meta-top">
                 <span class="rank-tag">TOP #4</span>
+                <div class="score-badge">
+                    <span class="score-label">Priority Index</span>
+                    <span class="score-value">140</span>
+                </div>
+            </div>
+            
+            <h2 class="paper-title">Walking on Roofs: Exploring the Potential of Walking Robots for Construction Work on Roofs</h2>
+            
+            <div class="author-row">
+                <span>🗓️ 2026-10-08</span>
+                <span>✍️ Bjoern-Felix Dettmar, Arne Roennau</span>
+            </div>
+            
+            <div class="badge-cluster">
+                <span class="badge">#quadruped</span><span class="badge">#reinforcement learning</span><span class="badge">#locomotion</span>
+            </div>
+            
+            <p class="paper-summary">This paper investigates the feasibility of deploying quadruped walking robots for the automation of work in roof environments. While quadrupeds have demonstrated versatility across various domains, their large-scale deployment remains limited, partly due to lack of application-specific designs. Roof environments represent a novel and unexplored use case, combining high safety risks for human workers with repetitive, strenuous tasks that could benefit from robotic assistance. A dedicated test rig of a roof's surface was designed to evaluate the baseline performance of a commercial quadruped, the \emph{Unitree Go2}, in this new environment. Experiments revealed that standard ball feet are inherently inadequate for locomotion on sloped roofs: slippage increased quadratically with incline angle, get-up and lie-down sequences were only possible on small inclines, and critical failures already occurred regularly on moderate inclines of 25°. This work provides the first systematic assessment of quadruped locomotion in roof environments, highlighting both the potential and the current limitations of this application and establishes a baseline for future research. Effective solutions will require a combination of task-oriented foot designs, advanced contact mechanics and environment-specific control strategies, such as reinforcement learning for roof-adapted gaits.</p>
+            
+            <div class="card-action-bar">
+                <a href="http://arxiv.org/pdf/2610.12272v1" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
+                    View PDF
+                </a>
+                <a href="http://arxiv.org/abs/2610.12272v1" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
+                    arXiv Page &rarr;
+                </a>
+            </div>
+        </article>
+        
+        <article class="paper-card" data-title="versacamvla: camera-configurable vla policies for robotic manipulation" data-summary="vision-language-action (vla) models have emerged as powerful foundations for robotic manipulation, but their reliance on fixed camera configurations during training makes them brittle to changes in camera count or pose during deployment. to overcome these limitations, we propose versacamvla, a camera-configurable framework that decouples camera-set representation from action learning. versacamvla learns a unified scene-token interface that maps an arbitrary, variable set of posed rgb views into fixed-size latent scene tokens. this is achieved via multi-signal target-view prediction and wrist-augmented pose sampling (waps), which leverages natural wrist-camera motion for free pose diversity. at deployment, a lightweight spatial encoder injects these compact scene tokens into a pretrained base vla as a supplementary visual condition, requiring no explicit 3d sensing or novel-view rendering. experiments on robotwin, libero, and a real-robot platform demonstrate that versacamvla consistently outperforms prior vla methods and direct multi-view baselines, maintaining robust performance across varying camera counts and unseen camera poses.">
+            <div class="card-meta-top">
+                <span class="rank-tag">TOP #5</span>
                 <div class="score-badge">
                     <span class="score-label">Priority Index</span>
                     <span class="score-value">135</span>
                 </div>
             </div>
             
-            <h2 class="paper-title">YUBI-STAG: Contact and Semantic-Rich Alignment for VLAs via Automated Video-Language Grounding</h2>
+            <h2 class="paper-title">VersaCamVLA: Camera-Configurable VLA Policies for Robotic Manipulation</h2>
             
             <div class="author-row">
-                <span>🗓️ 2026-10-07</span>
-                <span>✍️ Masatoshi Tateno, Takehiko Ohkawa, Yueh-Hua Wu et al.</span>
+                <span>🗓️ 2026-10-08</span>
+                <span>✍️ Boyao Han, Chen Shi, Jingjing Qian et al.</span>
             </div>
             
             <div class="badge-cluster">
                 <span class="badge">#vision-language-action</span><span class="badge">#vla</span>
             </div>
             
-            <p class="paper-summary">Vision-Language-Action (VLA) models acquire broad manipulation capabilities via large-scale pretraining, yet eliciting them through language requires fine-grained alignment between instructions and physical interactions. Existing robot demonstrations typically provide only coarse task descriptions, omitting how actions are executed, including which gripper acts, which object is contacted, and how it is grasped and moved. We introduce YUBI-STAG, a framework for Spatio-Temporal Annotation and Grounding that automatically enriches manipulation demonstrations with interaction-rich semantics to align pretrained VLAs with fine-grained manipulation language. Combining contact-object segmentation with vision-language models, YUBI-STAG annotates object identities, attributes and states, per-gripper actions, bimanual coordination, and spatially grounded interactions. To address YUBI-STAG's reliance on localized sequences and multi-stage VLM inference, we distill it into YUBI-VLM. YUBI-VLM directly recovers action structure and annotations from raw, unsegmented video in few inference calls and operates from wrist views alone. We evaluate both frameworks on YUBI-STAG-Bench across temporal, semantic, and spatial grounding tasks. YUBI-VLM retains much of YUBI-STAG's annotation accuracy with fewer inference calls and shorter runtime while generalizing to unseen manipulations. Finally, post-training VLA policies on these annotations aligns them with fine-grained language and contact-aware structure. Bimanual experiments demonstrate improved performance and instruction following, including control over object identity, acting gripper, target location, and spatial relations absent from original labels.</p>
+            <p class="paper-summary">Vision-Language-Action (VLA) models have emerged as powerful foundations for robotic manipulation, but their reliance on fixed camera configurations during training makes them brittle to changes in camera count or pose during deployment. To overcome these limitations, we propose VersaCamVLA, a camera-configurable framework that decouples camera-set representation from action learning. VersaCamVLA learns a unified scene-token interface that maps an arbitrary, variable set of posed RGB views into fixed-size latent scene tokens. This is achieved via multi-signal target-view prediction and Wrist-Augmented Pose Sampling (WAPS), which leverages natural wrist-camera motion for free pose diversity. At deployment, a lightweight spatial encoder injects these compact scene tokens into a pretrained base VLA as a supplementary visual condition, requiring no explicit 3D sensing or novel-view rendering. Experiments on RoboTwin, LIBERO, and a real-robot platform demonstrate that VersaCamVLA consistently outperforms prior VLA methods and direct multi-view baselines, maintaining robust performance across varying camera counts and unseen camera poses.</p>
             
             <div class="card-action-bar">
-                <a href="http://arxiv.org/pdf/2610.09718v1" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
+                <a href="http://arxiv.org/pdf/2610.12451v1" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
                     View PDF
                 </a>
-                <a href="http://arxiv.org/abs/2610.09718v1" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
+                <a href="http://arxiv.org/abs/2610.12451v1" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
                     arXiv Page &rarr;
                 </a>
             </div>
         </article>
         
-        <article class="paper-card" data-title="beyond policy support: interaction constrained offline reinforcement learning for autonomous driving" data-summary="offline reinforcement learning enables reward-driven policy improvement from fixed datasets without requiring online exploration, making it particularly attractive in safety-critical domains. a central challenge, however, is distribution shift: policy optimization may favor actions that are weakly supported by the offline data, rendering value estimates unreliable. existing approaches primarily control this shift in the policy's own action space. in interactive environments such as autonomous driving, this can be insufficient: a candidate ego trajectory may remain well supported under the marginal behavior distribution while being poorly supported jointly with the surrounding-agent behavior observed in the logged interaction. we refer to this degradation in interaction support as \emph{interaction distribution shift} (ids), and introduce \emph{interaction-constrained drive policy} (icdp), an offline reinforcement learning framework that explicitly controls interaction-level distribution shift. starting from the joint data distribution over ego and surrounding-agent futures, we show that joint-support degradation decomposes exactly into an ego-support component and a residual interaction-support component. we recover the latter through contrastive density-ratio estimation, isolating interaction compatibility without explicit joint-density modeling, surrounding-agent prediction, or rollouts in reactive simulators or learned world models during policy optimization. closed-loop evaluations on nuplan, interplan and real-world truck experiments show that icdp suppresses high-value yet interaction-unsupported trajectory selections and improves performance in interaction-critical driving scenarios. project webpage: https://mahmoud-selim.github.io/icdp/">
-            <div class="card-meta-top">
-                <span class="rank-tag">TOP #5</span>
-                <div class="score-badge">
-                    <span class="score-label">Priority Index</span>
-                    <span class="score-value">120</span>
-                </div>
-            </div>
-            
-            <h2 class="paper-title">Beyond Policy Support: Interaction Constrained Offline Reinforcement Learning for Autonomous Driving</h2>
-            
-            <div class="author-row">
-                <span>🗓️ 2026-10-07</span>
-                <span>✍️ Mahmoud Selim, Cristina Cipriani, Karl Henrik Johansson</span>
-            </div>
-            
-            <div class="badge-cluster">
-                <span class="badge">#world model</span><span class="badge">#reinforcement learning</span>
-            </div>
-            
-            <p class="paper-summary">Offline reinforcement learning enables reward-driven policy improvement from fixed datasets without requiring online exploration, making it particularly attractive in safety-critical domains. A central challenge, however, is distribution shift: policy optimization may favor actions that are weakly supported by the offline data, rendering value estimates unreliable. Existing approaches primarily control this shift in the policy's own action space. In interactive environments such as autonomous driving, this can be insufficient: a candidate ego trajectory may remain well supported under the marginal behavior distribution while being poorly supported jointly with the surrounding-agent behavior observed in the logged interaction. We refer to this degradation in interaction support as \emph{interaction distribution shift} (IDS), and introduce \emph{Interaction-Constrained Drive Policy} (ICDP), an offline reinforcement learning framework that explicitly controls interaction-level distribution shift. Starting from the joint data distribution over ego and surrounding-agent futures, we show that joint-support degradation decomposes exactly into an ego-support component and a residual interaction-support component. We recover the latter through contrastive density-ratio estimation, isolating interaction compatibility without explicit joint-density modeling, surrounding-agent prediction, or rollouts in reactive simulators or learned world models during policy optimization. Closed-loop evaluations on nuPlan, Interplan and real-world truck experiments show that ICDP suppresses high-value yet interaction-unsupported trajectory selections and improves performance in interaction-critical driving scenarios. Project webpage: https://mahmoud-selim.github.io/ICDP/</p>
-            
-            <div class="card-action-bar">
-                <a href="http://arxiv.org/pdf/2610.09763v1" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
-                    View PDF
-                </a>
-                <a href="http://arxiv.org/abs/2610.09763v1" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
-                    arXiv Page &rarr;
-                </a>
-            </div>
-        </article>
-        
-        <article class="paper-card" data-title="ultraworld: learning interactive ultrasound world models from untracked clinical videos with acoustic sampling map" data-summary="world models can enable autonomous ultrasound scanning by predicting the outcomes of probe motions from local observations. learning this action--observation relationship typically relies on synchronized video--pose pairs, which are costly to collect at scale and largely unavailable in routine clinical recordings. reliable action following further requires modeling ultrasound's cross-sectional sampling geometry. we present ultraworld, a self-distillation recipe that transfers priors from clinical ultrasound videos into interactive world models without real action annotations. starting from clinical videos, we adapt a video foundation model into an ultrasound generator conditioned on reference images and anatomical masks. anatomical masks sampled along programmable trajectories through 3d anatomy provide spatial guidance for synthesizing action--video pairs. we then use these synthetic pairs to self-distill the generator into a world model that predicts future observations from local observations and actions, without requiring anatomical masks or other 3d assets at inference time. to further improve action following, we introduce the acoustic sampling map (asmap), which represents probe poses and imaging settings as pixel-wise 3d sampling positions, beam directions, and depths. experiments demonstrate improved prediction fidelity and action following. across nine simulated closed-loop local planning episodes, ultraworld reduces the mean final distance to the goal and orientation error by 29\% and 38\%, respectively, compared with visual servoing. project page: https://ultraworld-project.github.io/.">
+        <article class="paper-card" data-title="faith: feasibility-aware safety-filtered rl for high-dimensional systems" data-summary="safe reinforcement learning commonly places safety and task performance in the same policy objective, where they can introduce competing updates. safety filters separate them at action execution, but classical designs require an analytic safety function and dynamics model, and standard minimal-intervention filters are myopic to long-horizon task return because they minimize only instantaneous action deviation. hard projections are also undefined when no safe action exists. we present faith, a feasibility-aware, model-free framework that approximates the optimal state-action safety value and amortizes minimal-intervention filtering with a feedforward network. the task policy optimizes the task return through the filtered dynamics, which recovers the feasible constrained problem without a competing safety term in the task-policy update. when no action satisfies the learned safety condition, the same filter approaches the action with minimum predicted peak harm. on a double integrator example and a safety gym environment, faith achieves the highest return among methods with no feasible-start violations and matches the lowest harm from infeasible starts. on a 29-dof humanoid, it reaches a 99.95% safety rate while retaining 97% of the unfiltered return in walking-avoid, and obtains the highest measured safety rate in push-avoid by learning to sacrifice balancing and fall away from the protected region. the same policies are also demonstrated on a real-world unitree g1 humanoid.">
             <div class="card-meta-top">
                 <span class="rank-tag">TOP #6</span>
                 <div class="score-badge">
                     <span class="score-label">Priority Index</span>
-                    <span class="score-value">90</span>
+                    <span class="score-value">125</span>
                 </div>
             </div>
             
-            <h2 class="paper-title">UltraWorld: Learning Interactive Ultrasound World Models from Untracked Clinical Videos with Acoustic Sampling Map</h2>
+            <h2 class="paper-title">FAITH: Feasibility-Aware Safety-Filtered RL for High-Dimensional Systems</h2>
             
             <div class="author-row">
-                <span>🗓️ 2026-10-07</span>
-                <span>✍️ Keke Yang, Erqi Wang, Sainan Guan et al.</span>
+                <span>🗓️ 2026-10-08</span>
+                <span>✍️ Songyuan Zhang, Baljeet Singh, Sarthak Ranjeet Kaingade et al.</span>
             </div>
             
             <div class="badge-cluster">
-                <span class="badge">#world model</span>
+                <span class="badge">#humanoid</span><span class="badge">#reinforcement learning</span>
             </div>
             
-            <p class="paper-summary">World models can enable autonomous ultrasound scanning by predicting the outcomes of probe motions from local observations. Learning this action--observation relationship typically relies on synchronized video--pose pairs, which are costly to collect at scale and largely unavailable in routine clinical recordings. Reliable action following further requires modeling ultrasound's cross-sectional sampling geometry. We present UltraWorld, a self-distillation recipe that transfers priors from clinical ultrasound videos into interactive world models without real action annotations. Starting from clinical videos, we adapt a video foundation model into an ultrasound generator conditioned on reference images and anatomical masks. Anatomical masks sampled along programmable trajectories through 3D anatomy provide spatial guidance for synthesizing action--video pairs. We then use these synthetic pairs to self-distill the generator into a world model that predicts future observations from local observations and actions, without requiring anatomical masks or other 3D assets at inference time. To further improve action following, we introduce the Acoustic Sampling Map (AsMap), which represents probe poses and imaging settings as pixel-wise 3D sampling positions, beam directions, and depths. Experiments demonstrate improved prediction fidelity and action following. Across nine simulated closed-loop local planning episodes, UltraWorld reduces the mean final distance to the goal and orientation error by 29\% and 38\%, respectively, compared with visual servoing. Project Page: https://ultraworld-project.github.io/.</p>
+            <p class="paper-summary">Safe reinforcement learning commonly places safety and task performance in the same policy objective, where they can introduce competing updates. Safety filters separate them at action execution, but classical designs require an analytic safety function and dynamics model, and standard minimal-intervention filters are myopic to long-horizon task return because they minimize only instantaneous action deviation. Hard projections are also undefined when no safe action exists. We present FAITH, a feasibility-aware, model-free framework that approximates the optimal state-action safety value and amortizes minimal-intervention filtering with a feedforward network. The task policy optimizes the task return through the filtered dynamics, which recovers the feasible constrained problem without a competing safety term in the task-policy update. When no action satisfies the learned safety condition, the same filter approaches the action with minimum predicted peak harm. On a double integrator example and a Safety Gym environment, FAITH achieves the highest return among methods with no feasible-start violations and matches the lowest harm from infeasible starts. On a 29-DoF humanoid, it reaches a 99.95% safety rate while retaining 97% of the unfiltered return in Walking-Avoid, and obtains the highest measured safety rate in Push-Avoid by learning to sacrifice balancing and fall away from the protected region. The same policies are also demonstrated on a real-world Unitree G1 humanoid.</p>
             
             <div class="card-action-bar">
-                <a href="http://arxiv.org/pdf/2610.09785v1" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
+                <a href="http://arxiv.org/pdf/2610.12432v1" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
                     View PDF
                 </a>
-                <a href="http://arxiv.org/abs/2610.09785v1" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
+                <a href="http://arxiv.org/abs/2610.12432v1" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
                     arXiv Page &rarr;
                 </a>
             </div>
         </article>
         
-        <article class="paper-card" data-title="δwam: distilling action tangent fields into world action models" data-summary="world action models (wam) improve robot policies by augmenting sparse action supervision with dense future prediction. however, much of the predictable future is dominated by appearance and scene persistence rather than action-dependent dynamics. we observe that several recent wam designs, including optical flow, motion-centric representations, and latent actions, can be understood from a common perspective in which world supervision becomes more efficient as it contains a higher proportion of action-relevant variation. based on this insight, we introduce action tangent fields, which reformulate world supervision through a local taylor expansion of how actions induce changes in future dynamics. we represent future dynamics in residual-vae space, where the future latent remains recoverable from the current latent and its residual, and use a strong action-conditioned world model (acwm) to probe the local correspondence between action variations and residual-world variations. this local first-order structure is distilled into the wam to guide its denoising supervision toward dynamics that are more tightly coupled to action, rather than merely predictable from appearance. across libero-plus, robotwin, and robotwin2.0-plus, our method consistently improves robustness to lighting, background, camera, layout, and other environmental perturbations. despite using no large-scale embodied pretraining, it achieves stronger robustness under several distribution shifts than pretrained policies. we further distill multi-step videodit denoising into a single step for efficient inference. our results suggest that effective wam supervision should remain information-rich while concentrating its predictive capacity on the directions along which actions change the future.">
+        <article class="paper-card" data-title="dex-one2many: learning dexterous manipulation from a single human demonstration" data-summary="while learning dexterous manipulation from a single human video offers a promising alternative to costly robot demonstrations, many recent methods predominantly imitate demonstrated motions. such strict motion matching often limits generalization to initial object poses, goal poses, and grasps not shown in the video. alternatively, discovering a policy via reinforcement learning (rl) allows for broad generalization, but without prior guidance, it struggles with high-dimensional exploration in complex, multi-stage tasks. to address these coupled generalization and exploration challenges, we present dex-one2many, a real-to-sim-to-real framework that learns a generalizable dexterous manipulation policy from a single human video. our key insight is to abstract the video into sequential scene graphs that guide rl, enabling efficient exploration while preserving broad generalizability. the graphs serve as generative constraints for sampling diverse reset states and provide dense rewards for each stage. because the graphs constrain relations rather than exact poses, these reset states cover object poses and grasps beyond the video, while initializing each stage from them with dense rewards keeps exploration short and guided. trained entirely in simulation, dex-one2many transfers zero-shot to a real multi-fingered hand. across five tool-use and manipulation tasks, dex-one2many exceeds baselines by 6.5% in seen configurations, while its robust generalization widens this gap to 71% in unseen scenarios.">
             <div class="card-meta-top">
                 <span class="rank-tag">TOP #7</span>
                 <div class="score-badge">
                     <span class="score-label">Priority Index</span>
-                    <span class="score-value">90</span>
+                    <span class="score-value">110</span>
                 </div>
             </div>
             
-            <h2 class="paper-title">ΔWAM: Distilling Action Tangent Fields into World Action Models</h2>
+            <h2 class="paper-title">Dex-One2Many: Learning Dexterous Manipulation from a Single Human Demonstration</h2>
             
             <div class="author-row">
-                <span>🗓️ 2026-10-07</span>
-                <span>✍️ Ke Wu, Hanwen Huang, Bo Gu et al.</span>
+                <span>🗓️ 2026-10-08</span>
+                <span>✍️ Jusuk Lee, Sungha Kim, Yeonsoo Park et al.</span>
             </div>
             
             <div class="badge-cluster">
-                <span class="badge">#world model</span>
+                <span class="badge">#reinforcement learning</span><span class="badge">#dexterous manipulation</span>
             </div>
             
-            <p class="paper-summary">World Action Models (WAM) improve robot policies by augmenting sparse action supervision with dense future prediction. However, much of the predictable future is dominated by appearance and scene persistence rather than action-dependent dynamics. We observe that several recent WAM designs, including optical flow, motion-centric representations, and latent actions, can be understood from a common perspective in which world supervision becomes more efficient as it contains a higher proportion of action-relevant variation. Based on this insight, we introduce Action Tangent Fields, which reformulate world supervision through a local Taylor expansion of how actions induce changes in future dynamics. We represent future dynamics in Residual-VAE space, where the future latent remains recoverable from the current latent and its residual, and use a strong action-conditioned world model (ACWM) to probe the local correspondence between action variations and residual-world variations. This local first-order structure is distilled into the WAM to guide its denoising supervision toward dynamics that are more tightly coupled to action, rather than merely predictable from appearance. Across LIBERO-Plus, RoboTwin, and RoboTwin2.0-Plus, our method consistently improves robustness to lighting, background, camera, layout, and other environmental perturbations. Despite using no large-scale embodied pretraining, it achieves stronger robustness under several distribution shifts than pretrained policies. We further distill multi-step VideoDiT denoising into a single step for efficient inference. Our results suggest that effective WAM supervision should remain information-rich while concentrating its predictive capacity on the directions along which actions change the future.</p>
+            <p class="paper-summary">While learning dexterous manipulation from a single human video offers a promising alternative to costly robot demonstrations, many recent methods predominantly imitate demonstrated motions. Such strict motion matching often limits generalization to initial object poses, goal poses, and grasps not shown in the video. Alternatively, discovering a policy via reinforcement learning (RL) allows for broad generalization, but without prior guidance, it struggles with high-dimensional exploration in complex, multi-stage tasks. To address these coupled generalization and exploration challenges, we present Dex-One2Many, a real-to-sim-to-real framework that learns a generalizable dexterous manipulation policy from a single human video. Our key insight is to abstract the video into sequential scene graphs that guide RL, enabling efficient exploration while preserving broad generalizability. The graphs serve as generative constraints for sampling diverse reset states and provide dense rewards for each stage. Because the graphs constrain relations rather than exact poses, these reset states cover object poses and grasps beyond the video, while initializing each stage from them with dense rewards keeps exploration short and guided. Trained entirely in simulation, Dex-One2Many transfers zero-shot to a real multi-fingered hand. Across five tool-use and manipulation tasks, Dex-One2Many exceeds baselines by 6.5% in seen configurations, while its robust generalization widens this gap to 71% in unseen scenarios.</p>
             
             <div class="card-action-bar">
-                <a href="http://arxiv.org/pdf/2610.09734v1" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
+                <a href="http://arxiv.org/pdf/2610.12470v1" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
                     View PDF
                 </a>
-                <a href="http://arxiv.org/abs/2610.09734v1" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
+                <a href="http://arxiv.org/abs/2610.12470v1" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
                     arXiv Page &rarr;
                 </a>
             </div>
         </article>
         
-        <article class="paper-card" data-title="a scoping review and experimental study on reinforcement learning from human feedback for human-robot collaboration" data-summary="human-robot collaboration (hrc) can facilitate mass customisation in industry 4.0, with reinforcement learning from human feedback (rlhf) representing a promising approach for developing safe ai-based robots. practical challenges remain regarding safety during ai development, human feedback quality, and bidirectional human-robot adaptation. we conducted a scoping review of rlhf in hrc systems, mapping methods that address these challenges. following prisma guidelines, we screened 199 records and included 20 peer-reviewed publications (2020-2025) spanning multiple hrc domains. to our knowledge, this is the first review focused on the bidirectional, closed-loop design of rlhf. our review found multiple feedback modalities enabling data collection in various feedback formats. collected data can be integrated at different stages of ai training, resulting in a multi-step development process. pilot experiments are commonly used to evaluate hrc systems based on both human and robot metrics. to empirically test a key gap identified in the review, we conducted a between-subjects vr experiment comparing system- and user-initiated feedback on robot proxemic behaviour for safe navigation. using bayesian models, we analysed the relation between the collected feedback and safety metrics: psychological safety (post-experiment questionnaire) and physical safety (inverse time-to-collision). results show that user-initiated feedback captures perceived safety better than system-initiated feedback, indicating that feedback timing directly affects feedback quality. our review and experiment findings show that rlhf relies on appropriate feedback methods to ensure ai safety in hrc, and future rlhf research should prioritise realistic hrc experiments evaluating the effects of feedback collection methods on relevant human and robot metrics.">
+        <article class="paper-card" data-title="generative neural retargeting for human-to-robot dexterous manipulation" data-summary="human demonstrations are a scalable data source for learning dexterous manipulation, but the embodiment gap prevents human motion from being executed directly on robots. inverse kinematics (ik) retargets human motion to robots efficiently but ignores dynamics, often producing infeasible motions. reinforcement learning (rl) and sampling-based model predictive control (mpc) are commonly employed to yield dynamically feasible motions, but both are sample-inefficient and sensitive to hyperparameters. rl suffers from costly and unstable training and tedious reward engineering; mpc avoids policy optimization, yet retargets each trajectory in isolation, and solving one does not make the next easier. sampling cost grows rapidly with dataset size and task difficulty. we hypothesize that dynamically feasible trajectories concentrate near a low-dimensional manifold shared across demonstrations, so that retargeting can be reduced to sampling from that manifold, conditioned on human motion, rather than solving a fresh optimization problem for every demonstration. we propose \textbf{generative neural retargeting} (gnr), which uses a flow matching model to sample feasible trajectories. gnr outperforms mpc with only $8.5\%$ of the samples required by mpc, achieving a success rate of $56.20\%$ compared to $27.20\%$ for mpc. gnr can be used for scalable and efficient retargeting of large-scale, long-horizon, and millimeter precision human demonstrations: by applying gnr within a real-to-sim data engine, we produce a dexterous manipulation dataset with dense contact-force labels, spanning $223$k demonstrations and $3.3$k object geometries.">
             <div class="card-meta-top">
                 <span class="rank-tag">TOP #8</span>
                 <div class="score-badge">
                     <span class="score-label">Priority Index</span>
-                    <span class="score-value">80</span>
+                    <span class="score-value">110</span>
                 </div>
             </div>
             
-            <h2 class="paper-title">A Scoping Review and Experimental Study on Reinforcement Learning from Human Feedback for Human-Robot Collaboration</h2>
+            <h2 class="paper-title">Generative Neural Retargeting for Human-to-Robot Dexterous Manipulation</h2>
             
             <div class="author-row">
-                <span>🗓️ 2026-10-07</span>
-                <span>✍️ Alexandra Coroiu, Andrea Vogt, Viktor Werbilo et al.</span>
+                <span>🗓️ 2026-10-08</span>
+                <span>✍️ Dechen Gao, Yue Yang, Ben Abbatematteo et al.</span>
             </div>
             
             <div class="badge-cluster">
-                <span class="badge">#reinforcement learning</span>
+                <span class="badge">#reinforcement learning</span><span class="badge">#dexterous manipulation</span>
             </div>
             
-            <p class="paper-summary">Human-Robot Collaboration (HRC) can facilitate mass customisation in Industry 4.0, with Reinforcement Learning from Human Feedback (RLHF) representing a promising approach for developing safe AI-based robots. Practical challenges remain regarding safety during AI development, human feedback quality, and bidirectional human-robot adaptation. We conducted a scoping review of RLHF in HRC systems, mapping methods that address these challenges. Following PRISMA guidelines, we screened 199 records and included 20 peer-reviewed publications (2020-2025) spanning multiple HRC domains. To our knowledge, this is the first review focused on the bidirectional, closed-loop design of RLHF. Our review found multiple feedback modalities enabling data collection in various feedback formats. Collected data can be integrated at different stages of AI training, resulting in a multi-step development process. Pilot experiments are commonly used to evaluate HRC systems based on both human and robot metrics. To empirically test a key gap identified in the review, we conducted a between-subjects VR experiment comparing system- and user-initiated feedback on robot proxemic behaviour for safe navigation. Using Bayesian models, we analysed the relation between the collected feedback and safety metrics: psychological safety (post-experiment questionnaire) and physical safety (inverse time-to-collision). Results show that user-initiated feedback captures perceived safety better than system-initiated feedback, indicating that feedback timing directly affects feedback quality. Our review and experiment findings show that RLHF relies on appropriate feedback methods to ensure AI safety in HRC, and future RLHF research should prioritise realistic HRC experiments evaluating the effects of feedback collection methods on relevant human and robot metrics.</p>
+            <p class="paper-summary">Human demonstrations are a scalable data source for learning dexterous manipulation, but the embodiment gap prevents human motion from being executed directly on robots. Inverse kinematics (IK) retargets human motion to robots efficiently but ignores dynamics, often producing infeasible motions. Reinforcement learning (RL) and sampling-based model predictive control (MPC) are commonly employed to yield dynamically feasible motions, but both are sample-inefficient and sensitive to hyperparameters. RL suffers from costly and unstable training and tedious reward engineering; MPC avoids policy optimization, yet retargets each trajectory in isolation, and solving one does not make the next easier. Sampling cost grows rapidly with dataset size and task difficulty. We hypothesize that dynamically feasible trajectories concentrate near a low-dimensional manifold shared across demonstrations, so that retargeting can be reduced to sampling from that manifold, conditioned on human motion, rather than solving a fresh optimization problem for every demonstration. We propose \textbf{Generative Neural Retargeting} (GNR), which uses a flow matching model to sample feasible trajectories. GNR outperforms MPC with only $8.5\%$ of the samples required by MPC, achieving a success rate of $56.20\%$ compared to $27.20\%$ for MPC. GNR can be used for scalable and efficient retargeting of large-scale, long-horizon, and millimeter precision human demonstrations: by applying GNR within a real-to-sim data engine, we produce a dexterous manipulation dataset with dense contact-force labels, spanning $223$k demonstrations and $3.3$k object geometries.</p>
             
             <div class="card-action-bar">
-                <a href="http://arxiv.org/pdf/2610.09891v1" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
+                <a href="http://arxiv.org/pdf/2610.12440v1" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
                     View PDF
                 </a>
-                <a href="http://arxiv.org/abs/2610.09891v1" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
+                <a href="http://arxiv.org/abs/2610.12440v1" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
                     arXiv Page &rarr;
                 </a>
             </div>
