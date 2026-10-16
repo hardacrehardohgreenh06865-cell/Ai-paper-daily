@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Embodied AI & Robotics Intelligence Digest — October 15, 2026</title>
+    <title>Embodied AI & Robotics Intelligence Digest — October 16, 2026</title>
     <style>
         :root {
             --bg-base: #080c14;
@@ -242,7 +242,7 @@
         <header>
             <span class="pill-brand">Autonomous Research Intelligence</span>
             <h1>Embodied AI & Physical Frontier Briefing</h1>
-            <p class="subtitle">Compiled on October 15, 2026 • Ranked top 8 strategic breakthroughs out of incoming preprints.</p>
+            <p class="subtitle">Compiled on October 16, 2026 • Ranked top 8 strategic breakthroughs out of incoming preprints.</p>
             
             <div class="controls">
                 <input type="text" id="filterInput" class="search-box" placeholder="Filter papers by keywords (e.g. humanoid, tactile, diffusion)...">
@@ -251,257 +251,257 @@
 
         <main id="paperList">
             
-        <article class="paper-card" data-title="polymorph: learning locomotion policy for cross-embodiment adaptation" data-summary="reinforcement learning has enabled robust locomotion for legged robots, but learned policies are typically tied to a specific robot morphology and require additional engineering when the number of legs, actuators, or mechanical properties change. we present polymorph, a morphology-conditioned framework that learns a single locomotion policy for heterogeneous legged robots. polymorph converts each robot's urdf into joint-link modules and combines a recurrent encoder, graph-based transformer, and per-joint decoder to generate actions across variable leg counts and joint configurations. to improve training stability, polymorph uses morphology-normalized rewards, adaptive robot sampling, and urdf-derived pd-gain initialization. we evaluate polymorph in simulation across bipedal, tripedal, and quadrupedal robots, including unseen morphology variants and platforms, and deploy the policy on real quadruped platforms operated in multiple configurations. the results show that a single polymorph policy generalizes across diverse robot morphologies without per-robot policy retraining.">
+        <article class="paper-card" data-title="safedrivevla: navigation-conditioned world model dreaming for conflict-aware end-to-end autonomous driving" data-summary="vision-language-action (vla) models are gaining attention in autonomous driving, inheriting commonsense priors from large language models (llms) and widening the navigation interface from a fixed command set to free-form natural-language instructions. however, this open-ended interface exposes a new vulnerability surface: an inattentive driver may issue instructions that are unsafe given the current scene, and a malicious user may issue dangerous ones on purpose. we present the first benchmark suite that evaluates navigation following and conflict awareness together, along with adversarial robustness. existing vlas fall short on both: simlingo completes no language-instructed lane change in closed loop, and all models degrade sharply under conflicting signals. we propose safedrivevla, the first driving vla that (1) explicitly predicts a three-level navigation-compliance mode to decouple conflict reasoning from action generation, and (2) uses navigation-conditioned world model dreaming to inform this prediction. unlike prior world models that roll out expert or planned actions, ours dreams of strictly following the navigation signal, showing when following is safe. safedrivevla reaches 88.16 driving score (ds) and 68.64% success rate (sr) on bench2drive, lifts closed-loop language following by 49.3% and reduces collisions under unsafe instructions from 60 to 38 compared to the best simlingo variant. video demonstrations are available on our project page.">
             <div class="card-meta-top">
                 <span class="rank-tag">TOP #1</span>
-                <div class="score-badge">
-                    <span class="score-label">Priority Index</span>
-                    <span class="score-value">195</span>
-                </div>
-            </div>
-            
-            <h2 class="paper-title">PolyMorph: Learning Locomotion Policy for Cross-Embodiment Adaptation</h2>
-            
-            <div class="author-row">
-                <span>🗓️ 2026-10-14</span>
-                <span>✍️ Hyunsik Oh, Seunghun Jeon, Donghoon Youm et al.</span>
-            </div>
-            
-            <div class="badge-cluster">
-                <span class="badge">#bipedal</span><span class="badge">#quadruped</span><span class="badge">#reinforcement learning</span><span class="badge">#locomotion</span><span class="badge">#actuator</span>
-            </div>
-            
-            <p class="paper-summary">Reinforcement learning has enabled robust locomotion for legged robots, but learned policies are typically tied to a specific robot morphology and require additional engineering when the number of legs, actuators, or mechanical properties change. We present PolyMorph, a morphology-conditioned framework that learns a single locomotion policy for heterogeneous legged robots. PolyMorph converts each robot's URDF into joint-link modules and combines a recurrent encoder, graph-based Transformer, and per-joint decoder to generate actions across variable leg counts and joint configurations. To improve training stability, PolyMorph uses morphology-normalized rewards, adaptive robot sampling, and URDF-derived PD-gain initialization. We evaluate PolyMorph in simulation across bipedal, tripedal, and quadrupedal robots, including unseen morphology variants and platforms, and deploy the policy on real quadruped platforms operated in multiple configurations. The results show that a single PolyMorph policy generalizes across diverse robot morphologies without per-robot policy retraining.</p>
-            
-            <div class="card-action-bar">
-                <a href="http://arxiv.org/pdf/2610.19615v1" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
-                    View PDF
-                </a>
-                <a href="http://arxiv.org/abs/2610.19615v1" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
-                    arXiv Page &rarr;
-                </a>
-            </div>
-        </article>
-        
-        <article class="paper-card" data-title="what matters for world modeling in vision-language-action models?" data-summary="integrating world models into vision-language-action models (vlas) has emerged as a promising direction, enabling policies to anticipate future dynamics beyond reactive observation-to-action mapping. however, existing approaches vary simultaneously in their world representations, integration paradigms, and policy backbones, making it difficult to determine what truly matters for effective world model integration. to disentangle these factors, we categorize existing efforts into four representative paradigms, namely implicit future alignment, explicit future query, mot future expert, and external world predictor. we instantiate each within a unified framework and systematically evaluate these paradigms with diverse world representations and policy backbones across in-domain, out-of-domain, long-horizon, dynamic, few-shot, and real-world settings. our study yields four main findings: 1) world representation effectiveness is paradigm-dependent, whereas 2d semantic representations offer robust, cross-paradigm gains; 2) no single paradigm is universally optimal, yet the decoupled mot future expert offers competitive overall performance, particularly in ood robustness; 3) world modeling consistently benefits policies built on standard vlms, while decoupled designs exhibit greater compatibility with pretrained vlas; and 4) world modeling improves performance over action-only baselines across multiple settings, with notable gains on long-horizon and dynamic tasks. project page and video demonstrations are available at https://dylanmqs.github.io/wm-in-vlas/.">
-            <div class="card-meta-top">
-                <span class="rank-tag">TOP #2</span>
                 <div class="score-badge">
                     <span class="score-label">Priority Index</span>
                     <span class="score-value">175</span>
                 </div>
             </div>
             
-            <h2 class="paper-title">What Matters for World Modeling in Vision-Language-Action Models?</h2>
+            <h2 class="paper-title">SafeDriveVLA: Navigation-Conditioned World Model Dreaming for Conflict-Aware End-to-End Autonomous Driving</h2>
             
             <div class="author-row">
                 <span>🗓️ 2026-10-14</span>
-                <span>✍️ Qisen Ma, Yixiang Chen, Yuan Xu et al.</span>
+                <span>✍️ Shaoyuan Xie, Zihan Zhang, Jingxuan Wang et al.</span>
             </div>
             
             <div class="badge-cluster">
                 <span class="badge">#world model</span><span class="badge">#vision-language-action</span><span class="badge">#vla</span>
             </div>
             
-            <p class="paper-summary">Integrating world models into Vision-Language-Action models (VLAs) has emerged as a promising direction, enabling policies to anticipate future dynamics beyond reactive observation-to-action mapping. However, existing approaches vary simultaneously in their world representations, integration paradigms, and policy backbones, making it difficult to determine what truly matters for effective world model integration. To disentangle these factors, we categorize existing efforts into four representative paradigms, namely Implicit Future Alignment, Explicit Future Query, MoT Future Expert, and External World Predictor. We instantiate each within a unified framework and systematically evaluate these paradigms with diverse world representations and policy backbones across in-domain, out-of-domain, long-horizon, dynamic, few-shot, and real-world settings. Our study yields four main findings: 1) world representation effectiveness is paradigm-dependent, whereas 2D semantic representations offer robust, cross-paradigm gains; 2) no single paradigm is universally optimal, yet the decoupled MoT Future Expert offers competitive overall performance, particularly in OOD robustness; 3) world modeling consistently benefits policies built on standard VLMs, while decoupled designs exhibit greater compatibility with pretrained VLAs; and 4) world modeling improves performance over action-only baselines across multiple settings, with notable gains on long-horizon and dynamic tasks. Project page and video demonstrations are available at https://dylanmqs.github.io/WM-in-VLAs/.</p>
+            <p class="paper-summary">Vision-Language-Action (VLA) models are gaining attention in autonomous driving, inheriting commonsense priors from large language models (LLMs) and widening the navigation interface from a fixed command set to free-form natural-language instructions. However, this open-ended interface exposes a new vulnerability surface: an inattentive driver may issue instructions that are unsafe given the current scene, and a malicious user may issue dangerous ones on purpose. We present the first benchmark suite that evaluates navigation following and conflict awareness together, along with adversarial robustness. Existing VLAs fall short on both: SimLingo completes no language-instructed lane change in closed loop, and all models degrade sharply under conflicting signals. We propose SafeDriveVLA, the first driving VLA that (1) explicitly predicts a three-level navigation-compliance mode to decouple conflict reasoning from action generation, and (2) uses navigation-conditioned world model dreaming to inform this prediction. Unlike prior world models that roll out expert or planned actions, ours dreams of strictly following the navigation signal, showing when following is safe. SafeDriveVLA reaches 88.16 Driving Score (DS) and 68.64% Success Rate (SR) on Bench2Drive, lifts closed-loop language following by 49.3% and reduces collisions under unsafe instructions from 60 to 38 compared to the best SimLingo variant. Video demonstrations are available on our project page.</p>
             
             <div class="card-action-bar">
-                <a href="http://arxiv.org/pdf/2610.19825v1" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
+                <a href="http://arxiv.org/pdf/2610.20609v1" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
                     View PDF
                 </a>
-                <a href="http://arxiv.org/abs/2610.19825v1" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
+                <a href="http://arxiv.org/abs/2610.20609v1" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
                     arXiv Page &rarr;
                 </a>
             </div>
         </article>
         
-        <article class="paper-card" data-title="coordi-pi: coordination-aware dual-hand action representation for bimanual dexterous manipulation" data-summary="vision-language-action (vla) models have shown strong potential for general-purpose robotic manipulation, but extending them to bimanual dexterous manipulation introduces a high-dimensional and structured action space. existing bimanual vla policies commonly concatenate right- and left-side arm--hand actions at each control timestep, leaving cross-hand interactions implicit within a single action vector. we introduce coordi-$π$, a structured action representation for bimanual dexterous manipulation. coordi-$π$ represents the right- and left-side arm--hand actions as individual action tokens and organizes them into an interleaved sequence, explicitly exposing the two sides within the action sequence. to explicitly encode hand identity and temporal synchronization in this interleaved representation, a learnable hand-identity embedding distinguishes the two sides, while sequence--control-timestep factorized rotary positional encoding (rope) separates sequence position from control timestep, allowing actions at the same control timestep to share a temporal coordinate while retaining distinct sequence positions. across all five bimanual dexterous manipulation tasks in dexjoco, coordi-$π$ achieves state-of-the-art performance under both \textit{rand-obj} and \textit{rand-full}, improving the average success rate over $π_{0.5}$ from 31.9\% to 51.3\% and from 18.3\% to 32.3\%, respectively. coordi-$π$ also consistently outperforms $π_{0.5}$ across four real-world bimanual dexterous manipulation tasks.">
+        <article class="paper-card" data-title="graph-reweighted behavior cloning with human interventions for precise robotic manipulation" data-summary="long-horizon precise manipulation produces mixed-quality data for post-training vision-language-action (vla) models: even successful demonstrations and intervention-assisted rollouts may contain detours, hesitations, failed attempts, and imperfect recoveries. the key challenge is to identify which action chunks actually advance the task, rather than uniformly cloning or discarding imperfect trajectories. we propose graph-reweighted behavior cloning (gr-bc), an offline iterative post-training framework that builds a task-conditioned goal-reachability graph over demonstrations and iteratively collected rollouts, including both successful and failed episodes with human interventions. reverse graph search computes minimal remaining steps to task success within the dataset support, and each action chunk is weighted by how much its execution reduces this potential. this consequence-based weighting reuses recoverable segments from failed trajectories, leverages interventions as recovery paths, and down-weights locally regressive chunks even inside successful trajectories. new rollouts are incorporated by appending them to the graph and rerunning search, without training a reward model, action-conditioned critic, or progress predictor. across four precise manipulation tasks and three vla backbones, gr-bc improves single-round supervised fine-tuning and reaches 91% success after a few offline iterations, without trajectory comparisons or progress labels. more details and videos are available at: https://gr-bc.github.io">
+            <div class="card-meta-top">
+                <span class="rank-tag">TOP #2</span>
+                <div class="score-badge">
+                    <span class="score-label">Priority Index</span>
+                    <span class="score-value">135</span>
+                </div>
+            </div>
+            
+            <h2 class="paper-title">Graph-Reweighted Behavior Cloning with Human Interventions for Precise Robotic Manipulation</h2>
+            
+            <div class="author-row">
+                <span>🗓️ 2026-10-14</span>
+                <span>✍️ Xiaoman Li, Zhiqiang Yang, Jiayu Hu et al.</span>
+            </div>
+            
+            <div class="badge-cluster">
+                <span class="badge">#vision-language-action</span><span class="badge">#vla</span>
+            </div>
+            
+            <p class="paper-summary">Long-horizon precise manipulation produces mixed-quality data for post-training vision-language-action (VLA) models: even successful demonstrations and intervention-assisted rollouts may contain detours, hesitations, failed attempts, and imperfect recoveries. The key challenge is to identify which action chunks actually advance the task, rather than uniformly cloning or discarding imperfect trajectories. We propose Graph-Reweighted Behavior Cloning (GR-BC), an offline iterative post-training framework that builds a task-conditioned goal-reachability graph over demonstrations and iteratively collected rollouts, including both successful and failed episodes with human interventions. Reverse graph search computes minimal remaining steps to task success within the dataset support, and each action chunk is weighted by how much its execution reduces this potential. This consequence-based weighting reuses recoverable segments from failed trajectories, leverages interventions as recovery paths, and down-weights locally regressive chunks even inside successful trajectories. New rollouts are incorporated by appending them to the graph and rerunning search, without training a reward model, action-conditioned critic, or progress predictor. Across four precise manipulation tasks and three VLA backbones, GR-BC improves single-round supervised fine-tuning and reaches 91% success after a few offline iterations, without trajectory comparisons or progress labels. More details and videos are available at: https://gr-bc.github.io</p>
+            
+            <div class="card-action-bar">
+                <a href="http://arxiv.org/pdf/2610.20504v1" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
+                    View PDF
+                </a>
+                <a href="http://arxiv.org/abs/2610.20504v1" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
+                    arXiv Page &rarr;
+                </a>
+            </div>
+        </article>
+        
+        <article class="paper-card" data-title="adarsi: on-demand recursive self-improvement for embodied agents" data-summary="pretrained vision-language-action models (vlas) often fail midway through unseen long-horizon tasks. recursive self-improvement (rsi) offers a remedy, but embodied rsi methods either refine the harness around a frozen executor and so cannot add a missing motion, or train the executor on persistent failures without asking whether a failure lies in how the executor is called or in what it can do. we ask when a self-improving embodied system should change the weights of its executor, and propose adarsi, an on-demand rsi framework for embodied agents. a coding agent first improves its skills and harness, then attributes persistent failures by retrying failing sub-steps from saved states, and fine-tunes only the sub-steps that remain unreliable, with demonstrations it collects itself and experience carried over from earlier tasks. on all 50 target tasks of robocasa365, with gr00t n1.5 as the executor and no human demonstrations, adarsi improves the vla on all three suites and raises its success on unseen composite tasks from 4.6% to 13.8%. compared with fine-tuning every sub-step, it reaches slightly higher success while using only 28% of the gpu time and 22% of the self-collected demonstrations, and fine-tuning without a harness trains more yet gains far less.">
             <div class="card-meta-top">
                 <span class="rank-tag">TOP #3</span>
                 <div class="score-badge">
                     <span class="score-label">Priority Index</span>
-                    <span class="score-value">165</span>
+                    <span class="score-value">135</span>
                 </div>
             </div>
             
-            <h2 class="paper-title">Coordi-pi: Coordination-Aware Dual-Hand Action Representation for Bimanual Dexterous Manipulation</h2>
+            <h2 class="paper-title">AdaRSI: On-Demand Recursive Self-Improvement for Embodied Agents</h2>
             
             <div class="author-row">
                 <span>🗓️ 2026-10-14</span>
-                <span>✍️ Yiming Meng, Yanming Shao, Weijie Shen et al.</span>
+                <span>✍️ Peidong Wang, Ying Chang, Zhiming Ma et al.</span>
             </div>
             
             <div class="badge-cluster">
-                <span class="badge">#dexterous manipulation</span><span class="badge">#vision-language-action</span><span class="badge">#vla</span>
+                <span class="badge">#vision-language-action</span><span class="badge">#vla</span>
             </div>
             
-            <p class="paper-summary">Vision-language-action (VLA) models have shown strong potential for general-purpose robotic manipulation, but extending them to bimanual dexterous manipulation introduces a high-dimensional and structured action space. Existing bimanual VLA policies commonly concatenate right- and left-side arm--hand actions at each control timestep, leaving cross-hand interactions implicit within a single action vector. We introduce Coordi-$π$, a structured action representation for bimanual dexterous manipulation. Coordi-$π$ represents the right- and left-side arm--hand actions as individual action tokens and organizes them into an interleaved sequence, explicitly exposing the two sides within the action sequence. To explicitly encode hand identity and temporal synchronization in this interleaved representation, a learnable hand-identity embedding distinguishes the two sides, while sequence--control-timestep factorized rotary positional encoding (RoPE) separates sequence position from control timestep, allowing actions at the same control timestep to share a temporal coordinate while retaining distinct sequence positions. Across all five bimanual dexterous manipulation tasks in DexJoCo, Coordi-$π$ achieves state-of-the-art performance under both \textit{rand-obj} and \textit{rand-full}, improving the average success rate over $π_{0.5}$ from 31.9\% to 51.3\% and from 18.3\% to 32.3\%, respectively. Coordi-$π$ also consistently outperforms $π_{0.5}$ across four real-world bimanual dexterous manipulation tasks.</p>
+            <p class="paper-summary">Pretrained vision-language-action models (VLAs) often fail midway through unseen long-horizon tasks. Recursive self-improvement (RSI) offers a remedy, but embodied RSI methods either refine the harness around a frozen executor and so cannot add a missing motion, or train the executor on persistent failures without asking whether a failure lies in how the executor is called or in what it can do. We ask when a self-improving embodied system should change the weights of its executor, and propose AdaRSI, an on-demand RSI framework for embodied agents. A coding agent first improves its skills and harness, then attributes persistent failures by retrying failing sub-steps from saved states, and fine-tunes only the sub-steps that remain unreliable, with demonstrations it collects itself and experience carried over from earlier tasks. On all 50 target tasks of RoboCasa365, with GR00T N1.5 as the executor and no human demonstrations, AdaRSI improves the VLA on all three suites and raises its success on unseen composite tasks from 4.6% to 13.8%. Compared with fine-tuning every sub-step, it reaches slightly higher success while using only 28% of the GPU time and 22% of the self-collected demonstrations, and fine-tuning without a harness trains more yet gains far less.</p>
             
             <div class="card-action-bar">
-                <a href="http://arxiv.org/pdf/2610.19753v1" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
+                <a href="http://arxiv.org/pdf/2610.20474v1" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
                     View PDF
                 </a>
-                <a href="http://arxiv.org/abs/2610.19753v1" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
+                <a href="http://arxiv.org/abs/2610.20474v1" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
                     arXiv Page &rarr;
                 </a>
             </div>
         </article>
         
-        <article class="paper-card" data-title="e2drl: end-to-end differentiable reinforcement learning for 3d obstacle avoidance in quadruped robots" data-summary="differentiable reinforcement learning shows strong promise for robot policy learning, but its application to legged locomotion has remained limited to blind walking or simulated 2d tasks. extending it to end-to-end visual obstacle avoidance is challenging because hard collision constraints and early termination upon contact corrupt first-order gradients, trapping optimizers in local minima. we present e2drl, which addresses this with a soft differentiable obstacle-interaction formulation: penetration penalties across multiple body keypoints with velocity-conditioned stop-gradient shaping to provide the first-order training signals for 3d obstacle avoidance. to realize a deployable perception-control system, a privileged teacher trained via soft analytic policy optimization (sapo) in a differentiable simulator is distilled into a recurrent depth-based student via dagger, then blended with a base locomotion policy using a terrain-aware gating module for deployment. in simulation, e2drl achieves higher sample efficiency than ppo and demonstrates superior velocity-tracking performance and 3d obstacle-avoidance capability compared with both ppo and duality-based dcbf nmpc. we present the first sim-to-real validation of end-to-end differentiable rl for 3d obstacle avoidance on a unitree go2 in static and dynamic environments.">
+        <article class="paper-card" data-title="towards agentic robots: model, data, environment, and harness" data-summary="foundation models are driving a paradigm shift in robotic intelligence, moving beyond low-level action prediction to goal-directed orchestration of data collection, model training, task planning, and real-world execution. we characterize this emerging paradigm as an agentic robots, in which agents reason over human instructions, interact with robotic environments, rectify execution errors autonomously, and dynamically adjust operational strategies. although this field develops fast, current studies are not well connected. researchers have no consistent view of how to combine different agentic functions into a complete robot system. this paper provides a unified overview of existing research on agentic robots. we first trace the development from robot policies to agentic systems, covering vision-language-action models, world models, and world-action models. we then clarify the definition and scope of agentic robots and organize existing research into seventeen categories across four functional domains: model, data, environment, and harness. across these domains, we examine how agents shape model learning and robot decisions, collect and curate robot data, construct worlds, tasks, and tests for learning and evaluation, and organize capabilities for robot use. finally, we discuss open challenges and outline directions for future research. looking forward, we hope this work contributes to a clearer understanding of agentic robots and supports new approaches to making them more capable, reliable, and adaptive.">
             <div class="card-meta-top">
                 <span class="rank-tag">TOP #4</span>
                 <div class="score-badge">
                     <span class="score-label">Priority Index</span>
-                    <span class="score-value">140</span>
+                    <span class="score-value">135</span>
                 </div>
             </div>
             
-            <h2 class="paper-title">E2DRL: End-to-End Differentiable Reinforcement Learning for 3D Obstacle Avoidance in Quadruped Robots</h2>
+            <h2 class="paper-title">Towards Agentic Robots: Model, Data, Environment, and Harness</h2>
             
             <div class="author-row">
                 <span>🗓️ 2026-10-14</span>
-                <span>✍️ Cheng Fan, Bingyang Zhou, Gang Yang et al.</span>
+                <span>✍️ Chonghan Qin, Dongming Wu, Kaituo Feng et al.</span>
             </div>
             
             <div class="badge-cluster">
-                <span class="badge">#quadruped</span><span class="badge">#reinforcement learning</span><span class="badge">#locomotion</span>
+                <span class="badge">#world model</span><span class="badge">#vision-language-action</span>
             </div>
             
-            <p class="paper-summary">Differentiable reinforcement learning shows strong promise for robot policy learning, but its application to legged locomotion has remained limited to blind walking or simulated 2D tasks. Extending it to end-to-end visual obstacle avoidance is challenging because hard collision constraints and early termination upon contact corrupt first-order gradients, trapping optimizers in local minima. We present E2DRL, which addresses this with a soft differentiable obstacle-interaction formulation: penetration penalties across multiple body keypoints with velocity-conditioned stop-gradient shaping to provide the first-order training signals for 3D obstacle avoidance. To realize a deployable perception-control system, a privileged teacher trained via Soft Analytic Policy Optimization (SAPO) in a differentiable simulator is distilled into a recurrent depth-based student via DAgger, then blended with a base locomotion policy using a terrain-aware gating module for deployment. In simulation, E2DRL achieves higher sample efficiency than PPO and demonstrates superior velocity-tracking performance and 3D obstacle-avoidance capability compared with both PPO and Duality-based DCBF NMPC. We present the first sim-to-real validation of end-to-end differentiable RL for 3D obstacle avoidance on a Unitree Go2 in static and dynamic environments.</p>
+            <p class="paper-summary">Foundation models are driving a paradigm shift in robotic intelligence, moving beyond low-level action prediction to goal-directed orchestration of data collection, model training, task planning, and real-world execution. We characterize this emerging paradigm as an agentic robots, in which agents reason over human instructions, interact with robotic environments, rectify execution errors autonomously, and dynamically adjust operational strategies. Although this field develops fast, current studies are not well connected. Researchers have no consistent view of how to combine different agentic functions into a complete robot system. This paper provides a unified overview of existing research on agentic robots. We first trace the development from robot policies to agentic systems, covering vision-language-action models, world models, and world-action models. We then clarify the definition and scope of agentic robots and organize existing research into seventeen categories across four functional domains: Model, Data, Environment, and Harness. Across these domains, we examine how agents shape model learning and robot decisions, collect and curate robot data, construct worlds, tasks, and tests for learning and evaluation, and organize capabilities for robot use. Finally, we discuss open challenges and outline directions for future research. Looking forward, we hope this work contributes to a clearer understanding of agentic robots and supports new approaches to making them more capable, reliable, and adaptive.</p>
             
             <div class="card-action-bar">
-                <a href="http://arxiv.org/pdf/2610.19627v1" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
+                <a href="http://arxiv.org/pdf/2610.20442v1" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
                     View PDF
                 </a>
-                <a href="http://arxiv.org/abs/2610.19627v1" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
+                <a href="http://arxiv.org/abs/2610.20442v1" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
                     arXiv Page &rarr;
                 </a>
             </div>
         </article>
         
-        <article class="paper-card" data-title="one-shot human video-guided adaptation for vision-language-action models" data-summary="vision-language-action (vla) models have recently achieved remarkable progress by leveraging large-scale robot datasets and foundation models for general-purpose robot manipulation. however, their ability to rapidly adapt to novel manipulation tasks beyond the training distribution remains limited. existing approaches often require task-specific robot demonstrations and additional training, which are labor- and compute-intensive, limiting the scalability of vla adaptation to open-world scenarios. to reduce this dependence on target-task robot data, we propose cappro, a framework that enables a vla policy to adapt to previously unseen manipulation tasks using only a single human demonstration video. cappro consists of two components. first, a phase-aware human video representation module constructs a compact video representation through learned visual token selection and learns task-relevant query representations under phase-caption supervision. second, a video-conditioned adaptation module jointly incorporates the compact video and query-derived representations into the action-conditioning context of the pretrained vla policy. % this design introduces task-specific guidance while largely preserving the original vla action-generation backbone. in this way, the human demonstration provides task-specific execution guidance rather than an embodiment-aligned trajectory to imitate, without requiring target-task robot demonstrations or target-task fine-tuning. experiments across source and unseen target tasks show that cappro improves average performance across unseen target groups while maintaining comparable performance on the source tasks. these results demonstrate the effectiveness of human-video guidance for cross-task vla adaptation.">
+        <article class="paper-card" data-title="modeling and understanding neural weights of humanoid policies with diffusion" data-summary="recent advances in robot learning have driven rapid progress in humanoid control, enabling increasingly agile behaviors in the real world. however, humanoid control networks are typically obtained through conventional training procedures, while comparatively little attention has been given to directly modeling the distribution of their learned weights and generating functional networks in weight space. in this work, we investigate whether high-performing humanoid control networks can be generatively modeled directly through their weights. we adopt a latent diffusion framework that couples a linear autoencoder with a diffusion transformer. the autoencoder compresses actor network parameters into a compact latent space, and the diffusion transformer models the distribution of these latents. trained on networks collected from reinforcement learning for the unitree g1 robot, our approach generates deployable networks that perform various motions in the real world, including walking, dancing, and spin kick. beyond generation, we further study the learned weight space to better understand the structure captured by these humanoid control networks. we identify a structural principle in the first-layer weights that consistently reflects the robot's kinematic prior. notably, this kinematic prior emerges under both reinforcement learning (rl) and imitation learning (il) training, suggesting that it is not specific to a particular optimization process but may instead reflect common knowledge associated with humanoid embodiment. together, these results demonstrate the feasibility of generative modeling in humanoid network weight space, while providing initial insights into the information encoded by their learned weights. additional results are available on our project website: https://humanoid-weight-diffusion.github.io/">
             <div class="card-meta-top">
                 <span class="rank-tag">TOP #5</span>
                 <div class="score-badge">
                     <span class="score-label">Priority Index</span>
-                    <span class="score-value">135</span>
+                    <span class="score-value">125</span>
                 </div>
             </div>
             
-            <h2 class="paper-title">One-shot Human Video-Guided Adaptation for Vision-Language-Action Models</h2>
+            <h2 class="paper-title">Modeling and Understanding Neural Weights of Humanoid Policies with Diffusion</h2>
             
             <div class="author-row">
                 <span>🗓️ 2026-10-14</span>
-                <span>✍️ Qi Chen, Yuwei Wu, Quan Chen et al.</span>
+                <span>✍️ Huixuan Cheng, Bike Zhang, Shankar Sastry et al.</span>
             </div>
             
             <div class="badge-cluster">
-                <span class="badge">#vision-language-action</span><span class="badge">#vla</span>
+                <span class="badge">#humanoid</span><span class="badge">#reinforcement learning</span>
             </div>
             
-            <p class="paper-summary">Vision-language-action (VLA) models have recently achieved remarkable progress by leveraging large-scale robot datasets and foundation models for general-purpose robot manipulation. However, their ability to rapidly adapt to novel manipulation tasks beyond the training distribution remains limited. Existing approaches often require task-specific robot demonstrations and additional training, which are labor- and compute-intensive, limiting the scalability of VLA adaptation to open-world scenarios. To reduce this dependence on target-task robot data, we propose CapPro, a framework that enables a VLA policy to adapt to previously unseen manipulation tasks using only a single human demonstration video. CapPro consists of two components. First, a phase-aware human video representation module constructs a compact video representation through learned visual token selection and learns task-relevant query representations under phase-caption supervision. Second, a video-conditioned adaptation module jointly incorporates the compact video and query-derived representations into the action-conditioning context of the pretrained VLA policy. % This design introduces task-specific guidance while largely preserving the original VLA action-generation backbone. In this way, the human demonstration provides task-specific execution guidance rather than an embodiment-aligned trajectory to imitate, without requiring target-task robot demonstrations or target-task fine-tuning. Experiments across source and unseen target tasks show that CapPro improves average performance across unseen target groups while maintaining comparable performance on the source tasks. These results demonstrate the effectiveness of human-video guidance for cross-task VLA adaptation.</p>
+            <p class="paper-summary">Recent advances in robot learning have driven rapid progress in humanoid control, enabling increasingly agile behaviors in the real world. However, humanoid control networks are typically obtained through conventional training procedures, while comparatively little attention has been given to directly modeling the distribution of their learned weights and generating functional networks in weight space. In this work, we investigate whether high-performing humanoid control networks can be generatively modeled directly through their weights. We adopt a latent diffusion framework that couples a linear autoencoder with a Diffusion Transformer. The autoencoder compresses actor network parameters into a compact latent space, and the Diffusion Transformer models the distribution of these latents. Trained on networks collected from reinforcement learning for the Unitree G1 robot, our approach generates deployable networks that perform various motions in the real world, including walking, dancing, and spin kick. Beyond generation, we further study the learned weight space to better understand the structure captured by these humanoid control networks. We identify a structural principle in the first-layer weights that consistently reflects the robot's kinematic prior. Notably, this kinematic prior emerges under both Reinforcement Learning (RL) and Imitation Learning (IL) training, suggesting that it is not specific to a particular optimization process but may instead reflect common knowledge associated with humanoid embodiment. Together, these results demonstrate the feasibility of generative modeling in humanoid network weight space, while providing initial insights into the information encoded by their learned weights. Additional results are available on our project website: https://humanoid-weight-diffusion.github.io/</p>
             
             <div class="card-action-bar">
-                <a href="http://arxiv.org/pdf/2610.19746v1" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
+                <a href="http://arxiv.org/pdf/2610.20606v1" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
                     View PDF
                 </a>
-                <a href="http://arxiv.org/abs/2610.19746v1" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
+                <a href="http://arxiv.org/abs/2610.20606v1" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
                     arXiv Page &rarr;
                 </a>
             </div>
         </article>
         
-        <article class="paper-card" data-title="acro: actor-critic rollout orchestration" data-summary="executing a vision-language-action (vla) policy involves deciding when to continue an attempt and when to intervene to improve its chances of success. we introduce acro, an actor--critic rollout orchestration layer that makes these decisions for a fixed vla. acro seeks interventions that offer a more promising continuation, are physically feasible, and leave sufficient time to complete the task. a critic learned from policy rollouts estimates success prospects to decide when to intervene and select a re-entry target along the executed trajectory. trajectory retraction shortcuts the visited path to return the robot to that target, where the same vla resumes execution from a fresh observation. we evaluate acro with gr00t n1.7 and $π_{0.5}$ across simplerenv, robocasa, and real-robot manipulation. under the same physical execution budget, including all return motion, acro improves success by 10.4, 7.3, and 21.7 percentage points, respectively. it also completes additional tasks as the execution budget grows. these results show that controlling when and where a policy resumes can turn its existing capabilities into more successful task executions. project page: https://junhoo.me/acro">
+        <article class="paper-card" data-title="pingpongduo: agile humanoid table tennis doubles with safe team coordination" data-summary="unlike singles, humanoid table tennis doubles requires teammates to strike in strict alternation while sharing a confined workspace. rapid repositioning can compromise striking accuracy, while uncoordinated teammate movements introduce collision risks. we present pingpongduo, a hierarchical framework for agile humanoid doubles with safe team coordination. at the team level, a planner jointly selects positioning targets and uses learned risk estimates to filter risky proposals, preferentially preserving the current striker's target. at the individual level, separate footwork and striking skills combine agile movement with precise racket control. the skills are guided by human motion references, including footwork collected from human doubles play, and trained from states produced by one another to support rapid transitions. a racket-arm residual further refines strikes after movement using return feedback from a simulator calibrated with real ball-flight and contact measurements. in simulation, pingpongduo improves the ball-return success rate by 13.2% over the state-of-the-art baseline, while achieving approximately 2 cm positioning error during clearance. in real-world experiments, a robot completes a 2.15 m clearance-and-recovery cycle in 2.4 s with a peak speed of 2.23 m/s, while two robots sustain more than 10 consecutive strikes in strict alternation.">
             <div class="card-meta-top">
                 <span class="rank-tag">TOP #6</span>
                 <div class="score-badge">
                     <span class="score-label">Priority Index</span>
-                    <span class="score-value">135</span>
+                    <span class="score-value">95</span>
                 </div>
             </div>
             
-            <h2 class="paper-title">ACRO: Actor-Critic Rollout Orchestration</h2>
+            <h2 class="paper-title">PingpongDuo: Agile Humanoid Table Tennis Doubles with Safe Team Coordination</h2>
             
             <div class="author-row">
                 <span>🗓️ 2026-10-14</span>
-                <span>✍️ Junhoo Lee, Seungyeon Kim, Baekseung Kim et al.</span>
+                <span>✍️ Haoran Jiang, Yichao Zhong, Kai Zhang et al.</span>
             </div>
             
             <div class="badge-cluster">
-                <span class="badge">#vision-language-action</span><span class="badge">#vla</span>
+                <span class="badge">#humanoid</span>
             </div>
             
-            <p class="paper-summary">Executing a vision-language-action (VLA) policy involves deciding when to continue an attempt and when to intervene to improve its chances of success. We introduce ACRO, an Actor--Critic rollout orchestration layer that makes these decisions for a fixed VLA. ACRO seeks interventions that offer a more promising continuation, are physically feasible, and leave sufficient time to complete the task. A Critic learned from policy rollouts estimates success prospects to decide when to intervene and select a re-entry target along the executed trajectory. Trajectory Retraction shortcuts the visited path to return the robot to that target, where the same VLA resumes execution from a fresh observation. We evaluate ACRO with GR00T N1.7 and $π_{0.5}$ across SimplerEnv, RoboCasa, and real-robot manipulation. Under the same physical execution budget, including all return motion, ACRO improves success by 10.4, 7.3, and 21.7 percentage points, respectively. It also completes additional tasks as the execution budget grows. These results show that controlling when and where a policy resumes can turn its existing capabilities into more successful task executions. Project page: https://junhoo.me/acro</p>
+            <p class="paper-summary">Unlike singles, humanoid table tennis doubles requires teammates to strike in strict alternation while sharing a confined workspace. Rapid repositioning can compromise striking accuracy, while uncoordinated teammate movements introduce collision risks. We present PingpongDuo, a hierarchical framework for agile humanoid doubles with safe team coordination. At the team level, a planner jointly selects positioning targets and uses learned risk estimates to filter risky proposals, preferentially preserving the current striker's target. At the individual level, separate footwork and striking skills combine agile movement with precise racket control. The skills are guided by human motion references, including footwork collected from human doubles play, and trained from states produced by one another to support rapid transitions. A racket-arm residual further refines strikes after movement using return feedback from a simulator calibrated with real ball-flight and contact measurements. In simulation, PingpongDuo improves the ball-return success rate by 13.2% over the state-of-the-art baseline, while achieving approximately 2 cm positioning error during clearance. In real-world experiments, a robot completes a 2.15 m clearance-and-recovery cycle in 2.4 s with a peak speed of 2.23 m/s, while two robots sustain more than 10 consecutive strikes in strict alternation.</p>
             
             <div class="card-action-bar">
-                <a href="http://arxiv.org/pdf/2610.19677v1" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
+                <a href="http://arxiv.org/pdf/2610.20579v1" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
                     View PDF
                 </a>
-                <a href="http://arxiv.org/abs/2610.19677v1" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
+                <a href="http://arxiv.org/abs/2610.20579v1" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
                     arXiv Page &rarr;
                 </a>
             </div>
         </article>
         
-        <article class="paper-card" data-title="accelerating vla inference with perturbation informed execution" data-summary="action-chunking vision-language-action (vla) models predict sequences of future robot actions. under fixed-horizon execution, the robot executes a fixedlength prefix of each predicted chunk before invoking the policy again, leaving the remaining predictions unused. for a given number of executed actions, short execution horizons require more policy calls. extending the execution horizon amortizes policy inference cost over more actions. however, uniformly applying long horizons across episodes can limit opportunities for precise corrections. to address this limitation, we propose pices (perturbation-informed chunk and execution horizon selection), a training-free method that jointly selects an action chunk and the number of actions executed before the next policy call. within a single policy call, the action expert generates a batch of action chunks from multiple initial noise samples and their locally perturbed counterparts, using the same conditioning features across all samples. pices exploits differences between corresponding actions in each nominal chunk and its counterpart to determine candidate-specific execution horizons and select a nominal chunk for execution. experiments on simulation benchmarks and real-world manipulation tasks demonstrate that pices achieves speedup by up to 2.3x in wall-clock policy inference time on jetson orin and thor relative to fixed horizon baselines while improving the success rate.">
+        <article class="paper-card" data-title="kinogen: customizable humanoid loco-manipulation references via kinematically grounded video generation" data-summary="we present kinogen, a framework that synthesizes customizable humanoid loco-manipulation references through kinematically grounded video generation. kinogen conditions a pretrained video generator on calibrated renders of the target robot and object in a simulated task instance and recovers the reference by fitting the same models to the generated two-view video, so that the reference lies in the robot configuration space by construction without a human body proxy or retargeting. body, hand, and object priors initialize the reconstruction, and direct optimization against cross-view evidence refines it. since an edited keyframe is simply another rendered state, a user can prescribe a goal object pose, regenerate the video around the edited keyframe, and obtain a reference that satisfies the pose exactly. across eight loco-manipulation tasks, kinogen yields lower penetration and foot skating than video-based baselines and preserves over 90% of annotated contacts, and its customized references satisfy every prescribed target with substantially less penetration than direct interpolation. tracking policies trained on the synthesized references are deployed on a unitree g1 humanoid with dexterous hands. project webpage: https://kinogen-humanoid.github.io/.">
             <div class="card-meta-top">
                 <span class="rank-tag">TOP #7</span>
                 <div class="score-badge">
                     <span class="score-label">Priority Index</span>
-                    <span class="score-value">135</span>
+                    <span class="score-value">95</span>
                 </div>
             </div>
             
-            <h2 class="paper-title">Accelerating VLA Inference with Perturbation Informed Execution</h2>
+            <h2 class="paper-title">KinoGen: Customizable Humanoid Loco-Manipulation References via Kinematically Grounded Video Generation</h2>
             
             <div class="author-row">
                 <span>🗓️ 2026-10-14</span>
-                <span>✍️ Jehun Lee, Hajun Lee, Jimin Ryu et al.</span>
+                <span>✍️ Qi Wu, Lulu Zhao, Sanghyun Hahn et al.</span>
             </div>
             
             <div class="badge-cluster">
-                <span class="badge">#vision-language-action</span><span class="badge">#vla</span>
+                <span class="badge">#humanoid</span>
             </div>
             
-            <p class="paper-summary">Action-chunking vision-language-action (VLA) models predict sequences of future robot actions. Under fixed-horizon execution, the robot executes a fixedlength prefix of each predicted chunk before invoking the policy again, leaving the remaining predictions unused. For a given number of executed actions, short execution horizons require more policy calls. Extending the execution horizon amortizes policy inference cost over more actions. However, uniformly applying long horizons across episodes can limit opportunities for precise corrections. To address this limitation, we propose PICES (Perturbation-Informed Chunk and Execution Horizon Selection), a training-free method that jointly selects an action chunk and the number of actions executed before the next policy call. Within a single policy call, the action expert generates a batch of action chunks from multiple initial noise samples and their locally perturbed counterparts, using the same conditioning features across all samples. PICES exploits differences between corresponding actions in each nominal chunk and its counterpart to determine candidate-specific execution horizons and select a nominal chunk for execution. Experiments on simulation benchmarks and real-world manipulation tasks demonstrate that PICES achieves speedup by up to 2.3x in wall-clock policy inference time on Jetson Orin and Thor relative to fixed horizon baselines while improving the success rate.</p>
+            <p class="paper-summary">We present KinoGen, a framework that synthesizes customizable humanoid loco-manipulation references through kinematically grounded video generation. KinoGen conditions a pretrained video generator on calibrated renders of the target robot and object in a simulated task instance and recovers the reference by fitting the same models to the generated two-view video, so that the reference lies in the robot configuration space by construction without a human body proxy or retargeting. Body, hand, and object priors initialize the reconstruction, and direct optimization against cross-view evidence refines it. Since an edited keyframe is simply another rendered state, a user can prescribe a goal object pose, regenerate the video around the edited keyframe, and obtain a reference that satisfies the pose exactly. Across eight loco-manipulation tasks, KinoGen yields lower penetration and foot skating than video-based baselines and preserves over 90% of annotated contacts, and its customized references satisfy every prescribed target with substantially less penetration than direct interpolation. Tracking policies trained on the synthesized references are deployed on a Unitree G1 humanoid with dexterous hands. Project webpage: https://kinogen-humanoid.github.io/.</p>
             
             <div class="card-action-bar">
-                <a href="http://arxiv.org/pdf/2610.19656v1" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
+                <a href="http://arxiv.org/pdf/2610.20552v1" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
                     View PDF
                 </a>
-                <a href="http://arxiv.org/abs/2610.19656v1" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
+                <a href="http://arxiv.org/abs/2610.20552v1" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
                     arXiv Page &rarr;
                 </a>
             </div>
         </article>
         
-        <article class="paper-card" data-title="forcebench: benchmarking force integration for robotic manipulation" data-summary="force feedback provides vision-language-action (vla) policies with physical observations that can guide action selection and execution. however, differences in tasks, demonstrations, and control settings across existing systems hinder reliable comparisons of force integration designs. we introduce forcebench, a simulation benchmark for evaluating six-axis wrist-force integration under a unified protocol. forcebench combines eight tasks spanning physical-property inference, resistance-dependent interaction, and contact-rich assembly with 1,600 synchronized demonstrations and task-specific success criteria. we compare one no-force baseline and six force integration designs on a shared $π_{0.5}$ backbone. prompt fusion achieves the highest observed mean simulation success of 35.31%, compared with 23.25% for the baseline, and improves success rates across all three task categories. predictive and temporal gains in simulation concentrate on physical-property inference, while both temporal designs underperform the baseline on assembly. real-world evaluation of eight systems across five tasks supports the main qualitative trends: prompt fusion and dual-path fusion achieve 63.00% mean success, compared with 40.00% for the baseline, but only prompt fusion improves every task. these findings support forcebench's practical value for identifying the benefits and limitations of force integration across manipulation demands. the project page is available at https://forcebench-platform.github.io/.">
+        <article class="paper-card" data-title="human demonstrations as post-training data for any robot body: retargeting the object, not the hand" data-summary="human demonstrations are today used largely for pretraining vision-language-action models, with little ability to use the same data for target-embodiment or task-oriented training, which scalable deployment of robots in industrial and general environments depends on. a human demonstration recorded on a simple and scalable device such as a mobile phone can serve as post-training data for a robot whose body differs in structure and capability from the human who recorded it. this is made possible not by retargeting the hand's motion but the object's. a capture yields a body-free record: the object's pose over time, its contact intervals, and a reconstructed 3d object with provenance. any robot, given as a urdf and a short descriptor, is solved against that record and scored in simulation against the demonstrated object motion as ground truth: the human-to-simulation leg of human-to-simulation-to-robot transfer, measured per robot. each (robot, episode) pair gets one outcome: pass, failure with a named mode, or refusal, with its reason, before any motion. the method runs as a working system over a growing collection; the set analysed here is a sample of it: 42 captures solved on 8 robots, 157 pairs, of which 31.2% pass, 52.2% fail, 14.0% are refused and 2.5% are unauditable (kinematic feasibility, +/-50 mm / +/-15 deg, in simulation). refusals held up: every pair the checks refuse on stored evidence yet ran anyway failed (13 of 13; 5 on a body whose public model welds its hand). a description file could not be shown to screen a robot: its outcomes were barely more predictable than guessing. no policy has yet been trained on the record. the record decides what a robot may post-train on; whether the policy then works on the real robot is the simulation-to-robot question, answered downstream.">
             <div class="card-meta-top">
                 <span class="rank-tag">TOP #8</span>
                 <div class="score-badge">
                     <span class="score-label">Priority Index</span>
-                    <span class="score-value">135</span>
+                    <span class="score-value">95</span>
                 </div>
             </div>
             
-            <h2 class="paper-title">ForceBench: Benchmarking Force Integration for Robotic Manipulation</h2>
+            <h2 class="paper-title">Human Demonstrations as Post-Training Data for Any Robot Body: Retargeting the Object, Not the Hand</h2>
             
             <div class="author-row">
                 <span>🗓️ 2026-10-14</span>
-                <span>✍️ Xuan Han, Zinuo Jin, Tianlin Li et al.</span>
+                <span>✍️ Nagasrikanth Kallakuri</span>
             </div>
             
             <div class="badge-cluster">
-                <span class="badge">#vision-language-action</span><span class="badge">#vla</span>
+                <span class="badge">#vision-language-action</span>
             </div>
             
-            <p class="paper-summary">Force feedback provides vision-language-action (VLA) policies with physical observations that can guide action selection and execution. However, differences in tasks, demonstrations, and control settings across existing systems hinder reliable comparisons of force integration designs. We introduce ForceBench, a simulation benchmark for evaluating six-axis wrist-force integration under a unified protocol. ForceBench combines eight tasks spanning physical-property inference, resistance-dependent interaction, and contact-rich assembly with 1,600 synchronized demonstrations and task-specific success criteria. We compare one no-force baseline and six force integration designs on a shared $π_{0.5}$ backbone. Prompt Fusion achieves the highest observed mean simulation success of 35.31%, compared with 23.25% for the baseline, and improves success rates across all three task categories. Predictive and temporal gains in simulation concentrate on physical-property inference, while both temporal designs underperform the baseline on assembly. Real-world evaluation of eight systems across five tasks supports the main qualitative trends: Prompt Fusion and Dual-Path Fusion achieve 63.00% mean success, compared with 40.00% for the baseline, but only Prompt Fusion improves every task. These findings support ForceBench's practical value for identifying the benefits and limitations of force integration across manipulation demands. The project page is available at https://forcebench-platform.github.io/.</p>
+            <p class="paper-summary">Human demonstrations are today used largely for pretraining vision-language-action models, with little ability to use the same data for target-embodiment or task-oriented training, which scalable deployment of robots in industrial and general environments depends on. A human demonstration recorded on a simple and scalable device such as a mobile phone can serve as post-training data for a robot whose body differs in structure and capability from the human who recorded it. This is made possible not by retargeting the hand's motion but the object's. A capture yields a body-free record: the object's pose over time, its contact intervals, and a reconstructed 3D object with provenance. Any robot, given as a URDF and a short descriptor, is solved against that record and scored in simulation against the demonstrated object motion as ground truth: the human-to-simulation leg of human-to-simulation-to-robot transfer, measured per robot. Each (robot, episode) pair gets one outcome: pass, failure with a named mode, or refusal, with its reason, before any motion. The method runs as a working system over a growing collection; the set analysed here is a sample of it: 42 captures solved on 8 robots, 157 pairs, of which 31.2% pass, 52.2% fail, 14.0% are refused and 2.5% are unauditable (kinematic feasibility, +/-50 mm / +/-15 deg, in simulation). Refusals held up: every pair the checks refuse on stored evidence yet ran anyway failed (13 of 13; 5 on a body whose public model welds its hand). A description file could not be shown to screen a robot: its outcomes were barely more predictable than guessing. No policy has yet been trained on the record. The record decides what a robot may post-train on; whether the policy then works on the real robot is the simulation-to-robot question, answered downstream.</p>
             
             <div class="card-action-bar">
-                <a href="http://arxiv.org/pdf/2610.19604v1" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
+                <a href="http://arxiv.org/pdf/2610.20351v1" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
                     View PDF
                 </a>
-                <a href="http://arxiv.org/abs/2610.19604v1" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
+                <a href="http://arxiv.org/abs/2610.20351v1" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
                     arXiv Page &rarr;
                 </a>
             </div>
