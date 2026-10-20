@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Embodied AI & Robotics Intelligence Digest — October 19, 2026</title>
+    <title>Embodied AI & Robotics Intelligence Digest — October 20, 2026</title>
     <style>
         :root {
             --bg-base: #080c14;
@@ -242,7 +242,7 @@
         <header>
             <span class="pill-brand">Autonomous Research Intelligence</span>
             <h1>Embodied AI & Physical Frontier Briefing</h1>
-            <p class="subtitle">Compiled on October 19, 2026 • Ranked top 8 strategic breakthroughs out of incoming preprints.</p>
+            <p class="subtitle">Compiled on October 20, 2026 • Ranked top 8 strategic breakthroughs out of incoming preprints.</p>
             
             <div class="controls">
                 <input type="text" id="filterInput" class="search-box" placeholder="Filter papers by keywords (e.g. humanoid, tactile, diffusion)...">
@@ -251,103 +251,103 @@
 
         <main id="paperList">
             
-        <article class="paper-card" data-title="coevolve: self-evolving code policies from skills to strategies for humanoid robots" data-summary="recent advances in vision-language-action (vla) models and world action models (wams) have expanded the manipulation and whole body capabilities of individual robots. yet a single robot remains limited by its embodiment, and many real world tasks require capabilities that can only emerge through cooperation. existing multi robot frameworks largely emphasize task decomposition, allocation, and replanning, while providing limited support for adapting executable coordination when physical execution deviates from the intended behavior. we present coevolve, a framework that represents team coordination as executable code over fixed robot motor skills. coevolve introduces verifier guided coordination evolution, where a multimodal foundation model instantiates coordination strategies through motion primitives, semantic objectives, temporary robot roles, and bounded execution parameters. physical verification evaluates each executed transition, rejected behaviors trigger structured coordination revision from an accepted checkpoint, and verified experience is retained to guide subsequent decisions. we evaluate coevolve with two simulated unitree g1 humanoids transporting a freely supported rigid payload through constrained corridors. across 15 base task runs with three multimodal backbone families, coevolve completes 8 tasks, with every backbone achieving end to end success. additional evaluations yield verified placement on two additional corridor layouts and after both same-backbone and cross-backbone experience initialization, while exposing persistent limitations in motion precision and contact stability. these results support executable coordination as a practical interface for adapting long horizon multi robot collaboration under shared physical constraints.">
+        <article class="paper-card" data-title="diplo: self-distilled diffusion planning for loco-manipulation" data-summary="humanoid loco-manipulation is particularly challenging because it requires coordinating locomotion, balance, and object interaction, making it difficult to learn from limited demonstrations or from scratch through reinforcement learning (rl). we introduce diplo (self-distilled diffusion planning for loco-manipulation), a framework that combines a self-distilled diffusion planner with a low-level whole-body tracking policy. our planner is pretrained via supervised learning on motions derived from human-to-humanoid retargeting, while the tracker is trained via rl to execute them. diplo centers around two complementary post-training stages. first, we introduce self-distillation diffusion policy optimisation (sd:dpo) to remove the planner's dependence on strong task conditioning, which we identify as a crucial ingredient for effective pretraining, as downstream fine-tuning does not recover comparable performance when it is omitted.. we then fine-tune this distilled model with diffusion-augmented proximal policy optimization (da:ppo), a maximum-entropy rl method for diffusion models, to improve task success and align generated plans with the frozen tracker's execution capabilities. together, these stages enable motion generation through state-history and goal conditioning alone, enabling 99% task success in pick-carry-place tasks, compared to just 45% for the pretrained model. the resulting planner also generates motions for unseen object goals, with further evaluations on kicking and pushing/pulling tasks. finally, we deploy our pipeline on the hardware, using our da:ppo planner-tracker on a unitree g1, achieving repeated successful executions without any real-world fine-tuning.">
             <div class="card-meta-top">
                 <span class="rank-tag">TOP #1</span>
                 <div class="score-badge">
                     <span class="score-label">Priority Index</span>
-                    <span class="score-value">180</span>
+                    <span class="score-value">185</span>
                 </div>
             </div>
             
-            <h2 class="paper-title">CoEvolve: Self-Evolving Code Policies from Skills to Strategies for Humanoid Robots</h2>
+            <h2 class="paper-title">DiPLO: Self-distilled Diffusion Planning for Loco-manipulation</h2>
             
             <div class="author-row">
-                <span>🗓️ 2026-10-16</span>
-                <span>✍️ Zicheng Liu, Haochen Wu, Jiawei He et al.</span>
+                <span>🗓️ 2026-10-17</span>
+                <span>✍️ Shafeef Omar, Sebastian Sanokowski, Elham Daneshmand et al.</span>
             </div>
             
             <div class="badge-cluster">
-                <span class="badge">#humanoid</span><span class="badge">#vision-language-action</span><span class="badge">#vla</span>
+                <span class="badge">#humanoid</span><span class="badge">#reinforcement learning</span><span class="badge">#locomotion</span><span class="badge">#diffusion policy</span>
             </div>
             
-            <p class="paper-summary">Recent advances in Vision-Language-Action (VLA) models and World Action Models (WAMs) have expanded the manipulation and whole body capabilities of individual robots. Yet a single robot remains limited by its embodiment, and many real world tasks require capabilities that can only emerge through cooperation. Existing multi robot frameworks largely emphasize task decomposition, allocation, and replanning, while providing limited support for adapting executable coordination when physical execution deviates from the intended behavior. We present CoEvolve, a framework that represents team coordination as executable code over fixed robot motor skills. CoEvolve introduces Verifier Guided Coordination Evolution, where a multimodal foundation model instantiates coordination strategies through motion primitives, semantic objectives, temporary robot roles, and bounded execution parameters. Physical verification evaluates each executed transition, rejected behaviors trigger structured coordination revision from an accepted checkpoint, and verified experience is retained to guide subsequent decisions. We evaluate CoEvolve with two simulated Unitree G1 humanoids transporting a freely supported rigid payload through constrained corridors. Across 15 base task runs with three multimodal backbone families, CoEvolve completes 8 tasks, with every backbone achieving end to end success. Additional evaluations yield verified placement on two additional corridor layouts and after both same-backbone and cross-backbone experience initialization, while exposing persistent limitations in motion precision and contact stability. These results support executable coordination as a practical interface for adapting long horizon multi robot collaboration under shared physical constraints.</p>
+            <p class="paper-summary">Humanoid loco-manipulation is particularly challenging because it requires coordinating locomotion, balance, and object interaction, making it difficult to learn from limited demonstrations or from scratch through Reinforcement Learning (RL). We introduce DiPLO (self-distilled Diffusion Planning for Loco-manipulation), a framework that combines a self-distilled diffusion planner with a low-level whole-body tracking policy. Our planner is pretrained via supervised learning on motions derived from human-to-humanoid retargeting, while the tracker is trained via RL to execute them. DiPLO centers around two complementary post-training stages. First, we introduce Self-Distillation Diffusion Policy Optimisation (SD:DPO) to remove the planner's dependence on strong task conditioning, which we identify as a crucial ingredient for effective pretraining, as downstream fine-tuning does not recover comparable performance when it is omitted.. We then fine-tune this distilled model with Diffusion-Augmented Proximal Policy Optimization (DA:PPO), a maximum-entropy RL method for diffusion models, to improve task success and align generated plans with the frozen tracker's execution capabilities. Together, these stages enable motion generation through state-history and goal conditioning alone, enabling 99% task success in pick-carry-place tasks, compared to just 45% for the pretrained model. The resulting planner also generates motions for unseen object goals, with further evaluations on kicking and pushing/pulling tasks. Finally, we deploy our pipeline on the hardware, using our DA:PPO planner-tracker on a Unitree G1, achieving repeated successful executions without any real-world fine-tuning.</p>
             
             <div class="card-action-bar">
-                <a href="http://arxiv.org/pdf/2610.23288v1" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
+                <a href="http://arxiv.org/pdf/2610.24847v1" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
                     View PDF
                 </a>
-                <a href="http://arxiv.org/abs/2610.23288v1" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
+                <a href="http://arxiv.org/abs/2610.24847v1" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
                     arXiv Page &rarr;
                 </a>
             </div>
         </article>
         
-        <article class="paper-card" data-title="bejepa: a goal-conditioned humanoid behavior world model via unsupervised rl" data-summary="humanoid control requires coordinating whole-body posture with position and heading in the world frame. mainstream controllers imitate trajectories in the root frame, but struggle to regain the target world pose after displacement. we introduce bejepa, a goal-conditioned behavior world model learned through unsupervised reinforcement learning from human motion priors and robot interaction. bejepa learns a shared representation of body configuration and world placement through a joint-embedding predictive architecture (jepa). a dynamic predictor predicts the next state embedding under an action, while a successor predictor summarizes a goal-conditioned policy's expected discounted future state embeddings in a single vector. during joint training, dynamic grounds the initial representation in observed physical transitions, while successor increasingly organizes it around long-term behavior. their composition guides policy improvement through one physical prediction and one behavioral summary, without long imagined rollouts. in 20-second motion-tracking experiments, bejepa with online action refinement using dynamic outperforms all evaluated baselines in global body-position error, reducing it on amass by 61.7% relative to bfm-zero with world-pose inputs and 58.7% relative to sonic. physical deployment on a unitree g1 demonstrates joint attainment of posture, world position, and heading goals, recovery from the ground, and closed-loop return after disturbances and goal changes. project page: https://ylyem9x.github.io/bejepa-project.">
+        <article class="paper-card" data-title="learning structured locomotion references for optimization-based whole-body control" data-summary="quadruped locomotion requires coordinating body motion,contact forces, foothold placement, and gait timing. we present a hierarchical controller in which reinforcement learning adapts these structured locomotion references while a gait scheduler, reactive footstep planner, and whole-body impulse controller retain responsibility for high-frequency execution. the model-based backbone can sustain a nominal trot independently, allowing the policy to focus on when and how to modify an already functional locomotion controller. we train the complete hierarchy in a vectorized controller-in-the-loop environment using a six-direction disturbance curriculum. under a common simulator and evaluation protocol, the proposed controller achieves 77.29% mean survival across the tested disturbance grid, compared with 50.35% for the model-based reference controller. training-time channel ablations identify adaptive foothold placement as the largest marginal contributor to grid survival and reveal direction-dependent effects of gait-rate adaptation. together, these results demonstrate the viability of the proposed hierarchical controller architecture for integrating learned adaptation with optimization-based whole-body control through structured locomotion references.">
             <div class="card-meta-top">
                 <span class="rank-tag">TOP #2</span>
                 <div class="score-badge">
                     <span class="score-label">Priority Index</span>
-                    <span class="score-value">165</span>
+                    <span class="score-value">140</span>
                 </div>
             </div>
             
-            <h2 class="paper-title">BeJEPA: A Goal-Conditioned Humanoid Behavior World Model via Unsupervised RL</h2>
+            <h2 class="paper-title">Learning Structured Locomotion References for Optimization-Based Whole-Body Control</h2>
             
             <div class="author-row">
-                <span>🗓️ 2026-10-16</span>
-                <span>✍️ Liyun Yan, Haoyang Li, Yang Zhang et al.</span>
+                <span>🗓️ 2026-10-17</span>
+                <span>✍️ Ömer Tarık Banuş, Uluç Saranlı, M. Mert Ankaralı</span>
             </div>
             
             <div class="badge-cluster">
-                <span class="badge">#humanoid</span><span class="badge">#world model</span><span class="badge">#reinforcement learning</span>
+                <span class="badge">#quadruped</span><span class="badge">#reinforcement learning</span><span class="badge">#locomotion</span>
             </div>
             
-            <p class="paper-summary">Humanoid control requires coordinating whole-body posture with position and heading in the world frame. Mainstream controllers imitate trajectories in the root frame, but struggle to regain the target world pose after displacement. We introduce BeJEPA, a goal-conditioned Behavior World Model learned through unsupervised reinforcement learning from human motion priors and robot interaction. BeJEPA learns a shared representation of body configuration and world placement through a joint-embedding predictive architecture (JEPA). A Dynamic Predictor predicts the next state embedding under an action, while a Successor Predictor summarizes a goal-conditioned policy's expected discounted future state embeddings in a single vector. During joint training, Dynamic grounds the initial representation in observed physical transitions, while Successor increasingly organizes it around long-term behavior. Their composition guides policy improvement through one physical prediction and one behavioral summary, without long imagined rollouts. In 20-second motion-tracking experiments, BeJEPA with online action refinement using Dynamic outperforms all evaluated baselines in global body-position error, reducing it on AMASS by 61.7% relative to BFM-Zero with world-pose inputs and 58.7% relative to SONIC. Physical deployment on a Unitree G1 demonstrates joint attainment of posture, world position, and heading goals, recovery from the ground, and closed-loop return after disturbances and goal changes. Project page: https://ylyem9x.github.io/BeJEPA-project.</p>
+            <p class="paper-summary">Quadruped locomotion requires coordinating body motion,contact forces, foothold placement, and gait timing. We present a hierarchical controller in which reinforcement learning adapts these structured locomotion references while a gait scheduler, reactive footstep planner, and whole-body impulse controller retain responsibility for high-frequency execution. The model-based backbone can sustain a nominal trot independently, allowing the policy to focus on when and how to modify an already functional locomotion controller. We train the complete hierarchy in a vectorized controller-in-the-loop environment using a six-direction disturbance curriculum. Under a common simulator and evaluation protocol, the proposed controller achieves 77.29% mean survival across the tested disturbance grid, compared with 50.35% for the model-based reference controller. Training-time channel ablations identify adaptive foothold placement as the largest marginal contributor to grid survival and reveal direction-dependent effects of gait-rate adaptation. Together, these results demonstrate the viability of the proposed hierarchical controller architecture for integrating learned adaptation with optimization-based whole-body control through structured locomotion references.</p>
             
             <div class="card-action-bar">
-                <a href="http://arxiv.org/pdf/2610.23127v1" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
+                <a href="http://arxiv.org/pdf/2610.24779v1" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
                     View PDF
                 </a>
-                <a href="http://arxiv.org/abs/2610.23127v1" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
+                <a href="http://arxiv.org/abs/2610.24779v1" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
                     arXiv Page &rarr;
                 </a>
             </div>
         </article>
         
-        <article class="paper-card" data-title="from sliding windows to self-evolving lifelong memory: a dual-perspective survey of memory paradigms for long-horizon robotics vla models" data-summary="long-horizon robotic tasks expose a fundamental limitation of current vision-language-action (vla) models because their restricted temporal context pre-vents effective accumulation and reuse of past experiences. as a result, memory has become a fundamental component for enabling embodied agents to perform long-horizon reasoning and adaptive decision-making. this survey presents a systematic taxonomy of vla memory mechanisms based on memory scope and persistence, categorizing existing approaches into five representative paradigms and one emerging frontier. based on this taxonomy, we compare representative vla memory systems in terms of memory characteristics, architectural com-plexity, and open-source maturity, revealing a clear trade-off in which increasing architectural complexity is generally accompanied by decreasing open-source ma-turity. finally, we discuss the key challenges in building full-lifecycle memory systems, including efficient memory management and lifelong knowledge evolu-tion. overall, this survey provides a unified perspective on memory architectures for vla agents and offers insights into the development of lifelong embodied in-telligence.">
+        <article class="paper-card" data-title="solving a giant rubik's cube with a quadruped robot" data-summary="pedipulating a freestanding articulated object requires controlling its pose and internal configuration while maintaining balance. we demonstrate this capability by autonomously solving a giant rubik's cube with a quadruped using only its feet. the task demands repeated precise interactions, since unintended layer motion can invalidate subsequent operations. we develop an onboard rgb-d perception pipeline that estimates the cube's metric pose and its full color state from partial views acquired through locomotion and flipping. a planner converts the computed solve into robot-executable skill sequences. learned whole-body skills reorient the cube while preserving its layer configuration and turn its layers with one foot pinning the cube as the other pushes. we train these skills using reinforcement learning with privileged observations and distill them into policies that map onboard depth and proprioception to joint targets. the deployed policies tolerate variations in relative robot-cube placement and recover from external disturbances. the system completes three autonomous hardware solves, each about 30 steps over 8-9 minutes. these results show that combining onboard perception with coordinated pedipulation enables a quadruped to complete extended multi-step physical tasks. additional material can be found at: https://leggedrobotics.github.io/rubik-skills/">
             <div class="card-meta-top">
                 <span class="rank-tag">TOP #3</span>
                 <div class="score-badge">
                     <span class="score-label">Priority Index</span>
-                    <span class="score-value">135</span>
+                    <span class="score-value">140</span>
                 </div>
             </div>
             
-            <h2 class="paper-title">From Sliding Windows to Self-evolving Lifelong Memory: A Dual-perspective Survey of Memory Paradigms for Long-Horizon Robotics VLA Models</h2>
+            <h2 class="paper-title">Solving a Giant Rubik's Cube with a Quadruped Robot</h2>
             
             <div class="author-row">
-                <span>🗓️ 2026-10-16</span>
-                <span>✍️ Yong Wang, Boyu Shen, Xinwei Zhang et al.</span>
+                <span>🗓️ 2026-10-17</span>
+                <span>✍️ Lukas Amiet, Gabriel Sánchez-Blanco Repgen, Mayank Mittal et al.</span>
             </div>
             
             <div class="badge-cluster">
-                <span class="badge">#vision-language-action</span><span class="badge">#vla</span>
+                <span class="badge">#quadruped</span><span class="badge">#reinforcement learning</span><span class="badge">#locomotion</span>
             </div>
             
-            <p class="paper-summary">Long-horizon robotic tasks expose a fundamental limitation of current Vision-Language-Action (VLA) models because their restricted temporal context pre-vents effective accumulation and reuse of past experiences. As a result, memory has become a fundamental component for enabling embodied agents to perform long-horizon reasoning and adaptive decision-making. This survey presents a systematic taxonomy of VLA memory mechanisms based on memory scope and persistence, categorizing existing approaches into five representative paradigms and one emerging frontier. Based on this taxonomy, we compare representative VLA memory systems in terms of memory characteristics, architectural com-plexity, and open-source maturity, revealing a clear trade-off in which increasing architectural complexity is generally accompanied by decreasing open-source ma-turity. Finally, we discuss the key challenges in building full-lifecycle memory systems, including efficient memory management and lifelong knowledge evolu-tion. Overall, this survey provides a unified perspective on memory architectures for VLA agents and offers insights into the development of lifelong embodied in-telligence.</p>
+            <p class="paper-summary">Pedipulating a freestanding articulated object requires controlling its pose and internal configuration while maintaining balance. We demonstrate this capability by autonomously solving a giant Rubik's Cube with a quadruped using only its feet. The task demands repeated precise interactions, since unintended layer motion can invalidate subsequent operations. We develop an onboard RGB-D perception pipeline that estimates the cube's metric pose and its full color state from partial views acquired through locomotion and flipping. A planner converts the computed solve into robot-executable skill sequences. Learned whole-body skills reorient the cube while preserving its layer configuration and turn its layers with one foot pinning the cube as the other pushes. We train these skills using reinforcement learning with privileged observations and distill them into policies that map onboard depth and proprioception to joint targets. The deployed policies tolerate variations in relative robot-cube placement and recover from external disturbances. The system completes three autonomous hardware solves, each about 30 steps over 8-9 minutes. These results show that combining onboard perception with coordinated pedipulation enables a quadruped to complete extended multi-step physical tasks. Additional material can be found at: https://leggedrobotics.github.io/rubik-skills/</p>
             
             <div class="card-action-bar">
-                <a href="http://arxiv.org/pdf/2610.23319v1" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
+                <a href="http://arxiv.org/pdf/2610.24610v1" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
                     View PDF
                 </a>
-                <a href="http://arxiv.org/abs/2610.23319v1" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
+                <a href="http://arxiv.org/abs/2610.24610v1" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
                     arXiv Page &rarr;
                 </a>
             </div>
         </article>
         
-        <article class="paper-card" data-title="nestedvla: learning to consolidate and generate skills for vision-language-action models" data-summary="vision--language--action (vla) models promise generalist robotic agents, yet consolidating skills learned across heterogeneous tasks and environments remains difficult: training data is fragmented across platforms, joint multi-task training suffers from interference, and model merging tends to introduce parameter conflicts or require architectural changes. we instead advocate a paradigm in which skills are first learned independently and then consolidated post hoc. to this end, we propose nestedvla, which replaces parameter aggregation with parameter generation: a nested hypernetwork, conditioned on the target task, synthesizes task-adaptive action-expert parameters that compose with a frozen base vla. task-specific compressed vlm residuals are retained separately. this formulation enables flexible task-conditioned skill reuse while mitigating interference. across three rl benchmarks (metaworld, maniskill, calvin), nestedvla outperforms the strongest model-merging baseline by 41 pp on average, matches per-task fine-tuning within 1 pp on maniskill, and substantially closes the gap on calvin, pointing toward a storage-efficient route to skill consolidation. code is available at https://github.com/wanyugroup/neurips2026-nestedvla.">
+        <article class="paper-card" data-title="saram: sparse adapter allocation with reuse and merging for lifelong robot learning" data-summary="lifelong robot learning requires acquiring new tasks sequentially without forgetting earlier ones. with large pre-trained vision-language-action (vla) backbones, adapter-based methods effectively mitigate this challenge. however, their task-specific adapters and selection modules accumulate with the task stream, creating a scalability challenge in on-disk storage and deployment cost under fixed onboard resource budgets. we propose saram, a lifelong learning framework that limits storage growth while keeping gpu memory and per-step inference cost independent of the task stream length. for each new task, saram reuses frozen adapters from previous tasks and introduces new adapters only at sparsely selected layers, with a duplication penalty encouraging them to capture information not already represented by the adapter library. at deployment, a compact signature derived from backbone activation statistics identifies the task once per episode, and the corresponding task update is merged into the backbone, leaving only the backbone in the control loop. across four libero suites, saram matches or exceeds adapter-based baselines while adding up to 4.5x less on-disk state per task. gpu memory usage and control frequency remain comparable to those of the backbone as the task stream grows. experiments on a real ur5 arm with a different backbone further demonstrate retention throughout a sequential task stream.">
             <div class="card-meta-top">
                 <span class="rank-tag">TOP #4</span>
                 <div class="score-badge">
@@ -356,30 +356,30 @@
                 </div>
             </div>
             
-            <h2 class="paper-title">NestedVLA: Learning to Consolidate and Generate Skills for Vision-Language-Action Models</h2>
+            <h2 class="paper-title">SARAM: Sparse Adapter Allocation with Reuse and Merging for Lifelong Robot Learning</h2>
             
             <div class="author-row">
-                <span>🗓️ 2026-10-16</span>
-                <span>✍️ Guodong Du, Wanyu Lin</span>
+                <span>🗓️ 2026-10-17</span>
+                <span>✍️ SeongJun Jeong, Chungwoo Lee, Gi-Cheon Kang et al.</span>
             </div>
             
             <div class="badge-cluster">
                 <span class="badge">#vision-language-action</span><span class="badge">#vla</span>
             </div>
             
-            <p class="paper-summary">Vision--Language--Action (VLA) models promise generalist robotic agents, yet consolidating skills learned across heterogeneous tasks and environments remains difficult: training data is fragmented across platforms, joint multi-task training suffers from interference, and model merging tends to introduce parameter conflicts or require architectural changes. We instead advocate a paradigm in which skills are first learned independently and then consolidated post hoc. To this end, we propose NestedVLA, which replaces parameter aggregation with parameter generation: a nested hypernetwork, conditioned on the target task, synthesizes task-adaptive action-expert parameters that compose with a frozen base VLA. Task-specific compressed VLM residuals are retained separately. This formulation enables flexible task-conditioned skill reuse while mitigating interference. Across three RL benchmarks (MetaWorld, ManiSkill, CALVIN), NestedVLA outperforms the strongest model-merging baseline by 41 pp on average, matches per-task fine-tuning within 1 pp on ManiSkill, and substantially closes the gap on CALVIN, pointing toward a storage-efficient route to skill consolidation. Code is available at https://github.com/WanyuGroup/NeurIPS2026-NestedVLA.</p>
+            <p class="paper-summary">Lifelong robot learning requires acquiring new tasks sequentially without forgetting earlier ones. With large pre-trained vision-language-action (VLA) backbones, adapter-based methods effectively mitigate this challenge. However, their task-specific adapters and selection modules accumulate with the task stream, creating a scalability challenge in on-disk storage and deployment cost under fixed onboard resource budgets. We propose SARAM, a lifelong learning framework that limits storage growth while keeping GPU memory and per-step inference cost independent of the task stream length. For each new task, SARAM reuses frozen adapters from previous tasks and introduces new adapters only at sparsely selected layers, with a duplication penalty encouraging them to capture information not already represented by the adapter library. At deployment, a compact signature derived from backbone activation statistics identifies the task once per episode, and the corresponding task update is merged into the backbone, leaving only the backbone in the control loop. Across four LIBERO suites, SARAM matches or exceeds adapter-based baselines while adding up to 4.5x less on-disk state per task. GPU memory usage and control frequency remain comparable to those of the backbone as the task stream grows. Experiments on a real UR5 arm with a different backbone further demonstrate retention throughout a sequential task stream.</p>
             
             <div class="card-action-bar">
-                <a href="http://arxiv.org/pdf/2610.23271v1" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
+                <a href="http://arxiv.org/pdf/2610.24804v1" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
                     View PDF
                 </a>
-                <a href="http://arxiv.org/abs/2610.23271v1" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
+                <a href="http://arxiv.org/abs/2610.24804v1" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
                     arXiv Page &rarr;
                 </a>
             </div>
         </article>
         
-        <article class="paper-card" data-title="grasp: global-local representation alignment and spatial-physical grounding for bimanual robotic manipulation" data-summary="vision-language-action (vla) models that directly regress joint-space actions avoid the deployment-time cost of inverse kinematics. however, their training objectives remain misaligned with task success, as joint-space losses ignore the unequal physical consequences of joint errors and visual conditioning lacks explicit focus on hand-object interaction regions. to address these issues, we propose a training-phase prior injection framework for fine-grained bimanual manipulation. first, a physics-grounded flow-matching loss maps the implicit clean-action estimate at every noise level through differentiable forward kinematics (fk) and supervises the resulting tool center point (tcp) pose and inter-arm relative pose, with a bounded noise-level weighting that compensates gradient decay. second, we introduce a global prediction query group distilled from a frozen dinov3 teacher through future-frame feature prediction, together with a local interaction query supervised by grounding dino at the attention level. both teachers are removed at inference, and the deployment pipeline is that of a standard joint-space flow policy, adding only the learned query pathway. simulation and real-robot experiments on long-horizon bimanual tasks show that the two priors are complementary across different deployment settings. the full model excels in in-distribution deployment, while the distilled query branch is preferable under strong visual randomization.">
+        <article class="paper-card" data-title="endovla-oov: language-conditioned out-of-view target acquisition in robotic endoscopy" data-summary="the scan-then-revisit workflow of upper gastrointestinal endoscopy requires bringing a previously observed suspicious region back into view for closer inspection. acquiring such targets requires translating anatomical and appearance descriptions into camera motions from partial observations of a confined, deformable environment. we present endovla-oov, a language-conditioned vision-language-action policy for out-of-view target acquisition in robotic endoscopy. the policy adapts a pretrained backbone to continuous two-degree-of-freedom distal bending commands and combines initial, intermediate, and current images to guide search. to support policy learning, we provide an open-source vla dataset containing 1,050 episodes across six tasks and approximately 262k observation-action pairs. physical evaluation spans wet-lens and low-light conditions, two unseen stomach phantoms, and cross-embodiment transfer to an unseen ex-vivo environment. in the cross-embodiment evaluation, the full-data policy achieves 93.3% target acquisition success (28/30). in a controlled training-data comparison, expanding the corpus from 312 to 1,050 episodes increases acquisition success from 40.0% to 90.0% under the same model, training, and test configuration. instruction and observation interventions further support the use of language and temporal context in the evaluated acquisition tasks. these results support language-guided endoscopic revisitation across the evaluated environments and robot embodiments and demonstrate the benefit of expanded task-specific demonstrations.">
             <div class="card-meta-top">
                 <span class="rank-tag">TOP #5</span>
                 <div class="score-badge">
@@ -388,30 +388,30 @@
                 </div>
             </div>
             
-            <h2 class="paper-title">GRASP: Global-Local Representation Alignment and Spatial-Physical Grounding for Bimanual Robotic Manipulation</h2>
+            <h2 class="paper-title">EndoVLA-OOV: Language-Conditioned Out-of-View Target Acquisition in Robotic Endoscopy</h2>
             
             <div class="author-row">
-                <span>🗓️ 2026-10-16</span>
-                <span>✍️ Zeyuan Ren, Guanxun Zhao, Qi Li et al.</span>
+                <span>🗓️ 2026-10-17</span>
+                <span>✍️ Chi Kit Ng, Yidong Zhang, Tianchun Wu et al.</span>
             </div>
             
             <div class="badge-cluster">
                 <span class="badge">#vision-language-action</span><span class="badge">#vla</span>
             </div>
             
-            <p class="paper-summary">Vision-Language-Action (VLA) models that directly regress joint-space actions avoid the deployment-time cost of inverse kinematics. However, their training objectives remain misaligned with task success, as joint-space losses ignore the unequal physical consequences of joint errors and visual conditioning lacks explicit focus on hand-object interaction regions. To address these issues, we propose a training-phase prior injection framework for fine-grained bimanual manipulation. First, a physics-grounded flow-matching loss maps the implicit clean-action estimate at every noise level through differentiable forward kinematics (FK) and supervises the resulting Tool Center Point (TCP) pose and inter-arm relative pose, with a bounded noise-level weighting that compensates gradient decay. Second, we introduce a global prediction query group distilled from a frozen DINOv3 teacher through future-frame feature prediction, together with a local interaction query supervised by Grounding DINO at the attention level. Both teachers are removed at inference, and the deployment pipeline is that of a standard joint-space flow policy, adding only the learned query pathway. Simulation and real-robot experiments on long-horizon bimanual tasks show that the two priors are complementary across different deployment settings. The full model excels in in-distribution deployment, while the distilled query branch is preferable under strong visual randomization.</p>
+            <p class="paper-summary">The scan-then-revisit workflow of upper gastrointestinal endoscopy requires bringing a previously observed suspicious region back into view for closer inspection. Acquiring such targets requires translating anatomical and appearance descriptions into camera motions from partial observations of a confined, deformable environment. We present EndoVLA-OOV, a language-conditioned vision-language-action policy for out-of-view target acquisition in robotic endoscopy. The policy adapts a pretrained backbone to continuous two-degree-of-freedom distal bending commands and combines initial, intermediate, and current images to guide search. To support policy learning, we provide an open-source VLA dataset containing 1,050 episodes across six tasks and approximately 262k observation-action pairs. Physical evaluation spans wet-lens and low-light conditions, two unseen stomach phantoms, and cross-embodiment transfer to an unseen ex-vivo environment. In the cross-embodiment evaluation, the full-data policy achieves 93.3% target acquisition success (28/30). In a controlled training-data comparison, expanding the corpus from 312 to 1,050 episodes increases acquisition success from 40.0% to 90.0% under the same model, training, and test configuration. Instruction and observation interventions further support the use of language and temporal context in the evaluated acquisition tasks. These results support language-guided endoscopic revisitation across the evaluated environments and robot embodiments and demonstrate the benefit of expanded task-specific demonstrations.</p>
             
             <div class="card-action-bar">
-                <a href="http://arxiv.org/pdf/2610.23123v1" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
+                <a href="http://arxiv.org/pdf/2610.24747v1" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
                     View PDF
                 </a>
-                <a href="http://arxiv.org/abs/2610.23123v1" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
+                <a href="http://arxiv.org/abs/2610.24747v1" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
                     arXiv Page &rarr;
                 </a>
             </div>
         </article>
         
-        <article class="paper-card" data-title="unifying embodied foundation models via a model-to-policy formulation" data-summary="vision-language-action (vla) models and world-action models (wams) have emerged as promising approaches to robot learning and control. these models integrate multimodal perception and action generation, but differ in their architectures, output representations, and learning objectives. in this paper, we present a unified, architecture-agnostic probabilistic formulation for embodied foundation models based on stochastic kernels. our formulation has two key components: (i) we characterize embodied foundation models through conditional output distributions and action-realization kernels, which together induce task-conditioned robot policies; and (ii) we connect pretraining and post-training to policy deployment, accommodating model-specific pretraining objectives and offline or online post-training strategies. we instantiate the formulation for openvla and dreamzero, covering autoregressive action-token prediction and joint video-action generation.">
+        <article class="paper-card" data-title="relational spatial alignment for vision-language-action models" data-summary="spatial understanding is essential for robots to perceive their surrounding environments and execute actions. existing approaches typically encode 3d awareness into vision-language-action (vla) models by directly aligning their representations with pre-trained 3d foundation models. however, we observe that such direct geometric feature alignment essentially exploits 3d foundation priors as a form of low-rank regularization in the feature space, resulting in severe rank collapse of the pre-trained vla representations. in contrast, we shift the focus from enforcing point-wise equality to aligning pair-wise relationships. we propose a representation-alignment method that enables the injection of 3d spatial awareness without compromising the model's original expressivity. extensive experiments on public benchmarks, our new spatial reasoning benchmark, and real-world manipulation scenarios demonstrate that our approach effectively incorporates 3d spatial representations into vla reasoning, achieving robust performance and enhanced spatial awareness across diverse manipulation tasks.">
             <div class="card-meta-top">
                 <span class="rank-tag">TOP #6</span>
                 <div class="score-badge">
@@ -420,30 +420,30 @@
                 </div>
             </div>
             
-            <h2 class="paper-title">Unifying Embodied Foundation Models via a Model-to-Policy Formulation</h2>
+            <h2 class="paper-title">Relational Spatial Alignment for Vision-Language-Action Models</h2>
             
             <div class="author-row">
-                <span>🗓️ 2026-10-16</span>
-                <span>✍️ Xinyi Hong, Mingyang Ren</span>
+                <span>🗓️ 2026-10-17</span>
+                <span>✍️ Chaoran Zhu, Hengyi Wang, Chenglin Cui et al.</span>
             </div>
             
             <div class="badge-cluster">
                 <span class="badge">#vision-language-action</span><span class="badge">#vla</span>
             </div>
             
-            <p class="paper-summary">Vision-language-action (VLA) models and world-action models (WAMs) have emerged as promising approaches to robot learning and control. These models integrate multimodal perception and action generation, but differ in their architectures, output representations, and learning objectives. In this paper, we present a unified, architecture-agnostic probabilistic formulation for embodied foundation models based on stochastic kernels. Our formulation has two key components: (i) we characterize embodied foundation models through conditional output distributions and action-realization kernels, which together induce task-conditioned robot policies; and (ii) we connect pretraining and post-training to policy deployment, accommodating model-specific pretraining objectives and offline or online post-training strategies. We instantiate the formulation for OpenVLA and DreamZero, covering autoregressive action-token prediction and joint video-action generation.</p>
+            <p class="paper-summary">Spatial understanding is essential for robots to perceive their surrounding environments and execute actions. Existing approaches typically encode 3D awareness into vision-language-action (VLA) models by directly aligning their representations with pre-trained 3D foundation models. However, we observe that such direct geometric feature alignment essentially exploits 3D foundation priors as a form of low-rank regularization in the feature space, resulting in severe rank collapse of the pre-trained VLA representations. In contrast, we shift the focus from enforcing point-wise equality to aligning pair-wise relationships. We propose a representation-alignment method that enables the injection of 3D spatial awareness without compromising the model's original expressivity. Extensive experiments on public benchmarks, our new spatial reasoning benchmark, and real-world manipulation scenarios demonstrate that our approach effectively incorporates 3D spatial representations into VLA reasoning, achieving robust performance and enhanced spatial awareness across diverse manipulation tasks.</p>
             
             <div class="card-action-bar">
-                <a href="http://arxiv.org/pdf/2610.23053v1" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
+                <a href="http://arxiv.org/pdf/2610.24705v1" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
                     View PDF
                 </a>
-                <a href="http://arxiv.org/abs/2610.23053v1" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
+                <a href="http://arxiv.org/abs/2610.24705v1" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
                     arXiv Page &rarr;
                 </a>
             </div>
         </article>
         
-        <article class="paper-card" data-title="vla-fabric: learning interaction for composable multi-arm vla agents" data-summary="vision-language-action (vla) models are rapidly expanding what individual robots can accomplish, yet many real-world manipulation settings require multiple arms to operate as a coordinated system. existing approaches organize multi-arm coordination in different ways, including centralized joint policies, high-level task or role assignment, and locally executed policies that react to teammates. however, how complete action-producing vlas should explicitly interact with one another during action generation remains largely unexplored. we introduce vla-fabric, which organizes one complete vla per arm while preserving local perception and action ownership, and enables coordination through learned interaction across policy boundaries. we first systematically study where such interaction should occur, how peer information should be aggregated, and how the interaction should be learned, revealing complementary coordination functions spanning shared context, peer-specific latent information, and action-stage interaction. we then re-instantiate these functions in a structurally different vla architecture, showing that the coordination principle is not tied to a particular tensor layout or backbone implementation. finally, we compose teams of three and four arms and evaluate them in simulation and physical experiments. on all four physical tasks, full interaction improves success over independently trained local policies by 16--40 percentage points. together, these results suggest that explicit interaction among complete vla policies offers a scalable path toward networked embodied intelligence.">
+        <article class="paper-card" data-title="scene-adaptive vla: efficient autonomous driving via dynamic layer routing" data-summary="vision-language-action (vla) models offer a promising paradigm for autonomous driving. however, the massive parameter scale of vlas strains onboard computational resources during real-time inference. this directly increases energy consumption and limits vehicle battery range, making it critical to minimize computational overhead without compromising driving capability and explainability. current research on efficient vla-based driving focuses on sequential adaptation (\textit{e.g.}, chain-of-thought and token adjustment), leaving structural adaptation underexplored despite parameter redundancy across dynamic driving scenes. to address this gap, we propose scene-adaptive vla, an efficient framework leveraging dynamic layer routing to adjust active parameters based on real-time scenes. inspired by the temporal continuity of scenes and model predictive uncertainty, our approach characterizes model-perceived scene complexity via frame-level temporal scene variations and decision deviations. to uncover latent scene-to-parameter correspondences, we encode this characterization into scene-aware tokens, alongside two specialized queries. a budget-conditioned layer routing mechanism evaluates these refined queries to allocate a budget that determines the active parameter ratio and subsequently selects appropriate layer combinations. the entire framework is optimized end-to-end. extensive evaluations on the bench2drive benchmark show that when adapted to a state-of-the-art vla model, our approach significantly reduces inference-time computational overhead by 53.5\% with negligible degradation in driving and language capabilities. code is available at https:github.com/yang-luvu/scene-adaptive-vla.">
             <div class="card-meta-top">
                 <span class="rank-tag">TOP #7</span>
                 <div class="score-badge">
@@ -452,56 +452,56 @@
                 </div>
             </div>
             
-            <h2 class="paper-title">VLA-Fabric: Learning Interaction for Composable Multi-Arm VLA Agents</h2>
+            <h2 class="paper-title">Scene-Adaptive VLA: Efficient Autonomous Driving via Dynamic Layer Routing</h2>
             
             <div class="author-row">
-                <span>🗓️ 2026-10-16</span>
-                <span>✍️ Chenglong Zhang, Shuaijun Liu, Feiyang You et al.</span>
+                <span>🗓️ 2026-10-17</span>
+                <span>✍️ Yujia Yang, Quan Yuan, Jiawei Fan et al.</span>
             </div>
             
             <div class="badge-cluster">
                 <span class="badge">#vision-language-action</span><span class="badge">#vla</span>
             </div>
             
-            <p class="paper-summary">Vision-language-action (VLA) models are rapidly expanding what individual robots can accomplish, yet many real-world manipulation settings require multiple arms to operate as a coordinated system. Existing approaches organize multi-arm coordination in different ways, including centralized joint policies, high-level task or role assignment, and locally executed policies that react to teammates. However, how complete action-producing VLAs should explicitly interact with one another during action generation remains largely unexplored. We introduce VLA-Fabric, which organizes one complete VLA per arm while preserving local perception and action ownership, and enables coordination through learned interaction across policy boundaries. We first systematically study where such interaction should occur, how peer information should be aggregated, and how the interaction should be learned, revealing complementary coordination functions spanning shared context, peer-specific latent information, and action-stage interaction. We then re-instantiate these functions in a structurally different VLA architecture, showing that the coordination principle is not tied to a particular tensor layout or backbone implementation. Finally, we compose teams of three and four arms and evaluate them in simulation and physical experiments. On all four physical tasks, Full interaction improves success over independently trained local policies by 16--40 percentage points. Together, these results suggest that explicit interaction among complete VLA policies offers a scalable path toward networked embodied intelligence.</p>
+            <p class="paper-summary">Vision-Language-Action (VLA) models offer a promising paradigm for autonomous driving. However, the massive parameter scale of VLAs strains onboard computational resources during real-time inference. This directly increases energy consumption and limits vehicle battery range, making it critical to minimize computational overhead without compromising driving capability and explainability. Current research on efficient VLA-based driving focuses on sequential adaptation (\textit{e.g.}, Chain-of-Thought and token adjustment), leaving structural adaptation underexplored despite parameter redundancy across dynamic driving scenes. To address this gap, we propose Scene-Adaptive VLA, an efficient framework leveraging dynamic layer routing to adjust active parameters based on real-time scenes. Inspired by the temporal continuity of scenes and model predictive uncertainty, our approach characterizes model-perceived scene complexity via frame-level temporal scene variations and decision deviations. To uncover latent scene-to-parameter correspondences, we encode this characterization into scene-aware tokens, alongside two specialized queries. A budget-conditioned layer routing mechanism evaluates these refined queries to allocate a budget that determines the active parameter ratio and subsequently selects appropriate layer combinations. The entire framework is optimized end-to-end. Extensive evaluations on the Bench2Drive benchmark show that when adapted to a state-of-the-art VLA model, our approach significantly reduces inference-time computational overhead by 53.5\% with negligible degradation in driving and language capabilities. Code is available at https:github.com/yang-luvu/Scene-Adaptive-VLA.</p>
             
             <div class="card-action-bar">
-                <a href="http://arxiv.org/pdf/2610.23018v1" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
+                <a href="http://arxiv.org/pdf/2610.24590v1" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
                     View PDF
                 </a>
-                <a href="http://arxiv.org/abs/2610.23018v1" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
+                <a href="http://arxiv.org/abs/2610.24590v1" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
                     arXiv Page &rarr;
                 </a>
             </div>
         </article>
         
-        <article class="paper-card" data-title="law: unifying language, action, and world modeling for agentic physical intelligence" data-summary="world-action models jointly predict actions and future world states, but long-horizon manipulation further requires language reasoning to plan subtask objectives, assess execution progress, and guide action selection. we present law, a closed-loop vlm--wam framework that unifies language reasoning, action generation, and world modeling through semantic subtask progress. within the law agent, a hybrid-expert vision-language model plans the remaining subtasks, estimates the values of and fuses actions proposed by a world-action model, and asynchronously assesses execution status to support continued execution and subtask transitions. within the world-action model, mixture-of-transformer experts integrates modality-specific and shared computation for joint video--action modeling. dual-stream hierarchical visual memory maintains temporal context for both models, while subtask-local value learning aligns action evaluation with semantic objectives and preserves supervision from successful prefixes of failed trajectories. law achieves 94.21% average success across 50 robotwin tasks. replacing the wam backbone with openwam-$alpha$ further raises the average success rate to 95.56%, establishing a new open-source state of the art on robotwin. despite having only 2b parameters, our vlm also outperforms variants using embodied-r1.5 and gpt-5.5 high. on three long-horizon real-robot tasks, law achieves 65% average success, compared with 28.33% for $pi_{0.5}$ and 25% for fast-wam.">
+        <article class="paper-card" data-title="retrieval-triggered action projection adjustment for frozen vla policies: an empirical study and failure analysis" data-summary="frozen vision-language-action (vla) policies cannot incorporate previously encountered failures without updating the underlying model. we present retrieval-triggered projection correction (rtpc), an auditable external-memory wrapper for frozen openvla policies that retrieves stress-collected local-depth records and applies translation-only projection correction while keeping rotation and gripper commands unchanged. rtpc is evaluated on calvin single-task manipulation using primary and independent replication cohorts. in the primary evaluation, rtpc reduced a depth-based near-collision or stall proxy event rate without changing task-success count. however, this reduction was not reproduced in the independent replication, and retrieved correction directions were not distinguishable from random same-family directions. analysis identifies endpoint coupling, batch sensitivity, and the lack of a trigger-matched memory-free baseline as limitations for attributing effects to retrieval-based correction. these findings do not establish physical safety improvement or memory-specific benefits, but provide an empirical evaluation and failure analysis of retrieval-conditioned intervention for frozen vla policies.">
             <div class="card-meta-top">
                 <span class="rank-tag">TOP #8</span>
                 <div class="score-badge">
                     <span class="score-label">Priority Index</span>
-                    <span class="score-value">90</span>
+                    <span class="score-value">135</span>
                 </div>
             </div>
             
-            <h2 class="paper-title">LAW: Unifying Language, Action, and World Modeling for Agentic Physical Intelligence</h2>
+            <h2 class="paper-title">Retrieval-triggered Action Projection Adjustment for Frozen VLA Policies: An Empirical Study and Failure Analysis</h2>
             
             <div class="author-row">
-                <span>🗓️ 2026-10-16</span>
-                <span>✍️ Jiajun Cao, Kai Tang, Bohua Zhang et al.</span>
+                <span>🗓️ 2026-10-17</span>
+                <span>✍️ Jinming Wang, Ruiheng Zhang, Yong Wang et al.</span>
             </div>
             
             <div class="badge-cluster">
-                <span class="badge">#world model</span>
+                <span class="badge">#vision-language-action</span><span class="badge">#vla</span>
             </div>
             
-            <p class="paper-summary">World-action models jointly predict actions and future world states, but long-horizon manipulation further requires language reasoning to plan subtask objectives, assess execution progress, and guide action selection. We present LAW, a closed-loop VLM--WAM framework that unifies language reasoning, action generation, and world modeling through semantic subtask progress. Within the LAW agent, a hybrid-expert vision-language model plans the remaining subtasks, estimates the values of and fuses actions proposed by a world-action model, and asynchronously assesses execution status to support continued execution and subtask transitions. Within the world-action model, Mixture-of-Transformer Experts integrates modality-specific and shared computation for joint video--action modeling. Dual-stream hierarchical visual memory maintains temporal context for both models, while subtask-local value learning aligns action evaluation with semantic objectives and preserves supervision from successful prefixes of failed trajectories. LAW achieves 94.21% average success across 50 RoboTwin tasks. Replacing the WAM backbone with OpenWAM-$alpha$ further raises the average success rate to 95.56%, establishing a new open-source state of the art on RoboTwin. Despite having only 2B parameters, our VLM also outperforms variants using Embodied-R1.5 and GPT-5.5 High. On three long-horizon real-robot tasks, LAW achieves 65% average success, compared with 28.33% for $pi_{0.5}$ and 25% for Fast-WAM.</p>
+            <p class="paper-summary">Frozen Vision-Language-Action (VLA) policies cannot incorporate previously encountered failures without updating the underlying model. We present retrieval-triggered projection correction (RTPC), an auditable external-memory wrapper for frozen OpenVLA policies that retrieves stress-collected local-depth records and applies translation-only projection correction while keeping rotation and gripper commands unchanged. RTPC is evaluated on CALVIN single-task manipulation using primary and independent replication cohorts. In the primary evaluation, RTPC reduced a depth-based near-collision or stall proxy event rate without changing task-success count. However, this reduction was not reproduced in the independent replication, and retrieved correction directions were not distinguishable from random same-family directions. Analysis identifies endpoint coupling, batch sensitivity, and the lack of a trigger-matched memory-free baseline as limitations for attributing effects to retrieval-based correction. These findings do not establish physical safety improvement or memory-specific benefits, but provide an empirical evaluation and failure analysis of retrieval-conditioned intervention for frozen VLA policies.</p>
             
             <div class="card-action-bar">
-                <a href="http://arxiv.org/pdf/2610.23334v1" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
+                <a href="http://arxiv.org/pdf/2610.24573v1" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
                     View PDF
                 </a>
-                <a href="http://arxiv.org/abs/2610.23334v1" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
+                <a href="http://arxiv.org/abs/2610.24573v1" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
                     arXiv Page &rarr;
                 </a>
             </div>
