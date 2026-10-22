@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Embodied AI & Robotics Intelligence Digest — October 21, 2026</title>
+    <title>Embodied AI & Robotics Intelligence Digest — October 22, 2026</title>
     <style>
         :root {
             --bg-base: #080c14;
@@ -242,7 +242,7 @@
         <header>
             <span class="pill-brand">Autonomous Research Intelligence</span>
             <h1>Embodied AI & Physical Frontier Briefing</h1>
-            <p class="subtitle">Compiled on October 21, 2026 • Ranked top 8 strategic breakthroughs out of incoming preprints.</p>
+            <p class="subtitle">Compiled on October 22, 2026 • Ranked top 8 strategic breakthroughs out of incoming preprints.</p>
             
             <div class="controls">
                 <input type="text" id="filterInput" class="search-box" placeholder="Filter papers by keywords (e.g. humanoid, tactile, diffusion)...">
@@ -251,39 +251,39 @@
 
         <main id="paperList">
             
-        <article class="paper-card" data-title="adaptive traversal tubes for posture-aware navigation of bipedal humanoids" data-summary="bipedal humanoids can change their effective footprint by adjusting body yaw, enabling both narrow-passage traversal and socially aware yielding. this paper presents a posture-aware navigation framework centered on \emph{adaptive traversal tubes} (att), \emph{interval velocity--heading} (ivh) control, and a sidestep-enhanced amp locomotion prior. att represents a behavior-feasible corridor width field along a reference path, unifying geometric clearance and social comfort into a continuous signal. ivh maps this width to a continuous frontal-to-sidestep posture schedule and omnidirectional velocity commands. a velocity-conditioned amp policy, trained with gvhmr-retargeted frontal/sidestep motions and coupled \((v_x,v_y)\) tracking rewards, is designed to improve transition stability over a generic locomotion controller while remaining interchangeable with the default onboard policy. this preprint presents the full method; a planned evaluation protocol on a unitree g1 is outlined, with quantitative results to follow. demo videos of mujoco simulation and real-robot deployment are available at: github.com/lborogzj997/humanoid-navigation-in-crowds-and-narrow-spaces.">
+        <article class="paper-card" data-title="from vlm planners to robotic agents: self-evolving harnesses for history-dependent manipulation" data-summary="vision-language-action (vla) models achieve strong performance across embodied manipulation tasks by unifying visual understanding, language conditioning, and action generation. however, long-horizon tasks can involve non-markovian dependencies: successful decisions may require retaining task progress and past interaction outcomes, while partial observability and execution errors compound over time. existing work has begun to address these challenges by augmenting foundation-model policies with memory and by introducing hierarchical architectures that separate high-level planning from low-level execution. we organize the high-level vlm as a robotic agent through an editable harness to maintain task context and improve planning through execution experience. we instantiate this approach as sera (self-evolving robotic agent), with a fixed vla executor providing low-level control. the harness maintains and updates task context using observations and execution feedback to guide subsequent planning. self-evolution uses environment rollouts to propose and evaluate harness revisions, with the selected configuration fixed before held-out testing. on robomme, sera achieves 51.38% overall success with autonomous selection, compared with 44.38% without self-evolution. our exploration suggests that agentic planning is a promising direction for history-dependent robotic manipulation.">
             <div class="card-meta-top">
                 <span class="rank-tag">TOP #1</span>
                 <div class="score-badge">
                     <span class="score-label">Priority Index</span>
-                    <span class="score-value">155</span>
+                    <span class="score-value">135</span>
                 </div>
             </div>
             
-            <h2 class="paper-title">Adaptive Traversal Tubes for Posture-Aware Navigation of Bipedal Humanoids</h2>
+            <h2 class="paper-title">From VLM Planners to Robotic Agents: Self-Evolving Harnesses for History-Dependent Manipulation</h2>
             
             <div class="author-row">
-                <span>🗓️ 2026-10-20</span>
-                <span>✍️ Zijian Ge</span>
+                <span>🗓️ 2026-10-21</span>
+                <span>✍️ Tingwen Du, Haoyu Guo, Hanxue Zhang et al.</span>
             </div>
             
             <div class="badge-cluster">
-                <span class="badge">#humanoid</span><span class="badge">#bipedal</span><span class="badge">#locomotion</span>
+                <span class="badge">#vision-language-action</span><span class="badge">#vla</span>
             </div>
             
-            <p class="paper-summary">Bipedal humanoids can change their effective footprint by adjusting body yaw, enabling both narrow-passage traversal and socially aware yielding. This paper presents a posture-aware navigation framework centered on \emph{Adaptive Traversal Tubes} (ATT), \emph{Interval Velocity--Heading} (IVH) control, and a sidestep-enhanced AMP locomotion prior. ATT represents a behavior-feasible corridor width field along a reference path, unifying geometric clearance and social comfort into a continuous signal. IVH maps this width to a continuous frontal-to-sidestep posture schedule and omnidirectional velocity commands. A velocity-conditioned AMP policy, trained with GVHMR-retargeted frontal/sidestep motions and coupled \((v_x,v_y)\) tracking rewards, is designed to improve transition stability over a generic locomotion controller while remaining interchangeable with the default onboard policy. This preprint presents the full method; a planned evaluation protocol on a Unitree G1 is outlined, with quantitative results to follow. Demo videos of MuJoCo simulation and real-robot deployment are available at: github.com/lborogzj997/Humanoid-Navigation-in-Crowds-and-Narrow-Spaces.</p>
+            <p class="paper-summary">Vision-language-action (VLA) models achieve strong performance across embodied manipulation tasks by unifying visual understanding, language conditioning, and action generation. However, long-horizon tasks can involve non-Markovian dependencies: successful decisions may require retaining task progress and past interaction outcomes, while partial observability and execution errors compound over time. Existing work has begun to address these challenges by augmenting foundation-model policies with memory and by introducing hierarchical architectures that separate high-level planning from low-level execution. We organize the high-level VLM as a robotic agent through an editable harness to maintain task context and improve planning through execution experience. We instantiate this approach as SERA (Self-Evolving Robotic Agent), with a fixed VLA executor providing low-level control. The harness maintains and updates task context using observations and execution feedback to guide subsequent planning. Self-evolution uses environment rollouts to propose and evaluate harness revisions, with the selected configuration fixed before held-out testing. On RoboMME, SERA achieves 51.38% overall success with autonomous selection, compared with 44.38% without self-evolution. Our exploration suggests that agentic planning is a promising direction for history-dependent robotic manipulation.</p>
             
             <div class="card-action-bar">
-                <a href="http://arxiv.org/pdf/2610.27688v1" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
+                <a href="http://arxiv.org/pdf/2610.29560v1" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
                     View PDF
                 </a>
-                <a href="http://arxiv.org/abs/2610.27688v1" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
+                <a href="http://arxiv.org/abs/2610.29560v1" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
                     arXiv Page &rarr;
                 </a>
             </div>
         </article>
         
-        <article class="paper-card" data-title="robocasa-shift: stage-aware robustness evaluation of vision-language-action policies in long-horizon household manipulation" data-summary="vision-language-action (vla) robustness is commonly summarized by aggregate task success, which obscures how individual executions change under distribution shifts and where failures emerge in long-horizon tasks. we introduce \textbf{robocasa-shift}, a diagnostic robustness benchmark built on robocasa365 that combines controlled single-factor shifts, matched clean-perturbed rollouts in which each pair shares the same underlying settings and differs only in the target shift, and simulator-grounded stage-aware diagnostics. we evaluate gr00t n1.5 on four long-horizon tasks that pass a predefined clean-performance gate under four perturbation factors and three calibrated severity levels, including conditions that drive the evaluated policy to complete task failure, totaling 1,040 formal rollouts. robustness responses vary substantially across factors and tasks, and increasing severity does not always produce monotonic degradation. for example, one camera condition yields $δ\mathrm{sr}=0$ despite 8 of 80 matched episodes changing outcome. stage-aware analysis further shows that the same end-to-end degradation can correspond to different execution-depth profiles. camera $l_2$ and gaussian blur $l_1$ both yield $δ\mathrm{sr}=0.188$, yet their first-stage failure rates are 19.0\% and 36.4\%, respectively. our findings suggest that vla robustness should be viewed as a multi-dimensional property of execution rather than a single end-to-end performance measure, motivating evaluation protocols that jointly capture outcome degradation, paired outcome sensitivity, and failure progression. the code is publicly available at https://github.com/haochengwang23/robocasa-shift.">
+        <article class="paper-card" data-title="plan first, act later: streaming reasoning for executable memory in robot control" data-summary="long-horizon robot manipulation requires a robot to remember task-relevant information beyond its short observation window. existing memory-augmented policies typically retrieve relevant information from history and reason over it at execution time, placing a heavy reasoning burden on the high-level model. to address this challenge, we propose pal (\textbf{p}lan first, \textbf{a}ct \textbf{l}ater), a hierarchical memory framework for vision-language robot manipulation. it maintains a short-term visual buffer, a semantic-event memory, and an executable \texttt{subtask\_list}. a high-level vision-language model (vlm) converts streaming visual observations into the \texttt{subtask\_list}. at execution time, the vlm selects the currently relevant subtask from the \texttt{subtask\_list} and passes it to a low-level vision-language-action (vla) policy. to teach the model what to write to memory and when to update it, we introduce a two-stage data generation procedure that first expands sparse update supervision and then uses self-labeling with task-grounded verification to generate training data that better match the state distribution encountered during execution. we evaluate our approach on memory-dependent benchmarks and real-world manipulation tasks. on robomme, pal achieves a \textbf{56.05\%} success rate, outperforming the strongest baseline, framesamp-modul, at 44.51\%. in real-world experiments across four manipulation tasks, \pal{} reaches \textbf{60.83\%} overall success, surpassing memer (45.00\%) and framesamp-modul (28.33\%). these results show that proactively writing future-relevant subtasks into hierarchical memory improves long-horizon visual reasoning and robot control. code and videos can be found on our website: https://qinghangliu.github.io/pal-webpage/">
             <div class="card-meta-top">
                 <span class="rank-tag">TOP #2</span>
                 <div class="score-badge">
@@ -292,94 +292,94 @@
                 </div>
             </div>
             
-            <h2 class="paper-title">RoboCasa-Shift: Stage-Aware Robustness Evaluation of Vision-Language-Action Policies in Long-Horizon Household Manipulation</h2>
+            <h2 class="paper-title">Plan First, Act Later: Streaming Reasoning for Executable Memory in Robot Control</h2>
             
             <div class="author-row">
-                <span>🗓️ 2026-10-20</span>
-                <span>✍️ Haocheng Wang, Youquan Liu, Weiyu Guo et al.</span>
+                <span>🗓️ 2026-10-21</span>
+                <span>✍️ Qinghang Liu, Conglin Wang, Zongsheng Li et al.</span>
             </div>
             
             <div class="badge-cluster">
                 <span class="badge">#vision-language-action</span><span class="badge">#vla</span>
             </div>
             
-            <p class="paper-summary">Vision-language-action (VLA) robustness is commonly summarized by aggregate task success, which obscures how individual executions change under distribution shifts and where failures emerge in long-horizon tasks. We introduce \textbf{RoboCasa-Shift}, a diagnostic robustness benchmark built on RoboCasa365 that combines controlled single-factor shifts, matched clean-perturbed rollouts in which each pair shares the same underlying settings and differs only in the target shift, and simulator-grounded stage-aware diagnostics. We evaluate GR00T N1.5 on four long-horizon tasks that pass a predefined clean-performance gate under four perturbation factors and three calibrated severity levels, including conditions that drive the evaluated policy to complete task failure, totaling 1,040 formal rollouts. Robustness responses vary substantially across factors and tasks, and increasing severity does not always produce monotonic degradation. For example, one camera condition yields $Δ\mathrm{SR}=0$ despite 8 of 80 matched episodes changing outcome. Stage-aware analysis further shows that the same end-to-end degradation can correspond to different execution-depth profiles. Camera $L_2$ and Gaussian blur $L_1$ both yield $Δ\mathrm{SR}=0.188$, yet their first-stage failure rates are 19.0\% and 36.4\%, respectively. Our findings suggest that VLA robustness should be viewed as a multi-dimensional property of execution rather than a single end-to-end performance measure, motivating evaluation protocols that jointly capture outcome degradation, paired outcome sensitivity, and failure progression. The code is publicly available at https://github.com/HaochengWang23/RoboCasa-Shift.</p>
+            <p class="paper-summary">Long-horizon robot manipulation requires a robot to remember task-relevant information beyond its short observation window. Existing memory-augmented policies typically retrieve relevant information from history and reason over it at execution time, placing a heavy reasoning burden on the high-level model. To address this challenge, we propose PAL (\textbf{P}lan first, \textbf{A}ct \textbf{L}ater), a hierarchical memory framework for vision-language robot manipulation. It maintains a short-term visual buffer, a semantic-event memory, and an executable \texttt{subtask\_list}. A high-level vision-language model (VLM) converts streaming visual observations into the \texttt{subtask\_list}. At execution time, the VLM selects the currently relevant subtask from the \texttt{subtask\_list} and passes it to a low-level vision-language-action (VLA) policy. To teach the model what to write to memory and when to update it, we introduce a two-stage data generation procedure that first expands sparse update supervision and then uses self-labeling with task-grounded verification to generate training data that better match the state distribution encountered during execution. We evaluate our approach on memory-dependent benchmarks and real-world manipulation tasks. On RoboMME, PAL achieves a \textbf{56.05\%} success rate, outperforming the strongest baseline, FrameSamp-Modul, at 44.51\%. In real-world experiments across four manipulation tasks, \pal{} reaches \textbf{60.83\%} overall success, surpassing MemER (45.00\%) and FrameSamp-Modul (28.33\%). These results show that proactively writing future-relevant subtasks into hierarchical memory improves long-horizon visual reasoning and robot control. Code and videos can be found on our website: https://qinghangliu.github.io/pal-webpage/</p>
             
             <div class="card-action-bar">
-                <a href="http://arxiv.org/pdf/2610.27861v1" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
+                <a href="http://arxiv.org/pdf/2610.29329v1" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
                     View PDF
                 </a>
-                <a href="http://arxiv.org/abs/2610.27861v1" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
+                <a href="http://arxiv.org/abs/2610.29329v1" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
                     arXiv Page &rarr;
                 </a>
             </div>
         </article>
         
-        <article class="paper-card" data-title="placa: learning patch-level future latent change for action generation" data-summary="vision-language-action (vla) models generate robot actions from visual observations and language instructions, but effective manipulation also requires anticipating how the environment will change. existing world-action models explore future image prediction and latent dynamics modeling. however, generating complete future images can be computationally expensive, while highly compressed latent representations may obscure local changes. to address these challenges, we propose placa, a world-to-action framework built around future latent change. placa directly predicts spatially structured patch-level future latent change from the current multimodal input, preserving local information about expected environmental changes. we introduce patch-level change-aware supervision to emphasize regions undergoing larger changes and a future-to-action interface that explicitly incorporates predicted future latent change into action generation. experiments on libero-long show that placa achieves a 79.0% success rate, improving upon the action-only baseline by 5.0 percentage points. on calvin, placa improves the average sequence length from 2.784 to 3.564. these improvements are achieved while updating only 2.95% of the model parameters during the second training stage, demonstrating the effectiveness of future latent change modeling for downstream robotic manipulation.">
+        <article class="paper-card" data-title="end-to-end reinforcement learning for quadrupedal jumping in lunar gravity" data-summary="legged robots can extend planetary exploration to rugged and discontinuous terrain that is inaccessible to conventional rovers. in lunar gravity, jumping further expands this mobility by enabling robots to cross obstacles and gaps that cannot be traversed by walking alone. we present a multistage reinforcement-learning approach that produces a single end-to-end control policy for commanded point-to-point jumping under lunar gravity. the resulting policy has a simple architecture and relies exclusively on mission-compatible onboard sensing, making its deployment on a real lunar mission plausible. in simulation, the learned policy performs accurate point-to-point jumps with landing errors smaller than the robot's body size. we analyze the torque and power demands of lunar jumping and characterize performance degradation under extreme outlier events, including control-update freezes of up to \si{1}{s} during flight. hardware transfer demonstrates that the policy can successfully execute a vertical jump under lunar-gravity offloading. furthermore, the measured torque and power profiles are consistent with the simulation results and remain within the robot's hardware limits.">
             <div class="card-meta-top">
                 <span class="rank-tag">TOP #3</span>
                 <div class="score-badge">
                     <span class="score-label">Priority Index</span>
-                    <span class="score-value">135</span>
+                    <span class="score-value">115</span>
                 </div>
             </div>
             
-            <h2 class="paper-title">PLaCA: Learning Patch-Level Future Latent Change for Action Generation</h2>
+            <h2 class="paper-title">End-to-End Reinforcement Learning for Quadrupedal Jumping in Lunar Gravity</h2>
             
             <div class="author-row">
-                <span>🗓️ 2026-10-20</span>
-                <span>✍️ Zhan Yi, Yuchen Wang, Chao Li et al.</span>
+                <span>🗓️ 2026-10-21</span>
+                <span>✍️ Levin Müller, Oliver Fischer, Marco Trentini et al.</span>
             </div>
             
             <div class="badge-cluster">
-                <span class="badge">#vision-language-action</span><span class="badge">#vla</span>
+                <span class="badge">#quadruped</span><span class="badge">#reinforcement learning</span>
             </div>
             
-            <p class="paper-summary">Vision-Language-Action (VLA) models generate robot actions from visual observations and language instructions, but effective manipulation also requires anticipating how the environment will change. Existing world-action models explore future image prediction and latent dynamics modeling. However, generating complete future images can be computationally expensive, while highly compressed latent representations may obscure local changes. To address these challenges, we propose PLaCA, a world-to-action framework built around future latent change. PLaCA directly predicts spatially structured patch-level future latent change from the current multimodal input, preserving local information about expected environmental changes. We introduce patch-level change-aware supervision to emphasize regions undergoing larger changes and a future-to-action interface that explicitly incorporates predicted future latent change into action generation. Experiments on LIBERO-Long show that PLaCA achieves a 79.0% success rate, improving upon the Action-only baseline by 5.0 percentage points. On CALVIN, PLaCA improves the average sequence length from 2.784 to 3.564. These improvements are achieved while updating only 2.95% of the model parameters during the second training stage, demonstrating the effectiveness of future latent change modeling for downstream robotic manipulation.</p>
+            <p class="paper-summary">Legged robots can extend planetary exploration to rugged and discontinuous terrain that is inaccessible to conventional rovers. In lunar gravity, jumping further expands this mobility by enabling robots to cross obstacles and gaps that cannot be traversed by walking alone. We present a multistage reinforcement-learning approach that produces a single end-to-end control policy for commanded point-to-point jumping under lunar gravity. The resulting policy has a simple architecture and relies exclusively on mission-compatible onboard sensing, making its deployment on a real lunar mission plausible. In simulation, the learned policy performs accurate point-to-point jumps with landing errors smaller than the robot's body size. We analyze the torque and power demands of lunar jumping and characterize performance degradation under extreme outlier events, including control-update freezes of up to \SI{1}{s} during flight. Hardware transfer demonstrates that the policy can successfully execute a vertical jump under lunar-gravity offloading. Furthermore, the measured torque and power profiles are consistent with the simulation results and remain within the robot's hardware limits.</p>
             
             <div class="card-action-bar">
-                <a href="http://arxiv.org/pdf/2610.27657v1" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
+                <a href="http://arxiv.org/pdf/2610.29586v1" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
                     View PDF
                 </a>
-                <a href="http://arxiv.org/abs/2610.27657v1" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
+                <a href="http://arxiv.org/abs/2610.29586v1" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
                     arXiv Page &rarr;
                 </a>
             </div>
         </article>
         
-        <article class="paper-card" data-title="robojudge: multimodal language models as judges for embodied video generation" data-summary="video generation models are promising foundations for embodied world models, but only if their generated rollouts are physically valid and faithful to task instructions. multimodal large language models (mllms) are increasingly used to judge these properties, yet their agreement with human judgments on embodied videos has not been systematically evaluated. to address this gap, we introduce robojudge-bench, a benchmark for evaluating mllms as judges of embodied video generation. the benchmark measures two fundamental dimensions, physical adherence and instruction alignment, across 800 human-annotated videos from 8 source corpora and 10 video generators, spanning grippers, human hands, and dexterous hands. experiments reveal uneven alignment between existing judges and human ratings: general-purpose mllms show lower agreement on physical adherence, while specialized video judges designed for general-domain physical reasoning do not consistently transfer to embodied scenarios. motivated by these findings, we construct robojudge-train, comprising 12k videos annotated with 25k human-verified scores and model-assisted rationales for physical adherence and instruction alignment. we fine-tune a 9b mllm on this dataset with supervised learning followed by reinforcement learning, yielding robojudge-9b. among the model judges evaluated on robojudge-bench, robojudge-9b achieves the highest overall agreement, reaching a pearson correlation of 0.719 with a statistically significant 0.089 gain over gemini-3.7-flash, the best-performing proprietary baseline in our evaluation. training on robojudge-train also yields gains on external benchmarks, including videophy2 and physion-eval. we further use robojudge-9b as a downstream evaluator to benchmark video generation models according to physical adherence and instruction alignment.">
+        <article class="paper-card" data-title="a2i-calib++: a kinematics-driven anti-noise active calibration framework for whole-body multi-imu systems on legged robots" data-summary="recently, multi-node inertial measurement unit (multi-imu) systems have shown promise for robust odometry in legged robots. multi-imu fusion can improve legged robot odometry but requires accurate spatiotemporal calibration among the sensors. existing multi-imu calibration methods, designed for aerial or handheld platforms, face challenges on legged robots because routine locomotion may provide insufficient excitation, while foot slips, impacts, and vibrations introduce measurement disturbances. to address these challenges, we propose a2i-calib++, a kinematics-driven anti-noise active calibration framework for body-mounted imus covered by the robot kinematic model. it estimates temporal offsets, extrinsic rotations and translations, and inertial biases through temporal correlation search followed by analytic spatial and bias estimation, without artificial calibration targets or complex parameter tuning for the target imu. a2i-calib++ comprises three core modules: 1) a noise-isotropy-inspired trajectory supported by a finite-horizon conditioning proposition that generates sufficient excitation to limit noise sensitivity; 2) a constraint-aware adversarial motion priors controller that combines the anti-noise excitation with a rolling-contact reward for contact-aware execution; and 3) a contact-constrained virtual imu that fuses pre-calibrated calf imus and joint kinematics under a rolling-contact model to construct the calibration reference. furthermore, evaluations on both simulation and real-world quadruped platforms demonstrate notably reduced noise sensitivity and simulation calibration errors compared to conventional methods, together with repeatable real-world calibration and improved proprioceptive odometry accuracy for legged robots.">
             <div class="card-meta-top">
                 <span class="rank-tag">TOP #4</span>
                 <div class="score-badge">
                     <span class="score-label">Priority Index</span>
-                    <span class="score-value">120</span>
+                    <span class="score-value">110</span>
                 </div>
             </div>
             
-            <h2 class="paper-title">RoboJudge: Multimodal Language Models as Judges for Embodied Video Generation</h2>
+            <h2 class="paper-title">A2I-Calib++: A Kinematics-Driven Anti-noise Active Calibration Framework for Whole-Body Multi-IMU Systems on Legged Robots</h2>
             
             <div class="author-row">
-                <span>🗓️ 2026-10-20</span>
-                <span>✍️ Siyuan Ma, Yu Qi, Cheng Ye et al.</span>
+                <span>🗓️ 2026-10-21</span>
+                <span>✍️ Fangyu Jiang, Chaoran Xiong, Kehui Ma et al.</span>
             </div>
             
             <div class="badge-cluster">
-                <span class="badge">#world model</span><span class="badge">#reinforcement learning</span>
+                <span class="badge">#quadruped</span><span class="badge">#locomotion</span>
             </div>
             
-            <p class="paper-summary">Video generation models are promising foundations for embodied world models, but only if their generated rollouts are physically valid and faithful to task instructions. Multimodal large language models (MLLMs) are increasingly used to judge these properties, yet their agreement with human judgments on embodied videos has not been systematically evaluated. To address this gap, we introduce RoboJudge-Bench, a benchmark for evaluating MLLMs as judges of embodied video generation. The benchmark measures two fundamental dimensions, Physical Adherence and Instruction Alignment, across 800 human-annotated videos from 8 source corpora and 10 video generators, spanning grippers, human hands, and dexterous hands. Experiments reveal uneven alignment between existing judges and human ratings: general-purpose MLLMs show lower agreement on physical adherence, while specialized video judges designed for general-domain physical reasoning do not consistently transfer to embodied scenarios. Motivated by these findings, we construct RoboJudge-Train, comprising 12K videos annotated with 25K human-verified scores and model-assisted rationales for Physical Adherence and Instruction Alignment. We fine-tune a 9B MLLM on this dataset with supervised learning followed by reinforcement learning, yielding RoboJudge-9B. Among the model judges evaluated on RoboJudge-Bench, RoboJudge-9B achieves the highest overall agreement, reaching a Pearson correlation of 0.719 with a statistically significant 0.089 gain over Gemini-3.7-Flash, the best-performing proprietary baseline in our evaluation. Training on RoboJudge-Train also yields gains on external benchmarks, including VideoPhy2 and Physion-Eval. We further use RoboJudge-9B as a downstream evaluator to benchmark video generation models according to Physical Adherence and Instruction Alignment.</p>
+            <p class="paper-summary">Recently, multi-node inertial measurement unit (multi-IMU) systems have shown promise for robust odometry in legged robots. Multi-IMU fusion can improve legged robot odometry but requires accurate spatiotemporal calibration among the sensors. Existing multi-IMU calibration methods, designed for aerial or handheld platforms, face challenges on legged robots because routine locomotion may provide insufficient excitation, while foot slips, impacts, and vibrations introduce measurement disturbances. To address these challenges, we propose A2I-Calib++, a kinematics-driven anti-noise active calibration framework for body-mounted IMUs covered by the robot kinematic model. It estimates temporal offsets, extrinsic rotations and translations, and inertial biases through temporal correlation search followed by analytic spatial and bias estimation, without artificial calibration targets or complex parameter tuning for the target IMU. A2I-Calib++ comprises three core modules: 1) a Noise-Isotropy-Inspired Trajectory supported by a finite-horizon conditioning proposition that generates sufficient excitation to limit noise sensitivity; 2) a constraint-aware Adversarial Motion Priors controller that combines the anti-noise excitation with a rolling-contact reward for contact-aware execution; and 3) a contact-constrained virtual IMU that fuses pre-calibrated calf IMUs and joint kinematics under a rolling-contact model to construct the calibration reference. Furthermore, evaluations on both simulation and real-world quadruped platforms demonstrate notably reduced noise sensitivity and simulation calibration errors compared to conventional methods, together with repeatable real-world calibration and improved proprioceptive odometry accuracy for legged robots.</p>
             
             <div class="card-action-bar">
-                <a href="http://arxiv.org/pdf/2610.27782v1" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
+                <a href="http://arxiv.org/pdf/2610.29438v1" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
                     View PDF
                 </a>
-                <a href="http://arxiv.org/abs/2610.27782v1" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
+                <a href="http://arxiv.org/abs/2610.29438v1" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
                     arXiv Page &rarr;
                 </a>
             </div>
         </article>
         
-        <article class="paper-card" data-title="eventsync: event-driven memory updates for history-dependent manipulation" data-summary="history-dependent robotic manipulation requires task context and interaction history, as the current observation alone is insufficient to determine the next action. hierarchical frameworks use task memory for high-level subgoal reasoning and low-level policies for execution. however, memory updates require accurate completion assessment: similar observations may correspond to different execution phases, and prematurely recording completion can mislead subsequent subgoal reasoning. we present eventsync, a hierarchical framework that coordinates task reasoning and action execution through event-driven memory updates. a vision-language model generates subgoals from task plans and interaction history, while a vision-language-action model executes them. a lightweight event monitor combines visual observations with end-effector trajectories to determine whether the current subgoal is complete. the framework records the current subgoal in its completed-subgoal history and triggers subsequent reasoning only after obtaining completion evidence. with visual history in the executor, eventsync achieves 64.5% overall success on robomme, exceeding the best baseline reported in the benchmark by 20.0 percentage points. further analysis shows that this update mechanism helps build a reliable completed-subgoal history. experiments on four real-robot tasks with different memory requirements validate the framework's effectiveness in real-world robotic manipulation.">
+        <article class="paper-card" data-title="make it walk: computational design of lego walkers" data-summary="lego walkers are walking automata constructed from modular lego technic bricks. they exhibit intriguing locomotion and are also highly reconfigurable through the modular technic bricks, making them widely applicable in education, recreation, and robotics research. however, existing lego walkers are designed mostly by reusing existing single-actuator walking mechanisms. although the locomotion is stable, their fixed walking gaits limit their adaptability and versatility. this paper presents the first computational solution capable of designing lego walkers that not only walk stably, but also support a variety of walking gaits. our idea is twofold. first, we control the foot motion trajectory of each leg mechanically via a specifically-designed gear-linkage mechanism, in which we incorporate a pair of 3d-printed non-circular gears to work with a lego technic mechanism. second, we drive each leg by an independent motor and synchronize the timings of multiple leg motions via a simple yet adaptable control algorithm, enabling stable and versatile locomotion. importantly, we take this modeling as a foundation to co-design the morphology and control of the lego walkers to meet the target locomotion and appearance. leveraging our approach, we created a variety of lego walkers, demonstrating various walking gaits and appearances, and fabricated some of them to show their locomotion capability in the real world.">
             <div class="card-meta-top">
                 <span class="rank-tag">TOP #5</span>
                 <div class="score-badge">
@@ -388,120 +388,120 @@
                 </div>
             </div>
             
-            <h2 class="paper-title">EventSync: Event-Driven Memory Updates for History-Dependent Manipulation</h2>
+            <h2 class="paper-title">Make it Walk: Computational Design of LEGO Walkers</h2>
             
             <div class="author-row">
-                <span>🗓️ 2026-10-20</span>
-                <span>✍️ Jingjiao Zhao, Dong Jing, Mingyu Cao et al.</span>
+                <span>🗓️ 2026-10-21</span>
+                <span>✍️ Siqi Li, Fancheng Gao, Chi-Wing Fu et al.</span>
             </div>
             
             <div class="badge-cluster">
-                <span class="badge">#vision-language-action</span>
+                <span class="badge">#locomotion</span><span class="badge">#actuator</span>
             </div>
             
-            <p class="paper-summary">History-dependent robotic manipulation requires task context and interaction history, as the current observation alone is insufficient to determine the next action. Hierarchical frameworks use task memory for high-level subgoal reasoning and low-level policies for execution. However, memory updates require accurate completion assessment: similar observations may correspond to different execution phases, and prematurely recording completion can mislead subsequent subgoal reasoning. We present EventSync, a hierarchical framework that coordinates task reasoning and action execution through event-driven memory updates. A vision-language model generates subgoals from task plans and interaction history, while a vision-language-action model executes them. A lightweight Event Monitor combines visual observations with end-effector trajectories to determine whether the current subgoal is complete. The framework records the current subgoal in its completed-subgoal history and triggers subsequent reasoning only after obtaining completion evidence. With visual history in the executor, EventSync achieves 64.5% overall success on RoboMME, exceeding the best baseline reported in the benchmark by 20.0 percentage points. Further analysis shows that this update mechanism helps build a reliable completed-subgoal history. Experiments on four real-robot tasks with different memory requirements validate the framework's effectiveness in real-world robotic manipulation.</p>
+            <p class="paper-summary">LEGO walkers are walking automata constructed from modular LEGO Technic bricks. They exhibit intriguing locomotion and are also highly reconfigurable through the modular Technic bricks, making them widely applicable in education, recreation, and robotics research. However, existing LEGO walkers are designed mostly by reusing existing single-actuator walking mechanisms. Although the locomotion is stable, their fixed walking gaits limit their adaptability and versatility. This paper presents the first computational solution capable of designing LEGO walkers that not only walk stably, but also support a variety of walking gaits. Our idea is twofold. First, we control the foot motion trajectory of each leg mechanically via a specifically-designed gear-linkage mechanism, in which we incorporate a pair of 3D-printed non-circular gears to work with a LEGO Technic mechanism. Second, we drive each leg by an independent motor and synchronize the timings of multiple leg motions via a simple yet adaptable control algorithm, enabling stable and versatile locomotion. Importantly, we take this modeling as a foundation to co-design the morphology and control of the LEGO walkers to meet the target locomotion and appearance. Leveraging our approach, we created a variety of LEGO walkers, demonstrating various walking gaits and appearances, and fabricated some of them to show their locomotion capability in the real world.</p>
             
             <div class="card-action-bar">
-                <a href="http://arxiv.org/pdf/2610.27917v1" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
+                <a href="http://arxiv.org/pdf/2610.29505v1" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
                     View PDF
                 </a>
-                <a href="http://arxiv.org/abs/2610.27917v1" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
+                <a href="http://arxiv.org/abs/2610.29505v1" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
                     arXiv Page &rarr;
                 </a>
             </div>
         </article>
         
-        <article class="paper-card" data-title="prescribed performance guided safe reinforcement learning for roundabout navigation of autonomous vehicles" data-summary="connected and autonomous vehicles (cavs) face significant challenges in roundabout navigation due to dense traffic interactions and unpredictable agent behaviors, necessitating high levels of adaptability and safety. while the combination of reinforcement learning (rl) and model predictive control (mpc) offers a promising approach, existing frameworks suffer from a structural mismatch where pointwise rl decisions fail to align with mpc's trajectory level optimization, and often lack rigorous safety guarantees. this work proposes rltrajgen-ppmpc-cbf, a hierarchical framework for safe, smooth and comfort roundabout navigation, which regulates the coupling between rl-based planning and mpc-based control. we employ prescribed performance constraints (ppc) to enforce a gradual, stable convergence between reference trajectories and control outputs, ensuring mpc tracking performance remains consistent with intended behavior from rl. additionally, a control barrier function (cbf) layer provides real-time safety corrections that are fed back into the rl process. simulation results in the metadrive environment demonstrate that our method achieves a 6.25\% increase in average success rate and a 65.87\% reduction in motion sickness dose value (msdv) compared to the optimal baseline, meanwhile accelerating training convergence.">
+        <article class="paper-card" data-title="preserving operator intent under actuation constraints: teleoperation of manipulators with coupled transmissions" data-summary="teleoperation enables intuitive control of remote engineering robots for precision tasks. existing direct joint-mapping methods have two limitations: independent motor saturation disrupts pitch-roll coordination in differential wrists, while fixed mappings struggle with abrupt tracking changes caused by gravitational loads and actuation constraints. we propose an actuator-constraint-aware leader-follower teleoperation method that jointly models leader gravity compensation, leader-follower joint mapping, and follower differential-wrist control. specifically, we perform coordinated saturation in motor space according to the available gravity margin and integrate continuous angle unwrapping, feedback-state monitoring, and feasible-reference updates. this preserves the operator's motion direction, reduces coordination distortion, and suppresses recovery transients during saturation or brief communication failures. real-robot experiments demonstrate smoother wrist trajectories and more continuous recovery than direct mapping.">
             <div class="card-meta-top">
                 <span class="rank-tag">TOP #6</span>
+                <div class="score-badge">
+                    <span class="score-label">Priority Index</span>
+                    <span class="score-value">90</span>
+                </div>
+            </div>
+            
+            <h2 class="paper-title">Preserving Operator Intent Under Actuation Constraints: Teleoperation of Manipulators with Coupled Transmissions</h2>
+            
+            <div class="author-row">
+                <span>🗓️ 2026-10-21</span>
+                <span>✍️ Xuhan Miao, Zijin Han, Yutong Shen et al.</span>
+            </div>
+            
+            <div class="badge-cluster">
+                <span class="badge">#actuator</span><span class="badge">#teleoperation</span>
+            </div>
+            
+            <p class="paper-summary">Teleoperation enables intuitive control of remote engineering robots for precision tasks. Existing direct joint-mapping methods have two limitations: independent motor saturation disrupts pitch-roll coordination in differential wrists, while fixed mappings struggle with abrupt tracking changes caused by gravitational loads and actuation constraints. We propose an actuator-constraint-aware leader-follower teleoperation method that jointly models leader gravity compensation, leader-follower joint mapping, and follower differential-wrist control. Specifically, we perform coordinated saturation in motor space according to the available gravity margin and integrate continuous angle unwrapping, feedback-state monitoring, and feasible-reference updates. This preserves the operator's motion direction, reduces coordination distortion, and suppresses recovery transients during saturation or brief communication failures. Real-robot experiments demonstrate smoother wrist trajectories and more continuous recovery than direct mapping.</p>
+            
+            <div class="card-action-bar">
+                <a href="http://arxiv.org/pdf/2610.29565v1" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
+                    View PDF
+                </a>
+                <a href="http://arxiv.org/abs/2610.29565v1" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
+                    arXiv Page &rarr;
+                </a>
+            </div>
+        </article>
+        
+        <article class="paper-card" data-title="distance field driven reinforcement learning for reactive and robust collision avoidance" data-summary="robust and reactive collision avoidance remains a central challenge for deploying reinforcement learning (rl) policies on real robotic manipulators, particularly when transferring behaviours learned in simulation to the physical world. this paper presents an rl framework that integrates the euclidean distance field (edf) directly into the observation space, providing the agent with continuous geometric cues that support stable and responsive avoidance behaviours. by leveraging the rich spatial information encoded in the edf, the method enables a streamlined reward formulation that achieves effective obstacle avoidance both with and without artificial potential field guidance. the proposed approach is validated on a 7-dof redundant manipulator, demonstrating zero-shot transfer from simulation to real hardware. despite being trained exclusively with randomised static objects, the deployed policy generalizes to previously unseen real environments and exhibits robust online avoidance of dynamic obstacles. these results highlight the potential of edf-based representations to mitigate the sim-to-real gap and support reliable and real-time collision-aware behaviour in complex and changing environments.">
+            <div class="card-meta-top">
+                <span class="rank-tag">TOP #7</span>
                 <div class="score-badge">
                     <span class="score-label">Priority Index</span>
                     <span class="score-value">80</span>
                 </div>
             </div>
             
-            <h2 class="paper-title">Prescribed Performance Guided Safe Reinforcement Learning for Roundabout Navigation of Autonomous Vehicles</h2>
+            <h2 class="paper-title">Distance Field Driven Reinforcement Learning for Reactive and Robust Collision Avoidance</h2>
             
             <div class="author-row">
-                <span>🗓️ 2026-10-20</span>
-                <span>✍️ Wenhan Li, Yangrui Zhang, Hang Zhou et al.</span>
+                <span>🗓️ 2026-10-21</span>
+                <span>✍️ Taiga Ikeshima, Sheila Sutjipto, Lan Wu et al.</span>
             </div>
             
             <div class="badge-cluster">
                 <span class="badge">#reinforcement learning</span>
             </div>
             
-            <p class="paper-summary">Connected and Autonomous Vehicles (CAVs) face significant challenges in roundabout navigation due to dense traffic interactions and unpredictable agent behaviors, necessitating high levels of adaptability and safety. While the combination of Reinforcement Learning (RL) and Model Predictive Control (MPC) offers a promising approach, existing frameworks suffer from a structural mismatch where pointwise RL decisions fail to align with MPC's trajectory level optimization, and often lack rigorous safety guarantees. This work proposes RLTrajGen-PPMPC-CBF, a hierarchical framework for safe, smooth and comfort roundabout navigation, which regulates the coupling between RL-based planning and MPC-based control. We employ Prescribed Performance Constraints (PPC) to enforce a gradual, stable convergence between reference trajectories and control outputs, ensuring MPC tracking performance remains consistent with intended behavior from RL. Additionally, a Control Barrier Function (CBF) layer provides real-time safety corrections that are fed back into the RL process. Simulation results in the MetaDrive environment demonstrate that our method achieves a 6.25\% increase in average success rate and a 65.87\% reduction in Motion Sickness Dose Value (MSDV) compared to the optimal baseline, meanwhile accelerating training convergence.</p>
+            <p class="paper-summary">Robust and reactive collision avoidance remains a central challenge for deploying Reinforcement Learning (RL) policies on real robotic manipulators, particularly when transferring behaviours learned in simulation to the physical world. This paper presents an RL framework that integrates the Euclidean Distance Field (EDF) directly into the observation space, providing the agent with continuous geometric cues that support stable and responsive avoidance behaviours. By leveraging the rich spatial information encoded in the EDF, the method enables a streamlined reward formulation that achieves effective obstacle avoidance both with and without Artificial Potential Field guidance. The proposed approach is validated on a 7-DoF redundant manipulator, demonstrating zero-shot transfer from simulation to real hardware. Despite being trained exclusively with randomised static objects, the deployed policy generalizes to previously unseen real environments and exhibits robust online avoidance of dynamic obstacles. These results highlight the potential of EDF-based representations to mitigate the sim-to-real gap and support reliable and real-time collision-aware behaviour in complex and changing environments.</p>
             
             <div class="card-action-bar">
-                <a href="http://arxiv.org/pdf/2610.27732v1" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
+                <a href="http://arxiv.org/pdf/2610.29452v1" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
                     View PDF
                 </a>
-                <a href="http://arxiv.org/abs/2610.27732v1" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
+                <a href="http://arxiv.org/abs/2610.29452v1" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
                     arXiv Page &rarr;
                 </a>
             </div>
         </article>
         
-        <article class="paper-card" data-title="what novice operators see changes what the policy learns: a user study of keypoint hand visual representation for teleoperated demonstration" data-summary="imitation learning increasingly relies on novice operators, whose demonstrations fall short of experts' in number and inter-trial consistency. operators act on what they are shown, yet how the rendering of the robot affects their demonstrations, and the policies trained on them, has not been examined. we study this question with pointhand, a teleoperation interface that renders a multi-fingered robot hand as sparse keypoints at its fingertips and joints, the same keypoints a policy can observe. in a simulated mug-in-box task, 18 novices and 4 experts collected 2,200 trials under three renderings: the real shape of the hand, all keypoints emphasized, or the thumb and index finger alone emphasized. the novices shown the thumb and index finger emphasized collected 441 successful demonstrations from 600 trials, against 320 for those shown the real shape. we then trained diffusion policies on these demonstrations, replacing the scene point cloud and proprioceptive state they observe with the hand keypoints and two object keypoints. within 400 steps these demonstrations went from the weakest of the three novice conditions under the point-cloud policy (46.3%) to the strongest under the keypoint policy (57.3%), a gain of +11.0 percentage points in all five seeds. those collected with all keypoints emphasized changed by at most +0.7 percentage points, and in no more than three seeds. the value of a demonstration therefore depends on the rendering shown during collection and on what the policy observes together. a shared representation can pay off on both sides, in the number of successful demonstrations and in the success rate of the policy trained on them. project page: https://omron-sinicx.github.io/point-hand/">
-            <div class="card-meta-top">
-                <span class="rank-tag">TOP #7</span>
-                <div class="score-badge">
-                    <span class="score-label">Priority Index</span>
-                    <span class="score-value">70</span>
-                </div>
-            </div>
-            
-            <h2 class="paper-title">What Novice Operators See Changes What the Policy Learns: A User Study of Keypoint Hand Visual Representation for Teleoperated Demonstration</h2>
-            
-            <div class="author-row">
-                <span>🗓️ 2026-10-20</span>
-                <span>✍️ Amane Yamaguchi, Shohei Kamiguchi, Masashi Hamaya et al.</span>
-            </div>
-            
-            <div class="badge-cluster">
-                <span class="badge">#teleoperation</span>
-            </div>
-            
-            <p class="paper-summary">Imitation learning increasingly relies on novice operators, whose demonstrations fall short of experts' in number and inter-trial consistency. Operators act on what they are shown, yet how the rendering of the robot affects their demonstrations, and the policies trained on them, has not been examined. We study this question with PointHand, a teleoperation interface that renders a multi-fingered robot hand as sparse keypoints at its fingertips and joints, the same keypoints a policy can observe. In a simulated mug-in-box task, 18 novices and 4 experts collected 2,200 trials under three renderings: the real shape of the hand, all keypoints emphasized, or the thumb and index finger alone emphasized. The novices shown the thumb and index finger emphasized collected 441 successful demonstrations from 600 trials, against 320 for those shown the real shape. We then trained diffusion policies on these demonstrations, replacing the scene point cloud and proprioceptive state they observe with the hand keypoints and two object keypoints. Within 400 steps these demonstrations went from the weakest of the three novice conditions under the point-cloud policy (46.3%) to the strongest under the keypoint policy (57.3%), a gain of +11.0 percentage points in all five seeds. Those collected with all keypoints emphasized changed by at most +0.7 percentage points, and in no more than three seeds. The value of a demonstration therefore depends on the rendering shown during collection and on what the policy observes together. A shared representation can pay off on both sides, in the number of successful demonstrations and in the success rate of the policy trained on them. Project page: https://omron-sinicx.github.io/point-hand/</p>
-            
-            <div class="card-action-bar">
-                <a href="http://arxiv.org/pdf/2610.27907v1" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
-                    View PDF
-                </a>
-                <a href="http://arxiv.org/abs/2610.27907v1" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
-                    arXiv Page &rarr;
-                </a>
-            </div>
-        </article>
-        
-        <article class="paper-card" data-title="high-precision rcm motion for ophthalmic robotics via hierarchical qp control and authority-guided recovery planning" data-summary="general-purpose manipulators can position ophthalmic instruments under a software remote centre of motion (rcm). however, at some reachable configurations that are nonsingular for the tip task alone, the rcm and tip-tracking objectives conflict and the servo oscillates. we formalise this failure as a constraint-induced task singularity: the rcm-projected tip jacobian loses rank while the unprojected tip jacobian stays well conditioned. thus, the effective tip authority collapses although the target remains reachable. we present a high-precision rcm servo architecture with built-in singularity recovery: for each commanded target, an authority-guided planner selects a well-conditioned arm configuration that reaches it and plans an rcm-consistent route, executed by a fixed hierarchical-qp controller. on a 200-scenario kinematic benchmark, the complete nominal-and-recovery protocol reaches 128/128 near-singular targets and 71/72 near-joint-limit targets (100% and 99%, respectively), with the software-rcm residual below 0.142 mm. on a physical 6-dof arm it executes across four rcm entry points, with a worst-case kinematically reconstructed rcm residual of 178 μm and a median tip-regulation error of 32μm, within the 200μm control requirement adopted for the ophthalmic task.">
+        <article class="paper-card" data-title="training in deployment: human-in-the-loop online post-training for robot manipulation" data-summary="large pretrained robot foundation models provide strong priors for manipulation, yet adapting them to target tasks with offline teleoperated demonstrations often fails to cover the contact-rich, recovery, and precision-critical states encountered during deployment. existing methods mitigate this issue by augmenting offline demonstrations with human-in-the-loop data or online reinforcement learning. despite this, offline post-training adapts slowly because it cannot immediately absorb deployment experience, while online rl typically relies on value functions or auxiliary actor-critic models, increasing both training complexity and instability. we present tide (training in deployment), a human-in-the-loop online post-training system. tide introduces a provenance-conditioned supervised learning framework that updates the policy online from human interventions and policy-generated rollouts collected during deployment, without a learned critic, reward model, or action scorer. across four real-world bimanual manipulation tasks, tide improves milestone-normalized task progress and binary full-task completion over the warm-start policy and matched additional offline demonstrations, and performs comparably to the fixed-policy collection baseline while making updated checkpoints available during deployment. each task-specific online post-training session, from the start of deployment rollouts until the final checkpoint is available, completes in less than one hour while learning and checkpoint handling run asynchronously.">
             <div class="card-meta-top">
                 <span class="rank-tag">TOP #8</span>
                 <div class="score-badge">
                     <span class="score-label">Priority Index</span>
-                    <span class="score-value">50</span>
+                    <span class="score-value">80</span>
                 </div>
             </div>
             
-            <h2 class="paper-title">High-Precision RCM Motion for Ophthalmic Robotics via Hierarchical QP Control and Authority-Guided Recovery Planning</h2>
+            <h2 class="paper-title">Training in Deployment: Human-in-the-loop Online Post-Training for Robot Manipulation</h2>
             
             <div class="author-row">
-                <span>🗓️ 2026-10-20</span>
-                <span>✍️ Huanyu Tian, Adriana Namour, Lingyun Zeng et al.</span>
+                <span>🗓️ 2026-10-21</span>
+                <span>✍️ Chun Gu, Xiaofei Wei, Yiming Chen et al.</span>
             </div>
             
             <div class="badge-cluster">
-                <span class="badge badge-muted">#frontier</span>
+                <span class="badge">#reinforcement learning</span>
             </div>
             
-            <p class="paper-summary">General-purpose manipulators can position ophthalmic instruments under a software Remote Centre of Motion (RCM). However, at some reachable configurations that are nonsingular for the tip task alone, the RCM and tip-tracking objectives conflict and the servo oscillates. We formalise this failure as a constraint-induced task singularity: the RCM-projected tip Jacobian loses rank while the unprojected tip Jacobian stays well conditioned. Thus, the effective tip authority collapses although the target remains reachable. We present a high-precision RCM servo architecture with built-in singularity recovery: for each commanded target, an authority-guided planner selects a well-conditioned arm configuration that reaches it and plans an RCM-consistent route, executed by a fixed hierarchical-QP controller. On a 200-scenario kinematic benchmark, the complete nominal-and-recovery protocol reaches 128/128 near-singular targets and 71/72 near-joint-limit targets (100% and 99%, respectively), with the software-RCM residual below 0.142 mm. On a physical 6-DOF arm it executes across four RCM entry points, with a worst-case kinematically reconstructed RCM residual of 178 μm and a median tip-regulation error of 32μm, within the 200μm control requirement adopted for the ophthalmic task.</p>
+            <p class="paper-summary">Large pretrained robot foundation models provide strong priors for manipulation, yet adapting them to target tasks with offline teleoperated demonstrations often fails to cover the contact-rich, recovery, and precision-critical states encountered during deployment. Existing methods mitigate this issue by augmenting offline demonstrations with human-in-the-loop data or online reinforcement learning. Despite this, offline post-training adapts slowly because it cannot immediately absorb deployment experience, while online RL typically relies on value functions or auxiliary actor-critic models, increasing both training complexity and instability. We present TIDE (Training In DEployment), a human-in-the-loop online post-training system. TIDE introduces a provenance-conditioned supervised learning framework that updates the policy online from human interventions and policy-generated rollouts collected during deployment, without a learned critic, reward model, or action scorer. Across four real-world bimanual manipulation tasks, TIDE improves milestone-normalized task progress and binary full-task completion over the warm-start policy and matched additional offline demonstrations, and performs comparably to the fixed-policy collection baseline while making updated checkpoints available during deployment. Each task-specific online post-training session, from the start of deployment rollouts until the final checkpoint is available, completes in less than one hour while learning and checkpoint handling run asynchronously.</p>
             
             <div class="card-action-bar">
-                <a href="http://arxiv.org/pdf/2610.27905v1" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
+                <a href="http://arxiv.org/pdf/2610.29264v1" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
                     View PDF
                 </a>
-                <a href="http://arxiv.org/abs/2610.27905v1" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
+                <a href="http://arxiv.org/abs/2610.29264v1" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
                     arXiv Page &rarr;
                 </a>
             </div>
