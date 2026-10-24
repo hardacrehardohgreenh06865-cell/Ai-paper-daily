@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Embodied AI & Robotics Intelligence Digest — October 23, 2026</title>
+    <title>Embodied AI & Robotics Intelligence Digest — October 24, 2026</title>
     <style>
         :root {
             --bg-base: #080c14;
@@ -242,7 +242,7 @@
         <header>
             <span class="pill-brand">Autonomous Research Intelligence</span>
             <h1>Embodied AI & Physical Frontier Briefing</h1>
-            <p class="subtitle">Compiled on October 23, 2026 • Ranked top 8 strategic breakthroughs out of incoming preprints.</p>
+            <p class="subtitle">Compiled on October 24, 2026 • Ranked top 8 strategic breakthroughs out of incoming preprints.</p>
             
             <div class="controls">
                 <input type="text" id="filterInput" class="search-box" placeholder="Filter papers by keywords (e.g. humanoid, tactile, diffusion)...">
@@ -251,257 +251,257 @@
 
         <main id="paperList">
             
-        <article class="paper-card" data-title="memory before goal: role of pre-history memory for humanoid loco-manipulation" data-summary="humanoid loco-manipulation in dynamic scenes is non-markovian: cues vanish as objects change or are hidden, or leave the view as the robot turns and walks, yet whole-body vision-language-action (vla) policies see only the present. we present wholebodymem, an object-guided perceptual memory that keeps the pre-history of object events seen before the robot acts on its goal. sam3 tracks the task objects, and their events causally select key frames within an adaptive budget, which the action expert reads by cross-attention together with object tokens encoding appearance, geometry and time. we also contribute humego, a humanoid memory benchmark with six simulated and six real-world unitree g1 tasks. keeping the right frames rather than more frames, wholebodymem surpasses memoryless and uniform-memory baselines, raising its base policy's success from 29.1% to 72.6% in simulation and from 36.7% to 88.3% on the real robot, while also improving the standard simple tasks (70.2% to 86.9%).">
+        <article class="paper-card" data-title="humanoid mobility via attention-based contacts" data-summary="humanoid mobility over complex terrain requires accurate foot placement and coordinated whole-body motion capable of robust adaptation. reinforcement learning (rl) policies trained without motion references generalize well across terrains, yet eliciting effective whole-body coordination through reward design and exploration alone remains challenging. in contrast, reference-based methods yield natural motions but struggle to adapt beyond the predefined trajectories in their training data. we introduce a learning framework that bridges these two approaches by using motion data strictly as a training prior. an explicit, self-supervised, attention-based contact planner predicts future body-environment contacts, while a contact-conditioned tracker translates these plans into coordinated whole-body motion. together, they establish contact as an interface between sensory observations and control actions. this abstraction allows the policy to internalize the contact-aware structure of locomotion rather than directly replicating kinematics. consequently, a single policy can exploit data-driven motion priors for natural whole-body coordination while retaining the flexibility to discover environment-dependent behaviors through reinforcement learning. building on the learned contact planner and tracker, a subsequent fine-tuning stage bootstraps their acquired capabilities to explore environment variations beyond those covered by the original motion data. operating entirely from onboard observations without any reference inputs at deployment, this framework enables versatile humanoid mobility in challenging environments.">
             <div class="card-meta-top">
                 <span class="rank-tag">TOP #1</span>
                 <div class="score-badge">
                     <span class="score-label">Priority Index</span>
-                    <span class="score-value">180</span>
+                    <span class="score-value">150</span>
                 </div>
             </div>
             
-            <h2 class="paper-title">Memory before Goal: Role of Pre-History Memory for Humanoid Loco-Manipulation</h2>
+            <h2 class="paper-title">Humanoid Mobility via Attention-based Contacts</h2>
             
             <div class="author-row">
                 <span>🗓️ 2026-10-22</span>
-                <span>✍️ Chenyuan Chen, Ran Ding, Lechen Zhang et al.</span>
+                <span>✍️ Junzhe He, Kehan Wen, Chong Zhang et al.</span>
             </div>
             
             <div class="badge-cluster">
-                <span class="badge">#humanoid</span><span class="badge">#vision-language-action</span><span class="badge">#vla</span>
+                <span class="badge">#humanoid</span><span class="badge">#reinforcement learning</span><span class="badge">#locomotion</span>
             </div>
             
-            <p class="paper-summary">Humanoid loco-manipulation in dynamic scenes is non-Markovian: cues vanish as objects change or are hidden, or leave the view as the robot turns and walks, yet whole-body vision-language-action (VLA) policies see only the present. We present WholeBodyMem, an object-guided perceptual memory that keeps the pre-history of object events seen before the robot acts on its goal. SAM3 tracks the task objects, and their events causally select key frames within an adaptive budget, which the action expert reads by cross-attention together with object tokens encoding appearance, geometry and time. We also contribute HuMeGo, a humanoid memory benchmark with six simulated and six real-world Unitree G1 tasks. Keeping the right frames rather than more frames, WholeBodyMem surpasses memoryless and uniform-memory baselines, raising its base policy's success from 29.1% to 72.6% in simulation and from 36.7% to 88.3% on the real robot, while also improving the standard SIMPLE tasks (70.2% to 86.9%).</p>
+            <p class="paper-summary">Humanoid mobility over complex terrain requires accurate foot placement and coordinated whole-body motion capable of robust adaptation. Reinforcement learning (RL) policies trained without motion references generalize well across terrains, yet eliciting effective whole-body coordination through reward design and exploration alone remains challenging. In contrast, reference-based methods yield natural motions but struggle to adapt beyond the predefined trajectories in their training data. We introduce a learning framework that bridges these two approaches by using motion data strictly as a training prior. An explicit, self-supervised, attention-based contact planner predicts future body-environment contacts, while a contact-conditioned tracker translates these plans into coordinated whole-body motion. Together, they establish contact as an interface between sensory observations and control actions. This abstraction allows the policy to internalize the contact-aware structure of locomotion rather than directly replicating kinematics. Consequently, a single policy can exploit data-driven motion priors for natural whole-body coordination while retaining the flexibility to discover environment-dependent behaviors through reinforcement learning. Building on the learned contact planner and tracker, a subsequent fine-tuning stage bootstraps their acquired capabilities to explore environment variations beyond those covered by the original motion data. Operating entirely from onboard observations without any reference inputs at deployment, this framework enables versatile humanoid mobility in challenging environments.</p>
             
             <div class="card-action-bar">
-                <a href="http://arxiv.org/pdf/2610.31166v1" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
+                <a href="http://arxiv.org/pdf/2610.31608v1" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
                     View PDF
                 </a>
-                <a href="http://arxiv.org/abs/2610.31166v1" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
+                <a href="http://arxiv.org/abs/2610.31608v1" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
                     arXiv Page &rarr;
                 </a>
             </div>
         </article>
         
-        <article class="paper-card" data-title="locomanilab: a unified testbed for data, policies, controllers, and deployment in humanoid loco-manipulation" data-summary="humanoid robots must coordinate locomotion and manipulation in everyday environments, yet progress is difficult to assess across differing policies, controllers, and task settings. locomanilab provides an integrated testbed spanning data collection and generation, policy training, evaluation, and physical deployment. its task suite covers 234 atomic and compositional tasks across five household scene categories, supported by 51.5 hours of simulated teleoperation. the evaluation covers twelve policies with a shared controller across task and scene splits and perturbation levels, two policies across five controllers, and studies of demonstration scale and data-source mixtures. success rates fall on unseen tasks and scenes and generally decline as visual perturbations increase, with differences in generalization and robustness across policies. for data generation, a humanoid motion generation model is fine-tuned for loco-manipulation to study the alignment of its outputs with task execution requirements and its integration into the data generation pipeline. three simulated loco-manipulation tasks closely match real-world setups, enabling evaluation of three policies in both domains. similar policy rankings support the reliability of simulation-based evaluation.">
+        <article class="paper-card" data-title="sensorimotor alignment: a platonic proxy for embodied policy success" data-summary="robotic foundation models are typically evaluated through costly closed-loop rollouts, which motivates cheap offline proxies for model capability. the platonic representation hypothesis (prh) suggests that as representations improve, different modalities such as vision and language converge toward a shared statistical model of reality. we ask whether motion trajectories form another such modality: as embodied models become more capable, should their sensory representations converge toward the structure of physical motion? to examine this, we propose sensorimotor alignment ($s^2$), a training-free offline metric that measures how well a model's sensory representation aligns with the geometry of physical motion. we find that $s^2$ correlates positively with downstream robot task success across embodied model families, making it a low-cost offline proxy for prioritizing models before closed-loop evaluation. $s^2$ can also identify promising vision-language model (vlm) backbones even before costly fine-tuning into vision-language-action models (vlas). beyond this correlation, $s^2$ offers representation-level explanations for phenomena observed in vlas and world action models (wams). with $s^2$, we extend prh to embodied models and make sensorimotor alignment empirically measurable, offering insight into why an embodied model succeeds beyond its closed-loop success rate.">
             <div class="card-meta-top">
                 <span class="rank-tag">TOP #2</span>
                 <div class="score-badge">
                     <span class="score-label">Priority Index</span>
-                    <span class="score-value">140</span>
+                    <span class="score-value">135</span>
                 </div>
             </div>
             
-            <h2 class="paper-title">LocoManiLab: A Unified Testbed for Data, Policies, Controllers, and Deployment in Humanoid Loco-Manipulation</h2>
+            <h2 class="paper-title">Sensorimotor Alignment: A Platonic Proxy for Embodied Policy Success</h2>
             
             <div class="author-row">
                 <span>🗓️ 2026-10-22</span>
-                <span>✍️ Dewei Wang, Jinrui Han, Jiyuan Shi et al.</span>
+                <span>✍️ Yunfei Xie, Howard H. Qian, Shiyi Lan et al.</span>
             </div>
             
             <div class="badge-cluster">
-                <span class="badge">#humanoid</span><span class="badge">#locomotion</span><span class="badge">#teleoperation</span>
+                <span class="badge">#vision-language-action</span><span class="badge">#vla</span>
             </div>
             
-            <p class="paper-summary">Humanoid robots must coordinate locomotion and manipulation in everyday environments, yet progress is difficult to assess across differing policies, controllers, and task settings. LocoManiLab provides an integrated testbed spanning data collection and generation, policy training, evaluation, and physical deployment. Its task suite covers 234 atomic and compositional tasks across five household scene categories, supported by 51.5 hours of simulated teleoperation. The evaluation covers twelve policies with a shared controller across task and scene splits and perturbation levels, two policies across five controllers, and studies of demonstration scale and data-source mixtures. Success rates fall on unseen tasks and scenes and generally decline as visual perturbations increase, with differences in generalization and robustness across policies. For data generation, a humanoid motion generation model is fine-tuned for loco-manipulation to study the alignment of its outputs with task execution requirements and its integration into the data generation pipeline. Three simulated loco-manipulation tasks closely match real-world setups, enabling evaluation of three policies in both domains. Similar policy rankings support the reliability of simulation-based evaluation.</p>
+            <p class="paper-summary">Robotic foundation models are typically evaluated through costly closed-loop rollouts, which motivates cheap offline proxies for model capability. The Platonic Representation Hypothesis (PRH) suggests that as representations improve, different modalities such as vision and language converge toward a shared statistical model of reality. We ask whether motion trajectories form another such modality: as embodied models become more capable, should their sensory representations converge toward the structure of physical motion? To examine this, we propose Sensorimotor Alignment ($S^2$), a training-free offline metric that measures how well a model's sensory representation aligns with the geometry of physical motion. We find that $S^2$ correlates positively with downstream robot task success across embodied model families, making it a low-cost offline proxy for prioritizing models before closed-loop evaluation. $S^2$ can also identify promising vision-language model (VLM) backbones even before costly fine-tuning into vision-language-action models (VLAs). Beyond this correlation, $S^2$ offers representation-level explanations for phenomena observed in VLAs and world action models (WAMs). With $S^2$, we extend PRH to embodied models and make sensorimotor alignment empirically measurable, offering insight into why an embodied model succeeds beyond its closed-loop success rate.</p>
             
             <div class="card-action-bar">
-                <a href="http://arxiv.org/pdf/2610.30876v1" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
+                <a href="http://arxiv.org/pdf/2610.31670v1" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
                     View PDF
                 </a>
-                <a href="http://arxiv.org/abs/2610.30876v1" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
+                <a href="http://arxiv.org/abs/2610.31670v1" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
                     arXiv Page &rarr;
                 </a>
             </div>
         </article>
         
-        <article class="paper-card" data-title="inside-jepa: from prediction to relational grounding in latent world models" data-summary="joint-embedding predictive architectures (jepas) learn world models in latent space, enabling efficient planning but leaving their states opaque. we introduce inside-jepa, which places relational channels for ordered entity pairs inside the jepa latent state and shows that an inverse-dynamics loss can ground these channels without relation labels when its head reads them, either alone or as part of the full state. on something-something v2, latent prediction alone performs no better than a random relation head, while inverse-dynamics supervision that recovers actions from channel changes improves relational auroc by .065-.103 across ten settings with annotated boxes, by .081 on rh20t robot episodes with held-out tasks, and by .050-.061 across five relations using off-the-shelf detection and tracking. an inverse head on entity latents decodes actions more accurately but barely improves relational grounding; shuffled labels, two label-free objectives, and action labels on only 5% of the pairs also fail to ground the channels. given an action, predicted relational changes approach the quality of observed future relations (auroc .599 vs .621). for one-step relational goals, a supervised readout of the 16 channels ranks the correct action among the top five of 65 in 43% of cases, compared with 24% for prediction-only latents and 17% for a frequency prior.">
+        <article class="paper-card" data-title="progress probes $p^2$: lightweight runtime monitoring for vision-language-action models" data-summary="vision-language-action (vla) models can perform diverse manipulation tasks directly from visual observations and natural language instructions, but they remain prone to mistakes and unpredictable failures. deploying these policies without continuous human supervision will require robust runtime monitors that detect when the policy has gone off-course. existing monitors use external foundation models, such as vision-language models (vlms) to supervise the policy, introducing significant complexity and computational cost for monitoring at runtime. in this work, we investigate an alternate approach: \textit{can a vla's own internal activations provide the information needed to monitor its execution?} our method trains linear probes on policy activations from demonstrations to estimate progress, then flags executions that deviate from expected progress. in experiments with the open-source vla $π_{0.5}$ and across simulated and real-world manipulation tasks, this approach is competitive with or outperforms vlm-based monitors in task failure detection, as well as methods which require failure data for training. these findings suggest that simple probes of vla internals can be used to develop reliable runtime monitors, opening a path toward building policies that can act reliably and monitor their execution without external foundation models.">
             <div class="card-meta-top">
                 <span class="rank-tag">TOP #3</span>
                 <div class="score-badge">
                     <span class="score-label">Priority Index</span>
-                    <span class="score-value">90</span>
+                    <span class="score-value">135</span>
                 </div>
             </div>
             
-            <h2 class="paper-title">Inside-JEPA: From Prediction to Relational Grounding in Latent World Models</h2>
+            <h2 class="paper-title">Progress Probes $P^2$: Lightweight Runtime Monitoring for Vision-Language-Action Models</h2>
             
             <div class="author-row">
                 <span>🗓️ 2026-10-22</span>
-                <span>✍️ Hossein Resani, Javen Qinfeng Shi</span>
+                <span>✍️ Atiksh Bhardwaj, Edward W. Duan, Junwon Seo et al.</span>
             </div>
             
             <div class="badge-cluster">
-                <span class="badge">#world model</span>
+                <span class="badge">#vision-language-action</span><span class="badge">#vla</span>
             </div>
             
-            <p class="paper-summary">Joint-embedding predictive architectures (JEPAs) learn world models in latent space, enabling efficient planning but leaving their states opaque. We introduce Inside-JEPA, which places relational channels for ordered entity pairs inside the JEPA latent state and shows that an inverse-dynamics loss can ground these channels without relation labels when its head reads them, either alone or as part of the full state. On Something-Something V2, latent prediction alone performs no better than a random relation head, while inverse-dynamics supervision that recovers actions from channel changes improves relational AUROC by .065-.103 across ten settings with annotated boxes, by .081 on RH20T robot episodes with held-out tasks, and by .050-.061 across five relations using off-the-shelf detection and tracking. An inverse head on entity latents decodes actions more accurately but barely improves relational grounding; shuffled labels, two label-free objectives, and action labels on only 5% of the pairs also fail to ground the channels. Given an action, predicted relational changes approach the quality of observed future relations (AUROC .599 vs .621). For one-step relational goals, a supervised readout of the 16 channels ranks the correct action among the top five of 65 in 43% of cases, compared with 24% for prediction-only latents and 17% for a frequency prior.</p>
+            <p class="paper-summary">Vision-Language-Action (VLA) models can perform diverse manipulation tasks directly from visual observations and natural language instructions, but they remain prone to mistakes and unpredictable failures. Deploying these policies without continuous human supervision will require robust runtime monitors that detect when the policy has gone off-course. Existing monitors use external foundation models, such as vision-language models (VLMs) to supervise the policy, introducing significant complexity and computational cost for monitoring at runtime. In this work, we investigate an alternate approach: \textit{can a VLA's own internal activations provide the information needed to monitor its execution?} Our method trains linear probes on policy activations from demonstrations to estimate progress, then flags executions that deviate from expected progress. In experiments with the open-source VLA $π_{0.5}$ and across simulated and real-world manipulation tasks, this approach is competitive with or outperforms VLM-based monitors in task failure detection, as well as methods which require failure data for training. These findings suggest that simple probes of VLA internals can be used to develop reliable runtime monitors, opening a path toward building policies that can act reliably and monitor their execution without external foundation models.</p>
             
             <div class="card-action-bar">
-                <a href="http://arxiv.org/pdf/2610.31194v1" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
+                <a href="http://arxiv.org/pdf/2610.31613v1" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
                     View PDF
                 </a>
-                <a href="http://arxiv.org/abs/2610.31194v1" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
+                <a href="http://arxiv.org/abs/2610.31613v1" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
                     arXiv Page &rarr;
                 </a>
             </div>
         </article>
         
-        <article class="paper-card" data-title="in-context learning world models for robot dual-arm manipulation of soft garment with partial observations" data-summary="robust manipulation of soft objects, such as garments, is a critical skill for service and household robots to adopt, but remains challenging due to its high-dimensional state space, and material-dependent deformations. humans address this challenge by using mental world models that "imagine" the shape and material properties from partial observations, which enables them to predict how actions affect future states. as such, embedding such world models in robots allows for better generalization in manipulating a wide variety of garments in the real world. however, learned world models typically require large amounts of real world data that is strenuous to collect, and a mechanism to infer latent properties that govern dynamics. we present a soft-object world model that performs generative full-state estimation and action-conditioned dynamics prediction using a transformer backbone trained on large-scale simulated soft object interactions, with measures to mitigate the sim-to-real gap. by learning to infer latent shape and material cues through in-context learning over a variable-length partial point-cloud history, the model generalizes across robot embodiments, material parameters, garment types and shapes, and manipulation coordination modes without weight updates. the world model is then integrated with a goal-conditioned action planner for motion synthesis. we validate the approach in simulation and real world for bimanual garment folding, reporting improvements in reconstruction fidelity, prediction accuracy, and task success.">
+        <article class="paper-card" data-title="focusvla: future-intent guided dynamic view routing for vision-language-action models" data-summary="vision-language-action (vla) models have become an important paradigm for robotic manipulation by unifying visual perception, language understanding, and action generation. since reliable manipulation requires sufficient observation of objects, end-effectors, and their spatial relationships, multi-view inputs are widely used to provide complementary spatial information. however, our experiments show that existing vla models do not fully exploit such multi-view complementarity. the policy tends to persistently rely on the wrist view, lacking the ability to dynamically adjust global-local view dependency across manipulation stages, which limits stage adaptability and robustness. to address this issue, we propose focusvla, a stage-aware multi-view routing framework. focusvla predicts future interaction intent from historical actions and uses it to guide dynamic view routing during action generation. by adaptively coordinating global and local observations across different task stages, focusvla improves multi-view utilization. on robotwin 2.0, focusvla improves the average success rate over the strongest baseline $π_{0.5}$ by 10.10 pp. in real-world evaluation, focusvla improves the success rate from 71.7\% to 85.0\%, achieving a 13.3\% gain over $π_{0.5}$. moreover, the intent prediction and dynamic routing modules of focusvla can be integrated into existing vla frameworks without modifying their core architectures.">
             <div class="card-meta-top">
                 <span class="rank-tag">TOP #4</span>
                 <div class="score-badge">
                     <span class="score-label">Priority Index</span>
-                    <span class="score-value">90</span>
+                    <span class="score-value">135</span>
                 </div>
             </div>
             
-            <h2 class="paper-title">In-Context Learning World Models for Robot Dual-Arm Manipulation of Soft Garment with Partial Observations</h2>
+            <h2 class="paper-title">FocusVLA: Future-Intent Guided Dynamic View Routing for Vision-Language-Action Models</h2>
             
             <div class="author-row">
                 <span>🗓️ 2026-10-22</span>
-                <span>✍️ Hengyi Sim, Quentin Rouxel, Dennis Hong et al.</span>
+                <span>✍️ Huixin Xu, Ziya Yu, Peng Li</span>
             </div>
             
             <div class="badge-cluster">
-                <span class="badge">#world model</span>
+                <span class="badge">#vision-language-action</span><span class="badge">#vla</span>
             </div>
             
-            <p class="paper-summary">Robust manipulation of soft objects, such as garments, is a critical skill for service and household robots to adopt, but remains challenging due to its high-dimensional state space, and material-dependent deformations. Humans address this challenge by using mental world models that "imagine" the shape and material properties from partial observations, which enables them to predict how actions affect future states. As such, embedding such world models in robots allows for better generalization in manipulating a wide variety of garments in the real world. However, learned world models typically require large amounts of real world data that is strenuous to collect, and a mechanism to infer latent properties that govern dynamics. We present a Soft-Object World Model that performs generative full-state estimation and action-conditioned dynamics prediction using a transformer backbone trained on large-scale simulated soft object interactions, with measures to mitigate the sim-to-real gap. By learning to infer latent shape and material cues through in-context learning over a variable-length partial point-cloud history, the model generalizes across robot embodiments, material parameters, garment types and shapes, and manipulation coordination modes without weight updates. The world model is then integrated with a Goal-Conditioned action planner for motion synthesis. We validate the approach in simulation and real world for bimanual garment folding, reporting improvements in reconstruction fidelity, prediction accuracy, and task success.</p>
+            <p class="paper-summary">Vision-language-action (VLA) models have become an important paradigm for robotic manipulation by unifying visual perception, language understanding, and action generation. Since reliable manipulation requires sufficient observation of objects, end-effectors, and their spatial relationships, multi-view inputs are widely used to provide complementary spatial information. However, our experiments show that existing VLA models do not fully exploit such multi-view complementarity. The policy tends to persistently rely on the wrist view, lacking the ability to dynamically adjust global-local view dependency across manipulation stages, which limits stage adaptability and robustness. To address this issue, we propose FocusVLA, a stage-aware multi-view routing framework. FocusVLA predicts future interaction intent from historical actions and uses it to guide dynamic view routing during action generation. By adaptively coordinating global and local observations across different task stages, FocusVLA improves multi-view utilization. On RoboTwin 2.0, FocusVLA improves the average success rate over the strongest baseline $π_{0.5}$ by 10.10 pp. In real-world evaluation, FocusVLA improves the success rate from 71.7\% to 85.0\%, achieving a 13.3\% gain over $π_{0.5}$. Moreover, the intent prediction and dynamic routing modules of FocusVLA can be integrated into existing VLA frameworks without modifying their core architectures.</p>
             
             <div class="card-action-bar">
-                <a href="http://arxiv.org/pdf/2610.30988v1" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
+                <a href="http://arxiv.org/pdf/2610.31423v1" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
                     View PDF
                 </a>
-                <a href="http://arxiv.org/abs/2610.30988v1" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
+                <a href="http://arxiv.org/abs/2610.31423v1" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
                     arXiv Page &rarr;
                 </a>
             </div>
         </article>
         
-        <article class="paper-card" data-title="revisiting distribution matching for state-to-vision policy distillation in laparoscopic robotic manipulation" data-summary="end-to-end control policies trained via reinforcement learning (rl) have emerged as an alternative to conventional surgical robotic control approaches, with recent studies exploring state-based policies trained on privileged state observations. however, such approaches rely on precise physical states that are difficult to obtain reliably in surgical environments. vision-based rl provides an alternative by learning manipulation policies directly from rgb observations, avoiding explicit state estimation and manually engineered perception pipelines while enabling policies to acquire task-relevant visual representations. nevertheless, obtaining vision-based policies via pure rl methods for surgical manipulation remains challenging. thus, imitation learning (il) becomes another solution, yet it requires a large number of expert demonstrations, which are difficult to obtain in minimally invasive surgery. in this work, we propose a framework for state-to-vision policy distillation in laparoscopic robotic manipulation. specifically, a state-based policy with privileged observations is employed as the teacher, and a vision-based policy learns from rgb observations and robot proprioceptive information, which requires less expert demonstrations than il and introduces superior performance than rl methods. we conduct extensive experiments on various surgical manipulation tasks in the simulated environment. experimental results show that, in the context of laparoscopic robotic manipulation, training vision-based policies with general-purpose rl methods is challenging, whereas our proposed state-to-vision policy distillation leads to more consistent and stable performance across tasks.">
+        <article class="paper-card" data-title="diffdreamer: coupling world models with differentiable simulation for agile quadrotor control" data-summary="tasks such as quadrotor dynamic-gate racing require agents to anticipate external motion while maintaining precise high-frequency control. world-model-based reinforcement learning provides a natural solution by learning latent dynamics for future imagination, yet it often entangles environmental evolution and the robot's own dynamics in a single learned rollout, where model bias can affect policy optimization efficiency. we propose diffdreamer, a differentiable reinforcement learning framework that tightly couples a learned world model with differentiable simulation for actor optimization. in one optimization step, the learned world model propagates latent states that capture external dynamics and history-dependent features, while the differentiable simulator propagates the robot's explicit physical state. we further decompose the actor objective into a critic-driven pathway for non-differentiable task rewards and a simulator-driven pathway for differentiable motion rewards. experiments on aggressive tracking and dynamic-gate racing show that diffdreamer improves training convergence over the model-free, model-based, and differentiable-rl baselines, and final performance over these baselines and classical planning and control methods. additional experiments assess reward decomposition and the odometry-conditioned relative-state representation through ablations. we also provide proof-of-concept real-world flight experiments for validation.">
             <div class="card-meta-top">
                 <span class="rank-tag">TOP #5</span>
                 <div class="score-badge">
                     <span class="score-label">Priority Index</span>
-                    <span class="score-value">80</span>
+                    <span class="score-value">120</span>
                 </div>
             </div>
             
-            <h2 class="paper-title">Revisiting Distribution Matching for State-to-Vision Policy Distillation in Laparoscopic Robotic Manipulation</h2>
+            <h2 class="paper-title">DiffDreamer: Coupling World Models with Differentiable Simulation for Agile Quadrotor Control</h2>
             
             <div class="author-row">
                 <span>🗓️ 2026-10-22</span>
-                <span>✍️ Mingyu Sheng, Jianan Fan, Dongnan Liu et al.</span>
+                <span>✍️ Fanxing Li, Yuxiang Huang, Shengyang Wang et al.</span>
             </div>
             
             <div class="badge-cluster">
-                <span class="badge">#reinforcement learning</span>
+                <span class="badge">#world model</span><span class="badge">#reinforcement learning</span>
             </div>
             
-            <p class="paper-summary">End-to-end control policies trained via Reinforcement Learning (RL) have emerged as an alternative to conventional surgical robotic control approaches, with recent studies exploring state-based policies trained on privileged state observations. However, such approaches rely on precise physical states that are difficult to obtain reliably in surgical environments. Vision-based RL provides an alternative by learning manipulation policies directly from RGB observations, avoiding explicit state estimation and manually engineered perception pipelines while enabling policies to acquire task-relevant visual representations. Nevertheless, obtaining vision-based policies via pure RL methods for surgical manipulation remains challenging. Thus, imitation learning (IL) becomes another solution, yet it requires a large number of expert demonstrations, which are difficult to obtain in minimally invasive surgery. In this work, we propose a framework for state-to-vision policy distillation in laparoscopic robotic manipulation. Specifically, a state-based policy with privileged observations is employed as the teacher, and a vision-based policy learns from RGB observations and robot proprioceptive information, which requires less expert demonstrations than IL and introduces superior performance than RL methods. We conduct extensive experiments on various surgical manipulation tasks in the simulated environment. Experimental results show that, in the context of laparoscopic robotic manipulation, training vision-based policies with general-purpose RL methods is challenging, whereas our proposed state-to-vision policy distillation leads to more consistent and stable performance across tasks.</p>
+            <p class="paper-summary">Tasks such as quadrotor dynamic-gate racing require agents to anticipate external motion while maintaining precise high-frequency control. World-model-based reinforcement learning provides a natural solution by learning latent dynamics for future imagination, yet it often entangles environmental evolution and the robot's own dynamics in a single learned rollout, where model bias can affect policy optimization efficiency. We propose DiffDreamer, a differentiable reinforcement learning framework that tightly couples a learned world model with differentiable simulation for actor optimization. In one optimization step, the learned world model propagates latent states that capture external dynamics and history-dependent features, while the differentiable simulator propagates the robot's explicit physical state. We further decompose the actor objective into a critic-driven pathway for non-differentiable task rewards and a simulator-driven pathway for differentiable motion rewards. Experiments on aggressive tracking and dynamic-gate racing show that DiffDreamer improves training convergence over the model-free, model-based, and differentiable-RL baselines, and final performance over these baselines and classical planning and control methods. Additional experiments assess reward decomposition and the odometry-conditioned relative-state representation through ablations. We also provide proof-of-concept real-world flight experiments for validation.</p>
             
             <div class="card-action-bar">
-                <a href="http://arxiv.org/pdf/2610.31010v1" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
+                <a href="http://arxiv.org/pdf/2610.31617v1" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
                     View PDF
                 </a>
-                <a href="http://arxiv.org/abs/2610.31010v1" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
+                <a href="http://arxiv.org/abs/2610.31617v1" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
                     arXiv Page &rarr;
                 </a>
             </div>
         </article>
         
-        <article class="paper-card" data-title="a transparent 3-dof assistive device for upper-limb tremor and ataxia compensation: design and experimental validation" data-summary="assistive devices for patients with neurodegenerative movement disorders must combine high mechanical transparency with the ability to generate corrective interaction forces. achieving both properties simultaneously remains challenging. this paper presents the completed iassistadl platform, a 3-dof assistive device for future tremor and ataxia compensation during activities of daily living. the system employs a transparency-oriented mechanical architecture with all actuators located at the base, resulting in low moving mass, decoupled kinematics, and high mechanical transparency. to compensate for friction-induced transparency limitations along the vertical axis, a hybrid control strategy is proposed that combines open-loop force rendering in the horizontal plane with closed-loop force control in the vertical direction. the platform is experimentally evaluated through transparency measurements and static and dynamic force-rendering experiments at representative configurations. results demonstrate resistive torques below 0.1 nm in the horizontal plane, end-effector forces of up to approximately 10 n throughout the workspace, and accurate horizontal force rendering up to 4 hz. while the vertical axis remains limited by friction-induced dynamics at higher frequencies, the proposed system successfully combines high transparency with controlled force generation, establishing a promising hardware platform for future tremor and ataxia compensation.">
+        <article class="paper-card" data-title="vectile: a low-cost flexible tactile array for 3-dof force sensing" data-summary="tactile sensing provides robots with contact information difficult to obtain from vision alone. shear force is particularly important for understanding tangential contact, guiding corrective motions, and maintaining grasp stability, yet flexible and low-cost tactile arrays often measure only normal force. we introduce vectile, a low-cost, 6 mm thin, flexible tactile array capable of three-axis force sensing. vectile combines a piezoresistive layer with passive silicone nubs that convert normal and shear forces into distinguishable pressure patterns. the sensor can be fabricated in-house without specialized equipment. the complete system costs less than 35 usd for a 4x4 array. we validate the sensing mechanism through finite element analysis and hardware experiments. in controlled single-taxel tests over 1-5 n normal force and up to 1.5 n shear force, vectile achieves root-mean-square errors of 0.39 n and 0.16 n for normal and shear forces. a vectile calibrated while flat retains accuracy when curved, while a five-minute manual calibration is sufficient for practical use. two applications demonstrate its utility. first, shear readings are sensitive enough to stop a sharp scalpel from puncturing a balloon after contact. second, the sensor substantially improves diffusion policy-guided power-plug insertion. all designs and code will be released upon paper acceptance. project website: https://jiannnh.github.io/vectile/.">
             <div class="card-meta-top">
                 <span class="rank-tag">TOP #6</span>
                 <div class="score-badge">
                     <span class="score-label">Priority Index</span>
-                    <span class="score-value">70</span>
+                    <span class="score-value">115</span>
                 </div>
             </div>
             
-            <h2 class="paper-title">A Transparent 3-DoF Assistive Device for Upper-Limb Tremor and Ataxia Compensation: Design and Experimental Validation</h2>
+            <h2 class="paper-title">VecTile: A Low-Cost Flexible Tactile Array for 3-DoF Force Sensing</h2>
             
             <div class="author-row">
                 <span>🗓️ 2026-10-22</span>
-                <span>✍️ Thomas Dobosz, Veronika Hofmann, Ahmed Barhoma et al.</span>
+                <span>✍️ Jian Hou, Xin Zhou, Adam J. Spiers</span>
             </div>
             
             <div class="badge-cluster">
-                <span class="badge">#actuator</span>
+                <span class="badge">#tactile sensing</span><span class="badge">#diffusion policy</span>
             </div>
             
-            <p class="paper-summary">Assistive devices for patients with neurodegenerative movement disorders must combine high mechanical transparency with the ability to generate corrective interaction forces. Achieving both properties simultaneously remains challenging. This paper presents the completed iAssistADL platform, a 3-DoF assistive device for future tremor and ataxia compensation during activities of daily living. The system employs a transparency-oriented mechanical architecture with all actuators located at the base, resulting in low moving mass, decoupled kinematics, and high mechanical transparency. To compensate for friction-induced transparency limitations along the vertical axis, a hybrid control strategy is proposed that combines open-loop force rendering in the horizontal plane with closed-loop force control in the vertical direction. The platform is experimentally evaluated through transparency measurements and static and dynamic force-rendering experiments at representative configurations. Results demonstrate resistive torques below 0.1 Nm in the horizontal plane, end-effector forces of up to approximately 10 N throughout the workspace, and accurate horizontal force rendering up to 4 Hz. While the vertical axis remains limited by friction-induced dynamics at higher frequencies, the proposed system successfully combines high transparency with controlled force generation, establishing a promising hardware platform for future tremor and ataxia compensation.</p>
+            <p class="paper-summary">Tactile sensing provides robots with contact information difficult to obtain from vision alone. Shear force is particularly important for understanding tangential contact, guiding corrective motions, and maintaining grasp stability, yet flexible and low-cost tactile arrays often measure only normal force. We introduce VecTile, a low-cost, 6 mm thin, flexible tactile array capable of three-axis force sensing. VecTile combines a piezoresistive layer with passive silicone nubs that convert normal and shear forces into distinguishable pressure patterns. The sensor can be fabricated in-house without specialized equipment. The complete system costs less than 35 USD for a 4x4 array. We validate the sensing mechanism through finite element analysis and hardware experiments. In controlled single-taxel tests over 1-5 N normal force and up to 1.5 N shear force, VecTile achieves root-mean-square errors of 0.39 N and 0.16 N for normal and shear forces. A VecTile calibrated while flat retains accuracy when curved, while a five-minute manual calibration is sufficient for practical use. Two applications demonstrate its utility. First, shear readings are sensitive enough to stop a sharp scalpel from puncturing a balloon after contact. Second, the sensor substantially improves Diffusion Policy-guided power-plug insertion. All designs and code will be released upon paper acceptance. Project website: https://jiannnh.github.io/VecTile/.</p>
             
             <div class="card-action-bar">
-                <a href="http://arxiv.org/pdf/2610.30955v1" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
+                <a href="http://arxiv.org/pdf/2610.31472v1" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
                     View PDF
                 </a>
-                <a href="http://arxiv.org/abs/2610.30955v1" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
+                <a href="http://arxiv.org/abs/2610.31472v1" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
                     arXiv Page &rarr;
                 </a>
             </div>
         </article>
         
-        <article class="paper-card" data-title="calibration-free imu-based relative orientation estimation under dynamic human motion" data-summary="recent magnetometer-free inertial measurement unit (imu) methods can reduce drift in joint motion estimation using rigid-body constraints, but they typically require pre-calibrated sensor locations, assumptions of specific joint models (e.g., hinge joints) or limited motion types, or an external reference for global orientation. furthermore, challenges related to high-frequency impacts (e.g. at foot strikes during gait) and numerical differentiation of noisy measurements have not been explicitly addressed. we propose an extended kalman filter that estimates relative imu orientation and sensor location simultaneously, requiring neither offline sensor location calibration nor a global orientation anchor. a systematic simulation study shows that the quality of the relative orientation and the sensor location estimates depends on different motion-intensity sources: the joint center acceleration and the relative angular velocity, respectively. a low-pass filter (lpf) is used to mitigate real-signal outliers before applying the rigid-body constraint. when applied to the opensense dataset with real imu measurements across four subjects with three lower-body joint types during walking and complex tasks including various motion types, the proposed method achieves an overall relative orientation error of 2.61°, compared with 10.40° for a baseline using offline-estimated sensor locations and 7.43° for a baseline using marker-derived sensor locations. these results show that the proposed calibration-free estimation framework handles real imu data effectively and achieves accurate relative orientation without offline sensor location calibration.">
+        <article class="paper-card" data-title="fastharness: experience-driven review scheduling for vision-language-action policies" data-summary="agentic robot systems combine language-model reasoning with robot policies to monitor execution and recover from failures. however, reviewing every action chunk incurs substantial overhead, even in familiar situations. we introduce fastharness, an experience-driven execution harness that adaptively schedules gpt-6 astra supervision of a π0.5 policy. a fast path uses stage memory and reviewed outcomes to reduce review frequency as experience accumulates, while a complementary recovery path focuses supervision on correcting errors. once recovery is verified, routine execution resumes, with failure experience retained to guide future interventions. the policy remains frozen and generates fresh actions from current observations. across four simulated manipulation tasks, reviewer token use decreases by an average of 57.2% per task from the first evaluated episode to the mean of the final five episodes. mean episode time decreases from 85.5 to 52.0 minutes over the same interval. on the same tasks, mean success increases from 80% for gpt-as-policy (π0.5 + gpt-6 astra) to 97.19% with fastharness. these results highlight adaptive supervision as a practical route to more efficient agentic robotics without additional model training.">
             <div class="card-meta-top">
                 <span class="rank-tag">TOP #7</span>
                 <div class="score-badge">
                     <span class="score-label">Priority Index</span>
-                    <span class="score-value">50</span>
+                    <span class="score-value">95</span>
                 </div>
             </div>
             
-            <h2 class="paper-title">Calibration-free IMU-based Relative Orientation Estimation under Dynamic Human Motion</h2>
+            <h2 class="paper-title">FastHarness: Experience-Driven Review Scheduling for Vision-Language-Action Policies</h2>
             
             <div class="author-row">
                 <span>🗓️ 2026-10-22</span>
-                <span>✍️ Ruiyuan Li, Hassan Osman, Ajay Seth et al.</span>
+                <span>✍️ Tao Lin, Yuxin Du, Haoxiao Wang et al.</span>
             </div>
             
             <div class="badge-cluster">
-                <span class="badge badge-muted">#frontier</span>
+                <span class="badge">#vision-language-action</span>
             </div>
             
-            <p class="paper-summary">Recent magnetometer-free inertial measurement unit (IMU) methods can reduce drift in joint motion estimation using rigid-body constraints, but they typically require pre-calibrated sensor locations, assumptions of specific joint models (e.g., hinge joints) or limited motion types, or an external reference for global orientation. Furthermore, challenges related to high-frequency impacts (e.g. at foot strikes during gait) and numerical differentiation of noisy measurements have not been explicitly addressed. We propose an extended Kalman filter that estimates relative IMU orientation and sensor location simultaneously, requiring neither offline sensor location calibration nor a global orientation anchor. A systematic simulation study shows that the quality of the relative orientation and the sensor location estimates depends on different motion-intensity sources: the joint center acceleration and the relative angular velocity, respectively. A low-pass filter (LPF) is used to mitigate real-signal outliers before applying the rigid-body constraint. When applied to the OpenSense dataset with real IMU measurements across four subjects with three lower-body joint types during walking and complex tasks including various motion types, the proposed method achieves an overall relative orientation error of 2.61°, compared with 10.40° for a baseline using offline-estimated sensor locations and 7.43° for a baseline using marker-derived sensor locations. These results show that the proposed calibration-free estimation framework handles real IMU data effectively and achieves accurate relative orientation without offline sensor location calibration.</p>
+            <p class="paper-summary">Agentic robot systems combine language-model reasoning with robot policies to monitor execution and recover from failures. However, reviewing every action chunk incurs substantial overhead, even in familiar situations. We introduce FastHarness, an experience-driven execution harness that adaptively schedules GPT-6 Astra supervision of a π0.5 policy. A fast path uses stage memory and reviewed outcomes to reduce review frequency as experience accumulates, while a complementary recovery path focuses supervision on correcting errors. Once recovery is verified, routine execution resumes, with failure experience retained to guide future interventions. The policy remains frozen and generates fresh actions from current observations. Across four simulated manipulation tasks, reviewer token use decreases by an average of 57.2% per task from the first evaluated episode to the mean of the final five episodes. Mean episode time decreases from 85.5 to 52.0 minutes over the same interval. On the same tasks, mean success increases from 80% for GPT-as-Policy (π0.5 + GPT-6 Astra) to 97.19% with FastHarness. These results highlight adaptive supervision as a practical route to more efficient agentic robotics without additional model training.</p>
             
             <div class="card-action-bar">
-                <a href="http://arxiv.org/pdf/2610.31156v1" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
+                <a href="http://arxiv.org/pdf/2610.31427v1" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
                     View PDF
                 </a>
-                <a href="http://arxiv.org/abs/2610.31156v1" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
+                <a href="http://arxiv.org/abs/2610.31427v1" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
                     arXiv Page &rarr;
                 </a>
             </div>
         </article>
         
-        <article class="paper-card" data-title="navigating human-robot interaction challenges in private and residential aged care homes" data-summary="this chapter explores how robotic systems and ambient intelligence can enhance care for older adults in residential aged care (rac) homes and private homes. although these settings differ, we frame both as extreme and challenging environments for human-robot interaction (hri), characterised by cluttered and dynamic layouts, diverse resident needs, and limited on-site technical support. we review embodied and non-embodied systems that assist with daily living, safety monitoring, and social engagement, highlighting hybrid deployments where robots complement fixed and wearable sensors. to ensure these technologies are usable and effective, design considerations consider the cognitive, physical, and social needs of older adults. interaction design prioritises accessibility for older adults with low digital literacy, using robust but simple voice interfaces, small sets of non-verbal cues, accessible screen-based companions, and safe object handovers. privacy, trust, and acceptability are addressed via practical strategies such as on-device inference, data minimisation, visible consent controls, and transparent data handling aligned with emerging artificial intelligence (ai) and privacy regulation. evaluation emphasises real-world metrics including false alarms per day, time to recover from faults, staff workload, and long-term system reliability. we close by outlining open research challenges and future directions for scalable, regulation-ready deployments that support aging with dignity, safety, and independence.">
+        <article class="paper-card" data-title="echo: coupled action and task status signal denoising for vision language action models" data-summary="recognizing task completion and failure enables robots to stop upon success and initiate recovery or replanning after failure. existing methods augment vision language action (vla) policies with task status signal prediction to support these execution decisions. however, learning and integrating these signals can require fine-grained supervision, external monitoring models, or complex architectural designs. moreover, the potential of task status signals to directly guide action generation remains underexplored. we present echo, a framework that combines task status signal learning without frame-level progress annotations with a compact design for status prediction and action generation within a single vla. specifically, echo represents task status with stop and failure signals, added as two dimensions of each action chunk and denoised together with robot actions. their combination distinguishes ongoing execution, successful completion, and failure. to learn these signals without fine-grained progress annotations, echo constructs successful, failed, and recovery trajectories with complementary supervision properties. to enable status signal-guided action generation, echo controls interactions between the signals and actions and denoises the signals faster than the actions. these allow later action denoising steps to condition on cleaner status estimates while preserving accurate signal prediction. extensive real-world manipulation experiments show that echo accurately predicts task status and consistently improves policy performance.">
             <div class="card-meta-top">
                 <span class="rank-tag">TOP #8</span>
                 <div class="score-badge">
                     <span class="score-label">Priority Index</span>
-                    <span class="score-value">50</span>
+                    <span class="score-value">90</span>
                 </div>
             </div>
             
-            <h2 class="paper-title">Navigating human-robot interaction challenges in private and residential aged care homes</h2>
+            <h2 class="paper-title">Echo: Coupled Action and Task Status Signal Denoising for Vision Language Action Models</h2>
             
             <div class="author-row">
                 <span>🗓️ 2026-10-22</span>
-                <span>✍️ David Ahmedt-Aristizabal, Mohammad Ali Armin, Akila Pemasiri et al.</span>
+                <span>✍️ Yufeng Liu, Bohao Fan, Juntu Zhao et al.</span>
             </div>
             
             <div class="badge-cluster">
-                <span class="badge badge-muted">#frontier</span>
+                <span class="badge">#vla</span>
             </div>
             
-            <p class="paper-summary">This chapter explores how robotic systems and ambient intelligence can enhance care for older adults in residential aged care (RAC) homes and private homes. Although these settings differ, we frame both as extreme and challenging environments for human-robot interaction (HRI), characterised by cluttered and dynamic layouts, diverse resident needs, and limited on-site technical support. We review embodied and non-embodied systems that assist with daily living, safety monitoring, and social engagement, highlighting hybrid deployments where robots complement fixed and wearable sensors. To ensure these technologies are usable and effective, design considerations consider the cognitive, physical, and social needs of older adults. Interaction design prioritises accessibility for older adults with low digital literacy, using robust but simple voice interfaces, small sets of non-verbal cues, accessible screen-based companions, and safe object handovers. Privacy, trust, and acceptability are addressed via practical strategies such as on-device inference, data minimisation, visible consent controls, and transparent data handling aligned with emerging artificial intelligence (AI) and privacy regulation. Evaluation emphasises real-world metrics including false alarms per day, time to recover from faults, staff workload, and long-term system reliability. We close by outlining open research challenges and future directions for scalable, regulation-ready deployments that support aging with dignity, safety, and independence.</p>
+            <p class="paper-summary">Recognizing task completion and failure enables robots to stop upon success and initiate recovery or replanning after failure. Existing methods augment Vision Language Action (VLA) policies with task status signal prediction to support these execution decisions. However, learning and integrating these signals can require fine-grained supervision, external monitoring models, or complex architectural designs. Moreover, the potential of task status signals to directly guide action generation remains underexplored. We present Echo, a framework that combines task status signal learning without frame-level progress annotations with a compact design for status prediction and action generation within a single VLA. Specifically, Echo represents task status with stop and failure signals, added as two dimensions of each action chunk and denoised together with robot actions. Their combination distinguishes ongoing execution, successful completion, and failure. To learn these signals without fine-grained progress annotations, Echo constructs successful, failed, and recovery trajectories with complementary supervision properties. To enable status signal-guided action generation, Echo controls interactions between the signals and actions and denoises the signals faster than the actions. These allow later action denoising steps to condition on cleaner status estimates while preserving accurate signal prediction. Extensive real-world manipulation experiments show that Echo accurately predicts task status and consistently improves policy performance.</p>
             
             <div class="card-action-bar">
-                <a href="http://arxiv.org/pdf/2610.31149v1" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
+                <a href="http://arxiv.org/pdf/2610.31569v1" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
                     View PDF
                 </a>
-                <a href="http://arxiv.org/abs/2610.31149v1" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
+                <a href="http://arxiv.org/abs/2610.31569v1" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
                     arXiv Page &rarr;
                 </a>
             </div>
