@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Embodied AI & Robotics Intelligence Digest — October 25, 2026</title>
+    <title>Embodied AI & Robotics Intelligence Digest — October 26, 2026</title>
     <style>
         :root {
             --bg-base: #080c14;
@@ -242,7 +242,7 @@
         <header>
             <span class="pill-brand">Autonomous Research Intelligence</span>
             <h1>Embodied AI & Physical Frontier Briefing</h1>
-            <p class="subtitle">Compiled on October 25, 2026 • Ranked top 8 strategic breakthroughs out of incoming preprints.</p>
+            <p class="subtitle">Compiled on October 26, 2026 • Ranked top 8 strategic breakthroughs out of incoming preprints.</p>
             
             <div class="controls">
                 <input type="text" id="filterInput" class="search-box" placeholder="Filter papers by keywords (e.g. humanoid, tactile, diffusion)...">
@@ -251,39 +251,39 @@
 
         <main id="paperList">
             
-        <article class="paper-card" data-title="humanoid mobility via attention-based contacts" data-summary="humanoid mobility over complex terrain requires accurate foot placement and coordinated whole-body motion capable of robust adaptation. reinforcement learning (rl) policies trained without motion references generalize well across terrains, yet eliciting effective whole-body coordination through reward design and exploration alone remains challenging. in contrast, reference-based methods yield natural motions but struggle to adapt beyond the predefined trajectories in their training data. we introduce a learning framework that bridges these two approaches by using motion data strictly as a training prior. an explicit, self-supervised, attention-based contact planner predicts future body-environment contacts, while a contact-conditioned tracker translates these plans into coordinated whole-body motion. together, they establish contact as an interface between sensory observations and control actions. this abstraction allows the policy to internalize the contact-aware structure of locomotion rather than directly replicating kinematics. consequently, a single policy can exploit data-driven motion priors for natural whole-body coordination while retaining the flexibility to discover environment-dependent behaviors through reinforcement learning. building on the learned contact planner and tracker, a subsequent fine-tuning stage bootstraps their acquired capabilities to explore environment variations beyond those covered by the original motion data. operating entirely from onboard observations without any reference inputs at deployment, this framework enables versatile humanoid mobility in challenging environments.">
+        <article class="paper-card" data-title="from tabletop to walking bot: deploying a vla model on a legged manipulator robot" data-summary="vision-language-action (vla) models are typically pretrained on broad, diverse datasets and subsequently fine-tuned on a comparatively small dataset tailored to a specific target robot. such adaptation recipe is now widely established, achieving its most mature results on fixed-base arms due to their static base dynamics and consistent reference frame. mounting the same arm on a quadruped extends the workspace to the entire floor, but fundamentally changes the embodiment: rather than controlling the arm in isolation, the policy must jointly coordinate base navigation, body posture, and end-effector motion. in this work, we study the practical demands of this embodiment change across data collection, model adaptation, and inference design to achieve closed-loop loco-manipulation on a unitree go2 with an agilex piper arm. we report the choices that made this real-robot deployment feasible, namely model variant, action horizon, and demonstration conventions, together with a study tailored to a pick-and-place task, separating data coverage from model capacity. we show that expanding demonstration coverage reduces held-out end-effector error by 30%, and incorporating secondary skills (such as pushing rather than grasping) introduces new behavioral modes without degrading baseline performance. finally, closed-loop real-world experiments show how dataset composition shapes success and failure, validating the pipeline for more complex loco-manipulation.">
             <div class="card-meta-top">
                 <span class="rank-tag">TOP #1</span>
                 <div class="score-badge">
                     <span class="score-label">Priority Index</span>
-                    <span class="score-value">150</span>
+                    <span class="score-value">170</span>
                 </div>
             </div>
             
-            <h2 class="paper-title">Humanoid Mobility via Attention-based Contacts</h2>
+            <h2 class="paper-title">From Tabletop to Walking Bot: Deploying a VLA Model on a Legged Manipulator Robot</h2>
             
             <div class="author-row">
-                <span>🗓️ 2026-10-22</span>
-                <span>✍️ Junzhe He, Kehan Wen, Chong Zhang et al.</span>
+                <span>🗓️ 2026-10-23</span>
+                <span>✍️ Giovanni Minelli, Antonio Langella, Giovanni B. Dessy et al.</span>
             </div>
             
             <div class="badge-cluster">
-                <span class="badge">#humanoid</span><span class="badge">#reinforcement learning</span><span class="badge">#locomotion</span>
+                <span class="badge">#quadruped</span><span class="badge">#vision-language-action</span><span class="badge">#vla</span>
             </div>
             
-            <p class="paper-summary">Humanoid mobility over complex terrain requires accurate foot placement and coordinated whole-body motion capable of robust adaptation. Reinforcement learning (RL) policies trained without motion references generalize well across terrains, yet eliciting effective whole-body coordination through reward design and exploration alone remains challenging. In contrast, reference-based methods yield natural motions but struggle to adapt beyond the predefined trajectories in their training data. We introduce a learning framework that bridges these two approaches by using motion data strictly as a training prior. An explicit, self-supervised, attention-based contact planner predicts future body-environment contacts, while a contact-conditioned tracker translates these plans into coordinated whole-body motion. Together, they establish contact as an interface between sensory observations and control actions. This abstraction allows the policy to internalize the contact-aware structure of locomotion rather than directly replicating kinematics. Consequently, a single policy can exploit data-driven motion priors for natural whole-body coordination while retaining the flexibility to discover environment-dependent behaviors through reinforcement learning. Building on the learned contact planner and tracker, a subsequent fine-tuning stage bootstraps their acquired capabilities to explore environment variations beyond those covered by the original motion data. Operating entirely from onboard observations without any reference inputs at deployment, this framework enables versatile humanoid mobility in challenging environments.</p>
+            <p class="paper-summary">Vision-language-action (VLA) models are typically pretrained on broad, diverse datasets and subsequently fine-tuned on a comparatively small dataset tailored to a specific target robot. Such adaptation recipe is now widely established, achieving its most mature results on fixed-base arms due to their static base dynamics and consistent reference frame. Mounting the same arm on a quadruped extends the workspace to the entire floor, but fundamentally changes the embodiment: rather than controlling the arm in isolation, the policy must jointly coordinate base navigation, body posture, and end-effector motion. In this work, we study the practical demands of this embodiment change across data collection, model adaptation, and inference design to achieve closed-loop loco-manipulation on a Unitree Go2 with an AgileX Piper arm. We report the choices that made this real-robot deployment feasible, namely model variant, action horizon, and demonstration conventions, together with a study tailored to a pick-and-place task, separating data coverage from model capacity. We show that expanding demonstration coverage reduces held-out end-effector error by 30%, and incorporating secondary skills (such as pushing rather than grasping) introduces new behavioral modes without degrading baseline performance. Finally, closed-loop real-world experiments show how dataset composition shapes success and failure, validating the pipeline for more complex loco-manipulation.</p>
             
             <div class="card-action-bar">
-                <a href="http://arxiv.org/pdf/2610.31608v1" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
+                <a href="http://arxiv.org/pdf/2610.32271v1" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
                     View PDF
                 </a>
-                <a href="http://arxiv.org/abs/2610.31608v1" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
+                <a href="http://arxiv.org/abs/2610.32271v1" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
                     arXiv Page &rarr;
                 </a>
             </div>
         </article>
         
-        <article class="paper-card" data-title="sensorimotor alignment: a platonic proxy for embodied policy success" data-summary="robotic foundation models are typically evaluated through costly closed-loop rollouts, which motivates cheap offline proxies for model capability. the platonic representation hypothesis (prh) suggests that as representations improve, different modalities such as vision and language converge toward a shared statistical model of reality. we ask whether motion trajectories form another such modality: as embodied models become more capable, should their sensory representations converge toward the structure of physical motion? to examine this, we propose sensorimotor alignment ($s^2$), a training-free offline metric that measures how well a model's sensory representation aligns with the geometry of physical motion. we find that $s^2$ correlates positively with downstream robot task success across embodied model families, making it a low-cost offline proxy for prioritizing models before closed-loop evaluation. $s^2$ can also identify promising vision-language model (vlm) backbones even before costly fine-tuning into vision-language-action models (vlas). beyond this correlation, $s^2$ offers representation-level explanations for phenomena observed in vlas and world action models (wams). with $s^2$, we extend prh to embodied models and make sensorimotor alignment empirically measurable, offering insight into why an embodied model succeeds beyond its closed-loop success rate.">
+        <article class="paper-card" data-title="mast-vla: skill-conditioned adaptation with trajectory-affordance priors for multi-skill robot manipulation" data-summary="generalist robot manipulation requires a single vision-language-action (vla) policy to execute diverse skills across scenes and instructions. however, current multi-skill vla policies often leave two aspects of an instruction insufficiently modeled: which primitive skill to execute and where/how to contact and move objects. we propose mast-vla (multi-skill adaptation with skill-conditioned experts and trajectory-affordance priors), a dual-conditioning framework for robot manipulation. mast-vla introduces skill-conditioned lora mixture-of-experts (lora-moe) adapters in the llm backbone, where skill-query tokens and routing biases guide low-rank expert specialization, and converts a predicted affordance heatmap into a patch-level trajectory-affordance spatial prior for the action head. on the calvin abc$\rightarrow$d long-horizon multi-skill cross-scene generalization setting, mast-vla achieves state-of-the-art performance, reaching an avg. len of 4.65 over five-subtask evaluation sequences. real-robot multi-skill sequence experiments further validate its deployability under real perception and control noise.">
             <div class="card-meta-top">
                 <span class="rank-tag">TOP #2</span>
                 <div class="score-badge">
@@ -292,30 +292,30 @@
                 </div>
             </div>
             
-            <h2 class="paper-title">Sensorimotor Alignment: A Platonic Proxy for Embodied Policy Success</h2>
+            <h2 class="paper-title">MAST-VLA: Skill-Conditioned Adaptation with Trajectory-Affordance Priors for Multi-Skill Robot Manipulation</h2>
             
             <div class="author-row">
-                <span>🗓️ 2026-10-22</span>
-                <span>✍️ Yunfei Xie, Howard H. Qian, Shiyi Lan et al.</span>
+                <span>🗓️ 2026-10-23</span>
+                <span>✍️ Jiachi Yang, Zhiyi Xu, Hongquan Zhang et al.</span>
             </div>
             
             <div class="badge-cluster">
                 <span class="badge">#vision-language-action</span><span class="badge">#vla</span>
             </div>
             
-            <p class="paper-summary">Robotic foundation models are typically evaluated through costly closed-loop rollouts, which motivates cheap offline proxies for model capability. The Platonic Representation Hypothesis (PRH) suggests that as representations improve, different modalities such as vision and language converge toward a shared statistical model of reality. We ask whether motion trajectories form another such modality: as embodied models become more capable, should their sensory representations converge toward the structure of physical motion? To examine this, we propose Sensorimotor Alignment ($S^2$), a training-free offline metric that measures how well a model's sensory representation aligns with the geometry of physical motion. We find that $S^2$ correlates positively with downstream robot task success across embodied model families, making it a low-cost offline proxy for prioritizing models before closed-loop evaluation. $S^2$ can also identify promising vision-language model (VLM) backbones even before costly fine-tuning into vision-language-action models (VLAs). Beyond this correlation, $S^2$ offers representation-level explanations for phenomena observed in VLAs and world action models (WAMs). With $S^2$, we extend PRH to embodied models and make sensorimotor alignment empirically measurable, offering insight into why an embodied model succeeds beyond its closed-loop success rate.</p>
+            <p class="paper-summary">Generalist robot manipulation requires a single vision-language-action (VLA) policy to execute diverse skills across scenes and instructions. However, current multi-skill VLA policies often leave two aspects of an instruction insufficiently modeled: which primitive skill to execute and where/how to contact and move objects. We propose MAST-VLA (Multi-skill Adaptation with Skill-conditioned experts and Trajectory-affordance priors), a dual-conditioning framework for robot manipulation. MAST-VLA introduces skill-conditioned LoRA Mixture-of-Experts (LoRA-MoE) adapters in the LLM backbone, where skill-query tokens and routing biases guide low-rank expert specialization, and converts a predicted affordance heatmap into a patch-level trajectory-affordance spatial prior for the action head. On the CALVIN ABC$\rightarrow$D long-horizon multi-skill cross-scene generalization setting, MAST-VLA achieves state-of-the-art performance, reaching an Avg. Len of 4.65 over five-subtask evaluation sequences. Real-robot multi-skill sequence experiments further validate its deployability under real perception and control noise.</p>
             
             <div class="card-action-bar">
-                <a href="http://arxiv.org/pdf/2610.31670v1" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
+                <a href="http://arxiv.org/pdf/2610.32312v1" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
                     View PDF
                 </a>
-                <a href="http://arxiv.org/abs/2610.31670v1" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
+                <a href="http://arxiv.org/abs/2610.32312v1" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
                     arXiv Page &rarr;
                 </a>
             </div>
         </article>
         
-        <article class="paper-card" data-title="progress probes $p^2$: lightweight runtime monitoring for vision-language-action models" data-summary="vision-language-action (vla) models can perform diverse manipulation tasks directly from visual observations and natural language instructions, but they remain prone to mistakes and unpredictable failures. deploying these policies without continuous human supervision will require robust runtime monitors that detect when the policy has gone off-course. existing monitors use external foundation models, such as vision-language models (vlms) to supervise the policy, introducing significant complexity and computational cost for monitoring at runtime. in this work, we investigate an alternate approach: \textit{can a vla's own internal activations provide the information needed to monitor its execution?} our method trains linear probes on policy activations from demonstrations to estimate progress, then flags executions that deviate from expected progress. in experiments with the open-source vla $π_{0.5}$ and across simulated and real-world manipulation tasks, this approach is competitive with or outperforms vlm-based monitors in task failure detection, as well as methods which require failure data for training. these findings suggest that simple probes of vla internals can be used to develop reliable runtime monitors, opening a path toward building policies that can act reliably and monitor their execution without external foundation models.">
+        <article class="paper-card" data-title="do vlas know they will fail? interpretable success and failure patterns in physical ai systems" data-summary="vision-language-action (vla) models have emerged as powerful general-purpose robot policies, but their successes and failures remain difficult to diagnose and understand. in this work, we show that sparse autoencoder (sae) representations of openvla activations contain outcome-predictive information and can be used to predict task failure before the robot reaches an unrecoverable state. moreover, to provide insights into what common behaviors may contribute to these outcomes, we identify individual sae features whose strong activations are associated with specific stages of success or failure, and uncover recurring behavioral patterns by localizing temporal intervals where these features exhibit significant activation changes. we further develop a vlm-based interpretation pipeline to generate behavioral descriptions of these patterns and validate their correspondence to feature activations on held-out intervals.">
             <div class="card-meta-top">
                 <span class="rank-tag">TOP #3</span>
                 <div class="score-badge">
@@ -324,184 +324,184 @@
                 </div>
             </div>
             
-            <h2 class="paper-title">Progress Probes $P^2$: Lightweight Runtime Monitoring for Vision-Language-Action Models</h2>
+            <h2 class="paper-title">Do VLAs Know They Will Fail? Interpretable Success and Failure Patterns in Physical AI Systems</h2>
             
             <div class="author-row">
-                <span>🗓️ 2026-10-22</span>
-                <span>✍️ Atiksh Bhardwaj, Edward W. Duan, Junwon Seo et al.</span>
+                <span>🗓️ 2026-10-23</span>
+                <span>✍️ Christian A. Rogers, Qian Lin, Daniel S. Brown</span>
             </div>
             
             <div class="badge-cluster">
                 <span class="badge">#vision-language-action</span><span class="badge">#vla</span>
             </div>
             
-            <p class="paper-summary">Vision-Language-Action (VLA) models can perform diverse manipulation tasks directly from visual observations and natural language instructions, but they remain prone to mistakes and unpredictable failures. Deploying these policies without continuous human supervision will require robust runtime monitors that detect when the policy has gone off-course. Existing monitors use external foundation models, such as vision-language models (VLMs) to supervise the policy, introducing significant complexity and computational cost for monitoring at runtime. In this work, we investigate an alternate approach: \textit{can a VLA's own internal activations provide the information needed to monitor its execution?} Our method trains linear probes on policy activations from demonstrations to estimate progress, then flags executions that deviate from expected progress. In experiments with the open-source VLA $π_{0.5}$ and across simulated and real-world manipulation tasks, this approach is competitive with or outperforms VLM-based monitors in task failure detection, as well as methods which require failure data for training. These findings suggest that simple probes of VLA internals can be used to develop reliable runtime monitors, opening a path toward building policies that can act reliably and monitor their execution without external foundation models.</p>
+            <p class="paper-summary">Vision-Language-Action (VLA) models have emerged as powerful general-purpose robot policies, but their successes and failures remain difficult to diagnose and understand. In this work, we show that sparse autoencoder (SAE) representations of OpenVLA activations contain outcome-predictive information and can be used to predict task failure before the robot reaches an unrecoverable state. Moreover, to provide insights into what common behaviors may contribute to these outcomes, we identify individual SAE features whose strong activations are associated with specific stages of success or failure, and uncover recurring behavioral patterns by localizing temporal intervals where these features exhibit significant activation changes. We further develop a VLM-based interpretation pipeline to generate behavioral descriptions of these patterns and validate their correspondence to feature activations on held-out intervals.</p>
             
             <div class="card-action-bar">
-                <a href="http://arxiv.org/pdf/2610.31613v1" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
+                <a href="http://arxiv.org/pdf/2610.32208v1" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
                     View PDF
                 </a>
-                <a href="http://arxiv.org/abs/2610.31613v1" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
+                <a href="http://arxiv.org/abs/2610.32208v1" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
                     arXiv Page &rarr;
                 </a>
             </div>
         </article>
         
-        <article class="paper-card" data-title="focusvla: future-intent guided dynamic view routing for vision-language-action models" data-summary="vision-language-action (vla) models have become an important paradigm for robotic manipulation by unifying visual perception, language understanding, and action generation. since reliable manipulation requires sufficient observation of objects, end-effectors, and their spatial relationships, multi-view inputs are widely used to provide complementary spatial information. however, our experiments show that existing vla models do not fully exploit such multi-view complementarity. the policy tends to persistently rely on the wrist view, lacking the ability to dynamically adjust global-local view dependency across manipulation stages, which limits stage adaptability and robustness. to address this issue, we propose focusvla, a stage-aware multi-view routing framework. focusvla predicts future interaction intent from historical actions and uses it to guide dynamic view routing during action generation. by adaptively coordinating global and local observations across different task stages, focusvla improves multi-view utilization. on robotwin 2.0, focusvla improves the average success rate over the strongest baseline $π_{0.5}$ by 10.10 pp. in real-world evaluation, focusvla improves the success rate from 71.7\% to 85.0\%, achieving a 13.3\% gain over $π_{0.5}$. moreover, the intent prediction and dynamic routing modules of focusvla can be integrated into existing vla frameworks without modifying their core architectures.">
+        <article class="paper-card" data-title="delay randomization widens the delay margin of learned humanoid motion trackers" data-summary="learned humanoid controllers are usually trained in one simulator and then checked in a second one before they go near hardware. we ask what that check says about command delay. we train motion-tracking policies for a 24-joint humanoid on five motions taken from monocular video and test them in an independent cpu mujoco harness, which we first verify against the training model. every policy completes its motion in at least 26 of 30 episodes under the training randomization. with 40 ms of constant command delay, however, survival drops to 15% on average (0% - 45%), and the delay margin is only 20 - 30 ms. randomizing the delay during training (0 - 50 ms) lifts survival at 40 ms to 95% on average (75% - 100%) and moves the margin to 50 - 70 ms. a control arm trained for the same number of extra iterations without delay does not improve, so the gain comes from the randomization itself. this holds for all five motions with three training seeds each, and a policy trained in physx behaves the same way. the price is slightly looser tracking (0.02 - 0.06 rad on four motions) and, for the most dynamic motion, less robustness to other perturbations. we also show that the first sim-to-sim gap we saw came from the harness, a missing floor and a wrong timestep, and not from the physics engines. the 0 - 20 ms delay ranges common in locomotion training lie inside the margin an unrandomized tracker already has. the benefit comes from randomizing beyond it, so the range should be set from the robot's measured latency, and delay margin belongs next to other sim-to-sim metrics.">
             <div class="card-meta-top">
                 <span class="rank-tag">TOP #4</span>
-                <div class="score-badge">
-                    <span class="score-label">Priority Index</span>
-                    <span class="score-value">135</span>
-                </div>
-            </div>
-            
-            <h2 class="paper-title">FocusVLA: Future-Intent Guided Dynamic View Routing for Vision-Language-Action Models</h2>
-            
-            <div class="author-row">
-                <span>🗓️ 2026-10-22</span>
-                <span>✍️ Huixin Xu, Ziya Yu, Peng Li</span>
-            </div>
-            
-            <div class="badge-cluster">
-                <span class="badge">#vision-language-action</span><span class="badge">#vla</span>
-            </div>
-            
-            <p class="paper-summary">Vision-language-action (VLA) models have become an important paradigm for robotic manipulation by unifying visual perception, language understanding, and action generation. Since reliable manipulation requires sufficient observation of objects, end-effectors, and their spatial relationships, multi-view inputs are widely used to provide complementary spatial information. However, our experiments show that existing VLA models do not fully exploit such multi-view complementarity. The policy tends to persistently rely on the wrist view, lacking the ability to dynamically adjust global-local view dependency across manipulation stages, which limits stage adaptability and robustness. To address this issue, we propose FocusVLA, a stage-aware multi-view routing framework. FocusVLA predicts future interaction intent from historical actions and uses it to guide dynamic view routing during action generation. By adaptively coordinating global and local observations across different task stages, FocusVLA improves multi-view utilization. On RoboTwin 2.0, FocusVLA improves the average success rate over the strongest baseline $π_{0.5}$ by 10.10 pp. In real-world evaluation, FocusVLA improves the success rate from 71.7\% to 85.0\%, achieving a 13.3\% gain over $π_{0.5}$. Moreover, the intent prediction and dynamic routing modules of FocusVLA can be integrated into existing VLA frameworks without modifying their core architectures.</p>
-            
-            <div class="card-action-bar">
-                <a href="http://arxiv.org/pdf/2610.31423v1" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
-                    View PDF
-                </a>
-                <a href="http://arxiv.org/abs/2610.31423v1" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
-                    arXiv Page &rarr;
-                </a>
-            </div>
-        </article>
-        
-        <article class="paper-card" data-title="diffdreamer: coupling world models with differentiable simulation for agile quadrotor control" data-summary="tasks such as quadrotor dynamic-gate racing require agents to anticipate external motion while maintaining precise high-frequency control. world-model-based reinforcement learning provides a natural solution by learning latent dynamics for future imagination, yet it often entangles environmental evolution and the robot's own dynamics in a single learned rollout, where model bias can affect policy optimization efficiency. we propose diffdreamer, a differentiable reinforcement learning framework that tightly couples a learned world model with differentiable simulation for actor optimization. in one optimization step, the learned world model propagates latent states that capture external dynamics and history-dependent features, while the differentiable simulator propagates the robot's explicit physical state. we further decompose the actor objective into a critic-driven pathway for non-differentiable task rewards and a simulator-driven pathway for differentiable motion rewards. experiments on aggressive tracking and dynamic-gate racing show that diffdreamer improves training convergence over the model-free, model-based, and differentiable-rl baselines, and final performance over these baselines and classical planning and control methods. additional experiments assess reward decomposition and the odometry-conditioned relative-state representation through ablations. we also provide proof-of-concept real-world flight experiments for validation.">
-            <div class="card-meta-top">
-                <span class="rank-tag">TOP #5</span>
                 <div class="score-badge">
                     <span class="score-label">Priority Index</span>
                     <span class="score-value">120</span>
                 </div>
             </div>
             
-            <h2 class="paper-title">DiffDreamer: Coupling World Models with Differentiable Simulation for Agile Quadrotor Control</h2>
+            <h2 class="paper-title">Delay Randomization Widens the Delay Margin of Learned Humanoid Motion Trackers</h2>
             
             <div class="author-row">
-                <span>🗓️ 2026-10-22</span>
-                <span>✍️ Fanxing Li, Yuxiang Huang, Shengyang Wang et al.</span>
+                <span>🗓️ 2026-10-23</span>
+                <span>✍️ Shaoqin Li, Yi Sun</span>
             </div>
             
             <div class="badge-cluster">
-                <span class="badge">#world model</span><span class="badge">#reinforcement learning</span>
+                <span class="badge">#humanoid</span><span class="badge">#locomotion</span>
             </div>
             
-            <p class="paper-summary">Tasks such as quadrotor dynamic-gate racing require agents to anticipate external motion while maintaining precise high-frequency control. World-model-based reinforcement learning provides a natural solution by learning latent dynamics for future imagination, yet it often entangles environmental evolution and the robot's own dynamics in a single learned rollout, where model bias can affect policy optimization efficiency. We propose DiffDreamer, a differentiable reinforcement learning framework that tightly couples a learned world model with differentiable simulation for actor optimization. In one optimization step, the learned world model propagates latent states that capture external dynamics and history-dependent features, while the differentiable simulator propagates the robot's explicit physical state. We further decompose the actor objective into a critic-driven pathway for non-differentiable task rewards and a simulator-driven pathway for differentiable motion rewards. Experiments on aggressive tracking and dynamic-gate racing show that DiffDreamer improves training convergence over the model-free, model-based, and differentiable-RL baselines, and final performance over these baselines and classical planning and control methods. Additional experiments assess reward decomposition and the odometry-conditioned relative-state representation through ablations. We also provide proof-of-concept real-world flight experiments for validation.</p>
+            <p class="paper-summary">Learned humanoid controllers are usually trained in one simulator and then checked in a second one before they go near hardware. We ask what that check says about command delay. We train motion-tracking policies for a 24-joint humanoid on five motions taken from monocular video and test them in an independent CPU MuJoCo harness, which we first verify against the training model. Every policy completes its motion in at least 26 of 30 episodes under the training randomization. With 40 ms of constant command delay, however, survival drops to 15% on average (0% - 45%), and the delay margin is only 20 - 30 ms. Randomizing the delay during training (0 - 50 ms) lifts survival at 40 ms to 95% on average (75% - 100%) and moves the margin to 50 - 70 ms. A control arm trained for the same number of extra iterations without delay does not improve, so the gain comes from the randomization itself. This holds for all five motions with three training seeds each, and a policy trained in PhysX behaves the same way. The price is slightly looser tracking (0.02 - 0.06 rad on four motions) and, for the most dynamic motion, less robustness to other perturbations. We also show that the first sim-to-sim gap we saw came from the harness, a missing floor and a wrong timestep, and not from the physics engines. The 0 - 20 ms delay ranges common in locomotion training lie inside the margin an unrandomized tracker already has. The benefit comes from randomizing beyond it, so the range should be set from the robot's measured latency, and delay margin belongs next to other sim-to-sim metrics.</p>
             
             <div class="card-action-bar">
-                <a href="http://arxiv.org/pdf/2610.31617v1" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
+                <a href="http://arxiv.org/pdf/2610.32277v1" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
                     View PDF
                 </a>
-                <a href="http://arxiv.org/abs/2610.31617v1" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
+                <a href="http://arxiv.org/abs/2610.32277v1" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
                     arXiv Page &rarr;
                 </a>
             </div>
         </article>
         
-        <article class="paper-card" data-title="vectile: a low-cost flexible tactile array for 3-dof force sensing" data-summary="tactile sensing provides robots with contact information difficult to obtain from vision alone. shear force is particularly important for understanding tangential contact, guiding corrective motions, and maintaining grasp stability, yet flexible and low-cost tactile arrays often measure only normal force. we introduce vectile, a low-cost, 6 mm thin, flexible tactile array capable of three-axis force sensing. vectile combines a piezoresistive layer with passive silicone nubs that convert normal and shear forces into distinguishable pressure patterns. the sensor can be fabricated in-house without specialized equipment. the complete system costs less than 35 usd for a 4x4 array. we validate the sensing mechanism through finite element analysis and hardware experiments. in controlled single-taxel tests over 1-5 n normal force and up to 1.5 n shear force, vectile achieves root-mean-square errors of 0.39 n and 0.16 n for normal and shear forces. a vectile calibrated while flat retains accuracy when curved, while a five-minute manual calibration is sufficient for practical use. two applications demonstrate its utility. first, shear readings are sensitive enough to stop a sharp scalpel from puncturing a balloon after contact. second, the sensor substantially improves diffusion policy-guided power-plug insertion. all designs and code will be released upon paper acceptance. project website: https://jiannnh.github.io/vectile/.">
+        <article class="paper-card" data-title="cocarry: contact-support-structured retargeting for dual-humanoid cooperative carrying" data-summary="recent advances in large-scale human motion data, motion retargeting, and motion imitation have enabled increasingly capable whole-body control for individual humanoids. cooperative carrying is more challenging because successful coordination requires not only plausible individual motions, but also consistent cross-agent and agent-object relations, including shared grasp, relative configuration, and whole-body support. we introduce cocarry, a cooperative-carrying dataset containing 220 synchronized two-person sequences across 21 task schemes, five shared-object geometries, four terrain types, and approximately 61 minutes of motion. we further propose contact-support-structured retargeting, which starts from nominal individual motions and jointly refines both humanoids around the same prescribed object trajectory. cooperation-aware object-local hand anchors preserve compatible four-hand grasp relations, while complementary upper object-interaction and lower support structures retain object-relative geometry and coordinated support. across all 220 cocarry sequences retargeted to two a3 humanoids, our method achieves 0.9995 contact preservation, reduces penetration duration by 67.0% and 71.0% relative to gmr and omniretarget, respectively, and maintains a 100% retargeting success rate. on core4d with unitree g1 humanoids, it achieves 0.9906 contact preservation with zero measured sliding. we further validate the generated references through physics simulation and multiple real-world cooperative carrying experiments on two physical a3 humanoids, demonstrating their usability for downstream dual-humanoid control.">
             <div class="card-meta-top">
-                <span class="rank-tag">TOP #6</span>
-                <div class="score-badge">
-                    <span class="score-label">Priority Index</span>
-                    <span class="score-value">115</span>
-                </div>
-            </div>
-            
-            <h2 class="paper-title">VecTile: A Low-Cost Flexible Tactile Array for 3-DoF Force Sensing</h2>
-            
-            <div class="author-row">
-                <span>🗓️ 2026-10-22</span>
-                <span>✍️ Jian Hou, Xin Zhou, Adam J. Spiers</span>
-            </div>
-            
-            <div class="badge-cluster">
-                <span class="badge">#tactile sensing</span><span class="badge">#diffusion policy</span>
-            </div>
-            
-            <p class="paper-summary">Tactile sensing provides robots with contact information difficult to obtain from vision alone. Shear force is particularly important for understanding tangential contact, guiding corrective motions, and maintaining grasp stability, yet flexible and low-cost tactile arrays often measure only normal force. We introduce VecTile, a low-cost, 6 mm thin, flexible tactile array capable of three-axis force sensing. VecTile combines a piezoresistive layer with passive silicone nubs that convert normal and shear forces into distinguishable pressure patterns. The sensor can be fabricated in-house without specialized equipment. The complete system costs less than 35 USD for a 4x4 array. We validate the sensing mechanism through finite element analysis and hardware experiments. In controlled single-taxel tests over 1-5 N normal force and up to 1.5 N shear force, VecTile achieves root-mean-square errors of 0.39 N and 0.16 N for normal and shear forces. A VecTile calibrated while flat retains accuracy when curved, while a five-minute manual calibration is sufficient for practical use. Two applications demonstrate its utility. First, shear readings are sensitive enough to stop a sharp scalpel from puncturing a balloon after contact. Second, the sensor substantially improves Diffusion Policy-guided power-plug insertion. All designs and code will be released upon paper acceptance. Project website: https://jiannnh.github.io/VecTile/.</p>
-            
-            <div class="card-action-bar">
-                <a href="http://arxiv.org/pdf/2610.31472v1" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
-                    View PDF
-                </a>
-                <a href="http://arxiv.org/abs/2610.31472v1" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
-                    arXiv Page &rarr;
-                </a>
-            </div>
-        </article>
-        
-        <article class="paper-card" data-title="fastharness: experience-driven review scheduling for vision-language-action policies" data-summary="agentic robot systems combine language-model reasoning with robot policies to monitor execution and recover from failures. however, reviewing every action chunk incurs substantial overhead, even in familiar situations. we introduce fastharness, an experience-driven execution harness that adaptively schedules gpt-6 astra supervision of a π0.5 policy. a fast path uses stage memory and reviewed outcomes to reduce review frequency as experience accumulates, while a complementary recovery path focuses supervision on correcting errors. once recovery is verified, routine execution resumes, with failure experience retained to guide future interventions. the policy remains frozen and generates fresh actions from current observations. across four simulated manipulation tasks, reviewer token use decreases by an average of 57.2% per task from the first evaluated episode to the mean of the final five episodes. mean episode time decreases from 85.5 to 52.0 minutes over the same interval. on the same tasks, mean success increases from 80% for gpt-as-policy (π0.5 + gpt-6 astra) to 97.19% with fastharness. these results highlight adaptive supervision as a practical route to more efficient agentic robotics without additional model training.">
-            <div class="card-meta-top">
-                <span class="rank-tag">TOP #7</span>
+                <span class="rank-tag">TOP #5</span>
                 <div class="score-badge">
                     <span class="score-label">Priority Index</span>
                     <span class="score-value">95</span>
                 </div>
             </div>
             
-            <h2 class="paper-title">FastHarness: Experience-Driven Review Scheduling for Vision-Language-Action Policies</h2>
+            <h2 class="paper-title">CoCarry: Contact-Support-Structured Retargeting for Dual-Humanoid Cooperative Carrying</h2>
             
             <div class="author-row">
-                <span>🗓️ 2026-10-22</span>
-                <span>✍️ Tao Lin, Yuxin Du, Haoxiao Wang et al.</span>
+                <span>🗓️ 2026-10-23</span>
+                <span>✍️ Ziyu Lin, Shihang Du, Tianhang Wang et al.</span>
             </div>
             
             <div class="badge-cluster">
-                <span class="badge">#vision-language-action</span>
+                <span class="badge">#humanoid</span>
             </div>
             
-            <p class="paper-summary">Agentic robot systems combine language-model reasoning with robot policies to monitor execution and recover from failures. However, reviewing every action chunk incurs substantial overhead, even in familiar situations. We introduce FastHarness, an experience-driven execution harness that adaptively schedules GPT-6 Astra supervision of a π0.5 policy. A fast path uses stage memory and reviewed outcomes to reduce review frequency as experience accumulates, while a complementary recovery path focuses supervision on correcting errors. Once recovery is verified, routine execution resumes, with failure experience retained to guide future interventions. The policy remains frozen and generates fresh actions from current observations. Across four simulated manipulation tasks, reviewer token use decreases by an average of 57.2% per task from the first evaluated episode to the mean of the final five episodes. Mean episode time decreases from 85.5 to 52.0 minutes over the same interval. On the same tasks, mean success increases from 80% for GPT-as-Policy (π0.5 + GPT-6 Astra) to 97.19% with FastHarness. These results highlight adaptive supervision as a practical route to more efficient agentic robotics without additional model training.</p>
+            <p class="paper-summary">Recent advances in large-scale human motion data, motion retargeting, and motion imitation have enabled increasingly capable whole-body control for individual humanoids. Cooperative carrying is more challenging because successful coordination requires not only plausible individual motions, but also consistent cross-agent and agent-object relations, including shared grasp, relative configuration, and whole-body support. We introduce CoCarry, a cooperative-carrying dataset containing 220 synchronized two-person sequences across 21 task schemes, five shared-object geometries, four terrain types, and approximately 61 minutes of motion. We further propose Contact-Support-Structured Retargeting, which starts from nominal individual motions and jointly refines both humanoids around the same prescribed object trajectory. Cooperation-aware object-local hand anchors preserve compatible four-hand grasp relations, while complementary upper object-interaction and lower support structures retain object-relative geometry and coordinated support. Across all 220 CoCarry sequences retargeted to two A3 humanoids, our method achieves 0.9995 contact preservation, reduces penetration duration by 67.0% and 71.0% relative to GMR and OmniRetarget, respectively, and maintains a 100% retargeting success rate. On CORE4D with Unitree G1 humanoids, it achieves 0.9906 contact preservation with zero measured sliding. We further validate the generated references through physics simulation and multiple real-world cooperative carrying experiments on two physical A3 humanoids, demonstrating their usability for downstream dual-humanoid control.</p>
             
             <div class="card-action-bar">
-                <a href="http://arxiv.org/pdf/2610.31427v1" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
+                <a href="http://arxiv.org/pdf/2610.32460v1" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
                     View PDF
                 </a>
-                <a href="http://arxiv.org/abs/2610.31427v1" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
+                <a href="http://arxiv.org/abs/2610.32460v1" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
                     arXiv Page &rarr;
                 </a>
             </div>
         </article>
         
-        <article class="paper-card" data-title="echo: coupled action and task status signal denoising for vision language action models" data-summary="recognizing task completion and failure enables robots to stop upon success and initiate recovery or replanning after failure. existing methods augment vision language action (vla) policies with task status signal prediction to support these execution decisions. however, learning and integrating these signals can require fine-grained supervision, external monitoring models, or complex architectural designs. moreover, the potential of task status signals to directly guide action generation remains underexplored. we present echo, a framework that combines task status signal learning without frame-level progress annotations with a compact design for status prediction and action generation within a single vla. specifically, echo represents task status with stop and failure signals, added as two dimensions of each action chunk and denoised together with robot actions. their combination distinguishes ongoing execution, successful completion, and failure. to learn these signals without fine-grained progress annotations, echo constructs successful, failed, and recovery trajectories with complementary supervision properties. to enable status signal-guided action generation, echo controls interactions between the signals and actions and denoises the signals faster than the actions. these allow later action denoising steps to condition on cleaner status estimates while preserving accurate signal prediction. extensive real-world manipulation experiments show that echo accurately predicts task status and consistently improves policy performance.">
+        <article class="paper-card" data-title="hgwm: hierarchical graph-guided world model for zero-shot object navigation via graph matching" data-summary="zero-shot object navigation requires an embodied agent to choose where to search while retaining evidence from previous observations. hgwm couples an llm-generated room-anchor prior with persistent spatial-semantic memory. a coarse stage assigns visual-semantic scores to candidate headings on a 0-10 scale; a fine stage measures symbolic compatibility between observed objects, room context, and the goal prior. phase-dependent fusion combines these scores with an llm direction recommendation before local action selection. on hm3d v0.1, the reported hgwm configuration achieves 62.6% success rate (sr) and 31.5% success weighted by path length (spl), compared with 58.1% and 31.2% for wmnav. on mp3d, the corresponding values are 46.8% and 17.9%, compared with 45.4% and 17.2%. the results indicate higher success point estimates and modest path-efficiency gains. on hm3d v0.2, the full model obtains 74.4% sr and 31.9% spl. additional component ablations reduce sr by 0.9-2.3 percentage points and spl by 0.6-1.5 points. these are author-reported aggregate measurements. the accompanying implementation repairs pass offline tests; episode-level rerun records are not available. evaluation is confined to simulation.">
             <div class="card-meta-top">
-                <span class="rank-tag">TOP #8</span>
+                <span class="rank-tag">TOP #6</span>
                 <div class="score-badge">
                     <span class="score-label">Priority Index</span>
                     <span class="score-value">90</span>
                 </div>
             </div>
             
-            <h2 class="paper-title">Echo: Coupled Action and Task Status Signal Denoising for Vision Language Action Models</h2>
+            <h2 class="paper-title">HGWM: Hierarchical Graph-Guided World Model for Zero-Shot Object Navigation via Graph Matching</h2>
             
             <div class="author-row">
-                <span>🗓️ 2026-10-22</span>
-                <span>✍️ Yufeng Liu, Bohao Fan, Juntu Zhao et al.</span>
+                <span>🗓️ 2026-10-23</span>
+                <span>✍️ I-tak Ieong, Hao Tang</span>
             </div>
             
             <div class="badge-cluster">
-                <span class="badge">#vla</span>
+                <span class="badge">#world model</span>
             </div>
             
-            <p class="paper-summary">Recognizing task completion and failure enables robots to stop upon success and initiate recovery or replanning after failure. Existing methods augment Vision Language Action (VLA) policies with task status signal prediction to support these execution decisions. However, learning and integrating these signals can require fine-grained supervision, external monitoring models, or complex architectural designs. Moreover, the potential of task status signals to directly guide action generation remains underexplored. We present Echo, a framework that combines task status signal learning without frame-level progress annotations with a compact design for status prediction and action generation within a single VLA. Specifically, Echo represents task status with stop and failure signals, added as two dimensions of each action chunk and denoised together with robot actions. Their combination distinguishes ongoing execution, successful completion, and failure. To learn these signals without fine-grained progress annotations, Echo constructs successful, failed, and recovery trajectories with complementary supervision properties. To enable status signal-guided action generation, Echo controls interactions between the signals and actions and denoises the signals faster than the actions. These allow later action denoising steps to condition on cleaner status estimates while preserving accurate signal prediction. Extensive real-world manipulation experiments show that Echo accurately predicts task status and consistently improves policy performance.</p>
+            <p class="paper-summary">Zero-shot object navigation requires an embodied agent to choose where to search while retaining evidence from previous observations. HGWM couples an LLM-generated room-anchor prior with persistent spatial-semantic memory. A coarse stage assigns visual-semantic scores to candidate headings on a 0-10 scale; a fine stage measures symbolic compatibility between observed objects, room context, and the goal prior. Phase-dependent fusion combines these scores with an LLM direction recommendation before local action selection. On HM3D v0.1, the reported HGWM configuration achieves 62.6% success rate (SR) and 31.5% success weighted by path length (SPL), compared with 58.1% and 31.2% for WMNav. On MP3D, the corresponding values are 46.8% and 17.9%, compared with 45.4% and 17.2%. The results indicate higher success point estimates and modest path-efficiency gains. On HM3D v0.2, the full model obtains 74.4% SR and 31.9% SPL. Additional component ablations reduce SR by 0.9-2.3 percentage points and SPL by 0.6-1.5 points. These are author-reported aggregate measurements. The accompanying implementation repairs pass offline tests; episode-level rerun records are not available. Evaluation is confined to simulation.</p>
             
             <div class="card-action-bar">
-                <a href="http://arxiv.org/pdf/2610.31569v1" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
+                <a href="http://arxiv.org/pdf/2610.32554v1" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
                     View PDF
                 </a>
-                <a href="http://arxiv.org/abs/2610.31569v1" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
+                <a href="http://arxiv.org/abs/2610.32554v1" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
+                    arXiv Page &rarr;
+                </a>
+            </div>
+        </article>
+        
+        <article class="paper-card" data-title="robocode: learning reusable action primitives for robot manipulation" data-summary="recent robot manipulation policies commonly predict continuous action chunks directly from observations, without explicitly modeling reusable structure in the action space. however, manipulation demonstrations often contain recurring short-horizon motion patterns that are shared across tasks. we introduce \textsc{robocode}, which learns these patterns through a shared soft-gated primitive action interface. rather than assigning each action chunk to a single discrete code, \textsc{robocode} represents it as a soft composition of multiple learned primitives, providing a flexible intermediate representation of short-horizon actions. the primitive interface is learned from action chunks pooled across multiple tasks and then frozen while task-specific state encoders are trained to map current state inputs into the shared latent space. experiments on five maniskill manipulation tasks address three questions. first, the learned primitive interface reconstructs action chunks with an average reconstruction mse of 0.0187. second, analysis of code activations reveals structured code reuse across tasks. third, \textsc{robocode} achieves the highest or tied closed-loop success rate on all evaluated tasks, with an average success rate of 75.6%, compared with 68.8% for act and 41.6% for the larger diffusion policy baseline. these results suggest that soft-gated primitive codebooks provide an effective and interpretable intermediate action representation for robot manipulation.">
+            <div class="card-meta-top">
+                <span class="rank-tag">TOP #7</span>
+                <div class="score-badge">
+                    <span class="score-label">Priority Index</span>
+                    <span class="score-value">85</span>
+                </div>
+            </div>
+            
+            <h2 class="paper-title">RoboCode: Learning Reusable Action Primitives for Robot Manipulation</h2>
+            
+            <div class="author-row">
+                <span>🗓️ 2026-10-23</span>
+                <span>✍️ Xianyue Peng, Devi Amarsaikhan, Iman Soltani</span>
+            </div>
+            
+            <div class="badge-cluster">
+                <span class="badge">#diffusion policy</span>
+            </div>
+            
+            <p class="paper-summary">Recent robot manipulation policies commonly predict continuous action chunks directly from observations, without explicitly modeling reusable structure in the action space. However, manipulation demonstrations often contain recurring short-horizon motion patterns that are shared across tasks. We introduce \textsc{RoboCode}, which learns these patterns through a shared soft-gated primitive action interface. Rather than assigning each action chunk to a single discrete code, \textsc{RoboCode} represents it as a soft composition of multiple learned primitives, providing a flexible intermediate representation of short-horizon actions. The primitive interface is learned from action chunks pooled across multiple tasks and then frozen while task-specific state encoders are trained to map current state inputs into the shared latent space. Experiments on five ManiSkill manipulation tasks address three questions. First, the learned primitive interface reconstructs action chunks with an average reconstruction MSE of 0.0187. Second, analysis of code activations reveals structured code reuse across tasks. Third, \textsc{RoboCode} achieves the highest or tied closed-loop success rate on all evaluated tasks, with an average success rate of 75.6%, compared with 68.8% for ACT and 41.6% for the larger Diffusion Policy baseline. These results suggest that soft-gated primitive codebooks provide an effective and interpretable intermediate action representation for robot manipulation.</p>
+            
+            <div class="card-action-bar">
+                <a href="http://arxiv.org/pdf/2610.32225v1" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
+                    View PDF
+                </a>
+                <a href="http://arxiv.org/abs/2610.32225v1" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
+                    arXiv Page &rarr;
+                </a>
+            </div>
+        </article>
+        
+        <article class="paper-card" data-title="optimization, optimal control, and reinforcement learning for robotics" data-summary="these lecture notes provide an introduction to optimization, optimal control, and reinforcement learning for robotics, emphasizing their mathematical connections and practical relevance. they present established material compiled and edited by yonghyeon lee, rather than new research results. the notes were developed through a human and ai collaborative writing process, with ai assistance in drafting, organizing, and refining the exposition. this first version is a preliminary collection of notes, not yet a fully developed textbook, and currently contains no figures or graphs. the notes may be revised, corrected, and expanded in future versions.">
+            <div class="card-meta-top">
+                <span class="rank-tag">TOP #8</span>
+                <div class="score-badge">
+                    <span class="score-label">Priority Index</span>
+                    <span class="score-value">80</span>
+                </div>
+            </div>
+            
+            <h2 class="paper-title">Optimization, Optimal Control, and Reinforcement Learning for Robotics</h2>
+            
+            <div class="author-row">
+                <span>🗓️ 2026-10-23</span>
+                <span>✍️ Yonghyeon Lee</span>
+            </div>
+            
+            <div class="badge-cluster">
+                <span class="badge">#reinforcement learning</span>
+            </div>
+            
+            <p class="paper-summary">These lecture notes provide an introduction to optimization, optimal control, and reinforcement learning for robotics, emphasizing their mathematical connections and practical relevance. They present established material compiled and edited by Yonghyeon Lee, rather than new research results. The notes were developed through a human and AI collaborative writing process, with AI assistance in drafting, organizing, and refining the exposition. This first version is a preliminary collection of notes, not yet a fully developed textbook, and currently contains no figures or graphs. The notes may be revised, corrected, and expanded in future versions.</p>
+            
+            <div class="card-action-bar">
+                <a href="http://arxiv.org/pdf/2610.32538v1" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
+                    View PDF
+                </a>
+                <a href="http://arxiv.org/abs/2610.32538v1" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
                     arXiv Page &rarr;
                 </a>
             </div>
