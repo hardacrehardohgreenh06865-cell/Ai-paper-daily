@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Embodied AI & Robotics Intelligence Digest — October 27, 2026</title>
+    <title>Embodied AI & Robotics Intelligence Digest — October 28, 2026</title>
     <style>
         :root {
             --bg-base: #080c14;
@@ -242,7 +242,7 @@
         <header>
             <span class="pill-brand">Autonomous Research Intelligence</span>
             <h1>Embodied AI & Physical Frontier Briefing</h1>
-            <p class="subtitle">Compiled on October 27, 2026 • Ranked top 8 strategic breakthroughs out of incoming preprints.</p>
+            <p class="subtitle">Compiled on October 28, 2026 • Ranked top 8 strategic breakthroughs out of incoming preprints.</p>
             
             <div class="controls">
                 <input type="text" id="filterInput" class="search-box" placeholder="Filter papers by keywords (e.g. humanoid, tactile, diffusion)...">
@@ -251,71 +251,71 @@
 
         <main id="paperList">
             
-        <article class="paper-card" data-title="roboworm: evaluating movement realism, consistency and acceleration affects in embodied video world models" data-summary="video world models (vwms) are rapidly emerging as scalable neural simulators for robotic manipulation. however, most benchmarks only evaluate them as open-world video generators, using vision-language models (vlms) that lack strict 3d spatial and kinematic reasoning. to bridge this gap, we introduce roboworm, a comprehensive, deployment-aware benchmark that leverages known hardware priors such as robot kinematic trees and fixed camera configurations, to systematically examine structural and spatiotemporal fidelity. roboworm curates 1,605 episodes across single-arm, bimanual, and humanoid morphologies, spanning both markovian and long-horizon non-markovian tasks under single- and multi-view setups. to explicitly measure physical consistency, we propose two deterministic, vlm-free metrics: kiva for intra-view kinematic stability, and rigis for multi-view geometric consistency. by exploiting intrinsic robotic invariants, kiva improves hallucination detection alignment with human annotations by 25.8% relative to the strongest frontier vlms, while rigis achieves a 130% higher spearman correlation with human preferences. furthermore, since real-world deployment requires low inference latency, we utilize roboworm to conduct the first large-scale audit of the quality-efficiency trade-off. evaluating 9 state-of-the-art acceleration techniques across 3 leading world models (over 29,000 generated rollouts), we demonstrate how these acceleration methods can retain superficial visual quality while silently compromising deployment-critical physical constraints. using our metrics, we achieve 2.3$\times$ maximum inference speed-up with minimal quality loss.">
+        <article class="paper-card" data-title="pdrvla: a vision-language-action model with physical dynamics representations" data-summary="vision--language--action (vla) models generate robot actions from visual observations and language instructions, but their understanding of physical dynamics remains limited. video world models can capture scene dynamics, yet generating future videos introduces high latency into the control loop. we introduce pdrvla, whose lightweight physical dynamics module extracts physical tokens from vision--language features to condition action generation without online video generation. the module learns through direct prediction of future rgb, depth, and optical-flow features, with auxiliary supervision through a frozen pretrained video world model. training relies entirely on publicly available data, expanded through human-to-robot synthesis, subtask annotation, and embodied chain-of-thought (ecot) annotation. across four simulation benchmarks, pdrvla achieves success rates of 99.3% on libero, 89.9% on libero-plus, 93.6% on robotwin~2.0, and 81.5% on simplerenv. ablations show improved future prediction with world-model supervision and evaluate how subtask conditioning, future object-pose supervision, and ecot training affect action success.">
             <div class="card-meta-top">
                 <span class="rank-tag">TOP #1</span>
                 <div class="score-badge">
                     <span class="score-label">Priority Index</span>
-                    <span class="score-value">135</span>
+                    <span class="score-value">175</span>
                 </div>
             </div>
             
-            <h2 class="paper-title">RoboWorM: Evaluating Movement Realism, Consistency and Acceleration Affects in Embodied Video World Models</h2>
+            <h2 class="paper-title">PDRVLA: A Vision-Language-Action Model with Physical Dynamics Representations</h2>
             
             <div class="author-row">
-                <span>🗓️ 2026-10-24</span>
-                <span>✍️ Doanh Le Thien, Viet-Thanh Nguyen, Pham Tri Quang et al.</span>
+                <span>🗓️ 2026-10-27</span>
+                <span>✍️ Hanqing Wang, Zhaotian Cai, Ruichuan An et al.</span>
             </div>
             
             <div class="badge-cluster">
-                <span class="badge">#humanoid</span><span class="badge">#world model</span>
+                <span class="badge">#world model</span><span class="badge">#vision-language-action</span><span class="badge">#vla</span>
             </div>
             
-            <p class="paper-summary">Video world models (VWMs) are rapidly emerging as scalable neural simulators for robotic manipulation. However, most benchmarks only evaluate them as open-world video generators, using Vision-Language Models (VLMs) that lack strict 3D spatial and kinematic reasoning. To bridge this gap, we introduce RoboWorM, a comprehensive, deployment-aware benchmark that leverages known hardware priors such as robot kinematic trees and fixed camera configurations, to systematically examine structural and spatiotemporal fidelity. RoboWorM curates 1,605 episodes across single-arm, bimanual, and humanoid morphologies, spanning both Markovian and long-horizon non-Markovian tasks under single- and multi-view setups. To explicitly measure physical consistency, we propose two deterministic, VLM-free metrics: KIVA for intra-view kinematic stability, and RIGIS for multi-view geometric consistency. By exploiting intrinsic robotic invariants, KIVA improves hallucination detection alignment with human annotations by 25.8% relative to the strongest frontier VLMs, while RIGIS achieves a 130% higher Spearman correlation with human preferences. Furthermore, since real-world deployment requires low inference latency, we utilize RoboWorM to conduct the first large-scale audit of the quality-efficiency trade-off. Evaluating 9 state-of-the-art acceleration techniques across 3 leading world models (over 29,000 generated rollouts), we demonstrate how these acceleration methods can retain superficial visual quality while silently compromising deployment-critical physical constraints. Using our metrics, we achieve 2.3$\times$ maximum inference speed-up with minimal quality loss.</p>
+            <p class="paper-summary">Vision--Language--Action (VLA) models generate robot actions from visual observations and language instructions, but their understanding of physical dynamics remains limited. Video world models can capture scene dynamics, yet generating future videos introduces high latency into the control loop. We introduce PDRVLA, whose lightweight Physical Dynamics Module extracts physical tokens from vision--language features to condition action generation without online video generation. The module learns through direct prediction of future RGB, depth, and optical-flow features, with auxiliary supervision through a frozen pretrained video world model. Training relies entirely on publicly available data, expanded through human-to-robot synthesis, subtask annotation, and embodied chain-of-thought (ECoT) annotation. Across four simulation benchmarks, PDRVLA achieves success rates of 99.3% on LIBERO, 89.9% on LIBERO-Plus, 93.6% on RoboTwin~2.0, and 81.5% on SimplerEnv. Ablations show improved future prediction with world-model supervision and evaluate how subtask conditioning, future object-pose supervision, and ECoT training affect action success.</p>
             
             <div class="card-action-bar">
-                <a href="http://arxiv.org/pdf/2610.33807v1" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
+                <a href="http://arxiv.org/pdf/2610.37381v1" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
                     View PDF
                 </a>
-                <a href="http://arxiv.org/abs/2610.33807v1" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
+                <a href="http://arxiv.org/abs/2610.37381v1" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
                     arXiv Page &rarr;
                 </a>
             </div>
         </article>
         
-        <article class="paper-card" data-title="exe: egocentric cross-embodiment pretraining via factorized latent actions for vla models" data-summary="vision-language-action (vla) models are bottlenecked by the scarcity of robot data. egocentric human manipulation videos offer an abundant, diverse, and semantically-rich alternative that inherently captures manipulation intent. however, the embodiment gap makes it difficult to extract action-relevant representations from these videos. from the perspective of action execution, human hands and robots share analogous manipulation primitives---reaching, grasping, placing---yet exhibit distinct kinematics tied to their embodiments. this might motivate our key approach: egocentric video pretraining can yield shared action representations capturing transferable manipulation skills, while human-specific motion patterns should be disentangled to avoid interfering with robot policy learning. to this end, we propose exe, an egocentric cross(x)-embodiment pretraining framework that learns a factorized latent action representation from egocentric human videos, separating shared manipulation priors from embodiment-specific signals. by leveraging the shared action space, the robot policy acquires generalizable manipulation semantics from diverse human demonstrations without being biased by human-specific kinematics. this shared knowledge transfers across embodiments with different kinematic structures, enabling the same pretraining to benefit both parallel grippers and dexterous hands. exe yields consistent gains over baseline without pretraining on robotwin 2.0, robocasa gr1, and real-world manipulation tasks.">
+        <article class="paper-card" data-title="thinkworld: world imagination reinforces chain-of-dynamics reasoning" data-summary="vision-language-action (vla) models have made substantial progress in robotic manipulation, but their generalization remains constrained by the diversity and coverage of action-labeled robot demonstrations. human videos provide much broader behavioral and environmental experience, while learning from them faces a fundamental trade-off between scalable data and explicit action grounding. we introduce thinkworld, a vla learning framework that grounds action reasoning in world dynamics and strengthens it through reinforcement learning with world imagination. thinkworld represents each action thought as a chain-of-dynamics (cod), a sequence of discrete motion tokens that captures the intermediate dynamics connecting the current world to a future state and serves as a common action representation across embodiments. we first initialize cod with action-labeled demonstrations, then predict the future induced by each cod and reinforce those whose predictions better match the observed outcome. this enables videos without action annotations to provide direct supervision from observed state transitions, allowing human and robot experience to refine the same reasoning space. experiments in simulation and on real robots demonstrate effective human-to-robot transfer and strong generalization to unseen tasks and environments.">
             <div class="card-meta-top">
                 <span class="rank-tag">TOP #2</span>
                 <div class="score-badge">
                     <span class="score-label">Priority Index</span>
-                    <span class="score-value">135</span>
+                    <span class="score-value">165</span>
                 </div>
             </div>
             
-            <h2 class="paper-title">EXE: Egocentric Cross-Embodiment Pretraining via Factorized Latent Actions for VLA Models</h2>
+            <h2 class="paper-title">ThinkWorld: World Imagination Reinforces Chain-of-Dynamics Reasoning</h2>
             
             <div class="author-row">
-                <span>🗓️ 2026-10-24</span>
-                <span>✍️ Qingyuan Cai, Bo Zhang, Yongzhen Huang et al.</span>
+                <span>🗓️ 2026-10-27</span>
+                <span>✍️ Chaehyun Kim, Chi-Pin Huang, Jisoo Kim et al.</span>
             </div>
             
             <div class="badge-cluster">
-                <span class="badge">#vision-language-action</span><span class="badge">#vla</span>
+                <span class="badge">#reinforcement learning</span><span class="badge">#vision-language-action</span><span class="badge">#vla</span>
             </div>
             
-            <p class="paper-summary">Vision-Language-Action (VLA) models are bottlenecked by the scarcity of robot data. Egocentric human manipulation videos offer an abundant, diverse, and semantically-rich alternative that inherently captures manipulation intent. However, the embodiment gap makes it difficult to extract action-relevant representations from these videos. From the perspective of action execution, human hands and robots share analogous manipulation primitives---reaching, grasping, placing---yet exhibit distinct kinematics tied to their embodiments. This might motivate our key approach: egocentric video pretraining can yield shared action representations capturing transferable manipulation skills, while human-specific motion patterns should be disentangled to avoid interfering with robot policy learning. To this end, we propose EXE, an Egocentric Cross(X)-Embodiment pretraining framework that learns a factorized latent action representation from egocentric human videos, separating shared manipulation priors from embodiment-specific signals. By leveraging the shared action space, the robot policy acquires generalizable manipulation semantics from diverse human demonstrations without being biased by human-specific kinematics. This shared knowledge transfers across embodiments with different kinematic structures, enabling the same pretraining to benefit both parallel grippers and dexterous hands. EXE yields consistent gains over baseline without pretraining on RoboTwin 2.0, RoboCasa GR1, and real-world manipulation tasks.</p>
+            <p class="paper-summary">Vision-Language-Action (VLA) models have made substantial progress in robotic manipulation, but their generalization remains constrained by the diversity and coverage of action-labeled robot demonstrations. Human videos provide much broader behavioral and environmental experience, while learning from them faces a fundamental trade-off between scalable data and explicit action grounding. We introduce ThinkWorld, a VLA learning framework that grounds action reasoning in world dynamics and strengthens it through reinforcement learning with world imagination. ThinkWorld represents each action thought as a Chain-of-Dynamics (CoD), a sequence of discrete motion tokens that captures the intermediate dynamics connecting the current world to a future state and serves as a common action representation across embodiments. We first initialize CoD with action-labeled demonstrations, then predict the future induced by each CoD and reinforce those whose predictions better match the observed outcome. This enables videos without action annotations to provide direct supervision from observed state transitions, allowing human and robot experience to refine the same reasoning space. Experiments in simulation and on real robots demonstrate effective human-to-robot transfer and strong generalization to unseen tasks and environments.</p>
             
             <div class="card-action-bar">
-                <a href="http://arxiv.org/pdf/2610.33685v1" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
+                <a href="http://arxiv.org/pdf/2610.37666v1" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
                     View PDF
                 </a>
-                <a href="http://arxiv.org/abs/2610.33685v1" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
+                <a href="http://arxiv.org/abs/2610.37666v1" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
                     arXiv Page &rarr;
                 </a>
             </div>
         </article>
         
-        <article class="paper-card" data-title="pod-rope: rotary position encoding over physical observation distributions for embodied ai" data-summary="embodied perception requires positional representations that capture both physical geometry and the spatial and temporal extent of observations. we introduce pod-rope (physical observation distribution rope), which represents token observation footprints as distributions over camera centers, viewing directions, and sampling times. under independent sampling, expected rotations encode relative relationships between distributions; when each distribution collapses to a single address, the construction recovers pointwise rope. the same rotation statistics support q/k matching and coherence-dependent v/o transformations, allowing observation geometry to guide both information selection and content aggregation. per-token pre-aggregation avoids increasing sequence length or processing pairs of observation nodes. we evaluate pod-rope across four robot policy architectures, simulation and real-world manipulation, and complementary reconstruction, depth-estimation, and novel-view-synthesis tasks. integrating pod-rope into fast-wam improves mean success from 91.83% to 92.88% across all 50 robotwin 2.0 tasks, and from 32.5% to 52.5% on two real-robot tasks on sharpa north. controlled reconstruction ablations support the contributions of distribution encoding and v/o transformations. in h20 model-block benchmarks, pod-rope achieves median forward-plus-backward speedups of $1.91\times$ over p-rope and $5.34\times$ over rayrope, with a median latency overhead of 17.4% over standard rope. these results support physical observation distributions as an effective and computationally efficient basis for geometry-aware attention.">
+        <article class="paper-card" data-title="autonomous fixed-wing interception using reinforcement learning" data-summary="medium altitude, long endurance unmanned aerial systems such as shahed-type strike drones are an unanswered threat in modern conflicts. conventional air defense systems are too expensive to provide a feasible large-scale solution. quadcopter interceptors are a cheap, battle-proven alternative, but their extremely limited flight time restricts them to low altitude targets at short range, whereas fixed-wing platforms have the endurance to reach higher altitude targets from longer distances. however, such interceptors are still operated manually. recent developments in learning-based controllers show potential for automation. in this work, a fixed-wing interceptor is presented that is controlled by a neural network that maps filtered monocular vision observations directly to actuator commands. the policy was trained in a custom python environment using reinforcement learning and proximal policy optimization. the policy was then deployed on a fixed-wing platform and tested in real interception scenarios. as a baseline, two classical guidance controllers were also developed and tested in simulation. the policy is able to intercept targets both in simulation and in real flight. in simulation, the policy outperforms the classical controllers under most conditions. the interceptor was ultimately successfully validated in real flight by intercepting maneuvering fixed-wing targets. this novel system shows the potential of artificial intelligence for autonomous control of fixed-wing interceptor drones.">
             <div class="card-meta-top">
                 <span class="rank-tag">TOP #3</span>
                 <div class="score-badge">
@@ -324,94 +324,94 @@
                 </div>
             </div>
             
-            <h2 class="paper-title">POD-RoPE: Rotary Position Encoding over Physical Observation Distributions for Embodied AI</h2>
+            <h2 class="paper-title">Autonomous fixed-wing interception using reinforcement learning</h2>
             
             <div class="author-row">
-                <span>🗓️ 2026-10-24</span>
-                <span>✍️ Xiaodi Huang, Zilin Wang, Jinpeng Liu et al.</span>
+                <span>🗓️ 2026-10-27</span>
+                <span>✍️ Daan van Hamersveld, Ewoud Smeur, Iurii Kriachko</span>
             </div>
             
             <div class="badge-cluster">
-                <span class="badge">#embodied ai</span>
+                <span class="badge">#reinforcement learning</span><span class="badge">#actuator</span>
             </div>
             
-            <p class="paper-summary">Embodied perception requires positional representations that capture both physical geometry and the spatial and temporal extent of observations. We introduce POD-RoPE (Physical Observation Distribution RoPE), which represents token observation footprints as distributions over camera centers, viewing directions, and sampling times. Under independent sampling, expected rotations encode relative relationships between distributions; when each distribution collapses to a single address, the construction recovers pointwise RoPE. The same rotation statistics support Q/K matching and coherence-dependent V/O transformations, allowing observation geometry to guide both information selection and content aggregation. Per-token pre-aggregation avoids increasing sequence length or processing pairs of observation nodes. We evaluate POD-RoPE across four robot policy architectures, simulation and real-world manipulation, and complementary reconstruction, depth-estimation, and novel-view-synthesis tasks. Integrating POD-RoPE into Fast-WAM improves mean success from 91.83% to 92.88% across all 50 RoboTwin 2.0 tasks, and from 32.5% to 52.5% on two real-robot tasks on Sharpa North. Controlled reconstruction ablations support the contributions of distribution encoding and V/O transformations. In H20 model-block benchmarks, POD-RoPE achieves median forward-plus-backward speedups of $1.91\times$ over P-RoPE and $5.34\times$ over RayRoPE, with a median latency overhead of 17.4% over Standard RoPE. These results support physical observation distributions as an effective and computationally efficient basis for geometry-aware attention.</p>
+            <p class="paper-summary">Medium altitude, long endurance unmanned aerial systems such as Shahed-type strike drones are an unanswered threat in modern conflicts. Conventional air defense systems are too expensive to provide a feasible large-scale solution. Quadcopter interceptors are a cheap, battle-proven alternative, but their extremely limited flight time restricts them to low altitude targets at short range, whereas fixed-wing platforms have the endurance to reach higher altitude targets from longer distances. However, such interceptors are still operated manually. Recent developments in learning-based controllers show potential for automation. In this work, a fixed-wing interceptor is presented that is controlled by a neural network that maps filtered monocular vision observations directly to actuator commands. The policy was trained in a custom Python environment using reinforcement learning and proximal policy optimization. The policy was then deployed on a fixed-wing platform and tested in real interception scenarios. As a baseline, two classical guidance controllers were also developed and tested in simulation. The policy is able to intercept targets both in simulation and in real flight. In simulation, the policy outperforms the classical controllers under most conditions. The interceptor was ultimately successfully validated in real flight by intercepting maneuvering fixed-wing targets. This novel system shows the potential of artificial intelligence for autonomous control of fixed-wing interceptor drones.</p>
             
             <div class="card-action-bar">
-                <a href="http://arxiv.org/pdf/2610.33745v1" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
+                <a href="http://arxiv.org/pdf/2610.37470v1" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
                     View PDF
                 </a>
-                <a href="http://arxiv.org/abs/2610.33745v1" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
+                <a href="http://arxiv.org/abs/2610.37470v1" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
                     arXiv Page &rarr;
                 </a>
             </div>
         </article>
         
-        <article class="paper-card" data-title="one scan is enough: demonstration-free adaptation for language-guided navigation" data-summary="deploying a language-guided navigation policy in a new building usually means watching it fail. public-benchmark vlas degrade scene by scene as layout, appearance, and language drift, and the standard fix of teleoperating fresh trajectories on site does not scale. we replace human demonstration with a single brief iphone scan. scan2instruction compiles that scan into a complete training environment, automatically synthesizing executable navigation episodes with grounded instructions. prpt-ks then adapts the policy through a closed-form pareto utility read directly off the reconstructed scene, with no learned critic and no human labels. across five real environments, the two designs together drive our realnav to an 85% real-robot success rate, compared with 49% for a realnav baseline post-trained on human demonstrations, and still achieve 82% in unscanned regions of the same buildings, compared with 41% for the same baseline. our work turns demonstration-free scene adaptation for language-guided navigation from an aspiration into a working reality.">
+        <article class="paper-card" data-title="multi-agent reinforcement learning of co-adaptive hip exoskeleton control (marl-exo) for metabolic energy reduction" data-summary="objective: this study aims to determine whether a hip-exoskeleton policy trained in simulation, by co-adapting with a musculoskeletal human model under a metabolic-energy reward, reduces the metabolic cost of walking in new users without per-user tuning, and how mechanical-power shaping affects the learned assistance. methods: we developed marl-exo, a multi-agent reinforcement learning framework in which a full-body human model (304 muscle actuators; randomized anatomy, gait, and speed) and a bilateral hip-exoskeleton policy are trained concurrently in two stages. the exoskeleton observes only delayed hip kinematics and its past commands; its reward includes muscle metabolic power from a physiologically based energetics model, alone (metabolic) or with mechanical-power shaping (metabolic + power). the metabolic policy was deployed and tested without retraining in eight healthy adults walking at 1.25 m/s, using indirect calorimetry. results: in simulation, the metabolic policy reduced modeled muscle metabolic power by 13.8% relative to no-device walking, versus 8.8% for metabolic + power. on hardware, marl-exo reduced net metabolic rate by 18.3 $\pm$ 6.6% relative to passive in all eight participants. relative to no-exo, the mean reduction was 7.4 $\pm$ 10.0%; six participants more than offset the 13.1% device-wearing penalty, walking up to 24.2% below their no-exo cost. conclusion: a metabolically informed policy co-adapted in simulation transferred to users without per-user tuning and consistently reduced the metabolic cost of walking with the device, while explicit power shaping reduced the simulated benefit. significance: unlike per-user human-in-the-loop optimization, this approach yields a single population-level controller and allows assistance objectives to be screened in simulation before human testing.">
             <div class="card-meta-top">
                 <span class="rank-tag">TOP #4</span>
                 <div class="score-badge">
                     <span class="score-label">Priority Index</span>
-                    <span class="score-value">90</span>
+                    <span class="score-value">100</span>
                 </div>
             </div>
             
-            <h2 class="paper-title">One Scan is Enough: Demonstration-Free Adaptation for Language-Guided Navigation</h2>
+            <h2 class="paper-title">Multi-Agent Reinforcement Learning of Co-Adaptive Hip Exoskeleton Control (MARL-Exo) for Metabolic Energy Reduction</h2>
             
             <div class="author-row">
-                <span>🗓️ 2026-10-24</span>
-                <span>✍️ Zhuoyuan Yu, Yuxing Long, Du Wang et al.</span>
+                <span>🗓️ 2026-10-27</span>
+                <span>✍️ Yifei Yuan, Jakob Wolf, Ghaith Androwis et al.</span>
             </div>
             
             <div class="badge-cluster">
-                <span class="badge">#vla</span>
+                <span class="badge">#reinforcement learning</span><span class="badge">#actuator</span>
             </div>
             
-            <p class="paper-summary">Deploying a language-guided navigation policy in a new building usually means watching it fail. Public-benchmark VLAs degrade scene by scene as layout, appearance, and language drift, and the standard fix of teleoperating fresh trajectories on site does not scale. We replace human demonstration with a single brief iPhone scan. Scan2Instruction compiles that scan into a complete training environment, automatically synthesizing executable navigation episodes with grounded instructions. PRPT-KS then adapts the policy through a closed-form Pareto utility read directly off the reconstructed scene, with no learned critic and no human labels. Across five real environments, the two designs together drive our RealNav to an 85% real-robot success rate, compared with 49% for a RealNav baseline post-trained on human demonstrations, and still achieve 82% in unscanned regions of the same buildings, compared with 41% for the same baseline. Our work turns demonstration-free scene adaptation for language-guided navigation from an aspiration into a working reality.</p>
+            <p class="paper-summary">Objective: This study aims to determine whether a hip-exoskeleton policy trained in simulation, by co-adapting with a musculoskeletal human model under a metabolic-energy reward, reduces the metabolic cost of walking in new users without per-user tuning, and how mechanical-power shaping affects the learned assistance. Methods: We developed MARL-Exo, a multi-agent reinforcement learning framework in which a full-body human model (304 muscle actuators; randomized anatomy, gait, and speed) and a bilateral hip-exoskeleton policy are trained concurrently in two stages. The exoskeleton observes only delayed hip kinematics and its past commands; its reward includes muscle metabolic power from a physiologically based energetics model, alone (Metabolic) or with mechanical-power shaping (Metabolic + Power). The Metabolic policy was deployed and tested without retraining in eight healthy adults walking at 1.25 m/s, using indirect calorimetry. Results: In simulation, the Metabolic policy reduced modeled muscle metabolic power by 13.8% relative to no-device walking, versus 8.8% for Metabolic + Power. On hardware, MARL-Exo reduced net metabolic rate by 18.3 $\pm$ 6.6% relative to Passive in all eight participants. Relative to No-Exo, the mean reduction was 7.4 $\pm$ 10.0%; six participants more than offset the 13.1% device-wearing penalty, walking up to 24.2% below their No-Exo cost. Conclusion: A metabolically informed policy co-adapted in simulation transferred to users without per-user tuning and consistently reduced the metabolic cost of walking with the device, while explicit power shaping reduced the simulated benefit. Significance: Unlike per-user human-in-the-loop optimization, this approach yields a single population-level controller and allows assistance objectives to be screened in simulation before human testing.</p>
             
             <div class="card-action-bar">
-                <a href="http://arxiv.org/pdf/2610.33794v1" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
+                <a href="http://arxiv.org/pdf/2610.37441v1" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
                     View PDF
                 </a>
-                <a href="http://arxiv.org/abs/2610.33794v1" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
+                <a href="http://arxiv.org/abs/2610.37441v1" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
                     arXiv Page &rarr;
                 </a>
             </div>
         </article>
         
-        <article class="paper-card" data-title="robolongr: causally consistent rewards teach robots to progressively master long-horizon manipulation" data-summary="long-horizon manipulation requires actions whose validity depends on earlier interactions, yet visual progress can conceal missing task prerequisites. we propose robolongr, an offline-to-online framework that learns history-dependent rewards to guide policy adaptation to new tasks. its central objective is causal consistency: aligning rewarded progress with prerequisites supported by execution history. stage-shuffle supervision encourages execution-order sensitivity, recurrent memory preserves evidence of earlier interactions, and two-round training refines trajectory segments using predicted progress. the resulting rewards guide stage-conditioned policy refinement from behavior cloning to online reinforcement learning. sparse terminal feedback connects policy experience to reward learning by triggering correction for repeated high-scoring failures. pretrained on demonstrations from 88 rlbench tasks and open-x data, robolongr achieves 31.8% average success on 18 long-horizon tasks excluded from reward pretraining, exceeding the strongest evaluated baseline by 9.2 percentage points. across four real-robot tasks, it achieves 57.5% success, a 32.5-percentage-point improvement over the comparison method. reward-level controls probe sensitivity to synthetic order perturbations, while ablations examine the contributions of individual components to policy improvement.">
+        <article class="paper-card" data-title="world dreamer v5-lite: a multi-robot world action model with one dreamer" data-summary="multi-robot control requires integrating distributed camera views while predicting separate action sequences. most vision-language-action and world-action models target one robot. combining multiple views alone does not establish spatial correspondence between them. world dreamer v5-lite is a multi-robot world-action model built around a shared world state for robot-specific action prediction. calibrated features from a pretrained video encoder populate this state in workspace coordinates; its spatial size remains fixed as views are added. a vision-language model provides scene context and one query per robot. the queries read the shared state and exchange pose-aware information, while their action streams remain separate. masked-view cooperative training withholds selected camera views from both visual branches while retaining all action targets. this encourages the use of observations shared by other robots. pretraining uses more than 10,000 hours of trajectories from 20 simulated robot types, robofactory, and real robots. on robofactory, world dreamer v5-lite achieves 74.0% mean success, 23.7 percentage points above the strongest evaluated baseline. across four real-robot tasks, it reaches 78.8% mean success, a margin of 13.8 points. it also reaches 58.08% overall on robocasa365.">
             <div class="card-meta-top">
                 <span class="rank-tag">TOP #5</span>
                 <div class="score-badge">
                     <span class="score-label">Priority Index</span>
-                    <span class="score-value">80</span>
+                    <span class="score-value">95</span>
                 </div>
             </div>
             
-            <h2 class="paper-title">RoboLongR: Causally Consistent Rewards Teach Robots to Progressively Master Long-Horizon Manipulation</h2>
+            <h2 class="paper-title">World Dreamer v5-lite: A Multi-Robot World Action Model with One Dreamer</h2>
             
             <div class="author-row">
-                <span>🗓️ 2026-10-24</span>
-                <span>✍️ Zixuan Chen, Lin Cao, Fenggang Zhang et al.</span>
+                <span>🗓️ 2026-10-27</span>
+                <span>✍️ Guoning Wu, Zijian Cai, Yuhang Zhang et al.</span>
             </div>
             
             <div class="badge-cluster">
-                <span class="badge">#reinforcement learning</span>
+                <span class="badge">#vision-language-action</span>
             </div>
             
-            <p class="paper-summary">Long-horizon manipulation requires actions whose validity depends on earlier interactions, yet visual progress can conceal missing task prerequisites. We propose RoboLongR, an offline-to-online framework that learns history-dependent rewards to guide policy adaptation to new tasks. Its central objective is causal consistency: aligning rewarded progress with prerequisites supported by execution history. Stage-shuffle supervision encourages execution-order sensitivity, recurrent memory preserves evidence of earlier interactions, and two-round training refines trajectory segments using predicted progress. The resulting rewards guide stage-conditioned policy refinement from behavior cloning to online reinforcement learning. Sparse terminal feedback connects policy experience to reward learning by triggering correction for repeated high-scoring failures. Pretrained on demonstrations from 88 RLBench tasks and Open-X data, RoboLongR achieves 31.8% average success on 18 long-horizon tasks excluded from reward pretraining, exceeding the strongest evaluated baseline by 9.2 percentage points. Across four real-robot tasks, it achieves 57.5% success, a 32.5-percentage-point improvement over the comparison method. Reward-level controls probe sensitivity to synthetic order perturbations, while ablations examine the contributions of individual components to policy improvement.</p>
+            <p class="paper-summary">Multi-robot control requires integrating distributed camera views while predicting separate action sequences. Most vision-language-action and world-action models target one robot. Combining multiple views alone does not establish spatial correspondence between them. World Dreamer v5-lite is a multi-robot world-action model built around a shared world state for robot-specific action prediction. Calibrated features from a pretrained video encoder populate this state in workspace coordinates; its spatial size remains fixed as views are added. A vision-language model provides scene context and one query per robot. The queries read the shared state and exchange pose-aware information, while their action streams remain separate. Masked-view cooperative training withholds selected camera views from both visual branches while retaining all action targets. This encourages the use of observations shared by other robots. Pretraining uses more than 10,000 hours of trajectories from 20 simulated robot types, RoboFactory, and real robots. On RoboFactory, World Dreamer v5-lite achieves 74.0% mean success, 23.7 percentage points above the strongest evaluated baseline. Across four real-robot tasks, it reaches 78.8% mean success, a margin of 13.8 points. It also reaches 58.08% overall on RoboCasa365.</p>
             
             <div class="card-action-bar">
-                <a href="http://arxiv.org/pdf/2610.33863v1" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
+                <a href="http://arxiv.org/pdf/2610.37518v1" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
                     View PDF
                 </a>
-                <a href="http://arxiv.org/abs/2610.33863v1" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
+                <a href="http://arxiv.org/abs/2610.37518v1" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
                     arXiv Page &rarr;
                 </a>
             </div>
         </article>
         
-        <article class="paper-card" data-title="adadextrack: dynamic modulation for adaptive and generalizable dexterous manipulation tracking" data-summary="language is a natural way to command robots, but converting a single instruction into a long-horizon, contact-rich hand-object interaction remains challenging: synthesized references are noisy, human-to-robot retargeting introduces embodiment bias, and fixed-reference tracking lets small errors snowball. we address this with adadextrack, a modulator-in-the-loop framework for language-conditioned manipulation tracking. a distilled generalist tracker serves as the skill carrier, while a tightly aligned modulator performs three feedback corrections: reference modulation (continual adjustment of what to track), object-latent modulation (online adaptation of the object representation to recruit suitable skills), and positional-target modulation (small state-dependent refinements for execution). the tracker is learned via large-scale specialist to generalist distillation on a corpus of language-conditioned hand-object trajectories; the modulator is trained with rl under the same task objective, ensuring tight coupling. across large-scale evaluations, adadextrack consistently outperforms prior sota on unseen-trajectory and unseen-object sets in both average tracking error and success rate, demonstrating robustness and generalization. we further show zero-shot sim-to-real transfer on real hardware, where adding the modulator yields substantial gains over a tracker-only variant. adadextrack reframes language-conditioned dexterous manipulation as modulated tracking, replacing the open-loop, fixed-reference tracking with in-loop modulation that adjusts the reference, object latent, and positional target, yielding drift-resistant execution from noisy text references.">
+        <article class="paper-card" data-title="pushing dexterity and safety for in-hand object pose reaching that works remarkably well" data-summary="dexterous manipulation with multi-fingered hands is the next frontier of robotics, yet learned hand skills remain limited to simple grasps or basic repeated motions, such as rotating an object. as robots attempt more demanding in-hand maneuvers, safety, such as not dropping the object, becomes critical, yet it is rarely measured. we study in-hand object pose reaching, a task that demands diverse and difficult grasps: moving an object to almost any position and orientation within reach of the fingers, at any wrist orientation, through long sequences of consecutive goals. we present a recipe for training such policies for a leap hand in simulation without human data, built on a range of insights, from diverse resets and goals via generated grasp datasets to an adaptive friction curriculum. with careful system identification, the policies transfer zero-shot to the real hand, using either motion capture or a single wrist-mounted depth camera, and prove remarkably capable and robust. on top of the task policy, we add a learned residual safety filter with adjustable conservativeness, letting us tune the balance between performance and safety and greatly reduce object drops. in 13.3 hours of real-robot evaluation over 4,800 unseen goals across 4 objects and diverse wrist orientations, the state-based policy reaches 95.2% of goals within 2 cm and 0.4 rad, and the filter cuts its drops by 75% while still reaching 91.5% of goals. the policies can also spin a lightbulb held in an arbitrary pose, reach out-of-distribution goals, withstand fast arm motion and perturbations, and, needing only a wrist camera, serve as portable skills such as screwing in a lightbulb. we release the full recipe as a platform for studying performance, reliability, and safety in high-dimensional dexterous systems. videos and more are available at https://ian-chuang.github.io/dexsafe/.">
             <div class="card-meta-top">
                 <span class="rank-tag">TOP #6</span>
                 <div class="score-badge">
@@ -420,88 +420,88 @@
                 </div>
             </div>
             
-            <h2 class="paper-title">AdaDexTrack: Dynamic Modulation for Adaptive and Generalizable Dexterous Manipulation Tracking</h2>
+            <h2 class="paper-title">Pushing Dexterity and Safety for In-Hand Object Pose Reaching That Works Remarkably Well</h2>
             
             <div class="author-row">
-                <span>🗓️ 2026-10-24</span>
-                <span>✍️ Jianibieke Adalibieke, Qianwei Han, Xueyi Liu et al.</span>
+                <span>🗓️ 2026-10-27</span>
+                <span>✍️ Ian Chuang, Hiya Shah, Vamsi Chilamkur et al.</span>
             </div>
             
             <div class="badge-cluster">
                 <span class="badge">#dexterous manipulation</span>
             </div>
             
-            <p class="paper-summary">Language is a natural way to command robots, but converting a single instruction into a long-horizon, contact-rich hand-object interaction remains challenging: synthesized references are noisy, human-to-robot retargeting introduces embodiment bias, and fixed-reference tracking lets small errors snowball. We address this with AdaDexTrack, a modulator-in-the-loop framework for language-conditioned manipulation tracking. A distilled generalist tracker serves as the skill carrier, while a tightly aligned modulator performs three feedback corrections: reference modulation (continual adjustment of what to track), object-latent modulation (online adaptation of the object representation to recruit suitable skills), and positional-target modulation (small state-dependent refinements for execution). The tracker is learned via large-scale specialist to generalist distillation on a corpus of language-conditioned hand-object trajectories; the modulator is trained with RL under the same task objective, ensuring tight coupling. Across large-scale evaluations, AdaDexTrack consistently outperforms prior SOTA on unseen-trajectory and unseen-object sets in both average tracking error and success rate, demonstrating robustness and generalization. We further show zero-shot sim-to-real transfer on real hardware, where adding the modulator yields substantial gains over a tracker-only variant. AdaDexTrack reframes language-conditioned dexterous manipulation as modulated tracking, replacing the open-loop, fixed-reference tracking with in-loop modulation that adjusts the reference, object latent, and positional target, yielding drift-resistant execution from noisy text references.</p>
+            <p class="paper-summary">Dexterous manipulation with multi-fingered hands is the next frontier of robotics, yet learned hand skills remain limited to simple grasps or basic repeated motions, such as rotating an object. As robots attempt more demanding in-hand maneuvers, safety, such as not dropping the object, becomes critical, yet it is rarely measured. We study in-hand object pose reaching, a task that demands diverse and difficult grasps: moving an object to almost any position and orientation within reach of the fingers, at any wrist orientation, through long sequences of consecutive goals. We present a recipe for training such policies for a LEAP hand in simulation without human data, built on a range of insights, from diverse resets and goals via generated grasp datasets to an adaptive friction curriculum. With careful system identification, the policies transfer zero-shot to the real hand, using either motion capture or a single wrist-mounted depth camera, and prove remarkably capable and robust. On top of the task policy, we add a learned residual safety filter with adjustable conservativeness, letting us tune the balance between performance and safety and greatly reduce object drops. In 13.3 hours of real-robot evaluation over 4,800 unseen goals across 4 objects and diverse wrist orientations, the state-based policy reaches 95.2% of goals within 2 cm and 0.4 rad, and the filter cuts its drops by 75% while still reaching 91.5% of goals. The policies can also spin a lightbulb held in an arbitrary pose, reach out-of-distribution goals, withstand fast arm motion and perturbations, and, needing only a wrist camera, serve as portable skills such as screwing in a lightbulb. We release the full recipe as a platform for studying performance, reliability, and safety in high-dimensional dexterous systems. Videos and more are available at https://ian-chuang.github.io/dexsafe/.</p>
             
             <div class="card-action-bar">
-                <a href="http://arxiv.org/pdf/2610.33852v1" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
+                <a href="http://arxiv.org/pdf/2610.37652v1" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
                     View PDF
                 </a>
-                <a href="http://arxiv.org/abs/2610.33852v1" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
+                <a href="http://arxiv.org/abs/2610.37652v1" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
                     arXiv Page &rarr;
                 </a>
             </div>
         </article>
         
-        <article class="paper-card" data-title="energy-based fault detection and isolation framework for flat port-hamiltonian mechanical systems" data-summary="fault diagnosis during regulated motion requires informative signals even when feedback attenuates tracking deviations. this paper develops an energy-based diagnostic framework that constructs mechanical port-power residuals without a dedicated dynamic observer. spectral hamiltonian algebraic power evaluation (shape) combines port-hamiltonian variables and differential flatness to generate nominal power references from planned motion for fully actuated mechanical systems with collocated actuation. subtracting these references from commanded effort multiplied by measured flow yields residuals whose final evaluation requires neither recursive observer updates nor measured-state dynamics calculations. continuous wavelet transform (cwt) scalograms and a shared-encoder convolutional neural network are used to distinguish nominal operation, actuator loss of effectiveness, anomalous friction, and vibration from complete trajectories. evaluation uses a simulated six degree of freedom kinova manipulator under model predictive control and fixed plant-model mismatch, with single faults at a specified joint. across five training seeds and 3000 held-out test runs, shape-cwt achieves a mean accuracy of 84.69 percent, versus 81.67 percent for torque residuals and 97.17 percent for the generalized momentum observer under common cwt processing. the respective sample standard deviations are 0.70, 0.70, and 0.37 percentage points. these results demonstrate useful fault-type discrimination from algebraic power residuals, while severity-excitation profiles and offline velocity perturbations reveal limits to their diagnostic capability.">
+        <article class="paper-card" data-title="when, where, and what to correct: human-guided adaptive residual correction for robot policies" data-summary="imitation policies that reliably execute most of a manipulation trajectory can still fail in localized regions requiring last-mile precision. updating the full policy or exploring residual actions everywhere treats this local failure as a global learning problem. we introduce adaptive residual correction (arc), a lightweight post-training module that uses reinforcement learning (rl) to learn a residual correction on top of a frozen policy while using sparse human corrections to structure autonomous exploration. rather than treating human corrections as imitation targets, arc uses pre-intervention states to determine 'when' residual control should become active and correction geometry to determine 'where' in residual action space autonomous refinement should explore; task reward determines 'what' residual is ultimately executed. across three precision-manipulation tasks on a real robot, arc improves average task success from 33.3% to 75.0%. the human corrections define task-dependent 2-3 dimensional subspaces of the seven-joint residual space that retain 96.0-97.7% of squared correction magnitude. together, these results show that sparse human corrections can localize and constrain autonomous post-training without requiring the observed correction itself to serve as the final action target.">
             <div class="card-meta-top">
                 <span class="rank-tag">TOP #7</span>
                 <div class="score-badge">
                     <span class="score-label">Priority Index</span>
-                    <span class="score-value">70</span>
+                    <span class="score-value">80</span>
                 </div>
             </div>
             
-            <h2 class="paper-title">Energy-Based Fault Detection and Isolation Framework for Flat Port-Hamiltonian Mechanical Systems</h2>
+            <h2 class="paper-title">When, Where, and What to Correct: Human-Guided Adaptive Residual Correction for Robot Policies</h2>
             
             <div class="author-row">
-                <span>🗓️ 2026-10-24</span>
-                <span>✍️ Johnny Garcia, Nicolas Salguero, Naveed Iqbal et al.</span>
+                <span>🗓️ 2026-10-27</span>
+                <span>✍️ Anukriti Singh, Maxime Caniot, Pratap Tokekar et al.</span>
             </div>
             
             <div class="badge-cluster">
-                <span class="badge">#actuator</span>
+                <span class="badge">#reinforcement learning</span>
             </div>
             
-            <p class="paper-summary">Fault diagnosis during regulated motion requires informative signals even when feedback attenuates tracking deviations. This paper develops an energy-based diagnostic framework that constructs mechanical port-power residuals without a dedicated dynamic observer. Spectral Hamiltonian Algebraic Power Evaluation (SHAPE) combines port-Hamiltonian variables and differential flatness to generate nominal power references from planned motion for fully actuated mechanical systems with collocated actuation. Subtracting these references from commanded effort multiplied by measured flow yields residuals whose final evaluation requires neither recursive observer updates nor measured-state dynamics calculations. Continuous wavelet transform (CWT) scalograms and a shared-encoder convolutional neural network are used to distinguish nominal operation, actuator loss of effectiveness, anomalous friction, and vibration from complete trajectories. Evaluation uses a simulated six degree of freedom Kinova manipulator under model predictive control and fixed plant-model mismatch, with single faults at a specified joint. Across five training seeds and 3000 held-out test runs, SHAPE-CWT achieves a mean accuracy of 84.69 percent, versus 81.67 percent for torque residuals and 97.17 percent for the generalized momentum observer under common CWT processing. The respective sample standard deviations are 0.70, 0.70, and 0.37 percentage points. These results demonstrate useful fault-type discrimination from algebraic power residuals, while severity-excitation profiles and offline velocity perturbations reveal limits to their diagnostic capability.</p>
+            <p class="paper-summary">Imitation policies that reliably execute most of a manipulation trajectory can still fail in localized regions requiring last-mile precision. Updating the full policy or exploring residual actions everywhere treats this local failure as a global learning problem. We introduce Adaptive Residual Correction (ARC), a lightweight post-training module that uses reinforcement learning (RL) to learn a residual correction on top of a frozen policy while using sparse human corrections to structure autonomous exploration. Rather than treating human corrections as imitation targets, ARC uses pre-intervention states to determine 'when' residual control should become active and correction geometry to determine 'where' in residual action space autonomous refinement should explore; task reward determines 'what' residual is ultimately executed. Across three precision-manipulation tasks on a real robot, ARC improves average task success from 33.3% to 75.0%. The human corrections define task-dependent 2-3 dimensional subspaces of the seven-joint residual space that retain 96.0-97.7% of squared correction magnitude. Together, these results show that sparse human corrections can localize and constrain autonomous post-training without requiring the observed correction itself to serve as the final action target.</p>
             
             <div class="card-action-bar">
-                <a href="http://arxiv.org/pdf/2610.33679v1" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
+                <a href="http://arxiv.org/pdf/2610.37547v1" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
                     View PDF
                 </a>
-                <a href="http://arxiv.org/abs/2610.33679v1" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
+                <a href="http://arxiv.org/abs/2610.37547v1" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
                     arXiv Page &rarr;
                 </a>
             </div>
         </article>
         
-        <article class="paper-card" data-title="i won't know until i try: interactive information gathering for long-horizon manipulation" data-summary="long-horizon manipulation often depends on object properties that cannot be reliably inferred from appearance alone. physical interaction can reveal these properties, but it can also change the world in ways that invalidate subsequent actions. we present a task and motion planning (tamp) framework that integrates task-directed interactive information-gathering with interleaved planning and execution. building on pddlstream, our framework plans optimistically with these interactive actions, verifies their outcomes during execution, and adapts the remaining plan by retaining still-applicable actions and replanning only the connections needed to continue execution. we evaluate the framework in simulation and on a real robot across tasks that require determining whether an object is movable, a pen has ink, a drawer can be opened, or a container is empty. these experiments demonstrate how interaction-driven state updates and recovery replanning support continued execution under uncertain outcomes and external disturbances.">
+        <article class="paper-card" data-title="rendering-free event frame simulation for fast reinforcement learning of autonomous robot navigation" data-summary="event cameras offer low latency, high dynamic range, and milliwatt-level power consumption, making them ideal for agile robots such as tiny drones navigating through cluttered environments. however, existing simulators generally render photorealistic images before converting them into events, making large-scale reinforcement learning prohibitively slow. we propose an analytic event simulator that exploits what event cameras fundamentally measure - moving contrast edges - to synthesize event streams directly from scene geometry and ego-motion without visual rendering. our simulator generates a 64x64 event observation in 17 microseconds on a single gpu - over 400x faster than a state-of-the-art rendering pipeline - enabling end-to-end reinforcement learning for goal-directed obstacle avoidance to converge in under 30 minutes - three orders of magnitude faster than training on rendered events. policies transfer zero-shot to physically based event simulations (ray-traced isaac sim). our policy reaches 83% success in cluttered courses unseen during training (mid-difficulty, traversability probability approx. 0.57), at 2.4 m/s average goal velocity, and retains 70% in a simulated texture-dense indoor hall. furthermore, we quantized the policy to a 1.2 mb int8 network running fully onboard a 56-gram crazyflie equipped with a prophesee genx320 event camera and an openmv n6 microcontroller board. without any fine-tuning, external processing, or positioning, the policy achieves an average success rate of 82% (5/5, 5/6, 4/6 flights) across three real-world obstacle courses of increasing difficulty. code: https://github.com/tudelft/rendering-free-event-nav">
             <div class="card-meta-top">
                 <span class="rank-tag">TOP #8</span>
                 <div class="score-badge">
                     <span class="score-label">Priority Index</span>
-                    <span class="score-value">50</span>
+                    <span class="score-value">80</span>
                 </div>
             </div>
             
-            <h2 class="paper-title">I Won't Know Until I Try: Interactive Information Gathering for Long-Horizon Manipulation</h2>
+            <h2 class="paper-title">Rendering-Free Event Frame Simulation for Fast Reinforcement Learning of Autonomous Robot Navigation</h2>
             
             <div class="author-row">
-                <span>🗓️ 2026-10-25</span>
-                <span>✍️ Linfei Yuan, Rachel Holladay</span>
+                <span>🗓️ 2026-10-27</span>
+                <span>✍️ Dequan Ou, Austin Lopez, Quentin Missinne et al.</span>
             </div>
             
             <div class="badge-cluster">
-                <span class="badge badge-muted">#frontier</span>
+                <span class="badge">#reinforcement learning</span>
             </div>
             
-            <p class="paper-summary">Long-horizon manipulation often depends on object properties that cannot be reliably inferred from appearance alone. Physical interaction can reveal these properties, but it can also change the world in ways that invalidate subsequent actions. We present a task and motion planning (TAMP) framework that integrates task-directed interactive information-gathering with interleaved planning and execution. Building on PDDLStream, our framework plans optimistically with these interactive actions, verifies their outcomes during execution, and adapts the remaining plan by retaining still-applicable actions and replanning only the connections needed to continue execution. We evaluate the framework in simulation and on a real robot across tasks that require determining whether an object is movable, a pen has ink, a drawer can be opened, or a container is empty. These experiments demonstrate how interaction-driven state updates and recovery replanning support continued execution under uncertain outcomes and external disturbances.</p>
+            <p class="paper-summary">Event cameras offer low latency, high dynamic range, and milliwatt-level power consumption, making them ideal for agile robots such as tiny drones navigating through cluttered environments. However, existing simulators generally render photorealistic images before converting them into events, making large-scale reinforcement learning prohibitively slow. We propose an analytic event simulator that exploits what event cameras fundamentally measure - moving contrast edges - to synthesize event streams directly from scene geometry and ego-motion without visual rendering. Our simulator generates a 64x64 event observation in 17 microseconds on a single GPU - over 400x faster than a state-of-the-art rendering pipeline - enabling end-to-end reinforcement learning for goal-directed obstacle avoidance to converge in under 30 minutes - three orders of magnitude faster than training on rendered events. Policies transfer zero-shot to physically based event simulations (ray-traced Isaac Sim). Our policy reaches 83% success in cluttered courses unseen during training (mid-difficulty, traversability probability approx. 0.57), at 2.4 m/s average goal velocity, and retains 70% in a simulated texture-dense indoor hall. Furthermore, we quantized the policy to a 1.2 MB int8 network running fully onboard a 56-gram Crazyflie equipped with a Prophesee GenX320 event camera and an OpenMV N6 microcontroller board. Without any fine-tuning, external processing, or positioning, the policy achieves an average success rate of 82% (5/5, 5/6, 4/6 flights) across three real-world obstacle courses of increasing difficulty. Code: https://github.com/tudelft/rendering-free-event-nav</p>
             
             <div class="card-action-bar">
-                <a href="http://arxiv.org/pdf/2610.33959v1" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
+                <a href="http://arxiv.org/pdf/2610.37543v1" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
                     View PDF
                 </a>
-                <a href="http://arxiv.org/abs/2610.33959v1" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
+                <a href="http://arxiv.org/abs/2610.37543v1" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
                     arXiv Page &rarr;
                 </a>
             </div>
