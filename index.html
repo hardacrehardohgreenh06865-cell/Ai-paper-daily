@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Embodied AI & Robotics Intelligence Digest — October 30, 2026</title>
+    <title>Embodied AI & Robotics Intelligence Digest — October 31, 2026</title>
     <style>
         :root {
             --bg-base: #080c14;
@@ -242,7 +242,7 @@
         <header>
             <span class="pill-brand">Autonomous Research Intelligence</span>
             <h1>Embodied AI & Physical Frontier Briefing</h1>
-            <p class="subtitle">Compiled on October 30, 2026 • Ranked top 8 strategic breakthroughs out of incoming preprints.</p>
+            <p class="subtitle">Compiled on October 31, 2026 • Ranked top 8 strategic breakthroughs out of incoming preprints.</p>
             
             <div class="controls">
                 <input type="text" id="filterInput" class="search-box" placeholder="Filter papers by keywords (e.g. humanoid, tactile, diffusion)...">
@@ -251,257 +251,257 @@
 
         <main id="paperList">
             
-        <article class="paper-card" data-title="quantize by doing: task-guided mixed-precision quantization of vision-language-action models" data-summary="post-training quantization (ptq) reduces the memory footprint of vision-language-action (vla) models, but lowering bit widths while maintaining task performance remains challenging. existing work has used sensitivity estimates from calibration data to assign bit widths to different model components. however, using task success directly to guide mixed-precision allocation is underexplored because closed-loop evaluations are costly and the effect of quantizing one component depends on the precision of other components. to this end, we propose \textbf{qbd-vla}, a task-guided mixed-precision quantization method that uses task success from short closed-loop evaluations to assign weight and activation bit widths while accounting for interactions between model components. experiments covering four vla models and all four libero suites show strong task performance at average precisions of approximately 4 bits for weights and fewer than 6 bits for activations. on simpler, the gain over uniform quantization is small. on a franka research 3 robot arm, simulation-selected allocations show no detected success-rate loss on x-vla but fail on $π_{0.5}$. these findings support using task success to guide mixed-precision vla quantization, while highlighting the need for real-world evaluation before deployment. code is available at \href{https://github.com/jiuyixu25/qbd-vla}{\texttt{github.com/jiuyixu25/qbd-vla}}.">
+        <article class="paper-card" data-title="gym-anything for robotics: scaling physical simulations with digital agents" data-summary="realistic, fast robotics simulations could enable large-scale training of embodied ai models that transfer to the real world. however, despite decades of progress, available simulations cover only a narrow range of real-world tasks and physical phenomena. the core bottleneck is that creating better simulations requires significant expert effort and therefore does not scale. to address this, we introduce gym-anything for robotics, a framework in which coding agents create realistic robotics simulations. our core insight is that simulation creation is a coding agent task, so improvements in coding agents translate directly into richer and more faithful simulations. we select simulations based on u.s. gdp data to cover economically valuable physical work, define what makes a good simulation and a good task, and develop an adversarial creation-audit loop that checks each simulation and task against these definitions. using this pipeline, we build roboworld, a set of 25 simulations with 25 test and 175 training rl environments of varying difficulty. even the best frontier models fail on every roboworld test task, achieving an average reward of only 0.06. building on roboworld, we introduce several new ways for frontier models to improve, including in-context learning across repeated attempts, a privileged teacher that reads the simulator state and teaches a student in context, self-assisted learning from the model's own privileged experience, and code policies that generate demonstrations across varied scenes to train vision-language-action models (vlas) such as $π_{0.5}$. each of these substantially improves performance. we release our pipeline, rl environments, and benchmark to facilitate future research. code and data are available at https://gym-anything.github.io/robotics">
             <div class="card-meta-top">
                 <span class="rank-tag">TOP #1</span>
                 <div class="score-badge">
                     <span class="score-label">Priority Index</span>
-                    <span class="score-value">135</span>
+                    <span class="score-value">185</span>
                 </div>
             </div>
             
-            <h2 class="paper-title">Quantize by Doing: Task-Guided Mixed-Precision Quantization of Vision-Language-Action Models</h2>
+            <h2 class="paper-title">Gym-Anything for Robotics: Scaling physical simulations with digital agents</h2>
             
             <div class="author-row">
-                <span>🗓️ 2026-10-28</span>
-                <span>✍️ Jiuyi Xu, Xiao Hu, Meida Chen et al.</span>
+                <span>🗓️ 2026-10-29</span>
+                <span>✍️ Pranjal Aggarwal, Sean Welleck</span>
             </div>
             
             <div class="badge-cluster">
-                <span class="badge">#vision-language-action</span><span class="badge">#vla</span>
+                <span class="badge">#embodied ai</span><span class="badge">#vision-language-action</span><span class="badge">#vla</span>
             </div>
             
-            <p class="paper-summary">Post-training quantization (PTQ) reduces the memory footprint of vision-language-action (VLA) models, but lowering bit widths while maintaining task performance remains challenging. Existing work has used sensitivity estimates from calibration data to assign bit widths to different model components. However, using task success directly to guide mixed-precision allocation is underexplored because closed-loop evaluations are costly and the effect of quantizing one component depends on the precision of other components. To this end, we propose \textbf{QbD-VLA}, a task-guided mixed-precision quantization method that uses task success from short closed-loop evaluations to assign weight and activation bit widths while accounting for interactions between model components. Experiments covering four VLA models and all four LIBERO suites show strong task performance at average precisions of approximately 4 bits for weights and fewer than 6 bits for activations. On SIMPLER, the gain over uniform quantization is small. On a Franka Research 3 robot arm, simulation-selected allocations show no detected success-rate loss on X-VLA but fail on $π_{0.5}$. These findings support using task success to guide mixed-precision VLA quantization, while highlighting the need for real-world evaluation before deployment. Code is available at \href{https://github.com/jiuyixu25/QbD-VLA}{\texttt{github.com/jiuyixu25/QbD-VLA}}.</p>
+            <p class="paper-summary">Realistic, fast robotics simulations could enable large-scale training of embodied AI models that transfer to the real world. However, despite decades of progress, available simulations cover only a narrow range of real-world tasks and physical phenomena. The core bottleneck is that creating better simulations requires significant expert effort and therefore does not scale. To address this, we introduce Gym-Anything for Robotics, a framework in which coding agents create realistic robotics simulations. Our core insight is that simulation creation is a coding agent task, so improvements in coding agents translate directly into richer and more faithful simulations. We select simulations based on U.S. GDP data to cover economically valuable physical work, define what makes a good simulation and a good task, and develop an adversarial creation-audit loop that checks each simulation and task against these definitions. Using this pipeline, we build RoboWorld, a set of 25 simulations with 25 test and 175 training RL environments of varying difficulty. Even the best frontier models fail on every RoboWorld test task, achieving an average reward of only 0.06. Building on RoboWorld, we introduce several new ways for frontier models to improve, including in-context learning across repeated attempts, a privileged teacher that reads the simulator state and teaches a student in context, self-assisted learning from the model's own privileged experience, and code policies that generate demonstrations across varied scenes to train vision-language-action models (VLAs) such as $π_{0.5}$. Each of these substantially improves performance. We release our pipeline, RL environments, and benchmark to facilitate future research. Code and data are available at https://gym-anything.github.io/robotics</p>
             
             <div class="card-action-bar">
-                <a href="http://arxiv.org/pdf/2610.38661v1" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
+                <a href="http://arxiv.org/pdf/2610.40565v1" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
                     View PDF
                 </a>
-                <a href="http://arxiv.org/abs/2610.38661v1" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
+                <a href="http://arxiv.org/abs/2610.40565v1" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
                     arXiv Page &rarr;
                 </a>
             </div>
         </article>
         
-        <article class="paper-card" data-title="saivla-jepa: evaluating future latent prediction in jepa-conditioned vla control" data-summary="joint-embedding predictive architectures (jepas) learn to predict representations rather than pixels, offering a compact way to model how visual scenes evolve. we ask whether this predictive objective improves closed-loop control when a vision-language-action (vla) policy already uses v-jepa features. we call our jepa-conditioned flow policy family saivla-jepa. it combines a vision-language model with a diffusion transformer action expert and receives features from a frozen v-jepa encoder. two lightweight auxiliary heads predict future representations during training and are omitted at inference, leaving the action sampler unchanged. we compare policies without jepa features, with current jepa conditioning, and with additional future supervision on 10,030 paired libero-plus episodes. current jepa conditioning reaches about 82.5% success versus 71.6% without jepa, while future supervision provides no detectable aggregate gain at the evaluated training budget. we separately evaluate saivla-jepa-tca, which adapts latent context, and saivla-jepa-tpa, which adapts selected parameters. the context-retry gain is a system-level result under a larger attempt budget; parameter adaptation shows no consistent advantage over the frozen policy and target controls. these results motivate assessing latent-prediction objectives through paired closed-loop rollouts rather than latent loss alone.">
+        <article class="paper-card" data-title="hifor: hierarchical foresight with action-guided world grounding for vision-language-action model" data-summary="vision-language-action (vla) models have demonstrated promising capabilities in robotic manipulation by integrating visual perception, language understanding, and action generation. recent advances have further incorporated future prediction to enhance the understanding of environmental dynamics and task progression. however, existing methods often model short-term dynamics and long-term task objectives separately, while directly incorporating predicted futures into action policies without sufficiently considering their relevance to current action requirements. to address these limitations, we propose hifor, a hierarchical foresight framework with action-guided world retrieval. specifically, hierarchical foresight prediction jointly predicts short-term state evolution, semantic milestones, and final goal states through a hierarchical dependency mask (hdm), establishing dependencies across temporal horizons. building upon these predictions, structure-aware latent world modeling organizes future latent representations along the horizon, view, and spatial dimensions to facilitate fine-grained retrieval. furthermore, action-guided factorized world retrieval adaptively retrieves relevant future information from the structured latent world based on evolving action representations during denoising, providing targeted guidance for action generation. extensive experiments on two simulation benchmarks and six real-world robotic manipulation tasks demonstrate the effectiveness of our approach.">
             <div class="card-meta-top">
                 <span class="rank-tag">TOP #2</span>
                 <div class="score-badge">
                     <span class="score-label">Priority Index</span>
+                    <span class="score-value">175</span>
+                </div>
+            </div>
+            
+            <h2 class="paper-title">HiFOR: Hierarchical Foresight with Action-Guided World Grounding for Vision-Language-Action Model</h2>
+            
+            <div class="author-row">
+                <span>🗓️ 2026-10-29</span>
+                <span>✍️ Rongxing Ding, Hongyu Qu, Kehong Wu et al.</span>
+            </div>
+            
+            <div class="badge-cluster">
+                <span class="badge">#world model</span><span class="badge">#vision-language-action</span><span class="badge">#vla</span>
+            </div>
+            
+            <p class="paper-summary">Vision-Language-Action (VLA) models have demonstrated promising capabilities in robotic manipulation by integrating visual perception, language understanding, and action generation. Recent advances have further incorporated future prediction to enhance the understanding of environmental dynamics and task progression. However, existing methods often model short-term dynamics and long-term task objectives separately, while directly incorporating predicted futures into action policies without sufficiently considering their relevance to current action requirements. To address these limitations, we propose HiFOR, a hierarchical foresight framework with action-guided world retrieval. Specifically, Hierarchical Foresight Prediction jointly predicts short-term state evolution, semantic milestones, and final goal states through a Hierarchical Dependency Mask (HDM), establishing dependencies across temporal horizons. Building upon these predictions, Structure-Aware Latent World Modeling organizes future latent representations along the horizon, view, and spatial dimensions to facilitate fine-grained retrieval. Furthermore, Action-Guided Factorized World Retrieval adaptively retrieves relevant future information from the structured latent world based on evolving action representations during denoising, providing targeted guidance for action generation. Extensive experiments on two simulation benchmarks and six real-world robotic manipulation tasks demonstrate the effectiveness of our approach.</p>
+            
+            <div class="card-action-bar">
+                <a href="http://arxiv.org/pdf/2610.40373v1" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
+                    View PDF
+                </a>
+                <a href="http://arxiv.org/abs/2610.40373v1" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
+                    arXiv Page &rarr;
+                </a>
+            </div>
+        </article>
+        
+        <article class="paper-card" data-title="burger: benchmarking and understanding robotic generalization via embodied drawing" data-summary="how effectively can vision-language-action (vla) models learn diverse language-conditioned behaviors as training data scales? investigating this question requires large and varied robot datasets, whose collection on physical robots remains costly. we introduce burger, a language-conditioned robotic drawing benchmark with a scalable, prompt-driven pipeline for generating continuous drawing trajectories, both in simulation and the real world. in burger, an agent starts from the same blank canvas and controls a robot arm to draw the object or spatial composition specified by language, while each instruction allows an open-ended variety of valid drawings and stroke orders. using 28,200 simulated demonstrations spanning 282 drawing tasks, we evaluate five representative vla models across data scales, language grounding, and multimodal behavior. burger supports fine-grained analysis of language grounding, spatial composition, and action generation, revealing distinct failure patterns across vla models. our experiments suggest that some vla models can benefit from greater task diversity and demonstration scale, capture multimodal drawing behaviors, and generalize to unseen compositions of familiar objects. finally, we deploy a trained policy on a franka panda arm, demonstrating the ability to draw reactively under human intervention. project homepage and code can be found at https://siyingzhao.github.io/burger/.">
+            <div class="card-meta-top">
+                <span class="rank-tag">TOP #3</span>
+                <div class="score-badge">
+                    <span class="score-label">Priority Index</span>
                     <span class="score-value">135</span>
                 </div>
             </div>
             
-            <h2 class="paper-title">SaiVLA-JEPA: Evaluating Future Latent Prediction in JEPA-Conditioned VLA Control</h2>
+            <h2 class="paper-title">BURGER: Benchmarking and Understanding Robotic Generalization via Embodied Drawing</h2>
             
             <div class="author-row">
-                <span>🗓️ 2026-10-28</span>
-                <span>✍️ Rufeng Xiao, Ruihao Xiao, Wei Chen et al.</span>
+                <span>🗓️ 2026-10-29</span>
+                <span>✍️ Xiangyu Xu, Bangshuai Peng, Ziyi Liu et al.</span>
             </div>
             
             <div class="badge-cluster">
                 <span class="badge">#vision-language-action</span><span class="badge">#vla</span>
             </div>
             
-            <p class="paper-summary">Joint-embedding predictive architectures (JEPAs) learn to predict representations rather than pixels, offering a compact way to model how visual scenes evolve. We ask whether this predictive objective improves closed-loop control when a vision-language-action (VLA) policy already uses V-JEPA features. We call our JEPA-conditioned flow policy family SaiVLA-JEPA. It combines a vision-language model with a diffusion transformer action expert and receives features from a frozen V-JEPA encoder. Two lightweight auxiliary heads predict future representations during training and are omitted at inference, leaving the action sampler unchanged. We compare policies without JEPA features, with current JEPA conditioning, and with additional future supervision on 10,030 paired LIBERO-Plus episodes. Current JEPA conditioning reaches about 82.5% success versus 71.6% without JEPA, while future supervision provides no detectable aggregate gain at the evaluated training budget. We separately evaluate SaiVLA-JEPA-TCA, which adapts latent context, and SaiVLA-JEPA-TPA, which adapts selected parameters. The context-retry gain is a system-level result under a larger attempt budget; parameter adaptation shows no consistent advantage over the frozen policy and target controls. These results motivate assessing latent-prediction objectives through paired closed-loop rollouts rather than latent loss alone.</p>
+            <p class="paper-summary">How effectively can vision-language-action (VLA) models learn diverse language-conditioned behaviors as training data scales? Investigating this question requires large and varied robot datasets, whose collection on physical robots remains costly. We introduce BURGER, a language-conditioned robotic drawing benchmark with a scalable, prompt-driven pipeline for generating continuous drawing trajectories, both in simulation and the real world. In BURGER, an agent starts from the same blank canvas and controls a robot arm to draw the object or spatial composition specified by language, while each instruction allows an open-ended variety of valid drawings and stroke orders. Using 28,200 simulated demonstrations spanning 282 drawing tasks, we evaluate five representative VLA models across data scales, language grounding, and multimodal behavior. BURGER supports fine-grained analysis of language grounding, spatial composition, and action generation, revealing distinct failure patterns across VLA models. Our experiments suggest that some VLA models can benefit from greater task diversity and demonstration scale, capture multimodal drawing behaviors, and generalize to unseen compositions of familiar objects. Finally, we deploy a trained policy on a Franka Panda arm, demonstrating the ability to draw reactively under human intervention. Project homepage and code can be found at https://siyingzhao.github.io/BURGER/.</p>
             
             <div class="card-action-bar">
-                <a href="http://arxiv.org/pdf/2610.38508v1" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
+                <a href="http://arxiv.org/pdf/2610.40532v1" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
                     View PDF
                 </a>
-                <a href="http://arxiv.org/abs/2610.38508v1" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
+                <a href="http://arxiv.org/abs/2610.40532v1" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
                     arXiv Page &rarr;
                 </a>
             </div>
         </article>
         
-        <article class="paper-card" data-title="explore where it matters: targeted exploration for efficient rover adaptation" data-summary="future planetary rovers will traverse steep, deformable terrain where slip, sinkage, and terrain deformation can threaten mobility. although simulation can capture some wheel-soil effects, unmodeled deformable-terrain phenomena create sim-to-real gaps requiring deployment-time adaptation. yet, rover operations leave little room for extensive trial-and-error. we introduce terra (targeted exploration for reward-relevant adaptation), an online adaptation framework that efficiently seeks deployment data exposing task-relevant model errors and corrects them. terra adapts a simulation-trained world model with a reward-weighted prediction loss and trains a loss predictor to estimate where future performance-relevant errors are likely to occur, using this signal to guide exploration during mpc. in simulation, terra reaches approximately 90% slope-climbing success within five trials under severe out-of-distribution pretraining conditions, outperforming exploration baselines in reward, completion time, and energy to first success. on the ernest rover, terra recovers coordinated active-suspension locomotion on a deformable mars-simulant slope within three to five real-world trials. project website: https://terra-explore.github.io">
+        <article class="paper-card" data-title="is it the curriculum or just the easy start? benchmarking unsupervised environment design on quadrupeds" data-summary="unsupervised environment design (ued) methods such as plr, accel, sfl and paired are compared mostly on 2d mazes, grid worlds and bipedalwalker, while terrain curricula for legged robots are hand-designed and evaluated against a few baselines. we present a benchmark that runs fourteen ued, domain-randomisation and robotics curricula under one protocol on five 3d quadrupeds in mujoco mjx: the closed-chain w01-tek and the open-chain unitree go1 and go2, google barkour vb and boston dynamics spot. levels are vectors of eight interpretable terrain parameters, and all curricula drive the same ppo student at matched environment-step budgets. the evaluation reports success on random and held-out structured terrains, interquartile means with stratified bootstrap intervals, capability envelopes and a level-by-level domination comparison. we compare methods within each robot and report, per level set, the top group of methods not significantly below the best. no method is in the top group on every robot and level set. methods with easy or low-difficulty training levels, curated or not, fill the top groups on in-distribution random levels of go1 and barkour, and of w01-tek apart from paired+bibc. the success-driven terrain curriculum from legged-robot practice is in a top group most often, domain randomisation on uniform levels in none, and paired in none outside spot, where the fourteen methods lie within 3.8 points on random levels of difficulty 0.25. on three robots the leader on in-distribution random levels is not the leader on held-out terrain. we collect the results into a per-robot guide to choosing a curriculum.">
             <div class="card-meta-top">
-                <span class="rank-tag">TOP #3</span>
+                <span class="rank-tag">TOP #4</span>
                 <div class="score-badge">
                     <span class="score-label">Priority Index</span>
-                    <span class="score-value">115</span>
+                    <span class="score-value">120</span>
                 </div>
             </div>
             
-            <h2 class="paper-title">Explore Where It Matters: Targeted Exploration for Efficient Rover Adaptation</h2>
+            <h2 class="paper-title">Is It the Curriculum or Just the Easy Start? Benchmarking Unsupervised Environment Design on Quadrupeds</h2>
             
             <div class="author-row">
-                <span>🗓️ 2026-10-28</span>
-                <span>✍️ Jacob Levy, Arthur Bouton, Tristan D. Hassler et al.</span>
+                <span>🗓️ 2026-10-29</span>
+                <span>✍️ Jakub Gilewicz, Dominik Galus, Piotr Wojdas</span>
             </div>
             
             <div class="badge-cluster">
-                <span class="badge">#world model</span><span class="badge">#locomotion</span>
+                <span class="badge">#bipedal</span><span class="badge">#quadruped</span>
             </div>
             
-            <p class="paper-summary">Future planetary rovers will traverse steep, deformable terrain where slip, sinkage, and terrain deformation can threaten mobility. Although simulation can capture some wheel-soil effects, unmodeled deformable-terrain phenomena create sim-to-real gaps requiring deployment-time adaptation. Yet, rover operations leave little room for extensive trial-and-error. We introduce TERRA (Targeted Exploration for Reward-Relevant Adaptation), an online adaptation framework that efficiently seeks deployment data exposing task-relevant model errors and corrects them. TERRA adapts a simulation-trained world model with a reward-weighted prediction loss and trains a loss predictor to estimate where future performance-relevant errors are likely to occur, using this signal to guide exploration during MPC. In simulation, TERRA reaches approximately 90% slope-climbing success within five trials under severe out-of-distribution pretraining conditions, outperforming exploration baselines in reward, completion time, and energy to first success. On the ERNEST rover, TERRA recovers coordinated active-suspension locomotion on a deformable Mars-simulant slope within three to five real-world trials. Project website: https://terra-explore.github.io</p>
+            <p class="paper-summary">Unsupervised environment design (UED) methods such as PLR, ACCEL, SFL and PAIRED are compared mostly on 2D mazes, grid worlds and BipedalWalker, while terrain curricula for legged robots are hand-designed and evaluated against a few baselines. We present a benchmark that runs fourteen UED, domain-randomisation and robotics curricula under one protocol on five 3D quadrupeds in MuJoCo MJX: the closed-chain W01-TEK and the open-chain Unitree Go1 and Go2, Google Barkour vB and Boston Dynamics Spot. Levels are vectors of eight interpretable terrain parameters, and all curricula drive the same PPO student at matched environment-step budgets. The evaluation reports success on random and held-out structured terrains, interquartile means with stratified bootstrap intervals, capability envelopes and a level-by-level domination comparison. We compare methods within each robot and report, per level set, the top group of methods not significantly below the best. No method is in the top group on every robot and level set. Methods with easy or low-difficulty training levels, curated or not, fill the top groups on in-distribution random levels of Go1 and Barkour, and of W01-TEK apart from PAIRED+BiBC. The success-driven terrain curriculum from legged-robot practice is in a top group most often, domain randomisation on uniform levels in none, and PAIRED in none outside Spot, where the fourteen methods lie within 3.8 points on random levels of difficulty 0.25. On three robots the leader on in-distribution random levels is not the leader on held-out terrain. We collect the results into a per-robot guide to choosing a curriculum.</p>
             
             <div class="card-action-bar">
-                <a href="http://arxiv.org/pdf/2610.38657v1" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
+                <a href="http://arxiv.org/pdf/2610.40364v1" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
                     View PDF
                 </a>
-                <a href="http://arxiv.org/abs/2610.38657v1" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
+                <a href="http://arxiv.org/abs/2610.40364v1" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
                     arXiv Page &rarr;
                 </a>
             </div>
         </article>
         
-        <article class="paper-card" data-title="omniquad: a wheeled-legged hybrid robot with omnidirectional wheels" data-summary="combining wheeled and legged locomotion within a single robotic platform offers the potential to harness the advantages of both systems. the development of such hybrid systems remains an active area of research. while legged robots exhibit remarkable adaptability for traversing uneven and rugged terrains, their relatively low speed limits their practicality in indoor environments. conversely, wheeled robots demonstrate higher efficiency on flat surfaces but often encounter difficulties when navigating obstacles such as steps. this paper introduces omniquad, a novel hybrid robot that integrates mecanum wheels with legged locomotion to exploit the benefits of both modalities. mecanum wheels provide omnidirectional mobility, enhancing the robot's manoeuvrability by enabling agile movement in confined spaces and the ability to maintain a consistent orientation during task execution. in this work, we first present the design of a custom wheeled-foot featuring mecanum wheels. subsequently, we describe the complete robot assembly, comprising these wheeled feet and em-act actuators. finally, we detail the control scheme developed to govern the omniquad and evaluate its performance through experimental trials conducted in both indoor and outdoor environments.">
+        <article class="paper-card" data-title="swapbot: tool-centric robot manipulation via interchangeable end-effectors and tactile sensing" data-summary="robot manipulation in everyday environments inherently involves substantial tool usage. seemingly simple household tasks, such as cooking pan-fried tofu, require forceful cutting, delicate brushing, and precise placement using different tools under contact-rich interaction. thus, the ability to autonomously swap and use task-appropriate tools is important for tool-centric manipulation. we introduce swapbot, a modular, tool-centric end effector system featuring low-cost adapters that quickly convert common household tools into robot end effectors. rather than pursuing a single universal gripper, swapbot adopts a unified design principle that combines a fixed robot-side coupling interface with low-cost, tool-side adapters, enabling compatibility with diverse tools, including articulated ones, and multiple robot platforms. each adapter integrates compact tactile sensors, supports fast autonomous swapping, and interfaces with an intuitive teleoperation system for efficient demonstration collection. user studies show that, during teleoperation, swapbot reduces task completion time and operator workload. using collected demonstrations on the robot, we train imitation learning policies to successfully perform tool-centric tasks like cooking tofu, stirring salad, flipping meat. our ablation study shows that using tactile-augmented demonstrations improves policy performance across contact-rich skills, increasing success rates by 15 to 25 percentage points over rgb-only policies. these results highlight modular, tactile-equipped tools as a practical and extensible pathway toward robust and capable robot manipulation. project website https://personalrobotics.github.io/swapbot.">
             <div class="card-meta-top">
-                <span class="rank-tag">TOP #4</span>
+                <span class="rank-tag">TOP #5</span>
+                <div class="score-badge">
+                    <span class="score-label">Priority Index</span>
+                    <span class="score-value">100</span>
+                </div>
+            </div>
+            
+            <h2 class="paper-title">SwapBot: Tool-Centric Robot Manipulation via Interchangeable End-Effectors and Tactile Sensing</h2>
+            
+            <div class="author-row">
+                <span>🗓️ 2026-10-29</span>
+                <span>✍️ Yunchu Zhang, Ray Song, Junhan Jiao et al.</span>
+            </div>
+            
+            <div class="badge-cluster">
+                <span class="badge">#tactile sensing</span><span class="badge">#teleoperation</span>
+            </div>
+            
+            <p class="paper-summary">Robot manipulation in everyday environments inherently involves substantial tool usage. Seemingly simple household tasks, such as cooking pan-fried tofu, require forceful cutting, delicate brushing, and precise placement using different tools under contact-rich interaction. Thus, the ability to autonomously swap and use task-appropriate tools is important for tool-centric manipulation. We introduce SwapBot, a modular, tool-centric end effector system featuring low-cost adapters that quickly convert common household tools into robot end effectors. Rather than pursuing a single universal gripper, SwapBot adopts a unified design principle that combines a fixed robot-side coupling interface with low-cost, tool-side adapters, enabling compatibility with diverse tools, including articulated ones, and multiple robot platforms. Each adapter integrates compact tactile sensors, supports fast autonomous swapping, and interfaces with an intuitive teleoperation system for efficient demonstration collection. User studies show that, during teleoperation, SwapBot reduces task completion time and operator workload. Using collected demonstrations on the robot, we train imitation learning policies to successfully perform tool-centric tasks like cooking tofu, stirring salad, flipping meat. Our ablation study shows that using tactile-augmented demonstrations improves policy performance across contact-rich skills, increasing success rates by 15 to 25 percentage points over RGB-only policies. These results highlight modular, tactile-equipped tools as a practical and extensible pathway toward robust and capable robot manipulation. Project website https://personalrobotics.github.io/SwapBot.</p>
+            
+            <div class="card-action-bar">
+                <a href="http://arxiv.org/pdf/2610.40646v1" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
+                    View PDF
+                </a>
+                <a href="http://arxiv.org/abs/2610.40646v1" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
+                    arXiv Page &rarr;
+                </a>
+            </div>
+        </article>
+        
+        <article class="paper-card" data-title="a two-wheeled quadrotor with all-clockwise tilted rotors for level-attitude surface locomotnion" data-summary="conventional wheel-equipped quadrotor uavs must tilt their bodies to generate lateral forces, limiting their ability to maintain a desired attitude during lateral motion. this paper proposes a wheeled quadrotor with all-clockwise tilted rotors that uses surface contact as a constraint to generate propulsion along the contact surface without tilting the vehicle. we analyze feasible forces and system controllability under surface contact and optimize the vehicle design considering different rotor-spin configurations. the optimization results show that a configuration in which all four rotors spin clockwise can generate a larger tangential force than the conventional alternating-spin configuration. this approach enables both aerial and contact-based locomotion without additional rotor-tilting actuators or mechanisms. simulation results demonstrate both hovering in free space and horizontal locomotion on a floor while maintaining a level attitude.">
+            <div class="card-meta-top">
+                <span class="rank-tag">TOP #6</span>
                 <div class="score-badge">
                     <span class="score-label">Priority Index</span>
                     <span class="score-value">95</span>
                 </div>
             </div>
             
-            <h2 class="paper-title">OmniQuad: a Wheeled-Legged Hybrid Robot with Omnidirectional Wheels</h2>
+            <h2 class="paper-title">A Two-Wheeled Quadrotor with All-Clockwise Tilted Rotors for Level-Attitude Surface Locomotnion</h2>
             
             <div class="author-row">
-                <span>🗓️ 2026-10-28</span>
-                <span>✍️ Francesco Iotti, Alok Ranjan, Franco Angelini et al.</span>
+                <span>🗓️ 2026-10-29</span>
+                <span>✍️ Takumi Ito, Satoshi Nakano</span>
             </div>
             
             <div class="badge-cluster">
                 <span class="badge">#locomotion</span><span class="badge">#actuator</span>
             </div>
             
-            <p class="paper-summary">Combining wheeled and legged locomotion within a single robotic platform offers the potential to harness the advantages of both systems. The development of such hybrid systems remains an active area of research. While legged robots exhibit remarkable adaptability for traversing uneven and rugged terrains, their relatively low speed limits their practicality in indoor environments. Conversely, wheeled robots demonstrate higher efficiency on flat surfaces but often encounter difficulties when navigating obstacles such as steps. This paper introduces OmniQuad, a novel hybrid robot that integrates mecanum wheels with legged locomotion to exploit the benefits of both modalities. Mecanum wheels provide omnidirectional mobility, enhancing the robot's manoeuvrability by enabling agile movement in confined spaces and the ability to maintain a consistent orientation during task execution. In this work, we first present the design of a custom wheeled-foot featuring mecanum wheels. Subsequently, we describe the complete robot assembly, comprising these wheeled feet and EM-Act actuators. Finally, we detail the control scheme developed to govern the OmniQuad and evaluate its performance through experimental trials conducted in both indoor and outdoor environments.</p>
+            <p class="paper-summary">Conventional wheel-equipped quadrotor UAVs must tilt their bodies to generate lateral forces, limiting their ability to maintain a desired attitude during lateral motion. This paper proposes a wheeled quadrotor with all-clockwise tilted rotors that uses surface contact as a constraint to generate propulsion along the contact surface without tilting the vehicle. We analyze feasible forces and system controllability under surface contact and optimize the vehicle design considering different rotor-spin configurations. The optimization results show that a configuration in which all four rotors spin clockwise can generate a larger tangential force than the conventional alternating-spin configuration. This approach enables both aerial and contact-based locomotion without additional rotor-tilting actuators or mechanisms. Simulation results demonstrate both hovering in free space and horizontal locomotion on a floor while maintaining a level attitude.</p>
             
             <div class="card-action-bar">
-                <a href="http://arxiv.org/pdf/2610.38502v1" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
+                <a href="http://arxiv.org/pdf/2610.40502v1" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
                     View PDF
                 </a>
-                <a href="http://arxiv.org/abs/2610.38502v1" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
+                <a href="http://arxiv.org/abs/2610.40502v1" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
                     arXiv Page &rarr;
                 </a>
             </div>
         </article>
         
-        <article class="paper-card" data-title="compositional diffusion planning with chunk selection and reachability measure" data-summary="compositional diffusion planners have demonstrated remarkable success on long-horizon diffusion planning by sampling short trajectories, namely chunks, and composing them into a long trajectory. however, averaging overlapping chunks can induce the mode-averaging problem, resulting in discontinuous trajectories. several works aim to address this problem, whereas a non-negligible portion of plans remains infeasible. in this work, we propose selective compositional diffuser (scd), handling this problem by measuring reachability. to this end, we present a self-supervised learning method for the reachability classifier. this is trained on offline data and generated chunks jointly to address potential distributional mismatch, while reducing the bias inherited from the generated data. based on this, we construct a graph whose edge costs represent whether consecutive chunks are reachable, and traverse the graph to find effective yet efficient routes. lastly, we generate bridging trajectories and refine the composed trajectory for smooth transitions. we evaluate our method on ogbench stitching tasks. it practically reduces incompatible mode compositions and the mode-averaging problem compared to the studied baselines. across tasks, scd improves success rates, reaching state-of-the-art results on humanoidmaze-large and giant tasks.">
+        <article class="paper-card" data-title="improving fine-grained manipulation through demonstration expansion and execution design" data-summary="fine-grained manipulation requires a robot policy to follow instructions, remain robust to visual variations, and translate predicted actions into precise robot control. we present demonstration expansion and execution design (deed), a framework for adapting a pretrained vision-language-action policy to the five metafine tasks through structured demonstration expansion and execution design. deed generates demonstrations for different instructions from the same initial scene and renders each physical trajectory under different camera positions and lighting conditions while preserving its original states and action targets. a hierarchical sampling strategy balances instructions, trajectories, and visual conditions during supervised adaptation. at deployment, deed converts predicted action chunks into robot commands using inverse kinematics, gripper mappings selected for each task, and closed-loop replanning. deed achieves an official overall score of 85.55%. fixed-policy evaluations show that performance varies with execution horizon, denoising budget, and gripper mapping.">
             <div class="card-meta-top">
-                <span class="rank-tag">TOP #5</span>
+                <span class="rank-tag">TOP #7</span>
                 <div class="score-badge">
                     <span class="score-label">Priority Index</span>
                     <span class="score-value">95</span>
                 </div>
             </div>
             
-            <h2 class="paper-title">Compositional Diffusion Planning with Chunk Selection and Reachability Measure</h2>
+            <h2 class="paper-title">Improving Fine-Grained Manipulation through Demonstration Expansion and Execution Design</h2>
             
             <div class="author-row">
-                <span>🗓️ 2026-10-28</span>
-                <span>✍️ Chanyoung Park, Youngjoong Kim, Jaesik Park</span>
+                <span>🗓️ 2026-10-29</span>
+                <span>✍️ Jingxu Gu, Dongze Lian</span>
             </div>
             
             <div class="badge-cluster">
-                <span class="badge">#humanoid</span>
+                <span class="badge">#vision-language-action</span>
             </div>
             
-            <p class="paper-summary">Compositional diffusion planners have demonstrated remarkable success on long-horizon diffusion planning by sampling short trajectories, namely chunks, and composing them into a long trajectory. However, averaging overlapping chunks can induce the mode-averaging problem, resulting in discontinuous trajectories. Several works aim to address this problem, whereas a non-negligible portion of plans remains infeasible. In this work, we propose Selective Compositional Diffuser (SCD), handling this problem by measuring reachability. To this end, we present a self-supervised learning method for the reachability classifier. This is trained on offline data and generated chunks jointly to address potential distributional mismatch, while reducing the bias inherited from the generated data. Based on this, we construct a graph whose edge costs represent whether consecutive chunks are reachable, and traverse the graph to find effective yet efficient routes. Lastly, we generate bridging trajectories and refine the composed trajectory for smooth transitions. We evaluate our method on OGBench stitching tasks. It practically reduces incompatible mode compositions and the mode-averaging problem compared to the studied baselines. Across tasks, SCD improves success rates, reaching state-of-the-art results on HumanoidMaze-Large and Giant tasks.</p>
+            <p class="paper-summary">Fine-grained manipulation requires a robot policy to follow instructions, remain robust to visual variations, and translate predicted actions into precise robot control. We present Demonstration Expansion and Execution Design (DEED), a framework for adapting a pretrained vision-language-action policy to the five MetaFine tasks through structured demonstration expansion and execution design. DEED generates demonstrations for different instructions from the same initial scene and renders each physical trajectory under different camera positions and lighting conditions while preserving its original states and action targets. A hierarchical sampling strategy balances instructions, trajectories, and visual conditions during supervised adaptation. At deployment, DEED converts predicted action chunks into robot commands using inverse kinematics, gripper mappings selected for each task, and closed-loop replanning. DEED achieves an official Overall score of 85.55%. Fixed-policy evaluations show that performance varies with execution horizon, denoising budget, and gripper mapping.</p>
             
             <div class="card-action-bar">
-                <a href="http://arxiv.org/pdf/2610.38291v1" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
+                <a href="http://arxiv.org/pdf/2610.40430v1" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
                     View PDF
                 </a>
-                <a href="http://arxiv.org/abs/2610.38291v1" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
+                <a href="http://arxiv.org/abs/2610.40430v1" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
                     arXiv Page &rarr;
                 </a>
             </div>
         </article>
         
-        <article class="paper-card" data-title="recursive self-improvement in physical ai: mechanisms, evidence, and evaluation" data-summary="embodied systems can update policies, world models, skills, and executable programs from deployment experience, allowing one interaction to benefit later tasks. when a system also revises and reuses its data-acquisition, feedback, or learning procedures, experience changes the process that produces capability, introducing recursive self-improvement. this paper surveys research in physical ai through the connection between persistent capability and its improvement process. we first explain the functional distinction between learner updates and improvers, then compare policy learning, imagined experience, memory and skill accumulation, and executable harnesses. these approaches connect to revisions of curricula, rewards, and research programs in different ways. contact validity, recovery, retention, and resource costs determine whether the resulting gains accumulate during continued deployment. an l0-l3 rubric distinguishes task-local adaptation, persistent capability gain, inherited process revision, and verified improver gain. representative benchmarks and within-study contrasts relate these distinctions to existing results. we further propose common-data and interactive comparisons that evaluate reference and revised improvers from shared learner starts, separating the use of experience from its acquisition. this perspective connects the diverse methods, physical operating conditions, and evaluation evidence, underpinning embodied rsi. a comprehensive list of studies in this survey is available at https://github.com/nkd-lkz/physical-ai-rsi-survey.">
+        <article class="paper-card" data-title="continuous-action world models: learning cross-embodiment spatiotemporal dynamics priors" data-summary="we introduce continuous-action world models (coawm), a framework for learning cross-embodiment spatiotemporal dynamics priors that support robot action generation across embodiments and execution frequencies. at its core is a shared latent function space that captures the spatial and temporal structure of robot actions. we learn this space through two stages. first, function pretraining brings trajectories from different embodiments and sampling frequencies into a common representation, learning shared dynamics priors through action reconstruction and consistency across temporal sampling views. by accommodating heterogeneous robot trajectories, this stage broadens the range of data sources available for pretraining and facilitates scaling to larger and more diverse datasets. second, we connect the pretrained function space to a world-model backbone, enabling observations, language instructions, and the current robot state to condition the prediction of a latent action function. a single decoder takes any query time and returns the corresponding end-effector action. by separating shared dynamics priors from task-conditioned action selection and temporal sampling, our approach provides a unified foundation for transferring robot experience across embodiments and control frequencies.">
             <div class="card-meta-top">
-                <span class="rank-tag">TOP #6</span>
+                <span class="rank-tag">TOP #8</span>
                 <div class="score-badge">
                     <span class="score-label">Priority Index</span>
                     <span class="score-value">90</span>
                 </div>
             </div>
             
-            <h2 class="paper-title">Recursive Self-Improvement in Physical AI: Mechanisms, Evidence, and Evaluation</h2>
+            <h2 class="paper-title">Continuous-Action World Models: Learning Cross-Embodiment Spatiotemporal Dynamics Priors</h2>
             
             <div class="author-row">
-                <span>🗓️ 2026-10-28</span>
-                <span>✍️ Xiaofeng Han, Kaize Luo, Zenghuang Fu et al.</span>
+                <span>🗓️ 2026-10-29</span>
+                <span>✍️ Liangyu Li, Qingwen Liu</span>
             </div>
             
             <div class="badge-cluster">
                 <span class="badge">#world model</span>
             </div>
             
-            <p class="paper-summary">Embodied systems can update policies, world models, skills, and executable programs from deployment experience, allowing one interaction to benefit later tasks. When a system also revises and reuses its data-acquisition, feedback, or learning procedures, experience changes the process that produces capability, introducing recursive self-improvement. This paper surveys research in physical AI through the connection between persistent capability and its improvement process. We first explain the functional distinction between learner updates and improvers, then compare policy learning, imagined experience, memory and skill accumulation, and executable harnesses. These approaches connect to revisions of curricula, rewards, and research programs in different ways. Contact validity, recovery, retention, and resource costs determine whether the resulting gains accumulate during continued deployment. An L0-L3 rubric distinguishes task-local adaptation, persistent capability gain, inherited process revision, and verified improver gain. Representative benchmarks and within-study contrasts relate these distinctions to existing results. We further propose common-data and interactive comparisons that evaluate reference and revised improvers from shared learner starts, separating the use of experience from its acquisition. This perspective connects the diverse methods, physical operating conditions, and evaluation evidence, underpinning embodied RSI. A comprehensive list of studies in this survey is available at https://github.com/nkd-lkz/physical-ai-rsi-survey.</p>
+            <p class="paper-summary">We introduce Continuous-Action World Models (CoAWM), a framework for learning cross-embodiment spatiotemporal dynamics priors that support robot action generation across embodiments and execution frequencies. At its core is a shared latent function space that captures the spatial and temporal structure of robot actions. We learn this space through two stages. First, function pretraining brings trajectories from different embodiments and sampling frequencies into a common representation, learning shared dynamics priors through action reconstruction and consistency across temporal sampling views. By accommodating heterogeneous robot trajectories, this stage broadens the range of data sources available for pretraining and facilitates scaling to larger and more diverse datasets. Second, we connect the pretrained function space to a world-model backbone, enabling observations, language instructions, and the current robot state to condition the prediction of a latent action function. A single decoder takes any query time and returns the corresponding end-effector action. By separating shared dynamics priors from task-conditioned action selection and temporal sampling, our approach provides a unified foundation for transferring robot experience across embodiments and control frequencies.</p>
             
             <div class="card-action-bar">
-                <a href="http://arxiv.org/pdf/2610.38266v1" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
+                <a href="http://arxiv.org/pdf/2610.40401v1" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
                     View PDF
                 </a>
-                <a href="http://arxiv.org/abs/2610.38266v1" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
-                    arXiv Page &rarr;
-                </a>
-            </div>
-        </article>
-        
-        <article class="paper-card" data-title="elevate: agentic controller acquisition from task failure for quadrupedal manipulation" data-summary="quadrupedal manipulators can extend their workspace through whole-body interaction, but task-planning agents' capabilities remain limited by their available controllers. we present elevate, a framework that uses persistent failures during task-program refinement to identify and acquire missing whole-body control capabilities. when these failures suggest a missing physical capability, a coding agent formulates and iteratively refines a reinforcement-learning problem, specifying behavior-specific rewards, curricula, and termination conditions. validated controllers are added to the capability library and composed with existing controllers to retry the task. starting from a single pretrained loco-manipulation controller, elevate autonomously acquires controllers for wall-supported elevation, supported manipulation, and wall descent across a sequence of seven simulation tasks. these controllers are reused in subsequent reaching and object-manipulation tasks. on the five tasks beyond the initial controller's workspace, elevate achieves mean success rates of 98.4%-100% across five independent runs, while coding-agent baselines with a fixed controller library fail to complete these tasks. the synthesized task programs, together with the acquired controllers, also transfer to a physical quadrupedal manipulator without real-robot training or fine-tuning, achieving 18/20 successes in rack retrieval and 16/20 in floor-to-rack placement. videos and demonstrations are available at https://agentic-quad-elevate.github.io/public/.">
-            <div class="card-meta-top">
-                <span class="rank-tag">TOP #7</span>
-                <div class="score-badge">
-                    <span class="score-label">Priority Index</span>
-                    <span class="score-value">85</span>
-                </div>
-            </div>
-            
-            <h2 class="paper-title">ELEVATE: Agentic Controller Acquisition from Task Failure for Quadrupedal Manipulation</h2>
-            
-            <div class="author-row">
-                <span>🗓️ 2026-10-28</span>
-                <span>✍️ Shiqi Liu, Radu Corcodel, Ding Zhao</span>
-            </div>
-            
-            <div class="badge-cluster">
-                <span class="badge">#quadruped</span>
-            </div>
-            
-            <p class="paper-summary">Quadrupedal manipulators can extend their workspace through whole-body interaction, but task-planning agents' capabilities remain limited by their available controllers. We present ELEVATE, a framework that uses persistent failures during task-program refinement to identify and acquire missing whole-body control capabilities. When these failures suggest a missing physical capability, a coding agent formulates and iteratively refines a reinforcement-learning problem, specifying behavior-specific rewards, curricula, and termination conditions. Validated controllers are added to the capability library and composed with existing controllers to retry the task. Starting from a single pretrained loco-manipulation controller, ELEVATE autonomously acquires controllers for wall-supported elevation, supported manipulation, and wall descent across a sequence of seven simulation tasks. These controllers are reused in subsequent reaching and object-manipulation tasks. On the five tasks beyond the initial controller's workspace, ELEVATE achieves mean success rates of 98.4%-100% across five independent runs, while coding-agent baselines with a fixed controller library fail to complete these tasks. The synthesized task programs, together with the acquired controllers, also transfer to a physical quadrupedal manipulator without real-robot training or fine-tuning, achieving 18/20 successes in rack retrieval and 16/20 in floor-to-rack placement. Videos and demonstrations are available at https://agentic-quad-elevate.github.io/public/.</p>
-            
-            <div class="card-action-bar">
-                <a href="http://arxiv.org/pdf/2610.38388v1" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
-                    View PDF
-                </a>
-                <a href="http://arxiv.org/abs/2610.38388v1" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
-                    arXiv Page &rarr;
-                </a>
-            </div>
-        </article>
-        
-        <article class="paper-card" data-title="value function-guided mppi for hierarchical planning and control in off-road autonomous navigation" data-summary="autonomous navigation in off-road terrain is commonly achieved using hierarchical control and planning architectures that rely on explicit cost maps and one-way information flow from a high-level planner to a low-level controller, decoupling planning from the true execution cost experienced during control. we propose a hierarchical planning and control framework in which information flows bidirectionally, allowing the low-level controller to guide trajectory selection at the planning level. the highest level of the hierarchy is a model predictive path integral (mppi) control-style planner that determines optimal trajectories and passes these waypoints to a pretrained low-level reinforcement learning (rl) controller. rather than drawing from an explicit cost map, our mppi planner leverages the value function of the rl controller as an implicit cost representation. in this formulation, mppi serves as a trajectory exploration mechanism, while the low-level controller's value function guides the search. to account for the distribution shift seen by the value function between training and evaluation, we propose an online policy evaluation process that adapts the value function to unseen driving experiences, and we demonstrate this adaptation in unseen off-road simulation environments. we evaluate our approach in a high-fidelity off-road driving simulator across a range of challenging terrain conditions and compare its performance against a baseline mppi controller. the results demonstrate that our method achieves safer and more effective navigation to goal locations while eliminating the need for explicit cost maps and enabling tighter coupling between planning and control.">
-            <div class="card-meta-top">
-                <span class="rank-tag">TOP #8</span>
-                <div class="score-badge">
-                    <span class="score-label">Priority Index</span>
-                    <span class="score-value">80</span>
-                </div>
-            </div>
-            
-            <h2 class="paper-title">Value Function-Guided MPPI for Hierarchical Planning and Control in Off-Road Autonomous Navigation</h2>
-            
-            <div class="author-row">
-                <span>🗓️ 2026-10-28</span>
-                <span>✍️ Anoushka Alavilli, Raymond Song, Guanya Shi et al.</span>
-            </div>
-            
-            <div class="badge-cluster">
-                <span class="badge">#reinforcement learning</span>
-            </div>
-            
-            <p class="paper-summary">Autonomous navigation in off-road terrain is commonly achieved using hierarchical control and planning architectures that rely on explicit cost maps and one-way information flow from a high-level planner to a low-level controller, decoupling planning from the true execution cost experienced during control. We propose a hierarchical planning and control framework in which information flows bidirectionally, allowing the low-level controller to guide trajectory selection at the planning level. The highest level of the hierarchy is a Model Predictive Path Integral (MPPI) control-style planner that determines optimal trajectories and passes these waypoints to a pretrained low-level reinforcement learning (RL) controller. Rather than drawing from an explicit cost map, our MPPI planner leverages the value function of the RL controller as an implicit cost representation. In this formulation, MPPI serves as a trajectory exploration mechanism, while the low-level controller's value function guides the search. To account for the distribution shift seen by the value function between training and evaluation, we propose an online policy evaluation process that adapts the value function to unseen driving experiences, and we demonstrate this adaptation in unseen off-road simulation environments. We evaluate our approach in a high-fidelity off-road driving simulator across a range of challenging terrain conditions and compare its performance against a baseline MPPI controller. The results demonstrate that our method achieves safer and more effective navigation to goal locations while eliminating the need for explicit cost maps and enabling tighter coupling between planning and control.</p>
-            
-            <div class="card-action-bar">
-                <a href="http://arxiv.org/pdf/2610.38731v1" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
-                    View PDF
-                </a>
-                <a href="http://arxiv.org/abs/2610.38731v1" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
+                <a href="http://arxiv.org/abs/2610.40401v1" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
                     arXiv Page &rarr;
                 </a>
             </div>
