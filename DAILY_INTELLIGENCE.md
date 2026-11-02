@@ -1,54 +1,43 @@
-# 🤖 Embodied AI & Robotics Frontier Briefing (2026-11-01)
+# 🤖 Embodied AI & Robotics Frontier Briefing (2026-11-02)
 
 > *Automated Intelligence Briefing generated via custom ETL scoring pipeline. Prioritizes foundation models, manipulation, locomotion, and physical AI systems.*
 
 ---
 
-### Top 1: Gym-Anything for Robotics: Scaling physical simulations with digital agents
-- **Priority Score**: `185 pts` | **Published**: `2026-10-29`
-- **Focus Tracks**: `#embodied ai` `#vision-language-action` `#vla`
-- **Key Authors**: Pranjal Aggarwal, Sean Welleck
-- **Direct Access**: [arXiv Abstract](http://arxiv.org/abs/2610.40565v1) | [PDF Fulltext](http://arxiv.org/pdf/2610.40565v1)
+### Top 1: CaPtain: A Pipeline for Post-Training Code-as-Policy Robot Agents
+- **Priority Score**: `165 pts` | **Published**: `2026-10-29`
+- **Focus Tracks**: `#reinforcement learning` `#vision-language-action` `#vla`
+- **Key Authors**: Yijia Fan, Xilin He, Yilei Jiang et al.
+- **Direct Access**: [arXiv Abstract](http://arxiv.org/abs/2610.40799v1) | [PDF Fulltext](http://arxiv.org/pdf/2610.40799v1)
 
 **Executive Abstract**:
-> Realistic, fast robotics simulations could enable large-scale training of embodied AI models that transfer to the real world. However, despite decades of progress, available simulations cover only a narrow range of real-world tasks and physical phenomena. The core bottleneck is that creating better simulations requires significant expert effort and therefore does not scale. To address this, we introduce Gym-Anything for Robotics, a framework in which coding agents create realistic robotics simulations. Our core insight is that simulation creation is a coding agent task, so improvements in coding agents translate directly into richer and more faithful simulations. We select simulations based on U.S. GDP data to cover economically valuable physical work, define what makes a good simulation and a good task, and develop an adversarial creation-audit loop that checks each simulation and task against these definitions. Using this pipeline, we build RoboWorld, a set of 25 simulations with 25 test and 175 training RL environments of varying difficulty. Even the best frontier models fail on every RoboWorld test task, achieving an average reward of only 0.06. Building on RoboWorld, we introduce several new ways for frontier models to improve, including in-context learning across repeated attempts, a privileged teacher that reads the simulator state and teaches a student in context, self-assisted learning from the model's own privileged experience, and code policies that generate demonstrations across varied scenes to train vision-language-action models (VLAs) such as $π_{0.5}$. Each of these substantially improves performance. We release our pipeline, RL environments, and benchmark to facilitate future research. Code and data are available at https://gym-anything.github.io/robotics
+> Across coding, web, and tool-use tasks, language-model agents are now routinely trained with the same recipe: supervised fine-tuning (SFT) to learn the interface, then multi-turn reinforcement learning (RL) to master it. Code-as-policy (CaP) casts robot manipulation in the same form, as the policy writes code against robot APIs and reads back the results, so the same recipe should apply. Yet existing CaP agents sidestep training: they either prompt closed frontier models or delegate manipulation to pre-trained vision-language-action models (VLAs) and high-level skills, while small open vision-language models (VLMs) fail outright. We present CaPtain, an open post-training pipeline that turns a small open VLM into a capable CaP agent, with no VLA, frontier model, or privileged state at test time. CaPtain trains and deploys the policy inside CaPtain-Harness, which exposes low-level perception, geometry, and guarded-motion primitives across simulation and real hardware. We first align the base model via SFT on synthetic trajectories generated with GPT-6 Astra, then apply multi-turn RL. Multi-turn RL must credit tens of agent requests, whose physical effects often surface turns later, from a single end-of-episode outcome. We therefore introduce a physical critic that reads privileged simulator state, never seen by the policy, and credits each request by how much it changes the predicted chance of success. Starting from Qwen3.5-4B (0% zero-shot), CaPtain-4B reaches 55.4% held-out LIBERO success after SFT and 73.8% after RL. On LIBERO-PRO, it reaches 78.5%, surpassing several frontier-model agents, and its RL gains persist across three perturbation suites (+17.6 to +21.2 points). Without target-domain training, it attains 83.3% on SimplerEnv WidowX, exceeds frontier models on CaP-Bench, and runs on a real robot after simulation-only adaptation. We release all code, data, and model weights.
 
 ---
 
-### Top 2: HiFOR: Hierarchical Foresight with Action-Guided World Grounding for Vision-Language-Action Model
-- **Priority Score**: `175 pts` | **Published**: `2026-10-29`
-- **Focus Tracks**: `#world model` `#vision-language-action` `#vla`
-- **Key Authors**: Rongxing Ding, Hongyu Qu, Kehong Wu et al.
-- **Direct Access**: [arXiv Abstract](http://arxiv.org/abs/2610.40373v1) | [PDF Fulltext](http://arxiv.org/pdf/2610.40373v1)
+### Top 2: From Teleoperation to Long-Horizon Dexterity: Evaluating Visuomotor Skills and Offline Proxies for Dexterous Manipulation
+- **Priority Score**: `145 pts` | **Published**: `2026-10-29`
+- **Focus Tracks**: `#dexterous manipulation` `#vision-language-action` `#teleoperation`
+- **Key Authors**: Ammar N. Abbas, Aayush Jain, Prashanth Viswanath et al.
+- **Direct Access**: [arXiv Abstract](http://arxiv.org/abs/2610.40828v1) | [PDF Fulltext](http://arxiv.org/pdf/2610.40828v1)
 
 **Executive Abstract**:
-> Vision-Language-Action (VLA) models have demonstrated promising capabilities in robotic manipulation by integrating visual perception, language understanding, and action generation. Recent advances have further incorporated future prediction to enhance the understanding of environmental dynamics and task progression. However, existing methods often model short-term dynamics and long-term task objectives separately, while directly incorporating predicted futures into action policies without sufficiently considering their relevance to current action requirements. To address these limitations, we propose HiFOR, a hierarchical foresight framework with action-guided world retrieval. Specifically, Hierarchical Foresight Prediction jointly predicts short-term state evolution, semantic milestones, and final goal states through a Hierarchical Dependency Mask (HDM), establishing dependencies across temporal horizons. Building upon these predictions, Structure-Aware Latent World Modeling organizes future latent representations along the horizon, view, and spatial dimensions to facilitate fine-grained retrieval. Furthermore, Action-Guided Factorized World Retrieval adaptively retrieves relevant future information from the structured latent world based on evolving action representations during denoising, providing targeted guidance for action generation. Extensive experiments on two simulation benchmarks and six real-world robotic manipulation tasks demonstrate the effectiveness of our approach.
+> Imitation learning policies are intended to make robotic manipulation robust to variations in object pose, appearance, and environment that challenge pre-programmed motion. However, real-world performance remains difficult to predict, as conventional optimization signals such as validation loss show no consistent relationship with robot success. To identify the design choices that govern real-world performance, 281 imitation-learning policies spanning seven policy families were evaluated in approximately 1,700 real-robot trials of RJ45 connector grasping and insertion using a five-fingered robotic hand. Controlled ablations showed that observation and action representations dominated conventional optimizer and sampling choices. For point-cloud policies, region-of-interest cropping, representation in the robot-base frame, and normalization within the point encoder each improved success by 70-100 percentage points. For the vision-language-action policy, absolute rather than relative action prediction improved insertion success by up to 70 percentage points. Skill decomposition, multi-view perception, and recovery demonstrations were associated with the strongest-performing systems, although their effects were not independently isolated. Of 67 offline metrics evaluated, only five measures of predicted-motion smoothness and directness reliably correlated with insertion success (r = -0.70 to -0.80), and only within a single policy family. These results identify representation choices as key determinants of real-world imitation-learning performance and show that offline metrics can shortlist policies, but cannot replace real-robot evaluation.
 
 ---
 
-### Top 3: BURGER: Benchmarking and Understanding Robotic Generalization via Embodied Drawing
+### Top 3: STAR: Steering Action Representations during Inference
 - **Priority Score**: `135 pts` | **Published**: `2026-10-29`
 - **Focus Tracks**: `#vision-language-action` `#vla`
-- **Key Authors**: Xiangyu Xu, Bangshuai Peng, Ziyi Liu et al.
-- **Direct Access**: [arXiv Abstract](http://arxiv.org/abs/2610.40532v1) | [PDF Fulltext](http://arxiv.org/pdf/2610.40532v1)
+- **Key Authors**: Guangyu Zhao, Yongchang Zhang, Haoxuan Ru et al.
+- **Direct Access**: [arXiv Abstract](http://arxiv.org/abs/2610.41009v1) | [PDF Fulltext](http://arxiv.org/pdf/2610.41009v1)
 
 **Executive Abstract**:
-> How effectively can vision-language-action (VLA) models learn diverse language-conditioned behaviors as training data scales? Investigating this question requires large and varied robot datasets, whose collection on physical robots remains costly. We introduce BURGER, a language-conditioned robotic drawing benchmark with a scalable, prompt-driven pipeline for generating continuous drawing trajectories, both in simulation and the real world. In BURGER, an agent starts from the same blank canvas and controls a robot arm to draw the object or spatial composition specified by language, while each instruction allows an open-ended variety of valid drawings and stroke orders. Using 28,200 simulated demonstrations spanning 282 drawing tasks, we evaluate five representative VLA models across data scales, language grounding, and multimodal behavior. BURGER supports fine-grained analysis of language grounding, spatial composition, and action generation, revealing distinct failure patterns across VLA models. Our experiments suggest that some VLA models can benefit from greater task diversity and demonstration scale, capture multimodal drawing behaviors, and generalize to unseen compositions of familiar objects. Finally, we deploy a trained policy on a Franka Panda arm, demonstrating the ability to draw reactively under human intervention. Project homepage and code can be found at https://siyingzhao.github.io/BURGER/.
+> Vision-language-action models (VLAs) map language instructions and visual observations to robot actions, showing strong capabilities across robotic manipulation tasks. However, in our probing experiment, we find that action representations near the action output do not fully preserve task-relevant visual grounding. Motivated by this late-layer grounding gap, we introduce STAR, for STeering Action Representations, a training-free inference method for pre-trained VLAs. STAR applies an exponential moving average over late-layer residual updates, allowing later action representations to inherit object-aware update directions from earlier layers without model updates or architectural changes. It further uses recent proprioceptive states to adapt the mixing strength, using conservative mixing when execution dynamics change rapidly. Experiments on robot manipulation benchmarks show that STAR improves late-layer object awareness and increases average task success rates by 4.0 percentage points. Our code is available at https://github.com/PKU-VaLuE-Lab/STAR.
 
 ---
 
-### Top 4: Is It the Curriculum or Just the Easy Start? Benchmarking Unsupervised Environment Design on Quadrupeds
-- **Priority Score**: `120 pts` | **Published**: `2026-10-29`
-- **Focus Tracks**: `#bipedal` `#quadruped`
-- **Key Authors**: Jakub Gilewicz, Dominik Galus, Piotr Wojdas
-- **Direct Access**: [arXiv Abstract](http://arxiv.org/abs/2610.40364v1) | [PDF Fulltext](http://arxiv.org/pdf/2610.40364v1)
-
-**Executive Abstract**:
-> Unsupervised environment design (UED) methods such as PLR, ACCEL, SFL and PAIRED are compared mostly on 2D mazes, grid worlds and BipedalWalker, while terrain curricula for legged robots are hand-designed and evaluated against a few baselines. We present a benchmark that runs fourteen UED, domain-randomisation and robotics curricula under one protocol on five 3D quadrupeds in MuJoCo MJX: the closed-chain W01-TEK and the open-chain Unitree Go1 and Go2, Google Barkour vB and Boston Dynamics Spot. Levels are vectors of eight interpretable terrain parameters, and all curricula drive the same PPO student at matched environment-step budgets. The evaluation reports success on random and held-out structured terrains, interquartile means with stratified bootstrap intervals, capability envelopes and a level-by-level domination comparison. We compare methods within each robot and report, per level set, the top group of methods not significantly below the best. No method is in the top group on every robot and level set. Methods with easy or low-difficulty training levels, curated or not, fill the top groups on in-distribution random levels of Go1 and Barkour, and of W01-TEK apart from PAIRED+BiBC. The success-driven terrain curriculum from legged-robot practice is in a top group most often, domain randomisation on uniform levels in none, and PAIRED in none outside Spot, where the fourteen methods lie within 3.8 points on random levels of difficulty 0.25. On three robots the leader on in-distribution random levels is not the leader on held-out terrain. We collect the results into a per-robot guide to choosing a curriculum.
-
----
-
-### Top 5: SwapBot: Tool-Centric Robot Manipulation via Interchangeable End-Effectors and Tactile Sensing
+### Top 4: SwapBot: Tool-Centric Robot Manipulation via Interchangeable End-Effectors and Tactile Sensing
 - **Priority Score**: `100 pts` | **Published**: `2026-10-29`
 - **Focus Tracks**: `#tactile sensing` `#teleoperation`
 - **Key Authors**: Yunchu Zhang, Ray Song, Junhan Jiao et al.
@@ -56,6 +45,17 @@
 
 **Executive Abstract**:
 > Robot manipulation in everyday environments inherently involves substantial tool usage. Seemingly simple household tasks, such as cooking pan-fried tofu, require forceful cutting, delicate brushing, and precise placement using different tools under contact-rich interaction. Thus, the ability to autonomously swap and use task-appropriate tools is important for tool-centric manipulation. We introduce SwapBot, a modular, tool-centric end effector system featuring low-cost adapters that quickly convert common household tools into robot end effectors. Rather than pursuing a single universal gripper, SwapBot adopts a unified design principle that combines a fixed robot-side coupling interface with low-cost, tool-side adapters, enabling compatibility with diverse tools, including articulated ones, and multiple robot platforms. Each adapter integrates compact tactile sensors, supports fast autonomous swapping, and interfaces with an intuitive teleoperation system for efficient demonstration collection. User studies show that, during teleoperation, SwapBot reduces task completion time and operator workload. Using collected demonstrations on the robot, we train imitation learning policies to successfully perform tool-centric tasks like cooking tofu, stirring salad, flipping meat. Our ablation study shows that using tactile-augmented demonstrations improves policy performance across contact-rich skills, increasing success rates by 15 to 25 percentage points over RGB-only policies. These results highlight modular, tactile-equipped tools as a practical and extensible pathway toward robust and capable robot manipulation. Project website https://personalrobotics.github.io/SwapBot.
+
+---
+
+### Top 5: Contact Imitation Interface: Transferring Dexterous Skills by Showing How Contact Unfolds
+- **Priority Score**: `80 pts` | **Published**: `2026-10-29`
+- **Focus Tracks**: `#dexterous manipulation`
+- **Key Authors**: Zhixuan Xu, Yichen Li, Bingchen Wu et al.
+- **Direct Access**: [arXiv Abstract](http://arxiv.org/abs/2610.41028v1) | [PDF Fulltext](http://arxiv.org/pdf/2610.41028v1)
+
+**Executive Abstract**:
+> Robot-free human demonstrations offer a promising route to scaling dexterous manipulation data. The key challenge is to preserve the demonstrator's natural dexterity while producing contact-grounded observations and actions that transfer to robot hands. We present Contact Imitation Interface (CIMI), a framework with contact-grounded demonstration and learning interfaces. The demonstration interface combines shared contact geometry and fingertip RGB views with contact-alignment-first retargeting and reprojection of wider scene views. The learning interface introduces a hierarchical policy in which a contact-surface planner predicts relative contact-surface trajectories and a controller coordinates wrist and finger commands to improve contact alignment. CIMI combines contact-grounded observations, retargeting, and action representations, improving mean final-stage success by at least 50 percentage points over baseline policies across six hand-task pairs on LEAP and Wuji. Hardware designs and software are publicly available.
 
 ---
 
