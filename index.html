@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Embodied AI & Robotics Intelligence Digest — November 02, 2026</title>
+    <title>Embodied AI & Robotics Intelligence Digest — November 03, 2026</title>
     <style>
         :root {
             --bg-base: #080c14;
@@ -242,7 +242,7 @@
         <header>
             <span class="pill-brand">Autonomous Research Intelligence</span>
             <h1>Embodied AI & Physical Frontier Briefing</h1>
-            <p class="subtitle">Compiled on November 02, 2026 • Ranked top 8 strategic breakthroughs out of incoming preprints.</p>
+            <p class="subtitle">Compiled on November 03, 2026 • Ranked top 8 strategic breakthroughs out of incoming preprints.</p>
             
             <div class="controls">
                 <input type="text" id="filterInput" class="search-box" placeholder="Filter papers by keywords (e.g. humanoid, tactile, diffusion)...">
@@ -251,257 +251,257 @@
 
         <main id="paperList">
             
-        <article class="paper-card" data-title="captain: a pipeline for post-training code-as-policy robot agents" data-summary="across coding, web, and tool-use tasks, language-model agents are now routinely trained with the same recipe: supervised fine-tuning (sft) to learn the interface, then multi-turn reinforcement learning (rl) to master it. code-as-policy (cap) casts robot manipulation in the same form, as the policy writes code against robot apis and reads back the results, so the same recipe should apply. yet existing cap agents sidestep training: they either prompt closed frontier models or delegate manipulation to pre-trained vision-language-action models (vlas) and high-level skills, while small open vision-language models (vlms) fail outright. we present captain, an open post-training pipeline that turns a small open vlm into a capable cap agent, with no vla, frontier model, or privileged state at test time. captain trains and deploys the policy inside captain-harness, which exposes low-level perception, geometry, and guarded-motion primitives across simulation and real hardware. we first align the base model via sft on synthetic trajectories generated with gpt-6 astra, then apply multi-turn rl. multi-turn rl must credit tens of agent requests, whose physical effects often surface turns later, from a single end-of-episode outcome. we therefore introduce a physical critic that reads privileged simulator state, never seen by the policy, and credits each request by how much it changes the predicted chance of success. starting from qwen3.5-4b (0% zero-shot), captain-4b reaches 55.4% held-out libero success after sft and 73.8% after rl. on libero-pro, it reaches 78.5%, surpassing several frontier-model agents, and its rl gains persist across three perturbation suites (+17.6 to +21.2 points). without target-domain training, it attains 83.3% on simplerenv widowx, exceeds frontier models on cap-bench, and runs on a real robot after simulation-only adaptation. we release all code, data, and model weights.">
+        <article class="paper-card" data-title="ode policy: robot learning via action dynamics, not actions" data-summary="most robot policies, whether trained by imitation learning (il) or reinforcement learning (rl), map observations to action values at discrete control steps and leave the continuity of physical motion to be learned implicitly. we propose ode policy, which learns the dynamics of the action rather than the action itself. a neural ordinary differential equation (ode) learns the vector field of the action by matching the integrated actions to the targets over short action chunks in il and single control steps in rl. a lightweight diversity head captures multi-modal behavior by randomizing the direction of the field. at deployment, each action is integrated from the previous one, so the executed trajectory is continuous by construction. we evaluate it as a visuomotor policy, as the action head of vision-language-action (vla) and world action models (wams), and as the actor of model-based rl against 14 baselines on unimanual, bimanual, dexterous, locomotion, and loco-manipulation tasks. in il, against flow matching, it reaches 5.9$\times$ the success, 5.4$\times$ the generalization, and 3.9$\times$ the mode balance after one epoch, and generates actions 10.8$\times$ faster. it mostly moves more smoothly than human demonstrations. on 14 real-world tasks across single-arm, dual-arm, dexterous, and humanoid robots, it achieves the highest success rate. in rl, it further speeds up supermimic for humanoid motion tracking and smooths its actions. efficient in learning, data, parameters, and execution, ode policy offers a promising path to scaling robot learning.">
             <div class="card-meta-top">
                 <span class="rank-tag">TOP #1</span>
                 <div class="score-badge">
                     <span class="score-label">Priority Index</span>
-                    <span class="score-value">165</span>
+                    <span class="score-value">235</span>
                 </div>
             </div>
             
-            <h2 class="paper-title">CaPtain: A Pipeline for Post-Training Code-as-Policy Robot Agents</h2>
+            <h2 class="paper-title">ODE Policy: Robot Learning via Action Dynamics, Not Actions</h2>
             
             <div class="author-row">
-                <span>🗓️ 2026-10-29</span>
-                <span>✍️ Yijia Fan, Xilin He, Yilei Jiang et al.</span>
+                <span>🗓️ 2026-11-01</span>
+                <span>✍️ Jindou Jia, Jingliang Li, Kuangji Zuo et al.</span>
             </div>
             
             <div class="badge-cluster">
-                <span class="badge">#reinforcement learning</span><span class="badge">#vision-language-action</span><span class="badge">#vla</span>
+                <span class="badge">#humanoid</span><span class="badge">#reinforcement learning</span><span class="badge">#locomotion</span><span class="badge">#vision-language-action</span><span class="badge">#vla</span>
             </div>
             
-            <p class="paper-summary">Across coding, web, and tool-use tasks, language-model agents are now routinely trained with the same recipe: supervised fine-tuning (SFT) to learn the interface, then multi-turn reinforcement learning (RL) to master it. Code-as-policy (CaP) casts robot manipulation in the same form, as the policy writes code against robot APIs and reads back the results, so the same recipe should apply. Yet existing CaP agents sidestep training: they either prompt closed frontier models or delegate manipulation to pre-trained vision-language-action models (VLAs) and high-level skills, while small open vision-language models (VLMs) fail outright. We present CaPtain, an open post-training pipeline that turns a small open VLM into a capable CaP agent, with no VLA, frontier model, or privileged state at test time. CaPtain trains and deploys the policy inside CaPtain-Harness, which exposes low-level perception, geometry, and guarded-motion primitives across simulation and real hardware. We first align the base model via SFT on synthetic trajectories generated with GPT-6 Astra, then apply multi-turn RL. Multi-turn RL must credit tens of agent requests, whose physical effects often surface turns later, from a single end-of-episode outcome. We therefore introduce a physical critic that reads privileged simulator state, never seen by the policy, and credits each request by how much it changes the predicted chance of success. Starting from Qwen3.5-4B (0% zero-shot), CaPtain-4B reaches 55.4% held-out LIBERO success after SFT and 73.8% after RL. On LIBERO-PRO, it reaches 78.5%, surpassing several frontier-model agents, and its RL gains persist across three perturbation suites (+17.6 to +21.2 points). Without target-domain training, it attains 83.3% on SimplerEnv WidowX, exceeds frontier models on CaP-Bench, and runs on a real robot after simulation-only adaptation. We release all code, data, and model weights.</p>
+            <p class="paper-summary">Most robot policies, whether trained by imitation learning (IL) or reinforcement learning (RL), map observations to action values at discrete control steps and leave the continuity of physical motion to be learned implicitly. We propose ODE policy, which learns the dynamics of the action rather than the action itself. A neural ordinary differential equation (ODE) learns the vector field of the action by matching the integrated actions to the targets over short action chunks in IL and single control steps in RL. A lightweight diversity head captures multi-modal behavior by randomizing the direction of the field. At deployment, each action is integrated from the previous one, so the executed trajectory is continuous by construction. We evaluate it as a visuomotor policy, as the action head of vision-language-action (VLA) and world action models (WAMs), and as the actor of model-based RL against 14 baselines on unimanual, bimanual, dexterous, locomotion, and loco-manipulation tasks. In IL, against flow matching, it reaches 5.9$\times$ the success, 5.4$\times$ the generalization, and 3.9$\times$ the mode balance after one epoch, and generates actions 10.8$\times$ faster. It mostly moves more smoothly than human demonstrations. On 14 real-world tasks across single-arm, dual-arm, dexterous, and humanoid robots, it achieves the highest success rate. In RL, it further speeds up SuperMimic for humanoid motion tracking and smooths its actions. Efficient in learning, data, parameters, and execution, ODE policy offers a promising path to scaling robot learning.</p>
             
             <div class="card-action-bar">
-                <a href="http://arxiv.org/pdf/2610.40799v1" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
+                <a href="http://arxiv.org/pdf/2611.01729v1" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
                     View PDF
                 </a>
-                <a href="http://arxiv.org/abs/2610.40799v1" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
+                <a href="http://arxiv.org/abs/2611.01729v1" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
                     arXiv Page &rarr;
                 </a>
             </div>
         </article>
         
-        <article class="paper-card" data-title="from teleoperation to long-horizon dexterity: evaluating visuomotor skills and offline proxies for dexterous manipulation" data-summary="imitation learning policies are intended to make robotic manipulation robust to variations in object pose, appearance, and environment that challenge pre-programmed motion. however, real-world performance remains difficult to predict, as conventional optimization signals such as validation loss show no consistent relationship with robot success. to identify the design choices that govern real-world performance, 281 imitation-learning policies spanning seven policy families were evaluated in approximately 1,700 real-robot trials of rj45 connector grasping and insertion using a five-fingered robotic hand. controlled ablations showed that observation and action representations dominated conventional optimizer and sampling choices. for point-cloud policies, region-of-interest cropping, representation in the robot-base frame, and normalization within the point encoder each improved success by 70-100 percentage points. for the vision-language-action policy, absolute rather than relative action prediction improved insertion success by up to 70 percentage points. skill decomposition, multi-view perception, and recovery demonstrations were associated with the strongest-performing systems, although their effects were not independently isolated. of 67 offline metrics evaluated, only five measures of predicted-motion smoothness and directness reliably correlated with insertion success (r = -0.70 to -0.80), and only within a single policy family. these results identify representation choices as key determinants of real-world imitation-learning performance and show that offline metrics can shortlist policies, but cannot replace real-robot evaluation.">
+        <article class="paper-card" data-title="scout: planning under occlusion via object-centric world model rollouts" data-summary="robots manipulating in cluttered spaces must often plan from partial views where foreground objects occlude the target, surrounding geometry, and usable free space. reactive policies often miss these hidden constraints, while exhaustive search becomes computationally prohibitive in dense clutter. we present scout, an occlusion-aware planning framework that bridges high-level deliberation with grounded physical rollouts. scout leverages an object-centric scene representation to reconstruct hidden geometry and derive a relational planning state capturing blocker hierarchies and accessibility corridors. to navigate the vast action space in clutter, an llm proposes structured action candidates which are then rigorously evaluated via monte carlo tree search (mcts) using a learned action-conditioned world model. evaluations on 'reveal' and 'placement' tasks show that scout outperforms vision-language-action (vla) policies, embodied agents, and 3d world models, with significant gains in long-horizon tasks requiring reasoning over occluded geometry. we further validate the framework's robustness through real-world robotic manipulation in a cluttered shelf environment.">
             <div class="card-meta-top">
                 <span class="rank-tag">TOP #2</span>
                 <div class="score-badge">
                     <span class="score-label">Priority Index</span>
-                    <span class="score-value">145</span>
+                    <span class="score-value">175</span>
                 </div>
             </div>
             
-            <h2 class="paper-title">From Teleoperation to Long-Horizon Dexterity: Evaluating Visuomotor Skills and Offline Proxies for Dexterous Manipulation</h2>
+            <h2 class="paper-title">SCOUT: Planning under Occlusion via Object-Centric World Model Rollouts</h2>
             
             <div class="author-row">
-                <span>🗓️ 2026-10-29</span>
-                <span>✍️ Ammar N. Abbas, Aayush Jain, Prashanth Viswanath et al.</span>
+                <span>🗓️ 2026-11-01</span>
+                <span>✍️ Amir Hossain Raj, Xuesu Xiao</span>
             </div>
             
             <div class="badge-cluster">
-                <span class="badge">#dexterous manipulation</span><span class="badge">#vision-language-action</span><span class="badge">#teleoperation</span>
+                <span class="badge">#world model</span><span class="badge">#vision-language-action</span><span class="badge">#vla</span>
             </div>
             
-            <p class="paper-summary">Imitation learning policies are intended to make robotic manipulation robust to variations in object pose, appearance, and environment that challenge pre-programmed motion. However, real-world performance remains difficult to predict, as conventional optimization signals such as validation loss show no consistent relationship with robot success. To identify the design choices that govern real-world performance, 281 imitation-learning policies spanning seven policy families were evaluated in approximately 1,700 real-robot trials of RJ45 connector grasping and insertion using a five-fingered robotic hand. Controlled ablations showed that observation and action representations dominated conventional optimizer and sampling choices. For point-cloud policies, region-of-interest cropping, representation in the robot-base frame, and normalization within the point encoder each improved success by 70-100 percentage points. For the vision-language-action policy, absolute rather than relative action prediction improved insertion success by up to 70 percentage points. Skill decomposition, multi-view perception, and recovery demonstrations were associated with the strongest-performing systems, although their effects were not independently isolated. Of 67 offline metrics evaluated, only five measures of predicted-motion smoothness and directness reliably correlated with insertion success (r = -0.70 to -0.80), and only within a single policy family. These results identify representation choices as key determinants of real-world imitation-learning performance and show that offline metrics can shortlist policies, but cannot replace real-robot evaluation.</p>
+            <p class="paper-summary">Robots manipulating in cluttered spaces must often plan from partial views where foreground objects occlude the target, surrounding geometry, and usable free space. Reactive policies often miss these hidden constraints, while exhaustive search becomes computationally prohibitive in dense clutter. We present SCOUT, an occlusion-aware planning framework that bridges high-level deliberation with grounded physical rollouts. SCOUT leverages an object-centric scene representation to reconstruct hidden geometry and derive a relational planning state capturing blocker hierarchies and accessibility corridors. To navigate the vast action space in clutter, an LLM proposes structured action candidates which are then rigorously evaluated via Monte Carlo Tree Search (MCTS) using a learned action-conditioned world model. Evaluations on 'Reveal' and 'Placement' tasks show that SCOUT outperforms Vision-Language-Action (VLA) policies, embodied agents, and 3D world models, with significant gains in long-horizon tasks requiring reasoning over occluded geometry. We further validate the framework's robustness through real-world robotic manipulation in a cluttered shelf environment.</p>
             
             <div class="card-action-bar">
-                <a href="http://arxiv.org/pdf/2610.40828v1" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
+                <a href="http://arxiv.org/pdf/2611.01600v1" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
                     View PDF
                 </a>
-                <a href="http://arxiv.org/abs/2610.40828v1" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
+                <a href="http://arxiv.org/abs/2611.01600v1" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
                     arXiv Page &rarr;
                 </a>
             </div>
         </article>
         
-        <article class="paper-card" data-title="star: steering action representations during inference" data-summary="vision-language-action models (vlas) map language instructions and visual observations to robot actions, showing strong capabilities across robotic manipulation tasks. however, in our probing experiment, we find that action representations near the action output do not fully preserve task-relevant visual grounding. motivated by this late-layer grounding gap, we introduce star, for steering action representations, a training-free inference method for pre-trained vlas. star applies an exponential moving average over late-layer residual updates, allowing later action representations to inherit object-aware update directions from earlier layers without model updates or architectural changes. it further uses recent proprioceptive states to adapt the mixing strength, using conservative mixing when execution dynamics change rapidly. experiments on robot manipulation benchmarks show that star improves late-layer object awareness and increases average task success rates by 4.0 percentage points. our code is available at https://github.com/pku-value-lab/star.">
+        <article class="paper-card" data-title="same path, less time: training-free fast execution of vision-language-action models under inference latency" data-summary="vision-language-action (vla) models predict chunks of future actions, yet deployed robots waste time in two ways that are independent of model capability: they halt while the next chunk is inferred, and they move at the speed of slow, cautious demonstrations. existing remedies remove one loss each, and stacking them fails, because asynchrony and speed-up each change the correspondence between planned progress and executed motion. we present path-preserving time scaling (pts), a training-free execution layer for frozen action-chunking policies built on one principle: the robot's motion is a time reparameterization of a reference path, and the path changes only in response to new observations. a path layer decodes every replan deterministically in one step and enters it at the progress consumed during inference. a time layer sums the planned increments, keeps the arm at 1x while the gripper moves, and caps the rate by the actuator's linear range and by chunk feasibility under latency. we show that misaligned entry and stochastic sampling add a bias and a variance to the continuation error, and derive a break-even success rate that states when speeding up pays off. on libero with two frozen vlas under injected inference latency, pts raises task throughput over the strongest deployable baseline by 33% for pi0.5 and 104% for smolvla while matching or improving the success rate, is best on all six model-suite combinations, and exceeds zero-latency 1x execution. against asynchronous 1x execution with the same one-step decoder, the time layer alone adds 28% and 38%. on libero-dynamic it improves on stop-and-wait execution by 38% and is comparable to asynchronous 1x execution.">
             <div class="card-meta-top">
                 <span class="rank-tag">TOP #3</span>
+                <div class="score-badge">
+                    <span class="score-label">Priority Index</span>
+                    <span class="score-value">155</span>
+                </div>
+            </div>
+            
+            <h2 class="paper-title">Same Path, Less Time: Training-Free Fast Execution of Vision-Language-Action Models under Inference Latency</h2>
+            
+            <div class="author-row">
+                <span>🗓️ 2026-11-01</span>
+                <span>✍️ Fuyi Chen</span>
+            </div>
+            
+            <div class="badge-cluster">
+                <span class="badge">#vision-language-action</span><span class="badge">#vla</span><span class="badge">#actuator</span>
+            </div>
+            
+            <p class="paper-summary">Vision-language-action (VLA) models predict chunks of future actions, yet deployed robots waste time in two ways that are independent of model capability: they halt while the next chunk is inferred, and they move at the speed of slow, cautious demonstrations. Existing remedies remove one loss each, and stacking them fails, because asynchrony and speed-up each change the correspondence between planned progress and executed motion. We present Path-preserving Time Scaling (PTS), a training-free execution layer for frozen action-chunking policies built on one principle: the robot's motion is a time reparameterization of a reference path, and the path changes only in response to new observations. A path layer decodes every replan deterministically in one step and enters it at the progress consumed during inference. A time layer sums the planned increments, keeps the arm at 1x while the gripper moves, and caps the rate by the actuator's linear range and by chunk feasibility under latency. We show that misaligned entry and stochastic sampling add a bias and a variance to the continuation error, and derive a break-even success rate that states when speeding up pays off. On LIBERO with two frozen VLAs under injected inference latency, PTS raises task throughput over the strongest deployable baseline by 33% for pi0.5 and 104% for SmolVLA while matching or improving the success rate, is best on all six model-suite combinations, and exceeds zero-latency 1x execution. Against asynchronous 1x execution with the same one-step decoder, the time layer alone adds 28% and 38%. On LIBERO-Dynamic it improves on stop-and-wait execution by 38% and is comparable to asynchronous 1x execution.</p>
+            
+            <div class="card-action-bar">
+                <a href="http://arxiv.org/pdf/2611.01390v1" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
+                    View PDF
+                </a>
+                <a href="http://arxiv.org/abs/2611.01390v1" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
+                    arXiv Page &rarr;
+                </a>
+            </div>
+        </article>
+        
+        <article class="paper-card" data-title="route-guided cbf-qp repair for safe vision-language-action models" data-summary="vision-language-action (vla) models can generate task-oriented robot actions, but they do not guarantee safe execution in obstacle-rich manipulation scenes. although cbf-qp safety filters can locally project unsafe actions into a safe set, such correction may push the robot away from the learned task trajectory and leave the vla policy without a reliable recovery direction. we propose route-guided cbf-qp repair, a post-hoc repair module that uses the short-horizon action chunk predicted by the vla to detect blocked nominal trajectories and generate entry-exit-rejoin guidance around obstacles. the selected route is added to the cbf-qp objective as a soft guidance term, while the cbf safety constraint remains hard. on safelibero, our method improves collision avoidance, task success, and safesuccess compared with aegis. our project page is available at github.">
+            <div class="card-meta-top">
+                <span class="rank-tag">TOP #4</span>
                 <div class="score-badge">
                     <span class="score-label">Priority Index</span>
                     <span class="score-value">135</span>
                 </div>
             </div>
             
-            <h2 class="paper-title">STAR: Steering Action Representations during Inference</h2>
+            <h2 class="paper-title">Route-Guided CBF-QP Repair for Safe Vision-Language-Action Models</h2>
             
             <div class="author-row">
-                <span>🗓️ 2026-10-29</span>
-                <span>✍️ Guangyu Zhao, Yongchang Zhang, Haoxuan Ru et al.</span>
+                <span>🗓️ 2026-11-01</span>
+                <span>✍️ Chan Park, Sunwoo Hong, Kirak Kim et al.</span>
             </div>
             
             <div class="badge-cluster">
                 <span class="badge">#vision-language-action</span><span class="badge">#vla</span>
             </div>
             
-            <p class="paper-summary">Vision-language-action models (VLAs) map language instructions and visual observations to robot actions, showing strong capabilities across robotic manipulation tasks. However, in our probing experiment, we find that action representations near the action output do not fully preserve task-relevant visual grounding. Motivated by this late-layer grounding gap, we introduce STAR, for STeering Action Representations, a training-free inference method for pre-trained VLAs. STAR applies an exponential moving average over late-layer residual updates, allowing later action representations to inherit object-aware update directions from earlier layers without model updates or architectural changes. It further uses recent proprioceptive states to adapt the mixing strength, using conservative mixing when execution dynamics change rapidly. Experiments on robot manipulation benchmarks show that STAR improves late-layer object awareness and increases average task success rates by 4.0 percentage points. Our code is available at https://github.com/PKU-VaLuE-Lab/STAR.</p>
+            <p class="paper-summary">Vision-language-action (VLA) models can generate task-oriented robot actions, but they do not guarantee safe execution in obstacle-rich manipulation scenes. Although CBF-QP safety filters can locally project unsafe actions into a safe set, such correction may push the robot away from the learned task trajectory and leave the VLA policy without a reliable recovery direction. We propose Route-Guided CBF-QP Repair, a post-hoc repair module that uses the short-horizon action chunk predicted by the VLA to detect blocked nominal trajectories and generate entry-exit-rejoin guidance around obstacles. The selected route is added to the CBF-QP objective as a soft guidance term, while the CBF safety constraint remains hard. On SafeLIBERO, our method improves collision avoidance, task success, and SafeSuccess compared with AEGIS. Our project page is available at GitHub.</p>
             
             <div class="card-action-bar">
-                <a href="http://arxiv.org/pdf/2610.41009v1" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
+                <a href="http://arxiv.org/pdf/2611.01713v1" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
                     View PDF
                 </a>
-                <a href="http://arxiv.org/abs/2610.41009v1" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
+                <a href="http://arxiv.org/abs/2611.01713v1" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
                     arXiv Page &rarr;
                 </a>
             </div>
         </article>
         
-        <article class="paper-card" data-title="swapbot: tool-centric robot manipulation via interchangeable end-effectors and tactile sensing" data-summary="robot manipulation in everyday environments inherently involves substantial tool usage. seemingly simple household tasks, such as cooking pan-fried tofu, require forceful cutting, delicate brushing, and precise placement using different tools under contact-rich interaction. thus, the ability to autonomously swap and use task-appropriate tools is important for tool-centric manipulation. we introduce swapbot, a modular, tool-centric end effector system featuring low-cost adapters that quickly convert common household tools into robot end effectors. rather than pursuing a single universal gripper, swapbot adopts a unified design principle that combines a fixed robot-side coupling interface with low-cost, tool-side adapters, enabling compatibility with diverse tools, including articulated ones, and multiple robot platforms. each adapter integrates compact tactile sensors, supports fast autonomous swapping, and interfaces with an intuitive teleoperation system for efficient demonstration collection. user studies show that, during teleoperation, swapbot reduces task completion time and operator workload. using collected demonstrations on the robot, we train imitation learning policies to successfully perform tool-centric tasks like cooking tofu, stirring salad, flipping meat. our ablation study shows that using tactile-augmented demonstrations improves policy performance across contact-rich skills, increasing success rates by 15 to 25 percentage points over rgb-only policies. these results highlight modular, tactile-equipped tools as a practical and extensible pathway toward robust and capable robot manipulation. project website https://personalrobotics.github.io/swapbot.">
-            <div class="card-meta-top">
-                <span class="rank-tag">TOP #4</span>
-                <div class="score-badge">
-                    <span class="score-label">Priority Index</span>
-                    <span class="score-value">100</span>
-                </div>
-            </div>
-            
-            <h2 class="paper-title">SwapBot: Tool-Centric Robot Manipulation via Interchangeable End-Effectors and Tactile Sensing</h2>
-            
-            <div class="author-row">
-                <span>🗓️ 2026-10-29</span>
-                <span>✍️ Yunchu Zhang, Ray Song, Junhan Jiao et al.</span>
-            </div>
-            
-            <div class="badge-cluster">
-                <span class="badge">#tactile sensing</span><span class="badge">#teleoperation</span>
-            </div>
-            
-            <p class="paper-summary">Robot manipulation in everyday environments inherently involves substantial tool usage. Seemingly simple household tasks, such as cooking pan-fried tofu, require forceful cutting, delicate brushing, and precise placement using different tools under contact-rich interaction. Thus, the ability to autonomously swap and use task-appropriate tools is important for tool-centric manipulation. We introduce SwapBot, a modular, tool-centric end effector system featuring low-cost adapters that quickly convert common household tools into robot end effectors. Rather than pursuing a single universal gripper, SwapBot adopts a unified design principle that combines a fixed robot-side coupling interface with low-cost, tool-side adapters, enabling compatibility with diverse tools, including articulated ones, and multiple robot platforms. Each adapter integrates compact tactile sensors, supports fast autonomous swapping, and interfaces with an intuitive teleoperation system for efficient demonstration collection. User studies show that, during teleoperation, SwapBot reduces task completion time and operator workload. Using collected demonstrations on the robot, we train imitation learning policies to successfully perform tool-centric tasks like cooking tofu, stirring salad, flipping meat. Our ablation study shows that using tactile-augmented demonstrations improves policy performance across contact-rich skills, increasing success rates by 15 to 25 percentage points over RGB-only policies. These results highlight modular, tactile-equipped tools as a practical and extensible pathway toward robust and capable robot manipulation. Project website https://personalrobotics.github.io/SwapBot.</p>
-            
-            <div class="card-action-bar">
-                <a href="http://arxiv.org/pdf/2610.40646v1" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
-                    View PDF
-                </a>
-                <a href="http://arxiv.org/abs/2610.40646v1" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
-                    arXiv Page &rarr;
-                </a>
-            </div>
-        </article>
-        
-        <article class="paper-card" data-title="contact imitation interface: transferring dexterous skills by showing how contact unfolds" data-summary="robot-free human demonstrations offer a promising route to scaling dexterous manipulation data. the key challenge is to preserve the demonstrator's natural dexterity while producing contact-grounded observations and actions that transfer to robot hands. we present contact imitation interface (cimi), a framework with contact-grounded demonstration and learning interfaces. the demonstration interface combines shared contact geometry and fingertip rgb views with contact-alignment-first retargeting and reprojection of wider scene views. the learning interface introduces a hierarchical policy in which a contact-surface planner predicts relative contact-surface trajectories and a controller coordinates wrist and finger commands to improve contact alignment. cimi combines contact-grounded observations, retargeting, and action representations, improving mean final-stage success by at least 50 percentage points over baseline policies across six hand-task pairs on leap and wuji. hardware designs and software are publicly available.">
+        <article class="paper-card" data-title="gatedvla with camera-based emergency braking: alpasim e2e closed loop challenge technical report" data-summary="this report presents gatedvla, our entry for the physical ai av (pai-av) track. our learned vision-language-action (vla) policy pairs the driving-pretrained qwen-drive-1.0-4b vision-language model with a layer-wise flow-matching action expert that outputs a 2.5 s horizon of acceleration and curvature controls, augmented with a soft visual mask applied to the expert's cross-attention. compared to an identically trained baseline, the masked policy achieves comparable overall open-loop error while reducing error on left turns. in local closed-loop evaluation across the same 150 scenes (two rollouts per scene), the visual mask increases the mean scene score from 0.479 to 0.517 (paired difference +0.038, 95% bootstrap ci [-0.018, +0.093], wins/losses 37/26, sign test p = 0.21). incorporating a rule-based automatic emergency braking (aeb) module at deployment further increases the mean score to 0.599 (+0.082, ci [+0.023, +0.143]) and reduces the mean number of scenes with at-fault collisions from 34.0 to 11.0.">
             <div class="card-meta-top">
                 <span class="rank-tag">TOP #5</span>
                 <div class="score-badge">
                     <span class="score-label">Priority Index</span>
-                    <span class="score-value">80</span>
+                    <span class="score-value">135</span>
                 </div>
             </div>
             
-            <h2 class="paper-title">Contact Imitation Interface: Transferring Dexterous Skills by Showing How Contact Unfolds</h2>
+            <h2 class="paper-title">GatedVLA with Camera-Based Emergency Braking: AlpaSim E2E Closed Loop Challenge Technical Report</h2>
             
             <div class="author-row">
-                <span>🗓️ 2026-10-29</span>
-                <span>✍️ Zhixuan Xu, Yichen Li, Bingchen Wu et al.</span>
+                <span>🗓️ 2026-11-01</span>
+                <span>✍️ Kaneyoshi Hiratsuka, Naoki Takada, Makoto Kawano</span>
             </div>
             
             <div class="badge-cluster">
-                <span class="badge">#dexterous manipulation</span>
+                <span class="badge">#vision-language-action</span><span class="badge">#vla</span>
             </div>
             
-            <p class="paper-summary">Robot-free human demonstrations offer a promising route to scaling dexterous manipulation data. The key challenge is to preserve the demonstrator's natural dexterity while producing contact-grounded observations and actions that transfer to robot hands. We present Contact Imitation Interface (CIMI), a framework with contact-grounded demonstration and learning interfaces. The demonstration interface combines shared contact geometry and fingertip RGB views with contact-alignment-first retargeting and reprojection of wider scene views. The learning interface introduces a hierarchical policy in which a contact-surface planner predicts relative contact-surface trajectories and a controller coordinates wrist and finger commands to improve contact alignment. CIMI combines contact-grounded observations, retargeting, and action representations, improving mean final-stage success by at least 50 percentage points over baseline policies across six hand-task pairs on LEAP and Wuji. Hardware designs and software are publicly available.</p>
+            <p class="paper-summary">This report presents GatedVLA, our entry for the Physical AI AV (PAI-AV) track. Our learned vision-language-action (VLA) policy pairs the driving-pretrained Qwen-Drive-1.0-4B vision-language model with a layer-wise flow-matching action expert that outputs a 2.5 s horizon of acceleration and curvature controls, augmented with a soft visual mask applied to the expert's cross-attention. Compared to an identically trained baseline, the masked policy achieves comparable overall open-loop error while reducing error on left turns. In local closed-loop evaluation across the same 150 scenes (two rollouts per scene), the visual mask increases the mean scene score from 0.479 to 0.517 (paired difference +0.038, 95% bootstrap CI [-0.018, +0.093], wins/losses 37/26, sign test p = 0.21). Incorporating a rule-based automatic emergency braking (AEB) module at deployment further increases the mean score to 0.599 (+0.082, CI [+0.023, +0.143]) and reduces the mean number of scenes with at-fault collisions from 34.0 to 11.0.</p>
             
             <div class="card-action-bar">
-                <a href="http://arxiv.org/pdf/2610.41028v1" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
+                <a href="http://arxiv.org/pdf/2611.01663v1" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
                     View PDF
                 </a>
-                <a href="http://arxiv.org/abs/2610.41028v1" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
+                <a href="http://arxiv.org/abs/2611.01663v1" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
                     arXiv Page &rarr;
                 </a>
             </div>
         </article>
         
-        <article class="paper-card" data-title="flapsim: a composable mujoco simulation platform and reduced-order aerodynamic model hierarchy for flapping-wing robotics" data-summary="flapping-wing simulation must reconcile high-frequency wingbeat aerodynamics with the slower dynamics relevant to flight control and reinforcement learning. we present flapsim, a modular open-source mujoco simulation platform that combines robot descriptions, wing geometry, and composable aerodynamic models in a deterministic simulation pipeline. across $48$ held-out scenarios spanning frequency, gimbal, wind, frequency-step, gust, and cross-robot flat-plate regimes, we compare five reduced-order configurations operating at $1\,\text{ms}$ with a $50\,μ\text{s}$ quasi-steady blade-element reference. the built-in hover cycle-averaged baseline achieves a $67.51\times$ cpu speedup but only $0.6593$ mean wrench fidelity. combining multirate $21$-substep clock synchronization, three-dimensional linear/quadratic inflow and gust coupling, analytical blade-element geometry scaling, and phase-locked $1f\text{--}6f$ harmonics raises mean fidelity to $0.9646$ at a $65.19\times$ speedup in a five-block model. a streamlined four-block model without explicit step-transient lag states achieves $0.9662$ fidelity at a $67.98\times$ speedup. controlled ablations show that stroke harmonics are particularly important during frequency transitions, improving held-out frequency-step fidelity by $+0.3176$. transfer-function analysis explains this effect: fixed-window cycle averaging retains harmonic contributions when the wingbeat frequency changes, so within-cycle reconstruction also improves the filtered wrench. once phase alignment and harmonic synthesis are included, explicit transient lag states provide no additional benefit in this benchmark. these results characterize the accuracy--computation tradeoff of the aerodynamic hierarchy and identify timing, inflow, geometry, and harmonic representation as central considerations for reduced-order flapping-wing simulation.">
+        <article class="paper-card" data-title="serving agentic robot fleets: workload characterization, kv-cache thrashing, and admission control" data-summary="agentic robots combine a vision-language brain, a tool-using harness, and a vision-language-action (vla) policy. serving a fleet of these agents introduces two coupled resource constraints: the brain repeatedly revisits long, growing key-value (kv) cache states, while the vla executes action chunks under tight control deadlines. we characterize 80 libero-pro episodes generated by gpt-6-astra, rpent, and pi0.5 (1,862 brain turns and 1,582 vla inference chunks), profile both layers on h800 graphics processing units (gpus), and replay the resulting agent programs on a vllm serving engine. brain contexts reach 215k tokens; the median astra request takes 7.78 s, while the intervening environment-step gap is only 1.0 s. under a 0.25 s action-chunk deadline, one vla gpu meets the 1% starvation target for one robot; under a 1.0 s deadline, its measured capacity reaches at least 32. in sustained brain replay, increasing concurrency from 20 to 32 robots reduces throughput from about 2.4 to 0.6 requests/s as repetitive prefill displaces generation. a static active-episode cap restores 2.24-2.25 requests/s and raises completed trace-program throughput from 1.30 to 5.00-5.55 episodes/min. our measurements expose the workload-dependent shift between action deadlines and brain kv residency, and establish practical principles for capacity planning and admission in sustained agentic robot fleets.">
             <div class="card-meta-top">
                 <span class="rank-tag">TOP #6</span>
                 <div class="score-badge">
                     <span class="score-label">Priority Index</span>
-                    <span class="score-value">80</span>
+                    <span class="score-value">135</span>
                 </div>
             </div>
             
-            <h2 class="paper-title">FlapSim: A Composable MuJoCo Simulation Platform and Reduced-Order Aerodynamic Model Hierarchy for Flapping-Wing Robotics</h2>
+            <h2 class="paper-title">Serving Agentic Robot Fleets: Workload Characterization, KV-Cache Thrashing, and Admission Control</h2>
             
             <div class="author-row">
-                <span>🗓️ 2026-10-29</span>
-                <span>✍️ Mingshan He</span>
+                <span>🗓️ 2026-11-01</span>
+                <span>✍️ Sida He</span>
             </div>
             
             <div class="badge-cluster">
-                <span class="badge">#reinforcement learning</span>
+                <span class="badge">#vision-language-action</span><span class="badge">#vla</span>
             </div>
             
-            <p class="paper-summary">Flapping-wing simulation must reconcile high-frequency wingbeat aerodynamics with the slower dynamics relevant to flight control and reinforcement learning. We present FlapSim, a modular open-source MuJoCo simulation platform that combines robot descriptions, wing geometry, and composable aerodynamic models in a deterministic simulation pipeline. Across $48$ held-out scenarios spanning frequency, gimbal, wind, frequency-step, gust, and cross-robot flat-plate regimes, we compare five reduced-order configurations operating at $1\,\text{ms}$ with a $50\,μ\text{s}$ quasi-steady blade-element reference. The built-in hover cycle-averaged baseline achieves a $67.51\times$ CPU speedup but only $0.6593$ mean wrench fidelity. Combining multirate $21$-substep clock synchronization, three-dimensional linear/quadratic inflow and gust coupling, analytical blade-element geometry scaling, and phase-locked $1f\text{--}6f$ harmonics raises mean fidelity to $0.9646$ at a $65.19\times$ speedup in a five-block model. A streamlined four-block model without explicit step-transient lag states achieves $0.9662$ fidelity at a $67.98\times$ speedup. Controlled ablations show that stroke harmonics are particularly important during frequency transitions, improving held-out frequency-step fidelity by $+0.3176$. Transfer-function analysis explains this effect: fixed-window cycle averaging retains harmonic contributions when the wingbeat frequency changes, so within-cycle reconstruction also improves the filtered wrench. Once phase alignment and harmonic synthesis are included, explicit transient lag states provide no additional benefit in this benchmark. These results characterize the accuracy--computation tradeoff of the aerodynamic hierarchy and identify timing, inflow, geometry, and harmonic representation as central considerations for reduced-order flapping-wing simulation.</p>
+            <p class="paper-summary">Agentic robots combine a vision-language brain, a tool-using harness, and a vision-language-action (VLA) policy. Serving a fleet of these agents introduces two coupled resource constraints: the brain repeatedly revisits long, growing key-value (KV) cache states, while the VLA executes action chunks under tight control deadlines. We characterize 80 LIBERO-PRO episodes generated by GPT-6-Astra, RPent, and pi0.5 (1,862 brain turns and 1,582 VLA inference chunks), profile both layers on H800 graphics processing units (GPUs), and replay the resulting agent programs on a vLLM serving engine. Brain contexts reach 215k tokens; the median Astra request takes 7.78 s, while the intervening environment-step gap is only 1.0 s. Under a 0.25 s action-chunk deadline, one VLA GPU meets the 1% starvation target for one robot; under a 1.0 s deadline, its measured capacity reaches at least 32. In sustained brain replay, increasing concurrency from 20 to 32 robots reduces throughput from about 2.4 to 0.6 requests/s as repetitive prefill displaces generation. A static active-episode cap restores 2.24-2.25 requests/s and raises completed trace-program throughput from 1.30 to 5.00-5.55 episodes/min. Our measurements expose the workload-dependent shift between action deadlines and brain KV residency, and establish practical principles for capacity planning and admission in sustained agentic robot fleets.</p>
             
             <div class="card-action-bar">
-                <a href="http://arxiv.org/pdf/2610.40902v1" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
+                <a href="http://arxiv.org/pdf/2611.01404v1" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
                     View PDF
                 </a>
-                <a href="http://arxiv.org/abs/2610.40902v1" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
+                <a href="http://arxiv.org/abs/2611.01404v1" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
                     arXiv Page &rarr;
                 </a>
             </div>
         </article>
         
-        <article class="paper-card" data-title="consort: uncertainty-constrained multi-robot planning for cooperative localization in gps-denied environments" data-summary="centralized multi-agent path planning with cooperative localization in gps-denied environments is generally computationally intractable when formulated in full belief space due to tightly coupled uncertainty dynamics. prior work typically approximates belief dynamics or restricts inter-agent coupling. this work examines a multi-agent planning problem in which a primary agent must reach a goal in minimum time subject to a chance-constrained collision-avoidance requirement and a terminal bound on localization uncertainty. we obtain a tractable surrogate of the underlying belief-space problem by optimizing over the mean-state trajectories of all agents and propagating covariance for terminal constraint evaluation only. we propose consort (cooperative navigation with support-optimized routing and trajectories), a discrete-to-continuous pipeline combining hexagonal-grid joint search with spline-based trajectory refinement. across 50 randomized scenarios, the planners separate as the terminal uncertainty bound tightens, with consort solving 80% of scenarios where the strongest baseline solves 54%, at comparable path length. in marine simulations, with the plans executed under feedback control on an independently developed factor-graph estimate, the trajectories remain collision-free and their terminal uncertainty falls within 6% of the planner's prediction.">
+        <article class="paper-card" data-title="compliantbot: learning whole-body compliance across task interfaces for humanoid control" data-summary="humanoid controllers need the ability to yield to external forces while retaining the capacity to resume their original tasks. however, tracking objectives penalize the deviations needed for yielding, while relaxing tracking goals persistently can make task recovery harder. existing approaches often rely on task-specific interaction command interfaces or constructed compliant motion data and reference trajectories, limiting the direct reuse of their compliance-training mechanisms across different task interfaces. we introduce compliantbot, a compliance-training framework for motion tracking and velocity-command locomotion. it preserves the original task inputs and requires no preconstructed compliant data or target trajectories. a state-dependent interaction force field couples applied loads to the robot's motion, enabling local articulation and whole-body movement to change the forces experienced. a complementary force-magnitude reward encourages lower interaction loads, while task rewards are downweighted during loading and restored after release to coordinate yielding and task resumption. the trained policies use task inputs and proprioceptive history without explicit external-force measurements. across both task interfaces, compliantbot yields farther under constant pulls and experiences lower spring interaction loads than matched baselines, while resuming task tracking after force removal. compliantbot achieves the highest task completion among the compared methods under stronger pulls. power evaluations further show that compliantbot has the lowest mean joint mechanical power among the compared methods. real-robot demonstrations further illustrate compliant responses through arm motion, stepping, and body reorientation.">
             <div class="card-meta-top">
                 <span class="rank-tag">TOP #7</span>
                 <div class="score-badge">
                     <span class="score-label">Priority Index</span>
-                    <span class="score-value">50</span>
+                    <span class="score-value">120</span>
                 </div>
             </div>
             
-            <h2 class="paper-title">CONSORT: Uncertainty-Constrained Multi-Robot Planning for Cooperative Localization in GPS-Denied Environments</h2>
+            <h2 class="paper-title">CompliantBot: Learning Whole-Body Compliance across Task Interfaces for Humanoid Control</h2>
             
             <div class="author-row">
-                <span>🗓️ 2026-10-30</span>
-                <span>✍️ Tony Zhang, Ryan Bartholomew, Kalliyan Velasco et al.</span>
+                <span>🗓️ 2026-11-01</span>
+                <span>✍️ Haoyang Li, Keqi Zhu, Zhanxiang Cao et al.</span>
             </div>
             
             <div class="badge-cluster">
-                <span class="badge badge-muted">#frontier</span>
+                <span class="badge">#humanoid</span><span class="badge">#locomotion</span>
             </div>
             
-            <p class="paper-summary">Centralized multi-agent path planning with cooperative localization in GPS-denied environments is generally computationally intractable when formulated in full belief space due to tightly coupled uncertainty dynamics. Prior work typically approximates belief dynamics or restricts inter-agent coupling. This work examines a multi-agent planning problem in which a primary agent must reach a goal in minimum time subject to a chance-constrained collision-avoidance requirement and a terminal bound on localization uncertainty. We obtain a tractable surrogate of the underlying belief-space problem by optimizing over the mean-state trajectories of all agents and propagating covariance for terminal constraint evaluation only. We propose CONSORT (Cooperative Navigation with Support-Optimized Routing and Trajectories), a discrete-to-continuous pipeline combining hexagonal-grid joint search with spline-based trajectory refinement. Across 50 randomized scenarios, the planners separate as the terminal uncertainty bound tightens, with CONSORT solving 80% of scenarios where the strongest baseline solves 54%, at comparable path length. In marine simulations, with the plans executed under feedback control on an independently developed factor-graph estimate, the trajectories remain collision-free and their terminal uncertainty falls within 6% of the planner's prediction.</p>
+            <p class="paper-summary">Humanoid controllers need the ability to yield to external forces while retaining the capacity to resume their original tasks. However, tracking objectives penalize the deviations needed for yielding, while relaxing tracking goals persistently can make task recovery harder. Existing approaches often rely on task-specific interaction command interfaces or constructed compliant motion data and reference trajectories, limiting the direct reuse of their compliance-training mechanisms across different task interfaces. We introduce CompliantBot, a compliance-training framework for motion tracking and velocity-command locomotion. It preserves the original task inputs and requires no preconstructed compliant data or target trajectories. A state-dependent interaction force field couples applied loads to the robot's motion, enabling local articulation and whole-body movement to change the forces experienced. A complementary force-magnitude reward encourages lower interaction loads, while task rewards are downweighted during loading and restored after release to coordinate yielding and task resumption. The trained policies use task inputs and proprioceptive history without explicit external-force measurements. Across both task interfaces, CompliantBot yields farther under constant pulls and experiences lower spring interaction loads than matched baselines, while resuming task tracking after force removal. CompliantBot achieves the highest task completion among the compared methods under stronger pulls. Power evaluations further show that CompliantBot has the lowest mean joint mechanical power among the compared methods. Real-robot demonstrations further illustrate compliant responses through arm motion, stepping, and body reorientation.</p>
             
             <div class="card-action-bar">
-                <a href="http://arxiv.org/pdf/2610.41235v1" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
+                <a href="http://arxiv.org/pdf/2611.01748v1" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
                     View PDF
                 </a>
-                <a href="http://arxiv.org/abs/2610.41235v1" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
+                <a href="http://arxiv.org/abs/2611.01748v1" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
                     arXiv Page &rarr;
                 </a>
             </div>
         </article>
         
-        <article class="paper-card" data-title="tinyastral: transferring self-evolving harnesses to tiny generalist manipulation agents" data-summary="robot agents built on vision-language models depend on both the planner and its harness: the tools, feedback, memory, and recovery logic around it. can improvements to a large teacher's harness be carried into a compact agent with lower inference compute cost? we present tinyastral, a two-stage approach. we first freeze an open-weight teacher and improve its harness through recursive self-improvement (rsi): frontier llm agents read the teacher's trajectories and propose harness edits, and each edit is accepted only if it passes a paired statistical test. we then freeze the final harness, collect teacher trajectories with reasoning and failure recovery, and distill a small student that replaces the teacher in the same harness. on robotwin, harness evolution raises the teacher's success from 33.4% to 63.6%; the final 4b student reaches 62.8%. across four harness versions, distilled 4b students score close to their corresponding teachers, and later versions yield stronger students, showing that harness evolution gains carry into compact models. the harness gains also transfer to other frozen planners without retraining. on identical episodes, the final 4b student outperforms open 4b agents, the open 27b harness-rsi model sensenova-roborsi, and our own teacher model placed in three competitors' harnesses. it stays close to its teacher on all three training benchmarks, and on three benchmarks never used for rsi or training it scores close to a 552b planner running the same harness. on the measured deployment episodes, it uses about one fifth of its teacher's accelerator time.">
+        <article class="paper-card" data-title="$tf^2$-steering: action refinement with tactile forecasts and feedback via velocity-field steering" data-summary="tactile sensing plays a crucial role in everyday human interaction. consider inserting a plug into a tight socket, vision alone provides limited guidance during the final insertion stage, and we instead rely on both anticipated contact and realized tactile feedback to ajust the insertion motion. the same capability is equally important for robots, particularly in dexterous manipulation tasks. yet many contemporary robot policies remain vision-dominant. this visual bias, compounded by limited tactile data and sparse contact events, can cause directly incorporated tactile signals to be ignored or even compromise the policy's pretrained capabilities, yielding degrading performance as observed in our experiments. we present $tf^2$-steering, which refines actions via learned residual steering of the flow-matching action expert's velocity field, using a tactile mixture-of-experts architecture to integrate both tactile forecasts and real-time tactile feedback. together with specific designed three stages training recipe, $tf^2$-steering enables tactile signals to correct and, when necessary, redirect the flow-matching action-generation process, while building on the strong action-generation capacity of the vision-based foundation policy. extensive experiments across six simulated and six real-world manipulation tasks demonstrate the effectiveness of $tf^2$-steering. it outperforms the strongest evaluated baselines by 10.7 percentage points in average simulation success rate and 9.1 percentage points in average real-world progress success rate. project page: https://yiming-cc.github.io/tf2-steering/.">
             <div class="card-meta-top">
                 <span class="rank-tag">TOP #8</span>
                 <div class="score-badge">
                     <span class="score-label">Priority Index</span>
-                    <span class="score-value">50</span>
+                    <span class="score-value">110</span>
                 </div>
             </div>
             
-            <h2 class="paper-title">TinyAstral: Transferring Self-Evolving Harnesses to Tiny Generalist Manipulation Agents</h2>
+            <h2 class="paper-title">$TF^2$-Steering: Action Refinement with Tactile Forecasts and Feedback via Velocity-Field Steering</h2>
             
             <div class="author-row">
-                <span>🗓️ 2026-10-30</span>
-                <span>✍️ Kehong Gong, Xiaoxu Zheng, Guanli Hou et al.</span>
+                <span>🗓️ 2026-11-01</span>
+                <span>✍️ Yiming Chen, Xiaofei Wei, Chun Gu et al.</span>
             </div>
             
             <div class="badge-cluster">
-                <span class="badge badge-muted">#frontier</span>
+                <span class="badge">#dexterous manipulation</span><span class="badge">#tactile sensing</span>
             </div>
             
-            <p class="paper-summary">Robot agents built on vision-language models depend on both the planner and its harness: the tools, feedback, memory, and recovery logic around it. Can improvements to a large teacher's harness be carried into a compact agent with lower inference compute cost? We present TinyAstral, a two-stage approach. We first freeze an open-weight teacher and improve its harness through recursive self-improvement (RSI): frontier LLM agents read the teacher's trajectories and propose harness edits, and each edit is accepted only if it passes a paired statistical test. We then freeze the final harness, collect teacher trajectories with reasoning and failure recovery, and distill a small student that replaces the teacher in the same harness. On RoboTwin, harness evolution raises the teacher's success from 33.4% to 63.6%; the final 4B student reaches 62.8%. Across four harness versions, distilled 4B students score close to their corresponding teachers, and later versions yield stronger students, showing that harness evolution gains carry into compact models. The harness gains also transfer to other frozen planners without retraining. On identical episodes, the final 4B student outperforms open 4B agents, the open 27B harness-RSI model SenseNova-RoboRSI, and our own teacher model placed in three competitors' harnesses. It stays close to its teacher on all three training benchmarks, and on three benchmarks never used for RSI or training it scores close to a 552B planner running the same harness. On the measured deployment episodes, it uses about one fifth of its teacher's accelerator time.</p>
+            <p class="paper-summary">Tactile sensing plays a crucial role in everyday human interaction. Consider inserting a plug into a tight socket, vision alone provides limited guidance during the final insertion stage, and we instead rely on both anticipated contact and realized tactile feedback to ajust the insertion motion. The same capability is equally important for robots, particularly in dexterous manipulation tasks. Yet many contemporary robot policies remain vision-dominant. This visual bias, compounded by limited tactile data and sparse contact events, can cause directly incorporated tactile signals to be ignored or even compromise the policy's pretrained capabilities, yielding degrading performance as observed in our experiments. We present $TF^2$-Steering, which refines actions via learned residual steering of the flow-matching action expert's velocity field, using a tactile mixture-of-experts architecture to integrate both tactile forecasts and real-time tactile feedback. Together with specific designed three stages training recipe, $TF^2$-Steering enables tactile signals to correct and, when necessary, redirect the flow-matching action-generation process, while building on the strong action-generation capacity of the vision-based foundation policy. Extensive experiments across six simulated and six real-world manipulation tasks demonstrate the effectiveness of $TF^2$-Steering. It outperforms the strongest evaluated baselines by 10.7 percentage points in average simulation success rate and 9.1 percentage points in average real-world progress success rate. Project page: https://yiming-cc.github.io/tf2-steering/.</p>
             
             <div class="card-action-bar">
-                <a href="http://arxiv.org/pdf/2610.41216v1" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
+                <a href="http://arxiv.org/pdf/2611.01483v1" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
                     View PDF
                 </a>
-                <a href="http://arxiv.org/abs/2610.41216v1" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
+                <a href="http://arxiv.org/abs/2611.01483v1" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
                     arXiv Page &rarr;
                 </a>
             </div>
