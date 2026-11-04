@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Embodied AI & Robotics Intelligence Digest — November 03, 2026</title>
+    <title>Embodied AI & Robotics Intelligence Digest — November 04, 2026</title>
     <style>
         :root {
             --bg-base: #080c14;
@@ -242,7 +242,7 @@
         <header>
             <span class="pill-brand">Autonomous Research Intelligence</span>
             <h1>Embodied AI & Physical Frontier Briefing</h1>
-            <p class="subtitle">Compiled on November 03, 2026 • Ranked top 8 strategic breakthroughs out of incoming preprints.</p>
+            <p class="subtitle">Compiled on November 04, 2026 • Ranked top 8 strategic breakthroughs out of incoming preprints.</p>
             
             <div class="controls">
                 <input type="text" id="filterInput" class="search-box" placeholder="Filter papers by keywords (e.g. humanoid, tactile, diffusion)...">
@@ -251,103 +251,103 @@
 
         <main id="paperList">
             
-        <article class="paper-card" data-title="ode policy: robot learning via action dynamics, not actions" data-summary="most robot policies, whether trained by imitation learning (il) or reinforcement learning (rl), map observations to action values at discrete control steps and leave the continuity of physical motion to be learned implicitly. we propose ode policy, which learns the dynamics of the action rather than the action itself. a neural ordinary differential equation (ode) learns the vector field of the action by matching the integrated actions to the targets over short action chunks in il and single control steps in rl. a lightweight diversity head captures multi-modal behavior by randomizing the direction of the field. at deployment, each action is integrated from the previous one, so the executed trajectory is continuous by construction. we evaluate it as a visuomotor policy, as the action head of vision-language-action (vla) and world action models (wams), and as the actor of model-based rl against 14 baselines on unimanual, bimanual, dexterous, locomotion, and loco-manipulation tasks. in il, against flow matching, it reaches 5.9$\times$ the success, 5.4$\times$ the generalization, and 3.9$\times$ the mode balance after one epoch, and generates actions 10.8$\times$ faster. it mostly moves more smoothly than human demonstrations. on 14 real-world tasks across single-arm, dual-arm, dexterous, and humanoid robots, it achieves the highest success rate. in rl, it further speeds up supermimic for humanoid motion tracking and smooths its actions. efficient in learning, data, parameters, and execution, ode policy offers a promising path to scaling robot learning.">
+        <article class="paper-card" data-title="airoa-0: long-horizon, precise, cross-embodiment manipulation from handheld data" data-summary="airoa-0 (a-0) is a bimanual manipulation system learned from 16,151 hours of handheld demonstrations, with no robot data collected at any stage. the demonstrations are recorded with yubi, our open-source handheld gripper, which lets people record manipulation data anywhere with no robot present. from a single instruction, a-0 sorts more than a dozen small parts into their numbered cells and changes the mop pads and brush of a robot vacuum; among other tasks, it unzips a pencil case and folds a towel. it performs these tasks using only a camera on each wrist, with no head or scene camera, at a site where none of its training data was recorded. across the ten tasks of our evaluation, it averages a success rate of 78%, against 27% for the strongest of four other vision-language-action models post-trained on the same task demonstrations. we collect no teleoperation data and use no reinforcement learning or on-robot corrections, and the robot appears only at test time. the system learns which regions of each wrist view matter for the task, predicts the stage the task has reached, and decodes actions as a continuous stream. a-0 is embodiment-agnostic: it runs on robots that mount the yubi gripper, such as a bimanual franka, tx-g2, openarm and ur. we are releasing the dataset, to our knowledge the largest open dataset of handheld-gripper demonstrations with task and subtask instructions, together with the pre-trained weights and the post-training recipe. videos of a-0 on every task are on the project page, https://a-0.airoa.io. anyone can build the gripper, record a task of their own and post-train the model on it in under four hours on a single node of eight h200 gpus.">
             <div class="card-meta-top">
                 <span class="rank-tag">TOP #1</span>
                 <div class="score-badge">
                     <span class="score-label">Priority Index</span>
-                    <span class="score-value">235</span>
+                    <span class="score-value">145</span>
                 </div>
             </div>
             
-            <h2 class="paper-title">ODE Policy: Robot Learning via Action Dynamics, Not Actions</h2>
+            <h2 class="paper-title">AIRoA-0: Long-Horizon, Precise, Cross-Embodiment Manipulation from Handheld Data</h2>
             
             <div class="author-row">
-                <span>🗓️ 2026-11-01</span>
-                <span>✍️ Jindou Jia, Jingliang Li, Kuangji Zuo et al.</span>
+                <span>🗓️ 2026-11-02</span>
+                <span>✍️ Yueh-Hua Wu, Kei Ota, Hanlong Li et al.</span>
             </div>
             
             <div class="badge-cluster">
-                <span class="badge">#humanoid</span><span class="badge">#reinforcement learning</span><span class="badge">#locomotion</span><span class="badge">#vision-language-action</span><span class="badge">#vla</span>
+                <span class="badge">#reinforcement learning</span><span class="badge">#vision-language-action</span><span class="badge">#teleoperation</span>
             </div>
             
-            <p class="paper-summary">Most robot policies, whether trained by imitation learning (IL) or reinforcement learning (RL), map observations to action values at discrete control steps and leave the continuity of physical motion to be learned implicitly. We propose ODE policy, which learns the dynamics of the action rather than the action itself. A neural ordinary differential equation (ODE) learns the vector field of the action by matching the integrated actions to the targets over short action chunks in IL and single control steps in RL. A lightweight diversity head captures multi-modal behavior by randomizing the direction of the field. At deployment, each action is integrated from the previous one, so the executed trajectory is continuous by construction. We evaluate it as a visuomotor policy, as the action head of vision-language-action (VLA) and world action models (WAMs), and as the actor of model-based RL against 14 baselines on unimanual, bimanual, dexterous, locomotion, and loco-manipulation tasks. In IL, against flow matching, it reaches 5.9$\times$ the success, 5.4$\times$ the generalization, and 3.9$\times$ the mode balance after one epoch, and generates actions 10.8$\times$ faster. It mostly moves more smoothly than human demonstrations. On 14 real-world tasks across single-arm, dual-arm, dexterous, and humanoid robots, it achieves the highest success rate. In RL, it further speeds up SuperMimic for humanoid motion tracking and smooths its actions. Efficient in learning, data, parameters, and execution, ODE policy offers a promising path to scaling robot learning.</p>
+            <p class="paper-summary">AIRoA-0 (A-0) is a bimanual manipulation system learned from 16,151 hours of handheld demonstrations, with no robot data collected at any stage. The demonstrations are recorded with YUBI, our open-source handheld gripper, which lets people record manipulation data anywhere with no robot present. From a single instruction, A-0 sorts more than a dozen small parts into their numbered cells and changes the mop pads and brush of a robot vacuum; among other tasks, it unzips a pencil case and folds a towel. It performs these tasks using only a camera on each wrist, with no head or scene camera, at a site where none of its training data was recorded. Across the ten tasks of our evaluation, it averages a success rate of 78%, against 27% for the strongest of four other vision-language-action models post-trained on the same task demonstrations. We collect no teleoperation data and use no reinforcement learning or on-robot corrections, and the robot appears only at test time. The system learns which regions of each wrist view matter for the task, predicts the stage the task has reached, and decodes actions as a continuous stream. A-0 is embodiment-agnostic: it runs on robots that mount the YUBI gripper, such as a bimanual Franka, TX-G2, OpenArm and UR. We are releasing the dataset, to our knowledge the largest open dataset of handheld-gripper demonstrations with task and subtask instructions, together with the pre-trained weights and the post-training recipe. Videos of A-0 on every task are on the project page, https://a-0.airoa.io. Anyone can build the gripper, record a task of their own and post-train the model on it in under four hours on a single node of eight H200 GPUs.</p>
             
             <div class="card-action-bar">
-                <a href="http://arxiv.org/pdf/2611.01729v1" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
+                <a href="http://arxiv.org/pdf/2611.03815v1" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
                     View PDF
                 </a>
-                <a href="http://arxiv.org/abs/2611.01729v1" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
+                <a href="http://arxiv.org/abs/2611.03815v1" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
                     arXiv Page &rarr;
                 </a>
             </div>
         </article>
         
-        <article class="paper-card" data-title="scout: planning under occlusion via object-centric world model rollouts" data-summary="robots manipulating in cluttered spaces must often plan from partial views where foreground objects occlude the target, surrounding geometry, and usable free space. reactive policies often miss these hidden constraints, while exhaustive search becomes computationally prohibitive in dense clutter. we present scout, an occlusion-aware planning framework that bridges high-level deliberation with grounded physical rollouts. scout leverages an object-centric scene representation to reconstruct hidden geometry and derive a relational planning state capturing blocker hierarchies and accessibility corridors. to navigate the vast action space in clutter, an llm proposes structured action candidates which are then rigorously evaluated via monte carlo tree search (mcts) using a learned action-conditioned world model. evaluations on 'reveal' and 'placement' tasks show that scout outperforms vision-language-action (vla) policies, embodied agents, and 3d world models, with significant gains in long-horizon tasks requiring reasoning over occluded geometry. we further validate the framework's robustness through real-world robotic manipulation in a cluttered shelf environment.">
+        <article class="paper-card" data-title="online hamilton-jacobi reachability onboard the robot control loop: a real-time gpu solver for safety-critical autonomy" data-summary="hamilton-jacobi (hj) reachability provides certified backward reachable tubes (brts) for safety-critical robotic systems, but the level-set computation scales exponentially in the state dimension and has historically been performed offline. as autonomy stacks (adas/av, humanoid robotics, and vision-language-action models) increasingly rely on black-box, probabilistic policies, a deterministic safety layer with formal guarantees is an essential complement. we present a cuda implementation of the canonical weno5 + tvd-rk3 + lax-friedrichs level-set hamilton-jacobi-isaacs solver for 2d, 3d, and 4d dynamics that is fast enough to run inside a robot's control loop. in 32-bit floating point (fp32) on a single workstation gpu (nvidia rtx 4000 ada), it computes the 3d air3d brt at 112 hz, a 4d pursuit-evasion brt at 61 hz, and a 2d wind-affected drifter brt at 74-147 hz, 5.9-17.5x faster than the jax reference hj_reachability at matched precision and 1.7-16x faster than a torch.compile reimplementation of the same scheme. in 64-bit floating point (fp64) it agrees with hj_reachability on eight benchmark cases, reproduces mitchell's air3d brt to within 0.04% of the reference cell count, and runs 2.0-4.6x faster. on an embedded nvidia jetson agx thor it computes air3d at 66 hz (n=41) and the 2d drifter at 54 hz, 3.8-8.9x faster than hj_reachability on the same device. as a multi-agent application, an in-kernel label-propagation extension recovers the k-agent capture-basin voronoi tessellation from a single combined hj solve, independent of fleet size; it runs at 4.0 ms per tick in a closed-loop wildfire-response simulation of six quadcopters under time-varying, non-uniform wind.">
             <div class="card-meta-top">
                 <span class="rank-tag">TOP #2</span>
                 <div class="score-badge">
                     <span class="score-label">Priority Index</span>
-                    <span class="score-value">175</span>
+                    <span class="score-value">140</span>
                 </div>
             </div>
             
-            <h2 class="paper-title">SCOUT: Planning under Occlusion via Object-Centric World Model Rollouts</h2>
+            <h2 class="paper-title">Online Hamilton-Jacobi Reachability Onboard the Robot Control Loop: A Real-Time GPU Solver for Safety-Critical Autonomy</h2>
             
             <div class="author-row">
-                <span>🗓️ 2026-11-01</span>
-                <span>✍️ Amir Hossain Raj, Xuesu Xiao</span>
+                <span>🗓️ 2026-11-03</span>
+                <span>✍️ Kevin Weekly, Alexandre M. Bayen</span>
             </div>
             
             <div class="badge-cluster">
-                <span class="badge">#world model</span><span class="badge">#vision-language-action</span><span class="badge">#vla</span>
+                <span class="badge">#humanoid</span><span class="badge">#vision-language-action</span>
             </div>
             
-            <p class="paper-summary">Robots manipulating in cluttered spaces must often plan from partial views where foreground objects occlude the target, surrounding geometry, and usable free space. Reactive policies often miss these hidden constraints, while exhaustive search becomes computationally prohibitive in dense clutter. We present SCOUT, an occlusion-aware planning framework that bridges high-level deliberation with grounded physical rollouts. SCOUT leverages an object-centric scene representation to reconstruct hidden geometry and derive a relational planning state capturing blocker hierarchies and accessibility corridors. To navigate the vast action space in clutter, an LLM proposes structured action candidates which are then rigorously evaluated via Monte Carlo Tree Search (MCTS) using a learned action-conditioned world model. Evaluations on 'Reveal' and 'Placement' tasks show that SCOUT outperforms Vision-Language-Action (VLA) policies, embodied agents, and 3D world models, with significant gains in long-horizon tasks requiring reasoning over occluded geometry. We further validate the framework's robustness through real-world robotic manipulation in a cluttered shelf environment.</p>
+            <p class="paper-summary">Hamilton-Jacobi (HJ) reachability provides certified backward reachable tubes (BRTs) for safety-critical robotic systems, but the level-set computation scales exponentially in the state dimension and has historically been performed offline. As autonomy stacks (ADAS/AV, humanoid robotics, and vision-language-action models) increasingly rely on black-box, probabilistic policies, a deterministic safety layer with formal guarantees is an essential complement. We present a CUDA implementation of the canonical WENO5 + TVD-RK3 + Lax-Friedrichs level-set Hamilton-Jacobi-Isaacs solver for 2D, 3D, and 4D dynamics that is fast enough to run inside a robot's control loop. In 32-bit floating point (FP32) on a single workstation GPU (NVIDIA RTX 4000 Ada), it computes the 3D Air3D BRT at 112 Hz, a 4D pursuit-evasion BRT at 61 Hz, and a 2D wind-affected drifter BRT at 74-147 Hz, 5.9-17.5x faster than the JAX reference hj_reachability at matched precision and 1.7-16x faster than a torch.compile reimplementation of the same scheme. In 64-bit floating point (FP64) it agrees with hj_reachability on eight benchmark cases, reproduces Mitchell's Air3D BRT to within 0.04% of the reference cell count, and runs 2.0-4.6x faster. On an embedded NVIDIA Jetson AGX Thor it computes Air3D at 66 Hz (N=41) and the 2D drifter at 54 Hz, 3.8-8.9x faster than hj_reachability on the same device. As a multi-agent application, an in-kernel label-propagation extension recovers the K-agent capture-basin Voronoi tessellation from a single combined HJ solve, independent of fleet size; it runs at 4.0 ms per tick in a closed-loop wildfire-response simulation of six quadcopters under time-varying, non-uniform wind.</p>
             
             <div class="card-action-bar">
-                <a href="http://arxiv.org/pdf/2611.01600v1" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
+                <a href="http://arxiv.org/pdf/2611.04096v1" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
                     View PDF
                 </a>
-                <a href="http://arxiv.org/abs/2611.01600v1" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
+                <a href="http://arxiv.org/abs/2611.04096v1" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
                     arXiv Page &rarr;
                 </a>
             </div>
         </article>
         
-        <article class="paper-card" data-title="same path, less time: training-free fast execution of vision-language-action models under inference latency" data-summary="vision-language-action (vla) models predict chunks of future actions, yet deployed robots waste time in two ways that are independent of model capability: they halt while the next chunk is inferred, and they move at the speed of slow, cautious demonstrations. existing remedies remove one loss each, and stacking them fails, because asynchrony and speed-up each change the correspondence between planned progress and executed motion. we present path-preserving time scaling (pts), a training-free execution layer for frozen action-chunking policies built on one principle: the robot's motion is a time reparameterization of a reference path, and the path changes only in response to new observations. a path layer decodes every replan deterministically in one step and enters it at the progress consumed during inference. a time layer sums the planned increments, keeps the arm at 1x while the gripper moves, and caps the rate by the actuator's linear range and by chunk feasibility under latency. we show that misaligned entry and stochastic sampling add a bias and a variance to the continuation error, and derive a break-even success rate that states when speeding up pays off. on libero with two frozen vlas under injected inference latency, pts raises task throughput over the strongest deployable baseline by 33% for pi0.5 and 104% for smolvla while matching or improving the success rate, is best on all six model-suite combinations, and exceeds zero-latency 1x execution. against asynchronous 1x execution with the same one-step decoder, the time layer alone adds 28% and 38%. on libero-dynamic it improves on stop-and-wait execution by 38% and is comparable to asynchronous 1x execution.">
+        <article class="paper-card" data-title="dimure: diagnosis-guided multilevel recovery for robotic task execution" data-summary="disturbances can invalidate the conditions required by a robot's next action even when much of its task program remains useful. a recovery system must therefore choose a response suited to the current state. we present dimure (diagnosis-guided multilevel recovery), a framework for robot-use agents that uses phase-specific evidence and method preconditions to select program reuse or predefined recovery skills, including bounded vision-language-action (vla) grasping. after the original program exits, a multimodal large language model (mllm) can generate corrective code from images and execution feedback. local verification checks the outcome of each recovery attempt. we also introduce libero-disturb, a benchmark for robustness and recovery under mid-execution disturbances, supporting program-based agents and vla policies. on 801 scheduled disturbed encore development cases, local dimure (program reuse and recovery skills) achieves 77.65% complete-task success, compared with 58.68% for the original program under the same physical-step allowance. full dimure achieves 81.90% with terminal replanning, an additional step allowance, and early handoff. local dimure also uses fewer physical steps per scheduled episode than the original program.">
             <div class="card-meta-top">
                 <span class="rank-tag">TOP #3</span>
                 <div class="score-badge">
                     <span class="score-label">Priority Index</span>
-                    <span class="score-value">155</span>
+                    <span class="score-value">135</span>
                 </div>
             </div>
             
-            <h2 class="paper-title">Same Path, Less Time: Training-Free Fast Execution of Vision-Language-Action Models under Inference Latency</h2>
+            <h2 class="paper-title">DiMuRe: Diagnosis-Guided Multilevel Recovery for Robotic Task Execution</h2>
             
             <div class="author-row">
-                <span>🗓️ 2026-11-01</span>
-                <span>✍️ Fuyi Chen</span>
+                <span>🗓️ 2026-11-03</span>
+                <span>✍️ Renkai Yi, Yuwei Wu, Haoyu Zhang et al.</span>
             </div>
             
             <div class="badge-cluster">
-                <span class="badge">#vision-language-action</span><span class="badge">#vla</span><span class="badge">#actuator</span>
+                <span class="badge">#vision-language-action</span><span class="badge">#vla</span>
             </div>
             
-            <p class="paper-summary">Vision-language-action (VLA) models predict chunks of future actions, yet deployed robots waste time in two ways that are independent of model capability: they halt while the next chunk is inferred, and they move at the speed of slow, cautious demonstrations. Existing remedies remove one loss each, and stacking them fails, because asynchrony and speed-up each change the correspondence between planned progress and executed motion. We present Path-preserving Time Scaling (PTS), a training-free execution layer for frozen action-chunking policies built on one principle: the robot's motion is a time reparameterization of a reference path, and the path changes only in response to new observations. A path layer decodes every replan deterministically in one step and enters it at the progress consumed during inference. A time layer sums the planned increments, keeps the arm at 1x while the gripper moves, and caps the rate by the actuator's linear range and by chunk feasibility under latency. We show that misaligned entry and stochastic sampling add a bias and a variance to the continuation error, and derive a break-even success rate that states when speeding up pays off. On LIBERO with two frozen VLAs under injected inference latency, PTS raises task throughput over the strongest deployable baseline by 33% for pi0.5 and 104% for SmolVLA while matching or improving the success rate, is best on all six model-suite combinations, and exceeds zero-latency 1x execution. Against asynchronous 1x execution with the same one-step decoder, the time layer alone adds 28% and 38%. On LIBERO-Dynamic it improves on stop-and-wait execution by 38% and is comparable to asynchronous 1x execution.</p>
+            <p class="paper-summary">Disturbances can invalidate the conditions required by a robot's next action even when much of its task program remains useful. A recovery system must therefore choose a response suited to the current state. We present DiMuRe (diagnosis-guided multilevel recovery), a framework for robot-use agents that uses phase-specific evidence and method preconditions to select program reuse or predefined recovery skills, including bounded vision-language-action (VLA) grasping. After the original program exits, a multimodal large language model (MLLM) can generate corrective code from images and execution feedback. Local verification checks the outcome of each recovery attempt. We also introduce LIBERO-Disturb, a benchmark for robustness and recovery under mid-execution disturbances, supporting program-based agents and VLA policies. On 801 scheduled disturbed Encore development cases, Local DiMuRe (program reuse and recovery skills) achieves 77.65% complete-task success, compared with 58.68% for the original program under the same physical-step allowance. Full DiMuRe achieves 81.90% with terminal replanning, an additional step allowance, and early handoff. Local DiMuRe also uses fewer physical steps per scheduled episode than the original program.</p>
             
             <div class="card-action-bar">
-                <a href="http://arxiv.org/pdf/2611.01390v1" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
+                <a href="http://arxiv.org/pdf/2611.04226v1" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
                     View PDF
                 </a>
-                <a href="http://arxiv.org/abs/2611.01390v1" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
+                <a href="http://arxiv.org/abs/2611.04226v1" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
                     arXiv Page &rarr;
                 </a>
             </div>
         </article>
         
-        <article class="paper-card" data-title="route-guided cbf-qp repair for safe vision-language-action models" data-summary="vision-language-action (vla) models can generate task-oriented robot actions, but they do not guarantee safe execution in obstacle-rich manipulation scenes. although cbf-qp safety filters can locally project unsafe actions into a safe set, such correction may push the robot away from the learned task trajectory and leave the vla policy without a reliable recovery direction. we propose route-guided cbf-qp repair, a post-hoc repair module that uses the short-horizon action chunk predicted by the vla to detect blocked nominal trajectories and generate entry-exit-rejoin guidance around obstacles. the selected route is added to the cbf-qp objective as a soft guidance term, while the cbf safety constraint remains hard. on safelibero, our method improves collision avoidance, task success, and safesuccess compared with aegis. our project page is available at github.">
+        <article class="paper-card" data-title="say the same, act differently: diagnosing and steering text-action divergence in reasoning vlas" data-summary="reasoning vision-language-action (vla) models pair physical control with natural-language rationales that supervisors can read to monitor embodied safety. prior attacks on vla reasoning corrupt the rationale itself and leave visible evidence in the text. we show that visual perturbations can instead alter the physical action while keeping the generated rationale word-for-word identical. at the shared text/action interface of alpamayo for driving and instructvla for manipulation, our text-neutral action-subspace (tnas) diagnostic shows that the locally most action-sensitive direction is nearly orthogonal to the active text-loss gradients, with 1.87% and 5.28% norm overlap. at equal hidden-state perturbation norms across both models, interventions along this text-neutral residual shift actions 4.64x to 47.8x more than text-gradient perturbations, whereas text-gradient perturbations induce 21.2x to 277x more text drift. steering visual perturbations along this direction reaches the same decoupling from the image. across 154 obstacle-annotated driving scenes in alpamayo, tnas-guided attacks induce a new collision under a word-for-word identical rationale in 52.6% of scenes under full-image perturbations and 35.1% under a localized forward-camera patch, compared with 4.55% for unguided action attacks. relative to a text-preserving baseline, tnas guidance raises exact rationale preservation from 83.0% to 89.5% and cuts teacher-forced text drift by 68.4% at a comparable collision rate. in instructvla, tnas guidance cuts text drift by 40.5% and preserves the exact response on 85.0% of examples alongside a 1.73-unit action-chunk shift. an unchanged rationale therefore cannot certify a safe action, so monitors for reasoning vlas must verify the predicted action channel directly.">
             <div class="card-meta-top">
                 <span class="rank-tag">TOP #4</span>
                 <div class="score-badge">
@@ -356,152 +356,152 @@
                 </div>
             </div>
             
-            <h2 class="paper-title">Route-Guided CBF-QP Repair for Safe Vision-Language-Action Models</h2>
+            <h2 class="paper-title">Say the Same, Act Differently: Diagnosing and Steering Text-Action Divergence in Reasoning VLAs</h2>
             
             <div class="author-row">
-                <span>🗓️ 2026-11-01</span>
-                <span>✍️ Chan Park, Sunwoo Hong, Kirak Kim et al.</span>
+                <span>🗓️ 2026-11-03</span>
+                <span>✍️ Zihao Feng, Qingzhao Zhang, Chunyu Xia et al.</span>
             </div>
             
             <div class="badge-cluster">
                 <span class="badge">#vision-language-action</span><span class="badge">#vla</span>
             </div>
             
-            <p class="paper-summary">Vision-language-action (VLA) models can generate task-oriented robot actions, but they do not guarantee safe execution in obstacle-rich manipulation scenes. Although CBF-QP safety filters can locally project unsafe actions into a safe set, such correction may push the robot away from the learned task trajectory and leave the VLA policy without a reliable recovery direction. We propose Route-Guided CBF-QP Repair, a post-hoc repair module that uses the short-horizon action chunk predicted by the VLA to detect blocked nominal trajectories and generate entry-exit-rejoin guidance around obstacles. The selected route is added to the CBF-QP objective as a soft guidance term, while the CBF safety constraint remains hard. On SafeLIBERO, our method improves collision avoidance, task success, and SafeSuccess compared with AEGIS. Our project page is available at GitHub.</p>
+            <p class="paper-summary">Reasoning vision-language-action (VLA) models pair physical control with natural-language rationales that supervisors can read to monitor embodied safety. Prior attacks on VLA reasoning corrupt the rationale itself and leave visible evidence in the text. We show that visual perturbations can instead alter the physical action while keeping the generated rationale word-for-word identical. At the shared text/action interface of Alpamayo for driving and InstructVLA for manipulation, our text-neutral action-subspace (TNAS) diagnostic shows that the locally most action-sensitive direction is nearly orthogonal to the active text-loss gradients, with 1.87% and 5.28% norm overlap. At equal hidden-state perturbation norms across both models, interventions along this text-neutral residual shift actions 4.64x to 47.8x more than text-gradient perturbations, whereas text-gradient perturbations induce 21.2x to 277x more text drift. Steering visual perturbations along this direction reaches the same decoupling from the image. Across 154 obstacle-annotated driving scenes in Alpamayo, TNAS-guided attacks induce a new collision under a word-for-word identical rationale in 52.6% of scenes under full-image perturbations and 35.1% under a localized forward-camera patch, compared with 4.55% for unguided action attacks. Relative to a text-preserving baseline, TNAS guidance raises exact rationale preservation from 83.0% to 89.5% and cuts teacher-forced text drift by 68.4% at a comparable collision rate. In InstructVLA, TNAS guidance cuts text drift by 40.5% and preserves the exact response on 85.0% of examples alongside a 1.73-unit action-chunk shift. An unchanged rationale therefore cannot certify a safe action, so monitors for reasoning VLAs must verify the predicted action channel directly.</p>
             
             <div class="card-action-bar">
-                <a href="http://arxiv.org/pdf/2611.01713v1" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
+                <a href="http://arxiv.org/pdf/2611.04166v1" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
                     View PDF
                 </a>
-                <a href="http://arxiv.org/abs/2611.01713v1" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
+                <a href="http://arxiv.org/abs/2611.04166v1" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
                     arXiv Page &rarr;
                 </a>
             </div>
         </article>
         
-        <article class="paper-card" data-title="gatedvla with camera-based emergency braking: alpasim e2e closed loop challenge technical report" data-summary="this report presents gatedvla, our entry for the physical ai av (pai-av) track. our learned vision-language-action (vla) policy pairs the driving-pretrained qwen-drive-1.0-4b vision-language model with a layer-wise flow-matching action expert that outputs a 2.5 s horizon of acceleration and curvature controls, augmented with a soft visual mask applied to the expert's cross-attention. compared to an identically trained baseline, the masked policy achieves comparable overall open-loop error while reducing error on left turns. in local closed-loop evaluation across the same 150 scenes (two rollouts per scene), the visual mask increases the mean scene score from 0.479 to 0.517 (paired difference +0.038, 95% bootstrap ci [-0.018, +0.093], wins/losses 37/26, sign test p = 0.21). incorporating a rule-based automatic emergency braking (aeb) module at deployment further increases the mean score to 0.599 (+0.082, ci [+0.023, +0.143]) and reduces the mean number of scenes with at-fault collisions from 34.0 to 11.0.">
+        <article class="paper-card" data-title="actor: ambient ai-based agentic orchestration for humanoid autonomy in operating rooms" data-summary="operating rooms (ors) increasingly contain ambient sensing infrastructure to enable ai-based optimization of workflows and utilization. we pursue an alternative path: using ambient ai to guide robot action and optimize utilization. deploying humanoids in the or without ambient ai is severely limited by cumbersome de novo orientation and planning due to partial onboard observations. we posit that this can be achieved by coupling an ambient ai-based agentic orchestrator with the humanoid robotic actor, providing shared perception and execution feedback for humanoid autonomy in the or. actor fuses a wall-mounted ambient camera and the robot's head-mounted camera into a shared object-level digital twin (dt). a large language model agent plans over the dt using pre-programmed locomotion and manipulation skills without task-specific training. during execution, dt updates and execution outcomes inform retries, alternative approaches, or replanning. we evaluated actor in simulated and physical environments. across three tasks in two simulated ors reconstructed from real rooms, ambient perception reduced exploration from 1.05 to 0.12 explore calls per trial when targets were initially outside the robot's view. closed-loop feedback increased success from 46.7% to 83.3% under nominal execution and from 8.3% to 51.7% under injected navigation, object-relocation, and grasp perturbations. in a physical mock or with a humanoid, actor completed 14 of 20 single-object disposal trials and demonstrated replanning after scene changes. ambient ai-based observations provide scene state that improves robot action planning, increasing success and reducing exploration compared with robot-only observations. feeding skill outcomes and dt updates back to the planner improves multi-step task success. our results show the feasibility of humanoid task autonomy for multi-step disposal tasks in a mock or.">
             <div class="card-meta-top">
                 <span class="rank-tag">TOP #5</span>
-                <div class="score-badge">
-                    <span class="score-label">Priority Index</span>
-                    <span class="score-value">135</span>
-                </div>
-            </div>
-            
-            <h2 class="paper-title">GatedVLA with Camera-Based Emergency Braking: AlpaSim E2E Closed Loop Challenge Technical Report</h2>
-            
-            <div class="author-row">
-                <span>🗓️ 2026-11-01</span>
-                <span>✍️ Kaneyoshi Hiratsuka, Naoki Takada, Makoto Kawano</span>
-            </div>
-            
-            <div class="badge-cluster">
-                <span class="badge">#vision-language-action</span><span class="badge">#vla</span>
-            </div>
-            
-            <p class="paper-summary">This report presents GatedVLA, our entry for the Physical AI AV (PAI-AV) track. Our learned vision-language-action (VLA) policy pairs the driving-pretrained Qwen-Drive-1.0-4B vision-language model with a layer-wise flow-matching action expert that outputs a 2.5 s horizon of acceleration and curvature controls, augmented with a soft visual mask applied to the expert's cross-attention. Compared to an identically trained baseline, the masked policy achieves comparable overall open-loop error while reducing error on left turns. In local closed-loop evaluation across the same 150 scenes (two rollouts per scene), the visual mask increases the mean scene score from 0.479 to 0.517 (paired difference +0.038, 95% bootstrap CI [-0.018, +0.093], wins/losses 37/26, sign test p = 0.21). Incorporating a rule-based automatic emergency braking (AEB) module at deployment further increases the mean score to 0.599 (+0.082, CI [+0.023, +0.143]) and reduces the mean number of scenes with at-fault collisions from 34.0 to 11.0.</p>
-            
-            <div class="card-action-bar">
-                <a href="http://arxiv.org/pdf/2611.01663v1" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
-                    View PDF
-                </a>
-                <a href="http://arxiv.org/abs/2611.01663v1" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
-                    arXiv Page &rarr;
-                </a>
-            </div>
-        </article>
-        
-        <article class="paper-card" data-title="serving agentic robot fleets: workload characterization, kv-cache thrashing, and admission control" data-summary="agentic robots combine a vision-language brain, a tool-using harness, and a vision-language-action (vla) policy. serving a fleet of these agents introduces two coupled resource constraints: the brain repeatedly revisits long, growing key-value (kv) cache states, while the vla executes action chunks under tight control deadlines. we characterize 80 libero-pro episodes generated by gpt-6-astra, rpent, and pi0.5 (1,862 brain turns and 1,582 vla inference chunks), profile both layers on h800 graphics processing units (gpus), and replay the resulting agent programs on a vllm serving engine. brain contexts reach 215k tokens; the median astra request takes 7.78 s, while the intervening environment-step gap is only 1.0 s. under a 0.25 s action-chunk deadline, one vla gpu meets the 1% starvation target for one robot; under a 1.0 s deadline, its measured capacity reaches at least 32. in sustained brain replay, increasing concurrency from 20 to 32 robots reduces throughput from about 2.4 to 0.6 requests/s as repetitive prefill displaces generation. a static active-episode cap restores 2.24-2.25 requests/s and raises completed trace-program throughput from 1.30 to 5.00-5.55 episodes/min. our measurements expose the workload-dependent shift between action deadlines and brain kv residency, and establish practical principles for capacity planning and admission in sustained agentic robot fleets.">
-            <div class="card-meta-top">
-                <span class="rank-tag">TOP #6</span>
-                <div class="score-badge">
-                    <span class="score-label">Priority Index</span>
-                    <span class="score-value">135</span>
-                </div>
-            </div>
-            
-            <h2 class="paper-title">Serving Agentic Robot Fleets: Workload Characterization, KV-Cache Thrashing, and Admission Control</h2>
-            
-            <div class="author-row">
-                <span>🗓️ 2026-11-01</span>
-                <span>✍️ Sida He</span>
-            </div>
-            
-            <div class="badge-cluster">
-                <span class="badge">#vision-language-action</span><span class="badge">#vla</span>
-            </div>
-            
-            <p class="paper-summary">Agentic robots combine a vision-language brain, a tool-using harness, and a vision-language-action (VLA) policy. Serving a fleet of these agents introduces two coupled resource constraints: the brain repeatedly revisits long, growing key-value (KV) cache states, while the VLA executes action chunks under tight control deadlines. We characterize 80 LIBERO-PRO episodes generated by GPT-6-Astra, RPent, and pi0.5 (1,862 brain turns and 1,582 VLA inference chunks), profile both layers on H800 graphics processing units (GPUs), and replay the resulting agent programs on a vLLM serving engine. Brain contexts reach 215k tokens; the median Astra request takes 7.78 s, while the intervening environment-step gap is only 1.0 s. Under a 0.25 s action-chunk deadline, one VLA GPU meets the 1% starvation target for one robot; under a 1.0 s deadline, its measured capacity reaches at least 32. In sustained brain replay, increasing concurrency from 20 to 32 robots reduces throughput from about 2.4 to 0.6 requests/s as repetitive prefill displaces generation. A static active-episode cap restores 2.24-2.25 requests/s and raises completed trace-program throughput from 1.30 to 5.00-5.55 episodes/min. Our measurements expose the workload-dependent shift between action deadlines and brain KV residency, and establish practical principles for capacity planning and admission in sustained agentic robot fleets.</p>
-            
-            <div class="card-action-bar">
-                <a href="http://arxiv.org/pdf/2611.01404v1" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
-                    View PDF
-                </a>
-                <a href="http://arxiv.org/abs/2611.01404v1" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
-                    arXiv Page &rarr;
-                </a>
-            </div>
-        </article>
-        
-        <article class="paper-card" data-title="compliantbot: learning whole-body compliance across task interfaces for humanoid control" data-summary="humanoid controllers need the ability to yield to external forces while retaining the capacity to resume their original tasks. however, tracking objectives penalize the deviations needed for yielding, while relaxing tracking goals persistently can make task recovery harder. existing approaches often rely on task-specific interaction command interfaces or constructed compliant motion data and reference trajectories, limiting the direct reuse of their compliance-training mechanisms across different task interfaces. we introduce compliantbot, a compliance-training framework for motion tracking and velocity-command locomotion. it preserves the original task inputs and requires no preconstructed compliant data or target trajectories. a state-dependent interaction force field couples applied loads to the robot's motion, enabling local articulation and whole-body movement to change the forces experienced. a complementary force-magnitude reward encourages lower interaction loads, while task rewards are downweighted during loading and restored after release to coordinate yielding and task resumption. the trained policies use task inputs and proprioceptive history without explicit external-force measurements. across both task interfaces, compliantbot yields farther under constant pulls and experiences lower spring interaction loads than matched baselines, while resuming task tracking after force removal. compliantbot achieves the highest task completion among the compared methods under stronger pulls. power evaluations further show that compliantbot has the lowest mean joint mechanical power among the compared methods. real-robot demonstrations further illustrate compliant responses through arm motion, stepping, and body reorientation.">
-            <div class="card-meta-top">
-                <span class="rank-tag">TOP #7</span>
                 <div class="score-badge">
                     <span class="score-label">Priority Index</span>
                     <span class="score-value">120</span>
                 </div>
             </div>
             
-            <h2 class="paper-title">CompliantBot: Learning Whole-Body Compliance across Task Interfaces for Humanoid Control</h2>
+            <h2 class="paper-title">ActOR: Ambient AI-Based Agentic Orchestration for Humanoid Autonomy in Operating Rooms</h2>
             
             <div class="author-row">
-                <span>🗓️ 2026-11-01</span>
-                <span>✍️ Haoyang Li, Keqi Zhu, Zhanxiang Cao et al.</span>
+                <span>🗓️ 2026-11-03</span>
+                <span>✍️ Han Zhang, Sicheng Lu, Aleks Santari et al.</span>
             </div>
             
             <div class="badge-cluster">
                 <span class="badge">#humanoid</span><span class="badge">#locomotion</span>
             </div>
             
-            <p class="paper-summary">Humanoid controllers need the ability to yield to external forces while retaining the capacity to resume their original tasks. However, tracking objectives penalize the deviations needed for yielding, while relaxing tracking goals persistently can make task recovery harder. Existing approaches often rely on task-specific interaction command interfaces or constructed compliant motion data and reference trajectories, limiting the direct reuse of their compliance-training mechanisms across different task interfaces. We introduce CompliantBot, a compliance-training framework for motion tracking and velocity-command locomotion. It preserves the original task inputs and requires no preconstructed compliant data or target trajectories. A state-dependent interaction force field couples applied loads to the robot's motion, enabling local articulation and whole-body movement to change the forces experienced. A complementary force-magnitude reward encourages lower interaction loads, while task rewards are downweighted during loading and restored after release to coordinate yielding and task resumption. The trained policies use task inputs and proprioceptive history without explicit external-force measurements. Across both task interfaces, CompliantBot yields farther under constant pulls and experiences lower spring interaction loads than matched baselines, while resuming task tracking after force removal. CompliantBot achieves the highest task completion among the compared methods under stronger pulls. Power evaluations further show that CompliantBot has the lowest mean joint mechanical power among the compared methods. Real-robot demonstrations further illustrate compliant responses through arm motion, stepping, and body reorientation.</p>
+            <p class="paper-summary">Operating rooms (ORs) increasingly contain ambient sensing infrastructure to enable AI-based optimization of workflows and utilization. We pursue an alternative path: using ambient AI to guide robot action and optimize utilization. Deploying humanoids in the OR without ambient AI is severely limited by cumbersome de novo orientation and planning due to partial onboard observations. We posit that this can be achieved by coupling an ambient AI-based agentic orchestrator with the humanoid robotic actor, providing shared perception and execution feedback for humanoid autonomy in the OR. ActOR fuses a wall-mounted ambient camera and the robot's head-mounted camera into a shared object-level digital twin (DT). A large language model agent plans over the DT using pre-programmed locomotion and manipulation skills without task-specific training. During execution, DT updates and execution outcomes inform retries, alternative approaches, or replanning. We evaluated ActOR in simulated and physical environments. Across three tasks in two simulated ORs reconstructed from real rooms, ambient perception reduced exploration from 1.05 to 0.12 Explore calls per trial when targets were initially outside the robot's view. Closed-loop feedback increased success from 46.7% to 83.3% under nominal execution and from 8.3% to 51.7% under injected navigation, object-relocation, and grasp perturbations. In a physical mock OR with a humanoid, ActOR completed 14 of 20 single-object disposal trials and demonstrated replanning after scene changes. Ambient AI-based observations provide scene state that improves robot action planning, increasing success and reducing exploration compared with robot-only observations. Feeding skill outcomes and DT updates back to the planner improves multi-step task success. Our results show the feasibility of humanoid task autonomy for multi-step disposal tasks in a mock OR.</p>
             
             <div class="card-action-bar">
-                <a href="http://arxiv.org/pdf/2611.01748v1" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
+                <a href="http://arxiv.org/pdf/2611.04255v1" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
                     View PDF
                 </a>
-                <a href="http://arxiv.org/abs/2611.01748v1" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
+                <a href="http://arxiv.org/abs/2611.04255v1" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
                     arXiv Page &rarr;
                 </a>
             </div>
         </article>
         
-        <article class="paper-card" data-title="$tf^2$-steering: action refinement with tactile forecasts and feedback via velocity-field steering" data-summary="tactile sensing plays a crucial role in everyday human interaction. consider inserting a plug into a tight socket, vision alone provides limited guidance during the final insertion stage, and we instead rely on both anticipated contact and realized tactile feedback to ajust the insertion motion. the same capability is equally important for robots, particularly in dexterous manipulation tasks. yet many contemporary robot policies remain vision-dominant. this visual bias, compounded by limited tactile data and sparse contact events, can cause directly incorporated tactile signals to be ignored or even compromise the policy's pretrained capabilities, yielding degrading performance as observed in our experiments. we present $tf^2$-steering, which refines actions via learned residual steering of the flow-matching action expert's velocity field, using a tactile mixture-of-experts architecture to integrate both tactile forecasts and real-time tactile feedback. together with specific designed three stages training recipe, $tf^2$-steering enables tactile signals to correct and, when necessary, redirect the flow-matching action-generation process, while building on the strong action-generation capacity of the vision-based foundation policy. extensive experiments across six simulated and six real-world manipulation tasks demonstrate the effectiveness of $tf^2$-steering. it outperforms the strongest evaluated baselines by 10.7 percentage points in average simulation success rate and 9.1 percentage points in average real-world progress success rate. project page: https://yiming-cc.github.io/tf2-steering/.">
+        <article class="paper-card" data-title="online ilqr-mpc with whole-body control for robust humanoid locomotion" data-summary="humanoid locomotion requires deciding where to step and how to distribute contact forces. however, a disturbance can invalidate the nominal plan, requiring coordinated revision under constraints that switch with every footfall. to solve this online, the proposed approach employs the single-rigid-body model, which retains attitude dynamics and the full contact wrench. an iterative linear-quadratic-regulator mpc (ilqr-mpc) then jointly optimizes contact forces and footstep locations in a single receding-horizon problem, without a separate step planner. specifically, contact and motion constraints are incorporated into the backward pass through augmented-lagrangian and relaxed-barrier penalties. a whole-body controller subsequently maps the plan to joint torques at 500 hz while preserving contact feasibility. the model-based formulation makes disturbance responses interpretable through explicit costs and constraints, and requires no platform-specific policy training. in mujoco simulations, the ilqr-mpc replans at 100 hz (mean solve time 8.9 ms); the unitree g1 sustains steady-state walking and recovers from impulsive 245 n forward and 175 n lateral pushes.">
+            <div class="card-meta-top">
+                <span class="rank-tag">TOP #6</span>
+                <div class="score-badge">
+                    <span class="score-label">Priority Index</span>
+                    <span class="score-value">120</span>
+                </div>
+            </div>
+            
+            <h2 class="paper-title">Online iLQR-MPC with Whole-Body Control for Robust Humanoid Locomotion</h2>
+            
+            <div class="author-row">
+                <span>🗓️ 2026-11-03</span>
+                <span>✍️ Xiang Li, Linlin Ou, Ruihan Wu et al.</span>
+            </div>
+            
+            <div class="badge-cluster">
+                <span class="badge">#humanoid</span><span class="badge">#locomotion</span>
+            </div>
+            
+            <p class="paper-summary">Humanoid locomotion requires deciding where to step and how to distribute contact forces. However, a disturbance can invalidate the nominal plan, requiring coordinated revision under constraints that switch with every footfall. To solve this online, the proposed approach employs the single-rigid-body model, which retains attitude dynamics and the full contact wrench. An iterative linear-quadratic-regulator MPC (iLQR-MPC) then jointly optimizes contact forces and footstep locations in a single receding-horizon problem, without a separate step planner. Specifically, contact and motion constraints are incorporated into the backward pass through augmented-Lagrangian and relaxed-barrier penalties. A whole-body controller subsequently maps the plan to joint torques at 500 Hz while preserving contact feasibility. The model-based formulation makes disturbance responses interpretable through explicit costs and constraints, and requires no platform-specific policy training. In MuJoCo simulations, the iLQR-MPC replans at 100 Hz (mean solve time 8.9 ms); the Unitree G1 sustains steady-state walking and recovers from impulsive 245 N forward and 175 N lateral pushes.</p>
+            
+            <div class="card-action-bar">
+                <a href="http://arxiv.org/pdf/2611.04204v1" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
+                    View PDF
+                </a>
+                <a href="http://arxiv.org/abs/2611.04204v1" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
+                    arXiv Page &rarr;
+                </a>
+            </div>
+        </article>
+        
+        <article class="paper-card" data-title="physical experience builds continual spatial world models" data-summary="world models are increasingly used to support prediction and planning in embodied agents, but the knowledge is usually established before deployment and then carried into later encounters. continual operation faces a different problem. a familiar environment may change, and the agent must use previous experience without allowing old expectations to override current physical evidence. this study asks what repeated physical experience must contribute for a spatial world model to become progressively more useful rather than simply more persistent. a physics-grounded dynamic maze separates recurring spatial change from the continuous consequences of action. cross-episode spatial change memory learns relations among environmental transformations, while state-action-outcome experience refines predictions of motion. structured experience progressively reduces the need for future route correction and transfers to spatial transitions not encountered during learning. the advantage disappears when past changes contain no information about future ones. continuous navigation further shows that predictive memory changes behavior when a previous decision becomes invalid but leaves behavior unchanged when the decision remains correct. physical tests expose a complementary limit: correct topology does not guarantee correct action prediction, and accumulated physical experience reduces this mismatch within the modeled dynamics. the results characterize continual world knowledge as experience that improves future prediction and action beyond stored episodes while remaining revisable by the physical outcomes it is intended to predict.">
+            <div class="card-meta-top">
+                <span class="rank-tag">TOP #7</span>
+                <div class="score-badge">
+                    <span class="score-label">Priority Index</span>
+                    <span class="score-value">90</span>
+                </div>
+            </div>
+            
+            <h2 class="paper-title">Physical Experience Builds Continual Spatial World Models</h2>
+            
+            <div class="author-row">
+                <span>🗓️ 2026-11-02</span>
+                <span>✍️ Yuhang Sun</span>
+            </div>
+            
+            <div class="badge-cluster">
+                <span class="badge">#world model</span>
+            </div>
+            
+            <p class="paper-summary">World models are increasingly used to support prediction and planning in embodied agents, but the knowledge is usually established before deployment and then carried into later encounters. Continual operation faces a different problem. A familiar environment may change, and the agent must use previous experience without allowing old expectations to override current physical evidence. This study asks what repeated physical experience must contribute for a spatial world model to become progressively more useful rather than simply more persistent. A physics-grounded dynamic maze separates recurring spatial change from the continuous consequences of action. Cross-episode Spatial Change Memory learns relations among environmental transformations, while state-action-outcome experience refines predictions of motion. Structured experience progressively reduces the need for future route correction and transfers to spatial transitions not encountered during learning. The advantage disappears when past changes contain no information about future ones. Continuous navigation further shows that predictive memory changes behavior when a previous decision becomes invalid but leaves behavior unchanged when the decision remains correct. Physical tests expose a complementary limit: correct topology does not guarantee correct action prediction, and accumulated physical experience reduces this mismatch within the modeled dynamics. The results characterize continual world knowledge as experience that improves future prediction and action beyond stored episodes while remaining revisable by the physical outcomes it is intended to predict.</p>
+            
+            <div class="card-action-bar">
+                <a href="http://arxiv.org/pdf/2611.04016v1" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
+                    View PDF
+                </a>
+                <a href="http://arxiv.org/abs/2611.04016v1" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
+                    arXiv Page &rarr;
+                </a>
+            </div>
+        </article>
+        
+        <article class="paper-card" data-title="coordinate frame recovery, per class nms and null return modelling for sim2real v2x lidar detection" data-summary="we describe our approach to the v2x-real track of the urbantwin sim2real lidar challenge, in which a 3d object detector must be trained exclusively on synthetic data and evaluated on unseen real roadside lidar from an ouster os1-64 unit, while the synthetic point clouds are simultaneously scored for distributional realism. our final entry scores 0.7457 combined, from a detection map of 0.4382 and a realism score of 0.9251. three findings account for most of our result, and all three were diagnostic rather than architectural. first, a coordinate frame mismatch between our predictions and the evaluation ground truth was suppressing detection ap entirely; recovering it took our score from 0.3520 to 0.5147 in a single submission. second, a single global non maximum suppression threshold was destroying genuine pedestrian detections, because pedestrians occur in groups and a 0.3 iou threshold applied to a 0.7 m box suppresses distinct neighbouring people; correcting this per class raised overall map from 0.0751 to 0.4295. third, approximately 31 percent of the real reference point cloud consists of null returns encoded as the literal point (0, 0, 0), a format feature entirely absent from our synthetic clouds, which pinned earth mover's distance near its floor until we modelled it. negative results are reported at equal length, and section 9 gives a full account of data provenance and compliance. that section also accounts for every mechanism contributing to the submitted score.">
             <div class="card-meta-top">
                 <span class="rank-tag">TOP #8</span>
                 <div class="score-badge">
                     <span class="score-label">Priority Index</span>
-                    <span class="score-value">110</span>
+                    <span class="score-value">90</span>
                 </div>
             </div>
             
-            <h2 class="paper-title">$TF^2$-Steering: Action Refinement with Tactile Forecasts and Feedback via Velocity-Field Steering</h2>
+            <h2 class="paper-title">Coordinate Frame Recovery, Per Class NMS and Null Return Modelling for Sim2Real V2X LiDAR Detection</h2>
             
             <div class="author-row">
-                <span>🗓️ 2026-11-01</span>
-                <span>✍️ Yiming Chen, Xiaofei Wei, Chun Gu et al.</span>
+                <span>🗓️ 2026-11-02</span>
+                <span>✍️ Aman Upganlawar</span>
             </div>
             
             <div class="badge-cluster">
-                <span class="badge">#dexterous manipulation</span><span class="badge">#tactile sensing</span>
+                <span class="badge">#sim2real</span>
             </div>
             
-            <p class="paper-summary">Tactile sensing plays a crucial role in everyday human interaction. Consider inserting a plug into a tight socket, vision alone provides limited guidance during the final insertion stage, and we instead rely on both anticipated contact and realized tactile feedback to ajust the insertion motion. The same capability is equally important for robots, particularly in dexterous manipulation tasks. Yet many contemporary robot policies remain vision-dominant. This visual bias, compounded by limited tactile data and sparse contact events, can cause directly incorporated tactile signals to be ignored or even compromise the policy's pretrained capabilities, yielding degrading performance as observed in our experiments. We present $TF^2$-Steering, which refines actions via learned residual steering of the flow-matching action expert's velocity field, using a tactile mixture-of-experts architecture to integrate both tactile forecasts and real-time tactile feedback. Together with specific designed three stages training recipe, $TF^2$-Steering enables tactile signals to correct and, when necessary, redirect the flow-matching action-generation process, while building on the strong action-generation capacity of the vision-based foundation policy. Extensive experiments across six simulated and six real-world manipulation tasks demonstrate the effectiveness of $TF^2$-Steering. It outperforms the strongest evaluated baselines by 10.7 percentage points in average simulation success rate and 9.1 percentage points in average real-world progress success rate. Project page: https://yiming-cc.github.io/tf2-steering/.</p>
+            <p class="paper-summary">We describe our approach to the V2X-Real track of the UrbanTwin Sim2Real LiDAR Challenge, in which a 3D object detector must be trained exclusively on synthetic data and evaluated on unseen real roadside LiDAR from an Ouster OS1-64 unit, while the synthetic point clouds are simultaneously scored for distributional realism. Our final entry scores 0.7457 combined, from a detection mAP of 0.4382 and a realism score of 0.9251. Three findings account for most of our result, and all three were diagnostic rather than architectural. First, a coordinate frame mismatch between our predictions and the evaluation ground truth was suppressing detection AP entirely; recovering it took our score from 0.3520 to 0.5147 in a single submission. Second, a single global non maximum suppression threshold was destroying genuine pedestrian detections, because pedestrians occur in groups and a 0.3 IoU threshold applied to a 0.7 m box suppresses distinct neighbouring people; correcting this per class raised overall mAP from 0.0751 to 0.4295. Third, approximately 31 percent of the real reference point cloud consists of null returns encoded as the literal point (0, 0, 0), a format feature entirely absent from our synthetic clouds, which pinned Earth Mover's Distance near its floor until we modelled it. Negative results are reported at equal length, and Section 9 gives a full account of data provenance and compliance. That section also accounts for every mechanism contributing to the submitted score.</p>
             
             <div class="card-action-bar">
-                <a href="http://arxiv.org/pdf/2611.01483v1" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
+                <a href="http://arxiv.org/pdf/2611.03940v1" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
                     View PDF
                 </a>
-                <a href="http://arxiv.org/abs/2611.01483v1" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
+                <a href="http://arxiv.org/abs/2611.03940v1" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
                     arXiv Page &rarr;
                 </a>
             </div>
