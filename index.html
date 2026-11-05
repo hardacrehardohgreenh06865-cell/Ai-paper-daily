@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Embodied AI & Robotics Intelligence Digest — November 04, 2026</title>
+    <title>Embodied AI & Robotics Intelligence Digest — November 05, 2026</title>
     <style>
         :root {
             --bg-base: #080c14;
@@ -242,7 +242,7 @@
         <header>
             <span class="pill-brand">Autonomous Research Intelligence</span>
             <h1>Embodied AI & Physical Frontier Briefing</h1>
-            <p class="subtitle">Compiled on November 04, 2026 • Ranked top 8 strategic breakthroughs out of incoming preprints.</p>
+            <p class="subtitle">Compiled on November 05, 2026 • Ranked top 8 strategic breakthroughs out of incoming preprints.</p>
             
             <div class="controls">
                 <input type="text" id="filterInput" class="search-box" placeholder="Filter papers by keywords (e.g. humanoid, tactile, diffusion)...">
@@ -251,257 +251,257 @@
 
         <main id="paperList">
             
-        <article class="paper-card" data-title="airoa-0: long-horizon, precise, cross-embodiment manipulation from handheld data" data-summary="airoa-0 (a-0) is a bimanual manipulation system learned from 16,151 hours of handheld demonstrations, with no robot data collected at any stage. the demonstrations are recorded with yubi, our open-source handheld gripper, which lets people record manipulation data anywhere with no robot present. from a single instruction, a-0 sorts more than a dozen small parts into their numbered cells and changes the mop pads and brush of a robot vacuum; among other tasks, it unzips a pencil case and folds a towel. it performs these tasks using only a camera on each wrist, with no head or scene camera, at a site where none of its training data was recorded. across the ten tasks of our evaluation, it averages a success rate of 78%, against 27% for the strongest of four other vision-language-action models post-trained on the same task demonstrations. we collect no teleoperation data and use no reinforcement learning or on-robot corrections, and the robot appears only at test time. the system learns which regions of each wrist view matter for the task, predicts the stage the task has reached, and decodes actions as a continuous stream. a-0 is embodiment-agnostic: it runs on robots that mount the yubi gripper, such as a bimanual franka, tx-g2, openarm and ur. we are releasing the dataset, to our knowledge the largest open dataset of handheld-gripper demonstrations with task and subtask instructions, together with the pre-trained weights and the post-training recipe. videos of a-0 on every task are on the project page, https://a-0.airoa.io. anyone can build the gripper, record a task of their own and post-train the model on it in under four hours on a single node of eight h200 gpus.">
+        <article class="paper-card" data-title="$a^3$-vla: automatic perception-guided attention alignment for robot manipulation" data-summary="vision-language-action models (vlas) enable robots to perform manipulation tasks by leveraging vision-language models (vlms) to process visual observations and language instructions. however, the action prediction objective itself lacks fine-grained task-specific perceptual supervision, making it prone to relying on task-irrelevant visual shortcuts, leading attention away from target objects and key interaction areas, thereby limiting its operational performance and generalization ability. to address this, we propose automatic perception-guided attention alignment for robot manipulation ($a^3$-vla), a framework that derives task-specific visual guidance from the manipulation process itself. specifically, $a^3$-vla first generates heuristic candidate regions for target objects and the robot from interaction-induced visual changes, and refines them with a visual segmentation model offline. these regions serve as explicit perceptual guidance through two complementary objectives: an attention allocation loss that encourages sufficient focus on task-critical regions when language or robot state tokens query the visual input, and a contrastive learning loss that aligns the representations of candidate target regions with language instructions while separating them from task-irrelevant regions. extensive experiments on simulated and real-world manipulation tasks demonstrate that $a^3$-vla consistently improves multiple vla backbones, with an average success rate gain of 6.5% - 25.2% across benchmarks.">
             <div class="card-meta-top">
                 <span class="rank-tag">TOP #1</span>
                 <div class="score-badge">
                     <span class="score-label">Priority Index</span>
-                    <span class="score-value">145</span>
+                    <span class="score-value">135</span>
                 </div>
             </div>
             
-            <h2 class="paper-title">AIRoA-0: Long-Horizon, Precise, Cross-Embodiment Manipulation from Handheld Data</h2>
+            <h2 class="paper-title">$A^3$-VLA: Automatic Perception-Guided Attention Alignment for Robot Manipulation</h2>
             
             <div class="author-row">
-                <span>🗓️ 2026-11-02</span>
-                <span>✍️ Yueh-Hua Wu, Kei Ota, Hanlong Li et al.</span>
+                <span>🗓️ 2026-11-04</span>
+                <span>✍️ Shengzhe Zhang, Qi Zhang, Dazhong Shen et al.</span>
             </div>
             
             <div class="badge-cluster">
-                <span class="badge">#reinforcement learning</span><span class="badge">#vision-language-action</span><span class="badge">#teleoperation</span>
+                <span class="badge">#vision-language-action</span><span class="badge">#vla</span>
             </div>
             
-            <p class="paper-summary">AIRoA-0 (A-0) is a bimanual manipulation system learned from 16,151 hours of handheld demonstrations, with no robot data collected at any stage. The demonstrations are recorded with YUBI, our open-source handheld gripper, which lets people record manipulation data anywhere with no robot present. From a single instruction, A-0 sorts more than a dozen small parts into their numbered cells and changes the mop pads and brush of a robot vacuum; among other tasks, it unzips a pencil case and folds a towel. It performs these tasks using only a camera on each wrist, with no head or scene camera, at a site where none of its training data was recorded. Across the ten tasks of our evaluation, it averages a success rate of 78%, against 27% for the strongest of four other vision-language-action models post-trained on the same task demonstrations. We collect no teleoperation data and use no reinforcement learning or on-robot corrections, and the robot appears only at test time. The system learns which regions of each wrist view matter for the task, predicts the stage the task has reached, and decodes actions as a continuous stream. A-0 is embodiment-agnostic: it runs on robots that mount the YUBI gripper, such as a bimanual Franka, TX-G2, OpenArm and UR. We are releasing the dataset, to our knowledge the largest open dataset of handheld-gripper demonstrations with task and subtask instructions, together with the pre-trained weights and the post-training recipe. Videos of A-0 on every task are on the project page, https://a-0.airoa.io. Anyone can build the gripper, record a task of their own and post-train the model on it in under four hours on a single node of eight H200 GPUs.</p>
+            <p class="paper-summary">Vision-Language-Action Models (VLAs) enable robots to perform manipulation tasks by leveraging Vision-Language Models (VLMs) to process visual observations and language instructions. However, the action prediction objective itself lacks fine-grained task-specific perceptual supervision, making it prone to relying on task-irrelevant visual shortcuts, leading attention away from target objects and key interaction areas, thereby limiting its operational performance and generalization ability. To address this, we propose Automatic Perception-Guided Attention Alignment for Robot Manipulation ($A^3$-VLA), a framework that derives task-specific visual guidance from the manipulation process itself. Specifically, $A^3$-VLA first generates heuristic candidate regions for target objects and the robot from interaction-induced visual changes, and refines them with a visual segmentation model offline. These regions serve as explicit perceptual guidance through two complementary objectives: an attention allocation loss that encourages sufficient focus on task-critical regions when language or robot state tokens query the visual input, and a contrastive learning loss that aligns the representations of candidate target regions with language instructions while separating them from task-irrelevant regions. Extensive experiments on simulated and real-world manipulation tasks demonstrate that $A^3$-VLA consistently improves multiple VLA backbones, with an average success rate gain of 6.5% - 25.2% across benchmarks.</p>
             
             <div class="card-action-bar">
-                <a href="http://arxiv.org/pdf/2611.03815v1" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
+                <a href="http://arxiv.org/pdf/2611.06447v1" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
                     View PDF
                 </a>
-                <a href="http://arxiv.org/abs/2611.03815v1" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
+                <a href="http://arxiv.org/abs/2611.06447v1" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
                     arXiv Page &rarr;
                 </a>
             </div>
         </article>
         
-        <article class="paper-card" data-title="online hamilton-jacobi reachability onboard the robot control loop: a real-time gpu solver for safety-critical autonomy" data-summary="hamilton-jacobi (hj) reachability provides certified backward reachable tubes (brts) for safety-critical robotic systems, but the level-set computation scales exponentially in the state dimension and has historically been performed offline. as autonomy stacks (adas/av, humanoid robotics, and vision-language-action models) increasingly rely on black-box, probabilistic policies, a deterministic safety layer with formal guarantees is an essential complement. we present a cuda implementation of the canonical weno5 + tvd-rk3 + lax-friedrichs level-set hamilton-jacobi-isaacs solver for 2d, 3d, and 4d dynamics that is fast enough to run inside a robot's control loop. in 32-bit floating point (fp32) on a single workstation gpu (nvidia rtx 4000 ada), it computes the 3d air3d brt at 112 hz, a 4d pursuit-evasion brt at 61 hz, and a 2d wind-affected drifter brt at 74-147 hz, 5.9-17.5x faster than the jax reference hj_reachability at matched precision and 1.7-16x faster than a torch.compile reimplementation of the same scheme. in 64-bit floating point (fp64) it agrees with hj_reachability on eight benchmark cases, reproduces mitchell's air3d brt to within 0.04% of the reference cell count, and runs 2.0-4.6x faster. on an embedded nvidia jetson agx thor it computes air3d at 66 hz (n=41) and the 2d drifter at 54 hz, 3.8-8.9x faster than hj_reachability on the same device. as a multi-agent application, an in-kernel label-propagation extension recovers the k-agent capture-basin voronoi tessellation from a single combined hj solve, independent of fleet size; it runs at 4.0 ms per tick in a closed-loop wildfire-response simulation of six quadcopters under time-varying, non-uniform wind.">
+        <article class="paper-card" data-title="learning object-centric motion priors from human for robotic dexterous manipulation" data-summary="manipulating diverse objects with multi-fingered dexterous hands is challenging due to the high dimensionality and complex dynamics. human-object interaction (hoi) datasets provide rich knowledge about task information and embodied interactions. instead of solely imitating the human demonstrations, our method learns to holistically predict future hand-object states by leveraging these datasets. the predicted future states of the object can serve as a general-purpose reward term for reinforcement learning, reducing reliance on task-specific reward engineering and enhancing generalization across tasks. we conduct extensive experiments on three manipulation tasks in simulation and the real world. our approach outperforms existing sota methods in both success rate and generalizability on novel objects. furthermore, we validate the cross-embodiment compatibility of our methods by successfully deploying the skills on different robot hands.">
             <div class="card-meta-top">
                 <span class="rank-tag">TOP #2</span>
                 <div class="score-badge">
                     <span class="score-label">Priority Index</span>
-                    <span class="score-value">140</span>
+                    <span class="score-value">110</span>
                 </div>
             </div>
             
-            <h2 class="paper-title">Online Hamilton-Jacobi Reachability Onboard the Robot Control Loop: A Real-Time GPU Solver for Safety-Critical Autonomy</h2>
+            <h2 class="paper-title">Learning Object-Centric Motion Priors from Human for Robotic Dexterous Manipulation</h2>
             
             <div class="author-row">
-                <span>🗓️ 2026-11-03</span>
-                <span>✍️ Kevin Weekly, Alexandre M. Bayen</span>
+                <span>🗓️ 2026-11-04</span>
+                <span>✍️ Zhengdong Hong, Guofeng Zhang</span>
             </div>
             
             <div class="badge-cluster">
-                <span class="badge">#humanoid</span><span class="badge">#vision-language-action</span>
+                <span class="badge">#reinforcement learning</span><span class="badge">#dexterous manipulation</span>
             </div>
             
-            <p class="paper-summary">Hamilton-Jacobi (HJ) reachability provides certified backward reachable tubes (BRTs) for safety-critical robotic systems, but the level-set computation scales exponentially in the state dimension and has historically been performed offline. As autonomy stacks (ADAS/AV, humanoid robotics, and vision-language-action models) increasingly rely on black-box, probabilistic policies, a deterministic safety layer with formal guarantees is an essential complement. We present a CUDA implementation of the canonical WENO5 + TVD-RK3 + Lax-Friedrichs level-set Hamilton-Jacobi-Isaacs solver for 2D, 3D, and 4D dynamics that is fast enough to run inside a robot's control loop. In 32-bit floating point (FP32) on a single workstation GPU (NVIDIA RTX 4000 Ada), it computes the 3D Air3D BRT at 112 Hz, a 4D pursuit-evasion BRT at 61 Hz, and a 2D wind-affected drifter BRT at 74-147 Hz, 5.9-17.5x faster than the JAX reference hj_reachability at matched precision and 1.7-16x faster than a torch.compile reimplementation of the same scheme. In 64-bit floating point (FP64) it agrees with hj_reachability on eight benchmark cases, reproduces Mitchell's Air3D BRT to within 0.04% of the reference cell count, and runs 2.0-4.6x faster. On an embedded NVIDIA Jetson AGX Thor it computes Air3D at 66 Hz (N=41) and the 2D drifter at 54 Hz, 3.8-8.9x faster than hj_reachability on the same device. As a multi-agent application, an in-kernel label-propagation extension recovers the K-agent capture-basin Voronoi tessellation from a single combined HJ solve, independent of fleet size; it runs at 4.0 ms per tick in a closed-loop wildfire-response simulation of six quadcopters under time-varying, non-uniform wind.</p>
+            <p class="paper-summary">Manipulating diverse objects with multi-fingered dexterous hands is challenging due to the high dimensionality and complex dynamics. Human-Object Interaction (HOI) datasets provide rich knowledge about task information and embodied interactions. Instead of solely imitating the human demonstrations, our method learns to holistically predict future hand-object states by leveraging these datasets. The predicted future states of the object can serve as a general-purpose reward term for reinforcement learning, reducing reliance on task-specific reward engineering and enhancing generalization across tasks. We conduct extensive experiments on three manipulation tasks in simulation and the real world. Our approach outperforms existing SOTA methods in both success rate and generalizability on novel objects. Furthermore, we validate the cross-embodiment compatibility of our methods by successfully deploying the skills on different robot hands.</p>
             
             <div class="card-action-bar">
-                <a href="http://arxiv.org/pdf/2611.04096v1" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
+                <a href="http://arxiv.org/pdf/2611.05979v1" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
                     View PDF
                 </a>
-                <a href="http://arxiv.org/abs/2611.04096v1" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
+                <a href="http://arxiv.org/abs/2611.05979v1" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
                     arXiv Page &rarr;
                 </a>
             </div>
         </article>
         
-        <article class="paper-card" data-title="dimure: diagnosis-guided multilevel recovery for robotic task execution" data-summary="disturbances can invalidate the conditions required by a robot's next action even when much of its task program remains useful. a recovery system must therefore choose a response suited to the current state. we present dimure (diagnosis-guided multilevel recovery), a framework for robot-use agents that uses phase-specific evidence and method preconditions to select program reuse or predefined recovery skills, including bounded vision-language-action (vla) grasping. after the original program exits, a multimodal large language model (mllm) can generate corrective code from images and execution feedback. local verification checks the outcome of each recovery attempt. we also introduce libero-disturb, a benchmark for robustness and recovery under mid-execution disturbances, supporting program-based agents and vla policies. on 801 scheduled disturbed encore development cases, local dimure (program reuse and recovery skills) achieves 77.65% complete-task success, compared with 58.68% for the original program under the same physical-step allowance. full dimure achieves 81.90% with terminal replanning, an additional step allowance, and early handoff. local dimure also uses fewer physical steps per scheduled episode than the original program.">
+        <article class="paper-card" data-title="can astra solve robomme without breaking the bank?" data-summary="robotic manipulation often requires remembering information that is no longer visible, such as an object's location before occlusion or the order of a demonstrated action sequence. a large vision-language planner can read this history, but calling it before every action chunk is slow and costly. we present a three-tier system for the robomme benchmark. gpt-6 astra (system 2) selects a grounded subtask from stored visual history, a $π_{0.5}$ vision-language-action policy (system 1) executes it, and a fine-tuned qwen3-vl-4b monitor (system 1.5) checks after each action chunk whether the subtask is finished. the instruction is kept until the monitor reports completion or a task-specific event occurs, while the policy keeps acting on new observations. on robomme, the system succeeds in 79.13% of episodes with an average of 3.63 astra calls and 80.84 seconds per episode. this is 34.62 points above the best published non-oracle baseline and 4.95 points below groundsg+oracle, which gives the low-level policy ground-truth subgoals.">
             <div class="card-meta-top">
                 <span class="rank-tag">TOP #3</span>
                 <div class="score-badge">
                     <span class="score-label">Priority Index</span>
-                    <span class="score-value">135</span>
+                    <span class="score-value">95</span>
                 </div>
             </div>
             
-            <h2 class="paper-title">DiMuRe: Diagnosis-Guided Multilevel Recovery for Robotic Task Execution</h2>
+            <h2 class="paper-title">Can Astra Solve RoboMME without Breaking the Bank?</h2>
             
             <div class="author-row">
-                <span>🗓️ 2026-11-03</span>
-                <span>✍️ Renkai Yi, Yuwei Wu, Haoyu Zhang et al.</span>
+                <span>🗓️ 2026-11-04</span>
+                <span>✍️ Bingao Chen, Haoquan Fang, C. Karen Liu</span>
             </div>
             
             <div class="badge-cluster">
-                <span class="badge">#vision-language-action</span><span class="badge">#vla</span>
+                <span class="badge">#vision-language-action</span>
             </div>
             
-            <p class="paper-summary">Disturbances can invalidate the conditions required by a robot's next action even when much of its task program remains useful. A recovery system must therefore choose a response suited to the current state. We present DiMuRe (diagnosis-guided multilevel recovery), a framework for robot-use agents that uses phase-specific evidence and method preconditions to select program reuse or predefined recovery skills, including bounded vision-language-action (VLA) grasping. After the original program exits, a multimodal large language model (MLLM) can generate corrective code from images and execution feedback. Local verification checks the outcome of each recovery attempt. We also introduce LIBERO-Disturb, a benchmark for robustness and recovery under mid-execution disturbances, supporting program-based agents and VLA policies. On 801 scheduled disturbed Encore development cases, Local DiMuRe (program reuse and recovery skills) achieves 77.65% complete-task success, compared with 58.68% for the original program under the same physical-step allowance. Full DiMuRe achieves 81.90% with terminal replanning, an additional step allowance, and early handoff. Local DiMuRe also uses fewer physical steps per scheduled episode than the original program.</p>
+            <p class="paper-summary">Robotic manipulation often requires remembering information that is no longer visible, such as an object's location before occlusion or the order of a demonstrated action sequence. A large vision-language planner can read this history, but calling it before every action chunk is slow and costly. We present a three-tier system for the RoboMME benchmark. GPT-6 Astra (System 2) selects a grounded subtask from stored visual history, a $π_{0.5}$ vision-language-action policy (System 1) executes it, and a fine-tuned Qwen3-VL-4B monitor (System 1.5) checks after each action chunk whether the subtask is finished. The instruction is kept until the monitor reports completion or a task-specific event occurs, while the policy keeps acting on new observations. On RoboMME, the system succeeds in 79.13% of episodes with an average of 3.63 Astra calls and 80.84 seconds per episode. This is 34.62 points above the best published non-oracle baseline and 4.95 points below GroundSG+Oracle, which gives the low-level policy ground-truth subgoals.</p>
             
             <div class="card-action-bar">
-                <a href="http://arxiv.org/pdf/2611.04226v1" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
+                <a href="http://arxiv.org/pdf/2611.06184v1" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
                     View PDF
                 </a>
-                <a href="http://arxiv.org/abs/2611.04226v1" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
+                <a href="http://arxiv.org/abs/2611.06184v1" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
                     arXiv Page &rarr;
                 </a>
             </div>
         </article>
         
-        <article class="paper-card" data-title="say the same, act differently: diagnosing and steering text-action divergence in reasoning vlas" data-summary="reasoning vision-language-action (vla) models pair physical control with natural-language rationales that supervisors can read to monitor embodied safety. prior attacks on vla reasoning corrupt the rationale itself and leave visible evidence in the text. we show that visual perturbations can instead alter the physical action while keeping the generated rationale word-for-word identical. at the shared text/action interface of alpamayo for driving and instructvla for manipulation, our text-neutral action-subspace (tnas) diagnostic shows that the locally most action-sensitive direction is nearly orthogonal to the active text-loss gradients, with 1.87% and 5.28% norm overlap. at equal hidden-state perturbation norms across both models, interventions along this text-neutral residual shift actions 4.64x to 47.8x more than text-gradient perturbations, whereas text-gradient perturbations induce 21.2x to 277x more text drift. steering visual perturbations along this direction reaches the same decoupling from the image. across 154 obstacle-annotated driving scenes in alpamayo, tnas-guided attacks induce a new collision under a word-for-word identical rationale in 52.6% of scenes under full-image perturbations and 35.1% under a localized forward-camera patch, compared with 4.55% for unguided action attacks. relative to a text-preserving baseline, tnas guidance raises exact rationale preservation from 83.0% to 89.5% and cuts teacher-forced text drift by 68.4% at a comparable collision rate. in instructvla, tnas guidance cuts text drift by 40.5% and preserves the exact response on 85.0% of examples alongside a 1.73-unit action-chunk shift. an unchanged rationale therefore cannot certify a safe action, so monitors for reasoning vlas must verify the predicted action channel directly.">
+        <article class="paper-card" data-title="robots in the city: persona-based perceptions of urban robots" data-summary="pedestrians increasingly encounter robots in urban public spaces without interacting with them, but how robots change the perceived safety of a street remains unclear. we examine how robot presence and type affect perceived safety across urban contexts. we generate 18 images of seoul streets that vary in time of day, road class, and robot condition (no robot, a delivery robot, or a humanoid). two multimodal large language models (mllms), qwen3.8-27b and gemma4-26b, each conditioned on 500 synthetic personas, choose the safer image in each pair, and 25 human respondents complete the same task. both models prefer streets without robots and favor the delivery robot over the humanoid. robots are chosen more often at night and less often by older personas, whereas road class has smaller effects. in the model rationales, the delivery robot appears as a physical obstacle, whereas the humanoid appears as either a threat or a source of protection. like humans, both models chose robots more often at night, but chose the humanoid over the delivery robot far less often, and gemma showed a night effect for the humanoid about three times that of humans. these results show that the effect of a robot on perceived safety depends on when it appears, and that persona-conditioned mllms capture only part of human judgments.">
             <div class="card-meta-top">
                 <span class="rank-tag">TOP #4</span>
                 <div class="score-badge">
                     <span class="score-label">Priority Index</span>
-                    <span class="score-value">135</span>
+                    <span class="score-value">95</span>
                 </div>
             </div>
             
-            <h2 class="paper-title">Say the Same, Act Differently: Diagnosing and Steering Text-Action Divergence in Reasoning VLAs</h2>
+            <h2 class="paper-title">Robots in the City: Persona-Based Perceptions of Urban Robots</h2>
             
             <div class="author-row">
-                <span>🗓️ 2026-11-03</span>
-                <span>✍️ Zihao Feng, Qingzhao Zhang, Chunyu Xia et al.</span>
+                <span>🗓️ 2026-11-04</span>
+                <span>✍️ Keonhee Jang, Kanghoon Lee, Seokwoo Yun et al.</span>
             </div>
             
             <div class="badge-cluster">
-                <span class="badge">#vision-language-action</span><span class="badge">#vla</span>
+                <span class="badge">#humanoid</span>
             </div>
             
-            <p class="paper-summary">Reasoning vision-language-action (VLA) models pair physical control with natural-language rationales that supervisors can read to monitor embodied safety. Prior attacks on VLA reasoning corrupt the rationale itself and leave visible evidence in the text. We show that visual perturbations can instead alter the physical action while keeping the generated rationale word-for-word identical. At the shared text/action interface of Alpamayo for driving and InstructVLA for manipulation, our text-neutral action-subspace (TNAS) diagnostic shows that the locally most action-sensitive direction is nearly orthogonal to the active text-loss gradients, with 1.87% and 5.28% norm overlap. At equal hidden-state perturbation norms across both models, interventions along this text-neutral residual shift actions 4.64x to 47.8x more than text-gradient perturbations, whereas text-gradient perturbations induce 21.2x to 277x more text drift. Steering visual perturbations along this direction reaches the same decoupling from the image. Across 154 obstacle-annotated driving scenes in Alpamayo, TNAS-guided attacks induce a new collision under a word-for-word identical rationale in 52.6% of scenes under full-image perturbations and 35.1% under a localized forward-camera patch, compared with 4.55% for unguided action attacks. Relative to a text-preserving baseline, TNAS guidance raises exact rationale preservation from 83.0% to 89.5% and cuts teacher-forced text drift by 68.4% at a comparable collision rate. In InstructVLA, TNAS guidance cuts text drift by 40.5% and preserves the exact response on 85.0% of examples alongside a 1.73-unit action-chunk shift. An unchanged rationale therefore cannot certify a safe action, so monitors for reasoning VLAs must verify the predicted action channel directly.</p>
+            <p class="paper-summary">Pedestrians increasingly encounter robots in urban public spaces without interacting with them, but how robots change the perceived safety of a street remains unclear. We examine how robot presence and type affect perceived safety across urban contexts. We generate 18 images of Seoul streets that vary in time of day, road class, and robot condition (no robot, a delivery robot, or a humanoid). Two multimodal large language models (MLLMs), Qwen3.8-27B and Gemma4-26B, each conditioned on 500 synthetic personas, choose the safer image in each pair, and 25 human respondents complete the same task. Both models prefer streets without robots and favor the delivery robot over the humanoid. Robots are chosen more often at night and less often by older personas, whereas road class has smaller effects. In the model rationales, the delivery robot appears as a physical obstacle, whereas the humanoid appears as either a threat or a source of protection. Like humans, both models chose robots more often at night, but chose the humanoid over the delivery robot far less often, and Gemma showed a night effect for the humanoid about three times that of humans. These results show that the effect of a robot on perceived safety depends on when it appears, and that persona-conditioned MLLMs capture only part of human judgments.</p>
             
             <div class="card-action-bar">
-                <a href="http://arxiv.org/pdf/2611.04166v1" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
+                <a href="http://arxiv.org/pdf/2611.05954v1" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
                     View PDF
                 </a>
-                <a href="http://arxiv.org/abs/2611.04166v1" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
+                <a href="http://arxiv.org/abs/2611.05954v1" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
                     arXiv Page &rarr;
                 </a>
             </div>
         </article>
         
-        <article class="paper-card" data-title="actor: ambient ai-based agentic orchestration for humanoid autonomy in operating rooms" data-summary="operating rooms (ors) increasingly contain ambient sensing infrastructure to enable ai-based optimization of workflows and utilization. we pursue an alternative path: using ambient ai to guide robot action and optimize utilization. deploying humanoids in the or without ambient ai is severely limited by cumbersome de novo orientation and planning due to partial onboard observations. we posit that this can be achieved by coupling an ambient ai-based agentic orchestrator with the humanoid robotic actor, providing shared perception and execution feedback for humanoid autonomy in the or. actor fuses a wall-mounted ambient camera and the robot's head-mounted camera into a shared object-level digital twin (dt). a large language model agent plans over the dt using pre-programmed locomotion and manipulation skills without task-specific training. during execution, dt updates and execution outcomes inform retries, alternative approaches, or replanning. we evaluated actor in simulated and physical environments. across three tasks in two simulated ors reconstructed from real rooms, ambient perception reduced exploration from 1.05 to 0.12 explore calls per trial when targets were initially outside the robot's view. closed-loop feedback increased success from 46.7% to 83.3% under nominal execution and from 8.3% to 51.7% under injected navigation, object-relocation, and grasp perturbations. in a physical mock or with a humanoid, actor completed 14 of 20 single-object disposal trials and demonstrated replanning after scene changes. ambient ai-based observations provide scene state that improves robot action planning, increasing success and reducing exploration compared with robot-only observations. feeding skill outcomes and dt updates back to the planner improves multi-step task success. our results show the feasibility of humanoid task autonomy for multi-step disposal tasks in a mock or.">
+        <article class="paper-card" data-title="robocasa-mem: benchmarking environment and process memory in long-horizon mobile manipulation" data-summary="in the real world, mobile manipulation robots must perform complex object interactions and make multi-step decisions, often relying on task-relevant information that is no longer observable. however, existing benchmarks provide limited evaluation of such memory-dependent decision-making in mobile manipulation. to address this gap, we introduce robocasa-mem, a new benchmark comprising nine mobile manipulation tasks that require agents to use interaction history at key decision points. specifically, the tasks are grouped into two categories of memory: one is environment memory, which captures spatial locations, object attributes, and object relationships. the other is process memory, which captures single-task progress and multi-task scheduling. particularly, we introduce behavior-conditioned evaluation. for tasks with multiple valid execution paths, instead of fixing a single target or trajectory, the evaluator derives later task constraints from the robot's earlier actions. this allows us to evaluate whether later behavior is consistent with the robot's own interaction history while reducing shortcuts based on fixed target assignments. we provide 1,800 successful demonstrations for policy training. we also develop a baseline on our benchmark, namely hierarchical memory-augmented policy(hmap). its high-level planner uses structured entity and process memories to generate subtasks. its low-level vla controller uses subgoal-conditioned queries to incorporate vggt-omega geometry into action generation. together, robocasa-mem and hmap baseline support systematic evaluation of memory-dependent behavior and the development of memory-aware mobile manipulation policies.">
             <div class="card-meta-top">
                 <span class="rank-tag">TOP #5</span>
-                <div class="score-badge">
-                    <span class="score-label">Priority Index</span>
-                    <span class="score-value">120</span>
-                </div>
-            </div>
-            
-            <h2 class="paper-title">ActOR: Ambient AI-Based Agentic Orchestration for Humanoid Autonomy in Operating Rooms</h2>
-            
-            <div class="author-row">
-                <span>🗓️ 2026-11-03</span>
-                <span>✍️ Han Zhang, Sicheng Lu, Aleks Santari et al.</span>
-            </div>
-            
-            <div class="badge-cluster">
-                <span class="badge">#humanoid</span><span class="badge">#locomotion</span>
-            </div>
-            
-            <p class="paper-summary">Operating rooms (ORs) increasingly contain ambient sensing infrastructure to enable AI-based optimization of workflows and utilization. We pursue an alternative path: using ambient AI to guide robot action and optimize utilization. Deploying humanoids in the OR without ambient AI is severely limited by cumbersome de novo orientation and planning due to partial onboard observations. We posit that this can be achieved by coupling an ambient AI-based agentic orchestrator with the humanoid robotic actor, providing shared perception and execution feedback for humanoid autonomy in the OR. ActOR fuses a wall-mounted ambient camera and the robot's head-mounted camera into a shared object-level digital twin (DT). A large language model agent plans over the DT using pre-programmed locomotion and manipulation skills without task-specific training. During execution, DT updates and execution outcomes inform retries, alternative approaches, or replanning. We evaluated ActOR in simulated and physical environments. Across three tasks in two simulated ORs reconstructed from real rooms, ambient perception reduced exploration from 1.05 to 0.12 Explore calls per trial when targets were initially outside the robot's view. Closed-loop feedback increased success from 46.7% to 83.3% under nominal execution and from 8.3% to 51.7% under injected navigation, object-relocation, and grasp perturbations. In a physical mock OR with a humanoid, ActOR completed 14 of 20 single-object disposal trials and demonstrated replanning after scene changes. Ambient AI-based observations provide scene state that improves robot action planning, increasing success and reducing exploration compared with robot-only observations. Feeding skill outcomes and DT updates back to the planner improves multi-step task success. Our results show the feasibility of humanoid task autonomy for multi-step disposal tasks in a mock OR.</p>
-            
-            <div class="card-action-bar">
-                <a href="http://arxiv.org/pdf/2611.04255v1" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
-                    View PDF
-                </a>
-                <a href="http://arxiv.org/abs/2611.04255v1" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
-                    arXiv Page &rarr;
-                </a>
-            </div>
-        </article>
-        
-        <article class="paper-card" data-title="online ilqr-mpc with whole-body control for robust humanoid locomotion" data-summary="humanoid locomotion requires deciding where to step and how to distribute contact forces. however, a disturbance can invalidate the nominal plan, requiring coordinated revision under constraints that switch with every footfall. to solve this online, the proposed approach employs the single-rigid-body model, which retains attitude dynamics and the full contact wrench. an iterative linear-quadratic-regulator mpc (ilqr-mpc) then jointly optimizes contact forces and footstep locations in a single receding-horizon problem, without a separate step planner. specifically, contact and motion constraints are incorporated into the backward pass through augmented-lagrangian and relaxed-barrier penalties. a whole-body controller subsequently maps the plan to joint torques at 500 hz while preserving contact feasibility. the model-based formulation makes disturbance responses interpretable through explicit costs and constraints, and requires no platform-specific policy training. in mujoco simulations, the ilqr-mpc replans at 100 hz (mean solve time 8.9 ms); the unitree g1 sustains steady-state walking and recovers from impulsive 245 n forward and 175 n lateral pushes.">
-            <div class="card-meta-top">
-                <span class="rank-tag">TOP #6</span>
-                <div class="score-badge">
-                    <span class="score-label">Priority Index</span>
-                    <span class="score-value">120</span>
-                </div>
-            </div>
-            
-            <h2 class="paper-title">Online iLQR-MPC with Whole-Body Control for Robust Humanoid Locomotion</h2>
-            
-            <div class="author-row">
-                <span>🗓️ 2026-11-03</span>
-                <span>✍️ Xiang Li, Linlin Ou, Ruihan Wu et al.</span>
-            </div>
-            
-            <div class="badge-cluster">
-                <span class="badge">#humanoid</span><span class="badge">#locomotion</span>
-            </div>
-            
-            <p class="paper-summary">Humanoid locomotion requires deciding where to step and how to distribute contact forces. However, a disturbance can invalidate the nominal plan, requiring coordinated revision under constraints that switch with every footfall. To solve this online, the proposed approach employs the single-rigid-body model, which retains attitude dynamics and the full contact wrench. An iterative linear-quadratic-regulator MPC (iLQR-MPC) then jointly optimizes contact forces and footstep locations in a single receding-horizon problem, without a separate step planner. Specifically, contact and motion constraints are incorporated into the backward pass through augmented-Lagrangian and relaxed-barrier penalties. A whole-body controller subsequently maps the plan to joint torques at 500 Hz while preserving contact feasibility. The model-based formulation makes disturbance responses interpretable through explicit costs and constraints, and requires no platform-specific policy training. In MuJoCo simulations, the iLQR-MPC replans at 100 Hz (mean solve time 8.9 ms); the Unitree G1 sustains steady-state walking and recovers from impulsive 245 N forward and 175 N lateral pushes.</p>
-            
-            <div class="card-action-bar">
-                <a href="http://arxiv.org/pdf/2611.04204v1" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
-                    View PDF
-                </a>
-                <a href="http://arxiv.org/abs/2611.04204v1" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
-                    arXiv Page &rarr;
-                </a>
-            </div>
-        </article>
-        
-        <article class="paper-card" data-title="physical experience builds continual spatial world models" data-summary="world models are increasingly used to support prediction and planning in embodied agents, but the knowledge is usually established before deployment and then carried into later encounters. continual operation faces a different problem. a familiar environment may change, and the agent must use previous experience without allowing old expectations to override current physical evidence. this study asks what repeated physical experience must contribute for a spatial world model to become progressively more useful rather than simply more persistent. a physics-grounded dynamic maze separates recurring spatial change from the continuous consequences of action. cross-episode spatial change memory learns relations among environmental transformations, while state-action-outcome experience refines predictions of motion. structured experience progressively reduces the need for future route correction and transfers to spatial transitions not encountered during learning. the advantage disappears when past changes contain no information about future ones. continuous navigation further shows that predictive memory changes behavior when a previous decision becomes invalid but leaves behavior unchanged when the decision remains correct. physical tests expose a complementary limit: correct topology does not guarantee correct action prediction, and accumulated physical experience reduces this mismatch within the modeled dynamics. the results characterize continual world knowledge as experience that improves future prediction and action beyond stored episodes while remaining revisable by the physical outcomes it is intended to predict.">
-            <div class="card-meta-top">
-                <span class="rank-tag">TOP #7</span>
                 <div class="score-badge">
                     <span class="score-label">Priority Index</span>
                     <span class="score-value">90</span>
                 </div>
             </div>
             
-            <h2 class="paper-title">Physical Experience Builds Continual Spatial World Models</h2>
+            <h2 class="paper-title">Robocasa-Mem: Benchmarking Environment and Process Memory in Long-Horizon Mobile Manipulation</h2>
             
             <div class="author-row">
-                <span>🗓️ 2026-11-02</span>
-                <span>✍️ Yuhang Sun</span>
+                <span>🗓️ 2026-11-04</span>
+                <span>✍️ Sihang Chen, Chen Ye, Wei Chen et al.</span>
+            </div>
+            
+            <div class="badge-cluster">
+                <span class="badge">#vla</span>
+            </div>
+            
+            <p class="paper-summary">In the real world, mobile manipulation robots must perform complex object interactions and make multi-step decisions, often relying on task-relevant information that is no longer observable. However, existing benchmarks provide limited evaluation of such memory-dependent decision-making in mobile manipulation. To address this gap, we introduce RoboCasa-Mem, a new benchmark comprising nine mobile manipulation tasks that require agents to use interaction history at key decision points. Specifically, the tasks are grouped into two categories of memory: One is environment memory, which captures spatial locations, object attributes, and object relationships. The other is process memory, which captures single-task progress and multi-task scheduling. Particularly, we introduce Behavior-Conditioned Evaluation. For tasks with multiple valid execution paths, instead of fixing a single target or trajectory, the evaluator derives later task constraints from the robot's earlier actions. This allows us to evaluate whether later behavior is consistent with the robot's own interaction history while reducing shortcuts based on fixed target assignments. We provide 1,800 successful demonstrations for policy training. We also develop a baseline on our benchmark, namely Hierarchical Memory-Augmented Policy(HMAP). Its high-level planner uses structured entity and process memories to generate subtasks. Its low-level VLA controller uses subgoal-conditioned queries to incorporate VGGT-Omega geometry into action generation. Together, RoboCasa-Mem and HMAP baseline support systematic evaluation of memory-dependent behavior and the development of memory-aware mobile manipulation policies.</p>
+            
+            <div class="card-action-bar">
+                <a href="http://arxiv.org/pdf/2611.06475v1" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
+                    View PDF
+                </a>
+                <a href="http://arxiv.org/abs/2611.06475v1" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
+                    arXiv Page &rarr;
+                </a>
+            </div>
+        </article>
+        
+        <article class="paper-card" data-title="reactworld: structuring interaction responses for embodied video generation" data-summary="embodied video world models predict scene changes caused by robot actions, yet generated object responses may remain inconsistent with task intent and contact dynamics. critical responses in embodied scenes often concentrate in local regions and specific time intervals. inspired by chain-of-thought reasoning, we introduce reactworld, an embodied video generation model guided by structured interaction anticipation. in the generation backbone's feature space, an interaction response field predictor anticipates how the interaction will unfold, explicitly describing participant roles, future motion response intensity, and local motion changes. a response feedback adapter forms increments to object features from the difference between the object branch's outputs with predicted and zeroed local dynamics inputs. it also converts predicted displacements into positional biases for temporal attention. these two mechanisms guide object feature updates and information retrieval across frames, respectively. through interaction anticipation and generative feedback, reactworld achieves an average score of 77.51 on rbench, outperforming physisforcing by 3.29 points with improvements in all nine categories. on ezs-bench, it achieves a domain score of 86.98 and an average score of 81.87.">
+            <div class="card-meta-top">
+                <span class="rank-tag">TOP #6</span>
+                <div class="score-badge">
+                    <span class="score-label">Priority Index</span>
+                    <span class="score-value">90</span>
+                </div>
+            </div>
+            
+            <h2 class="paper-title">ReactWorld: Structuring Interaction Responses for Embodied Video Generation</h2>
+            
+            <div class="author-row">
+                <span>🗓️ 2026-11-04</span>
+                <span>✍️ Hanwei Liu, Huijia Zhang, Hanzhang Wang et al.</span>
             </div>
             
             <div class="badge-cluster">
                 <span class="badge">#world model</span>
             </div>
             
-            <p class="paper-summary">World models are increasingly used to support prediction and planning in embodied agents, but the knowledge is usually established before deployment and then carried into later encounters. Continual operation faces a different problem. A familiar environment may change, and the agent must use previous experience without allowing old expectations to override current physical evidence. This study asks what repeated physical experience must contribute for a spatial world model to become progressively more useful rather than simply more persistent. A physics-grounded dynamic maze separates recurring spatial change from the continuous consequences of action. Cross-episode Spatial Change Memory learns relations among environmental transformations, while state-action-outcome experience refines predictions of motion. Structured experience progressively reduces the need for future route correction and transfers to spatial transitions not encountered during learning. The advantage disappears when past changes contain no information about future ones. Continuous navigation further shows that predictive memory changes behavior when a previous decision becomes invalid but leaves behavior unchanged when the decision remains correct. Physical tests expose a complementary limit: correct topology does not guarantee correct action prediction, and accumulated physical experience reduces this mismatch within the modeled dynamics. The results characterize continual world knowledge as experience that improves future prediction and action beyond stored episodes while remaining revisable by the physical outcomes it is intended to predict.</p>
+            <p class="paper-summary">Embodied video world models predict scene changes caused by robot actions, yet generated object responses may remain inconsistent with task intent and contact dynamics. Critical responses in embodied scenes often concentrate in local regions and specific time intervals. Inspired by chain-of-thought reasoning, we introduce ReactWorld, an embodied video generation model guided by structured interaction anticipation. In the generation backbone's feature space, an interaction response field predictor anticipates how the interaction will unfold, explicitly describing participant roles, future motion response intensity, and local motion changes. A response feedback adapter forms increments to object features from the difference between the object branch's outputs with predicted and zeroed local dynamics inputs. It also converts predicted displacements into positional biases for temporal attention. These two mechanisms guide object feature updates and information retrieval across frames, respectively. Through interaction anticipation and generative feedback, ReactWorld achieves an average score of 77.51 on RBench, outperforming PhysisForcing by 3.29 points with improvements in all nine categories. On EZS-Bench, it achieves a Domain score of 86.98 and an average score of 81.87.</p>
             
             <div class="card-action-bar">
-                <a href="http://arxiv.org/pdf/2611.04016v1" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
+                <a href="http://arxiv.org/pdf/2611.06120v1" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
                     View PDF
                 </a>
-                <a href="http://arxiv.org/abs/2611.04016v1" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
+                <a href="http://arxiv.org/abs/2611.06120v1" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
                     arXiv Page &rarr;
                 </a>
             </div>
         </article>
         
-        <article class="paper-card" data-title="coordinate frame recovery, per class nms and null return modelling for sim2real v2x lidar detection" data-summary="we describe our approach to the v2x-real track of the urbantwin sim2real lidar challenge, in which a 3d object detector must be trained exclusively on synthetic data and evaluated on unseen real roadside lidar from an ouster os1-64 unit, while the synthetic point clouds are simultaneously scored for distributional realism. our final entry scores 0.7457 combined, from a detection map of 0.4382 and a realism score of 0.9251. three findings account for most of our result, and all three were diagnostic rather than architectural. first, a coordinate frame mismatch between our predictions and the evaluation ground truth was suppressing detection ap entirely; recovering it took our score from 0.3520 to 0.5147 in a single submission. second, a single global non maximum suppression threshold was destroying genuine pedestrian detections, because pedestrians occur in groups and a 0.3 iou threshold applied to a 0.7 m box suppresses distinct neighbouring people; correcting this per class raised overall map from 0.0751 to 0.4295. third, approximately 31 percent of the real reference point cloud consists of null returns encoded as the literal point (0, 0, 0), a format feature entirely absent from our synthetic clouds, which pinned earth mover's distance near its floor until we modelled it. negative results are reported at equal length, and section 9 gives a full account of data provenance and compliance. that section also accounts for every mechanism contributing to the submitted score.">
+        <article class="paper-card" data-title="twinbridge: digital twin-driven policy and reward transfer for real-world reinforcement learning in laboratory robotics" data-summary="online reinforcement learning offers an effective approach to precise laboratory manipulation, yet costly real-world demonstrations and limited access to dense process rewards hinder its practical application. we present twinbridge, a digital twin-driven framework that supplies policy initialization and dense visual rewards for real-world online learning. we construct digital twins by combining 3d gaussian splatting with physics simulation. here, simulator states provide task events and geometric progress under physical prerequisites and ordering constraints, yielding rewards for policy pretraining with simulated demonstrations and reinforcement learning. we distill this supervision into a visual reward model. during real-world interaction, its predictions are combined with execution history to compute dense rewards for human-in-the-loop policy refinement. across five real-world laboratory tasks, twinbridge achieves a final mean autonomous success rate of 98% with at most 25 minutes of real-world interaction per task. experiments show that dense rewards improve interaction efficiency over sparse rewards, and simulation-based policy initialization further accelerates learning.">
+            <div class="card-meta-top">
+                <span class="rank-tag">TOP #7</span>
+                <div class="score-badge">
+                    <span class="score-label">Priority Index</span>
+                    <span class="score-value">80</span>
+                </div>
+            </div>
+            
+            <h2 class="paper-title">TwinBridge: Digital Twin-Driven Policy and Reward Transfer for Real-World Reinforcement Learning in Laboratory Robotics</h2>
+            
+            <div class="author-row">
+                <span>🗓️ 2026-11-04</span>
+                <span>✍️ Shu'ang Sun, Yibo Qiu, Haoliang Ye et al.</span>
+            </div>
+            
+            <div class="badge-cluster">
+                <span class="badge">#reinforcement learning</span>
+            </div>
+            
+            <p class="paper-summary">Online reinforcement learning offers an effective approach to precise laboratory manipulation, yet costly real-world demonstrations and limited access to dense process rewards hinder its practical application. We present TwinBridge, a digital twin-driven framework that supplies policy initialization and dense visual rewards for real-world online learning. We construct digital twins by combining 3D Gaussian splatting with physics simulation. Here, simulator states provide task events and geometric progress under physical prerequisites and ordering constraints, yielding rewards for policy pretraining with simulated demonstrations and reinforcement learning. We distill this supervision into a visual reward model. During real-world interaction, its predictions are combined with execution history to compute dense rewards for human-in-the-loop policy refinement. Across five real-world laboratory tasks, TwinBridge achieves a final mean autonomous success rate of 98% with at most 25 minutes of real-world interaction per task. Experiments show that dense rewards improve interaction efficiency over sparse rewards, and simulation-based policy initialization further accelerates learning.</p>
+            
+            <div class="card-action-bar">
+                <a href="http://arxiv.org/pdf/2611.06442v1" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
+                    View PDF
+                </a>
+                <a href="http://arxiv.org/abs/2611.06442v1" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
+                    arXiv Page &rarr;
+                </a>
+            </div>
+        </article>
+        
+        <article class="paper-card" data-title="vortex-induced torque in grasping soft objects: influence of geometry and pneumatic parameters" data-summary="vortex grippers are commonly integrated into automated systems for handling objects with complex geometries in packaging, sorting, and assembling. however, their interaction with compliant objects remains difficult to predict, particularly with respect to the vortex-induced torque transmitted during grasping. this study investigates vortex-induced torque during the grasping of compliant objects and quantifies the coupled effects of supply pressure, tangential nozzle diameter, surface geometry, and curvature. the results show that increasing the tangential nozzle diameter primarily enhances the sensitivity of the generated torque to supply pressure rather than producing a uniformly higher torque. surface geometry also strongly influences the rotational interaction, with dome-concave surfaces generally producing substantially greater torque than corresponding dome-convex surfaces, whereas the difference between cylindrical concave and convex surfaces is comparatively small. the strongest and most repeatable response was observed for a dome-concave surface exhibiting favorable object-gripper geometric matching. among the evaluated machine-learning regression methods, gaussian process regression provided the best overall predictive performance under repeated cross-validation, demonstrating that vortex-induced torque can be estimated from combined pneumatic and geometric parameters. these findings provide a basis for predicting and utilizing vortex-induced torque in the dexterous manipulation of soft objects.">
             <div class="card-meta-top">
                 <span class="rank-tag">TOP #8</span>
                 <div class="score-badge">
                     <span class="score-label">Priority Index</span>
-                    <span class="score-value">90</span>
+                    <span class="score-value">80</span>
                 </div>
             </div>
             
-            <h2 class="paper-title">Coordinate Frame Recovery, Per Class NMS and Null Return Modelling for Sim2Real V2X LiDAR Detection</h2>
+            <h2 class="paper-title">Vortex-Induced Torque in Grasping Soft Objects: Influence of Geometry and Pneumatic Parameters</h2>
             
             <div class="author-row">
-                <span>🗓️ 2026-11-02</span>
-                <span>✍️ Aman Upganlawar</span>
+                <span>🗓️ 2026-11-04</span>
+                <span>✍️ Roman Mykhailyshyn, Tomohiro Motoda, Ivan Virgala et al.</span>
             </div>
             
             <div class="badge-cluster">
-                <span class="badge">#sim2real</span>
+                <span class="badge">#dexterous manipulation</span>
             </div>
             
-            <p class="paper-summary">We describe our approach to the V2X-Real track of the UrbanTwin Sim2Real LiDAR Challenge, in which a 3D object detector must be trained exclusively on synthetic data and evaluated on unseen real roadside LiDAR from an Ouster OS1-64 unit, while the synthetic point clouds are simultaneously scored for distributional realism. Our final entry scores 0.7457 combined, from a detection mAP of 0.4382 and a realism score of 0.9251. Three findings account for most of our result, and all three were diagnostic rather than architectural. First, a coordinate frame mismatch between our predictions and the evaluation ground truth was suppressing detection AP entirely; recovering it took our score from 0.3520 to 0.5147 in a single submission. Second, a single global non maximum suppression threshold was destroying genuine pedestrian detections, because pedestrians occur in groups and a 0.3 IoU threshold applied to a 0.7 m box suppresses distinct neighbouring people; correcting this per class raised overall mAP from 0.0751 to 0.4295. Third, approximately 31 percent of the real reference point cloud consists of null returns encoded as the literal point (0, 0, 0), a format feature entirely absent from our synthetic clouds, which pinned Earth Mover's Distance near its floor until we modelled it. Negative results are reported at equal length, and Section 9 gives a full account of data provenance and compliance. That section also accounts for every mechanism contributing to the submitted score.</p>
+            <p class="paper-summary">Vortex grippers are commonly integrated into automated systems for handling objects with complex geometries in packaging, sorting, and assembling. However, their interaction with compliant objects remains difficult to predict, particularly with respect to the vortex-induced torque transmitted during grasping. This study investigates vortex-induced torque during the grasping of compliant objects and quantifies the coupled effects of supply pressure, tangential nozzle diameter, surface geometry, and curvature. The results show that increasing the tangential nozzle diameter primarily enhances the sensitivity of the generated torque to supply pressure rather than producing a uniformly higher torque. Surface geometry also strongly influences the rotational interaction, with dome-concave surfaces generally producing substantially greater torque than corresponding dome-convex surfaces, whereas the difference between cylindrical concave and convex surfaces is comparatively small. The strongest and most repeatable response was observed for a dome-concave surface exhibiting favorable object-gripper geometric matching. Among the evaluated machine-learning regression methods, Gaussian Process Regression provided the best overall predictive performance under repeated cross-validation, demonstrating that vortex-induced torque can be estimated from combined pneumatic and geometric parameters. These findings provide a basis for predicting and utilizing vortex-induced torque in the dexterous manipulation of soft objects.</p>
             
             <div class="card-action-bar">
-                <a href="http://arxiv.org/pdf/2611.03940v1" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
+                <a href="http://arxiv.org/pdf/2611.06359v1" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
                     View PDF
                 </a>
-                <a href="http://arxiv.org/abs/2611.03940v1" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
+                <a href="http://arxiv.org/abs/2611.06359v1" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
                     arXiv Page &rarr;
                 </a>
             </div>
