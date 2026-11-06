@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Embodied AI & Robotics Intelligence Digest — November 05, 2026</title>
+    <title>Embodied AI & Robotics Intelligence Digest — November 06, 2026</title>
     <style>
         :root {
             --bg-base: #080c14;
@@ -242,7 +242,7 @@
         <header>
             <span class="pill-brand">Autonomous Research Intelligence</span>
             <h1>Embodied AI & Physical Frontier Briefing</h1>
-            <p class="subtitle">Compiled on November 05, 2026 • Ranked top 8 strategic breakthroughs out of incoming preprints.</p>
+            <p class="subtitle">Compiled on November 06, 2026 • Ranked top 8 strategic breakthroughs out of incoming preprints.</p>
             
             <div class="controls">
                 <input type="text" id="filterInput" class="search-box" placeholder="Filter papers by keywords (e.g. humanoid, tactile, diffusion)...">
@@ -251,103 +251,103 @@
 
         <main id="paperList">
             
-        <article class="paper-card" data-title="$a^3$-vla: automatic perception-guided attention alignment for robot manipulation" data-summary="vision-language-action models (vlas) enable robots to perform manipulation tasks by leveraging vision-language models (vlms) to process visual observations and language instructions. however, the action prediction objective itself lacks fine-grained task-specific perceptual supervision, making it prone to relying on task-irrelevant visual shortcuts, leading attention away from target objects and key interaction areas, thereby limiting its operational performance and generalization ability. to address this, we propose automatic perception-guided attention alignment for robot manipulation ($a^3$-vla), a framework that derives task-specific visual guidance from the manipulation process itself. specifically, $a^3$-vla first generates heuristic candidate regions for target objects and the robot from interaction-induced visual changes, and refines them with a visual segmentation model offline. these regions serve as explicit perceptual guidance through two complementary objectives: an attention allocation loss that encourages sufficient focus on task-critical regions when language or robot state tokens query the visual input, and a contrastive learning loss that aligns the representations of candidate target regions with language instructions while separating them from task-irrelevant regions. extensive experiments on simulated and real-world manipulation tasks demonstrate that $a^3$-vla consistently improves multiple vla backbones, with an average success rate gain of 6.5% - 25.2% across benchmarks.">
+        <article class="paper-card" data-title="efficient diffusion policy fine tuning with latent noise representation bridging" data-summary="pre-trained diffusion and flow policies have emerged as powerful backbones for robotics, yet adapting them to novel data via reinforcement learning (rl) remains computationally expensive, sample inefficient and lacks theoretical guarantees. prior approaches that fine-tune the initial noise bypass costly backpropagation through time but struggle with the "noise aliasing" problem: there does not exista natural link between the noise space value and the action space value. this paper resolves these challenges by introducing the latent noise linear markov decision process (lnl-mdp). we derive the bridge equation for lnl-mdps which eliminates the noise aliasing problem by aligning values with a shared representation between the noise and the action space. furthermore, our lnl-mdp fine tuning framework falls under the finetunerl theory with near-optimal guarantee. leveraging these insights, we propose latent representation bridging for diffusion (larbrid), an algorithm that efficiently learns the representation to optimize the initial distribution that steers the pre-trained model to act optimally in the environment. it yields up to 2-3$\times$ performance increases on challenging control problems across a diverse suite of robotic locomotion and manipulation tasks. code can be found at: github.com/maincode-research/larbrid.git.">
             <div class="card-meta-top">
                 <span class="rank-tag">TOP #1</span>
+                <div class="score-badge">
+                    <span class="score-label">Priority Index</span>
+                    <span class="score-value">140</span>
+                </div>
+            </div>
+            
+            <h2 class="paper-title">Efficient Diffusion Policy Fine Tuning with Latent Noise Representation Bridging</h2>
+            
+            <div class="author-row">
+                <span>🗓️ 2026-11-05</span>
+                <span>✍️ Yuanchu Liang, Yue Yang, An-Chi He et al.</span>
+            </div>
+            
+            <div class="badge-cluster">
+                <span class="badge">#reinforcement learning</span><span class="badge">#locomotion</span><span class="badge">#diffusion policy</span>
+            </div>
+            
+            <p class="paper-summary">Pre-trained diffusion and flow policies have emerged as powerful backbones for robotics, yet adapting them to novel data via reinforcement learning (RL) remains computationally expensive, sample inefficient and lacks theoretical guarantees. Prior approaches that fine-tune the initial noise bypass costly backpropagation through time but struggle with the "noise aliasing" problem: there does not exista natural link between the noise space value and the action space value. This paper resolves these challenges by introducing the Latent Noise Linear Markov Decision Process (LNL-MDP). We derive the Bridge Equation for LNL-MDPs which eliminates the noise aliasing problem by aligning values with a shared representation between the noise and the action space. Furthermore, our LNL-MDP fine tuning framework falls under the FineTuneRL theory with near-optimal guarantee. Leveraging these insights, we propose Latent Representation Bridging for Diffusion (LARBRID), an algorithm that efficiently learns the representation to optimize the initial distribution that steers the pre-trained model to act optimally in the environment. It yields up to 2-3$\times$ performance increases on challenging control problems across a diverse suite of robotic locomotion and manipulation tasks. Code can be found at: github.com/Maincode-Research/LARBRID.git.</p>
+            
+            <div class="card-action-bar">
+                <a href="http://arxiv.org/pdf/2611.07275v1" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
+                    View PDF
+                </a>
+                <a href="http://arxiv.org/abs/2611.07275v1" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
+                    arXiv Page &rarr;
+                </a>
+            </div>
+        </article>
+        
+        <article class="paper-card" data-title="kinematic hypothesis context: embodiment-conditioned learned video coding for bandwidth-limited robot policy uplinks" data-summary="robots increasingly run large vision-language-action policies on remote servers, making the camera uplink the bottleneck. existing video codecs spend bits on content the receiver could predict: the robot's own motion. we introduce the kinematic hypothesis context, a zero-rate conditioning signal that both ends build from joint states, the robot model and the camera calibration. ego-motion homographies, per-link robot reprojections, an end-effector plane and a background memory warp the previous reconstruction into hypotheses that condition a learned video codec. we prove that history-only and global-pose conditioning with a limited receptive field cannot access this information under large motion, and that coding gains become task gains at the policy's success cliff. on libero, the context saves 23.9% bit rate over a capacity-matched history-conditioned codec and 40-56% over x264, x265 and svt-av1, and needs 23.2% fewer bits than dcvc-rt at equal policy action deviation; trained to lower rates, it matches dcvc-rt in psnr. in closed loop at equal rate, openvla-oft success nearly doubles from 22.8% to 43.1% at 6 kbps (72.6% with lower-rate training, 23.6 points above dcvc-rt), pi_0.5 success rises from 55.5% to 77.4%, and the gain grows under packet loss. the context transfers across three codec hosts and to real robot data.">
+            <div class="card-meta-top">
+                <span class="rank-tag">TOP #2</span>
                 <div class="score-badge">
                     <span class="score-label">Priority Index</span>
                     <span class="score-value">135</span>
                 </div>
             </div>
             
-            <h2 class="paper-title">$A^3$-VLA: Automatic Perception-Guided Attention Alignment for Robot Manipulation</h2>
+            <h2 class="paper-title">Kinematic Hypothesis Context: Embodiment-Conditioned Learned Video Coding for Bandwidth-Limited Robot Policy Uplinks</h2>
             
             <div class="author-row">
-                <span>🗓️ 2026-11-04</span>
-                <span>✍️ Shengzhe Zhang, Qi Zhang, Dazhong Shen et al.</span>
+                <span>🗓️ 2026-11-05</span>
+                <span>✍️ Yuze Lu</span>
             </div>
             
             <div class="badge-cluster">
                 <span class="badge">#vision-language-action</span><span class="badge">#vla</span>
             </div>
             
-            <p class="paper-summary">Vision-Language-Action Models (VLAs) enable robots to perform manipulation tasks by leveraging Vision-Language Models (VLMs) to process visual observations and language instructions. However, the action prediction objective itself lacks fine-grained task-specific perceptual supervision, making it prone to relying on task-irrelevant visual shortcuts, leading attention away from target objects and key interaction areas, thereby limiting its operational performance and generalization ability. To address this, we propose Automatic Perception-Guided Attention Alignment for Robot Manipulation ($A^3$-VLA), a framework that derives task-specific visual guidance from the manipulation process itself. Specifically, $A^3$-VLA first generates heuristic candidate regions for target objects and the robot from interaction-induced visual changes, and refines them with a visual segmentation model offline. These regions serve as explicit perceptual guidance through two complementary objectives: an attention allocation loss that encourages sufficient focus on task-critical regions when language or robot state tokens query the visual input, and a contrastive learning loss that aligns the representations of candidate target regions with language instructions while separating them from task-irrelevant regions. Extensive experiments on simulated and real-world manipulation tasks demonstrate that $A^3$-VLA consistently improves multiple VLA backbones, with an average success rate gain of 6.5% - 25.2% across benchmarks.</p>
+            <p class="paper-summary">Robots increasingly run large vision-language-action policies on remote servers, making the camera uplink the bottleneck. Existing video codecs spend bits on content the receiver could predict: the robot's own motion. We introduce the kinematic hypothesis context, a zero-rate conditioning signal that both ends build from joint states, the robot model and the camera calibration. Ego-motion homographies, per-link robot reprojections, an end-effector plane and a background memory warp the previous reconstruction into hypotheses that condition a learned video codec. We prove that history-only and global-pose conditioning with a limited receptive field cannot access this information under large motion, and that coding gains become task gains at the policy's success cliff. On LIBERO, the context saves 23.9% bit rate over a capacity-matched history-conditioned codec and 40-56% over x264, x265 and SVT-AV1, and needs 23.2% fewer bits than DCVC-RT at equal policy action deviation; trained to lower rates, it matches DCVC-RT in PSNR. In closed loop at equal rate, OpenVLA-OFT success nearly doubles from 22.8% to 43.1% at 6 kbps (72.6% with lower-rate training, 23.6 points above DCVC-RT), pi_0.5 success rises from 55.5% to 77.4%, and the gain grows under packet loss. The context transfers across three codec hosts and to real robot data.</p>
             
             <div class="card-action-bar">
-                <a href="http://arxiv.org/pdf/2611.06447v1" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
+                <a href="http://arxiv.org/pdf/2611.07411v1" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
                     View PDF
                 </a>
-                <a href="http://arxiv.org/abs/2611.06447v1" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
+                <a href="http://arxiv.org/abs/2611.07411v1" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
                     arXiv Page &rarr;
                 </a>
             </div>
         </article>
         
-        <article class="paper-card" data-title="learning object-centric motion priors from human for robotic dexterous manipulation" data-summary="manipulating diverse objects with multi-fingered dexterous hands is challenging due to the high dimensionality and complex dynamics. human-object interaction (hoi) datasets provide rich knowledge about task information and embodied interactions. instead of solely imitating the human demonstrations, our method learns to holistically predict future hand-object states by leveraging these datasets. the predicted future states of the object can serve as a general-purpose reward term for reinforcement learning, reducing reliance on task-specific reward engineering and enhancing generalization across tasks. we conduct extensive experiments on three manipulation tasks in simulation and the real world. our approach outperforms existing sota methods in both success rate and generalizability on novel objects. furthermore, we validate the cross-embodiment compatibility of our methods by successfully deploying the skills on different robot hands.">
-            <div class="card-meta-top">
-                <span class="rank-tag">TOP #2</span>
-                <div class="score-badge">
-                    <span class="score-label">Priority Index</span>
-                    <span class="score-value">110</span>
-                </div>
-            </div>
-            
-            <h2 class="paper-title">Learning Object-Centric Motion Priors from Human for Robotic Dexterous Manipulation</h2>
-            
-            <div class="author-row">
-                <span>🗓️ 2026-11-04</span>
-                <span>✍️ Zhengdong Hong, Guofeng Zhang</span>
-            </div>
-            
-            <div class="badge-cluster">
-                <span class="badge">#reinforcement learning</span><span class="badge">#dexterous manipulation</span>
-            </div>
-            
-            <p class="paper-summary">Manipulating diverse objects with multi-fingered dexterous hands is challenging due to the high dimensionality and complex dynamics. Human-Object Interaction (HOI) datasets provide rich knowledge about task information and embodied interactions. Instead of solely imitating the human demonstrations, our method learns to holistically predict future hand-object states by leveraging these datasets. The predicted future states of the object can serve as a general-purpose reward term for reinforcement learning, reducing reliance on task-specific reward engineering and enhancing generalization across tasks. We conduct extensive experiments on three manipulation tasks in simulation and the real world. Our approach outperforms existing SOTA methods in both success rate and generalizability on novel objects. Furthermore, we validate the cross-embodiment compatibility of our methods by successfully deploying the skills on different robot hands.</p>
-            
-            <div class="card-action-bar">
-                <a href="http://arxiv.org/pdf/2611.05979v1" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
-                    View PDF
-                </a>
-                <a href="http://arxiv.org/abs/2611.05979v1" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
-                    arXiv Page &rarr;
-                </a>
-            </div>
-        </article>
-        
-        <article class="paper-card" data-title="can astra solve robomme without breaking the bank?" data-summary="robotic manipulation often requires remembering information that is no longer visible, such as an object's location before occlusion or the order of a demonstrated action sequence. a large vision-language planner can read this history, but calling it before every action chunk is slow and costly. we present a three-tier system for the robomme benchmark. gpt-6 astra (system 2) selects a grounded subtask from stored visual history, a $π_{0.5}$ vision-language-action policy (system 1) executes it, and a fine-tuned qwen3-vl-4b monitor (system 1.5) checks after each action chunk whether the subtask is finished. the instruction is kept until the monitor reports completion or a task-specific event occurs, while the policy keeps acting on new observations. on robomme, the system succeeds in 79.13% of episodes with an average of 3.63 astra calls and 80.84 seconds per episode. this is 34.62 points above the best published non-oracle baseline and 4.95 points below groundsg+oracle, which gives the low-level policy ground-truth subgoals.">
+        <article class="paper-card" data-title="perceptive humanoid motion from simulation" data-summary="humanoid robots have the potential to automate a wide range of physical tasks. progress toward generalist humanoid autonomy, however, remains constrained by a data bottleneck: mapping pixels and free-form language to low-level joint commands requires paired supervision, and no corpus of such data exists at sufficiently large scale. some approaches rely on human teleoperation and wearable capture devices, which require at least an hour of human time to produce an hour of data. we present halo, a humanoid autonomy system powered by a pipeline that synthesizes vision-language-motion data across a thousand procedurally generated homes. the corpus scales with compute rather than human labor. halo acquires a repertoire of physical skills, including sitting on chairs, navigating to named objects, stepping sideways through half-open doors, crouching and crawling beneath tables, and pushing boxes. it orchestrates these skills to solve composite, long-horizon tasks. without ever seeing a real home during training, halo transfers zero-shot to the physical world, achieving a 91% success rate across 360 trials in six unmapped real-world environments. see https://apple-aiml-research.github.io/ml-halo/ for code and videos.">
             <div class="card-meta-top">
                 <span class="rank-tag">TOP #3</span>
                 <div class="score-badge">
                     <span class="score-label">Priority Index</span>
-                    <span class="score-value">95</span>
+                    <span class="score-value">115</span>
                 </div>
             </div>
             
-            <h2 class="paper-title">Can Astra Solve RoboMME without Breaking the Bank?</h2>
+            <h2 class="paper-title">Perceptive Humanoid Motion from Simulation</h2>
             
             <div class="author-row">
                 <span>🗓️ 2026-11-04</span>
-                <span>✍️ Bingao Chen, Haoquan Fang, C. Karen Liu</span>
+                <span>✍️ Siyuan Hu, Abulikemu Abuduweili, Yue Meng et al.</span>
             </div>
             
             <div class="badge-cluster">
-                <span class="badge">#vision-language-action</span>
+                <span class="badge">#humanoid</span><span class="badge">#teleoperation</span>
             </div>
             
-            <p class="paper-summary">Robotic manipulation often requires remembering information that is no longer visible, such as an object's location before occlusion or the order of a demonstrated action sequence. A large vision-language planner can read this history, but calling it before every action chunk is slow and costly. We present a three-tier system for the RoboMME benchmark. GPT-6 Astra (System 2) selects a grounded subtask from stored visual history, a $π_{0.5}$ vision-language-action policy (System 1) executes it, and a fine-tuned Qwen3-VL-4B monitor (System 1.5) checks after each action chunk whether the subtask is finished. The instruction is kept until the monitor reports completion or a task-specific event occurs, while the policy keeps acting on new observations. On RoboMME, the system succeeds in 79.13% of episodes with an average of 3.63 Astra calls and 80.84 seconds per episode. This is 34.62 points above the best published non-oracle baseline and 4.95 points below GroundSG+Oracle, which gives the low-level policy ground-truth subgoals.</p>
+            <p class="paper-summary">Humanoid robots have the potential to automate a wide range of physical tasks. Progress toward generalist humanoid autonomy, however, remains constrained by a data bottleneck: mapping pixels and free-form language to low-level joint commands requires paired supervision, and no corpus of such data exists at sufficiently large scale. Some approaches rely on human teleoperation and wearable capture devices, which require at least an hour of human time to produce an hour of data. We present HALO, a humanoid autonomy system powered by a pipeline that synthesizes vision-language-motion data across a thousand procedurally generated homes. The corpus scales with compute rather than human labor. HALO acquires a repertoire of physical skills, including sitting on chairs, navigating to named objects, stepping sideways through half-open doors, crouching and crawling beneath tables, and pushing boxes. It orchestrates these skills to solve composite, long-horizon tasks. Without ever seeing a real home during training, HALO transfers zero-shot to the physical world, achieving a 91% success rate across 360 trials in six unmapped real-world environments. See https://apple-aiml-research.github.io/ml-halo/ for code and videos.</p>
             
             <div class="card-action-bar">
-                <a href="http://arxiv.org/pdf/2611.06184v1" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
+                <a href="http://arxiv.org/pdf/2611.06908v1" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
                     View PDF
                 </a>
-                <a href="http://arxiv.org/abs/2611.06184v1" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
+                <a href="http://arxiv.org/abs/2611.06908v1" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
                     arXiv Page &rarr;
                 </a>
             </div>
         </article>
         
-        <article class="paper-card" data-title="robots in the city: persona-based perceptions of urban robots" data-summary="pedestrians increasingly encounter robots in urban public spaces without interacting with them, but how robots change the perceived safety of a street remains unclear. we examine how robot presence and type affect perceived safety across urban contexts. we generate 18 images of seoul streets that vary in time of day, road class, and robot condition (no robot, a delivery robot, or a humanoid). two multimodal large language models (mllms), qwen3.8-27b and gemma4-26b, each conditioned on 500 synthetic personas, choose the safer image in each pair, and 25 human respondents complete the same task. both models prefer streets without robots and favor the delivery robot over the humanoid. robots are chosen more often at night and less often by older personas, whereas road class has smaller effects. in the model rationales, the delivery robot appears as a physical obstacle, whereas the humanoid appears as either a threat or a source of protection. like humans, both models chose robots more often at night, but chose the humanoid over the delivery robot far less often, and gemma showed a night effect for the humanoid about three times that of humans. these results show that the effect of a robot on perceived safety depends on when it appears, and that persona-conditioned mllms capture only part of human judgments.">
+        <article class="paper-card" data-title="crisp: constraint-resolved interactions between subsystems for predictive whole-body cooperation" data-summary="this paper presents a layered control framework that recasts high-dimensional system dynamics as a composition of dynamically interconnected subsystems, with dynamic dual-arm manipulation on the humanoid serving as a representative application. the humanoid is decomposed into a single rigid body (srb) representing the torso and floating-base dynamic models representing the articulated arms and lower-body. the rigid connections between arm and torso and the closed kinematic chain formed between the end-effectors during cooperative manipulation are represented as holonomic constraints. the corresponding lagrange multipliers parametrize the interaction wrenches transmitted at the shoulders and between the end-effectors. the high-level nonlinear model predictive control (nmpc) jointly optimizes the subsystem state trajectories, arm torques, ground reaction forces (grfs), and interaction wrenches, enabling online wrench design and optimization while preserving the dynamic coupling among the independently modeled subsystems. the optimized arm torques are applied directly for cooperative dual-arm manipulation, whereas the prescribed grfs are mapped to lower-body joint torque for whole-body coordination. we validate the proposed framework through numerical simulations and hardware experiments on a g1 humanoid robot. the results demonstrate optimal interaction wrenches consistent with simulated contact measurement, cooperative dual-arm trajectory tracking, and stable whole-body coordination while executing the nmpc in online manner.">
             <div class="card-meta-top">
                 <span class="rank-tag">TOP #4</span>
                 <div class="score-badge">
@@ -356,30 +356,30 @@
                 </div>
             </div>
             
-            <h2 class="paper-title">Robots in the City: Persona-Based Perceptions of Urban Robots</h2>
+            <h2 class="paper-title">CRISP: Constraint-Resolved Interactions between Subsystems for Predictive Whole-Body Cooperation</h2>
             
             <div class="author-row">
-                <span>🗓️ 2026-11-04</span>
-                <span>✍️ Keonhee Jang, Kanghoon Lee, Seokwoo Yun et al.</span>
+                <span>🗓️ 2026-11-05</span>
+                <span>✍️ Dario Valenzuela, Jeeseop Kim</span>
             </div>
             
             <div class="badge-cluster">
                 <span class="badge">#humanoid</span>
             </div>
             
-            <p class="paper-summary">Pedestrians increasingly encounter robots in urban public spaces without interacting with them, but how robots change the perceived safety of a street remains unclear. We examine how robot presence and type affect perceived safety across urban contexts. We generate 18 images of Seoul streets that vary in time of day, road class, and robot condition (no robot, a delivery robot, or a humanoid). Two multimodal large language models (MLLMs), Qwen3.8-27B and Gemma4-26B, each conditioned on 500 synthetic personas, choose the safer image in each pair, and 25 human respondents complete the same task. Both models prefer streets without robots and favor the delivery robot over the humanoid. Robots are chosen more often at night and less often by older personas, whereas road class has smaller effects. In the model rationales, the delivery robot appears as a physical obstacle, whereas the humanoid appears as either a threat or a source of protection. Like humans, both models chose robots more often at night, but chose the humanoid over the delivery robot far less often, and Gemma showed a night effect for the humanoid about three times that of humans. These results show that the effect of a robot on perceived safety depends on when it appears, and that persona-conditioned MLLMs capture only part of human judgments.</p>
+            <p class="paper-summary">This paper presents a layered control framework that recasts high-dimensional system dynamics as a composition of dynamically interconnected subsystems, with dynamic dual-arm manipulation on the humanoid serving as a representative application. The humanoid is decomposed into a single rigid body (SRB) representing the torso and floating-base dynamic models representing the articulated arms and lower-body. The rigid connections between arm and torso and the closed kinematic chain formed between the end-effectors during cooperative manipulation are represented as holonomic constraints. The corresponding Lagrange multipliers parametrize the interaction wrenches transmitted at the shoulders and between the end-effectors. The high-level nonlinear model predictive control (NMPC) jointly optimizes the subsystem state trajectories, arm torques, ground reaction forces (GRFs), and interaction wrenches, enabling online wrench design and optimization while preserving the dynamic coupling among the independently modeled subsystems. The optimized arm torques are applied directly for cooperative dual-arm manipulation, whereas the prescribed GRFs are mapped to lower-body joint torque for whole-body coordination. We validate the proposed framework through numerical simulations and hardware experiments on a G1 humanoid robot. The results demonstrate optimal interaction wrenches consistent with simulated contact measurement, cooperative dual-arm trajectory tracking, and stable whole-body coordination while executing the NMPC in online manner.</p>
             
             <div class="card-action-bar">
-                <a href="http://arxiv.org/pdf/2611.05954v1" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
+                <a href="http://arxiv.org/pdf/2611.07268v1" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
                     View PDF
                 </a>
-                <a href="http://arxiv.org/abs/2611.05954v1" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
+                <a href="http://arxiv.org/abs/2611.07268v1" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
                     arXiv Page &rarr;
                 </a>
             </div>
         </article>
         
-        <article class="paper-card" data-title="robocasa-mem: benchmarking environment and process memory in long-horizon mobile manipulation" data-summary="in the real world, mobile manipulation robots must perform complex object interactions and make multi-step decisions, often relying on task-relevant information that is no longer observable. however, existing benchmarks provide limited evaluation of such memory-dependent decision-making in mobile manipulation. to address this gap, we introduce robocasa-mem, a new benchmark comprising nine mobile manipulation tasks that require agents to use interaction history at key decision points. specifically, the tasks are grouped into two categories of memory: one is environment memory, which captures spatial locations, object attributes, and object relationships. the other is process memory, which captures single-task progress and multi-task scheduling. particularly, we introduce behavior-conditioned evaluation. for tasks with multiple valid execution paths, instead of fixing a single target or trajectory, the evaluator derives later task constraints from the robot's earlier actions. this allows us to evaluate whether later behavior is consistent with the robot's own interaction history while reducing shortcuts based on fixed target assignments. we provide 1,800 successful demonstrations for policy training. we also develop a baseline on our benchmark, namely hierarchical memory-augmented policy(hmap). its high-level planner uses structured entity and process memories to generate subtasks. its low-level vla controller uses subgoal-conditioned queries to incorporate vggt-omega geometry into action generation. together, robocasa-mem and hmap baseline support systematic evaluation of memory-dependent behavior and the development of memory-aware mobile manipulation policies.">
+        <article class="paper-card" data-title="curobov2-fast: fast torque-limited collision-free motion planning" data-summary="we present curobov2-fast, a gpu-accelerated planner that reduces both planning latency and execution time for collision-free, payload-aware, torque-limited motions. b-spline trajectory optimization reduces the required iterations, while accelerated robot computations and differentiable inverse dynamics reduce refinement cost and accommodate changing payloads. timeopt optimizes traversal speed along the fixed path under sampled velocity, acceleration, jerk, and torque constraints, exploiting local spline support to solve banded newton systems efficiently on the gpu. with a 3,kg payload, curobov2-fast achieves 4.4 ms mean planning time on rtx 5090, 14.7x faster than curobov2. our method on jetson agx orin plans faster than curobov1 + toppra on rtx 5090. a stereo-camera-based deployment on yam achieves 5.93 s mean completed pick-and-drop cycles, 34.6% shorter than curobov2. code (apache 2.0): www.github.com/nvlabs/curobo , project page: www.research.nvidia.com/labs/lpr/curobov2-fast .">
             <div class="card-meta-top">
                 <span class="rank-tag">TOP #5</span>
                 <div class="score-badge">
@@ -388,62 +388,62 @@
                 </div>
             </div>
             
-            <h2 class="paper-title">Robocasa-Mem: Benchmarking Environment and Process Memory in Long-Horizon Mobile Manipulation</h2>
+            <h2 class="paper-title">cuRoboV2-Fast: Fast Torque-Limited Collision-Free Motion Planning</h2>
             
             <div class="author-row">
                 <span>🗓️ 2026-11-04</span>
-                <span>✍️ Sihang Chen, Chen Ye, Wei Chen et al.</span>
+                <span>✍️ Balakumar Sundaralingam, Adithyavairavan Murali, Stan Birchfield</span>
             </div>
             
             <div class="badge-cluster">
                 <span class="badge">#vla</span>
             </div>
             
-            <p class="paper-summary">In the real world, mobile manipulation robots must perform complex object interactions and make multi-step decisions, often relying on task-relevant information that is no longer observable. However, existing benchmarks provide limited evaluation of such memory-dependent decision-making in mobile manipulation. To address this gap, we introduce RoboCasa-Mem, a new benchmark comprising nine mobile manipulation tasks that require agents to use interaction history at key decision points. Specifically, the tasks are grouped into two categories of memory: One is environment memory, which captures spatial locations, object attributes, and object relationships. The other is process memory, which captures single-task progress and multi-task scheduling. Particularly, we introduce Behavior-Conditioned Evaluation. For tasks with multiple valid execution paths, instead of fixing a single target or trajectory, the evaluator derives later task constraints from the robot's earlier actions. This allows us to evaluate whether later behavior is consistent with the robot's own interaction history while reducing shortcuts based on fixed target assignments. We provide 1,800 successful demonstrations for policy training. We also develop a baseline on our benchmark, namely Hierarchical Memory-Augmented Policy(HMAP). Its high-level planner uses structured entity and process memories to generate subtasks. Its low-level VLA controller uses subgoal-conditioned queries to incorporate VGGT-Omega geometry into action generation. Together, RoboCasa-Mem and HMAP baseline support systematic evaluation of memory-dependent behavior and the development of memory-aware mobile manipulation policies.</p>
+            <p class="paper-summary">We present cuRoboV2-Fast, a GPU-accelerated planner that reduces both planning latency and execution time for collision-free, payload-aware, torque-limited motions. B-spline trajectory optimization reduces the required iterations, while accelerated robot computations and differentiable inverse dynamics reduce refinement cost and accommodate changing payloads. TimeOpt optimizes traversal speed along the fixed path under sampled velocity, acceleration, jerk, and torque constraints, exploiting local spline support to solve banded Newton systems efficiently on the GPU. With a 3,kg payload, cuRoboV2-Fast achieves 4.4 ms mean planning time on RTX 5090, 14.7x faster than cuRoboV2. Our method on Jetson AGX Orin plans faster than cuRoboV1 + TOPPRA on RTX 5090. A stereo-camera-based deployment on YAM achieves 5.93 s mean completed pick-and-drop cycles, 34.6% shorter than cuRoboV2. Code (Apache 2.0): www.github.com/NVlabs/curobo , Project Page: www.research.nvidia.com/labs/lpr/curobov2-fast .</p>
             
             <div class="card-action-bar">
-                <a href="http://arxiv.org/pdf/2611.06475v1" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
+                <a href="http://arxiv.org/pdf/2611.06913v1" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
                     View PDF
                 </a>
-                <a href="http://arxiv.org/abs/2611.06475v1" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
+                <a href="http://arxiv.org/abs/2611.06913v1" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
                     arXiv Page &rarr;
                 </a>
             </div>
         </article>
         
-        <article class="paper-card" data-title="reactworld: structuring interaction responses for embodied video generation" data-summary="embodied video world models predict scene changes caused by robot actions, yet generated object responses may remain inconsistent with task intent and contact dynamics. critical responses in embodied scenes often concentrate in local regions and specific time intervals. inspired by chain-of-thought reasoning, we introduce reactworld, an embodied video generation model guided by structured interaction anticipation. in the generation backbone's feature space, an interaction response field predictor anticipates how the interaction will unfold, explicitly describing participant roles, future motion response intensity, and local motion changes. a response feedback adapter forms increments to object features from the difference between the object branch's outputs with predicted and zeroed local dynamics inputs. it also converts predicted displacements into positional biases for temporal attention. these two mechanisms guide object feature updates and information retrieval across frames, respectively. through interaction anticipation and generative feedback, reactworld achieves an average score of 77.51 on rbench, outperforming physisforcing by 3.29 points with improvements in all nine categories. on ezs-bench, it achieves a domain score of 86.98 and an average score of 81.87.">
+        <article class="paper-card" data-title="dynamic watermarking and action-conditioned latent dynamics for secure vision-based controllers" data-summary="replay attacks are difficult to detect in vision-based control systems because previously recorded observations can remain plausible while the physical system follows a different trajectory. this paper develops an adaptive dynamic-watermarking framework for detecting replay attacks against vision-based controllers. a private gaussian watermark is added to the nominal control input, and a control input-conditioned latent dynamics network (ldn) predicts the corresponding evolution in a compact latent space learned from image observations. attack evidence is obtained from the discrepancy between the predicted latent response and the latent representation of the received image observation. a reinforcement learning policy adjusts the watermark covariance using the latent state and detector confidence, thereby balancing attack detectability, watermark energy, and control distortion. a lagrangian penalty on task-specific safety costs is included during training to limit the adverse effect of the excitation. the framework is evaluated on a vision-guided ur5 manipulation task in which the robot reaches a target while avoiding a moving human arm under nominal and replay-attacked observations.">
             <div class="card-meta-top">
                 <span class="rank-tag">TOP #6</span>
                 <div class="score-badge">
                     <span class="score-label">Priority Index</span>
-                    <span class="score-value">90</span>
+                    <span class="score-value">80</span>
                 </div>
             </div>
             
-            <h2 class="paper-title">ReactWorld: Structuring Interaction Responses for Embodied Video Generation</h2>
+            <h2 class="paper-title">Dynamic Watermarking and Action-Conditioned Latent Dynamics for Secure Vision-Based Controllers</h2>
             
             <div class="author-row">
-                <span>🗓️ 2026-11-04</span>
-                <span>✍️ Hanwei Liu, Huijia Zhang, Hanzhang Wang et al.</span>
+                <span>🗓️ 2026-11-05</span>
+                <span>✍️ Aditya Parameshwaran, Navid Aftabi, Abhishek Hanchate et al.</span>
             </div>
             
             <div class="badge-cluster">
-                <span class="badge">#world model</span>
+                <span class="badge">#reinforcement learning</span>
             </div>
             
-            <p class="paper-summary">Embodied video world models predict scene changes caused by robot actions, yet generated object responses may remain inconsistent with task intent and contact dynamics. Critical responses in embodied scenes often concentrate in local regions and specific time intervals. Inspired by chain-of-thought reasoning, we introduce ReactWorld, an embodied video generation model guided by structured interaction anticipation. In the generation backbone's feature space, an interaction response field predictor anticipates how the interaction will unfold, explicitly describing participant roles, future motion response intensity, and local motion changes. A response feedback adapter forms increments to object features from the difference between the object branch's outputs with predicted and zeroed local dynamics inputs. It also converts predicted displacements into positional biases for temporal attention. These two mechanisms guide object feature updates and information retrieval across frames, respectively. Through interaction anticipation and generative feedback, ReactWorld achieves an average score of 77.51 on RBench, outperforming PhysisForcing by 3.29 points with improvements in all nine categories. On EZS-Bench, it achieves a Domain score of 86.98 and an average score of 81.87.</p>
+            <p class="paper-summary">Replay attacks are difficult to detect in vision-based control systems because previously recorded observations can remain plausible while the physical system follows a different trajectory. This paper develops an adaptive dynamic-watermarking framework for detecting replay attacks against vision-based controllers. A private Gaussian watermark is added to the nominal control input, and a control input-conditioned latent dynamics network (LDN) predicts the corresponding evolution in a compact latent space learned from image observations. Attack evidence is obtained from the discrepancy between the predicted latent response and the latent representation of the received image observation. A reinforcement learning policy adjusts the watermark covariance using the latent state and detector confidence, thereby balancing attack detectability, watermark energy, and control distortion. A Lagrangian penalty on task-specific safety costs is included during training to limit the adverse effect of the excitation. The framework is evaluated on a vision-guided UR5 manipulation task in which the robot reaches a target while avoiding a moving human arm under nominal and replay-attacked observations.</p>
             
             <div class="card-action-bar">
-                <a href="http://arxiv.org/pdf/2611.06120v1" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
+                <a href="http://arxiv.org/pdf/2611.07403v1" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
                     View PDF
                 </a>
-                <a href="http://arxiv.org/abs/2611.06120v1" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
+                <a href="http://arxiv.org/abs/2611.07403v1" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
                     arXiv Page &rarr;
                 </a>
             </div>
         </article>
         
-        <article class="paper-card" data-title="twinbridge: digital twin-driven policy and reward transfer for real-world reinforcement learning in laboratory robotics" data-summary="online reinforcement learning offers an effective approach to precise laboratory manipulation, yet costly real-world demonstrations and limited access to dense process rewards hinder its practical application. we present twinbridge, a digital twin-driven framework that supplies policy initialization and dense visual rewards for real-world online learning. we construct digital twins by combining 3d gaussian splatting with physics simulation. here, simulator states provide task events and geometric progress under physical prerequisites and ordering constraints, yielding rewards for policy pretraining with simulated demonstrations and reinforcement learning. we distill this supervision into a visual reward model. during real-world interaction, its predictions are combined with execution history to compute dense rewards for human-in-the-loop policy refinement. across five real-world laboratory tasks, twinbridge achieves a final mean autonomous success rate of 98% with at most 25 minutes of real-world interaction per task. experiments show that dense rewards improve interaction efficiency over sparse rewards, and simulation-based policy initialization further accelerates learning.">
+        <article class="paper-card" data-title="an empirical study of reinforcement learning for keypoint positioning of deformable linear objects" data-summary="deformable linear object (dlo) manipulation is challenging because high-dimensional configurations, nonlinear contact dynamics, and diverse material and geometric properties produce a broad range of object responses that are both difficult to model and data-intensive to learn. this work studies reinforcement learning for planar manipulation of a one-end-grasped dlo, focusing on training efficiency, observation design, robustness, and zero-shot sim-to-real transfer. we compare three proximal policy optimization training stacks and find that the gpu-parallel mujoco playground stack enables faster convergence and more consistent performance than cpu-based alternatives under the same wall-clock budget. relative keypoint observations and an asymmetric actor-critic formulation further improve learning efficiency. policies trained with observation noise, delay, domain randomization, and disturbances achieve simulation success rates of 96.4% for single-point tracking, 98.0% for disturbance recovery, and 88.8% for two-point tracking. using markerless rgb-d keypoint estimation, the policies transfer without real-world fine-tuning, succeeding in 9/10, 10/10, and 8/10 physical trials, respectively.">
             <div class="card-meta-top">
                 <span class="rank-tag">TOP #7</span>
                 <div class="score-badge">
@@ -452,30 +452,30 @@
                 </div>
             </div>
             
-            <h2 class="paper-title">TwinBridge: Digital Twin-Driven Policy and Reward Transfer for Real-World Reinforcement Learning in Laboratory Robotics</h2>
+            <h2 class="paper-title">An Empirical Study of Reinforcement Learning for Keypoint Positioning of Deformable Linear Objects</h2>
             
             <div class="author-row">
-                <span>🗓️ 2026-11-04</span>
-                <span>✍️ Shu'ang Sun, Yibo Qiu, Haoliang Ye et al.</span>
+                <span>🗓️ 2026-11-05</span>
+                <span>✍️ Vinay Rodrigues, Sara Zeynalpour, Gokhan Solak et al.</span>
             </div>
             
             <div class="badge-cluster">
                 <span class="badge">#reinforcement learning</span>
             </div>
             
-            <p class="paper-summary">Online reinforcement learning offers an effective approach to precise laboratory manipulation, yet costly real-world demonstrations and limited access to dense process rewards hinder its practical application. We present TwinBridge, a digital twin-driven framework that supplies policy initialization and dense visual rewards for real-world online learning. We construct digital twins by combining 3D Gaussian splatting with physics simulation. Here, simulator states provide task events and geometric progress under physical prerequisites and ordering constraints, yielding rewards for policy pretraining with simulated demonstrations and reinforcement learning. We distill this supervision into a visual reward model. During real-world interaction, its predictions are combined with execution history to compute dense rewards for human-in-the-loop policy refinement. Across five real-world laboratory tasks, TwinBridge achieves a final mean autonomous success rate of 98% with at most 25 minutes of real-world interaction per task. Experiments show that dense rewards improve interaction efficiency over sparse rewards, and simulation-based policy initialization further accelerates learning.</p>
+            <p class="paper-summary">Deformable linear object (DLO) manipulation is challenging because high-dimensional configurations, nonlinear contact dynamics, and diverse material and geometric properties produce a broad range of object responses that are both difficult to model and data-intensive to learn. This work studies reinforcement learning for planar manipulation of a one-end-grasped DLO, focusing on training efficiency, observation design, robustness, and zero-shot sim-to-real transfer. We compare three Proximal Policy Optimization training stacks and find that the GPU-parallel MuJoCo Playground stack enables faster convergence and more consistent performance than CPU-based alternatives under the same wall-clock budget. Relative keypoint observations and an asymmetric actor-critic formulation further improve learning efficiency. Policies trained with observation noise, delay, domain randomization, and disturbances achieve simulation success rates of 96.4% for single-point tracking, 98.0% for disturbance recovery, and 88.8% for two-point tracking. Using markerless RGB-D keypoint estimation, the policies transfer without real-world fine-tuning, succeeding in 9/10, 10/10, and 8/10 physical trials, respectively.</p>
             
             <div class="card-action-bar">
-                <a href="http://arxiv.org/pdf/2611.06442v1" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
+                <a href="http://arxiv.org/pdf/2611.07261v1" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
                     View PDF
                 </a>
-                <a href="http://arxiv.org/abs/2611.06442v1" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
+                <a href="http://arxiv.org/abs/2611.07261v1" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
                     arXiv Page &rarr;
                 </a>
             </div>
         </article>
         
-        <article class="paper-card" data-title="vortex-induced torque in grasping soft objects: influence of geometry and pneumatic parameters" data-summary="vortex grippers are commonly integrated into automated systems for handling objects with complex geometries in packaging, sorting, and assembling. however, their interaction with compliant objects remains difficult to predict, particularly with respect to the vortex-induced torque transmitted during grasping. this study investigates vortex-induced torque during the grasping of compliant objects and quantifies the coupled effects of supply pressure, tangential nozzle diameter, surface geometry, and curvature. the results show that increasing the tangential nozzle diameter primarily enhances the sensitivity of the generated torque to supply pressure rather than producing a uniformly higher torque. surface geometry also strongly influences the rotational interaction, with dome-concave surfaces generally producing substantially greater torque than corresponding dome-convex surfaces, whereas the difference between cylindrical concave and convex surfaces is comparatively small. the strongest and most repeatable response was observed for a dome-concave surface exhibiting favorable object-gripper geometric matching. among the evaluated machine-learning regression methods, gaussian process regression provided the best overall predictive performance under repeated cross-validation, demonstrating that vortex-induced torque can be estimated from combined pneumatic and geometric parameters. these findings provide a basis for predicting and utilizing vortex-induced torque in the dexterous manipulation of soft objects.">
+        <article class="paper-card" data-title="reinforcement learning enables scaling generalist robot policy improvement" data-summary="the introduction of generalist robot policies has enabled a single, large model to learn to perform a variety of tasks from a vast pre-training corpus. while these models often exhibit powerful zero-shot generalization capabilities, they typically require an adaptation phase to achieve sufficient performance in deployment. iterated self-improvement via reinforcement learning (rl) has demonstrated promise in enabling this adaptation, yet such approaches have been largely explored in single-task settings - where the goal is to simply improve on a narrow deployment task - which lies in stark contrast to the multi-task capabilities of the base policy. in this work we ask whether generalist robot policies are capable of multi-task, generalist improvement in deployment - targeting many diverse tasks simultaneously - and what algorithmic recipe enables this. to answer this question, we first develop a set of structured evaluations to test generalist improvement capabilities, and systematically evaluate algorithmic and practical design choices regarding value estimation, policy extraction and resource allocation. we show that not only can generalist policies be improved online across diverse tasks, but that the right recipe can enable generalization and increase performance on tasks not considered during online training. we characterize when this generalization occurs and show that both the training task distribution and the use of value-based rl are critical. to the best of our knowledge, this is among the first evidence for online generalist improvement for robot foundation models.">
             <div class="card-meta-top">
                 <span class="rank-tag">TOP #8</span>
                 <div class="score-badge">
@@ -484,24 +484,24 @@
                 </div>
             </div>
             
-            <h2 class="paper-title">Vortex-Induced Torque in Grasping Soft Objects: Influence of Geometry and Pneumatic Parameters</h2>
+            <h2 class="paper-title">Reinforcement Learning Enables Scaling Generalist Robot Policy Improvement</h2>
             
             <div class="author-row">
                 <span>🗓️ 2026-11-04</span>
-                <span>✍️ Roman Mykhailyshyn, Tomohiro Motoda, Ivan Virgala et al.</span>
+                <span>✍️ Michal Korniak, Marco Bagatella, Ralf Römer et al.</span>
             </div>
             
             <div class="badge-cluster">
-                <span class="badge">#dexterous manipulation</span>
+                <span class="badge">#reinforcement learning</span>
             </div>
             
-            <p class="paper-summary">Vortex grippers are commonly integrated into automated systems for handling objects with complex geometries in packaging, sorting, and assembling. However, their interaction with compliant objects remains difficult to predict, particularly with respect to the vortex-induced torque transmitted during grasping. This study investigates vortex-induced torque during the grasping of compliant objects and quantifies the coupled effects of supply pressure, tangential nozzle diameter, surface geometry, and curvature. The results show that increasing the tangential nozzle diameter primarily enhances the sensitivity of the generated torque to supply pressure rather than producing a uniformly higher torque. Surface geometry also strongly influences the rotational interaction, with dome-concave surfaces generally producing substantially greater torque than corresponding dome-convex surfaces, whereas the difference between cylindrical concave and convex surfaces is comparatively small. The strongest and most repeatable response was observed for a dome-concave surface exhibiting favorable object-gripper geometric matching. Among the evaluated machine-learning regression methods, Gaussian Process Regression provided the best overall predictive performance under repeated cross-validation, demonstrating that vortex-induced torque can be estimated from combined pneumatic and geometric parameters. These findings provide a basis for predicting and utilizing vortex-induced torque in the dexterous manipulation of soft objects.</p>
+            <p class="paper-summary">The introduction of generalist robot policies has enabled a single, large model to learn to perform a variety of tasks from a vast pre-training corpus. While these models often exhibit powerful zero-shot generalization capabilities, they typically require an adaptation phase to achieve sufficient performance in deployment. Iterated self-improvement via reinforcement learning (RL) has demonstrated promise in enabling this adaptation, yet such approaches have been largely explored in single-task settings - where the goal is to simply improve on a narrow deployment task - which lies in stark contrast to the multi-task capabilities of the base policy. In this work we ask whether generalist robot policies are capable of multi-task, generalist improvement in deployment - targeting many diverse tasks simultaneously - and what algorithmic recipe enables this. To answer this question, we first develop a set of structured evaluations to test generalist improvement capabilities, and systematically evaluate algorithmic and practical design choices regarding value estimation, policy extraction and resource allocation. We show that not only can generalist policies be improved online across diverse tasks, but that the right recipe can enable generalization and increase performance on tasks not considered during online training. We characterize when this generalization occurs and show that both the training task distribution and the use of value-based RL are critical. To the best of our knowledge, this is among the first evidence for online generalist improvement for robot foundation models.</p>
             
             <div class="card-action-bar">
-                <a href="http://arxiv.org/pdf/2611.06359v1" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
+                <a href="http://arxiv.org/pdf/2611.06905v1" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
                     View PDF
                 </a>
-                <a href="http://arxiv.org/abs/2611.06359v1" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
+                <a href="http://arxiv.org/abs/2611.06905v1" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
                     arXiv Page &rarr;
                 </a>
             </div>
