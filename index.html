@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Embodied AI & Robotics Intelligence Digest — November 06, 2026</title>
+    <title>Embodied AI & Robotics Intelligence Digest — November 07, 2026</title>
     <style>
         :root {
             --bg-base: #080c14;
@@ -242,7 +242,7 @@
         <header>
             <span class="pill-brand">Autonomous Research Intelligence</span>
             <h1>Embodied AI & Physical Frontier Briefing</h1>
-            <p class="subtitle">Compiled on November 06, 2026 • Ranked top 8 strategic breakthroughs out of incoming preprints.</p>
+            <p class="subtitle">Compiled on November 07, 2026 • Ranked top 8 strategic breakthroughs out of incoming preprints.</p>
             
             <div class="controls">
                 <input type="text" id="filterInput" class="search-box" placeholder="Filter papers by keywords (e.g. humanoid, tactile, diffusion)...">
@@ -251,39 +251,39 @@
 
         <main id="paperList">
             
-        <article class="paper-card" data-title="efficient diffusion policy fine tuning with latent noise representation bridging" data-summary="pre-trained diffusion and flow policies have emerged as powerful backbones for robotics, yet adapting them to novel data via reinforcement learning (rl) remains computationally expensive, sample inefficient and lacks theoretical guarantees. prior approaches that fine-tune the initial noise bypass costly backpropagation through time but struggle with the "noise aliasing" problem: there does not exista natural link between the noise space value and the action space value. this paper resolves these challenges by introducing the latent noise linear markov decision process (lnl-mdp). we derive the bridge equation for lnl-mdps which eliminates the noise aliasing problem by aligning values with a shared representation between the noise and the action space. furthermore, our lnl-mdp fine tuning framework falls under the finetunerl theory with near-optimal guarantee. leveraging these insights, we propose latent representation bridging for diffusion (larbrid), an algorithm that efficiently learns the representation to optimize the initial distribution that steers the pre-trained model to act optimally in the environment. it yields up to 2-3$\times$ performance increases on challenging control problems across a diverse suite of robotic locomotion and manipulation tasks. code can be found at: github.com/maincode-research/larbrid.git.">
+        <article class="paper-card" data-title="oopsierecover: learning transferable vla corrections from semantic interventions" data-summary="vision-language-action (vla) models can perform a wide range of robotic manipulation tasks, but often fail during deployment. teaching them to recover from these failures requires substantial corrective data: existing approaches learn to recover from failures by directly associating corrective actions with the observations in which they were demonstrated. for instance, dagger-like fine-tuning can require tens to hundreds of interactions, yet the resulting policy may still fail to generalize the learned corrections beyond the demonstrated scenarios. we hypothesize that semantics can capture the underlying reasons for failures and their corrections, enabling policies to learn from only a handful of corrective demonstrations and generalize those corrections to novel objects, and scene variations. we propose oopsierecover, a framework that uses abduction to infer the intent behind a small set of corrective demonstrations and encodes the inferred knowledge as dense spatial representations and conditional costs. these costs capture when a behavior is undesirable and steer the policy toward more desirable action regions. we experiment across 6 tasks and variations in object poses, scenes, and related tasks, and find that only a handful of corrective demonstrations can enable a vla to overcome failures across a broad range of novel situations, without requiring new corrective data for each variation. please refer to https://robin-lab.cs.utexas.edu/oopsierecover for videos.">
             <div class="card-meta-top">
                 <span class="rank-tag">TOP #1</span>
                 <div class="score-badge">
                     <span class="score-label">Priority Index</span>
-                    <span class="score-value">140</span>
+                    <span class="score-value">135</span>
                 </div>
             </div>
             
-            <h2 class="paper-title">Efficient Diffusion Policy Fine Tuning with Latent Noise Representation Bridging</h2>
+            <h2 class="paper-title">OopsieRecover: Learning Transferable VLA Corrections from Semantic Interventions</h2>
             
             <div class="author-row">
                 <span>🗓️ 2026-11-05</span>
-                <span>✍️ Yuanchu Liang, Yue Yang, An-Chi He et al.</span>
+                <span>✍️ Arpit Bahety, Skand Peri, Sriniket Ambatipudi et al.</span>
             </div>
             
             <div class="badge-cluster">
-                <span class="badge">#reinforcement learning</span><span class="badge">#locomotion</span><span class="badge">#diffusion policy</span>
+                <span class="badge">#vision-language-action</span><span class="badge">#vla</span>
             </div>
             
-            <p class="paper-summary">Pre-trained diffusion and flow policies have emerged as powerful backbones for robotics, yet adapting them to novel data via reinforcement learning (RL) remains computationally expensive, sample inefficient and lacks theoretical guarantees. Prior approaches that fine-tune the initial noise bypass costly backpropagation through time but struggle with the "noise aliasing" problem: there does not exista natural link between the noise space value and the action space value. This paper resolves these challenges by introducing the Latent Noise Linear Markov Decision Process (LNL-MDP). We derive the Bridge Equation for LNL-MDPs which eliminates the noise aliasing problem by aligning values with a shared representation between the noise and the action space. Furthermore, our LNL-MDP fine tuning framework falls under the FineTuneRL theory with near-optimal guarantee. Leveraging these insights, we propose Latent Representation Bridging for Diffusion (LARBRID), an algorithm that efficiently learns the representation to optimize the initial distribution that steers the pre-trained model to act optimally in the environment. It yields up to 2-3$\times$ performance increases on challenging control problems across a diverse suite of robotic locomotion and manipulation tasks. Code can be found at: github.com/Maincode-Research/LARBRID.git.</p>
+            <p class="paper-summary">Vision-Language-Action (VLA) models can perform a wide range of robotic manipulation tasks, but often fail during deployment. Teaching them to recover from these failures requires substantial corrective data: existing approaches learn to recover from failures by directly associating corrective actions with the observations in which they were demonstrated. For instance, DAgger-like fine-tuning can require tens to hundreds of interactions, yet the resulting policy may still fail to generalize the learned corrections beyond the demonstrated scenarios. We hypothesize that semantics can capture the underlying reasons for failures and their corrections, enabling policies to learn from only a handful of corrective demonstrations and generalize those corrections to novel objects, and scene variations. We propose OopsieRecover, a framework that uses abduction to infer the intent behind a small set of corrective demonstrations and encodes the inferred knowledge as dense spatial representations and conditional costs. These costs capture when a behavior is undesirable and steer the policy toward more desirable action regions. We experiment across 6 tasks and variations in object poses, scenes, and related tasks, and find that only a handful of corrective demonstrations can enable a VLA to overcome failures across a broad range of novel situations, without requiring new corrective data for each variation. Please refer to https://robin-lab.cs.utexas.edu/oopsierecover for videos.</p>
             
             <div class="card-action-bar">
-                <a href="http://arxiv.org/pdf/2611.07275v1" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
+                <a href="http://arxiv.org/pdf/2611.08462v1" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
                     View PDF
                 </a>
-                <a href="http://arxiv.org/abs/2611.07275v1" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
+                <a href="http://arxiv.org/abs/2611.08462v1" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
                     arXiv Page &rarr;
                 </a>
             </div>
         </article>
         
-        <article class="paper-card" data-title="kinematic hypothesis context: embodiment-conditioned learned video coding for bandwidth-limited robot policy uplinks" data-summary="robots increasingly run large vision-language-action policies on remote servers, making the camera uplink the bottleneck. existing video codecs spend bits on content the receiver could predict: the robot's own motion. we introduce the kinematic hypothesis context, a zero-rate conditioning signal that both ends build from joint states, the robot model and the camera calibration. ego-motion homographies, per-link robot reprojections, an end-effector plane and a background memory warp the previous reconstruction into hypotheses that condition a learned video codec. we prove that history-only and global-pose conditioning with a limited receptive field cannot access this information under large motion, and that coding gains become task gains at the policy's success cliff. on libero, the context saves 23.9% bit rate over a capacity-matched history-conditioned codec and 40-56% over x264, x265 and svt-av1, and needs 23.2% fewer bits than dcvc-rt at equal policy action deviation; trained to lower rates, it matches dcvc-rt in psnr. in closed loop at equal rate, openvla-oft success nearly doubles from 22.8% to 43.1% at 6 kbps (72.6% with lower-rate training, 23.6 points above dcvc-rt), pi_0.5 success rises from 55.5% to 77.4%, and the gain grows under packet loss. the context transfers across three codec hosts and to real robot data.">
+        <article class="paper-card" data-title="failure prediction and classification in vision-language-action models via calibrated latent probing" data-summary="vision-language-action models (vlas) enable general-purpose embodied intelligence, but their performance is brittle under distribution shift, where unanticipated failures can damage equipment or endanger people. deploying vlas in real-world systems therefore requires a runtime monitor that is timely, calibrated, and informative while being efficient enough to run on the edge. existing methods fail to fulfill these requirements. we present vla-tug, a lightweight probe over the latent layers of a vla backbone that improves early failure detection and bounds the missed-detection and false-alarm rates, with minimal inference overhead. we show that supervising on the pre-failure segment of a trajectory increases early failure detection at matched false-positive rates by up to 30% over the strongest learned baseline. under shift to unseen tasks, the bounds on missed-detection and false-alarm rates remain valid in up to 86% of runs, versus at most 21% for baselines. unlike existing methods, vla-tug predicts the failure mode to enable corrective actions, raising top-3 accuracy on unseen tasks by up to 44% over a majority baseline. vla-tug enables real-time monitoring where the well-timed and informative probe supports lightweight steering that improves task success. we release a dataset of 3,180 annotated manipulation episodes to support future work on latent failure detection in vlas at https://vla-tug.github.io.">
             <div class="card-meta-top">
                 <span class="rank-tag">TOP #2</span>
                 <div class="score-badge">
@@ -292,190 +292,190 @@
                 </div>
             </div>
             
-            <h2 class="paper-title">Kinematic Hypothesis Context: Embodiment-Conditioned Learned Video Coding for Bandwidth-Limited Robot Policy Uplinks</h2>
+            <h2 class="paper-title">Failure Prediction and Classification in Vision-Language-Action Models Via Calibrated Latent Probing</h2>
             
             <div class="author-row">
                 <span>🗓️ 2026-11-05</span>
-                <span>✍️ Yuze Lu</span>
+                <span>✍️ Michal P. Podolinsky, Yunhao Yang, Daniel Little et al.</span>
             </div>
             
             <div class="badge-cluster">
                 <span class="badge">#vision-language-action</span><span class="badge">#vla</span>
             </div>
             
-            <p class="paper-summary">Robots increasingly run large vision-language-action policies on remote servers, making the camera uplink the bottleneck. Existing video codecs spend bits on content the receiver could predict: the robot's own motion. We introduce the kinematic hypothesis context, a zero-rate conditioning signal that both ends build from joint states, the robot model and the camera calibration. Ego-motion homographies, per-link robot reprojections, an end-effector plane and a background memory warp the previous reconstruction into hypotheses that condition a learned video codec. We prove that history-only and global-pose conditioning with a limited receptive field cannot access this information under large motion, and that coding gains become task gains at the policy's success cliff. On LIBERO, the context saves 23.9% bit rate over a capacity-matched history-conditioned codec and 40-56% over x264, x265 and SVT-AV1, and needs 23.2% fewer bits than DCVC-RT at equal policy action deviation; trained to lower rates, it matches DCVC-RT in PSNR. In closed loop at equal rate, OpenVLA-OFT success nearly doubles from 22.8% to 43.1% at 6 kbps (72.6% with lower-rate training, 23.6 points above DCVC-RT), pi_0.5 success rises from 55.5% to 77.4%, and the gain grows under packet loss. The context transfers across three codec hosts and to real robot data.</p>
+            <p class="paper-summary">Vision-Language-Action models (VLAs) enable general-purpose embodied intelligence, but their performance is brittle under distribution shift, where unanticipated failures can damage equipment or endanger people. Deploying VLAs in real-world systems therefore requires a runtime monitor that is timely, calibrated, and informative while being efficient enough to run on the edge. Existing methods fail to fulfill these requirements. We present VLA-Tug, a lightweight probe over the latent layers of a VLA backbone that improves early failure detection and bounds the missed-detection and false-alarm rates, with minimal inference overhead. We show that supervising on the pre-failure segment of a trajectory increases early failure detection at matched false-positive rates by up to 30% over the strongest learned baseline. Under shift to unseen tasks, the bounds on missed-detection and false-alarm rates remain valid in up to 86% of runs, versus at most 21% for baselines. Unlike existing methods, VLA-Tug predicts the failure mode to enable corrective actions, raising top-3 accuracy on unseen tasks by up to 44% over a majority baseline. VLA-Tug enables real-time monitoring where the well-timed and informative probe supports lightweight steering that improves task success. We release a dataset of 3,180 annotated manipulation episodes to support future work on latent failure detection in VLAs at https://vla-tug.github.io.</p>
             
             <div class="card-action-bar">
-                <a href="http://arxiv.org/pdf/2611.07411v1" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
+                <a href="http://arxiv.org/pdf/2611.08425v1" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
                     View PDF
                 </a>
-                <a href="http://arxiv.org/abs/2611.07411v1" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
+                <a href="http://arxiv.org/abs/2611.08425v1" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
                     arXiv Page &rarr;
                 </a>
             </div>
         </article>
         
-        <article class="paper-card" data-title="perceptive humanoid motion from simulation" data-summary="humanoid robots have the potential to automate a wide range of physical tasks. progress toward generalist humanoid autonomy, however, remains constrained by a data bottleneck: mapping pixels and free-form language to low-level joint commands requires paired supervision, and no corpus of such data exists at sufficiently large scale. some approaches rely on human teleoperation and wearable capture devices, which require at least an hour of human time to produce an hour of data. we present halo, a humanoid autonomy system powered by a pipeline that synthesizes vision-language-motion data across a thousand procedurally generated homes. the corpus scales with compute rather than human labor. halo acquires a repertoire of physical skills, including sitting on chairs, navigating to named objects, stepping sideways through half-open doors, crouching and crawling beneath tables, and pushing boxes. it orchestrates these skills to solve composite, long-horizon tasks. without ever seeing a real home during training, halo transfers zero-shot to the physical world, achieving a 91% success rate across 360 trials in six unmapped real-world environments. see https://apple-aiml-research.github.io/ml-halo/ for code and videos.">
+        <article class="paper-card" data-title="t3r: training-free two-stage token refinement towards efficient and robust vla models" data-summary="vision-language-action (vla) models enable end-to-end robot control, but inference is increasingly expensive. each decision processes hundreds of visual tokens, often across multiple cameras, leading to substantial computation while allowing irrelevant background content to distract action prediction under distribution shift. we argue that these issues stem from two complementary forms of redundancy: many visual tokens are spatially irrelevant, while attention over the remaining tokens is often misallocated. based on this observation, we propose t3r, a training-free two-stage token refinement framework. in the first stage, segmentation-guided token pruning removes irrelevant visual patches to reduce computation and eliminate distracting context. in the second stage, saliency-guided attention biasing reallocates attention toward action-critical visual regions and language instructions within the retained tokens. together, pruning produces a cleaner candidate set, while attention biasing further emphasizes the most decision-relevant evidence, yielding a better accuracy-efficiency frontier than either stage alone. on libero-spatial, t3r removes 85% of scene-camera visual tokens while essentially matching the unpruned success rate, and improves success by up to 7 percentage points under out-of-distribution object-placement perturbations. the timing comparison attributes 7.8 ms per inference call to pruning and attention-bias application. as input resolution increases, llm-forward profiling shows up to a 3.3x speedup over the unpruned baseline. evaluations across libero, simpler, and robotwin with three vla backbones show the strongest accuracy-efficiency benefits in multi-camera settings. these results demonstrate that training-free token refinement is a practical approach to efficient and robust vla inference.">
             <div class="card-meta-top">
                 <span class="rank-tag">TOP #3</span>
                 <div class="score-badge">
                     <span class="score-label">Priority Index</span>
-                    <span class="score-value">115</span>
+                    <span class="score-value">135</span>
                 </div>
             </div>
             
-            <h2 class="paper-title">Perceptive Humanoid Motion from Simulation</h2>
+            <h2 class="paper-title">T3R: Training-Free Two-Stage Token Refinement Towards Efficient and Robust VLA Models</h2>
             
             <div class="author-row">
-                <span>🗓️ 2026-11-04</span>
-                <span>✍️ Siyuan Hu, Abulikemu Abuduweili, Yue Meng et al.</span>
+                <span>🗓️ 2026-11-05</span>
+                <span>✍️ Mohammed Hassan, Zhenyang Chen, Zheng Wang et al.</span>
             </div>
             
             <div class="badge-cluster">
-                <span class="badge">#humanoid</span><span class="badge">#teleoperation</span>
+                <span class="badge">#vision-language-action</span><span class="badge">#vla</span>
             </div>
             
-            <p class="paper-summary">Humanoid robots have the potential to automate a wide range of physical tasks. Progress toward generalist humanoid autonomy, however, remains constrained by a data bottleneck: mapping pixels and free-form language to low-level joint commands requires paired supervision, and no corpus of such data exists at sufficiently large scale. Some approaches rely on human teleoperation and wearable capture devices, which require at least an hour of human time to produce an hour of data. We present HALO, a humanoid autonomy system powered by a pipeline that synthesizes vision-language-motion data across a thousand procedurally generated homes. The corpus scales with compute rather than human labor. HALO acquires a repertoire of physical skills, including sitting on chairs, navigating to named objects, stepping sideways through half-open doors, crouching and crawling beneath tables, and pushing boxes. It orchestrates these skills to solve composite, long-horizon tasks. Without ever seeing a real home during training, HALO transfers zero-shot to the physical world, achieving a 91% success rate across 360 trials in six unmapped real-world environments. See https://apple-aiml-research.github.io/ml-halo/ for code and videos.</p>
+            <p class="paper-summary">Vision-Language-Action (VLA) models enable end-to-end robot control, but inference is increasingly expensive. Each decision processes hundreds of visual tokens, often across multiple cameras, leading to substantial computation while allowing irrelevant background content to distract action prediction under distribution shift. We argue that these issues stem from two complementary forms of redundancy: many visual tokens are spatially irrelevant, while attention over the remaining tokens is often misallocated. Based on this observation, we propose T3R, a Training-Free Two-Stage Token Refinement framework. In the first stage, segmentation-guided token pruning removes irrelevant visual patches to reduce computation and eliminate distracting context. In the second stage, saliency-guided attention biasing reallocates attention toward action-critical visual regions and language instructions within the retained tokens. Together, pruning produces a cleaner candidate set, while attention biasing further emphasizes the most decision-relevant evidence, yielding a better accuracy-efficiency frontier than either stage alone. On LIBERO-Spatial, T3R removes 85% of scene-camera visual tokens while essentially matching the unpruned success rate, and improves success by up to 7 percentage points under out-of-distribution object-placement perturbations. The timing comparison attributes 7.8 ms per inference call to pruning and attention-bias application. As input resolution increases, LLM-forward profiling shows up to a 3.3x speedup over the unpruned baseline. Evaluations across LIBERO, SIMPLER, and RoboTwin with three VLA backbones show the strongest accuracy-efficiency benefits in multi-camera settings. These results demonstrate that training-free token refinement is a practical approach to efficient and robust VLA inference.</p>
             
             <div class="card-action-bar">
-                <a href="http://arxiv.org/pdf/2611.06908v1" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
+                <a href="http://arxiv.org/pdf/2611.08413v1" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
                     View PDF
                 </a>
-                <a href="http://arxiv.org/abs/2611.06908v1" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
+                <a href="http://arxiv.org/abs/2611.08413v1" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
                     arXiv Page &rarr;
                 </a>
             </div>
         </article>
         
-        <article class="paper-card" data-title="crisp: constraint-resolved interactions between subsystems for predictive whole-body cooperation" data-summary="this paper presents a layered control framework that recasts high-dimensional system dynamics as a composition of dynamically interconnected subsystems, with dynamic dual-arm manipulation on the humanoid serving as a representative application. the humanoid is decomposed into a single rigid body (srb) representing the torso and floating-base dynamic models representing the articulated arms and lower-body. the rigid connections between arm and torso and the closed kinematic chain formed between the end-effectors during cooperative manipulation are represented as holonomic constraints. the corresponding lagrange multipliers parametrize the interaction wrenches transmitted at the shoulders and between the end-effectors. the high-level nonlinear model predictive control (nmpc) jointly optimizes the subsystem state trajectories, arm torques, ground reaction forces (grfs), and interaction wrenches, enabling online wrench design and optimization while preserving the dynamic coupling among the independently modeled subsystems. the optimized arm torques are applied directly for cooperative dual-arm manipulation, whereas the prescribed grfs are mapped to lower-body joint torque for whole-body coordination. we validate the proposed framework through numerical simulations and hardware experiments on a g1 humanoid robot. the results demonstrate optimal interaction wrenches consistent with simulated contact measurement, cooperative dual-arm trajectory tracking, and stable whole-body coordination while executing the nmpc in online manner.">
+        <article class="paper-card" data-title="sla: scaling spatial-language-action model via continual pre-training" data-summary="reliable robotic manipulation requires both semantic understanding and precise control in three-dimensional space. however, vision-language-action (vla) foundations largely inherit visual representations from 2d vision-language pre-training, while spatial supervision is often introduced only during task-specific adaptation. developing spatial understanding as a transferable foundation-model capability therefore calls for learning from broader robot experience. we present sla, a spatial-language-action model that scales implicit spatial alignment to continual pre-training and maintains it during downstream post-training. initialized from a pretrained pi05 policy, sla jointly optimizes action prediction and alignment between intermediate visual embeddings and spatial representations from a frozen 3d perception model. we curate and unify heterogeneous robot datasets to support spatial learning across diverse embodiments, tasks, and scenes. to accommodate this diversity, we introduce feature-dependent gates that adaptively aggregate visual embeddings from multiple vla layers for spatial supervision. the teacher further exploits partially available depth and camera calibration alongside rgb observations, enabling effective use of heterogeneous geometric annotations. probabilistic state dropout encourages reliance on visual cues and mitigates overfitting to demonstration trajectories. all auxiliary components are used only during training, allowing direct reuse of pretrained vla weights and preserving the original inference architecture.">
             <div class="card-meta-top">
                 <span class="rank-tag">TOP #4</span>
+                <div class="score-badge">
+                    <span class="score-label">Priority Index</span>
+                    <span class="score-value">135</span>
+                </div>
+            </div>
+            
+            <h2 class="paper-title">SLA: Scaling Spatial-Language-Action Model via Continual Pre-training</h2>
+            
+            <div class="author-row">
+                <span>🗓️ 2026-11-05</span>
+                <span>✍️ Fuhao Li, Wenxuan Song, Qizhou Huang et al.</span>
+            </div>
+            
+            <div class="badge-cluster">
+                <span class="badge">#vision-language-action</span><span class="badge">#vla</span>
+            </div>
+            
+            <p class="paper-summary">Reliable robotic manipulation requires both semantic understanding and precise control in three-dimensional space. However, vision-language-action (VLA) foundations largely inherit visual representations from 2D vision-language pre-training, while spatial supervision is often introduced only during task-specific adaptation. Developing spatial understanding as a transferable foundation-model capability therefore calls for learning from broader robot experience. We present SLA, a Spatial-Language-Action Model that scales implicit spatial alignment to continual pre-training and maintains it during downstream post-training. Initialized from a pretrained pi05 policy, SLA jointly optimizes action prediction and alignment between intermediate visual embeddings and spatial representations from a frozen 3D perception model. We curate and unify heterogeneous robot datasets to support spatial learning across diverse embodiments, tasks, and scenes. To accommodate this diversity, we introduce feature-dependent gates that adaptively aggregate visual embeddings from multiple VLA layers for spatial supervision. The teacher further exploits partially available depth and camera calibration alongside RGB observations, enabling effective use of heterogeneous geometric annotations. Probabilistic state dropout encourages reliance on visual cues and mitigates overfitting to demonstration trajectories. All auxiliary components are used only during training, allowing direct reuse of pretrained VLA weights and preserving the original inference architecture.</p>
+            
+            <div class="card-action-bar">
+                <a href="http://arxiv.org/pdf/2611.08373v1" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
+                    View PDF
+                </a>
+                <a href="http://arxiv.org/abs/2611.08373v1" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
+                    arXiv Page &rarr;
+                </a>
+            </div>
+        </article>
+        
+        <article class="paper-card" data-title="latent rl priors for data-efficient dexterous manipulation" data-summary="learning dexterous manipulation from limited visual demonstrations is challenging because policies must acquire both perceptual grounding and precise control, while reinforcement learning (rl) in simulation can acquire rich control behaviors from large-scale interaction with privileged information. we introduce \textbf{latent rl prior}, a two-stage framework that reuses this control knowledge for data-efficient visual policy learning. during privileged pretraining, we distill large-scale rl rollouts into a flow-matching action decoder conditioned on proprioception and latent task context. during visual adaptation, we freeze the decoder and learn a visual interface that maps images to its latent context using action supervision alone, without privileged labels or latent targets. the same decoder can further be shared across arms by learning coordinated visual contexts for bimanual manipulation. across three simulated tasks, our method outperforms full-parameter fine-tuning of $π_{0.5}$ and gr00t n1.7 in the low-data regime; on door lifting and bimanual assembly, it surpasses full-data baselines using $10\times$ and $5\times$ fewer demonstrations, respectively. further analysis shows that direct visual-to-latent conditioning improves adaptation performance and training stability over routing visual predictions through the pretrained state encoder. robustness to unseen mass variation and greater linear accessibility of contact-force information in decoder representations further provide evidence of retained rl-acquired control knowledge. project website: https://yixiaowang7.github.io/latent-rl-prior-page/.">
+            <div class="card-meta-top">
+                <span class="rank-tag">TOP #5</span>
+                <div class="score-badge">
+                    <span class="score-label">Priority Index</span>
+                    <span class="score-value">110</span>
+                </div>
+            </div>
+            
+            <h2 class="paper-title">Latent RL Priors for Data-Efficient Dexterous Manipulation</h2>
+            
+            <div class="author-row">
+                <span>🗓️ 2026-11-05</span>
+                <span>✍️ Yixiao Wang, Peiyi Chen, Mustafa Mukadam et al.</span>
+            </div>
+            
+            <div class="badge-cluster">
+                <span class="badge">#reinforcement learning</span><span class="badge">#dexterous manipulation</span>
+            </div>
+            
+            <p class="paper-summary">Learning dexterous manipulation from limited visual demonstrations is challenging because policies must acquire both perceptual grounding and precise control, while reinforcement learning (RL) in simulation can acquire rich control behaviors from large-scale interaction with privileged information. We introduce \textbf{Latent RL Prior}, a two-stage framework that reuses this control knowledge for data-efficient visual policy learning. During privileged pretraining, we distill large-scale RL rollouts into a flow-matching action decoder conditioned on proprioception and latent task context. During visual adaptation, we freeze the decoder and learn a visual interface that maps images to its latent context using action supervision alone, without privileged labels or latent targets. The same decoder can further be shared across arms by learning coordinated visual contexts for bimanual manipulation. Across three simulated tasks, our method outperforms full-parameter fine-tuning of $π_{0.5}$ and GR00T N1.7 in the low-data regime; on door lifting and bimanual assembly, it surpasses full-data baselines using $10\times$ and $5\times$ fewer demonstrations, respectively. Further analysis shows that direct visual-to-latent conditioning improves adaptation performance and training stability over routing visual predictions through the pretrained state encoder. Robustness to unseen mass variation and greater linear accessibility of contact-force information in decoder representations further provide evidence of retained RL-acquired control knowledge. Project website: https://yixiaowang7.github.io/latent-rl-prior-page/.</p>
+            
+            <div class="card-action-bar">
+                <a href="http://arxiv.org/pdf/2611.08458v1" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
+                    View PDF
+                </a>
+                <a href="http://arxiv.org/abs/2611.08458v1" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
+                    arXiv Page &rarr;
+                </a>
+            </div>
+        </article>
+        
+        <article class="paper-card" data-title="gpwm: modeling the world as 3d particle motion" data-summary="we introduce gpwm, a generative particle world model that predicts how 3d scenes evolve by generating the motion of particles and rigid bodies over time. unlike video world models that generate scene appearance, gpwm operates directly in 3d physical space. a single representation and architecture cover rigid, deformable, cloth, and granular materials, in both passive physics and robotic interaction. gpwm is an object-aware multi-resolution transformer that combines flow matching with diffusion forcing to generate coherent physical trajectories far beyond its training horizon. we train and evaluate gpwm on particleworlds, a 25.5-million-frame corpus spanning diverse geometries, materials, interactions, and robot embodiments. gpwm outperforms the best prior learned-dynamics baseline in each of six physical domains, reducing prediction error by 31% on average. breaking from the domain-specific setting of prior methods, a single unified gpwm models these heterogeneous regimes with one set of weights, largely outperforming per-domain baselines and even surpassing our own specialist models in two domains. gpwm further generalizes to unseen geometries, physical properties, object counts, and rollout horizons. beyond prediction, gpwm enables contact-rich planning by learning a generative prior over joint actuator-object motion. instead of searching over unconstrained actions, planning searches the model's latent noise for interactions that achieve a desired object-space goal. with the same world model, noise-space planning substantially outperforms action-space search on pushing and picking, where complex contact sequences are hard to discover. executed open-loop in simulation, the resulting plans achieve goal-directed manipulation without reference action trajectories or goal-specific policies.">
+            <div class="card-meta-top">
+                <span class="rank-tag">TOP #6</span>
+                <div class="score-badge">
+                    <span class="score-label">Priority Index</span>
+                    <span class="score-value">110</span>
+                </div>
+            </div>
+            
+            <h2 class="paper-title">GPWM: Modeling the World as 3D Particle Motion</h2>
+            
+            <div class="author-row">
+                <span>🗓️ 2026-11-05</span>
+                <span>✍️ Robert Ren, Matthew Bronars, He Zhu et al.</span>
+            </div>
+            
+            <div class="badge-cluster">
+                <span class="badge">#world model</span><span class="badge">#actuator</span>
+            </div>
+            
+            <p class="paper-summary">We introduce GPWM, a Generative Particle World Model that predicts how 3D scenes evolve by generating the motion of particles and rigid bodies over time. Unlike video world models that generate scene appearance, GPWM operates directly in 3D physical space. A single representation and architecture cover rigid, deformable, cloth, and granular materials, in both passive physics and robotic interaction. GPWM is an object-aware multi-resolution transformer that combines flow matching with diffusion forcing to generate coherent physical trajectories far beyond its training horizon. We train and evaluate GPWM on ParticleWorlds, a 25.5-million-frame corpus spanning diverse geometries, materials, interactions, and robot embodiments. GPWM outperforms the best prior learned-dynamics baseline in each of six physical domains, reducing prediction error by 31% on average. Breaking from the domain-specific setting of prior methods, a single Unified GPWM models these heterogeneous regimes with one set of weights, largely outperforming per-domain baselines and even surpassing our own specialist models in two domains. GPWM further generalizes to unseen geometries, physical properties, object counts, and rollout horizons. Beyond prediction, GPWM enables contact-rich planning by learning a generative prior over joint actuator-object motion. Instead of searching over unconstrained actions, planning searches the model's latent noise for interactions that achieve a desired object-space goal. With the same world model, noise-space planning substantially outperforms action-space search on pushing and picking, where complex contact sequences are hard to discover. Executed open-loop in simulation, the resulting plans achieve goal-directed manipulation without reference action trajectories or goal-specific policies.</p>
+            
+            <div class="card-action-bar">
+                <a href="http://arxiv.org/pdf/2611.08338v1" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
+                    View PDF
+                </a>
+                <a href="http://arxiv.org/abs/2611.08338v1" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
+                    arXiv Page &rarr;
+                </a>
+            </div>
+        </article>
+        
+        <article class="paper-card" data-title="social humanoid: socially responsive human-humanoid interaction" data-summary="humanoid robots are typically trained as solitary agents, leaving them unable to coordinate physically with human partners who naturally anticipate and adjust to one another. to bridge this gap, we present social humanoid, a hierarchical system that generates and executes socially responsive whole-body motion on a 29-dof unitree g1 conditioned on a human partner's motion. its high-level policy performs flexible sequence modeling of human and humanoid motion through a shared tokenized representation, generating reactive humanoid motion and anticipating the partner's motion when they are occluded, while a low-level whole-body tracking controller executes the generated motion on the robot. to train the system, we introduce a two-phase adaptive retargeting procedure that retargets one interaction partner to the robot while morphing the other partner to preserve contact dynamics, reachability, and relative body scale. we apply this procedure across five motion-capture datasets to produce a new human-humanoid interaction (hhi) benchmark of 260 hours of human-humanoid interactions. our results demonstrate that social humanoid produces coordinated, human-aligned behavior across diverse interaction types in simulation and the real world. project page: https://von31.github.io/social-humanoid/">
+            <div class="card-meta-top">
+                <span class="rank-tag">TOP #7</span>
                 <div class="score-badge">
                     <span class="score-label">Priority Index</span>
                     <span class="score-value">95</span>
                 </div>
             </div>
             
-            <h2 class="paper-title">CRISP: Constraint-Resolved Interactions between Subsystems for Predictive Whole-Body Cooperation</h2>
+            <h2 class="paper-title">Social Humanoid: Socially Responsive Human-Humanoid Interaction</h2>
             
             <div class="author-row">
                 <span>🗓️ 2026-11-05</span>
-                <span>✍️ Dario Valenzuela, Jeeseop Kim</span>
+                <span>✍️ Vongani H. Maluleke, James Ni, Kie Horiuchi et al.</span>
             </div>
             
             <div class="badge-cluster">
                 <span class="badge">#humanoid</span>
             </div>
             
-            <p class="paper-summary">This paper presents a layered control framework that recasts high-dimensional system dynamics as a composition of dynamically interconnected subsystems, with dynamic dual-arm manipulation on the humanoid serving as a representative application. The humanoid is decomposed into a single rigid body (SRB) representing the torso and floating-base dynamic models representing the articulated arms and lower-body. The rigid connections between arm and torso and the closed kinematic chain formed between the end-effectors during cooperative manipulation are represented as holonomic constraints. The corresponding Lagrange multipliers parametrize the interaction wrenches transmitted at the shoulders and between the end-effectors. The high-level nonlinear model predictive control (NMPC) jointly optimizes the subsystem state trajectories, arm torques, ground reaction forces (GRFs), and interaction wrenches, enabling online wrench design and optimization while preserving the dynamic coupling among the independently modeled subsystems. The optimized arm torques are applied directly for cooperative dual-arm manipulation, whereas the prescribed GRFs are mapped to lower-body joint torque for whole-body coordination. We validate the proposed framework through numerical simulations and hardware experiments on a G1 humanoid robot. The results demonstrate optimal interaction wrenches consistent with simulated contact measurement, cooperative dual-arm trajectory tracking, and stable whole-body coordination while executing the NMPC in online manner.</p>
+            <p class="paper-summary">Humanoid robots are typically trained as solitary agents, leaving them unable to coordinate physically with human partners who naturally anticipate and adjust to one another. To bridge this gap, we present Social Humanoid, a hierarchical system that generates and executes socially responsive whole-body motion on a 29-DoF Unitree G1 conditioned on a human partner's motion. Its high-level policy performs flexible sequence modeling of human and humanoid motion through a shared tokenized representation, generating reactive humanoid motion and anticipating the partner's motion when they are occluded, while a low-level whole-body tracking controller executes the generated motion on the robot. To train the system, we introduce a two-phase adaptive retargeting procedure that retargets one interaction partner to the robot while morphing the other partner to preserve contact dynamics, reachability, and relative body scale. We apply this procedure across five motion-capture datasets to produce a new Human-Humanoid Interaction (HHI) benchmark of 260 hours of human-humanoid interactions. Our results demonstrate that Social Humanoid produces coordinated, human-aligned behavior across diverse interaction types in simulation and the real world. Project page: https://von31.github.io/social-humanoid/</p>
             
             <div class="card-action-bar">
-                <a href="http://arxiv.org/pdf/2611.07268v1" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
+                <a href="http://arxiv.org/pdf/2611.08407v1" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
                     View PDF
                 </a>
-                <a href="http://arxiv.org/abs/2611.07268v1" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
+                <a href="http://arxiv.org/abs/2611.08407v1" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
                     arXiv Page &rarr;
                 </a>
             </div>
         </article>
         
-        <article class="paper-card" data-title="curobov2-fast: fast torque-limited collision-free motion planning" data-summary="we present curobov2-fast, a gpu-accelerated planner that reduces both planning latency and execution time for collision-free, payload-aware, torque-limited motions. b-spline trajectory optimization reduces the required iterations, while accelerated robot computations and differentiable inverse dynamics reduce refinement cost and accommodate changing payloads. timeopt optimizes traversal speed along the fixed path under sampled velocity, acceleration, jerk, and torque constraints, exploiting local spline support to solve banded newton systems efficiently on the gpu. with a 3,kg payload, curobov2-fast achieves 4.4 ms mean planning time on rtx 5090, 14.7x faster than curobov2. our method on jetson agx orin plans faster than curobov1 + toppra on rtx 5090. a stereo-camera-based deployment on yam achieves 5.93 s mean completed pick-and-drop cycles, 34.6% shorter than curobov2. code (apache 2.0): www.github.com/nvlabs/curobo , project page: www.research.nvidia.com/labs/lpr/curobov2-fast .">
-            <div class="card-meta-top">
-                <span class="rank-tag">TOP #5</span>
-                <div class="score-badge">
-                    <span class="score-label">Priority Index</span>
-                    <span class="score-value">90</span>
-                </div>
-            </div>
-            
-            <h2 class="paper-title">cuRoboV2-Fast: Fast Torque-Limited Collision-Free Motion Planning</h2>
-            
-            <div class="author-row">
-                <span>🗓️ 2026-11-04</span>
-                <span>✍️ Balakumar Sundaralingam, Adithyavairavan Murali, Stan Birchfield</span>
-            </div>
-            
-            <div class="badge-cluster">
-                <span class="badge">#vla</span>
-            </div>
-            
-            <p class="paper-summary">We present cuRoboV2-Fast, a GPU-accelerated planner that reduces both planning latency and execution time for collision-free, payload-aware, torque-limited motions. B-spline trajectory optimization reduces the required iterations, while accelerated robot computations and differentiable inverse dynamics reduce refinement cost and accommodate changing payloads. TimeOpt optimizes traversal speed along the fixed path under sampled velocity, acceleration, jerk, and torque constraints, exploiting local spline support to solve banded Newton systems efficiently on the GPU. With a 3,kg payload, cuRoboV2-Fast achieves 4.4 ms mean planning time on RTX 5090, 14.7x faster than cuRoboV2. Our method on Jetson AGX Orin plans faster than cuRoboV1 + TOPPRA on RTX 5090. A stereo-camera-based deployment on YAM achieves 5.93 s mean completed pick-and-drop cycles, 34.6% shorter than cuRoboV2. Code (Apache 2.0): www.github.com/NVlabs/curobo , Project Page: www.research.nvidia.com/labs/lpr/curobov2-fast .</p>
-            
-            <div class="card-action-bar">
-                <a href="http://arxiv.org/pdf/2611.06913v1" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
-                    View PDF
-                </a>
-                <a href="http://arxiv.org/abs/2611.06913v1" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
-                    arXiv Page &rarr;
-                </a>
-            </div>
-        </article>
-        
-        <article class="paper-card" data-title="dynamic watermarking and action-conditioned latent dynamics for secure vision-based controllers" data-summary="replay attacks are difficult to detect in vision-based control systems because previously recorded observations can remain plausible while the physical system follows a different trajectory. this paper develops an adaptive dynamic-watermarking framework for detecting replay attacks against vision-based controllers. a private gaussian watermark is added to the nominal control input, and a control input-conditioned latent dynamics network (ldn) predicts the corresponding evolution in a compact latent space learned from image observations. attack evidence is obtained from the discrepancy between the predicted latent response and the latent representation of the received image observation. a reinforcement learning policy adjusts the watermark covariance using the latent state and detector confidence, thereby balancing attack detectability, watermark energy, and control distortion. a lagrangian penalty on task-specific safety costs is included during training to limit the adverse effect of the excitation. the framework is evaluated on a vision-guided ur5 manipulation task in which the robot reaches a target while avoiding a moving human arm under nominal and replay-attacked observations.">
-            <div class="card-meta-top">
-                <span class="rank-tag">TOP #6</span>
-                <div class="score-badge">
-                    <span class="score-label">Priority Index</span>
-                    <span class="score-value">80</span>
-                </div>
-            </div>
-            
-            <h2 class="paper-title">Dynamic Watermarking and Action-Conditioned Latent Dynamics for Secure Vision-Based Controllers</h2>
-            
-            <div class="author-row">
-                <span>🗓️ 2026-11-05</span>
-                <span>✍️ Aditya Parameshwaran, Navid Aftabi, Abhishek Hanchate et al.</span>
-            </div>
-            
-            <div class="badge-cluster">
-                <span class="badge">#reinforcement learning</span>
-            </div>
-            
-            <p class="paper-summary">Replay attacks are difficult to detect in vision-based control systems because previously recorded observations can remain plausible while the physical system follows a different trajectory. This paper develops an adaptive dynamic-watermarking framework for detecting replay attacks against vision-based controllers. A private Gaussian watermark is added to the nominal control input, and a control input-conditioned latent dynamics network (LDN) predicts the corresponding evolution in a compact latent space learned from image observations. Attack evidence is obtained from the discrepancy between the predicted latent response and the latent representation of the received image observation. A reinforcement learning policy adjusts the watermark covariance using the latent state and detector confidence, thereby balancing attack detectability, watermark energy, and control distortion. A Lagrangian penalty on task-specific safety costs is included during training to limit the adverse effect of the excitation. The framework is evaluated on a vision-guided UR5 manipulation task in which the robot reaches a target while avoiding a moving human arm under nominal and replay-attacked observations.</p>
-            
-            <div class="card-action-bar">
-                <a href="http://arxiv.org/pdf/2611.07403v1" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
-                    View PDF
-                </a>
-                <a href="http://arxiv.org/abs/2611.07403v1" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
-                    arXiv Page &rarr;
-                </a>
-            </div>
-        </article>
-        
-        <article class="paper-card" data-title="an empirical study of reinforcement learning for keypoint positioning of deformable linear objects" data-summary="deformable linear object (dlo) manipulation is challenging because high-dimensional configurations, nonlinear contact dynamics, and diverse material and geometric properties produce a broad range of object responses that are both difficult to model and data-intensive to learn. this work studies reinforcement learning for planar manipulation of a one-end-grasped dlo, focusing on training efficiency, observation design, robustness, and zero-shot sim-to-real transfer. we compare three proximal policy optimization training stacks and find that the gpu-parallel mujoco playground stack enables faster convergence and more consistent performance than cpu-based alternatives under the same wall-clock budget. relative keypoint observations and an asymmetric actor-critic formulation further improve learning efficiency. policies trained with observation noise, delay, domain randomization, and disturbances achieve simulation success rates of 96.4% for single-point tracking, 98.0% for disturbance recovery, and 88.8% for two-point tracking. using markerless rgb-d keypoint estimation, the policies transfer without real-world fine-tuning, succeeding in 9/10, 10/10, and 8/10 physical trials, respectively.">
-            <div class="card-meta-top">
-                <span class="rank-tag">TOP #7</span>
-                <div class="score-badge">
-                    <span class="score-label">Priority Index</span>
-                    <span class="score-value">80</span>
-                </div>
-            </div>
-            
-            <h2 class="paper-title">An Empirical Study of Reinforcement Learning for Keypoint Positioning of Deformable Linear Objects</h2>
-            
-            <div class="author-row">
-                <span>🗓️ 2026-11-05</span>
-                <span>✍️ Vinay Rodrigues, Sara Zeynalpour, Gokhan Solak et al.</span>
-            </div>
-            
-            <div class="badge-cluster">
-                <span class="badge">#reinforcement learning</span>
-            </div>
-            
-            <p class="paper-summary">Deformable linear object (DLO) manipulation is challenging because high-dimensional configurations, nonlinear contact dynamics, and diverse material and geometric properties produce a broad range of object responses that are both difficult to model and data-intensive to learn. This work studies reinforcement learning for planar manipulation of a one-end-grasped DLO, focusing on training efficiency, observation design, robustness, and zero-shot sim-to-real transfer. We compare three Proximal Policy Optimization training stacks and find that the GPU-parallel MuJoCo Playground stack enables faster convergence and more consistent performance than CPU-based alternatives under the same wall-clock budget. Relative keypoint observations and an asymmetric actor-critic formulation further improve learning efficiency. Policies trained with observation noise, delay, domain randomization, and disturbances achieve simulation success rates of 96.4% for single-point tracking, 98.0% for disturbance recovery, and 88.8% for two-point tracking. Using markerless RGB-D keypoint estimation, the policies transfer without real-world fine-tuning, succeeding in 9/10, 10/10, and 8/10 physical trials, respectively.</p>
-            
-            <div class="card-action-bar">
-                <a href="http://arxiv.org/pdf/2611.07261v1" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
-                    View PDF
-                </a>
-                <a href="http://arxiv.org/abs/2611.07261v1" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
-                    arXiv Page &rarr;
-                </a>
-            </div>
-        </article>
-        
-        <article class="paper-card" data-title="reinforcement learning enables scaling generalist robot policy improvement" data-summary="the introduction of generalist robot policies has enabled a single, large model to learn to perform a variety of tasks from a vast pre-training corpus. while these models often exhibit powerful zero-shot generalization capabilities, they typically require an adaptation phase to achieve sufficient performance in deployment. iterated self-improvement via reinforcement learning (rl) has demonstrated promise in enabling this adaptation, yet such approaches have been largely explored in single-task settings - where the goal is to simply improve on a narrow deployment task - which lies in stark contrast to the multi-task capabilities of the base policy. in this work we ask whether generalist robot policies are capable of multi-task, generalist improvement in deployment - targeting many diverse tasks simultaneously - and what algorithmic recipe enables this. to answer this question, we first develop a set of structured evaluations to test generalist improvement capabilities, and systematically evaluate algorithmic and practical design choices regarding value estimation, policy extraction and resource allocation. we show that not only can generalist policies be improved online across diverse tasks, but that the right recipe can enable generalization and increase performance on tasks not considered during online training. we characterize when this generalization occurs and show that both the training task distribution and the use of value-based rl are critical. to the best of our knowledge, this is among the first evidence for online generalist improvement for robot foundation models.">
+        <article class="paper-card" data-title="shore: stability-hybrid on-policy reinforcement learning for online bin packing" data-summary="online 3d bin packing with a processing buffer requires choosing which box to pack, its orientation, and its placement while keeping the stack stable under unknown future arrivals. a collapse ends the episode and forfeits the remaining volume. existing methods use geometric rules or hard stability masks, limiting how risk can influence the joint choice of box, orientation, and placement. we propose stability-hybrid on-policy reinforcement learning (shore), which combines a learned stability probability of a placement with an on-policy estimate of its return conditional on stability. a 3d u-net learns stability from executed outcomes and simulated alternatives, revealing outcomes of actions underrepresented in early rollouts. a discrete on-policy actor--critic uses stability predictions in both its action values and policy prior, with gates that limit the effect of an untrained or changing model. in deployment, shore does not require additional search or simulation overhead. in isaac gym, shore reaches 73\% space utilization by 0.4m environment steps, while the same learner without stability modeling reaches that level at about 1m. on the expanded 60-box set, shore achieves 0.734 space utilization versus 0.588 for the gopt state-of-the-art baseline, with a higher placement-failure frequency (1.03\% vs. 0.63\%), trading more risk for greater packed volume. the results show faster learning and higher utilization on the more demanding realistic box arrival set. ablations suggest that simulated alternatives provide useful early supervision, while executed outcomes alone sustain later performance. we also demonstrate the method on a real robot to verify the simplicity of integrating the method to real bin packing pipelines.">
             <div class="card-meta-top">
                 <span class="rank-tag">TOP #8</span>
                 <div class="score-badge">
@@ -484,24 +484,24 @@
                 </div>
             </div>
             
-            <h2 class="paper-title">Reinforcement Learning Enables Scaling Generalist Robot Policy Improvement</h2>
+            <h2 class="paper-title">SHORE: Stability-Hybrid On-Policy Reinforcement Learning for Online Bin Packing</h2>
             
             <div class="author-row">
-                <span>🗓️ 2026-11-04</span>
-                <span>✍️ Michal Korniak, Marco Bagatella, Ralf Römer et al.</span>
+                <span>🗓️ 2026-11-05</span>
+                <span>✍️ Chang Shi, Ann Majewicz Fey</span>
             </div>
             
             <div class="badge-cluster">
                 <span class="badge">#reinforcement learning</span>
             </div>
             
-            <p class="paper-summary">The introduction of generalist robot policies has enabled a single, large model to learn to perform a variety of tasks from a vast pre-training corpus. While these models often exhibit powerful zero-shot generalization capabilities, they typically require an adaptation phase to achieve sufficient performance in deployment. Iterated self-improvement via reinforcement learning (RL) has demonstrated promise in enabling this adaptation, yet such approaches have been largely explored in single-task settings - where the goal is to simply improve on a narrow deployment task - which lies in stark contrast to the multi-task capabilities of the base policy. In this work we ask whether generalist robot policies are capable of multi-task, generalist improvement in deployment - targeting many diverse tasks simultaneously - and what algorithmic recipe enables this. To answer this question, we first develop a set of structured evaluations to test generalist improvement capabilities, and systematically evaluate algorithmic and practical design choices regarding value estimation, policy extraction and resource allocation. We show that not only can generalist policies be improved online across diverse tasks, but that the right recipe can enable generalization and increase performance on tasks not considered during online training. We characterize when this generalization occurs and show that both the training task distribution and the use of value-based RL are critical. To the best of our knowledge, this is among the first evidence for online generalist improvement for robot foundation models.</p>
+            <p class="paper-summary">Online 3D bin packing with a processing buffer requires choosing which box to pack, its orientation, and its placement while keeping the stack stable under unknown future arrivals. A collapse ends the episode and forfeits the remaining volume. Existing methods use geometric rules or hard stability masks, limiting how risk can influence the joint choice of box, orientation, and placement. We propose Stability-Hybrid On-Policy Reinforcement Learning (SHORE), which combines a learned stability probability of a placement with an on-policy estimate of its return conditional on stability. A 3D U-Net learns stability from executed outcomes and simulated alternatives, revealing outcomes of actions underrepresented in early rollouts. A discrete on-policy actor--critic uses stability predictions in both its action values and policy prior, with gates that limit the effect of an untrained or changing model. In deployment, SHORE does not require additional search or simulation overhead. In Isaac Gym, SHORE reaches 73\% space utilization by 0.4M environment steps, while the same learner without stability modeling reaches that level at about 1M. On the expanded 60-box set, SHORE achieves 0.734 space utilization versus 0.588 for the GOPT state-of-the-art baseline, with a higher placement-failure frequency (1.03\% vs. 0.63\%), trading more risk for greater packed volume. The results show faster learning and higher utilization on the more demanding realistic box arrival set. Ablations suggest that simulated alternatives provide useful early supervision, while executed outcomes alone sustain later performance. We also demonstrate the method on a real robot to verify the simplicity of integrating the method to real bin packing pipelines.</p>
             
             <div class="card-action-bar">
-                <a href="http://arxiv.org/pdf/2611.06905v1" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
+                <a href="http://arxiv.org/pdf/2611.08364v1" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
                     View PDF
                 </a>
-                <a href="http://arxiv.org/abs/2611.06905v1" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
+                <a href="http://arxiv.org/abs/2611.08364v1" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
                     arXiv Page &rarr;
                 </a>
             </div>
