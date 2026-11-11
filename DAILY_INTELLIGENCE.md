@@ -1,61 +1,61 @@
-# 🤖 Embodied AI & Robotics Frontier Briefing (2026-11-10)
+# 🤖 Embodied AI & Robotics Frontier Briefing (2026-11-11)
 
 > *Automated Intelligence Briefing generated via custom ETL scoring pipeline. Prioritizes foundation models, manipulation, locomotion, and physical AI systems.*
 
 ---
 
-### Top 1: DreamVLA: From Generated Human Motions to Humanoid Vision-Language-Action Policies
-- **Priority Score**: `230 pts` | **Published**: `2026-11-07`
-- **Focus Tracks**: `#humanoid` `#reinforcement learning` `#vision-language-action` `#vla` `#teleoperation`
-- **Key Authors**: Kevin Park, Izat Rasyad, Dvij Kalaria et al.
-- **Direct Access**: [arXiv Abstract](http://arxiv.org/abs/2611.10872v1) | [PDF Fulltext](http://arxiv.org/pdf/2611.10872v1)
+### Top 1: Camera equalisation of an 11.5x drop in environmental illuminance: four imitation-learning policies on an SO-101 arm
+- **Priority Score**: `125 pts` | **Published**: `2026-11-10`
+- **Focus Tracks**: `#diffusion policy` `#vla`
+- **Key Authors**: Simon Cowling
+- **Direct Access**: [arXiv Abstract](http://arxiv.org/abs/2611.13810v1) | [PDF Fulltext](http://arxiv.org/pdf/2611.13810v1)
 
 **Executive Abstract**:
-> Training vision-language-action (VLA) policies typically depends on substantial robot demonstration data, making human teleoperation a costly and cumbersome bottleneck, particularly for whole-body humanoid interaction. Reinforcement learning in simulation offers an alternative for scaling this data, but designing task-specific rewards remains challenging. To address this, we propose DreamVLA, which uses generated motion trajectories to guide reinforcement learning (RL) in simulation, converting them into reliable task execution trajectories. These trajectories train VLA models in simulation without new task-specific teleoperation data. Our central contribution is a reference-conditioned DAgger distillation procedure: after a failed learner rollout, we restart the RL expert from a sampled learner state with the same reference suffix and aggregate successful corrective trajectories, addressing the distribution shift left by offline imitation. We evaluate picking from a platform, opening a drawer, pressing a button, and walking and picking from a platform, with ablations of DAgger iterations, residual RL, and generated dataset scale. Project website: ember-center-berkeley.github.io/DreamVLA.
+> Real-robot benchmarks of learned visuomotor policies often record room illuminance as the lighting condition. We show that, on a typical low-cost rig, room light and image light can be almost unrelated. Four imitation-learning policies (ACT, SmolVLA, Diffusion Policy and pi0.5) were trained on the same 50 demonstrations of a pick-and-place task on an SO-101 arm. Each was run for ten rollouts at about 520 lux and again at about 45 lux, an 11.5x reduction. Success was 20/40 in normal light and 19/40 in low light: a change of -2.5 percentage points (95% CI -23 to +19), with no evidence that the policies differed in sensitivity (interaction p = 0.86). The recorded video shows why: mean image brightness was only 3% lower in low light on the front camera and 19% lower on the wrist camera. Both cameras were set to automatic exposure and white balance, which most likely absorbed the difference; exposure was not locked in this experiment. An accidental repeat of one 10-rollout block reproduced its success count (7/10) but matched the first block at only 6 of 10 placements, consistent with chance. We conclude that lux alone does not describe what a policy sees. Camera settings, and image statistics compared with the training recordings, are the quantities to report and control. Data and code are public.
 
 ---
 
-### Top 2: Zero-Shot VLA Adaptation with Retrieved Guidance
-- **Priority Score**: `180 pts` | **Published**: `2026-11-07`
-- **Focus Tracks**: `#humanoid` `#vision-language-action` `#vla`
-- **Key Authors**: Subin Kim, Anh-Quan Pham, Dinesh Jayaraman
-- **Direct Access**: [arXiv Abstract](http://arxiv.org/abs/2611.10894v1) | [PDF Fulltext](http://arxiv.org/pdf/2611.10894v1)
+### Top 2: LaST0.5: A Generalist World Action Model with Interaction-Centric Latent Reasoning
+- **Priority Score**: `120 pts` | **Published**: `2026-11-10`
+- **Focus Tracks**: `#world model` `#dexterous manipulation`
+- **Key Authors**: Xuheng Zhang, Yiming Zhang, Jialin Gao et al.
+- **Direct Access**: [arXiv Abstract](http://arxiv.org/abs/2611.14048v1) | [PDF Fulltext](http://arxiv.org/pdf/2611.14048v1)
 
 **Executive Abstract**:
-> Pre-training large parametric "Vision-Language-Action" (VLA) models on large demonstration datasets has recently yielded promising results for general-purpose manipulation. However, these models still struggle under even small domain shifts relative to the training data, such as changes in camera viewpoint, background, object identity, or robot morphology. Motivated by the success of Retrieval-Augmented Generation (RAG) in language models, we pursue retrieval to boost VLA performance. Specifically, we seek to leverage retrieval from domain-mismatched, "in-the-wild" demonstration datasets like DROID to guide a VLA's behavior in a new target domain. To achieve this, we introduce RAGu, which overcomes robotics-specific challenges for RAG: (1) It incorporates simple geometric calibration to transform source demonstrations into the target setup and reduce cross-domain differences. (2) It uses a coarse-to-fine retrieval strategy that selects, from a large pool of pre-warped candidates, the trajectory most compatible with the base VLA. (3) It guides the VLA's flow-matching inference procedure rather than seeking to retrain the base model or expand its limited context window. We evaluate RAGu across real-world, simulation, sim-to-real transfer, and cross-embodiment humanoid manipulation. We find it improves real-world VLA success rates from 20% to 80% and outperforms the closest-related baselines in sim. Project website: raguvla.github.io
+> World Action Models (WAMs) have recently emerged as a promising paradigm for robotic manipulation, endowing policies with strong capabilities for modeling temporal and physical dynamics. Existing WAMs, encompassing both video-first action prediction and joint video-action modeling, directly transfer global physical representations from world models to action generation. However, global scene representations may underemphasize local robot-object interactions, creating a mismatch between representations optimized for world evolution and those required for manipulation. To bridge this gap, we propose LaST0.5, a novel WAM that introduces an interaction-centric physical representation between world modeling and action generation. Specifically, LaST0.5 learns a compact interaction-centric latent space under the supervision of visual interaction cues between the robot and the environment. This reasoning space is instantiated as a latent expert that bridges the world expert and the action expert within a Mixture-of-Transformers architecture. Furthermore, LaST0.5 performs adaptive world-to-action transfer by jointly predicting future representations and progress values, using progress consistency to adjust action execution and trigger future resampling. Finally, we pretrain LaST0.5 on a large-scale robotic data corpus comprising over 14k hours of data, establishing interaction-centric physical reasoning as a scalable and effective paradigm. LaST0.5 achieves 99.5% on LIBERO, surpasses the previous state of the art on ten evaluated RLBench tasks, and demonstrates robust long-horizon execution and precise dexterous manipulation in real-world experiments.
 
 ---
 
-### Top 3: Which Taxels, Not How Many: Tactile Sensor Placement for Dexterous Policies
-- **Priority Score**: `110 pts` | **Published**: `2026-11-07`
-- **Focus Tracks**: `#dexterous manipulation` `#tactile sensing`
-- **Key Authors**: Taeyun Kim, Jinsoo Shin, Taehwa Kim et al.
-- **Direct Access**: [arXiv Abstract](http://arxiv.org/abs/2611.10647v1) | [PDF Fulltext](http://arxiv.org/pdf/2611.10647v1)
+### Top 3: ReACT: Reflection-Consistent Modulation and Cross-Load Consistency for Humanoid Velocity Tracking Under Asymmetric Loads
+- **Priority Score**: `120 pts` | **Published**: `2026-11-10`
+- **Focus Tracks**: `#humanoid` `#locomotion`
+- **Key Authors**: Xianghui Wang, Aoran Fu, Liyou Luo et al.
+- **Direct Access**: [arXiv Abstract](http://arxiv.org/abs/2611.13929v1) | [PDF Fulltext](http://arxiv.org/pdf/2611.13929v1)
 
 **Executive Abstract**:
-> Policies for dexterous manipulation depend on design choices made before training: which sensors enter the observation, where they are placed, and how their readings are arranged for the encoder. These choices are rarely examined. For tactile sensing, simulation studies place taxels uniformly over the hand, and this placement has become a default without being tested. We test this default under a single controlled protocol. The protocol holds the teacher, the training procedure, and the candidate taxels fixed and varies only the sensor configuration and the representation. We evaluate it on in-palm rotation and grasping with three robot hands. A small set of taxels selected from contact statistics matches a far larger uniform set. Taxels at rarely contacted sites are equivalent to no tactile input. With all candidate taxels, their layout in the input tensor does not affect performance, even for a convolutional encoder. Uniform placement therefore overestimates the number of taxels a task requires. We distill these results into lessons for designing tactile policies and into a minimal set of design choices that a tactile policy study should report.
+> In recent years, humanoid loco-manipulation has progressed to whole-body grasping, lifting, and transport. A basic requirement underlying these tasks is carrying the object to its destination, which depends on the locomotion controller accurately executing velocity commands from the navigation policy. However, carrying an object in one hand introduces a persistent asymmetric upper-body load that can degrade velocity tracking. Persistent tracking biases can accumulate into position and heading deviations, increasing the risk of collisions and navigation failure. To address this problem, we present ReACT, a framework for accurate velocity tracking under asymmetric upper-body loads. Reflection-consistent disturbance modulation uses the estimated wrench to modulate actor features for load compensation while preserving action correspondence under reflected observations. Cross-load tracking consistency training compares loaded and unloaded conditions under the same velocity commands to promote consistent velocity tracking across loading conditions. Simulation experiments on a Unitree G1 humanoid robot show improved velocity tracking and reduced directional bias under varying asymmetric loads. Real-world experiments demonstrate collision-free goal reaching in all 40 tested navigation trials under unilateral hand loads with a fixed mapless navigation policy.
 
 ---
 
-### Top 4: Dynamics-Informed Action Learning for Goal-Conditioned Latent Planning
-- **Priority Score**: `90 pts` | **Published**: `2026-11-07`
-- **Focus Tracks**: `#world model`
-- **Key Authors**: Yinuo Jiang, Guangzhi Wang, Yiran Wang et al.
-- **Direct Access**: [arXiv Abstract](http://arxiv.org/abs/2611.10660v1) | [PDF Fulltext](http://arxiv.org/pdf/2611.10660v1)
+### Top 4: RedirectMimic: Local Motion Content Redaction for Humanoid Whole-Body Control
+- **Priority Score**: `95 pts` | **Published**: `2026-11-10`
+- **Focus Tracks**: `#humanoid`
+- **Key Authors**: Zepeng Wang, Xiaochuan Shi
+- **Direct Access**: [arXiv Abstract](http://arxiv.org/abs/2611.14049v1) | [PDF Fulltext](http://arxiv.org/pdf/2611.14049v1)
 
 **Executive Abstract**:
-> Latent world models enable visual control by planning action sequences in compact representation spaces, but a gap remains between how latent dynamics are learned and how they are used for planning. First, teacher-forced training does not expose the dynamics model to the recursively predicted latent states encountered during planning. Second, sampling-based planners typically initialize action search from goal-agnostic proposals, without exploiting the action-conditioned dynamics learned by the world model. We introduce Dynamics-Informed Action Learning (DIAL) to bridge these two gaps. During training, rollout alignment exposes the forward model to its own autoregressive latent predictions, while multi-step inverse supervision trains a lightweight inverse dynamics head to infer actions from latent-state transitions. We further apply the inverse head to model-generated transitions with its parameters held fixed, encouraging predicted rollouts to retain action-relevant information. At test time, DIAL autoregressively couples the inverse and forward dynamics to construct a dynamics-informed action sequence toward the goal, which initializes the mean of the Cross-Entropy Method (CEM) proposal distribution. The subsequent CEM search then refines this initialization using the standard sampling and updating procedure. Experiments across four visual control benchmarks demonstrate that DIAL outperforms existing latent world models and planning baselines in both standard and long-horizon scenarios.
+> Humanoid motion interfaces should accommodate application-specific movement constraints while retaining useful reference behavior. Local content redaction requires a controller to replace selected movements even when it continues to receive the original reference. Removing the tracking incentive for those movements leaves their replacement unspecified. We introduce RedirectMimic, which separates the reference observed by the actor from the target used to train its execution. A rule-generated edited reference guides tracking rewards during proximal policy optimization, while the deployed observation and action interfaces remain unchanged. We evaluate pose- and speed-defined arm editing in Unitree G1 simulation using a tracker pretrained on 7,509 motion clips. On the overhead-arm task, RedirectMimic reduces core-window content occurrence to 2.7%, compared with 58.9% for reward zeroing and 32.8% for anti-tracking. It achieves 94.2% core-window joint success, combining content suppression, fall-free execution, and local retention. On the speed-defined task, fast outward arm movements occurred at similarly low rates under all three local editing methods. Across both tasks, RedirectMimic achieved the lowest replacement error among these methods and tracked unedited motions with accuracy comparable to that of the pretrained controller. Project page: https://xiaopeng-whu.github.io/RedirectMimic/.
 
 ---
 
-### Top 5: Explicitly capturing demonstrator multi-modality for distillation into diffusion policies
-- **Priority Score**: `85 pts` | **Published**: `2026-11-07`
-- **Focus Tracks**: `#diffusion policy`
-- **Key Authors**: Shao Yuan Chew Chia, Rebecca H. Jiang, Abhinav Agarwal et al.
-- **Direct Access**: [arXiv Abstract](http://arxiv.org/abs/2611.10949v1) | [PDF Fulltext](http://arxiv.org/pdf/2611.10949v1)
+### Top 5: FAME-QP: A GPU-Accelerated Quadratic-Programming Solver for Real-Time Model Predictive Control
+- **Priority Score**: `95 pts` | **Published**: `2026-11-10`
+- **Focus Tracks**: `#humanoid`
+- **Key Authors**: Santosh Mohan Rajkumar, Debdipta Goswami, Stephanie Stockar
+- **Direct Access**: [arXiv Abstract](http://arxiv.org/abs/2611.13766v1) | [PDF Fulltext](http://arxiv.org/pdf/2611.13766v1)
 
 **Executive Abstract**:
-> The diversity of a distilled diffusion policy's outputs matters beyond how it impacts the policy's success rate. In particular, downstream applications like test-time search and policy improvement require exploration. Thus, we want to distill multi-modal demonstrators into diffusion policies which reproduce their conditional action distributions. Standard data collection for behavior cloning applies a sliding window to demonstration episodes, which pairs unique observation histories with actions. These datasets can be fit by a policy that is either multi-modal, or unimodal with high Lipschitz constant to capture a diversity of actions seen at nearby observation samples. Prior work finds that diffusion policies trained on sparse data learn the latter, memorizing one action per observation. We adapt vine sampling to behavior cloning data collection to resolve this ambiguity: at some states the demonstrator visits, query it $k$ times from exactly the same observation. On a synthetic task, we study how the number of actions per observation, $k$, affects the learned policy, and find that larger $k$ yields a policy that better matches the demonstrator's conditional distribution, including its multi-modality and diversity. On a 2D truck unloading task, vine sampling likewise leads to a policy closer to the demonstrator and substantially improves both best-of-$N$ and expert iteration performance.
+> We present FAME-QP, a GPU-accelerated solver for dense quadratic programs arising in linear model predictive control. FAME-QP combines constraint-dependent operator representations with fused single- and two-kernel iterations replayed through CUDA graphs, automatically selecting the execution configuration through device calibration and problem-specific timing. It probes a cached operator bank to select the initial penalty and updates operators lazily when problem matrices change. Numerical benchmarks and simulated humanoid and quadrotor control experiments demonstrate reduced latency relative to competing GPU solvers while maintaining solution accuracy and control performance.
 
 ---
 

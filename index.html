@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Embodied AI & Robotics Intelligence Digest — November 10, 2026</title>
+    <title>Embodied AI & Robotics Intelligence Digest — November 11, 2026</title>
     <style>
         :root {
             --bg-base: #080c14;
@@ -242,7 +242,7 @@
         <header>
             <span class="pill-brand">Autonomous Research Intelligence</span>
             <h1>Embodied AI & Physical Frontier Briefing</h1>
-            <p class="subtitle">Compiled on November 10, 2026 • Ranked top 8 strategic breakthroughs out of incoming preprints.</p>
+            <p class="subtitle">Compiled on November 11, 2026 • Ranked top 8 strategic breakthroughs out of incoming preprints.</p>
             
             <div class="controls">
                 <input type="text" id="filterInput" class="search-box" placeholder="Filter papers by keywords (e.g. humanoid, tactile, diffusion)...">
@@ -251,231 +251,231 @@
 
         <main id="paperList">
             
-        <article class="paper-card" data-title="dreamvla: from generated human motions to humanoid vision-language-action policies" data-summary="training vision-language-action (vla) policies typically depends on substantial robot demonstration data, making human teleoperation a costly and cumbersome bottleneck, particularly for whole-body humanoid interaction. reinforcement learning in simulation offers an alternative for scaling this data, but designing task-specific rewards remains challenging. to address this, we propose dreamvla, which uses generated motion trajectories to guide reinforcement learning (rl) in simulation, converting them into reliable task execution trajectories. these trajectories train vla models in simulation without new task-specific teleoperation data. our central contribution is a reference-conditioned dagger distillation procedure: after a failed learner rollout, we restart the rl expert from a sampled learner state with the same reference suffix and aggregate successful corrective trajectories, addressing the distribution shift left by offline imitation. we evaluate picking from a platform, opening a drawer, pressing a button, and walking and picking from a platform, with ablations of dagger iterations, residual rl, and generated dataset scale. project website: ember-center-berkeley.github.io/dreamvla.">
+        <article class="paper-card" data-title="camera equalisation of an 11.5x drop in environmental illuminance: four imitation-learning policies on an so-101 arm" data-summary="real-robot benchmarks of learned visuomotor policies often record room illuminance as the lighting condition. we show that, on a typical low-cost rig, room light and image light can be almost unrelated. four imitation-learning policies (act, smolvla, diffusion policy and pi0.5) were trained on the same 50 demonstrations of a pick-and-place task on an so-101 arm. each was run for ten rollouts at about 520 lux and again at about 45 lux, an 11.5x reduction. success was 20/40 in normal light and 19/40 in low light: a change of -2.5 percentage points (95% ci -23 to +19), with no evidence that the policies differed in sensitivity (interaction p = 0.86). the recorded video shows why: mean image brightness was only 3% lower in low light on the front camera and 19% lower on the wrist camera. both cameras were set to automatic exposure and white balance, which most likely absorbed the difference; exposure was not locked in this experiment. an accidental repeat of one 10-rollout block reproduced its success count (7/10) but matched the first block at only 6 of 10 placements, consistent with chance. we conclude that lux alone does not describe what a policy sees. camera settings, and image statistics compared with the training recordings, are the quantities to report and control. data and code are public.">
             <div class="card-meta-top">
                 <span class="rank-tag">TOP #1</span>
                 <div class="score-badge">
                     <span class="score-label">Priority Index</span>
-                    <span class="score-value">230</span>
+                    <span class="score-value">125</span>
                 </div>
             </div>
             
-            <h2 class="paper-title">DreamVLA: From Generated Human Motions to Humanoid Vision-Language-Action Policies</h2>
+            <h2 class="paper-title">Camera equalisation of an 11.5x drop in environmental illuminance: four imitation-learning policies on an SO-101 arm</h2>
             
             <div class="author-row">
-                <span>🗓️ 2026-11-07</span>
-                <span>✍️ Kevin Park, Izat Rasyad, Dvij Kalaria et al.</span>
+                <span>🗓️ 2026-11-10</span>
+                <span>✍️ Simon Cowling</span>
             </div>
             
             <div class="badge-cluster">
-                <span class="badge">#humanoid</span><span class="badge">#reinforcement learning</span><span class="badge">#vision-language-action</span><span class="badge">#vla</span><span class="badge">#teleoperation</span>
+                <span class="badge">#diffusion policy</span><span class="badge">#vla</span>
             </div>
             
-            <p class="paper-summary">Training vision-language-action (VLA) policies typically depends on substantial robot demonstration data, making human teleoperation a costly and cumbersome bottleneck, particularly for whole-body humanoid interaction. Reinforcement learning in simulation offers an alternative for scaling this data, but designing task-specific rewards remains challenging. To address this, we propose DreamVLA, which uses generated motion trajectories to guide reinforcement learning (RL) in simulation, converting them into reliable task execution trajectories. These trajectories train VLA models in simulation without new task-specific teleoperation data. Our central contribution is a reference-conditioned DAgger distillation procedure: after a failed learner rollout, we restart the RL expert from a sampled learner state with the same reference suffix and aggregate successful corrective trajectories, addressing the distribution shift left by offline imitation. We evaluate picking from a platform, opening a drawer, pressing a button, and walking and picking from a platform, with ablations of DAgger iterations, residual RL, and generated dataset scale. Project website: ember-center-berkeley.github.io/DreamVLA.</p>
+            <p class="paper-summary">Real-robot benchmarks of learned visuomotor policies often record room illuminance as the lighting condition. We show that, on a typical low-cost rig, room light and image light can be almost unrelated. Four imitation-learning policies (ACT, SmolVLA, Diffusion Policy and pi0.5) were trained on the same 50 demonstrations of a pick-and-place task on an SO-101 arm. Each was run for ten rollouts at about 520 lux and again at about 45 lux, an 11.5x reduction. Success was 20/40 in normal light and 19/40 in low light: a change of -2.5 percentage points (95% CI -23 to +19), with no evidence that the policies differed in sensitivity (interaction p = 0.86). The recorded video shows why: mean image brightness was only 3% lower in low light on the front camera and 19% lower on the wrist camera. Both cameras were set to automatic exposure and white balance, which most likely absorbed the difference; exposure was not locked in this experiment. An accidental repeat of one 10-rollout block reproduced its success count (7/10) but matched the first block at only 6 of 10 placements, consistent with chance. We conclude that lux alone does not describe what a policy sees. Camera settings, and image statistics compared with the training recordings, are the quantities to report and control. Data and code are public.</p>
             
             <div class="card-action-bar">
-                <a href="http://arxiv.org/pdf/2611.10872v1" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
+                <a href="http://arxiv.org/pdf/2611.13810v1" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
                     View PDF
                 </a>
-                <a href="http://arxiv.org/abs/2611.10872v1" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
+                <a href="http://arxiv.org/abs/2611.13810v1" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
                     arXiv Page &rarr;
                 </a>
             </div>
         </article>
         
-        <article class="paper-card" data-title="zero-shot vla adaptation with retrieved guidance" data-summary="pre-training large parametric "vision-language-action" (vla) models on large demonstration datasets has recently yielded promising results for general-purpose manipulation. however, these models still struggle under even small domain shifts relative to the training data, such as changes in camera viewpoint, background, object identity, or robot morphology. motivated by the success of retrieval-augmented generation (rag) in language models, we pursue retrieval to boost vla performance. specifically, we seek to leverage retrieval from domain-mismatched, "in-the-wild" demonstration datasets like droid to guide a vla's behavior in a new target domain. to achieve this, we introduce ragu, which overcomes robotics-specific challenges for rag: (1) it incorporates simple geometric calibration to transform source demonstrations into the target setup and reduce cross-domain differences. (2) it uses a coarse-to-fine retrieval strategy that selects, from a large pool of pre-warped candidates, the trajectory most compatible with the base vla. (3) it guides the vla's flow-matching inference procedure rather than seeking to retrain the base model or expand its limited context window. we evaluate ragu across real-world, simulation, sim-to-real transfer, and cross-embodiment humanoid manipulation. we find it improves real-world vla success rates from 20% to 80% and outperforms the closest-related baselines in sim. project website: raguvla.github.io">
+        <article class="paper-card" data-title="last0.5: a generalist world action model with interaction-centric latent reasoning" data-summary="world action models (wams) have recently emerged as a promising paradigm for robotic manipulation, endowing policies with strong capabilities for modeling temporal and physical dynamics. existing wams, encompassing both video-first action prediction and joint video-action modeling, directly transfer global physical representations from world models to action generation. however, global scene representations may underemphasize local robot-object interactions, creating a mismatch between representations optimized for world evolution and those required for manipulation. to bridge this gap, we propose last0.5, a novel wam that introduces an interaction-centric physical representation between world modeling and action generation. specifically, last0.5 learns a compact interaction-centric latent space under the supervision of visual interaction cues between the robot and the environment. this reasoning space is instantiated as a latent expert that bridges the world expert and the action expert within a mixture-of-transformers architecture. furthermore, last0.5 performs adaptive world-to-action transfer by jointly predicting future representations and progress values, using progress consistency to adjust action execution and trigger future resampling. finally, we pretrain last0.5 on a large-scale robotic data corpus comprising over 14k hours of data, establishing interaction-centric physical reasoning as a scalable and effective paradigm. last0.5 achieves 99.5% on libero, surpasses the previous state of the art on ten evaluated rlbench tasks, and demonstrates robust long-horizon execution and precise dexterous manipulation in real-world experiments.">
             <div class="card-meta-top">
                 <span class="rank-tag">TOP #2</span>
                 <div class="score-badge">
                     <span class="score-label">Priority Index</span>
-                    <span class="score-value">180</span>
+                    <span class="score-value">120</span>
                 </div>
             </div>
             
-            <h2 class="paper-title">Zero-Shot VLA Adaptation with Retrieved Guidance</h2>
+            <h2 class="paper-title">LaST0.5: A Generalist World Action Model with Interaction-Centric Latent Reasoning</h2>
             
             <div class="author-row">
-                <span>🗓️ 2026-11-07</span>
-                <span>✍️ Subin Kim, Anh-Quan Pham, Dinesh Jayaraman</span>
+                <span>🗓️ 2026-11-10</span>
+                <span>✍️ Xuheng Zhang, Yiming Zhang, Jialin Gao et al.</span>
             </div>
             
             <div class="badge-cluster">
-                <span class="badge">#humanoid</span><span class="badge">#vision-language-action</span><span class="badge">#vla</span>
+                <span class="badge">#world model</span><span class="badge">#dexterous manipulation</span>
             </div>
             
-            <p class="paper-summary">Pre-training large parametric "Vision-Language-Action" (VLA) models on large demonstration datasets has recently yielded promising results for general-purpose manipulation. However, these models still struggle under even small domain shifts relative to the training data, such as changes in camera viewpoint, background, object identity, or robot morphology. Motivated by the success of Retrieval-Augmented Generation (RAG) in language models, we pursue retrieval to boost VLA performance. Specifically, we seek to leverage retrieval from domain-mismatched, "in-the-wild" demonstration datasets like DROID to guide a VLA's behavior in a new target domain. To achieve this, we introduce RAGu, which overcomes robotics-specific challenges for RAG: (1) It incorporates simple geometric calibration to transform source demonstrations into the target setup and reduce cross-domain differences. (2) It uses a coarse-to-fine retrieval strategy that selects, from a large pool of pre-warped candidates, the trajectory most compatible with the base VLA. (3) It guides the VLA's flow-matching inference procedure rather than seeking to retrain the base model or expand its limited context window. We evaluate RAGu across real-world, simulation, sim-to-real transfer, and cross-embodiment humanoid manipulation. We find it improves real-world VLA success rates from 20% to 80% and outperforms the closest-related baselines in sim. Project website: raguvla.github.io</p>
+            <p class="paper-summary">World Action Models (WAMs) have recently emerged as a promising paradigm for robotic manipulation, endowing policies with strong capabilities for modeling temporal and physical dynamics. Existing WAMs, encompassing both video-first action prediction and joint video-action modeling, directly transfer global physical representations from world models to action generation. However, global scene representations may underemphasize local robot-object interactions, creating a mismatch between representations optimized for world evolution and those required for manipulation. To bridge this gap, we propose LaST0.5, a novel WAM that introduces an interaction-centric physical representation between world modeling and action generation. Specifically, LaST0.5 learns a compact interaction-centric latent space under the supervision of visual interaction cues between the robot and the environment. This reasoning space is instantiated as a latent expert that bridges the world expert and the action expert within a Mixture-of-Transformers architecture. Furthermore, LaST0.5 performs adaptive world-to-action transfer by jointly predicting future representations and progress values, using progress consistency to adjust action execution and trigger future resampling. Finally, we pretrain LaST0.5 on a large-scale robotic data corpus comprising over 14k hours of data, establishing interaction-centric physical reasoning as a scalable and effective paradigm. LaST0.5 achieves 99.5% on LIBERO, surpasses the previous state of the art on ten evaluated RLBench tasks, and demonstrates robust long-horizon execution and precise dexterous manipulation in real-world experiments.</p>
             
             <div class="card-action-bar">
-                <a href="http://arxiv.org/pdf/2611.10894v1" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
+                <a href="http://arxiv.org/pdf/2611.14048v1" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
                     View PDF
                 </a>
-                <a href="http://arxiv.org/abs/2611.10894v1" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
+                <a href="http://arxiv.org/abs/2611.14048v1" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
                     arXiv Page &rarr;
                 </a>
             </div>
         </article>
         
-        <article class="paper-card" data-title="which taxels, not how many: tactile sensor placement for dexterous policies" data-summary="policies for dexterous manipulation depend on design choices made before training: which sensors enter the observation, where they are placed, and how their readings are arranged for the encoder. these choices are rarely examined. for tactile sensing, simulation studies place taxels uniformly over the hand, and this placement has become a default without being tested. we test this default under a single controlled protocol. the protocol holds the teacher, the training procedure, and the candidate taxels fixed and varies only the sensor configuration and the representation. we evaluate it on in-palm rotation and grasping with three robot hands. a small set of taxels selected from contact statistics matches a far larger uniform set. taxels at rarely contacted sites are equivalent to no tactile input. with all candidate taxels, their layout in the input tensor does not affect performance, even for a convolutional encoder. uniform placement therefore overestimates the number of taxels a task requires. we distill these results into lessons for designing tactile policies and into a minimal set of design choices that a tactile policy study should report.">
+        <article class="paper-card" data-title="react: reflection-consistent modulation and cross-load consistency for humanoid velocity tracking under asymmetric loads" data-summary="in recent years, humanoid loco-manipulation has progressed to whole-body grasping, lifting, and transport. a basic requirement underlying these tasks is carrying the object to its destination, which depends on the locomotion controller accurately executing velocity commands from the navigation policy. however, carrying an object in one hand introduces a persistent asymmetric upper-body load that can degrade velocity tracking. persistent tracking biases can accumulate into position and heading deviations, increasing the risk of collisions and navigation failure. to address this problem, we present react, a framework for accurate velocity tracking under asymmetric upper-body loads. reflection-consistent disturbance modulation uses the estimated wrench to modulate actor features for load compensation while preserving action correspondence under reflected observations. cross-load tracking consistency training compares loaded and unloaded conditions under the same velocity commands to promote consistent velocity tracking across loading conditions. simulation experiments on a unitree g1 humanoid robot show improved velocity tracking and reduced directional bias under varying asymmetric loads. real-world experiments demonstrate collision-free goal reaching in all 40 tested navigation trials under unilateral hand loads with a fixed mapless navigation policy.">
             <div class="card-meta-top">
                 <span class="rank-tag">TOP #3</span>
                 <div class="score-badge">
                     <span class="score-label">Priority Index</span>
-                    <span class="score-value">110</span>
+                    <span class="score-value">120</span>
                 </div>
             </div>
             
-            <h2 class="paper-title">Which Taxels, Not How Many: Tactile Sensor Placement for Dexterous Policies</h2>
+            <h2 class="paper-title">ReACT: Reflection-Consistent Modulation and Cross-Load Consistency for Humanoid Velocity Tracking Under Asymmetric Loads</h2>
             
             <div class="author-row">
-                <span>🗓️ 2026-11-07</span>
-                <span>✍️ Taeyun Kim, Jinsoo Shin, Taehwa Kim et al.</span>
+                <span>🗓️ 2026-11-10</span>
+                <span>✍️ Xianghui Wang, Aoran Fu, Liyou Luo et al.</span>
             </div>
             
             <div class="badge-cluster">
-                <span class="badge">#dexterous manipulation</span><span class="badge">#tactile sensing</span>
+                <span class="badge">#humanoid</span><span class="badge">#locomotion</span>
             </div>
             
-            <p class="paper-summary">Policies for dexterous manipulation depend on design choices made before training: which sensors enter the observation, where they are placed, and how their readings are arranged for the encoder. These choices are rarely examined. For tactile sensing, simulation studies place taxels uniformly over the hand, and this placement has become a default without being tested. We test this default under a single controlled protocol. The protocol holds the teacher, the training procedure, and the candidate taxels fixed and varies only the sensor configuration and the representation. We evaluate it on in-palm rotation and grasping with three robot hands. A small set of taxels selected from contact statistics matches a far larger uniform set. Taxels at rarely contacted sites are equivalent to no tactile input. With all candidate taxels, their layout in the input tensor does not affect performance, even for a convolutional encoder. Uniform placement therefore overestimates the number of taxels a task requires. We distill these results into lessons for designing tactile policies and into a minimal set of design choices that a tactile policy study should report.</p>
+            <p class="paper-summary">In recent years, humanoid loco-manipulation has progressed to whole-body grasping, lifting, and transport. A basic requirement underlying these tasks is carrying the object to its destination, which depends on the locomotion controller accurately executing velocity commands from the navigation policy. However, carrying an object in one hand introduces a persistent asymmetric upper-body load that can degrade velocity tracking. Persistent tracking biases can accumulate into position and heading deviations, increasing the risk of collisions and navigation failure. To address this problem, we present ReACT, a framework for accurate velocity tracking under asymmetric upper-body loads. Reflection-consistent disturbance modulation uses the estimated wrench to modulate actor features for load compensation while preserving action correspondence under reflected observations. Cross-load tracking consistency training compares loaded and unloaded conditions under the same velocity commands to promote consistent velocity tracking across loading conditions. Simulation experiments on a Unitree G1 humanoid robot show improved velocity tracking and reduced directional bias under varying asymmetric loads. Real-world experiments demonstrate collision-free goal reaching in all 40 tested navigation trials under unilateral hand loads with a fixed mapless navigation policy.</p>
             
             <div class="card-action-bar">
-                <a href="http://arxiv.org/pdf/2611.10647v1" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
+                <a href="http://arxiv.org/pdf/2611.13929v1" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
                     View PDF
                 </a>
-                <a href="http://arxiv.org/abs/2611.10647v1" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
+                <a href="http://arxiv.org/abs/2611.13929v1" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
                     arXiv Page &rarr;
                 </a>
             </div>
         </article>
         
-        <article class="paper-card" data-title="dynamics-informed action learning for goal-conditioned latent planning" data-summary="latent world models enable visual control by planning action sequences in compact representation spaces, but a gap remains between how latent dynamics are learned and how they are used for planning. first, teacher-forced training does not expose the dynamics model to the recursively predicted latent states encountered during planning. second, sampling-based planners typically initialize action search from goal-agnostic proposals, without exploiting the action-conditioned dynamics learned by the world model. we introduce dynamics-informed action learning (dial) to bridge these two gaps. during training, rollout alignment exposes the forward model to its own autoregressive latent predictions, while multi-step inverse supervision trains a lightweight inverse dynamics head to infer actions from latent-state transitions. we further apply the inverse head to model-generated transitions with its parameters held fixed, encouraging predicted rollouts to retain action-relevant information. at test time, dial autoregressively couples the inverse and forward dynamics to construct a dynamics-informed action sequence toward the goal, which initializes the mean of the cross-entropy method (cem) proposal distribution. the subsequent cem search then refines this initialization using the standard sampling and updating procedure. experiments across four visual control benchmarks demonstrate that dial outperforms existing latent world models and planning baselines in both standard and long-horizon scenarios.">
+        <article class="paper-card" data-title="redirectmimic: local motion content redaction for humanoid whole-body control" data-summary="humanoid motion interfaces should accommodate application-specific movement constraints while retaining useful reference behavior. local content redaction requires a controller to replace selected movements even when it continues to receive the original reference. removing the tracking incentive for those movements leaves their replacement unspecified. we introduce redirectmimic, which separates the reference observed by the actor from the target used to train its execution. a rule-generated edited reference guides tracking rewards during proximal policy optimization, while the deployed observation and action interfaces remain unchanged. we evaluate pose- and speed-defined arm editing in unitree g1 simulation using a tracker pretrained on 7,509 motion clips. on the overhead-arm task, redirectmimic reduces core-window content occurrence to 2.7%, compared with 58.9% for reward zeroing and 32.8% for anti-tracking. it achieves 94.2% core-window joint success, combining content suppression, fall-free execution, and local retention. on the speed-defined task, fast outward arm movements occurred at similarly low rates under all three local editing methods. across both tasks, redirectmimic achieved the lowest replacement error among these methods and tracked unedited motions with accuracy comparable to that of the pretrained controller. project page: https://xiaopeng-whu.github.io/redirectmimic/.">
             <div class="card-meta-top">
                 <span class="rank-tag">TOP #4</span>
+                <div class="score-badge">
+                    <span class="score-label">Priority Index</span>
+                    <span class="score-value">95</span>
+                </div>
+            </div>
+            
+            <h2 class="paper-title">RedirectMimic: Local Motion Content Redaction for Humanoid Whole-Body Control</h2>
+            
+            <div class="author-row">
+                <span>🗓️ 2026-11-10</span>
+                <span>✍️ Zepeng Wang, Xiaochuan Shi</span>
+            </div>
+            
+            <div class="badge-cluster">
+                <span class="badge">#humanoid</span>
+            </div>
+            
+            <p class="paper-summary">Humanoid motion interfaces should accommodate application-specific movement constraints while retaining useful reference behavior. Local content redaction requires a controller to replace selected movements even when it continues to receive the original reference. Removing the tracking incentive for those movements leaves their replacement unspecified. We introduce RedirectMimic, which separates the reference observed by the actor from the target used to train its execution. A rule-generated edited reference guides tracking rewards during proximal policy optimization, while the deployed observation and action interfaces remain unchanged. We evaluate pose- and speed-defined arm editing in Unitree G1 simulation using a tracker pretrained on 7,509 motion clips. On the overhead-arm task, RedirectMimic reduces core-window content occurrence to 2.7%, compared with 58.9% for reward zeroing and 32.8% for anti-tracking. It achieves 94.2% core-window joint success, combining content suppression, fall-free execution, and local retention. On the speed-defined task, fast outward arm movements occurred at similarly low rates under all three local editing methods. Across both tasks, RedirectMimic achieved the lowest replacement error among these methods and tracked unedited motions with accuracy comparable to that of the pretrained controller. Project page: https://xiaopeng-whu.github.io/RedirectMimic/.</p>
+            
+            <div class="card-action-bar">
+                <a href="http://arxiv.org/pdf/2611.14049v1" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
+                    View PDF
+                </a>
+                <a href="http://arxiv.org/abs/2611.14049v1" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
+                    arXiv Page &rarr;
+                </a>
+            </div>
+        </article>
+        
+        <article class="paper-card" data-title="fame-qp: a gpu-accelerated quadratic-programming solver for real-time model predictive control" data-summary="we present fame-qp, a gpu-accelerated solver for dense quadratic programs arising in linear model predictive control. fame-qp combines constraint-dependent operator representations with fused single- and two-kernel iterations replayed through cuda graphs, automatically selecting the execution configuration through device calibration and problem-specific timing. it probes a cached operator bank to select the initial penalty and updates operators lazily when problem matrices change. numerical benchmarks and simulated humanoid and quadrotor control experiments demonstrate reduced latency relative to competing gpu solvers while maintaining solution accuracy and control performance.">
+            <div class="card-meta-top">
+                <span class="rank-tag">TOP #5</span>
+                <div class="score-badge">
+                    <span class="score-label">Priority Index</span>
+                    <span class="score-value">95</span>
+                </div>
+            </div>
+            
+            <h2 class="paper-title">FAME-QP: A GPU-Accelerated Quadratic-Programming Solver for Real-Time Model Predictive Control</h2>
+            
+            <div class="author-row">
+                <span>🗓️ 2026-11-10</span>
+                <span>✍️ Santosh Mohan Rajkumar, Debdipta Goswami, Stephanie Stockar</span>
+            </div>
+            
+            <div class="badge-cluster">
+                <span class="badge">#humanoid</span>
+            </div>
+            
+            <p class="paper-summary">We present FAME-QP, a GPU-accelerated solver for dense quadratic programs arising in linear model predictive control. FAME-QP combines constraint-dependent operator representations with fused single- and two-kernel iterations replayed through CUDA graphs, automatically selecting the execution configuration through device calibration and problem-specific timing. It probes a cached operator bank to select the initial penalty and updates operators lazily when problem matrices change. Numerical benchmarks and simulated humanoid and quadrotor control experiments demonstrate reduced latency relative to competing GPU solvers while maintaining solution accuracy and control performance.</p>
+            
+            <div class="card-action-bar">
+                <a href="http://arxiv.org/pdf/2611.13766v1" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
+                    View PDF
+                </a>
+                <a href="http://arxiv.org/abs/2611.13766v1" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
+                    arXiv Page &rarr;
+                </a>
+            </div>
+        </article>
+        
+        <article class="paper-card" data-title="game-enhanced embodied learning with event and foresight pretraining" data-summary="human gameplay supplies paired observations, actions, and visual consequences that can supplement robot-policy training. we study event-and-foresight pretraining for internvla-a1.5, combining recorded keyboard/mouse event prediction with history-conditioned visual supervision through a frozen video model. coverage-preserving anchor selection constructs one-second targets, and an attention mask prevents teacher-forced future actions from entering foresight queries. the selected corpus contains 394 recordings across 20 games, with 223.36 hours of recorded timestamp span and 2,072,084 training anchors. after 12,400 game-pretraining updates, we compare the resulting initialization with the public base under the same suite-specific robot fine-tuning protocol. across four libero suites, aggregate success increases from 1,718/2,000 (85.90%) to 1,811/2,000 (90.55%), a gain of 4.65 percentage points. suite gains are 9.2, 6.8, 0.2, and 2.4 points on spatial, object, goal, and long. the 40-task breakdown shows 24 improvements, 10 declines, and six ties. these results support the practical value of the complete game-pretraining stage in this evaluated setting, while revealing heterogeneous task outcomes. the comparison includes additional optimization and does not isolate the effects of game data, the two objectives, or training variability.">
+            <div class="card-meta-top">
+                <span class="rank-tag">TOP #6</span>
                 <div class="score-badge">
                     <span class="score-label">Priority Index</span>
                     <span class="score-value">90</span>
                 </div>
             </div>
             
-            <h2 class="paper-title">Dynamics-Informed Action Learning for Goal-Conditioned Latent Planning</h2>
+            <h2 class="paper-title">Game-Enhanced Embodied Learning with Event and Foresight Pretraining</h2>
             
             <div class="author-row">
-                <span>🗓️ 2026-11-07</span>
-                <span>✍️ Yinuo Jiang, Guangzhi Wang, Yiran Wang et al.</span>
+                <span>🗓️ 2026-11-10</span>
+                <span>✍️ Lianlei Shan, Han Jin, Yaunchao Ma et al.</span>
             </div>
             
             <div class="badge-cluster">
-                <span class="badge">#world model</span>
+                <span class="badge">#vla</span>
             </div>
             
-            <p class="paper-summary">Latent world models enable visual control by planning action sequences in compact representation spaces, but a gap remains between how latent dynamics are learned and how they are used for planning. First, teacher-forced training does not expose the dynamics model to the recursively predicted latent states encountered during planning. Second, sampling-based planners typically initialize action search from goal-agnostic proposals, without exploiting the action-conditioned dynamics learned by the world model. We introduce Dynamics-Informed Action Learning (DIAL) to bridge these two gaps. During training, rollout alignment exposes the forward model to its own autoregressive latent predictions, while multi-step inverse supervision trains a lightweight inverse dynamics head to infer actions from latent-state transitions. We further apply the inverse head to model-generated transitions with its parameters held fixed, encouraging predicted rollouts to retain action-relevant information. At test time, DIAL autoregressively couples the inverse and forward dynamics to construct a dynamics-informed action sequence toward the goal, which initializes the mean of the Cross-Entropy Method (CEM) proposal distribution. The subsequent CEM search then refines this initialization using the standard sampling and updating procedure. Experiments across four visual control benchmarks demonstrate that DIAL outperforms existing latent world models and planning baselines in both standard and long-horizon scenarios.</p>
+            <p class="paper-summary">Human gameplay supplies paired observations, actions, and visual consequences that can supplement robot-policy training. We study event-and-foresight pretraining for InternVLA-A1.5, combining recorded keyboard/mouse event prediction with history-conditioned visual supervision through a frozen video model. Coverage-preserving anchor selection constructs one-second targets, and an attention mask prevents teacher-forced future actions from entering foresight queries. The selected corpus contains 394 recordings across 20 games, with 223.36 hours of recorded timestamp span and 2,072,084 training anchors. After 12,400 game-pretraining updates, we compare the resulting initialization with the public base under the same suite-specific robot fine-tuning protocol. Across four LIBERO suites, aggregate success increases from 1,718/2,000 (85.90%) to 1,811/2,000 (90.55%), a gain of 4.65 percentage points. Suite gains are 9.2, 6.8, 0.2, and 2.4 points on Spatial, Object, Goal, and Long. The 40-task breakdown shows 24 improvements, 10 declines, and six ties. These results support the practical value of the complete game-pretraining stage in this evaluated setting, while revealing heterogeneous task outcomes. The comparison includes additional optimization and does not isolate the effects of game data, the two objectives, or training variability.</p>
             
             <div class="card-action-bar">
-                <a href="http://arxiv.org/pdf/2611.10660v1" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
+                <a href="http://arxiv.org/pdf/2611.13819v1" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
                     View PDF
                 </a>
-                <a href="http://arxiv.org/abs/2611.10660v1" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
+                <a href="http://arxiv.org/abs/2611.13819v1" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
                     arXiv Page &rarr;
                 </a>
             </div>
         </article>
         
-        <article class="paper-card" data-title="explicitly capturing demonstrator multi-modality for distillation into diffusion policies" data-summary="the diversity of a distilled diffusion policy's outputs matters beyond how it impacts the policy's success rate. in particular, downstream applications like test-time search and policy improvement require exploration. thus, we want to distill multi-modal demonstrators into diffusion policies which reproduce their conditional action distributions. standard data collection for behavior cloning applies a sliding window to demonstration episodes, which pairs unique observation histories with actions. these datasets can be fit by a policy that is either multi-modal, or unimodal with high lipschitz constant to capture a diversity of actions seen at nearby observation samples. prior work finds that diffusion policies trained on sparse data learn the latter, memorizing one action per observation. we adapt vine sampling to behavior cloning data collection to resolve this ambiguity: at some states the demonstrator visits, query it $k$ times from exactly the same observation. on a synthetic task, we study how the number of actions per observation, $k$, affects the learned policy, and find that larger $k$ yields a policy that better matches the demonstrator's conditional distribution, including its multi-modality and diversity. on a 2d truck unloading task, vine sampling likewise leads to a policy closer to the demonstrator and substantially improves both best-of-$n$ and expert iteration performance.">
-            <div class="card-meta-top">
-                <span class="rank-tag">TOP #5</span>
-                <div class="score-badge">
-                    <span class="score-label">Priority Index</span>
-                    <span class="score-value">85</span>
-                </div>
-            </div>
-            
-            <h2 class="paper-title">Explicitly capturing demonstrator multi-modality for distillation into diffusion policies</h2>
-            
-            <div class="author-row">
-                <span>🗓️ 2026-11-07</span>
-                <span>✍️ Shao Yuan Chew Chia, Rebecca H. Jiang, Abhinav Agarwal et al.</span>
-            </div>
-            
-            <div class="badge-cluster">
-                <span class="badge">#diffusion policy</span>
-            </div>
-            
-            <p class="paper-summary">The diversity of a distilled diffusion policy's outputs matters beyond how it impacts the policy's success rate. In particular, downstream applications like test-time search and policy improvement require exploration. Thus, we want to distill multi-modal demonstrators into diffusion policies which reproduce their conditional action distributions. Standard data collection for behavior cloning applies a sliding window to demonstration episodes, which pairs unique observation histories with actions. These datasets can be fit by a policy that is either multi-modal, or unimodal with high Lipschitz constant to capture a diversity of actions seen at nearby observation samples. Prior work finds that diffusion policies trained on sparse data learn the latter, memorizing one action per observation. We adapt vine sampling to behavior cloning data collection to resolve this ambiguity: at some states the demonstrator visits, query it $k$ times from exactly the same observation. On a synthetic task, we study how the number of actions per observation, $k$, affects the learned policy, and find that larger $k$ yields a policy that better matches the demonstrator's conditional distribution, including its multi-modality and diversity. On a 2D truck unloading task, vine sampling likewise leads to a policy closer to the demonstrator and substantially improves both best-of-$N$ and expert iteration performance.</p>
-            
-            <div class="card-action-bar">
-                <a href="http://arxiv.org/pdf/2611.10949v1" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
-                    View PDF
-                </a>
-                <a href="http://arxiv.org/abs/2611.10949v1" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
-                    arXiv Page &rarr;
-                </a>
-            </div>
-        </article>
-        
-        <article class="paper-card" data-title="brace: belief-guided residual adaptive control for safe navigation under unknown disturbances" data-summary="disturbances encountered during autonomous navigation generally vary across space, often discontinuously, as obstacles redirect wind and changing terrain alters traction. tracking controllers typically assume sufficient control authority to mitigate disturbances and maintain safety; the regime where this assumption fails remains underexplored. we present belief-guided residual adaptive control (brace), a hierarchical reinforcement learning (rl) framework for reach-avoid navigation under unknown, bounded, spatially varying disturbances. brace infers a disturbance belief from model prediction errors and uses that to condition a high-level policy that adapts the reference trajectory. the policy combines a nominal and a belief-guided residual term, trained jointly with a likelihood-ratio advantage reweighting heuristic. we evaluate brace in three simulated quadcopter environments with abruptly switching wind fields, and validate it on crazyflie hardware with fan-generated disturbances. across these settings, brace improves reach-avoid performance over model predictive control and rl baselines.">
-            <div class="card-meta-top">
-                <span class="rank-tag">TOP #6</span>
-                <div class="score-badge">
-                    <span class="score-label">Priority Index</span>
-                    <span class="score-value">80</span>
-                </div>
-            </div>
-            
-            <h2 class="paper-title">BRACE: Belief-guided Residual Adaptive Control for Safe Navigation under Unknown Disturbances</h2>
-            
-            <div class="author-row">
-                <span>🗓️ 2026-11-07</span>
-                <span>✍️ Jaeyoun Choi, Niklas Schmid, Oswin So et al.</span>
-            </div>
-            
-            <div class="badge-cluster">
-                <span class="badge">#reinforcement learning</span>
-            </div>
-            
-            <p class="paper-summary">Disturbances encountered during autonomous navigation generally vary across space, often discontinuously, as obstacles redirect wind and changing terrain alters traction. Tracking controllers typically assume sufficient control authority to mitigate disturbances and maintain safety; the regime where this assumption fails remains underexplored. We present Belief-guided Residual Adaptive Control (BRACE), a hierarchical reinforcement learning (RL) framework for reach-avoid navigation under unknown, bounded, spatially varying disturbances. BRACE infers a disturbance belief from model prediction errors and uses that to condition a high-level policy that adapts the reference trajectory. The policy combines a nominal and a belief-guided residual term, trained jointly with a likelihood-ratio advantage reweighting heuristic. We evaluate BRACE in three simulated quadcopter environments with abruptly switching wind fields, and validate it on Crazyflie hardware with fan-generated disturbances. Across these settings, BRACE improves reach-avoid performance over model predictive control and RL baselines.</p>
-            
-            <div class="card-action-bar">
-                <a href="http://arxiv.org/pdf/2611.10938v1" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
-                    View PDF
-                </a>
-                <a href="http://arxiv.org/abs/2611.10938v1" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
-                    arXiv Page &rarr;
-                </a>
-            </div>
-        </article>
-        
-        <article class="paper-card" data-title="learning when to think: adaptive internal computation for reinforcement learning" data-summary="iterative neural policies usually spend the same computation on every decision, although the benefit of additional processing varies across states. we introduce adaptive internal computation (aic), an iterative policy that learns when to stop refining its latent representation and act. in aic, we train action selection and stopping jointly, an expected-depth penalty values computation and intermediate value predictions provide auxiliary supervision. we show that when only some states benefit from further refinement, an ideal state-dependent allocator outperforms every state-independent stopping schedule at the same expected depth. with at most eight refinement steps per decision, aic executes 3.3 steps on average across twelve benchmark tasks and lowers per-decision latency by 31--44% relative to a fixed eight-step policy on four control and robotics tasks. its mean reward exceeds the best fixed-depth policy on seven tasks and trails it on four. ablating adaptive stopping and value supervision separately shows that stopping accounts for most of the reward gain on pickcube and antmaze, where it also executes more refinement steps and that supervision accounts for most of it on rareevent.">
+        <article class="paper-card" data-title="a human-in-the-loop control paradigm for construction robotics: from vr-guided teleoperation to semi-autonomous dual-arm operation" data-summary="construction tasks in hazardous and unstructured environments require both human adaptability and robotic precision, yet existing approaches often treat teleoperation and autonomy as separate control modes. this paper presents a human-in-the-loop control paradigm that enables structured transitions among vr-guided teleoperation, semi-autonomous shared control, and rule-based autonomous execution for contact-rich dual-arm construction tasks. the proposed system combines immersive vr guidance, a manually defined library of reusable skill primitives, and a shared-autonomy framework with explicit human-robot role allocation and command-priority rules. this integration allows operators to retain supervisory and corrective authority while delegating repetitive and precision-critical actions to the robot. the paradigm is validated on a dual-arm platform through representative facade-installation tasks. results show that autonomous execution provides the best performance under well-calibrated nominal conditions, whereas semi-autonomous control improves resilience when environmental disturbances exceed the predefined autonomous pipeline's correction capability. semi-autonomous control also substantially reduces subjective operator workload compared with full teleoperation. these findings demonstrate that effective construction-robot control should adapt human involvement to task and environmental uncertainty, using autonomy for repeatable operations and shared control for disturbance recovery.">
             <div class="card-meta-top">
                 <span class="rank-tag">TOP #7</span>
                 <div class="score-badge">
                     <span class="score-label">Priority Index</span>
-                    <span class="score-value">80</span>
+                    <span class="score-value">70</span>
                 </div>
             </div>
             
-            <h2 class="paper-title">Learning When to Think: Adaptive Internal Computation for Reinforcement Learning</h2>
+            <h2 class="paper-title">A human-in-the-loop Control Paradigm for Construction Robotics: From VR-Guided Teleoperation to Semi-Autonomous Dual-Arm Operation</h2>
             
             <div class="author-row">
-                <span>🗓️ 2026-11-07</span>
-                <span>✍️ Rohit Kumar Salla, Simon Stepputtis</span>
+                <span>🗓️ 2026-11-10</span>
+                <span>✍️ Jinhua Chen, Xiaoji Xu, Zhongyuan Liao et al.</span>
             </div>
             
             <div class="badge-cluster">
-                <span class="badge">#reinforcement learning</span>
+                <span class="badge">#teleoperation</span>
             </div>
             
-            <p class="paper-summary">Iterative neural policies usually spend the same computation on every decision, although the benefit of additional processing varies across states. We introduce Adaptive Internal Computation (AIC), an iterative policy that learns when to stop refining its latent representation and act. In AIC, we train action selection and stopping jointly, an expected-depth penalty values computation and intermediate value predictions provide auxiliary supervision. We show that when only some states benefit from further refinement, an ideal state-dependent allocator outperforms every state-independent stopping schedule at the same expected depth. With at most eight refinement steps per decision, AIC executes 3.3 steps on average across twelve benchmark tasks and lowers per-decision latency by 31--44% relative to a fixed eight-step policy on four control and robotics tasks. Its mean reward exceeds the best fixed-depth policy on seven tasks and trails it on four. Ablating adaptive stopping and value supervision separately shows that stopping accounts for most of the reward gain on PickCube and AntMaze, where it also executes more refinement steps and that supervision accounts for most of it on RareEvent.</p>
+            <p class="paper-summary">Construction tasks in hazardous and unstructured environments require both human adaptability and robotic precision, yet existing approaches often treat teleoperation and autonomy as separate control modes. This paper presents a human-in-the-loop control paradigm that enables structured transitions among VR-guided teleoperation, semi-autonomous shared control, and rule-based autonomous execution for contact-rich dual-arm construction tasks. The proposed system combines immersive VR guidance, a manually defined library of reusable skill primitives, and a shared-autonomy framework with explicit human-robot role allocation and command-priority rules. This integration allows operators to retain supervisory and corrective authority while delegating repetitive and precision-critical actions to the robot. The paradigm is validated on a dual-arm platform through representative facade-installation tasks. Results show that autonomous execution provides the best performance under well-calibrated nominal conditions, whereas semi-autonomous control improves resilience when environmental disturbances exceed the predefined autonomous pipeline's correction capability. Semi-autonomous control also substantially reduces subjective operator workload compared with full teleoperation. These findings demonstrate that effective construction-robot control should adapt human involvement to task and environmental uncertainty, using autonomy for repeatable operations and shared control for disturbance recovery.</p>
             
             <div class="card-action-bar">
-                <a href="http://arxiv.org/pdf/2611.10822v1" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
+                <a href="http://arxiv.org/pdf/2611.14062v1" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
                     View PDF
                 </a>
-                <a href="http://arxiv.org/abs/2611.10822v1" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
+                <a href="http://arxiv.org/abs/2611.14062v1" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
                     arXiv Page &rarr;
                 </a>
             </div>
         </article>
         
-        <article class="paper-card" data-title="beating the pool, not the game: a white-box equilibrium agent for language-based economic games" data-summary="we describe sudsho, a rule-based agent for the glee competition that plays bargaining, negotiation, and persuasion with zero inference-time llm calls. games are scored as payoff percentiles against an empirical pool of prior play on the same configuration, so pool percentiles set our demand targets while clamped equilibrium shares bound demands and acceptance. every move is a deterministic function of the visible state (persuasion mixing aside), so alignment is verified by replaying the post-freeze move log through the policy. across 117,280 games the agent reached an overall rating of 2056 at $0 inference cost, and the account, ranked by its best agent (a same-policy replica), placed 26th of 71 ranked accounts. a replay against three frozen snapshots of the opponent pool credits the pool-aware clamp with 274 to 330 points of mean per-game bargaining rating, an effect that holds where logged opponent decisions fix the replay.">
+        <article class="paper-card" data-title="hipfuse: real-time lidar semantic segmentation for robotic perception on edge devices" data-summary="real-time robotic perception requires accurate lidar semantics under limited resources. bird's-eye-view (bev) aggregation is efficient but can mix differently labeled surfaces in columns. we present hipfuse, a point-bev fusion framework that exchanges point and height-partitioned bev features across horizontal scales, combining point-wise detail with 2d spatial context from one lidar scan. fixed height assignments preserve separate vertical aggregation groups, with auxiliary supervision of initial bev features using targets from the same 3d cells. a dual-scale bev context module adds broader context from a coarser grid. on semantickitti and mcd, hipfuse achieves 63.7% and 62.5% miou at 14.2 and 22.4 fps on jetson agx orin, respectively, exceeding the 10 hz scan rate. separate training and evaluation show indoor applicability. replacing only the baseline semantic front end with hipfuse in fixed robotic systems reduces odometry absolute trajectory error rmse by 10.6% on average across two outdoor sequences and increases accepted-loop recall by 8.7 percentage points on semantickitti. qualitative semantic maps show more continuous road labeling. our code is available at https://github.com/haiyang2022/hipfuse.">
             <div class="card-meta-top">
                 <span class="rank-tag">TOP #8</span>
                 <div class="score-badge">
@@ -484,24 +484,24 @@
                 </div>
             </div>
             
-            <h2 class="paper-title">Beating the Pool, Not the Game: A White-Box Equilibrium Agent for Language-Based Economic Games</h2>
+            <h2 class="paper-title">HiPFuse: Real-Time LiDAR Semantic Segmentation for Robotic Perception on Edge Devices</h2>
             
             <div class="author-row">
-                <span>🗓️ 2026-11-07</span>
-                <span>✍️ Sudhanshu Srivastava, Faisal Aqlan</span>
+                <span>🗓️ 2026-11-10</span>
+                <span>✍️ Haiyang Wu, George Vosselman, Ville Lehtola</span>
             </div>
             
             <div class="badge-cluster">
                 <span class="badge badge-muted">#frontier</span>
             </div>
             
-            <p class="paper-summary">We describe sudsho, a rule-based agent for the GLEE Competition that plays bargaining, negotiation, and persuasion with zero inference-time LLM calls. Games are scored as payoff percentiles against an empirical pool of prior play on the same configuration, so pool percentiles set our demand targets while clamped equilibrium shares bound demands and acceptance. Every move is a deterministic function of the visible state (persuasion mixing aside), so alignment is verified by replaying the post-freeze move log through the policy. Across 117,280 games the agent reached an overall rating of 2056 at $0 inference cost, and the account, ranked by its best agent (a same-policy replica), placed 26th of 71 ranked accounts. A replay against three frozen snapshots of the opponent pool credits the pool-aware clamp with 274 to 330 points of mean per-game bargaining rating, an effect that holds where logged opponent decisions fix the replay.</p>
+            <p class="paper-summary">Real-time robotic perception requires accurate LiDAR semantics under limited resources. Bird's-eye-view (BEV) aggregation is efficient but can mix differently labeled surfaces in columns. We present HiPFuse, a point-BEV fusion framework that exchanges point and height-partitioned BEV features across horizontal scales, combining point-wise detail with 2D spatial context from one LiDAR scan. Fixed height assignments preserve separate vertical aggregation groups, with auxiliary supervision of initial BEV features using targets from the same 3D cells. A dual-scale BEV context module adds broader context from a coarser grid. On SemanticKITTI and MCD, HiPFuse achieves 63.7% and 62.5% mIoU at 14.2 and 22.4 FPS on Jetson AGX Orin, respectively, exceeding the 10 Hz scan rate. Separate training and evaluation show indoor applicability. Replacing only the baseline semantic front end with HiPFuse in fixed robotic systems reduces odometry absolute trajectory error RMSE by 10.6% on average across two outdoor sequences and increases accepted-loop recall by 8.7 percentage points on SemanticKITTI. Qualitative semantic maps show more continuous road labeling. Our code is available at https://github.com/haiyang2022/HiPFuse.</p>
             
             <div class="card-action-bar">
-                <a href="http://arxiv.org/pdf/2611.10932v1" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
+                <a href="http://arxiv.org/pdf/2611.14025v1" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
                     View PDF
                 </a>
-                <a href="http://arxiv.org/abs/2611.10932v1" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
+                <a href="http://arxiv.org/abs/2611.14025v1" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
                     arXiv Page &rarr;
                 </a>
             </div>
