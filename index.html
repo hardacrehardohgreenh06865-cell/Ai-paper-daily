@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Embodied AI & Robotics Intelligence Digest — November 11, 2026</title>
+    <title>Embodied AI & Robotics Intelligence Digest — November 12, 2026</title>
     <style>
         :root {
             --bg-base: #080c14;
@@ -242,7 +242,7 @@
         <header>
             <span class="pill-brand">Autonomous Research Intelligence</span>
             <h1>Embodied AI & Physical Frontier Briefing</h1>
-            <p class="subtitle">Compiled on November 11, 2026 • Ranked top 8 strategic breakthroughs out of incoming preprints.</p>
+            <p class="subtitle">Compiled on November 12, 2026 • Ranked top 8 strategic breakthroughs out of incoming preprints.</p>
             
             <div class="controls">
                 <input type="text" id="filterInput" class="search-box" placeholder="Filter papers by keywords (e.g. humanoid, tactile, diffusion)...">
@@ -251,33 +251,129 @@
 
         <main id="paperList">
             
-        <article class="paper-card" data-title="camera equalisation of an 11.5x drop in environmental illuminance: four imitation-learning policies on an so-101 arm" data-summary="real-robot benchmarks of learned visuomotor policies often record room illuminance as the lighting condition. we show that, on a typical low-cost rig, room light and image light can be almost unrelated. four imitation-learning policies (act, smolvla, diffusion policy and pi0.5) were trained on the same 50 demonstrations of a pick-and-place task on an so-101 arm. each was run for ten rollouts at about 520 lux and again at about 45 lux, an 11.5x reduction. success was 20/40 in normal light and 19/40 in low light: a change of -2.5 percentage points (95% ci -23 to +19), with no evidence that the policies differed in sensitivity (interaction p = 0.86). the recorded video shows why: mean image brightness was only 3% lower in low light on the front camera and 19% lower on the wrist camera. both cameras were set to automatic exposure and white balance, which most likely absorbed the difference; exposure was not locked in this experiment. an accidental repeat of one 10-rollout block reproduced its success count (7/10) but matched the first block at only 6 of 10 placements, consistent with chance. we conclude that lux alone does not describe what a policy sees. camera settings, and image statistics compared with the training recordings, are the quantities to report and control. data and code are public.">
+        <article class="paper-card" data-title="koopman model-based reinforcement learning" data-summary="we propose a koopman model-based reinforcement learning (k-mbrl) algorithm for controlling nonlinear robotic systems with unknown dynamics. the k-mbrl learns a control policy by minimizing an approximate policy objective that combines the analytical immediate cost with an estimate of the future cost evaluated at the one-step predicted state. to this end, we develop a stochastic koopman operator-based learning method to approximate the unknown nonlinear dynamics in a linear representation, while a critic function estimates the remaining future cost. this formulation offers two key advantages. first, the linear koopman dynamics simplify the model-dependent policy gradient computation to a constant matrix product, enabling computationally efficient policy improvement. second, one-step model propagation mitigates the accumulation of prediction errors associated with long-horizon rollouts while retaining long-term cost information through the critic. the learned policy enables real-time control through feedforward evaluation without online optimization. we establish policy learning convergence guarantees under standard stochastic approximation assumptions. simulations on halfcheetah and quadruped four-legged locomotion tasks demonstrate strong sample efficiency and improved performance compared with classical model-free and model-based reinforcement learning baselines. a pendulum swing-up task is used to assess policy gradient approximation accuracy and conduct ablation studies on the learning mechanism and key hyperparameters. the proposed k-mbrl is further validated on a physical quadruped robot performing a challenging sequence of maneuvers: rising to an upright posture supported by two rounded rear feet, maintaining balance during bipedal walking, and safely returning to the ground, as shown in fig.1.">
             <div class="card-meta-top">
                 <span class="rank-tag">TOP #1</span>
                 <div class="score-badge">
                     <span class="score-label">Priority Index</span>
-                    <span class="score-value">125</span>
+                    <span class="score-value">175</span>
                 </div>
             </div>
             
-            <h2 class="paper-title">Camera equalisation of an 11.5x drop in environmental illuminance: four imitation-learning policies on an SO-101 arm</h2>
+            <h2 class="paper-title">Koopman Model-Based Reinforcement Learning</h2>
             
             <div class="author-row">
                 <span>🗓️ 2026-11-10</span>
-                <span>✍️ Simon Cowling</span>
+                <span>✍️ Wenjian Hao, Paulo C. Heredia, Shaoshuai Mou</span>
             </div>
             
             <div class="badge-cluster">
-                <span class="badge">#diffusion policy</span><span class="badge">#vla</span>
+                <span class="badge">#bipedal</span><span class="badge">#quadruped</span><span class="badge">#reinforcement learning</span><span class="badge">#locomotion</span>
             </div>
             
-            <p class="paper-summary">Real-robot benchmarks of learned visuomotor policies often record room illuminance as the lighting condition. We show that, on a typical low-cost rig, room light and image light can be almost unrelated. Four imitation-learning policies (ACT, SmolVLA, Diffusion Policy and pi0.5) were trained on the same 50 demonstrations of a pick-and-place task on an SO-101 arm. Each was run for ten rollouts at about 520 lux and again at about 45 lux, an 11.5x reduction. Success was 20/40 in normal light and 19/40 in low light: a change of -2.5 percentage points (95% CI -23 to +19), with no evidence that the policies differed in sensitivity (interaction p = 0.86). The recorded video shows why: mean image brightness was only 3% lower in low light on the front camera and 19% lower on the wrist camera. Both cameras were set to automatic exposure and white balance, which most likely absorbed the difference; exposure was not locked in this experiment. An accidental repeat of one 10-rollout block reproduced its success count (7/10) but matched the first block at only 6 of 10 placements, consistent with chance. We conclude that lux alone does not describe what a policy sees. Camera settings, and image statistics compared with the training recordings, are the quantities to report and control. Data and code are public.</p>
+            <p class="paper-summary">We propose a Koopman model-based reinforcement learning (K-MBRL) algorithm for controlling nonlinear robotic systems with unknown dynamics. The K-MBRL learns a control policy by minimizing an approximate policy objective that combines the analytical immediate cost with an estimate of the future cost evaluated at the one-step predicted state. To this end, we develop a stochastic Koopman operator-based learning method to approximate the unknown nonlinear dynamics in a linear representation, while a critic function estimates the remaining future cost. This formulation offers two key advantages. First, the linear Koopman dynamics simplify the model-dependent policy gradient computation to a constant matrix product, enabling computationally efficient policy improvement. Second, one-step model propagation mitigates the accumulation of prediction errors associated with long-horizon rollouts while retaining long-term cost information through the critic. The learned policy enables real-time control through feedforward evaluation without online optimization. We establish policy learning convergence guarantees under standard stochastic approximation assumptions. Simulations on HalfCheetah and quadruped four-legged locomotion tasks demonstrate strong sample efficiency and improved performance compared with classical model-free and model-based reinforcement learning baselines. A pendulum swing-up task is used to assess policy gradient approximation accuracy and conduct ablation studies on the learning mechanism and key hyperparameters. The proposed K-MBRL is further validated on a physical quadruped robot performing a challenging sequence of maneuvers: rising to an upright posture supported by two rounded rear feet, maintaining balance during bipedal walking, and safely returning to the ground, as shown in Fig.1.</p>
             
             <div class="card-action-bar">
-                <a href="http://arxiv.org/pdf/2611.13810v1" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
+                <a href="http://arxiv.org/pdf/2611.14186v1" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
                     View PDF
                 </a>
-                <a href="http://arxiv.org/abs/2611.13810v1" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
+                <a href="http://arxiv.org/abs/2611.14186v1" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
+                    arXiv Page &rarr;
+                </a>
+            </div>
+        </article>
+        
+        <article class="paper-card" data-title="one policy for 100 household tasks: our solution for the 2026 behavior challenge" data-summary="we describe our solution for the 2026 behavior challenge: 100 long-horizon household tasks in the omnigibson simulator. we placed 9th on the final leaderboard, the only independent team in the top 10. the core of the solution is a single vision-language-action (vla) model, one checkpoint for all 100 tasks, built on our 1st-place 2025 solution, which is based on $π_{0.5}$. on the 50 tasks shared with 2025, its q rises from 0.260 to 0.371; across all 100 tasks it scores 0.392. our main conclusion from 2025 was that the model was undertrained, so most of the 2026 work went into training the model for longer, optimizing some training parameters, making each training step slightly faster and reducing the gradient noise: a migration from 50 to 100 tasks (semantic stages built from the demonstrations' skill annotations, task and stage embeddings of new tasks warm-started from similar old ones, and a 21-dimensional action space matching the teleoperation controls); variance-reduced multi-sample flow matching with a simple noise-vs-compute model that picks the number of action-expert samples per observation without ablations; and a 200k-step training run, about one pass over the 211m frames of the demonstrations. a cloud evaluation infrastructure keeps a shared record with provenance, episode diagnostics and restorable simulator states, and runs six simulators on one gpu together faster than real time. on top of the learned policy, 14 tasks are routed to a gpt-6 astra coding agent that controls the robot through observation and motion tools, starting every episode from a frozen copy of its own practice session on training instances. across these 14 tasks, astra's mean q is 0.639, against 0.108 for the learned policy. the public submission included only part of the astra results and scored 0.446 q with 27.3% full-task success.">
+            <div class="card-meta-top">
+                <span class="rank-tag">TOP #2</span>
+                <div class="score-badge">
+                    <span class="score-label">Priority Index</span>
+                    <span class="score-value">155</span>
+                </div>
+            </div>
+            
+            <h2 class="paper-title">One Policy for 100 Household Tasks: Our Solution for the 2026 BEHAVIOR Challenge</h2>
+            
+            <div class="author-row">
+                <span>🗓️ 2026-11-10</span>
+                <span>✍️ Ilia Larchenko, Gleb Zarin, Atindra Nair et al.</span>
+            </div>
+            
+            <div class="badge-cluster">
+                <span class="badge">#vision-language-action</span><span class="badge">#vla</span><span class="badge">#teleoperation</span>
+            </div>
+            
+            <p class="paper-summary">We describe our solution for the 2026 BEHAVIOR Challenge: 100 long-horizon household tasks in the OmniGibson simulator. We placed 9th on the final leaderboard, the only independent team in the top 10. The core of the solution is a single vision-language-action (VLA) model, one checkpoint for all 100 tasks, built on our 1st-place 2025 solution, which is based on $π_{0.5}$. On the 50 tasks shared with 2025, its Q rises from 0.260 to 0.371; across all 100 tasks it scores 0.392. Our main conclusion from 2025 was that the model was undertrained, so most of the 2026 work went into training the model for longer, optimizing some training parameters, making each training step slightly faster and reducing the gradient noise: a migration from 50 to 100 tasks (semantic stages built from the demonstrations' skill annotations, task and stage embeddings of new tasks warm-started from similar old ones, and a 21-dimensional action space matching the teleoperation controls); variance-reduced multi-sample flow matching with a simple noise-vs-compute model that picks the number of action-expert samples per observation without ablations; and a 200k-step training run, about one pass over the 211M frames of the demonstrations. A cloud evaluation infrastructure keeps a shared record with provenance, episode diagnostics and restorable simulator states, and runs six simulators on one GPU together faster than real time. On top of the learned policy, 14 tasks are routed to a GPT-6 Astra coding agent that controls the robot through observation and motion tools, starting every episode from a frozen copy of its own practice session on training instances. Across these 14 tasks, Astra's mean Q is 0.639, against 0.108 for the learned policy. The public submission included only part of the Astra results and scored 0.446 Q with 27.3% full-task success.</p>
+            
+            <div class="card-action-bar">
+                <a href="http://arxiv.org/pdf/2611.14432v1" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
+                    View PDF
+                </a>
+                <a href="http://arxiv.org/abs/2611.14432v1" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
+                    arXiv Page &rarr;
+                </a>
+            </div>
+        </article>
+        
+        <article class="paper-card" data-title="is your robot's memory just a clock? temporal shortcuts in memory-augmented vla policies" data-summary="memory-augmented vision-language-action (vla) policies are meant to remember what happened. many of them, however, fill memory by time: they sample frames uniformly across the episode and stamp each frame with its time step. because time passes even when nothing happens, such a memory may not tell waiting from working. we show that it does not. on the counting tasks of robomme, we make the robot briefly pause or fidget its wrist. such a null event changes nothing the task depends on, yet a released memory vla counts the interval as work done and stops early. we call this failure phantom progress. it cuts success from 47 to 16 of 50 on one task and from 44 to 10 on the other. when the same frames are withheld from memory, success returns, so the cause lies in memory rather than in the interruption itself. we trace the failure to a temporal shortcut: because demonstrations proceed at a steady pace, elapsed time predicts progress. indeed, rescaling the time stamps alone makes the policy stop early when the clock runs fast and repeat when it runs slow. surprisingly, removing the time encoding does not cure the failure, because the frames of a null event still occupy slots of the time-sampled memory. across robomme's released designs, vulnerability follows how memory is indexed. of the fixes the diagnosis suggests, training with injected pauses does not remove the failure and impairs counting, whereas indexing memory by events recovers half or more of the loss without retraining. a memory meant to remember what happened should count events rather than clock ticks.">
+            <div class="card-meta-top">
+                <span class="rank-tag">TOP #3</span>
+                <div class="score-badge">
+                    <span class="score-label">Priority Index</span>
+                    <span class="score-value">135</span>
+                </div>
+            </div>
+            
+            <h2 class="paper-title">Is Your Robot's Memory Just a Clock? Temporal Shortcuts in Memory-Augmented VLA Policies</h2>
+            
+            <div class="author-row">
+                <span>🗓️ 2026-11-10</span>
+                <span>✍️ Chubin Zhang, Bo An</span>
+            </div>
+            
+            <div class="badge-cluster">
+                <span class="badge">#vision-language-action</span><span class="badge">#vla</span>
+            </div>
+            
+            <p class="paper-summary">Memory-augmented vision-language-action (VLA) policies are meant to remember what happened. Many of them, however, fill memory by time: they sample frames uniformly across the episode and stamp each frame with its time step. Because time passes even when nothing happens, such a memory may not tell waiting from working. We show that it does not. On the counting tasks of RoboMME, we make the robot briefly pause or fidget its wrist. Such a null event changes nothing the task depends on, yet a released memory VLA counts the interval as work done and stops early. We call this failure phantom progress. It cuts success from 47 to 16 of 50 on one task and from 44 to 10 on the other. When the same frames are withheld from memory, success returns, so the cause lies in memory rather than in the interruption itself. We trace the failure to a temporal shortcut: because demonstrations proceed at a steady pace, elapsed time predicts progress. Indeed, rescaling the time stamps alone makes the policy stop early when the clock runs fast and repeat when it runs slow. Surprisingly, removing the time encoding does not cure the failure, because the frames of a null event still occupy slots of the time-sampled memory. Across RoboMME's released designs, vulnerability follows how memory is indexed. Of the fixes the diagnosis suggests, training with injected pauses does not remove the failure and impairs counting, whereas indexing memory by events recovers half or more of the loss without retraining. A memory meant to remember what happened should count events rather than clock ticks.</p>
+            
+            <div class="card-action-bar">
+                <a href="http://arxiv.org/pdf/2611.14488v1" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
+                    View PDF
+                </a>
+                <a href="http://arxiv.org/abs/2611.14488v1" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
+                    arXiv Page &rarr;
+                </a>
+            </div>
+        </article>
+        
+        <article class="paper-card" data-title="dexseed: expanding human hand-object interactions into robot demonstrations for dexterous policy learning" data-summary="we study how to generate diverse, physically executable robot demonstrations for dexterous vision-language-action (vla) learning. existing demonstration-generation methods typically rely on costly teleoperated examples. meanwhile, human hand--object datasets provide a reusable source, but existing transfer methods mainly reproduce given interactions. turning these interactions into vla training data further requires coverage of different objects and manipulation locations, together with executable arm and finger actions, and visual observations. to achieve this, we present dexseed, a framework for low-cost generation of dexterous robot data from human hand--object interactions. our key idea is to expand human sequences while preserving their grasps and realizing the resulting motions under arm-tracking dynamics in physics simulation. specifically, we organize source sequences by grasp mode with shared language descriptions. interactionmesh-based retargeting and arm trajectory augmentation adapt these sequences to the robot hand, different object geometries, and pick-and-place locations while preserving local hand--object relationships. an rl finger-control policy produces executable rollouts, while the arm tracks precomputed trajectories. rendered observations and recorded actions from successful rollouts are paired with grasp descriptions to fine-tune a vla. experiments show improved contact fidelity in retargeting and more reliable whole-arm execution than the evaluated baselines. simulation evaluation and real-world deployment further demonstrate that a vla fine-tuned solely on the generated demonstrations can execute language-specified grasps. project page: https://robbyant-research.github.io/dexseed/.">
+            <div class="card-meta-top">
+                <span class="rank-tag">TOP #4</span>
+                <div class="score-badge">
+                    <span class="score-label">Priority Index</span>
+                    <span class="score-value">135</span>
+                </div>
+            </div>
+            
+            <h2 class="paper-title">DexSeed: Expanding Human Hand-Object Interactions into Robot Demonstrations for Dexterous Policy Learning</h2>
+            
+            <div class="author-row">
+                <span>🗓️ 2026-11-10</span>
+                <span>✍️ Huaijin Pi, Zehong Shen, Yong Wang et al.</span>
+            </div>
+            
+            <div class="badge-cluster">
+                <span class="badge">#vision-language-action</span><span class="badge">#vla</span>
+            </div>
+            
+            <p class="paper-summary">We study how to generate diverse, physically executable robot demonstrations for dexterous vision-language-action (VLA) learning. Existing demonstration-generation methods typically rely on costly teleoperated examples. Meanwhile, human hand--object datasets provide a reusable source, but existing transfer methods mainly reproduce given interactions. Turning these interactions into VLA training data further requires coverage of different objects and manipulation locations, together with executable arm and finger actions, and visual observations. To achieve this, we present DexSeed, a framework for low-cost generation of dexterous robot data from human hand--object interactions. Our key idea is to expand human sequences while preserving their grasps and realizing the resulting motions under arm-tracking dynamics in physics simulation. Specifically, we organize source sequences by grasp mode with shared language descriptions. InteractionMesh-based retargeting and arm trajectory augmentation adapt these sequences to the robot hand, different object geometries, and pick-and-place locations while preserving local hand--object relationships. An RL finger-control policy produces executable rollouts, while the arm tracks precomputed trajectories. Rendered observations and recorded actions from successful rollouts are paired with grasp descriptions to fine-tune a VLA. Experiments show improved contact fidelity in retargeting and more reliable whole-arm execution than the evaluated baselines. Simulation evaluation and real-world deployment further demonstrate that a VLA fine-tuned solely on the generated demonstrations can execute language-specified grasps. Project page: https://robbyant-research.github.io/DexSeed/.</p>
+            
+            <div class="card-action-bar">
+                <a href="http://arxiv.org/pdf/2611.14092v1" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
+                    View PDF
+                </a>
+                <a href="http://arxiv.org/abs/2611.14092v1" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
                     arXiv Page &rarr;
                 </a>
             </div>
@@ -285,7 +381,7 @@
         
         <article class="paper-card" data-title="last0.5: a generalist world action model with interaction-centric latent reasoning" data-summary="world action models (wams) have recently emerged as a promising paradigm for robotic manipulation, endowing policies with strong capabilities for modeling temporal and physical dynamics. existing wams, encompassing both video-first action prediction and joint video-action modeling, directly transfer global physical representations from world models to action generation. however, global scene representations may underemphasize local robot-object interactions, creating a mismatch between representations optimized for world evolution and those required for manipulation. to bridge this gap, we propose last0.5, a novel wam that introduces an interaction-centric physical representation between world modeling and action generation. specifically, last0.5 learns a compact interaction-centric latent space under the supervision of visual interaction cues between the robot and the environment. this reasoning space is instantiated as a latent expert that bridges the world expert and the action expert within a mixture-of-transformers architecture. furthermore, last0.5 performs adaptive world-to-action transfer by jointly predicting future representations and progress values, using progress consistency to adjust action execution and trigger future resampling. finally, we pretrain last0.5 on a large-scale robotic data corpus comprising over 14k hours of data, establishing interaction-centric physical reasoning as a scalable and effective paradigm. last0.5 achieves 99.5% on libero, surpasses the previous state of the art on ten evaluated rlbench tasks, and demonstrates robust long-horizon execution and precise dexterous manipulation in real-world experiments.">
             <div class="card-meta-top">
-                <span class="rank-tag">TOP #2</span>
+                <span class="rank-tag">TOP #5</span>
                 <div class="score-badge">
                     <span class="score-label">Priority Index</span>
                     <span class="score-value">120</span>
@@ -315,33 +411,33 @@
             </div>
         </article>
         
-        <article class="paper-card" data-title="react: reflection-consistent modulation and cross-load consistency for humanoid velocity tracking under asymmetric loads" data-summary="in recent years, humanoid loco-manipulation has progressed to whole-body grasping, lifting, and transport. a basic requirement underlying these tasks is carrying the object to its destination, which depends on the locomotion controller accurately executing velocity commands from the navigation policy. however, carrying an object in one hand introduces a persistent asymmetric upper-body load that can degrade velocity tracking. persistent tracking biases can accumulate into position and heading deviations, increasing the risk of collisions and navigation failure. to address this problem, we present react, a framework for accurate velocity tracking under asymmetric upper-body loads. reflection-consistent disturbance modulation uses the estimated wrench to modulate actor features for load compensation while preserving action correspondence under reflected observations. cross-load tracking consistency training compares loaded and unloaded conditions under the same velocity commands to promote consistent velocity tracking across loading conditions. simulation experiments on a unitree g1 humanoid robot show improved velocity tracking and reduced directional bias under varying asymmetric loads. real-world experiments demonstrate collision-free goal reaching in all 40 tested navigation trials under unilateral hand loads with a fixed mapless navigation policy.">
+        <article class="paper-card" data-title="personalized affective perception via continual learning in human-agent negotiation" data-summary="self-interested intelligent agents that negotiate with humans should interpret nonverbal expressions and adapt their behavior accordingly. however, generic facial-affect models degrade across individuals and contexts, creating a generalization gap. we introduce an affect-adaptive negotiation strategy that incorporates continual learning with imagination for facial expression recognition (clifer) to personalize valence-arousal perception in real time. differential feedback converts changes in valence-arousal direction and intensity into adjustments of the agent's target utility. an asynchronous architecture updates clifer in the background during live interaction. in a counterbalanced within-subject study in which 66 participants negotiated with a humanoid robot, the cl-enabled agent achieved significantly higher individual utility and elicited higher participant concession rates than the facechannel baseline. the cl condition yielded significantly higher mean arousal estimates, alongside a broader output range. participant utility and nash distance did not change significantly between conditions. these outcomes support the practical value of coupling continual affective personalization with differential feedback for real-time negotiation.">
             <div class="card-meta-top">
-                <span class="rank-tag">TOP #3</span>
+                <span class="rank-tag">TOP #6</span>
                 <div class="score-badge">
                     <span class="score-label">Priority Index</span>
-                    <span class="score-value">120</span>
+                    <span class="score-value">95</span>
                 </div>
             </div>
             
-            <h2 class="paper-title">ReACT: Reflection-Consistent Modulation and Cross-Load Consistency for Humanoid Velocity Tracking Under Asymmetric Loads</h2>
+            <h2 class="paper-title">Personalized Affective Perception via Continual Learning in Human-Agent Negotiation</h2>
             
             <div class="author-row">
                 <span>🗓️ 2026-11-10</span>
-                <span>✍️ Xianghui Wang, Aoran Fu, Liyou Luo et al.</span>
+                <span>✍️ Mehmet Onur Keskin, Berk Buzcu, Nikhil Churamani et al.</span>
             </div>
             
             <div class="badge-cluster">
-                <span class="badge">#humanoid</span><span class="badge">#locomotion</span>
+                <span class="badge">#humanoid</span>
             </div>
             
-            <p class="paper-summary">In recent years, humanoid loco-manipulation has progressed to whole-body grasping, lifting, and transport. A basic requirement underlying these tasks is carrying the object to its destination, which depends on the locomotion controller accurately executing velocity commands from the navigation policy. However, carrying an object in one hand introduces a persistent asymmetric upper-body load that can degrade velocity tracking. Persistent tracking biases can accumulate into position and heading deviations, increasing the risk of collisions and navigation failure. To address this problem, we present ReACT, a framework for accurate velocity tracking under asymmetric upper-body loads. Reflection-consistent disturbance modulation uses the estimated wrench to modulate actor features for load compensation while preserving action correspondence under reflected observations. Cross-load tracking consistency training compares loaded and unloaded conditions under the same velocity commands to promote consistent velocity tracking across loading conditions. Simulation experiments on a Unitree G1 humanoid robot show improved velocity tracking and reduced directional bias under varying asymmetric loads. Real-world experiments demonstrate collision-free goal reaching in all 40 tested navigation trials under unilateral hand loads with a fixed mapless navigation policy.</p>
+            <p class="paper-summary">Self-interested intelligent agents that negotiate with humans should interpret nonverbal expressions and adapt their behavior accordingly. However, generic facial-affect models degrade across individuals and contexts, creating a generalization gap. We introduce an affect-adaptive negotiation strategy that incorporates Continual Learning with Imagination for Facial Expression Recognition (CLIFER) to personalize valence-arousal perception in real time. Differential feedback converts changes in valence-arousal direction and intensity into adjustments of the agent's target utility. An asynchronous architecture updates CLIFER in the background during live interaction. In a counterbalanced within-subject study in which 66 participants negotiated with a humanoid robot, the CL-enabled agent achieved significantly higher individual utility and elicited higher participant concession rates than the FaceChannel baseline. The CL condition yielded significantly higher mean arousal estimates, alongside a broader output range. Participant utility and Nash distance did not change significantly between conditions. These outcomes support the practical value of coupling continual affective personalization with differential feedback for real-time negotiation.</p>
             
             <div class="card-action-bar">
-                <a href="http://arxiv.org/pdf/2611.13929v1" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
+                <a href="http://arxiv.org/pdf/2611.14247v1" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
                     View PDF
                 </a>
-                <a href="http://arxiv.org/abs/2611.13929v1" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
+                <a href="http://arxiv.org/abs/2611.14247v1" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
                     arXiv Page &rarr;
                 </a>
             </div>
@@ -349,7 +445,7 @@
         
         <article class="paper-card" data-title="redirectmimic: local motion content redaction for humanoid whole-body control" data-summary="humanoid motion interfaces should accommodate application-specific movement constraints while retaining useful reference behavior. local content redaction requires a controller to replace selected movements even when it continues to receive the original reference. removing the tracking incentive for those movements leaves their replacement unspecified. we introduce redirectmimic, which separates the reference observed by the actor from the target used to train its execution. a rule-generated edited reference guides tracking rewards during proximal policy optimization, while the deployed observation and action interfaces remain unchanged. we evaluate pose- and speed-defined arm editing in unitree g1 simulation using a tracker pretrained on 7,509 motion clips. on the overhead-arm task, redirectmimic reduces core-window content occurrence to 2.7%, compared with 58.9% for reward zeroing and 32.8% for anti-tracking. it achieves 94.2% core-window joint success, combining content suppression, fall-free execution, and local retention. on the speed-defined task, fast outward arm movements occurred at similarly low rates under all three local editing methods. across both tasks, redirectmimic achieved the lowest replacement error among these methods and tracked unedited motions with accuracy comparable to that of the pretrained controller. project page: https://xiaopeng-whu.github.io/redirectmimic/.">
             <div class="card-meta-top">
-                <span class="rank-tag">TOP #4</span>
+                <span class="rank-tag">TOP #7</span>
                 <div class="score-badge">
                     <span class="score-label">Priority Index</span>
                     <span class="score-value">95</span>
@@ -379,129 +475,33 @@
             </div>
         </article>
         
-        <article class="paper-card" data-title="fame-qp: a gpu-accelerated quadratic-programming solver for real-time model predictive control" data-summary="we present fame-qp, a gpu-accelerated solver for dense quadratic programs arising in linear model predictive control. fame-qp combines constraint-dependent operator representations with fused single- and two-kernel iterations replayed through cuda graphs, automatically selecting the execution configuration through device calibration and problem-specific timing. it probes a cached operator bank to select the initial penalty and updates operators lazily when problem matrices change. numerical benchmarks and simulated humanoid and quadrotor control experiments demonstrate reduced latency relative to competing gpu solvers while maintaining solution accuracy and control performance.">
-            <div class="card-meta-top">
-                <span class="rank-tag">TOP #5</span>
-                <div class="score-badge">
-                    <span class="score-label">Priority Index</span>
-                    <span class="score-value">95</span>
-                </div>
-            </div>
-            
-            <h2 class="paper-title">FAME-QP: A GPU-Accelerated Quadratic-Programming Solver for Real-Time Model Predictive Control</h2>
-            
-            <div class="author-row">
-                <span>🗓️ 2026-11-10</span>
-                <span>✍️ Santosh Mohan Rajkumar, Debdipta Goswami, Stephanie Stockar</span>
-            </div>
-            
-            <div class="badge-cluster">
-                <span class="badge">#humanoid</span>
-            </div>
-            
-            <p class="paper-summary">We present FAME-QP, a GPU-accelerated solver for dense quadratic programs arising in linear model predictive control. FAME-QP combines constraint-dependent operator representations with fused single- and two-kernel iterations replayed through CUDA graphs, automatically selecting the execution configuration through device calibration and problem-specific timing. It probes a cached operator bank to select the initial penalty and updates operators lazily when problem matrices change. Numerical benchmarks and simulated humanoid and quadrotor control experiments demonstrate reduced latency relative to competing GPU solvers while maintaining solution accuracy and control performance.</p>
-            
-            <div class="card-action-bar">
-                <a href="http://arxiv.org/pdf/2611.13766v1" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
-                    View PDF
-                </a>
-                <a href="http://arxiv.org/abs/2611.13766v1" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
-                    arXiv Page &rarr;
-                </a>
-            </div>
-        </article>
-        
-        <article class="paper-card" data-title="game-enhanced embodied learning with event and foresight pretraining" data-summary="human gameplay supplies paired observations, actions, and visual consequences that can supplement robot-policy training. we study event-and-foresight pretraining for internvla-a1.5, combining recorded keyboard/mouse event prediction with history-conditioned visual supervision through a frozen video model. coverage-preserving anchor selection constructs one-second targets, and an attention mask prevents teacher-forced future actions from entering foresight queries. the selected corpus contains 394 recordings across 20 games, with 223.36 hours of recorded timestamp span and 2,072,084 training anchors. after 12,400 game-pretraining updates, we compare the resulting initialization with the public base under the same suite-specific robot fine-tuning protocol. across four libero suites, aggregate success increases from 1,718/2,000 (85.90%) to 1,811/2,000 (90.55%), a gain of 4.65 percentage points. suite gains are 9.2, 6.8, 0.2, and 2.4 points on spatial, object, goal, and long. the 40-task breakdown shows 24 improvements, 10 declines, and six ties. these results support the practical value of the complete game-pretraining stage in this evaluated setting, while revealing heterogeneous task outcomes. the comparison includes additional optimization and does not isolate the effects of game data, the two objectives, or training variability.">
-            <div class="card-meta-top">
-                <span class="rank-tag">TOP #6</span>
-                <div class="score-badge">
-                    <span class="score-label">Priority Index</span>
-                    <span class="score-value">90</span>
-                </div>
-            </div>
-            
-            <h2 class="paper-title">Game-Enhanced Embodied Learning with Event and Foresight Pretraining</h2>
-            
-            <div class="author-row">
-                <span>🗓️ 2026-11-10</span>
-                <span>✍️ Lianlei Shan, Han Jin, Yaunchao Ma et al.</span>
-            </div>
-            
-            <div class="badge-cluster">
-                <span class="badge">#vla</span>
-            </div>
-            
-            <p class="paper-summary">Human gameplay supplies paired observations, actions, and visual consequences that can supplement robot-policy training. We study event-and-foresight pretraining for InternVLA-A1.5, combining recorded keyboard/mouse event prediction with history-conditioned visual supervision through a frozen video model. Coverage-preserving anchor selection constructs one-second targets, and an attention mask prevents teacher-forced future actions from entering foresight queries. The selected corpus contains 394 recordings across 20 games, with 223.36 hours of recorded timestamp span and 2,072,084 training anchors. After 12,400 game-pretraining updates, we compare the resulting initialization with the public base under the same suite-specific robot fine-tuning protocol. Across four LIBERO suites, aggregate success increases from 1,718/2,000 (85.90%) to 1,811/2,000 (90.55%), a gain of 4.65 percentage points. Suite gains are 9.2, 6.8, 0.2, and 2.4 points on Spatial, Object, Goal, and Long. The 40-task breakdown shows 24 improvements, 10 declines, and six ties. These results support the practical value of the complete game-pretraining stage in this evaluated setting, while revealing heterogeneous task outcomes. The comparison includes additional optimization and does not isolate the effects of game data, the two objectives, or training variability.</p>
-            
-            <div class="card-action-bar">
-                <a href="http://arxiv.org/pdf/2611.13819v1" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
-                    View PDF
-                </a>
-                <a href="http://arxiv.org/abs/2611.13819v1" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
-                    arXiv Page &rarr;
-                </a>
-            </div>
-        </article>
-        
-        <article class="paper-card" data-title="a human-in-the-loop control paradigm for construction robotics: from vr-guided teleoperation to semi-autonomous dual-arm operation" data-summary="construction tasks in hazardous and unstructured environments require both human adaptability and robotic precision, yet existing approaches often treat teleoperation and autonomy as separate control modes. this paper presents a human-in-the-loop control paradigm that enables structured transitions among vr-guided teleoperation, semi-autonomous shared control, and rule-based autonomous execution for contact-rich dual-arm construction tasks. the proposed system combines immersive vr guidance, a manually defined library of reusable skill primitives, and a shared-autonomy framework with explicit human-robot role allocation and command-priority rules. this integration allows operators to retain supervisory and corrective authority while delegating repetitive and precision-critical actions to the robot. the paradigm is validated on a dual-arm platform through representative facade-installation tasks. results show that autonomous execution provides the best performance under well-calibrated nominal conditions, whereas semi-autonomous control improves resilience when environmental disturbances exceed the predefined autonomous pipeline's correction capability. semi-autonomous control also substantially reduces subjective operator workload compared with full teleoperation. these findings demonstrate that effective construction-robot control should adapt human involvement to task and environmental uncertainty, using autonomy for repeatable operations and shared control for disturbance recovery.">
-            <div class="card-meta-top">
-                <span class="rank-tag">TOP #7</span>
-                <div class="score-badge">
-                    <span class="score-label">Priority Index</span>
-                    <span class="score-value">70</span>
-                </div>
-            </div>
-            
-            <h2 class="paper-title">A human-in-the-loop Control Paradigm for Construction Robotics: From VR-Guided Teleoperation to Semi-Autonomous Dual-Arm Operation</h2>
-            
-            <div class="author-row">
-                <span>🗓️ 2026-11-10</span>
-                <span>✍️ Jinhua Chen, Xiaoji Xu, Zhongyuan Liao et al.</span>
-            </div>
-            
-            <div class="badge-cluster">
-                <span class="badge">#teleoperation</span>
-            </div>
-            
-            <p class="paper-summary">Construction tasks in hazardous and unstructured environments require both human adaptability and robotic precision, yet existing approaches often treat teleoperation and autonomy as separate control modes. This paper presents a human-in-the-loop control paradigm that enables structured transitions among VR-guided teleoperation, semi-autonomous shared control, and rule-based autonomous execution for contact-rich dual-arm construction tasks. The proposed system combines immersive VR guidance, a manually defined library of reusable skill primitives, and a shared-autonomy framework with explicit human-robot role allocation and command-priority rules. This integration allows operators to retain supervisory and corrective authority while delegating repetitive and precision-critical actions to the robot. The paradigm is validated on a dual-arm platform through representative facade-installation tasks. Results show that autonomous execution provides the best performance under well-calibrated nominal conditions, whereas semi-autonomous control improves resilience when environmental disturbances exceed the predefined autonomous pipeline's correction capability. Semi-autonomous control also substantially reduces subjective operator workload compared with full teleoperation. These findings demonstrate that effective construction-robot control should adapt human involvement to task and environmental uncertainty, using autonomy for repeatable operations and shared control for disturbance recovery.</p>
-            
-            <div class="card-action-bar">
-                <a href="http://arxiv.org/pdf/2611.14062v1" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
-                    View PDF
-                </a>
-                <a href="http://arxiv.org/abs/2611.14062v1" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
-                    arXiv Page &rarr;
-                </a>
-            </div>
-        </article>
-        
-        <article class="paper-card" data-title="hipfuse: real-time lidar semantic segmentation for robotic perception on edge devices" data-summary="real-time robotic perception requires accurate lidar semantics under limited resources. bird's-eye-view (bev) aggregation is efficient but can mix differently labeled surfaces in columns. we present hipfuse, a point-bev fusion framework that exchanges point and height-partitioned bev features across horizontal scales, combining point-wise detail with 2d spatial context from one lidar scan. fixed height assignments preserve separate vertical aggregation groups, with auxiliary supervision of initial bev features using targets from the same 3d cells. a dual-scale bev context module adds broader context from a coarser grid. on semantickitti and mcd, hipfuse achieves 63.7% and 62.5% miou at 14.2 and 22.4 fps on jetson agx orin, respectively, exceeding the 10 hz scan rate. separate training and evaluation show indoor applicability. replacing only the baseline semantic front end with hipfuse in fixed robotic systems reduces odometry absolute trajectory error rmse by 10.6% on average across two outdoor sequences and increases accepted-loop recall by 8.7 percentage points on semantickitti. qualitative semantic maps show more continuous road labeling. our code is available at https://github.com/haiyang2022/hipfuse.">
+        <article class="paper-card" data-title="from prediction to action: learning physical context for deformable linear object manipulation" data-summary="a representation that accurately predicts a deformable object's response is not necessarily the one most useful for choosing manipulation actions. we study this distinction between predictive utility and decision utility in planar single-grasp shape control of deformable linear objects (dlos). as a common decision backbone, we introduce geometry-pointer-flow (gpf), a geometry-grounded policy that separates grasp-location selection from grasp-conditioned motion generation. its geometry-only variant reduces one-step executed shape error by 32.8% relative to a dlo-specific diffusion policy, while using 18.7 times fewer parameters and achieving approximately 193 times faster inference. on this backbone, we compare physical context represented by ground-truth parameters, estimated parameters, and learned interaction-history representations, for both forward prediction and executed control. for prediction, ground-truth physical parameters reduce next-shape error by 15.8% over geometry alone, and estimated parameters are slightly more predictive than interaction history. this ordering does not carry over to control: estimated parameters provide no detectable one-step control gain, whereas history-conditioned gpf reduces executed error by 9.9% relative to geometry-only gpf across 470 paired simulation trials. in closed loop, interaction history improves strict-threshold attainment in simulation and yields the strongest zero-shot performance on hardware. all policies are trained exclusively in simulation and transferred to the physical robot without real-world training or fine-tuning. these results show that physical context should be evaluated by the decisions it supports rather than by predictive accuracy alone. code will be released upon acceptance.">
             <div class="card-meta-top">
                 <span class="rank-tag">TOP #8</span>
                 <div class="score-badge">
                     <span class="score-label">Priority Index</span>
-                    <span class="score-value">50</span>
+                    <span class="score-value">85</span>
                 </div>
             </div>
             
-            <h2 class="paper-title">HiPFuse: Real-Time LiDAR Semantic Segmentation for Robotic Perception on Edge Devices</h2>
+            <h2 class="paper-title">From Prediction to Action: Learning Physical Context for Deformable Linear Object Manipulation</h2>
             
             <div class="author-row">
                 <span>🗓️ 2026-11-10</span>
-                <span>✍️ Haiyang Wu, George Vosselman, Ville Lehtola</span>
+                <span>✍️ Chengxiao Dong, Alessio Caporali, Hongyu Lan et al.</span>
             </div>
             
             <div class="badge-cluster">
-                <span class="badge badge-muted">#frontier</span>
+                <span class="badge">#diffusion policy</span>
             </div>
             
-            <p class="paper-summary">Real-time robotic perception requires accurate LiDAR semantics under limited resources. Bird's-eye-view (BEV) aggregation is efficient but can mix differently labeled surfaces in columns. We present HiPFuse, a point-BEV fusion framework that exchanges point and height-partitioned BEV features across horizontal scales, combining point-wise detail with 2D spatial context from one LiDAR scan. Fixed height assignments preserve separate vertical aggregation groups, with auxiliary supervision of initial BEV features using targets from the same 3D cells. A dual-scale BEV context module adds broader context from a coarser grid. On SemanticKITTI and MCD, HiPFuse achieves 63.7% and 62.5% mIoU at 14.2 and 22.4 FPS on Jetson AGX Orin, respectively, exceeding the 10 Hz scan rate. Separate training and evaluation show indoor applicability. Replacing only the baseline semantic front end with HiPFuse in fixed robotic systems reduces odometry absolute trajectory error RMSE by 10.6% on average across two outdoor sequences and increases accepted-loop recall by 8.7 percentage points on SemanticKITTI. Qualitative semantic maps show more continuous road labeling. Our code is available at https://github.com/haiyang2022/HiPFuse.</p>
+            <p class="paper-summary">A representation that accurately predicts a deformable object's response is not necessarily the one most useful for choosing manipulation actions. We study this distinction between predictive utility and decision utility in planar single-grasp shape control of Deformable Linear Objects (DLOs). As a common decision backbone, we introduce Geometry-Pointer-Flow (GPF), a geometry-grounded policy that separates grasp-location selection from grasp-conditioned motion generation. Its geometry-only variant reduces one-step executed shape error by 32.8% relative to a DLO-specific diffusion policy, while using 18.7 times fewer parameters and achieving approximately 193 times faster inference. On this backbone, we compare physical context represented by ground-truth parameters, estimated parameters, and learned interaction-history representations, for both forward prediction and executed control. For prediction, ground-truth physical parameters reduce next-shape error by 15.8% over geometry alone, and estimated parameters are slightly more predictive than interaction history. This ordering does not carry over to control: estimated parameters provide no detectable one-step control gain, whereas history-conditioned GPF reduces executed error by 9.9% relative to geometry-only GPF across 470 paired simulation trials. In closed loop, interaction history improves strict-threshold attainment in simulation and yields the strongest zero-shot performance on hardware. All policies are trained exclusively in simulation and transferred to the physical robot without real-world training or fine-tuning. These results show that physical context should be evaluated by the decisions it supports rather than by predictive accuracy alone. Code will be released upon acceptance.</p>
             
             <div class="card-action-bar">
-                <a href="http://arxiv.org/pdf/2611.14025v1" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
+                <a href="http://arxiv.org/pdf/2611.14274v1" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
                     View PDF
                 </a>
-                <a href="http://arxiv.org/abs/2611.14025v1" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
+                <a href="http://arxiv.org/abs/2611.14274v1" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
                     arXiv Page &rarr;
                 </a>
             </div>
