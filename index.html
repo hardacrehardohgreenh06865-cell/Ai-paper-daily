@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Embodied AI & Robotics Intelligence Digest — November 13, 2026</title>
+    <title>Embodied AI & Robotics Intelligence Digest — November 14, 2026</title>
     <style>
         :root {
             --bg-base: #080c14;
@@ -242,7 +242,7 @@
         <header>
             <span class="pill-brand">Autonomous Research Intelligence</span>
             <h1>Embodied AI & Physical Frontier Briefing</h1>
-            <p class="subtitle">Compiled on November 13, 2026 • Ranked top 8 strategic breakthroughs out of incoming preprints.</p>
+            <p class="subtitle">Compiled on November 14, 2026 • Ranked top 8 strategic breakthroughs out of incoming preprints.</p>
             
             <div class="controls">
                 <input type="text" id="filterInput" class="search-box" placeholder="Filter papers by keywords (e.g. humanoid, tactile, diffusion)...">
@@ -251,257 +251,257 @@
 
         <main id="paperList">
             
-        <article class="paper-card" data-title="polymorphwbc: whole-body control from end-effector trajectories for quadrupedal mobile manipulation across arm morphologies with extended reach" data-summary="quadrupedal mobile manipulators can extend their manipulation workspace by coordinating the mounted arm with the mobile base. at the task level, short-horizon end-effector (ee) trajectories provide an interface for specifying the desired manipulation motion without prescribing how it should be realized by the arm and base. however, executing such trajectories remains challenging because the controller must determine when and how the base should move, and this decision depends on the mounted-arm morphology. we therefore present polymorphwbc, a hierarchical controller that takes an ee trajectory as the sole task-level motion command and generates coordinated arm--base motions across four families of 6-dof mounted arms, with extended-reach trajectories beyond the initial fixed-base reach. within polymorphwbc, a trajectory-conditioned coordinator determines the base motion from previewed ee targets, while arm-specific inverse kinematics (ik) tracks the current target, and a frozen locomotion backend executes the resulting motion. cross-arm reuse is enabled by a unified robot description format (urdf)-derived morphology conditioning, together with online residual-wrench feedback. we train polymorphwbc on procedurally generated arms and structured trajectories within and beyond fixed-base reach. in isaaclab, it achieves 93.95% completion with 2.30cm position error and 4.81° orientation error on held-out trajectories and arm morphologies. in mujoco evaluation against umi-on-legs, polymorphwbc reduces ee position error by 69--72% and orientation error by 91--97% across four within- and extended-reach trajectories. on a physical go2--arx5 system, we demonstrate language-conditioned extended-reach pick-and-place using ee trajectories from pi_0 without vision-language-action (vla)-generated base commands.">
+        <article class="paper-card" data-title="forge: force-aware multi-granularity control for efficient humanoid loco-manipulation" data-summary="humanoid loco-manipulation requires coordinated locomotion, balance regulation, and manipulation under frequent contacts, making teleoperated demonstration collection difficult: a practical controller must simultaneously provide precision, stability, and contact awareness. we propose forge, a force-aware multi-granularity control system with a coarse-to-fine command space spanning velocity navigation, planar foot placement, wrist-pose tracking, and optional force-conditioning inputs. policy training requires no full-body human motion trajectories or joint-angle references; deployment consumes only sparse bilateral wrist poses relative to the pelvis, coarse motion commands, and optional desired wrist-load inputs. for sustained contact, forge combines a momentum observer with a learned correction trained using simulator contact-force supervision. at deployment, it estimates low-frequency, wrist-equivalent interaction forces from proprioception and reconstructed low-level arm pd torques, without wrist force/torque sensors. a quasi-static virtual-target loop uses this estimate and an optional desired applied-force input to adapt the wrist target. a frozen locomotion prior and asymmetric residual actions stabilize manipulation-induced whole-body corrections. experiments evaluate unified-control stability, task-space tracking, quasi-static wrist-equivalent force estimation, squeezing forces during sustained contact with a rigid box, and downstream diffusion-policy execution of a squat-and-lift task across payload conditions. website: https://bb0928.github.io/forge/.">
             <div class="card-meta-top">
                 <span class="rank-tag">TOP #1</span>
                 <div class="score-badge">
                     <span class="score-label">Priority Index</span>
-                    <span class="score-value">195</span>
+                    <span class="score-value">120</span>
                 </div>
             </div>
             
-            <h2 class="paper-title">PolyMorphWBC: Whole-Body Control from End-Effector Trajectories for Quadrupedal Mobile Manipulation across Arm Morphologies with Extended Reach</h2>
+            <h2 class="paper-title">FORGE: Force-Aware Multi-Granularity Control for Efficient Humanoid Loco-Manipulation</h2>
             
             <div class="author-row">
-                <span>🗓️ 2026-11-11</span>
-                <span>✍️ Heng Li, Yang Li, Yifan Duan et al.</span>
+                <span>🗓️ 2026-11-12</span>
+                <span>✍️ Liangjun Xing, Ke Fan, Kailin Li et al.</span>
             </div>
             
             <div class="badge-cluster">
-                <span class="badge">#quadruped</span><span class="badge">#locomotion</span><span class="badge">#vision-language-action</span><span class="badge">#vla</span>
+                <span class="badge">#humanoid</span><span class="badge">#locomotion</span>
             </div>
             
-            <p class="paper-summary">Quadrupedal mobile manipulators can extend their manipulation workspace by coordinating the mounted arm with the mobile base. At the task level, short-horizon end-effector (EE) trajectories provide an interface for specifying the desired manipulation motion without prescribing how it should be realized by the arm and base. However, executing such trajectories remains challenging because the controller must determine when and how the base should move, and this decision depends on the mounted-arm morphology. We therefore present PolyMorphWBC, a hierarchical controller that takes an EE trajectory as the sole task-level motion command and generates coordinated arm--base motions across four families of 6-DoF mounted arms, with extended-reach trajectories beyond the initial fixed-base reach. Within PolyMorphWBC, a trajectory-conditioned coordinator determines the base motion from previewed EE targets, while arm-specific Inverse Kinematics (IK) tracks the current target, and a frozen locomotion backend executes the resulting motion. Cross-arm reuse is enabled by a Unified Robot Description Format (URDF)-derived morphology conditioning, together with online residual-wrench feedback. We train PolyMorphWBC on procedurally generated arms and structured trajectories within and beyond fixed-base reach. In IsaacLab, it achieves 93.95% completion with 2.30cm position error and 4.81° orientation error on held-out trajectories and arm morphologies. In MuJoCo evaluation against UMI-on-Legs, PolyMorphWBC reduces EE position error by 69--72% and orientation error by 91--97% across four within- and extended-reach trajectories. On a physical Go2--ARX5 system, we demonstrate language-conditioned extended-reach pick-and-place using EE trajectories from pi_0 without vision-language-action (VLA)-generated base commands.</p>
+            <p class="paper-summary">Humanoid loco-manipulation requires coordinated locomotion, balance regulation, and manipulation under frequent contacts, making teleoperated demonstration collection difficult: a practical controller must simultaneously provide precision, stability, and contact awareness. We propose FORGE, a force-aware multi-granularity control system with a coarse-to-fine command space spanning velocity navigation, planar foot placement, wrist-pose tracking, and optional force-conditioning inputs. Policy training requires no full-body human motion trajectories or joint-angle references; deployment consumes only sparse bilateral wrist poses relative to the pelvis, coarse motion commands, and optional desired wrist-load inputs. For sustained contact, FORGE combines a momentum observer with a learned correction trained using simulator contact-force supervision. At deployment, it estimates low-frequency, wrist-equivalent interaction forces from proprioception and reconstructed low-level arm PD torques, without wrist force/torque sensors. A quasi-static virtual-target loop uses this estimate and an optional desired applied-force input to adapt the wrist target. A frozen locomotion prior and asymmetric residual actions stabilize manipulation-induced whole-body corrections. Experiments evaluate unified-control stability, task-space tracking, quasi-static wrist-equivalent force estimation, squeezing forces during sustained contact with a rigid box, and downstream diffusion-policy execution of a squat-and-lift task across payload conditions. Website: https://bb0928.github.io/forge/.</p>
             
             <div class="card-action-bar">
-                <a href="http://arxiv.org/pdf/2611.15117v1" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
+                <a href="http://arxiv.org/pdf/2611.17142v1" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
                     View PDF
                 </a>
-                <a href="http://arxiv.org/abs/2611.15117v1" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
+                <a href="http://arxiv.org/abs/2611.17142v1" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
                     arXiv Page &rarr;
                 </a>
             </div>
         </article>
         
-        <article class="paper-card" data-title="what makes a vla reactive? a study of execution strategies for dynamic manipulation" data-summary="vision-language-action (vla) models predict chunks of future actions, and when objects move, those chunks go stale before they are executed. we study what makes a pretrained vla reactive, using \pihalf{} on two dynamic simulation benchmarks and three real-robot tasks. we vary the prediction and execution horizons, compare synchronous and asynchronous inference, test methods that deliver actions sooner or keep successive chunks continuous, and adapt the policy with motion cues and latent-space reinforcement learning. the best prediction horizon is about one second, and the best execution horizon depends on the checkpoint. short horizons help more with asynchronous execution, and methods that keep the trajectory continuous outperform those that only reduce latency. adapting the policy repairs targeted failures, but on the conveyor task changing the execution horizon gained as much. reactivity depends on the execution pipeline as much as on the policy, so both should be evaluated together.">
+        <article class="paper-card" data-title="egox: egocentric cross-embodiment manipulation with embodiment dreaming" data-summary="generalist manipulation policies can benefit from the complementary experience of humans, real robots, and simulated agents. however, differences in morphology, sensing, and control interfaces make it difficult to learn effectively from their combined demonstrations. we introduce egox, an egocentric cross-embodiment learning framework that organizes heterogeneous demonstrations through semantically corresponding observation and action modalities. egox pretrains a modularized cross-embodiment transformer with embodiment dreaming (mxt+) on this mixture and fine-tunes it on target-embodiment demonstrations. within each embodiment, mxt+ assigns a dedicated tokenizer to each observation modality and a dedicated expert to each action modality, with a transformer trunk shared across embodiments. a training-only embodiment-dreaming objective predicts latent representations of future visual and proprioceptive states, encouraging the shared trunk to model each embodiment's dynamics. across 13 task-embodiment pairs spanning five tasks and six robot embodiments, including five physical robots and one simulated humanoid, cross-embodiment pretraining raises mxt+'s average normalized task progress from 0.63 to 0.80 over training from scratch. the gains are particularly pronounced under out-of-distribution conditions, where average task progress increases from 0.53 to 0.77. ablations demonstrate the benefits of broader pretraining mixtures, modular interfaces, and embodiment dreaming, with dreaming producing more similar latent geometry across embodiments. project page: egox-dream.github.io.">
             <div class="card-meta-top">
                 <span class="rank-tag">TOP #2</span>
-                <div class="score-badge">
-                    <span class="score-label">Priority Index</span>
-                    <span class="score-value">165</span>
-                </div>
-            </div>
-            
-            <h2 class="paper-title">What Makes a VLA Reactive? A Study of Execution Strategies for Dynamic Manipulation</h2>
-            
-            <div class="author-row">
-                <span>🗓️ 2026-11-11</span>
-                <span>✍️ Zhuoyue Li, Zhendong Han, Pankhuri Vanjani et al.</span>
-            </div>
-            
-            <div class="badge-cluster">
-                <span class="badge">#reinforcement learning</span><span class="badge">#vision-language-action</span><span class="badge">#vla</span>
-            </div>
-            
-            <p class="paper-summary">Vision-language-action (VLA) models predict chunks of future actions, and when objects move, those chunks go stale before they are executed. We study what makes a pretrained VLA reactive, using \pihalf{} on two dynamic simulation benchmarks and three real-robot tasks. We vary the prediction and execution horizons, compare synchronous and asynchronous inference, test methods that deliver actions sooner or keep successive chunks continuous, and adapt the policy with motion cues and latent-space reinforcement learning. The best prediction horizon is about one second, and the best execution horizon depends on the checkpoint. Short horizons help more with asynchronous execution, and methods that keep the trajectory continuous outperform those that only reduce latency. Adapting the policy repairs targeted failures, but on the conveyor task changing the execution horizon gained as much. Reactivity depends on the execution pipeline as much as on the policy, so both should be evaluated together.</p>
-            
-            <div class="card-action-bar">
-                <a href="http://arxiv.org/pdf/2611.15491v1" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
-                    View PDF
-                </a>
-                <a href="http://arxiv.org/abs/2611.15491v1" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
-                    arXiv Page &rarr;
-                </a>
-            </div>
-        </article>
-        
-        <article class="paper-card" data-title="after: a world model with adaptive fast--slow timescales for error-driven retention" data-summary="in robotics and embodied ai, a core challenge for world models is adapting to sudden, persistent, yet initially unknown changes in robot dynamics during interaction. for instance, when a robotic arm grasps an object with an unknown payload, the robot dynamics change suddenly. if the world model fails to adapt, its prediction errors accumulate over the open-loop rollout and ultimately mislead the robot's actions. existing world models, however, struggle to simultaneously satisfy three critical requirements for dynamics adaptation: responsiveness, reacting promptly to sudden changes to curb prediction error accumulation; stability, distinguishing persistent changes from transient disturbances to prevent incorrect updates; and persistence, retaining the adapted dynamics without new observations so that later predictions do not revert to the old dynamics. inspired by predictive coding in the human brain with multi-timescale adaptation, we propose after-wm, a world model with adaptive fast-slow timescales for error-driven retention, whose prediction errors drive a fast correction that fades and a slow correction that persists, while dynamically adjusting the combination weights of pre-trained experts without altering them, to overcome the trade-offs among responsiveness, stability and persistence. on five simulated robot datasets and real uav data, after-wm has a lower multi-step mean error than all ten compared models and the highest mean return in a joint-failure control task. in simulation, its multistep mean error is 16%-34% below the strongest compared model's and is also the lowest 1-4 steps after a change and under transient disturbances alone, and its step-40 error is the lowest as well, reflecting responsiveness, stability and persistence. all code (method, baselines, experiments) and datasets will be released online.">
-            <div class="card-meta-top">
-                <span class="rank-tag">TOP #3</span>
-                <div class="score-badge">
-                    <span class="score-label">Priority Index</span>
-                    <span class="score-value">140</span>
-                </div>
-            </div>
-            
-            <h2 class="paper-title">AFTER: A World Model with Adaptive Fast--Slow Timescales for Error-Driven Retention</h2>
-            
-            <div class="author-row">
-                <span>🗓️ 2026-11-11</span>
-                <span>✍️ Haoyi Zhang, Qi Zhang, Yunfan Ren et al.</span>
-            </div>
-            
-            <div class="badge-cluster">
-                <span class="badge">#embodied ai</span><span class="badge">#world model</span>
-            </div>
-            
-            <p class="paper-summary">In robotics and embodied AI, a core challenge for world models is adapting to sudden, persistent, yet initially unknown changes in robot dynamics during interaction. For instance, when a robotic arm grasps an object with an unknown payload, the robot dynamics change suddenly. If the world model fails to adapt, its prediction errors accumulate over the open-loop rollout and ultimately mislead the robot's actions. Existing world models, however, struggle to simultaneously satisfy three critical requirements for dynamics adaptation: responsiveness, reacting promptly to sudden changes to curb prediction error accumulation; stability, distinguishing persistent changes from transient disturbances to prevent incorrect updates; and persistence, retaining the adapted dynamics without new observations so that later predictions do not revert to the old dynamics. Inspired by predictive coding in the human brain with multi-timescale adaptation, we propose AFTER-WM, a world model with Adaptive Fast-slow Timescales for Error-driven Retention, whose prediction errors drive a fast correction that fades and a slow correction that persists, while dynamically adjusting the combination weights of pre-trained experts without altering them, to overcome the trade-offs among responsiveness, stability and persistence. On five simulated robot datasets and real UAV data, AFTER-WM has a lower multi-step mean error than all ten compared models and the highest mean return in a joint-failure control task. In simulation, its multistep mean error is 16%-34% below the strongest compared model's and is also the lowest 1-4 steps after a change and under transient disturbances alone, and its step-40 error is the lowest as well, reflecting responsiveness, stability and persistence. All code (method, baselines, experiments) and datasets will be released online.</p>
-            
-            <div class="card-action-bar">
-                <a href="http://arxiv.org/pdf/2611.15215v1" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
-                    View PDF
-                </a>
-                <a href="http://arxiv.org/abs/2611.15215v1" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
-                    arXiv Page &rarr;
-                </a>
-            </div>
-        </article>
-        
-        <article class="paper-card" data-title="low-cost mobile bimanual manipulation for long-horizon toilet cleaning" data-summary="vision-language-action (vla) models have shown promising capabilities for robot manipulation, but their performance on accessible mobile bimanual platforms remains underexplored. we present a low-cost and reproducible mobile bimanual platform integrating two lerobot so-101 manipulators with a turtlebot 4 and a lerobot-ros 2 software stack. using long-horizon toilet cleaning as a case study, we collect 250 real-world demonstrations and evaluate $π_0$, $π_{0.5}$, smolvla, and gr00t under the same embodiment and task conditions. we further evaluate variants using sarm-derived task-progress signals and short-term mem observation history. among the evaluated models, $π_0$ performs best, achieving 60% strict and 70% relaxed autonomous success, increasing to 90% with limited human intervention. in contrast, the evaluated progress- and memory-augmented variants do not improve their corresponding baselines. our results demonstrate the feasibility of long-horizon mobile bimanual manipulation on accessible hardware while highlighting remaining challenges in reliable vla deployment. project website: https://so101-turtlebot4.github.io/mobile-bimanual-cleaning/">
-            <div class="card-meta-top">
-                <span class="rank-tag">TOP #4</span>
-                <div class="score-badge">
-                    <span class="score-label">Priority Index</span>
-                    <span class="score-value">135</span>
-                </div>
-            </div>
-            
-            <h2 class="paper-title">Low-Cost Mobile Bimanual Manipulation for Long-Horizon Toilet Cleaning</h2>
-            
-            <div class="author-row">
-                <span>🗓️ 2026-11-11</span>
-                <span>✍️ Sven Schreiber, Bernard Burdiek, Lasse Huber-Saffer et al.</span>
-            </div>
-            
-            <div class="badge-cluster">
-                <span class="badge">#vision-language-action</span><span class="badge">#vla</span>
-            </div>
-            
-            <p class="paper-summary">Vision-Language-Action (VLA) models have shown promising capabilities for robot manipulation, but their performance on accessible mobile bimanual platforms remains underexplored. We present a low-cost and reproducible mobile bimanual platform integrating two LeRobot SO-101 manipulators with a TurtleBot 4 and a LeRobot-ROS 2 software stack. Using long-horizon toilet cleaning as a case study, we collect 250 real-world demonstrations and evaluate $π_0$, $π_{0.5}$, SmolVLA, and GR00T under the same embodiment and task conditions. We further evaluate variants using SARM-derived task-progress signals and short-term MEM observation history. Among the evaluated models, $π_0$ performs best, achieving 60% strict and 70% relaxed autonomous success, increasing to 90% with limited human intervention. In contrast, the evaluated progress- and memory-augmented variants do not improve their corresponding baselines. Our results demonstrate the feasibility of long-horizon mobile bimanual manipulation on accessible hardware while highlighting remaining challenges in reliable VLA deployment. Project website: https://so101-turtlebot4.github.io/mobile-bimanual-cleaning/</p>
-            
-            <div class="card-action-bar">
-                <a href="http://arxiv.org/pdf/2611.15381v1" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
-                    View PDF
-                </a>
-                <a href="http://arxiv.org/abs/2611.15381v1" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
-                    arXiv Page &rarr;
-                </a>
-            </div>
-        </article>
-        
-        <article class="paper-card" data-title="elastra: a simulation framework for elastic bodies" data-summary="when robots interact with elastic surfaces such as mattresses and trampolines, changes in loading cause the surfaces to deform and rebound, altering subsequent contact locations and forces. we present elastra, a simulation framework for modeling this interaction and supporting the training and evaluation of robot control policies. elastra represents each surface using elements that move only vertically, with elastic connections and damping to model deformation and recovery. contact forces drive surface motion, and the updated surface geometry is used to compute subsequent contact forces. we systematically validate our simulations against an independent implementation and a real mattress load curve. we further use elastra to train the unitree g1 humanoid to stand up on mattresses and trampolines. using the pretrained host policy and protomotions motion tracker as original controllers, we train residual policies through reinforcement learning to add corrections to their joint targets. adding these residual policies increases the success rate with host from 44.1\% to 72.5\%, and from 55\% to 89\% on the trampoline. with protomotions, the success rate increases from 19.0\% to 45.0\% for initial poses not encountered during training. the code and video are available on https://github.com/yichg/elastra.">
-            <div class="card-meta-top">
-                <span class="rank-tag">TOP #5</span>
-                <div class="score-badge">
-                    <span class="score-label">Priority Index</span>
-                    <span class="score-value">125</span>
-                </div>
-            </div>
-            
-            <h2 class="paper-title">Elastra: A Simulation Framework for Elastic Bodies</h2>
-            
-            <div class="author-row">
-                <span>🗓️ 2026-11-11</span>
-                <span>✍️ Youran Sun, Chugang Yi, Xingyu Ren et al.</span>
-            </div>
-            
-            <div class="badge-cluster">
-                <span class="badge">#humanoid</span><span class="badge">#reinforcement learning</span>
-            </div>
-            
-            <p class="paper-summary">When robots interact with elastic surfaces such as mattresses and trampolines, changes in loading cause the surfaces to deform and rebound, altering subsequent contact locations and forces. We present Elastra, a simulation framework for modeling this interaction and supporting the training and evaluation of robot control policies. Elastra represents each surface using elements that move only vertically, with elastic connections and damping to model deformation and recovery. Contact forces drive surface motion, and the updated surface geometry is used to compute subsequent contact forces. We systematically validate our simulations against an independent implementation and a real mattress load curve. We further use Elastra to train the Unitree G1 humanoid to stand up on mattresses and trampolines. Using the pretrained HoST policy and ProtoMotions motion tracker as original controllers, we train residual policies through reinforcement learning to add corrections to their joint targets. Adding these residual policies increases the success rate with HoST from 44.1\% to 72.5\%, and from 55\% to 89\% on the trampoline. With ProtoMotions, the success rate increases from 19.0\% to 45.0\% for initial poses not encountered during training. The code and video are available on https://github.com/yichg/elastra.</p>
-            
-            <div class="card-action-bar">
-                <a href="http://arxiv.org/pdf/2611.15112v1" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
-                    View PDF
-                </a>
-                <a href="http://arxiv.org/abs/2611.15112v1" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
-                    arXiv Page &rarr;
-                </a>
-            </div>
-        </article>
-        
-        <article class="paper-card" data-title="sparc: robocup standard platform for autonomous rescue competition with initial datasets, software, and simulation environments" data-summary="the robocup standard platform for autonomous rescue competition (sparc) is a new competition under development of the robocup rescue robot league that uses the unitree a2-w as a common robot platform. sparc aims to make research on artificial intelligence for autonomous rescue robots accessible to a broader research community, including groups without expertise in developing and maintaining custom robot hardware. by providing a capable standard platform and established benchmark environments, researchers can focus on autonomous navigation, perception, manipulation, and embodied ai for challenging disaster-response scenarios. this paper introduces the sparc competition, its benchmark environment, and the unitree a2-w standard platform. furthermore, we present the first open sparc datasets collected during the ieee icra 2026 legged robot challenges and robocup rescue 2026, release an open-source software stack for autonomous navigation, and provide initial simulation assets representing robocup rescue test environments. together, these resources aim to lower the barrier to entry for autonomous rescue robotics and facilitate reproducible research and collaborative development on a common hardware platform.">
-            <div class="card-meta-top">
-                <span class="rank-tag">TOP #6</span>
-                <div class="score-badge">
-                    <span class="score-label">Priority Index</span>
-                    <span class="score-value">100</span>
-                </div>
-            </div>
-            
-            <h2 class="paper-title">SPARC: RoboCup Standard Platform for Autonomous Rescue Competition with Initial Datasets, Software, and Simulation Environments</h2>
-            
-            <div class="author-row">
-                <span>🗓️ 2026-11-11</span>
-                <span>✍️ Yuezhong Wang, Bichi Zhang, Zhongli Yin et al.</span>
-            </div>
-            
-            <div class="badge-cluster">
-                <span class="badge">#embodied ai</span>
-            </div>
-            
-            <p class="paper-summary">The RoboCup Standard Platform for Autonomous Rescue Competition (SPARC) is a new competition under development of the RoboCup Rescue Robot League that uses the Unitree A2-W as a common robot platform. SPARC aims to make research on artificial intelligence for autonomous rescue robots accessible to a broader research community, including groups without expertise in developing and maintaining custom robot hardware. By providing a capable standard platform and established benchmark environments, researchers can focus on autonomous navigation, perception, manipulation, and embodied AI for challenging disaster-response scenarios. This paper introduces the SPARC competition, its benchmark environment, and the Unitree A2-W standard platform. Furthermore, we present the first open SPARC datasets collected during the IEEE ICRA 2026 Legged Robot Challenges and RoboCup Rescue 2026, release an open-source software stack for autonomous navigation, and provide initial simulation assets representing RoboCup Rescue test environments. Together, these resources aim to lower the barrier to entry for autonomous rescue robotics and facilitate reproducible research and collaborative development on a common hardware platform.</p>
-            
-            <div class="card-action-bar">
-                <a href="http://arxiv.org/pdf/2611.15443v1" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
-                    View PDF
-                </a>
-                <a href="http://arxiv.org/abs/2611.15443v1" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
-                    arXiv Page &rarr;
-                </a>
-            </div>
-        </article>
-        
-        <article class="paper-card" data-title="reading the table: sim-to-real game state detection for the chef's hat card game" data-summary="tabletop games offer a compelling scenario to study the interaction between artificial and human agents, combining social interaction with game state tracking and physical manipulation. to assess the game state, a robot needs to precisely detect closely related game objects, such as different card designs, requiring dedicated training data that is costly to annotate in the real world. instead, we develop a fully automated synthetic data collection pipeline, using re-projection of known 3d coordinates to generate labels automatically and domain randomization to bridge the reality gap. this approach is used to collect a dataset of 25413 samples to finetune an object detection and a segmentation model, which are combined to assign detected cards to game-relevant zones and infer the game state. when evaluated on a real nico humanoid robot, our pipeline achieves an f1-score of 0.906 for card-to-zone assignment, thus providing the perceptual foundation for a robot that can autonomously play chef's hat against human players.">
-            <div class="card-meta-top">
-                <span class="rank-tag">TOP #7</span>
                 <div class="score-badge">
                     <span class="score-label">Priority Index</span>
                     <span class="score-value">95</span>
                 </div>
             </div>
             
-            <h2 class="paper-title">Reading the Table: Sim-to-Real Game State Detection for the Chef's Hat Card Game</h2>
+            <h2 class="paper-title">EgoX: Egocentric Cross-Embodiment Manipulation with Embodiment Dreaming</h2>
             
             <div class="author-row">
-                <span>🗓️ 2026-11-11</span>
-                <span>✍️ Connor Gäde, Matthias Kerzel, Hauke Bünning et al.</span>
+                <span>🗓️ 2026-11-12</span>
+                <span>✍️ Yaru Niu, Binghong Chen, Changwei Yao et al.</span>
             </div>
             
             <div class="badge-cluster">
                 <span class="badge">#humanoid</span>
             </div>
             
-            <p class="paper-summary">Tabletop games offer a compelling scenario to study the interaction between artificial and human agents, combining social interaction with game state tracking and physical manipulation. To assess the game state, a robot needs to precisely detect closely related game objects, such as different card designs, requiring dedicated training data that is costly to annotate in the real world. Instead, we develop a fully automated synthetic data collection pipeline, using re-projection of known 3D coordinates to generate labels automatically and domain randomization to bridge the reality gap. This approach is used to collect a dataset of 25413 samples to finetune an object detection and a segmentation model, which are combined to assign detected cards to game-relevant zones and infer the game state. When evaluated on a real NICO humanoid robot, our pipeline achieves an F1-score of 0.906 for card-to-zone assignment, thus providing the perceptual foundation for a robot that can autonomously play Chef's Hat against human players.</p>
+            <p class="paper-summary">Generalist manipulation policies can benefit from the complementary experience of humans, real robots, and simulated agents. However, differences in morphology, sensing, and control interfaces make it difficult to learn effectively from their combined demonstrations. We introduce EgoX, an egocentric cross-embodiment learning framework that organizes heterogeneous demonstrations through semantically corresponding observation and action modalities. EgoX pretrains a Modularized Cross-Embodiment Transformer with Embodiment Dreaming (MXT+) on this mixture and fine-tunes it on target-embodiment demonstrations. Within each embodiment, MXT+ assigns a dedicated tokenizer to each observation modality and a dedicated expert to each action modality, with a Transformer trunk shared across embodiments. A training-only embodiment-dreaming objective predicts latent representations of future visual and proprioceptive states, encouraging the shared trunk to model each embodiment's dynamics. Across 13 task-embodiment pairs spanning five tasks and six robot embodiments, including five physical robots and one simulated humanoid, cross-embodiment pretraining raises MXT+'s average normalized task progress from 0.63 to 0.80 over training from scratch. The gains are particularly pronounced under out-of-distribution conditions, where average task progress increases from 0.53 to 0.77. Ablations demonstrate the benefits of broader pretraining mixtures, modular interfaces, and embodiment dreaming, with dreaming producing more similar latent geometry across embodiments. Project page: egox-dream.github.io.</p>
             
             <div class="card-action-bar">
-                <a href="http://arxiv.org/pdf/2611.15524v1" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
+                <a href="http://arxiv.org/pdf/2611.16728v1" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
                     View PDF
                 </a>
-                <a href="http://arxiv.org/abs/2611.15524v1" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
+                <a href="http://arxiv.org/abs/2611.16728v1" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
                     arXiv Page &rarr;
                 </a>
             </div>
         </article>
         
-        <article class="paper-card" data-title="actioncodec2: a streaming action tokenizer" data-summary="most action tokenizers for autoregressive vision language action (vla) models compress motion into chunks that must be decoded in full before their actions become executable. we introduce actioncodec2, a non-neural streaming tokenizer that releases actions incrementally while keeping trajectory reconstruction error within a prescribed tolerance. its encoder quantizes each step relative to the decoder's reconstructed state, so the selected motion primitive corrects residual error rather than allowing errors from independently quantized increments to accumulate. finding the smallest such primitive set is a geometric covering problem; we derive the exact minimum for translation and constant-factor-tight bounds for rotation. set-bpe then losslessly merges co-occurring primitive symbols across coordinates and neighboring steps, without a fixed coordinate ordering. a universal version fitted on 20k hours of data from 24 embodiments averages 8.8 tokens per second for 15 hz end-effector motion on this corpus. with the same vla backbone, actioncodec2 outperforms the compared tokenizers on three simulation benchmarks and in zero-shot real-robot evaluation. its streaming representation allows policies to incorporate state feedback within an action chunk, substantially improving performance over open-loop execution under randomized dynamics, external disturbances, and moving objects. the same tokens also can serve as a direct control interface for vlm agents, which compose successful action sequences into reusable macros. these agent-built macros reduce control decisions and thinking-token usage across attempts and transfer to a held-out task. more results are available at https://zibindong.github.io/actioncodec2-page/">
+        <article class="paper-card" data-title="uav-flow++: a unified suite for benchmarking and learning language-guided uav flight" data-summary="language-guided uav navigation has largely focused on long-horizon route planning, leaving short-range, object-relative flight maneuvers underexplored. to address this gap, we formulate flying-on-a-word (flow), a task requiring a uav to convert concise natural-language instruction, egocentric visual observation, and current state dynamics into continuous flight actions. flow encompasses both primitive motion commands and complex object-interactive behaviors, assessing motion intent comprehension and spatial context grounding. to enable policy learning and closed-loop evaluation, we introduce uav-flow, a comprehensive dataset comprising 30,692 expert-piloted real-world trajectories across eight distinct motion categories, alongside 10,109 simulation trajectories in the uav-flow-sim environment equipped with task-specific completion criteria. furthermore, we develop flowvla, which undergoes imitation pretraining on mixed real-sim demonstrations and online post-training via tail-aware grpo (tgrpo). by leveraging group reward distributions, tgrpo effectively reinforces high-reward action sequences. evaluated on 273 held-out uav-flow-sim episodes, pretrained flowvla achieves a mean success rate of 75.58%, outperforming the strongest baseline by 6.72 percentage points, which tgrpo post-training further elevates to 93.16% with superior sample efficiency. physical uav experiments demonstrate robust execution of object-relative commands in both indoor and outdoor real-world scenes. together, flow establishes a novel benchmark and learning framework for language-conditioned flight maneuvers.">
             <div class="card-meta-top">
-                <span class="rank-tag">TOP #8</span>
+                <span class="rank-tag">TOP #3</span>
                 <div class="score-badge">
                     <span class="score-label">Priority Index</span>
                     <span class="score-value">90</span>
                 </div>
             </div>
             
-            <h2 class="paper-title">ActionCodec2: A Streaming Action Tokenizer</h2>
+            <h2 class="paper-title">UAV-Flow++: A Unified Suite for Benchmarking and Learning Language-Guided UAV Flight</h2>
             
             <div class="author-row">
-                <span>🗓️ 2026-11-11</span>
-                <span>✍️ Zibin Dong, Yicheng Liu, Shiduo Zhang et al.</span>
+                <span>🗓️ 2026-11-12</span>
+                <span>✍️ Donglin Yang, Xiangyu Wang, Yantong Zhong et al.</span>
             </div>
             
             <div class="badge-cluster">
                 <span class="badge">#vla</span>
             </div>
             
-            <p class="paper-summary">Most action tokenizers for autoregressive vision language action (VLA) models compress motion into chunks that must be decoded in full before their actions become executable. We introduce ActionCodec2, a non-neural streaming tokenizer that releases actions incrementally while keeping trajectory reconstruction error within a prescribed tolerance. Its encoder quantizes each step relative to the decoder's reconstructed state, so the selected motion primitive corrects residual error rather than allowing errors from independently quantized increments to accumulate. Finding the smallest such primitive set is a geometric covering problem; we derive the exact minimum for translation and constant-factor-tight bounds for rotation. Set-BPE then losslessly merges co-occurring primitive symbols across coordinates and neighboring steps, without a fixed coordinate ordering. A universal version fitted on 20k hours of data from 24 embodiments averages 8.8 tokens per second for 15 Hz end-effector motion on this corpus. With the same VLA backbone, ActionCodec2 outperforms the compared tokenizers on three simulation benchmarks and in zero-shot real-robot evaluation. Its streaming representation allows policies to incorporate state feedback within an action chunk, substantially improving performance over open-loop execution under randomized dynamics, external disturbances, and moving objects. The same tokens also can serve as a direct control interface for VLM agents, which compose successful action sequences into reusable macros. These agent-built macros reduce control decisions and thinking-token usage across attempts and transfer to a held-out task. More results are available at https://zibindong.github.io/actioncodec2-page/</p>
+            <p class="paper-summary">Language-guided UAV navigation has largely focused on long-horizon route planning, leaving short-range, object-relative flight maneuvers underexplored. To address this gap, we formulate Flying-on-a-Word (Flow), a task requiring a UAV to convert concise natural-language instruction, egocentric visual observation, and current state dynamics into continuous flight actions. Flow encompasses both primitive motion commands and complex object-interactive behaviors, assessing motion intent comprehension and spatial context grounding. To enable policy learning and closed-loop evaluation, we introduce UAV-Flow, a comprehensive dataset comprising 30,692 expert-piloted real-world trajectories across eight distinct motion categories, alongside 10,109 simulation trajectories in the UAV-Flow-Sim environment equipped with task-specific completion criteria. Furthermore, we develop FlowVLA, which undergoes imitation pretraining on mixed real-sim demonstrations and online post-training via Tail-Aware GRPO (TGRPO). By leveraging group reward distributions, TGRPO effectively reinforces high-reward action sequences. Evaluated on 273 held-out UAV-Flow-Sim episodes, pretrained FlowVLA achieves a mean success rate of 75.58%, outperforming the strongest baseline by 6.72 percentage points, which TGRPO post-training further elevates to 93.16% with superior sample efficiency. Physical UAV experiments demonstrate robust execution of object-relative commands in both indoor and outdoor real-world scenes. Together, Flow establishes a novel benchmark and learning framework for language-conditioned flight maneuvers.</p>
             
             <div class="card-action-bar">
-                <a href="http://arxiv.org/pdf/2611.15490v1" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
+                <a href="http://arxiv.org/pdf/2611.17163v1" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
                     View PDF
                 </a>
-                <a href="http://arxiv.org/abs/2611.15490v1" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
+                <a href="http://arxiv.org/abs/2611.17163v1" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
+                    arXiv Page &rarr;
+                </a>
+            </div>
+        </article>
+        
+        <article class="paper-card" data-title="inner product regularization for imitation learning" data-summary="robots that learn from demonstrations should extrapolate their policy despite state perturbations such as sensor noise, scene variation, and compounding errors. one approach to this robustness is regularization. prior regularizers consider each state on its own and limit how sensitive the policy is to any perturbation at that state. by contrast, we explore how the policy's output shifts when given the same perturbation at different states. our insight is that, locally, the robot should respond to state perturbations in a consistent manner: e.g., if changing an irrelevant object position does not impact the policy at one state, that same change should not shift the policy output at a nearby state. applying this insight, we develop inner product regularization (inner). we show that the inner product on action space induces an inner product on state space through the policy jacobian (the fisher information for stochastic policies), and that the null space of this inner product governs which state perturbations have a first-order effect on the policy. by clustering states whose inner products are aligned, averaging the inner products within each cluster, and minimizing the smallest eigenvalues of that average, inner shapes the learned policy so that nearby states share a common null space. inner enforces consistent responses to perturbations without limiting policy expressiveness, and can be appended to existing imitation learning pipelines for deterministic or stochastic policies. in simulated experiments, inner makes learned policies more robust to irrelevant state dimensions and shifts between training and test distributions, whereas norm penalties often perform worse than behavior cloning. on a real robot arm performing three manipulation tasks, inner raises the average success rate of a diffusion policy from 18% to 57% without additional data.">
+            <div class="card-meta-top">
+                <span class="rank-tag">TOP #4</span>
+                <div class="score-badge">
+                    <span class="score-label">Priority Index</span>
+                    <span class="score-value">85</span>
+                </div>
+            </div>
+            
+            <h2 class="paper-title">Inner Product Regularization for Imitation Learning</h2>
+            
+            <div class="author-row">
+                <span>🗓️ 2026-11-12</span>
+                <span>✍️ Benjamin A. Christie, Tianyu Qiu, Amy H. Choi et al.</span>
+            </div>
+            
+            <div class="badge-cluster">
+                <span class="badge">#diffusion policy</span>
+            </div>
+            
+            <p class="paper-summary">Robots that learn from demonstrations should extrapolate their policy despite state perturbations such as sensor noise, scene variation, and compounding errors. One approach to this robustness is regularization. Prior regularizers consider each state on its own and limit how sensitive the policy is to any perturbation at that state. By contrast, we explore how the policy's output shifts when given the same perturbation at different states. Our insight is that, locally, the robot should respond to state perturbations in a consistent manner: e.g., if changing an irrelevant object position does not impact the policy at one state, that same change should not shift the policy output at a nearby state. Applying this insight, we develop inner product regularization (InneR). We show that the inner product on action space induces an inner product on state space through the policy Jacobian (the Fisher information for stochastic policies), and that the null space of this inner product governs which state perturbations have a first-order effect on the policy. By clustering states whose inner products are aligned, averaging the inner products within each cluster, and minimizing the smallest eigenvalues of that average, InneR shapes the learned policy so that nearby states share a common null space. InneR enforces consistent responses to perturbations without limiting policy expressiveness, and can be appended to existing imitation learning pipelines for deterministic or stochastic policies. In simulated experiments, InneR makes learned policies more robust to irrelevant state dimensions and shifts between training and test distributions, whereas norm penalties often perform worse than behavior cloning. On a real robot arm performing three manipulation tasks, InneR raises the average success rate of a diffusion policy from 18% to 57% without additional data.</p>
+            
+            <div class="card-action-bar">
+                <a href="http://arxiv.org/pdf/2611.17159v1" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
+                    View PDF
+                </a>
+                <a href="http://arxiv.org/abs/2611.17159v1" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
+                    arXiv Page &rarr;
+                </a>
+            </div>
+        </article>
+        
+        <article class="paper-card" data-title="agrisense: vision-language decision support and robotic intervention in a virtual greenhouse copy title" data-summary="autonomous greenhouse management increasingly requires robotic systems that integrate perception, navigation, environmental regulation, and plant-level intervention. this paper presents agrisense, a framework combining an isaac sim virtual greenhouse, a quadruped mobile manipulator, rgb and lidar-inertial sensing, environmental control, and supervised vision-language decision support. frozen dinov2 and bert encoders, together with structured environmental inputs, support joint prediction of twelve environmental references, a target zone, and an intervention flag. checkpoint replay reproduces 41/43 zone decisions. across five seeds on a source-grouped test set, the full, image-removed, and language-removed configurations each achieve 43/44 correct zone decisions, providing no evidence of incremental multimodal zone-accuracy improvement. the full model achieves mean absolute errors of 0.249 degrees c for temperature, 2.030 percentage points for humidity, and 0.997 percentage points for soil moisture. sensor-only inputs match full-model zone accuracy, while language-only inputs achieve 68.64%. external real-image benchmarks reveal distribution-shift limitations. five offline point-lio routes yield rigidly aligned trajectory errors of 5.22-17.32 mm. of 40 virtual-arm targets, 32 satisfy geometric acceptance criteria and eight are rejected at boundaries. six long-horizon climate cases and fault protocols characterize integration limits. navigation and integrated treatment rely on simulator-state inputs; physical greenhouse performance and agronomic treatment efficacy remain unvalidated. the contribution is an evaluated decision-support and robotic-intervention framework for a virtual greenhouse.">
+            <div class="card-meta-top">
+                <span class="rank-tag">TOP #5</span>
+                <div class="score-badge">
+                    <span class="score-label">Priority Index</span>
+                    <span class="score-value">85</span>
+                </div>
+            </div>
+            
+            <h2 class="paper-title">AgriSense: Vision-Language Decision Support and Robotic Intervention in a Virtual Greenhouse Copy title</h2>
+            
+            <div class="author-row">
+                <span>🗓️ 2026-11-12</span>
+                <span>✍️ Lyes Saad Saoud, Oualid Doukhi, Reza Ghorbani et al.</span>
+            </div>
+            
+            <div class="badge-cluster">
+                <span class="badge">#quadruped</span>
+            </div>
+            
+            <p class="paper-summary">Autonomous greenhouse management increasingly requires robotic systems that integrate perception, navigation, environmental regulation, and plant-level intervention. This paper presents AgriSense, a framework combining an Isaac Sim virtual greenhouse, a quadruped mobile manipulator, RGB and LiDAR-inertial sensing, environmental control, and supervised vision-language decision support. Frozen DINOv2 and BERT encoders, together with structured environmental inputs, support joint prediction of twelve environmental references, a target zone, and an intervention flag. Checkpoint replay reproduces 41/43 zone decisions. Across five seeds on a source-grouped test set, the full, image-removed, and language-removed configurations each achieve 43/44 correct zone decisions, providing no evidence of incremental multimodal zone-accuracy improvement. The full model achieves mean absolute errors of 0.249 degrees C for temperature, 2.030 percentage points for humidity, and 0.997 percentage points for soil moisture. Sensor-only inputs match full-model zone accuracy, while language-only inputs achieve 68.64%. External real-image benchmarks reveal distribution-shift limitations. Five offline Point-LIO routes yield rigidly aligned trajectory errors of 5.22-17.32 mm. Of 40 virtual-arm targets, 32 satisfy geometric acceptance criteria and eight are rejected at boundaries. Six long-horizon climate cases and fault protocols characterize integration limits. Navigation and integrated treatment rely on simulator-state inputs; physical greenhouse performance and agronomic treatment efficacy remain unvalidated. The contribution is an evaluated decision-support and robotic-intervention framework for a virtual greenhouse.</p>
+            
+            <div class="card-action-bar">
+                <a href="http://arxiv.org/pdf/2611.16752v1" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
+                    View PDF
+                </a>
+                <a href="http://arxiv.org/abs/2611.16752v1" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
+                    arXiv Page &rarr;
+                </a>
+            </div>
+        </article>
+        
+        <article class="paper-card" data-title="protovis-nav: prototypical visual imagination for visual-spatial aligned uav navigation" data-summary="vision language navigation (vln) is very challenging for unmanned aerial vehicles (uavs) since small errors in 3d motion prediction can lead to navigation errors and collisions. unable to fathom execution outcomes in 3d environments, existing methods often struggle to predict accurate navigation waypoints from language instructions. to solve this, we introduce the prototypical visual imagination framework, shortened as protovis-nav, which forces the model to imagine an outcome-associated local visual representation for the intended next uav movement. specifically, we predict feature prototypes and use their linear combination to estimate the visual feature of the target region. in this manner, the vln model first imagines the local visual representation of the next intended location, and then uses predicted prototypes as context for generating the final action, promoting alignment between visual context and waypoint outputs. extensive experiments demonstrate the effectiveness of the protovis-nav framework and show substantial improvements over existing baselines.">
+            <div class="card-meta-top">
+                <span class="rank-tag">TOP #6</span>
+                <div class="score-badge">
+                    <span class="score-label">Priority Index</span>
+                    <span class="score-value">50</span>
+                </div>
+            </div>
+            
+            <h2 class="paper-title">ProtoVis-Nav: Prototypical Visual Imagination for Visual-Spatial Aligned UAV Navigation</h2>
+            
+            <div class="author-row">
+                <span>🗓️ 2026-11-12</span>
+                <span>✍️ Guangyuan Sui, Yunzhong Hou, Chi Harold Liu</span>
+            </div>
+            
+            <div class="badge-cluster">
+                <span class="badge badge-muted">#frontier</span>
+            </div>
+            
+            <p class="paper-summary">Vision language navigation (VLN) is very challenging for Unmanned Aerial Vehicles (UAVs) since small errors in 3D motion prediction can lead to navigation errors and collisions. Unable to fathom execution outcomes in 3D environments, existing methods often struggle to predict accurate navigation waypoints from language instructions. To solve this, we introduce the Prototypical Visual Imagination framework, shortened as ProtoVis-Nav, which forces the model to imagine an outcome-associated local visual representation for the intended next UAV movement. Specifically, we predict feature prototypes and use their linear combination to estimate the visual feature of the target region. In this manner, the VLN model first imagines the local visual representation of the next intended location, and then uses predicted prototypes as context for generating the final action, promoting alignment between visual context and waypoint outputs. Extensive experiments demonstrate the effectiveness of the ProtoVis-Nav framework and show substantial improvements over existing baselines.</p>
+            
+            <div class="card-action-bar">
+                <a href="http://arxiv.org/pdf/2611.17330v1" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
+                    View PDF
+                </a>
+                <a href="http://arxiv.org/abs/2611.17330v1" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
+                    arXiv Page &rarr;
+                </a>
+            </div>
+        </article>
+        
+        <article class="paper-card" data-title="heir: harness egocentric intent for human-robot interactions" data-summary="for robots to assist, serve, and collaborate with humans, they must not only interpret human requests conveyed through language and multimodal intentional cues, but also execute long-horizon tasks that interleave navigation and manipulation. in this paper, we introduce heir, a resource for studying how to harness egocentric intent for human-robot interaction. heir pairs human speech, measured gaze, and egocentric video with robot observations and teleoperated navigation-manipulation trajectories, while each session preserves successive episodes, with each request fulfilled through multiple execution subtasks. the captured data, together with human-authored annotations, support the study of intent grounding, execution planning, and task completion within a unified interaction setting. to demonstrate the value of heir, we conduct extensive offline experiments to evaluate how models benefit from additional human-centric context across these tasks, together with real-robot experiments that assess execution task completion. heir thus provides a valuable resource for studying user-centric robot interaction in naturalistic household environments. our demo and dataset are available online.">
+            <div class="card-meta-top">
+                <span class="rank-tag">TOP #7</span>
+                <div class="score-badge">
+                    <span class="score-label">Priority Index</span>
+                    <span class="score-value">50</span>
+                </div>
+            </div>
+            
+            <h2 class="paper-title">HEIR: Harness Egocentric Intent for Human-Robot Interactions</h2>
+            
+            <div class="author-row">
+                <span>🗓️ 2026-11-12</span>
+                <span>✍️ Yichi Zhang, Bo Wang, Zhenghan Zhu et al.</span>
+            </div>
+            
+            <div class="badge-cluster">
+                <span class="badge badge-muted">#frontier</span>
+            </div>
+            
+            <p class="paper-summary">For robots to assist, serve, and collaborate with humans, they must not only interpret human requests conveyed through language and multimodal intentional cues, but also execute long-horizon tasks that interleave navigation and manipulation. In this paper, we introduce HEIR, a resource for studying how to Harness Egocentric Intent for Human-Robot Interaction. HEIR pairs human speech, measured gaze, and egocentric video with robot observations and teleoperated navigation-manipulation trajectories, while each session preserves successive episodes, with each request fulfilled through multiple execution subtasks. The captured data, together with human-authored annotations, support the study of intent grounding, execution planning, and task completion within a unified interaction setting. To demonstrate the value of HEIR, we conduct extensive offline experiments to evaluate how models benefit from additional human-centric context across these tasks, together with real-robot experiments that assess execution task completion. HEIR thus provides a valuable resource for studying user-centric robot interaction in naturalistic household environments. Our demo and dataset are available online.</p>
+            
+            <div class="card-action-bar">
+                <a href="http://arxiv.org/pdf/2611.17238v1" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
+                    View PDF
+                </a>
+                <a href="http://arxiv.org/abs/2611.17238v1" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
+                    arXiv Page &rarr;
+                </a>
+            </div>
+        </article>
+        
+        <article class="paper-card" data-title="collaborative task allocation for heterogeneous multi-robot systems through iterative clustering" data-summary="multi-robot systems face the challenge of efficiently allocating teams of heterogeneous robots to tasks. the task allocation problem is complicated by collaborative interactions between robots where teams of robots develop emergent capabilities that enable them to complete tasks that would be inefficient or impossible for individual robots. to address these challenges, we present an iterative clustering algorithm for collaborative task allocation in heterogeneous multi-robot systems. this approach partitions the computationally intractable global optimization problem into smaller, tractable subproblems by iteratively forming clusters of robots and tasks, then optimizing assignments within each cluster. by ensuring robots remain clustered with their currently assigned tasks, we guarantee monotonic improvement in overall utility with each iteration. we analyze the convergence of the algorithm and characterize how cluster size constraints determine which suboptimal assignments could trap the algorithm. in simulation, iterative clustering consistently outperforms simulated annealing, and a group-based auction in both computation time and solution quality, and outperforms a hedonic game approach in solution quality.">
+            <div class="card-meta-top">
+                <span class="rank-tag">TOP #8</span>
+                <div class="score-badge">
+                    <span class="score-label">Priority Index</span>
+                    <span class="score-value">50</span>
+                </div>
+            </div>
+            
+            <h2 class="paper-title">Collaborative Task Allocation for Heterogeneous Multi-Robot Systems Through Iterative Clustering</h2>
+            
+            <div class="author-row">
+                <span>🗓️ 2026-11-12</span>
+                <span>✍️ David R. Martin, Brooks A. Butler, Scott Nivison et al.</span>
+            </div>
+            
+            <div class="badge-cluster">
+                <span class="badge badge-muted">#frontier</span>
+            </div>
+            
+            <p class="paper-summary">Multi-robot systems face the challenge of efficiently allocating teams of heterogeneous robots to tasks. The task allocation problem is complicated by collaborative interactions between robots where teams of robots develop emergent capabilities that enable them to complete tasks that would be inefficient or impossible for individual robots. To address these challenges, we present an iterative clustering algorithm for collaborative task allocation in heterogeneous multi-robot systems. This approach partitions the computationally intractable global optimization problem into smaller, tractable subproblems by iteratively forming clusters of robots and tasks, then optimizing assignments within each cluster. By ensuring robots remain clustered with their currently assigned tasks, we guarantee monotonic improvement in overall utility with each iteration. We analyze the convergence of the algorithm and characterize how cluster size constraints determine which suboptimal assignments could trap the algorithm. In simulation, iterative clustering consistently outperforms simulated annealing, and a group-based auction in both computation time and solution quality, and outperforms a hedonic game approach in solution quality.</p>
+            
+            <div class="card-action-bar">
+                <a href="http://arxiv.org/pdf/2611.17213v1" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
+                    View PDF
+                </a>
+                <a href="http://arxiv.org/abs/2611.17213v1" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
                     arXiv Page &rarr;
                 </a>
             </div>
